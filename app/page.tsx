@@ -1,10 +1,51 @@
 "use client";
 
 import { useKeenSlider } from "keen-slider/react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Home() {
-  const [sliderRef, instanceRef] = useKeenSlider({ loop: true });
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      loop: true,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
+    },
+    []
+  );
+
+  const slides = [
+    {
+      key: "tst-logo",
+      content: (
+        <>
+          <div className="w-64 h-64 bg-gray-400 shrink-0">TST Logo</div>
+          <p className="text-2xl text-gray-700">
+            ЗАО Т.С.Т. (с 16.01.2015 ООО Т.С.Т.) – предприятие-изготовитель
+            промышленного вентиляционно-отопительного оборудования, ведущее
+            свою производственную деятельность с 2001 года.
+          </p>
+        </>
+      ),
+    },
+    {
+      key: "kalorifer",
+      content: (
+        <>
+          <div className="w-64 h-64 bg-gray-400 shrink-0">Kalorifer</div>
+          <p className="text-2xl text-gray-700">
+            Воздухонагревательные установки, оребренные теплообменники,
+            воздушно-отопительные агрегаты изготовления ООО Т.С.Т. – это
+            безопасное и простое в обслуживании, устойчивое к плохим условиям
+            эксплуатации, надежное и способное исправно работать в течение
+            многих лет нагревательное оборудование.
+          </p>
+        </>
+      ),
+    },
+  ];
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -24,24 +65,26 @@ export default function Home() {
           <ChevronRight className="w-24 h-24" />
         </button>
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide flex gap-4">
-            <div className="w-64 h-64 bg-gray-400 shrink-0">TST Logo</div>
-            <p className="text-2xl text-gray-700">
-              ЗАО Т.С.Т. (с 16.01.2015 ООО Т.С.Т.) – предприятие-изготовитель
-              промышленного вентиляционно-отопительного оборудования, ведущее
-              свою производственную деятельность с 2001 года.
-            </p>
-          </div>
-          <div className="keen-slider__slide flex gap-4">
-            <div className="w-64 h-64 bg-gray-400 shrink-0">Kalorifer</div>
-            <p className="text-2xl text-gray-700">
-              Воздухонагревательные установки, оребренные теплообменники,
-              воздушно-отопительные агрегаты изготовления ООО Т.С.Т. – это
-              безопасное и простое в обслуживании, устойчивое к плохим условиям
-              эксплуатации, надежное и способное исправно работать в течение
-              многих лет нагревательное оборудование.
-            </p>
-          </div>
+          {slides.map((slide, idx) => (
+            <div key={slide.key} className="keen-slider__slide flex gap-4">
+              {slide.content}
+            </div>
+          ))}
+        </div>
+        {/* Dots */}
+        <div className="flex justify-center mt-6 gap-2">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => instanceRef.current?.moveToIdx(idx)}
+              className={`w-4 h-4 rounded-full border-2 border-gray-400 transition-colors ${
+                currentSlide === idx
+                  ? "bg-gray-700 border-gray-700"
+                  : "bg-white"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </div>
     </div>
