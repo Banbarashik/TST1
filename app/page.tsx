@@ -1,7 +1,8 @@
 "use client";
 
-import { useKeenSlider } from "keen-slider/react";
 import { useState } from "react";
+import Link from "next/link";
+import { useKeenSlider } from "keen-slider/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
       key: "tst-logo",
       content: (
         <>
-          <div className="w-64 h-64 bg-gray-400 shrink-0">TST Logo</div>
+          <div className="w-64 h-64 bg-gray-300 shrink-0">TST Logo</div>
           <div className="text-2xl text-gray-700">
             <p className="text-3xl">
               25 лет на рынке вентиляционно-отопительного оборудования
@@ -42,7 +43,7 @@ export default function Home() {
       key: "kalorifer",
       content: (
         <>
-          <div className="w-64 h-64 bg-gray-400 shrink-0">Kalorifer</div>
+          <div className="w-64 h-64 bg-gray-300 shrink-0">Kalorifer</div>
           <p className="text-2xl text-gray-700">
             Продукция ООО Т.С.Т. – это безопасное и простое в обслуживании,
             устойчивое к плохим условиям эксплуатации, надежное и способное
@@ -55,6 +56,7 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto">
+      {/* Hero Section */}
       <div className="relative">
         {/* Navigation buttons */}
         <button
@@ -74,7 +76,7 @@ export default function Home() {
 
         {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
-          {slides.map((slide, idx) => (
+          {slides.map((slide) => (
             <div key={slide.key} className="keen-slider__slide flex gap-20">
               {slide.content}
             </div>
@@ -96,6 +98,42 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+
+      {/* Catalog */}
+      <div>
+        <p className="text-4xl">Каталог</p>
+        <Link href="#" className="text-2xl">
+          Калориферы и отопительные агрегаты
+        </Link>
+        <ul className="flex gap-2.5">
+          <li className="box-border w-full border shadow-[3px_3px_5px_0px_rgb(128,128,128)] border-[rgb(128,128,128)] px-1 pt-1">
+            <Link href="#">
+              <div className="bg-gray-300 aspect-square" />
+              <p className="font-bold uppercase text-center">Калориферы КСК</p>
+            </Link>
+          </li>
+          <li className="box-border w-full border shadow-[3px_3px_5px_0px_rgb(128,128,128)] border-[rgb(128,128,128)] px-1 pt-1">
+            <Link href="#">
+              <div className="bg-gray-300 aspect-square" />
+              <p className="font-bold uppercase text-center">Калориферы КПСК</p>
+            </Link>
+          </li>
+          <li className="box-border w-full border shadow-[3px_3px_5px_0px_rgb(128,128,128)] border-[rgb(128,128,128)] px-1 pt-1">
+            <Link href="#">
+              <div className="bg-gray-300 aspect-square" />
+              <p className="font-bold uppercase text-center">Агрегаты АО2</p>
+            </Link>
+          </li>
+          <li className="box-border w-full border shadow-[3px_3px_5px_0px_rgb(128,128,128)] border-[rgb(128,128,128)] px-1 pt-1">
+            <Link href="#">
+              <div className="bg-gray-300 aspect-square" />
+              <p className="font-bold uppercase text-center">
+                Агрегаты СТД-300
+              </p>
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
