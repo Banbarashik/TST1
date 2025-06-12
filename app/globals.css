@@ -37,6 +37,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* BRAND COLORS */
+  --background: #f5f5f5;
+  /* --primary: #c4412b; */
+  --primary: #d8563f; /* Softer, orange-red tone */
+  --secondary: #444b54;
+  --text: #1e1e1e;
+  --muted: #5a5a5a;
 }
 
 @theme inline {
