@@ -24,8 +24,8 @@ export default function Home() {
           <div className="w-64 h-64 bg-gray-400 shrink-0">TST Logo</div>
           <p className="text-2xl text-gray-700">
             ЗАО Т.С.Т. (с 16.01.2015 ООО Т.С.Т.) – предприятие-изготовитель
-            промышленного вентиляционно-отопительного оборудования, ведущее
-            свою производственную деятельность с 2001 года.
+            промышленного вентиляционно-отопительного оборудования, ведущее свою
+            производственную деятельность с 2001 года.
           </p>
         </>
       ),
@@ -48,8 +48,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <div className="relative">
+        {/* Navigation buttons */}
         <button
           onClick={() => instanceRef.current?.prev()}
           className="absolute top-1/2 z-10 transform -translate-y-1/2 -translate-x-full text-gray-400"
@@ -64,13 +65,16 @@ export default function Home() {
         >
           <ChevronRight className="w-24 h-24" />
         </button>
+
+        {/* Slider */}
         <div ref={sliderRef} className="keen-slider">
           {slides.map((slide, idx) => (
-            <div key={slide.key} className="keen-slider__slide flex gap-4">
+            <div key={slide.key} className="keen-slider__slide flex gap-20">
               {slide.content}
             </div>
           ))}
         </div>
+
         {/* Dots */}
         <div className="flex justify-center mt-6 gap-2">
           {slides.map((_, idx) => (
