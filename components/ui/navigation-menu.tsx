@@ -8,13 +8,38 @@ const productCategories = [
   {
     name: "Калориферы водяные",
     items: [
-      { name: "КСк", url: "", img: "img/nav_menu/ksk.svg" },
-      { name: "ТВВ", url: "", img: "img/nav_menu/tvv.svg" },
+      { name: "КСк", url: "", img: "img/nav_menu/ksk.jpg" },
+      { name: "ТВВ", url: "", img: "img/nav_menu/tvv.jpg" },
+      { name: "КФБ м", url: "", img: "img/nav_menu/kfb_m.jpg" },
+      { name: "АО+ вода", url: "", img: "img/nav_menu/ao+_voda.jpg" },
     ],
   },
   {
     name: "Калориферы паровые",
-    items: [{ name: "КПСк", url: "", img: "img/nav_menu/kpsk.svg" }],
+    items: [
+      { name: "КПСк", url: "", img: "img/nav_menu/kpsk.svg" },
+      { name: "КП", url: "", img: "#" },
+      { name: "КФБ п", url: "", img: "#" },
+      { name: "АО+ пар", url: "", img: "#" },
+    ],
+  },
+  {
+    name: "Электрические нагреватели",
+    items: [
+      { name: "Электрокалориферы СФО", url: "", img: "#" },
+      { name: "Электрокалориферные установки СФОЦ", url: "", img: "#" },
+      { name: "Шкафы управления калориферами ШУК", url: "", img: "#" },
+      { name: "ТЭНы оребренные", url: "", img: "#" },
+    ],
+  },
+  {
+    name: "Отопительные агрегаты",
+    items: [
+      { name: "АО2", url: "", img: "#" },
+      { name: "СТД 300", url: "", img: "#" },
+      { name: "АВО хл", url: "", img: "#" },
+      { name: "СТД 300 хл", url: "", img: "#" },
+    ],
   },
 ];
 
@@ -56,11 +81,11 @@ export default function NavigationMenu() {
           <NavigationMenuPrimitive.Content className="mt-2 bg-background rounded-md overflow-hidden">
             <NavigationMenuPrimitive.Sub>
               <NavigationMenuPrimitive.Viewport className="absolute h-full right-0" />
-              <NavigationMenuPrimitive.List className="flex flex-col">
+              <NavigationMenuPrimitive.List className="flex flex-col w-max">
                 {productCategories.map((category) => (
                   <NavigationMenuPrimitive.Item key={category.name}>
                     <NavigationMenuPrimitive.Trigger
-                      className="p-3 w-max hover:bg-accent data-[state=open]:bg-accent"
+                      className="p-3 w-full hover:bg-accent data-[state=open]:bg-accent"
                       onMouseEnter={() => {
                         setActiveCategoryName(category.name);
                         setActiveProductName(category.items[0]?.name ?? null);
