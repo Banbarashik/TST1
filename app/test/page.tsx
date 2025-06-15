@@ -23,8 +23,13 @@ export default function Test() {
     (product) => product.name === activeProductId
   );
 
+  // Handler to reset active product when menu closes
+  const handleMenuChange = (value: string | undefined) => {
+    if (!value) setActiveProductId("");
+  };
+
   return (
-    <NavigationMenu.Root className="w-48">
+    <NavigationMenu.Root className="w-48" onValueChange={handleMenuChange}>
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Trigger>Продукция</NavigationMenu.Trigger>
@@ -45,7 +50,13 @@ export default function Test() {
                       />
                       <ul className="flex flex-col gap-6">
                         {productCategories[0].items.map((product) => (
-                          <ListItem product={product} key={product.name} />
+                          <ListItem
+                            product={product}
+                            onMouseEnter={() =>
+                              setActiveProductId(product.name)
+                            }
+                            key={product.name}
+                          />
                         ))}
                       </ul>
                     </div>
@@ -61,9 +72,9 @@ export default function Test() {
   );
 }
 
-function ListItem({ product }) {
+function ListItem({ product, onMouseEnter }) {
   return (
-    <li>
+    <li onMouseEnter={onMouseEnter}>
       <NavigationMenu.Link asChild>
         <Link href={product.url}>{product.name}</Link>
       </NavigationMenu.Link>
