@@ -1,8 +1,28 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
+
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
+const productCategories = [
+  {
+    category: "voda",
+    items: [{ name: "КСк", url: "", img: "img/nav_menu/ksk.svg" }],
+  },
+  {
+    category: "par",
+    items: [{ name: "КПСк", url: "", img: "img/nav_menu/kpsk.svg" }],
+  },
+];
+const products = productCategories.flatMap((category) => category.items);
+
 export default function Test() {
+  const [activeProductId, setActiveProductId] = useState("");
+  const activeProduct = products.find(
+    (product) => product.name === activeProductId
+  );
+
   return (
     <NavigationMenu.Root className="w-48">
       <NavigationMenu.List>
@@ -18,7 +38,11 @@ export default function Test() {
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content className="absolute top-0 left-full bg-pink-200 p-3 w-max">
                     <div className="flex">
-                      <img src="#" alt="#" className="bg-gray-300 w-52 h-52" />
+                      <img
+                        src={activeProduct?.img}
+                        alt="#"
+                        className="bg-gray-300 w-52 h-52"
+                      />
                       <ul className="flex flex-col gap-6">
                         <li>
                           <NavigationMenu.Link>КСк</NavigationMenu.Link>
@@ -33,27 +57,6 @@ export default function Test() {
                     </div>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
-                <NavigationMenu.Item>
-                  <NavigationMenu.Trigger>
-                    Калориферы паровые
-                  </NavigationMenu.Trigger>
-                  <NavigationMenu.Content>
-                    <div className="flex">
-                      <img src="#" alt="#" className="bg-gray-300" />
-                      <ul>
-                        <li>
-                          <NavigationMenu.Link>КПСк</NavigationMenu.Link>
-                        </li>
-                        <li>
-                          <NavigationMenu.Link>КП</NavigationMenu.Link>
-                        </li>
-                        <li>
-                          <NavigationMenu.Link>кфб п</NavigationMenu.Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </NavigationMenu.Content>
-                </NavigationMenu.Item>
               </NavigationMenu.List>
             </NavigationMenu.Sub>
           </NavigationMenu.Content>
@@ -61,5 +64,15 @@ export default function Test() {
       </NavigationMenu.List>
       <NavigationMenu.Viewport />
     </NavigationMenu.Root>
+  );
+}
+
+function ListItem(product) {
+  return (
+    <li>
+      <NavigationMenu.Link asChild>
+        <Link href={product.url}>{product.name}</Link>
+      </NavigationMenu.Link>
+    </li>
   );
 }
