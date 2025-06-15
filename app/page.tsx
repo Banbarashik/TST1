@@ -9,6 +9,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import NavigationMenu from "@/components/ui/navigation-menu";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -64,6 +65,7 @@ export default function Home() {
       <header>
         <nav className="h-22 px-10 flex items-center">
           <div className="bg-gray-300 w-36 h-16" />
+          <NavigationMenu />
         </nav>
       </header>
 

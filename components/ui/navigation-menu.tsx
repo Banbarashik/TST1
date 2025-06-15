@@ -44,7 +44,7 @@ export default function NavigationMenu() {
 
   return (
     <NavigationMenuPrimitive.Root
-      className="w-48"
+      className="relative z-50"
       onValueChange={handleMenuChange}
     >
       <NavigationMenuPrimitive.List>
@@ -92,7 +92,7 @@ export default function NavigationMenu() {
           </NavigationMenuPrimitive.Content>
         </NavigationMenuPrimitive.Item>
       </NavigationMenuPrimitive.List>
-      <NavigationMenuPrimitive.Viewport />
+      <NavigationMenuPrimitive.Viewport className="absolute top-full" />
     </NavigationMenuPrimitive.Root>
   );
 }
