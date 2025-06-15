@@ -47,6 +47,7 @@ export default function NavigationMenu() {
       className="relative z-50"
       onValueChange={handleMenuChange}
     >
+      <NavigationMenuPrimitive.Viewport className="absolute top-full" />
       <NavigationMenuPrimitive.List>
         <NavigationMenuPrimitive.Item>
           <NavigationMenuPrimitive.Trigger className="p-2 hover:bg-accent rounded-md">
@@ -59,7 +60,7 @@ export default function NavigationMenu() {
                 {productCategories.map((category) => (
                   <NavigationMenuPrimitive.Item key={category.name}>
                     <NavigationMenuPrimitive.Trigger
-                      className="p-3 w-max hover:bg-accent"
+                      className="p-3 w-max hover:bg-accent data-[state=open]:bg-accent"
                       onMouseEnter={() => {
                         setActiveCategoryName(category.name);
                         setActiveProductName(category.items[0]?.name ?? null);
@@ -67,9 +68,9 @@ export default function NavigationMenu() {
                     >
                       {category.name}
                     </NavigationMenuPrimitive.Trigger>
-                    <NavigationMenuPrimitive.Content className="absolute top-0 left-full bg-pink-200 p-3 w-max ml-1">
-                      <div className="flex">
-                        <ul className="flex flex-col gap-6">
+                    <NavigationMenuPrimitive.Content className="absolute top-0 left-full bg-background rounded-md p-3 w-max ml-1">
+                      <div className="flex gap-12">
+                        <ul className="flex flex-col gap-2">
                           {category.items.map((product) => (
                             <ListItem
                               product={product}
@@ -94,7 +95,6 @@ export default function NavigationMenu() {
           </NavigationMenuPrimitive.Content>
         </NavigationMenuPrimitive.Item>
       </NavigationMenuPrimitive.List>
-      <NavigationMenuPrimitive.Viewport className="absolute top-full" />
     </NavigationMenuPrimitive.Root>
   );
 }
@@ -103,7 +103,9 @@ function ListItem({ product, onMouseEnter }) {
   return (
     <li onMouseEnter={onMouseEnter}>
       <NavigationMenuPrimitive.Link asChild>
-        <Link href={product.url}>{product.name}</Link>
+        <Link href={product.url} className="p-2 hover:bg-accent rounded-md">
+          {product.name}
+        </Link>
       </NavigationMenuPrimitive.Link>
     </li>
   );
