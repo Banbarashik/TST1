@@ -44,15 +44,9 @@ export default function Test() {
                         className="bg-gray-300 w-52 h-52"
                       />
                       <ul className="flex flex-col gap-6">
-                        <li>
-                          <NavigationMenu.Link>КСк</NavigationMenu.Link>
-                        </li>
-                        <li>
-                          <NavigationMenu.Link>ТВВ</NavigationMenu.Link>
-                        </li>
-                        <li>
-                          <NavigationMenu.Link>кфб в</NavigationMenu.Link>
-                        </li>
+                        {productCategories[0].items.map((product) => (
+                          <ListItem product={product} key={product.name} />
+                        ))}
                       </ul>
                     </div>
                   </NavigationMenu.Content>
@@ -67,7 +61,7 @@ export default function Test() {
   );
 }
 
-function ListItem(product) {
+function ListItem({ product }) {
   return (
     <li>
       <NavigationMenu.Link asChild>
