@@ -49,15 +49,17 @@ export default function NavigationMenu() {
     >
       <NavigationMenuPrimitive.List>
         <NavigationMenuPrimitive.Item>
-          <NavigationMenuPrimitive.Trigger>
+          <NavigationMenuPrimitive.Trigger className="p-2 hover:bg-accent rounded-md">
             Продукция
           </NavigationMenuPrimitive.Trigger>
-          <NavigationMenuPrimitive.Content>
-            <NavigationMenuPrimitive.Sub className="bg-amber-300">
-              <NavigationMenuPrimitive.List>
+          <NavigationMenuPrimitive.Content className="mt-2 bg-background rounded-md overflow-hidden">
+            <NavigationMenuPrimitive.Sub>
+              <NavigationMenuPrimitive.Viewport className="absolute h-full right-0" />
+              <NavigationMenuPrimitive.List className="flex flex-col">
                 {productCategories.map((category) => (
                   <NavigationMenuPrimitive.Item key={category.name}>
                     <NavigationMenuPrimitive.Trigger
+                      className="p-3 w-max hover:bg-accent"
                       onMouseEnter={() => {
                         setActiveCategoryName(category.name);
                         setActiveProductName(category.items[0]?.name ?? null);
@@ -65,7 +67,7 @@ export default function NavigationMenu() {
                     >
                       {category.name}
                     </NavigationMenuPrimitive.Trigger>
-                    <NavigationMenuPrimitive.Content className="absolute top-0 left-full bg-pink-200 p-3 w-max">
+                    <NavigationMenuPrimitive.Content className="absolute top-0 left-full bg-pink-200 p-3 w-max ml-1">
                       <div className="flex">
                         <ul className="flex flex-col gap-6">
                           {category.items.map((product) => (
