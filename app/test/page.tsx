@@ -10,16 +10,16 @@ export default function Test() {
           <NavigationMenu.Trigger>Продукция</NavigationMenu.Trigger>
           <NavigationMenu.Content>
             {/* submenu */}
-            <NavigationMenu.Sub orientation="vertical" className="bg-amber-300">
+            <NavigationMenu.Sub className="bg-amber-300">
               <NavigationMenu.List>
                 <NavigationMenu.Item>
                   <NavigationMenu.Trigger>
                     Калориферы водяные
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content>
+                  <NavigationMenu.Content className="absolute top-0 left-full bg-pink-200 p-3 w-max">
                     <div className="flex">
-                      <img src="#" alt="#" className="bg-gray-300" />
-                      <ul>
+                      <img src="#" alt="#" className="bg-gray-300 w-52 h-52" />
+                      <ul className="flex flex-col gap-6">
                         <li>
                           <NavigationMenu.Link>КСк</NavigationMenu.Link>
                         </li>
@@ -59,6 +59,7 @@ export default function Test() {
           </NavigationMenu.Content>
         </NavigationMenu.Item>
       </NavigationMenu.List>
+      <NavigationMenu.Viewport />
     </NavigationMenu.Root>
   );
 }
