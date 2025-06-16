@@ -40,12 +40,29 @@
 
   /* BRAND COLORS */
   --background: #f5f5f5;
+  /* --background: #f8f8f6; */
   --accent: #e6e6e6;
   /* --primary: #c4412b; */
-  --primary: #d8563f; /* Softer, orange-red tone */
+  /* rgb(201, 33, 35) */ /* MEDVEDY */
+  --primary: #d8563f; /* Softer, orange-red tone
+  /* --primary-hover: #a83624; */
   --secondary: #444b54;
+  /* --secondary-light: #6c727a; */
   --text: #1e1e1e;
+  /* --text-muted: #5a5a5a; For secondary text */
   --muted: #5a5a5a;
+
+  --primary: #e4572e; /* Heating orange-red */
+  --primary-foreground: #fff; /* White text on primary */
+  --secondary: #232f34; /* Industrial blue-gray */
+  --secondary-foreground: #fff; /* White text on secondary */
+  --accent: #ffd166; /* Warm yellow accent */
+  --accent-foreground: #232f34; /* Dark text on accent */
+  --background: #f5f5f5; /* Light background */
+  --foreground: #1e1e1e; /* Main text */
+  --muted: #6b7280; /* Muted text */
+  --muted-foreground: #f5f5f5; /* Muted on dark */
+  --border: #e5e7eb; /* Border */
 }
 
 @theme inline {
