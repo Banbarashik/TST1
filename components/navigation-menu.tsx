@@ -73,7 +73,7 @@ export default function NavigationMenu() {
       onValueChange={handleMenuChange}
     >
       <NavigationMenuPrimitive.Viewport className="absolute top-full" />
-      <NavigationMenuPrimitive.List>
+      <NavigationMenuPrimitive.List className="text-xl font-semibold flex gap-6 items-center">
         <NavigationMenuPrimitive.Item>
           <NavigationMenuPrimitive.Trigger className="p-2 hover:bg-accent rounded-md">
             Продукция
@@ -118,6 +118,20 @@ export default function NavigationMenu() {
               </NavigationMenuPrimitive.List>
             </NavigationMenuPrimitive.Sub>
           </NavigationMenuPrimitive.Content>
+        </NavigationMenuPrimitive.Item>
+        <NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Link asChild>
+            <Link href="#" className="p-2 hover:bg-accent rounded-md">
+              Расчет-подбор
+            </Link>
+          </NavigationMenuPrimitive.Link>
+        </NavigationMenuPrimitive.Item>
+        <NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Link asChild>
+            <Link href="#" className="p-2 hover:bg-accent rounded-md">
+              Прайс-лист
+            </Link>
+          </NavigationMenuPrimitive.Link>
         </NavigationMenuPrimitive.Item>
       </NavigationMenuPrimitive.List>
     </NavigationMenuPrimitive.Root>
