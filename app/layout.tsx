@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
+import Footer from "@/components/footer";
+import NavigationMenu from "@/components/navigation-menu";
+import Logo from "@/components/ui/logo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <nav className="h-22 px-10 flex items-center">
+          <Logo />
+          <NavigationMenu />
+        </nav>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

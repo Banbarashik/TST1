@@ -9,7 +9,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import NavigationMenu from "@/components/ui/navigation-menu";
+import NavigationMenu from "@/components/navigation-menu";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -62,13 +63,6 @@ export default function Home() {
 
   return (
     <>
-      <header>
-        <nav className="h-22 px-10 flex items-center">
-          <div className="bg-gray-300 w-36 h-16" />
-          <NavigationMenu />
-        </nav>
-      </header>
-
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="relative">
