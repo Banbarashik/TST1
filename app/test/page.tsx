@@ -1,28 +1,43 @@
 "use client";
 
-import Logo from "@/components/ui/logo";
+import { z } from "zod/v4";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+// Имя, название организации
+// E-mail
+// Регион, город
+// Интересующий продукт
+// Сообщение
+const formSchema = z.object({
+  name: z.string().max(200),
+  email: z.email(),
+  region: z.string().max(200),
+  product: z.string().max(300),
+  message: z.string().max(4000),
+});
 
 export default function () {
-  return (
-    <footer className="flex items-center h-42 bg-secondary text-secondary-foreground">
-      <div className="gap-16 flex justify-center w-full">
-        <ul className="text-lg font-bold">
-          <li className="mb-2 text-accent">+7 (3846) 68-23-24</li>
-          <li>
-            8-961-737-83-14{" "}
-            <span className="font-medium"> - технические вопросы</span>
-          </li>
-          <li>
-            8-904-968-14-88 <span className="font-medium">- отдел продаж</span>
-          </li>
-        </ul>
-        <ul className="font-medium">
-          <li>Юр. адрес: г. Новосибирск, ул. Широкая, дом 1 А, офис 207/1</li>
-          <li>Почтовый адрес: 652710, г. Киселевск, ул. Юргинская, 1</li>
-        </ul>
-        <p className="text-xl font-medium text-accent">zao_tst@mail.ru</p>
-        <Logo />
-      </div>
-    </footer>
-  );
+  // 1. Define your form.
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+  });
+
+  // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+  }
 }
