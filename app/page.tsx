@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
@@ -9,8 +10,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import NavigationMenu from "@/components/navigation-menu";
-import Footer from "@/components/footer";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,88 +25,52 @@ export default function Home() {
 
   const slides = [
     {
-      key: "tst-logo",
-      content: (
-        <>
-          <div className="w-64 h-64 bg-gray-300 shrink-0">TST Logo</div>
-          <div className="text-2xl text-gray-700">
-            <p className="text-3xl">
-              25 лет на рынке вентиляционно-отопительного оборудования
-            </p>
-            <p>
-              За это время мы установили деловое сотрудничество и прочные
-              хозяйственные связи с предприятиями металлургической,
-              топливно-энергетической, авиационной, машиностроительной,
-              угольной, нефтегазовой, алмазной и алюминиевой промышленности, а
-              также агропромышленного комплекса практически всех регионов нашей
-              страны, Беларуси и Казахстана.
-            </p>
-          </div>
-        </>
-      ),
+      title: "25 лет на рынке вентиляционно-отопительного оборудования",
+      text: "За это время мы установили деловое сотрудничество ...",
+      img: "/img/hero/IMG_20190319_130001.jpg",
     },
     {
-      key: "kalorifer",
-      content: (
-        <>
-          <div className="w-64 h-64 bg-gray-300 shrink-0">Kalorifer</div>
-          <p className="text-2xl text-gray-700">
-            Продукция ООО Т.С.Т. – это безопасное и простое в обслуживании,
-            устойчивое к плохим условиям эксплуатации, надежное и способное
-            исправно работать в течение многих лет нагревательное оборудование.
-          </p>
-        </>
-      ),
+      title: "",
+      text: `Продукция ООО Т.С.Т. – это безопасное и простое в обслуживании,
+      устойчивое к плохим условиям эксплуатации, надежное и способное исправно
+      работать в течение многих лет нагревательное оборудование.`,
+      img: "/hero/tst-bg.jpg",
     },
   ];
 
   return (
     <>
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="relative">
-          {/* Navigation buttons */}
-          <button
-            onClick={() => instanceRef.current?.prev()}
-            className="absolute top-1/2 z-10 transform -translate-y-1/2 -translate-x-full text-gray-400"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft className="w-24 h-24" />
-          </button>
-          <button
-            onClick={() => instanceRef.current?.next()}
-            className="absolute top-1/2 right-0 z-10 transform -translate-y-1/2 translate-x-full text-gray-400"
-            aria-label="Next Slide"
-          >
-            <ChevronRight className="w-24 h-24" />
-          </button>
-
-          {/* Slider */}
-          <div ref={sliderRef} className="keen-slider">
-            {slides.map((slide) => (
-              <div key={slide.key} className="keen-slider__slide flex gap-20">
-                {slide.content}
-              </div>
-            ))}
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center mt-6 gap-2">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => instanceRef.current?.moveToIdx(idx)}
-                className={`w-4 h-4 rounded-full border-2 border-gray-400 transition-colors ${
-                  currentSlide === idx
-                    ? "bg-gray-700 border-gray-700"
-                    : "bg-white"
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
+      {/* Hero Section */}
+      <div className="relative w-screen">
+        <div ref={sliderRef} className="keen-slider">
+          {slides.map((slide, idx) => (
+            <div
+              key={idx}
+              className="keen-slider__slide cursor-grab relative w-screen h-126 flex items-center justify-center overflow-hidden"
+            >
+              <Image
+                src={slide.img}
+                alt=""
+                fill
+                className="object-cover w-full h-full blur-sm scale-110"
+                priority
+                aria-hidden="true"
               />
-            ))}
-          </div>
+              {/* Overlay for darkening */}
+              <div className="absolute inset-0 bg-black/30" />
+              {/* Centered Text */}
+              <div className="relative z-10 text-center text-white max-w-3xl mx-auto px-4">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                  {slide.title}
+                </h2>
+                <p className="text-lg md:text-2xl drop-shadow">{slide.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto">
         {/* Catalog */}
         <div>
           <p className="text-4xl">Каталог</p>
