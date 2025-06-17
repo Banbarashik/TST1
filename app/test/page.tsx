@@ -41,7 +41,11 @@ export default function () {
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
+      company: "",
       email: "",
+      region: "",
+      product: "",
+      message: "",
     },
   });
 
@@ -70,10 +74,49 @@ export default function () {
         />
         <FormField
           control={form.control}
+          name="company"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Название организации</FormLabel>
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input type="email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="region"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Регион, город</FormLabel>
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="product"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Интересующий товар</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
