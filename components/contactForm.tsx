@@ -67,7 +67,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="max-w-lg">
+    <Card className="max-w-2xl w-full">
       <CardContent>
         <Form {...form}>
           <form

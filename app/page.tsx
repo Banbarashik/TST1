@@ -1,10 +1,13 @@
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Hero from "@/components/hero";
+import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   return (
@@ -12,7 +15,7 @@ export default function Home() {
       <Hero />
       <div className="max-w-7xl mx-auto">
         {/* Catalog */}
-        <div>
+        <div className="my-32">
           <p className="text-4xl">Каталог</p>
           <div className="flex items-center gap-2">
             <Link href="#" className="text-2xl">
@@ -77,6 +80,23 @@ export default function Home() {
               </Link>
             </li>
           </ul>
+        </div>
+
+        <div className="flex justify-center items-center gap-20 mb-32">
+          <div className="text-center">
+            <p className="text-4xl mb-4 font-bold">Есть вопросы?</p>
+            <p className="text-xl mb-2">
+              Оставьте заявку через форму справа, и мы свяжемся с вами в самое
+              ближайшее время.
+            </p>
+            <p className="text-xl">
+              <span>Или воспользуйтесь нашими </span>
+              <Link href="" className="text-primary">
+                онлайн-инструментами расчета-подбора калориферов.
+              </Link>
+            </p>
+          </div>
+          <ContactForm />
         </div>
       </div>
     </>
