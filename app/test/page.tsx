@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   Tooltip,
@@ -27,22 +28,22 @@ const productCategories = [
       {
         name: "Калориферы КСК",
         url: "",
-        img: "",
+        img: "/img/catalog/zao_tst_kalorifery_ksk.jpg",
       },
       {
         name: "Калориферы КПСК",
         url: "",
-        img: "",
+        img: "/img/catalog/zao_tst_kalorifery_kpsk.jpg",
       },
       {
         name: "Агрегаты АО2",
         url: "",
-        img: "",
+        img: "/img/catalog/zao_tst_agregaty_ao2.jpg",
       },
       {
         name: "Агрегаты СТД-300",
         url: "",
-        img: "",
+        img: "/img/catalog/zao_tst_agregaty_std-300.jpg",
       },
     ],
   },
@@ -56,14 +57,14 @@ export default function () {
         <ul className="flex items-center gap-2">
           {productCategories.map(function (category) {
             return (
-              <li className="w-full">
+              <li key={category.name} className="w-full">
                 <Link href="#" className="text-2xl">
                   {category.name}
                 </Link>
                 <Tooltip>
                   <TooltipContent className="w-4xl text-lg flex flex-col gap-2">
                     {category.tip.map((t) => (
-                      <p>{t}</p>
+                      <p key={t}>{t}</p>
                     ))}
                   </TooltipContent>
                   <TooltipTrigger className="bg-amber-300 rounded-full w-6 h-6 border">
@@ -71,15 +72,21 @@ export default function () {
                   </TooltipTrigger>
                 </Tooltip>
 
-                <ul className="flex gap-2.5">
+                <ul className="flex gap-16">
                   {category.items.map(function (product) {
                     return (
-                      <li className="box-border w-full border shadow-[3px_3px_5px_0px_rgb(128,128,128)] border-[rgb(128,128,128)] px-1 pt-1">
-                        <Link href={product.url}>
-                          <div className="bg-gray-300 aspect-square" />
-                          <p className="font-bold uppercase text-center">
-                            {product.name}
-                          </p>
+                      <li key={product.name}>
+                        <Link
+                          href={product.url}
+                          className="bg-card text-card-foreground flex flex-col gap-4 px-5 pt-5 pb-3 rounded-xl border shadow-sm items-center"
+                        >
+                          <Image
+                            src={product.img}
+                            alt={product.name}
+                            width={250}
+                            height={250}
+                          />
+                          <p className="font-bold uppercase">{product.name}</p>
                         </Link>
                       </li>
                     );
