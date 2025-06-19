@@ -9,7 +9,41 @@ import {
 
 const productCategories = [
   {
+    name: "Электрические установки СФОЦ, калориферы СФО, шкафы управления, ТЭНЫ",
+    url: "",
+    tip: [
+      `Если в отапливаемом помещении нет подведенной теплоцентрали, а ее монтаж не
+    представляется возможным, тогда имеет смысл использовать в качестве энергоносителя
+    - электричество, а в качестве отопительных устройств - электрокалориферные установки
+    в сборе – центробежный радиальный вентилятор и электрический калорифер. Эти агрегаты
+    достаточно автономны и для их эксплуатации не требуется развернутых коммуникаций.`,
+    ],
+    items: [
+      {
+        name: "Установки СФОЦ",
+        url: "",
+        img: "/img/catalog/Установки-СФОЦ.png",
+      },
+      {
+        name: "Калориферы СФО",
+        url: "",
+        img: "/img/catalog/Калориферы-СФО.png",
+      },
+      {
+        name: "Шкафы управления",
+        url: "",
+        img: "/img/catalog/Шкафы-управления.png",
+      },
+      {
+        name: "ТЭНы оребренные",
+        url: "",
+        img: "/img/catalog/ТЭНы-оребренные.png",
+      },
+    ],
+  },
+  {
     name: "Калориферы и отопительные агрегаты",
+    url: "",
     tip: [
       `Принцип водяного и парового воздушного отопления состоит в следующем.
       Берется первичный теплоноситель - горячая вода или пар (исходя из той магистральной
@@ -23,27 +57,26 @@ const productCategories = [
       Под действием вентилятора теплый воздух целенаправленным потоком прогревает всю
       площадь отапливаемого здания.`,
     ],
-    url: "",
     items: [
       {
         name: "Калориферы КСК",
         url: "",
-        img: "/img/catalog/zao_tst_kalorifery_ksk.jpg",
+        img: "/img/catalog/Калориферы-КСк.png",
       },
       {
         name: "Калориферы КПСК",
         url: "",
-        img: "/img/catalog/zao_tst_kalorifery_kpsk.jpg",
+        img: "/img/catalog/Калориферы-КПСк.png",
       },
       {
         name: "Агрегаты АО2",
         url: "",
-        img: "/img/catalog/zao_tst_agregaty_ao2.jpg",
+        img: "/img/catalog/Агрегаты-АО2.png",
       },
       {
         name: "Агрегаты СТД-300",
         url: "",
-        img: "/img/catalog/zao_tst_agregaty_std-300.jpg",
+        img: "/img/catalog/Агрегаты-СТД-300.png",
       },
     ],
   },
@@ -54,7 +87,7 @@ export default function () {
     <div className="max-w-7xl mx-auto">
       <div className="my-32">
         <p className="text-4xl">Каталог</p>
-        <ul className="flex items-center gap-2">
+        <ul className="flex flex-col items-center gap-2">
           {productCategories.map(function (category) {
             return (
               <li key={category.name} className="w-full">
