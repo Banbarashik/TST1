@@ -166,7 +166,7 @@ export default function Catalog() {
               <ul className="flex gap-12 mt-6">
                 {category.items.map(function (product) {
                   return (
-                    <li key={product.name}>
+                    <li key={product.name} className="w-full">
                       <Link
                         href={product.url}
                         className="bg-card text-card-foreground flex flex-col gap-4 px-10 pt-5 pb-3 rounded-xl border shadow-sm items-center"
@@ -174,8 +174,8 @@ export default function Catalog() {
                         <Image
                           src={product.img}
                           alt={product.name}
-                          width={250}
-                          height={250}
+                          width={500}
+                          height={500}
                         />
                         <p className="font-bold uppercase">{product.name}</p>
                       </Link>
