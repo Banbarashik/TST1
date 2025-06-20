@@ -19,17 +19,18 @@ export default function Home() {
           src="/img/hero/IMG_20190423_090922.jpg"
           alt="Contact background"
           fill
-          className="object-cover z-0"
+          className="object-cover blur-sm scale-110"
           priority
         />
+        <div className="absolute inset-0 bg-white/40" /> {/* FOG */}
         <div className="z-10 flex justify-center items-center gap-20 w-full px-12">
-          <div className="text-center max-w-3xl">
-            <p className="text-4xl mb-4 font-bold">Есть вопросы?</p>
-            <p className="text-xl mb-2">
-              Оставьте заявку через форму, и мы свяжемся с вами в ближайшее
-              время.
+          <div className="text-center max-w-xl">
+            <p className="text-5xl mb-4 font-bold">Есть вопросы?</p>
+            <p className="text-2xl mb-2">
+              Оставьте заявку через форму, и мы свяжемся <br /> с вами в
+              ближайшее время.
             </p>
-            <p className="text-xl">
+            <p className="text-2xl">
               <span>Или воспользуйтесь </span>
               <Link href="" className="text-primary">
                 онлайн-инструментами расчета-подбора калориферов.
