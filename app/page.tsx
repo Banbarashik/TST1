@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl px-12 mx-auto">
         <Catalog />
         <div className="flex justify-center items-center gap-20 mb-32">
           <div className="text-center">
