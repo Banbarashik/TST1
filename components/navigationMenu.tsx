@@ -80,7 +80,7 @@ export default function NavigationMenu() {
           </NavigationMenuPrimitive.Trigger>
           <NavigationMenuPrimitive.Content className="mt-2 bg-background rounded-md overflow-hidden">
             <NavigationMenuPrimitive.Sub>
-              <NavigationMenuPrimitive.Viewport className="absolute h-full right-0" />
+              <NavigationMenuPrimitive.Viewport className="absolute h-full right-full" />
               <NavigationMenuPrimitive.List className="flex flex-col w-max">
                 {productCategories.map((category) => (
                   <NavigationMenuPrimitive.Item key={category.name}>
@@ -93,7 +93,7 @@ export default function NavigationMenu() {
                     >
                       {category.name}
                     </NavigationMenuPrimitive.Trigger>
-                    <NavigationMenuPrimitive.Content className="absolute top-0 left-full bg-background rounded-md p-3 w-max ml-1">
+                    <NavigationMenuPrimitive.Content className="absolute top-0 right-full bg-background rounded-md p-3 w-max mr-1">
                       <div className="flex gap-12">
                         <ul className="flex flex-col gap-2">
                           {category.items.map((product) => (
