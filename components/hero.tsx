@@ -1,7 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import { useKeenSlider } from "keen-slider/react";
+
+import { Button } from "@/components/ui/button";
 
 const slides = [
   {
@@ -52,7 +56,12 @@ export default function Hero() {
               <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
                 {slide.title}
               </h2>
-              <p className="text-lg md:text-2xl drop-shadow">{slide.text}</p>
+              <p className="text-lg md:text-2xl drop-shadow mb-4">
+                {slide.text}
+              </p>
+              <Button className="text-3xl px-8 h-14" asChild>
+                <Link href={slide.url}>Каталог</Link>
+              </Button>
             </div>
           </div>
         ))}
