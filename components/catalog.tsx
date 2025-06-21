@@ -144,7 +144,9 @@ const productCategories = [
 export default function Catalog() {
   return (
     <div className="my-24">
-      <p className="text-5xl mb-10 font-bold text-center">Каталог</p>
+      <p className="text-5xl mb-10 font-bold text-center uppercase font-inter">
+        Каталог
+      </p>
       <ul className="flex flex-col items-center gap-16">
         {productCategories.map(function (category) {
           return (
@@ -152,7 +154,7 @@ export default function Catalog() {
               key={category.name}
               className="w-full flex flex-col items-center"
             >
-              <Link href="#" className="text-2xl">
+              <Link href="#" className="text-2xl hover:text-primary">
                 {category.name}
               </Link>
               <Tooltip>
@@ -172,7 +174,7 @@ export default function Catalog() {
                     <li key={product.name} className="w-full">
                       <Link
                         href={product.url}
-                        className="bg-card text-card-foreground flex flex-col gap-4 px-10 pt-5 pb-3 rounded-xl border shadow-sm items-center"
+                        className="hover:text-primary bg-card text-card-foreground flex flex-col gap-4 px-10 pt-5 pb-5 rounded-xl border shadow-sm items-center"
                       >
                         <Image
                           src={product.img}
@@ -180,7 +182,9 @@ export default function Catalog() {
                           width={750}
                           height={750}
                         />
-                        <p className="font-bold uppercase">{product.name}</p>
+                        <p className="font-bold uppercase tracking-wide font-inter">
+                          {product.name}
+                        </p>
                       </Link>
                     </li>
                   );

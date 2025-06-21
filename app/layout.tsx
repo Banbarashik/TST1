@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`font-arial antialiased`}>
         <nav className="h-22 px-20 flex items-center justify-between">
           <Logo />
           <NavigationMenu />

@@ -5,6 +5,8 @@
 
 @theme {
   --container-8xl: 90rem; /* 90rem = 1440px */
+  --font-arial: Arial;
+  --font-inter: Inter;
 }
 
 :root {
