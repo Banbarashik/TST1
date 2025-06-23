@@ -1,11 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent } from "@/components/ui/tooltip";
 
 const productCategories = [
   {

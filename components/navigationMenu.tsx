@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 
 const productCategories = [
@@ -106,8 +108,8 @@ export default function NavigationMenu() {
                             />
                           ))}
                         </ul>
-                        <img
-                          src={activeProduct?.img}
+                        <Image
+                          src={activeProduct?.img || ""}
                           alt="#"
                           className="bg-gray-300 w-52 h-52"
                         />

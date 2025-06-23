@@ -68,7 +68,9 @@ export default function Hero() {
               } relative z-10 text-center text-white mx-auto px-4`}
             >
               {slide.title.map((t) => (
-                <p className="text-6xl font-bold drop-shadow-lg">{t}</p>
+                <p key={t} className="text-6xl font-bold drop-shadow-lg">
+                  {t}
+                </p>
               ))}
               {/* <h2 className="text-6xl font-bold drop-shadow-lg mb-10">
                 {slide.title}

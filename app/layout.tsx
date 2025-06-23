@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 import Footer from "@/components/footer";
 import NavigationMenu from "@/components/navigationMenu";
 import Logo from "@/components/ui/logo";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",

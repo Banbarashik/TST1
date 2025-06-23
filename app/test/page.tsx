@@ -82,7 +82,7 @@ const productCategories = [
   },
 ];
 
-export default function () {
+export default function Test() {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="my-32">
