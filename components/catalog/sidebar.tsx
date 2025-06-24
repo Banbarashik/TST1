@@ -62,7 +62,7 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className="group relative w-full text-left"
+                className="group relative w-full cursor-pointer text-left"
                 style={{ paddingLeft }}
               >
                 <Link
