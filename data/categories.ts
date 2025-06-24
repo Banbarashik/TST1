@@ -1,19 +1,39 @@
 export const categoryTree = [
   {
-    label: "Vodyanoy kalorifer",
-    slug: "vodyanoy-kalorifer",
+    label: "Водяные калориферы",
+    slug: "vodiany-kalorifery",
     children: [
       {
-        label: "Kalorifer KSk",
+        label: "Калориферы КСк",
         slug: "ksk",
         children: [
-          { label: "Kalorifer KSk 2-1", slug: "ksk-2-1" },
-          { label: "Kalorifer KSk 2-2", slug: "ksk-2-2" },
+          { label: "Двухрядные", slug: "ksk-2" },
+          { label: "Трехрядные", slug: "ksk-3" },
+          { label: "Четырехрядные", slug: "ksk-4" },
         ],
       },
       {
-        label: "Kalorifer TVV",
+        label: "Калориферы ТВВ",
         slug: "tvv",
+        children: [
+          { label: "Трехрядные", slug: "tvv-3" },
+          { label: "Четырехрядные", slug: "tvv-4" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Паровые калориферы",
+    slug: "parovy-kalorifery",
+    children: [
+      {
+        label: "Калориферы КПСк",
+        slug: "kpsk",
+        children: [
+          { label: "Двухрядные", slug: "kpsk-2" },
+          { label: "Трехрядные", slug: "kpsk-3" },
+          { label: "Четырехрядные", slug: "kpsk-4" },
+        ],
       },
     ],
   },
