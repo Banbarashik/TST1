@@ -12,7 +12,6 @@ import {
   AccordionContent,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown } from "lucide-react";
 
 type CategoryNode = {
   label: string;
@@ -76,10 +75,6 @@ function RecursiveAccordion({
               >
                 {node.label}
               </Link>
-              <ChevronDown
-                className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180"
-                aria-hidden
-              />
             </AccordionTrigger>
             <AccordionContent className="pl-2 data-[state=closed]:hidden">
               <RecursiveAccordion
