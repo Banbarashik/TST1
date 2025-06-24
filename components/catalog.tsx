@@ -24,7 +24,7 @@ const productCategories = [
       {
         name: "Калориферы КСК",
         url: "",
-        img: "/img/catalog/Калориферы-КСк.png",
+        img: "/img/catalog/photo_2025-06-24_19-01-31.jpg",
       },
       {
         name: "Калориферы КПСК",
@@ -143,10 +143,10 @@ export default function Catalog() {
       <ul className="flex flex-col items-center gap-16">
         {productCategories.map(function (category) {
           return (
-            <li key={category.name} className="w-full flex flex-col">
+            <li key={category.name} className="flex w-full flex-col">
               <p className="text-2xl font-bold uppercase">{category.name}</p>
               <Tooltip>
-                <TooltipContent className="w-4xl text-lg flex flex-col gap-2">
+                <TooltipContent className="flex w-4xl flex-col gap-2 text-lg">
                   {category.tip.map((t) => (
                     <p key={t}>{t}</p>
                   ))}
@@ -156,13 +156,13 @@ export default function Catalog() {
                 </TooltipTrigger> */}
               </Tooltip>
 
-              <ul className="flex gap-12 mt-6">
+              <ul className="mt-6 flex gap-12">
                 {category.items.map(function (product) {
                   return (
                     <li key={product.name} className="w-full">
                       <Link
                         href={product.url}
-                        className="hover:text-primary bg-card text-card-foreground flex flex-col gap-4 px-10 pt-5 pb-5 rounded-xl border shadow-sm items-center"
+                        className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border px-10 pt-5 pb-5 shadow-sm"
                       >
                         <Image
                           src={product.img}
@@ -170,7 +170,7 @@ export default function Catalog() {
                           width={750}
                           height={750}
                         />
-                        <p className="font-bold uppercase tracking-wide">
+                        <p className="font-bold tracking-wide uppercase">
                           {product.name}
                         </p>
                       </Link>

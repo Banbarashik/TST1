@@ -2,11 +2,7 @@ export const products = [
   {
     id: "1",
     name: "Калорифер КСк 2-1",
-    categories: [
-      "kalorifer",
-      "vodyanoy-kalorifer",
-      "vodayanoy-dvuhriadny-kalorifer",
-    ],
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     price: 10,
     img: "/img/kalorifer_ksk_2-1.jpg",
     description: "Test",
@@ -14,11 +10,7 @@ export const products = [
   {
     id: "2",
     name: "Калорифер КСк 2-2",
-    categories: [
-      "kalorifer",
-      "vodyanoy-kalorifer",
-      "vodayanoy-dvuhriadny-kalorifer",
-    ],
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     price: 10,
     img: "/img/kalorifer_ksk_2-2.jpg",
     description: "Test",
@@ -26,11 +18,7 @@ export const products = [
   {
     id: "3",
     name: "Калорифер КСк 2-3",
-    categories: [
-      "kalorifer",
-      "vodyanoy-kalorifer",
-      "vodayanoy-dvuhriadny-kalorifer",
-    ],
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     price: 10,
     img: "/img/kalorifer_ksk_2-3.jpg",
     description: "Test",
@@ -38,15 +26,23 @@ export const products = [
   {
     id: "4",
     name: "Калорифер КСк 2-4",
-    categories: ["kalorifer", "vodyanoy-kalorifer", "ksk"],
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     price: 10,
     img: "/img/kalorifer_ksk_2-4.jpg",
     description: "Test",
   },
   {
     id: "5",
-    name: "Калорифер ТВВ",
-    categories: ["kalorifer", "vodyanoy-kalorifer", "tvv"],
+    name: "Калорифер КСк 3-1",
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
+    price: 10,
+    img: "/img/kalorifer_ksk_3-1.jpg",
+    description: "Test",
+  },
+  {
+    id: "6",
+    name: "Калорифер ТВВ 306",
+    categories: ["kalorifer", "vodiany-kalorifery", "tvv", "tvv-3"],
     price: 10,
     img: "/img/kalorifer_tvv_306.jpg",
     description: "Test",

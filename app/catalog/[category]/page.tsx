@@ -20,15 +20,8 @@ export default async function Catalog({
 
   console.log(filteredProducts);
 
-  const currentCategoryName = categoryTree.find(
-    (c) => c.slug === category,
-  )?.label;
-
-  console.log(currentCategoryName);
-
   return (
     <div>
-      <h1 className="mb-4 text-2xl font-bold">{currentCategoryName}</h1>
       <div className="grid grid-cols-3 gap-5">
         {filteredProducts.map((product) => (
           <Link href={`/product/${product.id}`} key={product.id}>
