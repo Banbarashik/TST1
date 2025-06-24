@@ -4,8 +4,6 @@ import { categoryTree } from "@/data/categories";
 import Image from "next/image";
 import Link from "next/link";
 
-// const categories = ["all", "kalorifer", "vodyanoy kalorifer"];
-
 export default async function Catalog({
   params,
 }: {
@@ -18,7 +16,12 @@ export default async function Catalog({
       ? products
       : products.filter((product) => product.categories.includes(categorySlug));
 
-  console.log(filteredProducts);
+  if (filteredProducts.length === 0)
+    return (
+      <div className="flex w-full items-center justify-center text-xl">
+        Нет товаров в данной категории.
+      </div>
+    );
 
   return (
     <div>
