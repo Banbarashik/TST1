@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-arial antialiased`}>
-        <nav className="h-22 px-20 flex items-center justify-between">
+      <body className="font-arial flex min-h-screen flex-col antialiased">
+        <nav className="flex h-22 items-center justify-between px-20">
           <Logo />
           <NavigationMenu />
         </nav>
