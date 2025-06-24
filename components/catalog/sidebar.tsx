@@ -21,7 +21,7 @@ type CategoryNode = {
 function findOpenAccordions(
   nodes: CategoryNode[],
   targetSlug: string,
-  path: string[] = []
+  path: string[] = [],
 ): string[] {
   for (const node of nodes) {
     const currentPath = [...path, node.slug];
@@ -62,20 +62,18 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className="flex w-full items-center justify-between px-3 py-2 text-left hover:bg-gray-100"
+                className="relative w-full text-left"
                 style={{ paddingLeft }}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`flex-1 text-sm ${
-                    isActive ? "text-blue-600 font-semibold" : ""
-                  }`}
+                  className={`${isActive ? "bg-accent" : ""} block w-full rounded-sm p-3`}
                 >
                   {node.label}
                 </Link>
                 <ChevronDown
-                  className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180"
-                  aria-hidden
+                  size={48}
+                  className="absolute top-1/2 right-0 -translate-y-1/2 p-3"
                 />
               </Accordion.Trigger>
             </Accordion.Header>
@@ -91,8 +89,8 @@ function RecursiveAccordion({
           <div key={node.slug}>
             <Link
               href={`/catalog/${node.slug}`}
-              className={`block px-3 py-2 hover:bg-gray-100 text-sm ${
-                isActive ? "text-blue-600 font-semibold bg-gray-100" : ""
+              className={`block px-3 py-2 text-sm hover:bg-gray-100 ${
+                isActive ? "bg-gray-100 font-semibold text-blue-600" : ""
               }`}
               style={{ paddingLeft }}
             >
@@ -115,7 +113,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 pr-4">
-      <h2 className="text-xl font-bold mb-4">Categories</h2>
+      <h2 className="mb-4 text-xl font-bold">Categories</h2>
       <Accordion.Root
         type="multiple"
         defaultValue={defaultOpenItems}
