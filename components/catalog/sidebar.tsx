@@ -62,7 +62,7 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className="relative w-full text-left"
+                className="group relative w-full text-left"
                 style={{ paddingLeft }}
               >
                 <Link
@@ -73,7 +73,7 @@ function RecursiveAccordion({
                 </Link>
                 <ChevronDown
                   size={48}
-                  className="absolute top-1/2 right-0 -translate-y-1/2 p-3"
+                  className="absolute top-1/2 right-0 -translate-y-1/2 rotate-90 p-3 group-data-[state=open]:rotate-0"
                 />
               </Accordion.Trigger>
             </Accordion.Header>
