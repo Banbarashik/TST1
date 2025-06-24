@@ -47,4 +47,12 @@ export const products = [
     img: "/img/kalorifer_tvv_306.jpg",
     description: "Test",
   },
+  {
+    id: "7",
+    name: "Калорифер КПСк 4-1",
+    categories: ["kalorifer", "parovy-kalorifery", "kpsk", "kpsk-4"],
+    price: 10,
+    img: "/img/kalorifer_kpsk_4-1.jpg",
+    description: "Test",
+  },
 ];
