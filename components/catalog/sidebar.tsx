@@ -67,14 +67,10 @@ function RecursiveAccordion({
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
+                  className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
                 >
                   {node.label}
                 </Link>
-                <ChevronDown
-                  size={48}
-                  className="absolute top-1/2 right-0 -translate-y-1/2 rotate-90 p-3 group-data-[state=open]:rotate-0"
-                />
               </Accordion.Trigger>
             </Accordion.Header>
             <Accordion.Content className="pl-2 data-[state=closed]:hidden">
