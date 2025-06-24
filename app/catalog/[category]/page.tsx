@@ -11,12 +11,12 @@ export default async function Catalog({
 }: {
   params: { category: string };
 }) {
-  const { category } = await params;
+  const { category: categorySlug } = await params;
 
   const filteredProducts =
-    category === "all"
+    categorySlug === "all"
       ? products
-      : products.filter((product) => product.categories.includes(category));
+      : products.filter((product) => product.categories.includes(categorySlug));
 
   console.log(filteredProducts);
 
