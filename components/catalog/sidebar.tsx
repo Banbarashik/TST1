@@ -1,17 +1,11 @@
 "use client";
 
-import { categoryTree } from "@/data/categories";
-
+import * as Accordion from "@radix-ui/react-accordion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
+import { categoryTree } from "@/data/categories";
 import { useMemo } from "react";
-
-import {
-  Accordion,
-  AccordionItem,
-  AccordionContent,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 type CategoryNode = {
   label: string;
@@ -19,7 +13,11 @@ type CategoryNode = {
   children?: CategoryNode[];
 };
 
-// 🔍 Recursively find parent slugs for the current category
+/**
+ * Recursively finds all slugs that should be expanded:
+ * - all parent categories
+ * - the active category itself (if it has children)
+ */
 function findOpenAccordions(
   nodes: CategoryNode[],
   targetSlug: string,
@@ -29,7 +27,6 @@ function findOpenAccordions(
     const currentPath = [...path, node.slug];
 
     if (node.slug === targetSlug) {
-      // If current node is target and has children → include itself
       return node.children ? currentPath : path;
     }
 
@@ -58,32 +55,38 @@ function RecursiveAccordion({
         const paddingLeft = `${level * 1}rem`;
 
         return hasChildren ? (
-          <AccordionItem
+          <Accordion.Item
             value={node.slug}
             key={node.slug}
             className="overflow-hidden"
           >
-            <AccordionTrigger
-              className="flex w-full items-center justify-between px-3 py-2 text-left hover:bg-gray-100"
-              style={{ paddingLeft }}
-            >
-              <Link
-                href={`/catalog/${node.slug}`}
-                className={`flex-1 text-sm ${
-                  isActive ? "text-blue-600 font-semibold" : ""
-                }`}
+            <Accordion.Header>
+              <Accordion.Trigger
+                className="flex w-full items-center justify-between px-3 py-2 text-left hover:bg-gray-100"
+                style={{ paddingLeft }}
               >
-                {node.label}
-              </Link>
-            </AccordionTrigger>
-            <AccordionContent className="pl-2 data-[state=closed]:hidden">
+                <Link
+                  href={`/catalog/${node.slug}`}
+                  className={`flex-1 text-sm ${
+                    isActive ? "text-blue-600 font-semibold" : ""
+                  }`}
+                >
+                  {node.label}
+                </Link>
+                <ChevronDown
+                  className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180"
+                  aria-hidden
+                />
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className="pl-2 data-[state=closed]:hidden">
               <RecursiveAccordion
                 nodes={node.children!}
                 currentSlug={currentSlug}
                 level={level + 1}
               />
-            </AccordionContent>
-          </AccordionItem>
+            </Accordion.Content>
+          </Accordion.Item>
         ) : (
           <div key={node.slug}>
             <Link
@@ -103,7 +106,7 @@ function RecursiveAccordion({
 }
 
 export default function Sidebar() {
-  const pathname = usePathname(); // e.g. /catalog/ksk
+  const pathname = usePathname(); // e.g. /catalog/ksk-2-1
   const currentSlug = pathname.split("/").pop() ?? "";
 
   const defaultOpenItems = useMemo(() => {
@@ -113,13 +116,13 @@ export default function Sidebar() {
   return (
     <aside className="w-64 pr-4">
       <h2 className="text-xl font-bold mb-4">Categories</h2>
-      <Accordion
+      <Accordion.Root
         type="multiple"
         defaultValue={defaultOpenItems}
         className="space-y-1"
       >
         <RecursiveAccordion nodes={categoryTree} currentSlug={currentSlug} />
-      </Accordion>
+      </Accordion.Root>
     </aside>
   );
 }
