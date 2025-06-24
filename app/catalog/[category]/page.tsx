@@ -15,7 +15,27 @@ export default async function Catalog({
   const filteredProducts =
     category === "all"
       ? products
-      : products.filter((p) => p.categories.includes(category));
+      : products.filter((product) => product.categories.includes(category));
 
   console.log(filteredProducts);
+
+  return (
+    <div className="grid grid-cols-3 gap-5">
+      {filteredProducts.map((product) => (
+        <Link href={`/product/${product.id}`} key={product.id}>
+          <div className="rounded-lg border p-4 transition hover:shadow-md">
+            <Image
+              src={product.img}
+              alt={product.name}
+              width={300}
+              height={200}
+              className="mb-2 h-48 w-full object-cover"
+            />
+            <h2 className="text-lg font-semibold">{product.name}</h2>
+            <p className="text-gray-600">${product.price.toFixed(2)}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
 }
