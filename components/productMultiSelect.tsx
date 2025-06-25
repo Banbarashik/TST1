@@ -17,7 +17,7 @@ import {
   CommandGroup,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { Check, X } from "lucide-react";
 
 type Product = (typeof products)[number];
 
@@ -52,16 +52,16 @@ export function ProductMultiSelect({
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
+            variant="unstyled"
             type="button"
-            className="w-full justify-start"
+            className="hover:border-ring hover:ring-ring/50 w-full justify-start border hover:ring-[3px]"
           >
             {selectedProducts.length === 0
               ? "Выберите товары"
               : selectedProducts.map((p) => p.name).join(", ")}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-80 p-0">
+        <PopoverContent className="p-0">
           <Command>
             <CommandInput placeholder="Поиск товара..." />
             <CommandList>
@@ -80,13 +80,10 @@ export function ProductMultiSelect({
                           }
                         }}
                         data-selected={value.includes(product.id)}
-                        className={
-                          value.includes(product.id) ? "bg-accent" : ""
-                        }
                       >
                         {product.name}
                         {value.includes(product.id) && (
-                          <X className="ml-auto size-4 opacity-50" />
+                          <Check className="ml-auto size-4 text-black opacity-50" />
                         )}
                       </CommandItem>
                     ))}
