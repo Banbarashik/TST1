@@ -106,11 +106,11 @@ export default function Sidebar() {
   }, [currentSlug]);
 
   return (
-    <aside className="w-64 pr-4">
+    <aside className="w-64">
       <Accordion.Root
         type="multiple"
         defaultValue={defaultOpenItems}
-        className="w-64"
+        className="fixed w-60"
       >
         <RecursiveAccordion nodes={categoryTree} currentSlug={currentSlug} />
       </Accordion.Root>
