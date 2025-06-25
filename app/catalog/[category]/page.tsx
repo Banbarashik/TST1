@@ -33,8 +33,7 @@ export default async function Catalog({
                 src={product.img}
                 alt={product.name}
                 width={300}
-                height={200}
-                className="mb-2 h-48 w-full object-cover"
+                height={300}
               />
               <h2 className="text-lg font-semibold">{product.name}</h2>
               <p className="text-gray-600">${product.price.toFixed(2)}</p>
