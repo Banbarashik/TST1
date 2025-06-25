@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { products } from "@/data/products";
+import { categoryTree } from "@/data/categories";
 import {
   Popover,
   PopoverTrigger,
@@ -13,6 +14,7 @@ import {
   CommandList,
   CommandItem,
   CommandEmpty,
+  CommandGroup,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
@@ -29,6 +31,19 @@ export function ProductMultiSelect({
   onChange,
 }: ProductMultiSelectProps) {
   const [open, setOpen] = React.useState(false);
+
+  // Group products by main category slug
+  const mainCategories = categoryTree.map((cat) => ({
+    slug: cat.slug,
+    title: cat.menuTitle || cat.title,
+  }));
+
+  const productsByMainCategory: Record<string, Product[]> = {};
+  for (const cat of mainCategories) {
+    productsByMainCategory[cat.slug] = products.filter((p) =>
+      p.categories.includes(cat.slug),
+    );
+  }
 
   const selectedProducts = products.filter((p) => value.includes(p.id));
 
@@ -51,25 +66,33 @@ export function ProductMultiSelect({
             <CommandInput placeholder="Поиск товара..." />
             <CommandList>
               <CommandEmpty>Товар не найден</CommandEmpty>
-              {products.map((product) => (
-                <CommandItem
-                  key={product.id}
-                  onSelect={() => {
-                    if (value.includes(product.id)) {
-                      onChange(value.filter((id) => id !== product.id));
-                    } else {
-                      onChange([...value, product.id]);
-                    }
-                  }}
-                  data-selected={value.includes(product.id)}
-                  className={value.includes(product.id) ? "bg-accent" : ""}
-                >
-                  {product.name}
-                  {value.includes(product.id) && (
-                    <X className="ml-auto size-4 opacity-50" />
-                  )}
-                </CommandItem>
-              ))}
+              {mainCategories.map((cat) =>
+                productsByMainCategory[cat.slug].length > 0 ? (
+                  <CommandGroup key={cat.slug} heading={cat.title}>
+                    {productsByMainCategory[cat.slug].map((product) => (
+                      <CommandItem
+                        key={product.id}
+                        onSelect={() => {
+                          if (value.includes(product.id)) {
+                            onChange(value.filter((id) => id !== product.id));
+                          } else {
+                            onChange([...value, product.id]);
+                          }
+                        }}
+                        data-selected={value.includes(product.id)}
+                        className={
+                          value.includes(product.id) ? "bg-accent" : ""
+                        }
+                      >
+                        {product.name}
+                        {value.includes(product.id) && (
+                          <X className="ml-auto size-4 opacity-50" />
+                        )}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                ) : null,
+              )}
             </CommandList>
           </Command>
         </PopoverContent>
