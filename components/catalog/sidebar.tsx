@@ -101,7 +101,7 @@ export default function Sidebar() {
   }, [currentSlug]);
 
   return (
-    <aside className="w-64">
+    <aside className="w-64 shrink-0">
       <Accordion.Root
         type="multiple"
         defaultValue={defaultOpenItems}

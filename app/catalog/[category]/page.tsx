@@ -6,6 +6,8 @@ import Link from "next/link";
 
 import { findCategoryBySlug } from "@/lib/utils";
 
+const defaultCategory = { slug: "all" };
+
 export default async function Catalog({
   params,
 }: {
@@ -13,10 +15,8 @@ export default async function Catalog({
 }) {
   const { category: categorySlug } = await params;
 
-  const { title: categoryTitle } = findCategoryBySlug(
-    categorySlug,
-    categoryTree,
-  );
+  const { title: categoryTitle, description: categoryDescription } =
+    findCategoryBySlug(categorySlug, categoryTree) ?? defaultCategory;
 
   const filteredProducts =
     categorySlug === "all"
@@ -33,7 +33,7 @@ export default async function Catalog({
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{categoryTitle}</h1>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="mb-20 grid grid-cols-3 gap-5">
         {filteredProducts.map((product) => (
           <Link href={`/product/${product.id}`} key={product.id}>
             <div className="rounded-lg border p-4 transition hover:shadow-md">
@@ -47,6 +47,13 @@ export default async function Catalog({
               <p className="text-gray-600">${product.price.toFixed(2)}</p>
             </div>
           </Link>
+        ))}
+      </div>
+      <div>
+        {categoryDescription?.map((desc) => (
+          <p key={desc} className="text-lg">
+            {desc}
+          </p>
         ))}
       </div>
     </div>
