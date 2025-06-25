@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
+import { ProductMultiSelect } from "@/components/productMultiSelect";
+
 // Имя, название организации
 // E-mail
 // Регион, город
@@ -32,7 +34,7 @@ const formSchema = z.object({
         : "Некорректная электронная почта",
   }),
   region: z.string().max(200),
-  product: z.string().max(300),
+  product: z.array(z.string()).min(1, "Выберите хотя бы один товар"), // changed
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
 
@@ -45,7 +47,7 @@ export default function ContactForm() {
       company: "",
       email: "",
       region: "",
-      product: "",
+      product: [],
       message: "",
     },
   });
@@ -58,7 +60,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="max-w-2xl w-full">
+    <Card className="w-full max-w-2xl">
       <CardContent>
         <Form {...form}>
           <form
@@ -123,9 +125,12 @@ export default function ContactForm() {
               name="product"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Интересующий товар</FormLabel>
+                  <FormLabel>Интересующие товары</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <ProductMultiSelect
+                      value={field.value}
+                      onChange={field.onChange}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
