@@ -1,38 +1,52 @@
 export const categoryTree = [
   {
-    label: "Водяные калориферы",
+    title: "Водяные калориферы",
+    menuTitle: "Водяные калориферы",
     slug: "vodiany-kalorifery",
     children: [
       {
-        label: "Калориферы КСк",
+        title: "Калориферы КСк",
+        menuTitle: "Калориферы КСк",
         slug: "ksk",
         children: [
-          { label: "Двухрядные", slug: "ksk-2" },
-          { label: "Трехрядные", slug: "ksk-3" },
-          { label: "Четырехрядные", slug: "ksk-4" },
+          {
+            title: "Двухрядные калориферы КСк",
+            menuTitle: "Двухрядные",
+            slug: "ksk-2",
+          },
+          {
+            title: "Трехрядные калориферы КСк",
+            menuTitle: "Трехрядные",
+            slug: "ksk-3",
+          },
+          {
+            title: "Четырехрядные калориферы КСк",
+            menuTitle: "Четырехрядные",
+            slug: "ksk-4",
+          },
         ],
       },
       {
-        label: "Калориферы ТВВ",
+        menuTitle: "Калориферы ТВВ",
         slug: "tvv",
         children: [
-          { label: "Трехрядные", slug: "tvv-3" },
-          { label: "Четырехрядные", slug: "tvv-4" },
+          { menuTitle: "Трехрядные", slug: "tvv-3" },
+          { menuTitle: "Четырехрядные", slug: "tvv-4" },
         ],
       },
     ],
   },
   {
-    label: "Паровые калориферы",
+    menuTitle: "Паровые калориферы",
     slug: "parovy-kalorifery",
     children: [
       {
-        label: "Калориферы КПСк",
+        menuTitle: "Калориферы КПСк",
         slug: "kpsk",
         children: [
-          { label: "Двухрядные", slug: "kpsk-2" },
-          { label: "Трехрядные", slug: "kpsk-3" },
-          { label: "Четырехрядные", slug: "kpsk-4" },
+          { menuTitle: "Двухрядные", slug: "kpsk-2" },
+          { menuTitle: "Трехрядные", slug: "kpsk-3" },
+          { menuTitle: "Четырехрядные", slug: "kpsk-4" },
         ],
       },
     ],

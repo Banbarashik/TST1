@@ -1,17 +1,12 @@
 "use client";
 
-import * as Accordion from "@radix-ui/react-accordion";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
 import { categoryTree } from "@/data/categories";
-import { useMemo } from "react";
 
-type CategoryNode = {
-  label: string;
-  slug: string;
-  children?: CategoryNode[];
-};
+import Link from "next/link";
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+
+import * as Accordion from "@radix-ui/react-accordion";
 
 /**
  * Recursively finds all slugs that should be expanded:
@@ -19,7 +14,7 @@ type CategoryNode = {
  * - the active category itself (if it has children)
  */
 function findOpenAccordions(
-  nodes: CategoryNode[],
+  nodes,
   targetSlug: string,
   path: string[] = [],
 ): string[] {
@@ -43,7 +38,7 @@ function RecursiveAccordion({
   currentSlug,
   level = 0,
 }: {
-  nodes: CategoryNode[];
+  nodes;
   currentSlug: string;
   level?: number;
 }) {
@@ -69,7 +64,7 @@ function RecursiveAccordion({
                   href={`/catalog/${node.slug}`}
                   className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
                 >
-                  {node.label}
+                  {node.menuTitle}
                 </Link>
               </Accordion.Trigger>
             </Accordion.Header>
@@ -88,7 +83,7 @@ function RecursiveAccordion({
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
               style={{ paddingLeft }}
             >
-              {node.label}
+              {node.menuTitle}
             </Link>
           </div>
         );
