@@ -1,6 +1,7 @@
 "use client";
 
 import { products } from "@/data/products";
+import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { z } from "zod/v4";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -40,7 +41,9 @@ const formSchema = z.object({
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
 
-export default function ContactForm({ preselectedProducts = [] }) {
+export default function ContactForm() {
+  const { selected, set } = useProductSelection();
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,7 +52,15 @@ export default function ContactForm({ preselectedProducts = [] }) {
       company: "",
       email: "",
       region: "",
-      product: preselectedProducts,
+      product: selected, // always use context
+      message: "",
+    },
+    values: {
+      username: "",
+      company: "",
+      email: "",
+      region: "",
+      product: selected, // keep in sync
       message: "",
     },
   });
@@ -136,8 +147,8 @@ export default function ContactForm({ preselectedProducts = [] }) {
                   <FormLabel>Интересующие товары</FormLabel>
                   <FormControl>
                     <ProductMultiSelect
-                      value={field.value}
-                      onChange={field.onChange}
+                      value={selected}
+                      onChange={set} // update context directly
                     />
                   </FormControl>
                   <FormMessage />
