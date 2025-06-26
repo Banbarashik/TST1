@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import { products } from "@/data/products";
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
@@ -41,8 +43,15 @@ const formSchema = z.object({
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
 
-export default function ContactForm() {
-  const { selected, set } = useProductSelection();
+export default function ContactForm({
+  outOfContext = false /* whether use local state or context */,
+}) {
+  const context = useProductSelection();
+  const [localSelected, setLocalSelected] = React.useState<string[]>([]);
+
+  // Use local state if outOfContext, otherwise use context
+  const selected = outOfContext ? localSelected : context.selected;
+  const set = outOfContext ? setLocalSelected : context.set;
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({

@@ -9,24 +9,24 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="max-w-8xl px-12 mx-auto">
+      <div className="max-w-8xl mx-auto px-12">
         <Catalog />
       </div>
 
       {/* CONTACT FORM SECTION START */}
-      <div className="relative w-full flex justify-center items-center gap-20 pb-32 pt-32 overflow-hidden">
+      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden pt-32 pb-32">
         <Image
           src="/img/hero/IMG_20190423_090922.jpg"
           alt="Contact background"
           fill
-          className="object-cover blur-sm scale-110"
+          className="scale-110 object-cover blur-sm"
           priority
         />
         <div className="absolute inset-0 bg-white/40" /> {/* FOG */}
-        <div className="z-10 flex justify-center items-center gap-20 w-full px-12">
-          <div className="text-center max-w-xl">
-            <p className="text-5xl mb-4 font-bold">Есть вопросы?</p>
-            <p className="text-2xl mb-2">
+        <div className="z-10 flex w-full items-center justify-center gap-20 px-12">
+          <div className="max-w-xl text-center">
+            <p className="mb-4 text-5xl font-bold">Есть вопросы?</p>
+            <p className="mb-2 text-2xl">
               Оставьте заявку через форму, и мы свяжемся <br /> с вами в
               ближайшее время.
             </p>
@@ -37,7 +37,7 @@ export default function Home() {
               </Link>
             </p>
           </div>
-          <ContactForm />
+          <ContactForm outOfContext />
         </div>
       </div>
       {/* CONTACT FORM SECTION END */}
