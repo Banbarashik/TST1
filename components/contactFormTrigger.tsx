@@ -13,9 +13,16 @@ export default function ContactFormTrigger() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <Button type="button" className="ml-4" disabled={selected.length === 0}>
-          Оформить заявку ({selected.length})
-        </Button>
+        <div className="relative">
+          <Button className="h-12 text-xl font-bold" size="lg">
+            Подать заявку
+          </Button>
+          {selected.length > 0 && (
+            <span className="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold">
+              {selected.length}
+            </span>
+          )}
+        </div>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50" />

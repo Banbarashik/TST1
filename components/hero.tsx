@@ -40,7 +40,7 @@ export default function Hero() {
         setCurrentSlide(slider.track.details.rel);
       },
     },
-    []
+    [],
   );
 
   return (
@@ -49,13 +49,13 @@ export default function Hero() {
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className="keen-slider__slide cursor-grab relative w-screen h-126 flex items-center justify-center overflow-hidden"
+            className="keen-slider__slide relative flex h-126 w-screen cursor-grab items-center justify-center overflow-hidden"
           >
             <Image
               src={slide.img}
               alt=""
               fill
-              className="object-cover w-full h-full blur-sm scale-110"
+              className="h-full w-full scale-110 object-cover blur-sm"
               priority
               aria-hidden="true"
             />
@@ -65,7 +65,7 @@ export default function Hero() {
             <div
               className={`${
                 idx === 2 ? "max-w-6xl" : "max-w-5xl"
-              } relative z-10 text-center text-white mx-auto px-4`}
+              } relative z-10 mx-auto px-4 text-center text-white`}
             >
               {slide.title.map((t) => (
                 <p key={t} className="text-6xl font-bold drop-shadow-lg">
@@ -75,10 +75,10 @@ export default function Hero() {
               {/* <h2 className="text-6xl font-bold drop-shadow-lg mb-10">
                 {slide.title}
               </h2> */}
-              <p className="text-lg md:text-2xl drop-shadow mb-10 font-bold">
+              <p className="mb-10 text-lg font-bold drop-shadow md:text-2xl">
                 {slide.text}
               </p>
-              <Button className="text-xl px-8 h-14 font-bold" asChild>
+              <Button size="xl" className="font-bold" asChild>
                 <Link href={slide.url}>Каталог</Link>
               </Button>
             </div>
@@ -86,14 +86,12 @@ export default function Hero() {
         ))}
       </div>
       {/* Circles for slider navigation */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex gap-3">
+      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`w-4 h-4 rounded-full border-2 border-white transition
-							${currentSlide === idx ? "bg-white" : "bg-white/40"}
-							focus:outline-none`}
+            className={`h-4 w-4 rounded-full border-2 border-white transition ${currentSlide === idx ? "bg-white" : "bg-white/40"} focus:outline-none`}
             onClick={() => instanceRef.current?.moveToIdx(idx)}
             type="button"
           />
