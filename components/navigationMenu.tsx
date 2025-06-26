@@ -5,6 +5,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { useProductSelection } from "@/context/ProductSelectionContext";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import ContactForm from "@/components/contactForm";
+import { Button } from "@/components/ui/button";
 
 const productCategories = [
   {
@@ -46,16 +54,18 @@ const productCategories = [
 ];
 
 export default function NavigationMenu() {
+  const { selected } = useProductSelection();
+  const [open, setOpen] = useState(false);
   const [activeCategoryName, setActiveCategoryName] = useState<string | null>(
-    null
+    null,
   );
   const [activeProductName, setActiveProductName] = useState<string | null>(
-    null
+    null,
   );
 
   // Find the active category and product
   const activeCategory = productCategories.find(
-    (c) => c.name === activeCategoryName
+    (c) => c.name === activeCategoryName,
   );
   const activeProduct =
     activeCategory?.items.find((p) => p.name === activeProductName) ||
@@ -70,73 +80,89 @@ export default function NavigationMenu() {
   };
 
   return (
-    <NavigationMenuPrimitive.Root
-      className="relative z-50"
-      onValueChange={handleMenuChange}
-    >
-      <NavigationMenuPrimitive.Viewport className="absolute top-full" />
-      <NavigationMenuPrimitive.List className="text-xl font-semibold flex gap-6 items-center">
-        <NavigationMenuPrimitive.Item>
-          <NavigationMenuPrimitive.Trigger className="p-2 hover:bg-accent rounded-md">
-            Продукция
-          </NavigationMenuPrimitive.Trigger>
-          <NavigationMenuPrimitive.Content className="mt-2 bg-background rounded-md overflow-hidden">
-            <NavigationMenuPrimitive.Sub>
-              <NavigationMenuPrimitive.Viewport className="absolute h-full right-full" />
-              <NavigationMenuPrimitive.List className="flex flex-col w-max">
-                {productCategories.map((category) => (
-                  <NavigationMenuPrimitive.Item key={category.name}>
-                    <NavigationMenuPrimitive.Trigger
-                      className="p-3 w-full hover:bg-accent data-[state=open]:bg-accent"
-                      onMouseEnter={() => {
-                        setActiveCategoryName(category.name);
-                        setActiveProductName(category.items[0]?.name ?? null);
-                      }}
-                    >
-                      {category.name}
-                    </NavigationMenuPrimitive.Trigger>
-                    <NavigationMenuPrimitive.Content className="absolute top-0 right-full bg-background rounded-md p-3 w-max mr-1">
-                      <div className="flex gap-12">
-                        <ul className="flex flex-col gap-2">
-                          {category.items.map((product) => (
-                            <ListItem
-                              product={product}
-                              onMouseEnter={() =>
-                                setActiveProductName(product.name)
-                              }
-                              key={product.name}
-                            />
-                          ))}
-                        </ul>
-                        <Image
-                          src={activeProduct?.img || ""}
-                          alt="#"
-                          className="bg-gray-300 w-52 h-52"
-                        />
-                      </div>
-                    </NavigationMenuPrimitive.Content>
-                  </NavigationMenuPrimitive.Item>
-                ))}
-              </NavigationMenuPrimitive.List>
-            </NavigationMenuPrimitive.Sub>
-          </NavigationMenuPrimitive.Content>
-        </NavigationMenuPrimitive.Item>
-        <NavigationMenuPrimitive.Item>
-          <NavigationMenuPrimitive.Link asChild>
-            <Link href="#" className="p-2 hover:bg-accent rounded-md">
-              Расчет-подбор
-            </Link>
-          </NavigationMenuPrimitive.Link>
-        </NavigationMenuPrimitive.Item>
-        <NavigationMenuPrimitive.Item>
-          <NavigationMenuPrimitive.Link asChild>
-            <Link href="#" className="p-2 hover:bg-accent rounded-md">
-              Прайс-лист
-            </Link>
-          </NavigationMenuPrimitive.Link>
-        </NavigationMenuPrimitive.Item>
-      </NavigationMenuPrimitive.List>
-    </NavigationMenuPrimitive.Root>
+    <>
+      <NavigationMenuPrimitive.Root
+        className="relative z-50"
+        onValueChange={handleMenuChange}
+      >
+        <NavigationMenuPrimitive.Viewport className="absolute top-full" />
+        <NavigationMenuPrimitive.List className="flex items-center gap-6 text-xl font-semibold">
+          <NavigationMenuPrimitive.Item>
+            <NavigationMenuPrimitive.Trigger className="hover:bg-accent rounded-md p-2">
+              Продукция
+            </NavigationMenuPrimitive.Trigger>
+            <NavigationMenuPrimitive.Content className="bg-background mt-2 overflow-hidden rounded-md">
+              <NavigationMenuPrimitive.Sub>
+                <NavigationMenuPrimitive.Viewport className="absolute right-full h-full" />
+                <NavigationMenuPrimitive.List className="flex w-max flex-col">
+                  {productCategories.map((category) => (
+                    <NavigationMenuPrimitive.Item key={category.name}>
+                      <NavigationMenuPrimitive.Trigger
+                        className="hover:bg-accent data-[state=open]:bg-accent w-full p-3"
+                        onMouseEnter={() => {
+                          setActiveCategoryName(category.name);
+                          setActiveProductName(category.items[0]?.name ?? null);
+                        }}
+                      >
+                        {category.name}
+                      </NavigationMenuPrimitive.Trigger>
+                      <NavigationMenuPrimitive.Content className="bg-background absolute top-0 right-full mr-1 w-max rounded-md p-3">
+                        <div className="flex gap-12">
+                          <ul className="flex flex-col gap-2">
+                            {category.items.map((product) => (
+                              <ListItem
+                                product={product}
+                                onMouseEnter={() =>
+                                  setActiveProductName(product.name)
+                                }
+                                key={product.name}
+                              />
+                            ))}
+                          </ul>
+                          <Image
+                            src={activeProduct?.img || ""}
+                            alt="#"
+                            className="h-52 w-52 bg-gray-300"
+                          />
+                        </div>
+                      </NavigationMenuPrimitive.Content>
+                    </NavigationMenuPrimitive.Item>
+                  ))}
+                </NavigationMenuPrimitive.List>
+              </NavigationMenuPrimitive.Sub>
+            </NavigationMenuPrimitive.Content>
+          </NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Item>
+            <NavigationMenuPrimitive.Link asChild>
+              <Link href="#" className="hover:bg-accent rounded-md p-2">
+                Расчет-подбор
+              </Link>
+            </NavigationMenuPrimitive.Link>
+          </NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Item>
+            <NavigationMenuPrimitive.Link asChild>
+              <Link href="#" className="hover:bg-accent rounded-md p-2">
+                Прайс-лист
+              </Link>
+            </NavigationMenuPrimitive.Link>
+          </NavigationMenuPrimitive.Item>
+        </NavigationMenuPrimitive.List>
+      </NavigationMenuPrimitive.Root>
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            type="button"
+            className="ml-4"
+            disabled={selected.length === 0}
+          >
+            Оформить заявку ({selected.length})
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-full max-w-2xl">
+          <ContactForm preselectedProducts={selected} />
+        </PopoverContent>
+      </Popover>
+    </>
   );
 }
 
@@ -144,7 +170,7 @@ function ListItem({ product, onMouseEnter }) {
   return (
     <li onMouseEnter={onMouseEnter}>
       <NavigationMenuPrimitive.Link asChild>
-        <Link href={product.url} className="p-2 hover:bg-accent rounded-md">
+        <Link href={product.url} className="hover:bg-accent rounded-md p-2">
           {product.name}
         </Link>
       </NavigationMenuPrimitive.Link>

@@ -40,7 +40,7 @@ const formSchema = z.object({
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
 
-export default function ContactForm() {
+export default function ContactForm({ preselectedProducts = [] }) {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,7 +49,7 @@ export default function ContactForm() {
       company: "",
       email: "",
       region: "",
-      product: [],
+      product: preselectedProducts,
       message: "",
     },
   });
