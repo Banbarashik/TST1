@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-
-import { products } from "@/data/products";
-import { useProductSelection } from "@/context/ProductSelectionContext";
-
-import { z } from "zod/v4";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod/v4";
+
+import { useProductSelection } from "@/context/ProductSelectionContext";
+import { products } from "@/data/products";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,41 +38,86 @@ const formSchema = z.object({
         : "Некорректная электронная почта",
   }),
   region: z.string().max(200),
-  product: z.array(z.string()).min(1, "Выберите хотя бы один товар"), // changed
+  product: z.array(z.string()).min(1, "Выберите хотя бы один товар"),
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
+
+const FORM_STORAGE_KEY = "contactFormData";
 
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
 }) {
-  const context = useProductSelection();
+  // 1. Always call both hooks at the top level
+  let context;
+  try {
+    context = useProductSelection();
+  } catch {
+    context = undefined;
+  }
   const [localSelected, setLocalSelected] = React.useState<string[]>([]);
 
-  // Use local state if outOfContext, otherwise use context
+  // 2. Choose which selection state to use
   const selected = outOfContext ? localSelected : context.selected;
   const set = outOfContext ? setLocalSelected : context.set;
 
-  // 1. Define your form.
+  // 3. Load saved form data from localStorage (only for text fields, not product)
+  const getInitialFormData = React.useCallback(() => {
+    if (outOfContext || typeof window === "undefined") return undefined;
+    try {
+      const raw = localStorage.getItem(FORM_STORAGE_KEY);
+      if (!raw) return undefined;
+      const parsed = JSON.parse(raw);
+      return {
+        username: parsed.username || "",
+        company: parsed.company || "",
+        email: parsed.email || "",
+        region: parsed.region || "",
+        // Always use current selection for product
+        product: selected,
+        message: parsed.message || "",
+      };
+    } catch {
+      return undefined;
+    }
+  }, [selected, outOfContext]);
+
+  // 4. Initialize the form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
+    defaultValues: getInitialFormData() || {
       username: "",
       company: "",
       email: "",
       region: "",
-      product: selected, // always use context
-      message: "",
-    },
-    values: {
-      username: "",
-      company: "",
-      email: "",
-      region: "",
-      product: selected, // keep in sync
+      product: selected,
       message: "",
     },
   });
 
+  // 5. Sync form's product field with selection state
+  React.useEffect(() => {
+    // Only sync when using context (not outOfContext)
+    if (!outOfContext) {
+      form.setValue("product", selected, {
+        shouldDirty: true,
+        shouldTouch: true,
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected, outOfContext]);
+
+  // 6. Save form data to localStorage on change (only when using context)
+  React.useEffect(() => {
+    if (outOfContext) return;
+    const subscription = form.watch((values) => {
+      if (typeof window !== "undefined") {
+        localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(values));
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, [form, outOfContext]);
+
+  // 7. Handle form submission
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Map product IDs to product names
     const selectedProducts = products.filter((p) =>
@@ -85,8 +129,13 @@ export default function ContactForm({
     };
     console.log(humanReadable);
     // send humanReadable instead of values
+    // Optionally clear localStorage after successful submit:
+    if (!outOfContext && typeof window !== "undefined") {
+      localStorage.removeItem(FORM_STORAGE_KEY);
+    }
   }
 
+  // 8. Render the form
   return (
     <Card className="w-full max-w-2xl">
       <CardContent>

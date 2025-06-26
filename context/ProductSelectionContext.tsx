@@ -1,6 +1,8 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+
+const FORM_STORAGE_KEY = "contactFormData";
 
 type ProductSelectionContextType = {
   selected: string[];
@@ -15,7 +17,31 @@ const ProductSelectionContext = createContext<
 >(undefined);
 
 export function ProductSelectionProvider({ children }) {
-  const [selected, setSelected] = useState<string[]>([]);
+  // 1. Hydrate from localStorage on mount
+  const [selected, setSelected] = useState<string[]>(() => {
+    if (typeof window === "undefined") return [];
+    try {
+      const raw = localStorage.getItem(FORM_STORAGE_KEY);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed.product) ? parsed.product : [];
+    } catch {
+      return [];
+    }
+  });
+
+  // 2. Update localStorage whenever selected changes
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const raw = localStorage.getItem(FORM_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : {};
+      localStorage.setItem(
+        FORM_STORAGE_KEY,
+        JSON.stringify({ ...parsed, product: selected }),
+      );
+    } catch {}
+  }, [selected]);
 
   const add = (id: string) =>
     setSelected((prev) => (prev.includes(id) ? prev : [...prev, id]));
