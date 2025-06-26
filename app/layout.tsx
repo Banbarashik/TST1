@@ -6,6 +6,7 @@ import NavigationMenu from "@/components/navigationMenu";
 import Logo from "@/components/ui/logo";
 
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
+import ContactFormTrigger from "@/components/contactFormTrigger";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ export default function RootLayout({
           <nav className="flex h-22 items-center justify-between px-20">
             <Logo />
             <NavigationMenu />
+            <ContactFormTrigger />
           </nav>
           {children}
           <Footer />
