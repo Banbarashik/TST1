@@ -43,6 +43,7 @@ export default function ProductCard({ product }) {
         {isMounted && isSelected && (
           <div className="flex w-fit items-center rounded border">
             <Button
+              disabled={selectedProduct.amount === 1}
               type="button"
               size="icon"
               variant="ghost"
