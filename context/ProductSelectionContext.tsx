@@ -4,12 +4,15 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const FORM_STORAGE_KEY = "contactFormData";
 
+export type SelectedProduct = { id: string; amount: number };
+
 type ProductSelectionContextType = {
-  selected: string[];
-  add: (id: string) => void;
+  selected: SelectedProduct[];
+  add: (id: string, amount?: number) => void;
   remove: (id: string) => void;
+  setAmount: (id: string, amount: number) => void;
   clear: () => void;
-  set: (ids: string[]) => void;
+  set: (items: SelectedProduct[]) => void;
 };
 
 const ProductSelectionContext = createContext<
@@ -18,7 +21,7 @@ const ProductSelectionContext = createContext<
 
 export function ProductSelectionProvider({ children }) {
   // 1. Hydrate from localStorage on mount
-  const [selected, setSelected] = useState<string[]>(() => {
+  const [selected, setSelected] = useState<SelectedProduct[]>(() => {
     if (typeof window === "undefined") return [];
     try {
       const raw = localStorage.getItem(FORM_STORAGE_KEY);
@@ -43,16 +46,22 @@ export function ProductSelectionProvider({ children }) {
     } catch {}
   }, [selected]);
 
-  const add = (id: string) =>
-    setSelected((prev) => (prev.includes(id) ? prev : [...prev, id]));
+  const add = (id: string, amount = 1) =>
+    setSelected((prev) =>
+      prev.some((item) => item.id === id) ? prev : [...prev, { id, amount }],
+    );
   const remove = (id: string) =>
-    setSelected((prev) => prev.filter((pid) => pid !== id));
+    setSelected((prev) => prev.filter((item) => item.id !== id));
+  const setAmount = (id: string, amount: number) =>
+    setSelected((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, amount } : item)),
+    );
   const clear = () => setSelected([]);
-  const set = (ids: string[]) => setSelected(ids);
+  const set = (items: SelectedProduct[]) => setSelected(items);
 
   return (
     <ProductSelectionContext.Provider
-      value={{ selected, add, remove, clear, set }}
+      value={{ selected, add, remove, setAmount, clear, set }}
     >
       {children}
     </ProductSelectionContext.Provider>

@@ -5,7 +5,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
 
-import { useProductSelection } from "@/context/ProductSelectionContext";
+import {
+  type SelectedProduct,
+  useProductSelection,
+} from "@/context/ProductSelectionContext";
 import { products } from "@/data/products";
 
 import { Button } from "@/components/ui/button";
@@ -38,7 +41,14 @@ const formSchema = z.object({
         : "Некорректная электронная почта",
   }),
   region: z.string().max(200),
-  product: z.array(z.string()).min(1, "Выберите хотя бы один товар"),
+  product: z
+    .array(
+      z.object({
+        id: z.string(),
+        amount: z.number().min(1),
+      }),
+    )
+    .min(1, "Выберите хотя бы один товар"),
   message: z.string().min(1, "Обязательное поле").max(4000),
 });
 
@@ -54,11 +64,13 @@ export default function ContactForm({
   } catch {
     context = undefined;
   }
-  const [localSelected, setLocalSelected] = React.useState<string[]>([]);
+  const [localSelected, setLocalSelected] = React.useState<SelectedProduct[]>(
+    [],
+  );
 
   // 2. Choose which selection state to use
-  const selected = outOfContext ? localSelected : context.selected;
-  const set = outOfContext ? setLocalSelected : context.set;
+  const selected = outOfContext ? localSelected : context!.selected;
+  const set = outOfContext ? setLocalSelected : context!.set;
 
   // 3. Load saved form data from localStorage (only for text fields, not product)
   const getInitialFormData = React.useCallback(() => {
@@ -120,15 +132,16 @@ export default function ContactForm({
   // 7. Handle form submission
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Map product IDs to product names
-    const selectedProducts = products.filter((p) =>
+    /* const selectedProducts = products.filter((p) =>
       values.product.includes(p.id),
     );
     const humanReadable = {
       ...values,
       product: selectedProducts.map((p) => p.name),
     };
-    console.log(humanReadable);
+    console.log(humanReadable); */
     // send humanReadable instead of values
+
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
       localStorage.removeItem(FORM_STORAGE_KEY);

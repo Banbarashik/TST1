@@ -19,19 +19,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 
+import { SelectedProduct } from "@/context/ProductSelectionContext";
+
 type Product = (typeof products)[number];
 
 interface ProductMultiSelectProps {
-  value: string[];
-  onChange: (value: string[]) => void;
+  value: SelectedProduct[];
+  onChange: (items: SelectedProduct[]) => void;
 }
 
 export function ProductMultiSelect({
   value,
   onChange,
 }: ProductMultiSelectProps) {
-  const [open, setOpen] = React.useState(false);
-
   // Group products by main category slug
   const mainCategories = categoryTree.map((cat) => ({
     slug: cat.slug,
@@ -45,11 +45,13 @@ export function ProductMultiSelect({
     );
   }
 
-  const selectedProducts = products.filter((p) => value.includes(p.id));
+  const selectedProducts = products.filter((product) =>
+    value.some((selectedProduct) => selectedProduct.id === product.id),
+  );
 
   return (
     <div>
-      <Popover open={open} onOpenChange={setOpen}>
+      <Popover>
         <PopoverTrigger asChild>
           <Button
             variant="unstyled"
@@ -73,21 +75,31 @@ export function ProductMultiSelect({
               <CommandEmpty>Товар не найден</CommandEmpty>
               {mainCategories.map((cat) =>
                 productsByMainCategory[cat.slug].length > 0 ? (
-                  <CommandGroup key={cat.slug} heading={cat.title}>
+                  <CommandGroup
+                    key={cat.slug}
+                    heading={cat.title}
+                    className="[&_[cmdk-group-heading]]:text-foreground"
+                  >
                     {productsByMainCategory[cat.slug].map((product) => (
                       <CommandItem
                         key={product.id}
                         onSelect={() => {
-                          if (value.includes(product.id)) {
-                            onChange(value.filter((id) => id !== product.id));
+                          const exists = value.find(
+                            (item) => item.id === product.id,
+                          );
+                          console.log(value);
+                          if (exists) {
+                            onChange(
+                              value.filter((item) => item.id !== product.id),
+                            );
                           } else {
-                            onChange([...value, product.id]);
+                            onChange([...value, { id: product.id, amount: 1 }]);
                           }
                         }}
-                        data-selected={value.includes(product.id)}
+                        data-selected={value.some((v) => v.id === product.id)}
                       >
                         {product.name}
-                        {value.includes(product.id) && (
+                        {value.some((v) => v.id === product.id) && (
                           <Check className="ml-auto size-4 text-black opacity-50" />
                         )}
                       </CommandItem>
@@ -101,16 +113,20 @@ export function ProductMultiSelect({
       </Popover>
       {/* Chips for selected products */}
       <div className="mt-2 flex flex-wrap gap-2">
-        {selectedProducts.map((product) => (
+        {selectedProducts.map((selectedProduct) => (
           <span
-            key={product.id}
+            key={selectedProduct.id}
             className="bg-accent flex items-center rounded px-2 py-1 text-sm"
           >
-            {product.name}
+            {selectedProduct.name}
             <button
               type="button"
               className="ml-1"
-              onClick={() => onChange(value.filter((id) => id !== product.id))}
+              onClick={() =>
+                onChange(
+                  value.filter((product) => product.id !== selectedProduct.id),
+                )
+              }
               aria-label="Удалить"
             >
               <X className="size-3" />
