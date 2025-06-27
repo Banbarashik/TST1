@@ -16,7 +16,9 @@ export default function ProductCard({ product }) {
     setIsMounted(true);
   }, []);
 
-  const isSelected = selected.includes(product.id);
+  const isSelected = selected.some(
+    (selectedProduct) => selectedProduct.id === product.id,
+  );
 
   return (
     <Link href={`/product/${product.id}`} key={product.id}>
