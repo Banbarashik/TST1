@@ -26,24 +26,20 @@ export default function ProductCard({ product }) {
         <Image src={product.img} alt={product.name} width={300} height={300} />
         <h2 className="text-lg font-semibold">{product.name}</h2>
         <p className="text-gray-600">${product.price.toFixed(2)}</p>
-        <Button
-          type="button"
-          variant={isMounted && isSelected ? "secondary" : "default"}
-          className="mt-2"
-          onClick={(e) => {
-            e.preventDefault();
-            if (!isMounted) return;
-            isSelected ? remove(product.id) : add(product.id);
-          }}
-        >
-          {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
-        </Button>
-        {/* Amount input, only if selected */}
-        {isMounted && isSelected && (
-          <div className="mt-2 flex items-center gap-2">
-            <label htmlFor={`amount-${product.id}`} className="text-sm">
-              Кол-во:
-            </label>
+        <div className="mt-2 flex items-center justify-between">
+          <Button
+            type="button"
+            variant={isMounted && isSelected ? "secondary" : "default"}
+            onClick={(e) => {
+              e.preventDefault();
+              if (!isMounted) return;
+              isSelected ? remove(product.id) : add(product.id);
+            }}
+          >
+            {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
+          </Button>
+          {/* Amount input, only if selected */}
+          {isMounted && isSelected && (
             <div className="flex w-fit items-center rounded border">
               <Button
                 type="button"
@@ -61,7 +57,6 @@ export default function ProductCard({ product }) {
                 –
               </Button>
               <Input
-                id={`amount-${product.id}`}
                 type="number"
                 min={1}
                 value={selectedProduct.amount}
@@ -69,8 +64,7 @@ export default function ProductCard({ product }) {
                   const newAmount = Number(e.target.value);
                   if (newAmount >= 1) setAmount(product.id, newAmount);
                 }}
-                className="no-spinner w-12 border-0 text-center focus:ring-0"
-                style={{ boxShadow: "none" }}
+                className="no-spinner w-10 border-0 text-center focus:ring-0"
               />
               <Button
                 type="button"
@@ -86,8 +80,8 @@ export default function ProductCard({ product }) {
                 +
               </Button>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </Link>
   );
