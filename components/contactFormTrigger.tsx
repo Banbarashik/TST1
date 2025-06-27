@@ -14,6 +14,11 @@ export default function ContactFormTrigger() {
   const [isMounted, setIsMounted] = useState(false);
   const { selected } = useProductSelection();
 
+  const selectedProductsAmount = selected.reduce(
+    (amount, selectedProduct) => amount + selectedProduct.amount,
+    0,
+  );
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -25,9 +30,9 @@ export default function ContactFormTrigger() {
           <Button className="h-12 cursor-pointer text-xl font-bold" size="lg">
             Подать заявку
           </Button>
-          {isMounted && selected.length > 0 && (
+          {isMounted && selectedProductsAmount > 0 && (
             <span className="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold">
-              {selected.length}
+              {selectedProductsAmount}
             </span>
           )}
         </div>
