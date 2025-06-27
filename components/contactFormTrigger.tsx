@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import * as Dialog from "@radix-ui/react-dialog";
@@ -8,7 +10,12 @@ import ContactForm from "@/components/contactForm";
 import { Button } from "@/components/ui/button";
 
 export default function ContactFormTrigger() {
+  const [isClient, setIsClient] = useState(false);
   const { selected } = useProductSelection();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <Dialog.Root>
@@ -17,7 +24,7 @@ export default function ContactFormTrigger() {
           <Button className="h-12 text-xl font-bold" size="lg">
             Подать заявку
           </Button>
-          {selected.length > 0 && (
+          {isClient && selected.length > 0 && (
             <span className="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold">
               {selected.length}
             </span>
