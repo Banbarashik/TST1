@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function ProductCard({ product }) {
   const { selected, add, remove, setAmount } = useProductSelection();
@@ -43,17 +44,48 @@ export default function ProductCard({ product }) {
             <label htmlFor={`amount-${product.id}`} className="text-sm">
               Кол-во:
             </label>
-            <input
-              id={`amount-${product.id}`}
-              type="number"
-              min={1}
-              value={selectedProduct.amount}
-              onChange={(e) => {
-                const newAmount = Number(e.target.value);
-                if (newAmount >= 1) setAmount(product.id, newAmount);
-              }}
-              className="w-16 rounded border px-2 py-1 text-center text-sm"
-            />
+            <div className="flex w-fit items-center rounded border">
+              <Button
+                type="button"
+                size="icon"
+                variant="ghost"
+                className="px-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (selectedProduct.amount > 1) {
+                    setAmount(product.id, selectedProduct.amount - 1);
+                  }
+                }}
+                aria-label="Уменьшить"
+              >
+                –
+              </Button>
+              <Input
+                id={`amount-${product.id}`}
+                type="number"
+                min={1}
+                value={selectedProduct.amount}
+                onChange={(e) => {
+                  const newAmount = Number(e.target.value);
+                  if (newAmount >= 1) setAmount(product.id, newAmount);
+                }}
+                className="no-spinner w-12 border-0 text-center focus:ring-0"
+                style={{ boxShadow: "none" }}
+              />
+              <Button
+                type="button"
+                size="icon"
+                variant="ghost"
+                className="px-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setAmount(product.id, selectedProduct.amount + 1);
+                }}
+                aria-label="Увеличить"
+              >
+                +
+              </Button>
+            </div>
           </div>
         )}
       </div>
