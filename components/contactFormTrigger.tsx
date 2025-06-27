@@ -10,11 +10,11 @@ import ContactForm from "@/components/contactForm";
 import { Button } from "@/components/ui/button";
 
 export default function ContactFormTrigger() {
-  const [isClient, setIsClient] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const { selected } = useProductSelection();
 
   useEffect(() => {
-    setIsClient(true);
+    setIsMounted(true);
   }, []);
 
   return (
@@ -24,7 +24,7 @@ export default function ContactFormTrigger() {
           <Button className="h-12 text-xl font-bold" size="lg">
             Подать заявку
           </Button>
-          {isClient && selected.length > 0 && (
+          {isMounted && selected.length > 0 && (
             <span className="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold">
               {selected.length}
             </span>
