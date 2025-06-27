@@ -22,10 +22,12 @@ export default function RootLayout({
     <ProductSelectionProvider>
       <html lang="en">
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="flex h-22 items-center justify-between px-20">
+          <nav className="flex h-22 items-center px-20">
             <Logo />
-            <NavigationMenu />
-            <ContactFormTrigger />
+            <div className="ml-auto flex gap-10">
+              <NavigationMenu />
+              <ContactFormTrigger />
+            </div>
           </nav>
           {children}
           <Footer />
