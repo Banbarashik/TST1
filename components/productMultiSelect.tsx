@@ -46,7 +46,7 @@ export function ProductMultiSelect({
   }
 
   const selectedProducts = products.filter((product) =>
-    value.some((selectedProduct) => selectedProduct.id === product.id),
+    value.some((item) => item.id === product.id),
   );
 
   return (
@@ -113,26 +113,50 @@ export function ProductMultiSelect({
       </Popover>
       {/* Chips for selected products */}
       <div className="mt-2 flex flex-wrap gap-2">
-        {selectedProducts.map((selectedProduct) => (
-          <span
-            key={selectedProduct.id}
-            className="bg-accent flex items-center rounded px-2 py-1 text-sm"
-          >
-            {selectedProduct.name}
-            <button
-              type="button"
-              className="ml-1"
-              onClick={() =>
-                onChange(
-                  value.filter((product) => product.id !== selectedProduct.id),
-                )
-              }
-              aria-label="Удалить"
+        {selectedProducts.map((selectedProduct) => {
+          // Find the amount for this product
+          const selected = value.find((item) => item.id === selectedProduct.id);
+          return (
+            <span
+              key={selectedProduct.id}
+              className="bg-accent flex items-center gap-2 rounded px-2 py-1 text-sm"
             >
-              <X className="size-3" />
-            </button>
-          </span>
-        ))}
+              {selectedProduct.name}
+              <input
+                type="number"
+                min={1}
+                value={selected?.amount ?? 1}
+                onChange={(e) => {
+                  const newAmount = Number(e.target.value);
+                  if (newAmount < 1) return;
+                  onChange(
+                    value.map((item) =>
+                      item.id === selectedProduct.id
+                        ? { ...item, amount: newAmount }
+                        : item,
+                    ),
+                  );
+                }}
+                className="ml-2 w-12 rounded border px-1 py-0.5 text-center text-xs"
+                style={{ width: 48 }}
+              />
+              <button
+                type="button"
+                className="ml-1"
+                onClick={() =>
+                  onChange(
+                    value.filter(
+                      (product) => product.id !== selectedProduct.id,
+                    ),
+                  )
+                }
+                aria-label="Удалить"
+              >
+                <X className="size-3" />
+              </button>
+            </span>
+          );
+        })}
       </div>
     </div>
   );
