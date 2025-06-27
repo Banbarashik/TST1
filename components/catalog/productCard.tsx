@@ -9,16 +9,15 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import { Button } from "@/components/ui/button";
 
 export default function ProductCard({ product }) {
-  const { selected, add, remove } = useProductSelection();
+  const { selected, add, remove, setAmount } = useProductSelection();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const isSelected = selected.some(
-    (selectedProduct) => selectedProduct.id === product.id,
-  );
+  const selectedProduct = selected.find((item) => item.id === product.id);
+  const isSelected = !!selectedProduct;
 
   return (
     <Link href={`/product/${product.id}`} key={product.id}>
@@ -38,6 +37,25 @@ export default function ProductCard({ product }) {
         >
           {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
         </Button>
+        {/* Amount input, only if selected */}
+        {isMounted && isSelected && (
+          <div className="mt-2 flex items-center gap-2">
+            <label htmlFor={`amount-${product.id}`} className="text-sm">
+              Кол-во:
+            </label>
+            <input
+              id={`amount-${product.id}`}
+              type="number"
+              min={1}
+              value={selectedProduct.amount}
+              onChange={(e) => {
+                const newAmount = Number(e.target.value);
+                if (newAmount >= 1) setAmount(product.id, newAmount);
+              }}
+              className="w-16 rounded border px-2 py-1 text-center text-sm"
+            />
+          </div>
+        )}
       </div>
     </Link>
   );
