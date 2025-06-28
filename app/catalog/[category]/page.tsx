@@ -1,7 +1,7 @@
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
-import { sortCyrillicAlphabetically, findCategoryBySlug } from "@/lib/utils";
+import { findCategoryBySlug, sortProducts } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
 
@@ -23,7 +23,7 @@ export default async function Catalog({
       : products.filter((product) => product.categories.includes(categorySlug));
 
   const sortedProducts = filteredProducts.sort((a, b) =>
-    sortCyrillicAlphabetically(a.name, b.name),
+    sortProducts(a.name, b.name),
   );
 
   if (sortedProducts.length === 0)

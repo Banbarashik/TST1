@@ -16,5 +16,28 @@ export function findCategoryBySlug(slug: string, nodes) {
   return null;
 }
 
-export const sortCyrillicAlphabetically = (a: string, b: string) =>
-  a.localeCompare(b, "ru");
+export function sortProducts(a: string, b: string) {
+  // Split into digit and non-digit parts
+  const ax = [];
+  const bx = [];
+  a.replace(/(\d+)|(\D+)/g, (_, $1, $2) => {
+    ax.push([$1 || Infinity, $2 || ""]);
+    return "";
+  });
+  b.replace(/(\d+)|(\D+)/g, (_, $1, $2) => {
+    bx.push([$1 || Infinity, $2 || ""]);
+    return "";
+  });
+
+  while (ax.length && bx.length) {
+    const an = ax.shift();
+    const bn = bx.shift();
+    // Compare non-number parts
+    if (an[1] !== bn[1]) return an[1].localeCompare(bn[1], "ru");
+    // Compare number parts
+    const anNum = Number(an[0]);
+    const bnNum = Number(bn[0]);
+    if (anNum !== bnNum) return anNum - bnNum;
+  }
+  return ax.length - bx.length;
+}
