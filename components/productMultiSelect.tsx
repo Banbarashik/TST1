@@ -127,7 +127,7 @@ export function ProductMultiSelect({
           return (
             <span
               key={selectedProduct.id}
-              className="bg-accent flex items-center gap-2 rounded px-2 py-1 text-sm"
+              className="bg-accent flex items-center gap-5 rounded px-3 py-1.5 text-sm"
             >
               {selectedProduct.name}
               <NumberInput
@@ -155,7 +155,6 @@ export function ProductMultiSelect({
               />
               <button
                 type="button"
-                className="ml-1"
                 onClick={() =>
                   onChange(
                     value.filter(
@@ -165,7 +164,7 @@ export function ProductMultiSelect({
                 }
                 aria-label="Удалить"
               >
-                <X className="size-3" />
+                <X className="size-4" />
               </button>
             </span>
           );
