@@ -2,7 +2,10 @@
 
 import * as React from "react";
 
-import { SelectedProduct } from "@/context/ProductSelectionContext";
+import {
+  SelectedProduct,
+  useProductSelection,
+} from "@/context/ProductSelectionContext";
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
@@ -22,6 +25,7 @@ import {
   CommandGroup,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
+import { NumberInput } from "@/components/ui/input";
 
 type Product = (typeof products)[number];
 
@@ -34,6 +38,8 @@ export function ProductMultiSelect({
   value,
   onChange,
 }: ProductMultiSelectProps) {
+  const { setAmount } = useProductSelection();
+
   // Group products by main category slug
   const mainCategories = categoryTree.map((cat) => ({
     slug: cat.slug,
@@ -124,23 +130,23 @@ export function ProductMultiSelect({
               className="bg-accent flex items-center gap-2 rounded px-2 py-1 text-sm"
             >
               {selectedProduct.name}
-              <input
-                type="number"
-                min={1}
-                value={selected?.amount ?? 1}
-                onChange={(e) => {
-                  const newAmount = Number(e.target.value);
-                  if (newAmount < 1) return;
-                  onChange(
-                    value.map((item) =>
-                      item.id === selectedProduct.id
-                        ? { ...item, amount: newAmount }
-                        : item,
-                    ),
-                  );
+              <NumberInput
+                value={selected.amount}
+                disabled={selected.amount === 1}
+                decrease={(e) => {
+                  e.preventDefault();
+                  if (selected.amount > 1) {
+                    setAmount(selected.id, selected.amount - 1);
+                  }
                 }}
-                className="ml-2 w-12 rounded border px-1 py-0.5 text-center text-xs"
-                style={{ width: 48 }}
+                increase={(e) => {
+                  e.preventDefault();
+                  setAmount(selected.id, selected.amount + 1);
+                }}
+                change={(e) => {
+                  const newAmount = Number(e.target.value);
+                  if (newAmount >= 1) setAmount(selected.id, newAmount);
+                }}
               />
               <button
                 type="button"
