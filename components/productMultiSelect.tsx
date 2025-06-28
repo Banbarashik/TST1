@@ -1,8 +1,13 @@
 "use client";
 
 import * as React from "react";
+
+import { SelectedProduct } from "@/context/ProductSelectionContext";
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
+
+import { Check, X } from "lucide-react";
+
 import {
   Popover,
   PopoverTrigger,
@@ -17,9 +22,6 @@ import {
   CommandGroup,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
-
-import { SelectedProduct } from "@/context/ProductSelectionContext";
 
 type Product = (typeof products)[number];
 
@@ -45,8 +47,8 @@ export function ProductMultiSelect({
     );
   }
 
-  const selectedProducts = products.filter((product) =>
-    value.some((item) => item.id === product.id),
+  const selectedProducts = value.map((selectedProduct) =>
+    products.find((product) => selectedProduct.id === product.id),
   );
 
   return (
