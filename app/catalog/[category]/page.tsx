@@ -1,7 +1,7 @@
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
-import { findCategoryBySlug } from "@/lib/utils";
+import { sortCyrillicAlphabetically, findCategoryBySlug } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
 
@@ -22,7 +22,11 @@ export default async function Catalog({
       ? products
       : products.filter((product) => product.categories.includes(categorySlug));
 
-  if (filteredProducts.length === 0)
+  const sortedProducts = filteredProducts.sort((a, b) =>
+    sortCyrillicAlphabetically(a.name, b.name),
+  );
+
+  if (sortedProducts.length === 0)
     return (
       <div className="flex w-full items-center justify-center text-xl">
         Нет товаров в данной категории.
@@ -33,7 +37,7 @@ export default async function Catalog({
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{categoryTitle}</h1>
       <div className="mb-20 grid grid-cols-3 gap-5">
-        {filteredProducts.map((product) => (
+        {sortedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

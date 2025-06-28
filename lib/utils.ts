@@ -15,3 +15,6 @@ export function findCategoryBySlug(slug: string, nodes) {
   }
   return null;
 }
+
+export const sortCyrillicAlphabetically = (a: string, b: string) =>
+  a.localeCompare(b, "ru");
