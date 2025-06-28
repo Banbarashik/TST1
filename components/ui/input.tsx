@@ -26,6 +26,11 @@ type NumberInputProps = {
   decrease: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   increase: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   change: React.ChangeEventHandler<HTMLInputElement>;
+  className?: {
+    root?: string;
+    button?: string;
+    input?: string;
+  };
 };
 
 function NumberInput({
@@ -34,15 +39,18 @@ function NumberInput({
   change,
   decrease,
   increase,
+  className,
 }: NumberInputProps) {
   return (
-    <div className="flex w-fit items-center rounded border">
+    <div
+      className={`${className?.root} flex w-fit items-center rounded border`}
+    >
       <Button
         disabled={disabled}
         type="button"
         size="icon"
         variant="ghost"
-        className="px-2"
+        className={`${className?.button}`}
         onClick={decrease}
         aria-label="Уменьшить"
       >
@@ -53,13 +61,13 @@ function NumberInput({
         min={1}
         value={value}
         onChange={change}
-        className="no-spinner w-10 border-0 text-center focus:ring-0"
+        className={`${className?.input} no-spinner w-10 border-0 text-center focus:ring-0`}
       />
       <Button
         type="button"
         size="icon"
         variant="ghost"
-        className="px-2"
+        className={`${className?.button}`}
         onClick={increase}
         aria-label="Увеличить"
       >

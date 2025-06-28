@@ -131,6 +131,11 @@ export function ProductMultiSelect({
             >
               {selectedProduct.name}
               <NumberInput
+                className={{
+                  root: "bg-white",
+                  button: "rounded-xs hover:bg-gray-200",
+                  input: "",
+                }}
                 value={selected.amount}
                 disabled={selected.amount === 1}
                 decrease={(e) => {
