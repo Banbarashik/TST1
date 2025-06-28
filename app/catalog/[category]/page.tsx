@@ -1,14 +1,11 @@
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
-import Image from "next/image";
-
 import { findCategoryBySlug } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
-import Link from "next/link";
 
-const defaultCategory = { slug: "all" };
+const defaultCategory = { title: "Вся продукция", slug: "all" };
 
 export default async function Catalog({
   params,
