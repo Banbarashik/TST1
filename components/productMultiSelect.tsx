@@ -9,6 +9,8 @@ import {
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
+import { sortProducts } from "@/lib/utils";
+
 import { Check, X } from "lucide-react";
 
 import {
@@ -48,9 +50,9 @@ export function ProductMultiSelect({
 
   const productsByMainCategory: Record<string, Product[]> = {};
   for (const cat of mainCategories) {
-    productsByMainCategory[cat.slug] = products.filter((p) =>
-      p.categories.includes(cat.slug),
-    );
+    productsByMainCategory[cat.slug] = products
+      .filter((p) => p.categories.includes(cat.slug))
+      .sort((a, b) => sortProducts(a.name, b.name));
   }
 
   const selectedProducts = value.map((selectedProduct) =>
