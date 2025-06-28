@@ -26,7 +26,11 @@ export default function ProductCard({ product }) {
         <Image src={product.img} alt={product.name} width={300} height={300} />
         <h2 className="text-lg font-semibold">{product.name}</h2>
       </Link>
-      <p className="text-gray-600">${product.price.toFixed(2)}</p>
+      <p>
+        Характеристики: {product.airPower} м<sup>3</sup>/ч; {product.heatPower}{" "}
+        кВт
+      </p>
+      <p className="text-gray-600">{product.price} руб. с НДС</p>
       <div className="mt-2 flex items-center justify-between">
         <Button
           type="button"
