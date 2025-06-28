@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { NumberInput } from "@/components/ui/input";
 
 export default function ProductCard({ product }) {
   const { selected, add, remove, setAmount } = useProductSelection();
@@ -41,47 +41,24 @@ export default function ProductCard({ product }) {
         </Button>
         {/* Amount input, only if selected */}
         {isMounted && isSelected && (
-          <div className="flex w-fit items-center rounded border">
-            <Button
-              disabled={selectedProduct.amount === 1}
-              type="button"
-              size="icon"
-              variant="ghost"
-              className="px-2"
-              onClick={(e) => {
-                e.preventDefault();
-                if (selectedProduct.amount > 1) {
-                  setAmount(product.id, selectedProduct.amount - 1);
-                }
-              }}
-              aria-label="Уменьшить"
-            >
-              –
-            </Button>
-            <Input
-              type="number"
-              min={1}
-              value={selectedProduct.amount}
-              onChange={(e) => {
-                const newAmount = Number(e.target.value);
-                if (newAmount >= 1) setAmount(product.id, newAmount);
-              }}
-              className="no-spinner w-10 border-0 text-center focus:ring-0"
-            />
-            <Button
-              type="button"
-              size="icon"
-              variant="ghost"
-              className="px-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setAmount(product.id, selectedProduct.amount + 1);
-              }}
-              aria-label="Увеличить"
-            >
-              +
-            </Button>
-          </div>
+          <NumberInput
+            value={selectedProduct.amount}
+            disabled={selectedProduct.amount === 1}
+            decrease={(e) => {
+              e.preventDefault();
+              if (selectedProduct.amount > 1) {
+                setAmount(product.id, selectedProduct.amount - 1);
+              }
+            }}
+            increase={(e) => {
+              e.preventDefault();
+              setAmount(product.id, selectedProduct.amount + 1);
+            }}
+            change={(e) => {
+              const newAmount = Number(e.target.value);
+              if (newAmount >= 1) setAmount(product.id, newAmount);
+            }}
+          />
         )}
       </div>
     </div>
