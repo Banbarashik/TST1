@@ -47,10 +47,13 @@ export function ProductMultiSelect({
   const productDataByMainCategory: Record<string, Product[]> = {};
   for (const category of mainCategories) {
     productDataByMainCategory[category.slug] = productData
-      .filter((p) => p.categories.includes(category.slug))
-      .sort((a, b) => sortProducts(a.name, b.name));
+      .filter((prodData) => prodData.categories.includes(category.slug))
+      .sort((prodDataA, prodDataB) =>
+        sortProducts(prodDataA.name, prodDataB.name),
+      );
   }
 
+  // map product data to selected products
   const selectedProductData = selectedProducts.map((selProd) =>
     productData.find((prodData) => selProd.id === prodData.id),
   );
@@ -81,45 +84,47 @@ export function ProductMultiSelect({
             <CommandInput placeholder="Поиск товара..." />
             <CommandList>
               <CommandEmpty>Товар не найден</CommandEmpty>
-              {mainCategories.map((cat) =>
-                productDataByMainCategory[cat.slug].length > 0 ? (
+              {mainCategories.map((category) =>
+                productDataByMainCategory[category.slug].length > 0 ? (
                   <CommandGroup
-                    key={cat.slug}
-                    heading={cat.title}
+                    key={category.slug}
+                    heading={category.title}
                     className="[&_[cmdk-group-heading]]:text-foreground"
                   >
-                    {productDataByMainCategory[cat.slug].map((prodData) => (
-                      <CommandItem
-                        key={prodData.id}
-                        onSelect={() => {
-                          const exists = selectedProducts.find(
-                            (selProd) => selProd.id === prodData.id,
-                          );
-                          if (exists) {
-                            setSelectedProducts(
-                              selectedProducts.filter(
-                                (selProd) => selProd.id !== prodData.id,
-                              ),
+                    {productDataByMainCategory[category.slug].map(
+                      (prodData) => (
+                        <CommandItem
+                          key={prodData.id}
+                          onSelect={() => {
+                            const exists = selectedProducts.find(
+                              (selProd) => selProd.id === prodData.id,
                             );
-                          } else {
-                            setSelectedProducts([
-                              ...selectedProducts,
-                              { id: prodData.id, amount: 1 },
-                            ]);
-                          }
-                        }}
-                        data-selected={selectedProducts.some(
-                          (selProd) => selProd.id === prodData.id,
-                        )}
-                      >
-                        {prodData.name}
-                        {selectedProducts.some(
-                          (selProd) => selProd.id === prodData.id,
-                        ) && (
-                          <Check className="ml-auto size-4 text-black opacity-50" />
-                        )}
-                      </CommandItem>
-                    ))}
+                            if (exists) {
+                              setSelectedProducts(
+                                selectedProducts.filter(
+                                  (selProd) => selProd.id !== prodData.id,
+                                ),
+                              );
+                            } else {
+                              setSelectedProducts([
+                                ...selectedProducts,
+                                { id: prodData.id, amount: 1 },
+                              ]);
+                            }
+                          }}
+                          data-selected={selectedProducts.some(
+                            (selProd) => selProd.id === prodData.id,
+                          )}
+                        >
+                          {prodData.name}
+                          {selectedProducts.some(
+                            (selProd) => selProd.id === prodData.id,
+                          ) && (
+                            <Check className="ml-auto size-4 text-black opacity-50" />
+                          )}
+                        </CommandItem>
+                      ),
+                    )}
                   </CommandGroup>
                 ) : null,
               )}
