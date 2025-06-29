@@ -28,21 +28,19 @@ export function ProductSelectionProvider({
 }>) {
   // 1. Hydrate from localStorage on mount
   const [selected, setSelected] = useState<SelectedProduct[]>(() => {
-    if (typeof window === "undefined") return [];
-    try {
-      const raw = localStorage.getItem(FORM_STORAGE_KEY);
-      if (!raw) return [];
-      const parsed = JSON.parse(raw);
-      return Array.isArray(parsed.products) ? parsed.products : [];
-    } catch {
-      return [];
-    }
+    const parsed = loadFormData();
+    return Array.isArray(parsed?.products) ? parsed.products : [];
   });
 
   // 2. Update localStorage whenever selected changes
   useEffect(() => {
     const parsed = loadFormData();
-    saveFormData({ ...parsed, products: selected });
+    saveFormData({
+      ...parsed,
+      products: selected,
+      email: parsed?.email ?? "",
+      message: parsed?.message ?? "",
+    });
   }, [selected]);
 
   const add = (id: string, amount = 1) =>

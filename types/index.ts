@@ -14,3 +14,12 @@ export type SelectedProduct = {
 };
 
 export type SelectedProductWithData = Product & { amount: number };
+
+export interface ContactFormData {
+  username?: string;
+  company?: string;
+  email: string;
+  region?: string;
+  products: SelectedProduct[];
+  message: string;
+}
