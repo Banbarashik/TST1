@@ -37,7 +37,7 @@ const formSchema = z.object({
         : "Некорректная электронная почта",
   }), // E-mail
   region: z.string().max(200), // Регион, город
-  product: z
+  products: z
     .array(
       z.object({
         id: z.string(),
@@ -91,7 +91,7 @@ export default function ContactForm({
         email: parsed.email || "",
         region: parsed.region || "",
         // Always use current selection for product
-        product: selectedProducts,
+        products: selectedProducts,
         message: parsed.message || "",
       };
     } catch {
@@ -107,7 +107,7 @@ export default function ContactForm({
       company: "",
       email: "",
       region: "",
-      product: selectedProducts,
+      products: selectedProducts,
       message: "",
     },
   });
@@ -116,7 +116,7 @@ export default function ContactForm({
   React.useEffect(() => {
     // Only sync when using context (not outOfContext)
     if (!outOfContext) {
-      form.setValue("product", selectedProducts, {
+      form.setValue("products", selectedProducts, {
         shouldDirty: true,
         shouldTouch: true,
       });
@@ -218,7 +218,7 @@ export default function ContactForm({
             />
             <FormField
               control={form.control}
-              name="product"
+              name="products"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Интересующие товары</FormLabel>

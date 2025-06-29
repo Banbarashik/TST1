@@ -31,7 +31,7 @@ export function ProductSelectionProvider({
       const raw = localStorage.getItem(FORM_STORAGE_KEY);
       if (!raw) return [];
       const parsed = JSON.parse(raw);
-      return Array.isArray(parsed.product) ? parsed.product : [];
+      return Array.isArray(parsed.products) ? parsed.products : [];
     } catch {
       return [];
     }
@@ -45,7 +45,7 @@ export function ProductSelectionProvider({
       const parsed = raw ? JSON.parse(raw) : {};
       localStorage.setItem(
         FORM_STORAGE_KEY,
-        JSON.stringify({ ...parsed, product: selected }),
+        JSON.stringify({ ...parsed, products: selected }),
       );
     } catch {}
   }, [selected]);
