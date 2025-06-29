@@ -58,16 +58,24 @@ export function ProductMultiSelect({
     productData.find((prodData) => selProd.id === prodData.id),
   );
 
-  function handleDecreaseProductAmount(productId: string, curAmount: number) {
-    if (curAmount > 1) setProductAmount(productId, curAmount - 1);
+  function handleDecreaseProductAmount(id: string, curAmount: number) {
+    if (curAmount > 1) setProductAmount(id, curAmount - 1);
   }
 
-  function handleIncreaseProductAmount(productId: string, curAmount: number) {
-    setProductAmount(productId, curAmount + 1);
+  function handleIncreaseProductAmount(id: string, curAmount: number) {
+    setProductAmount(id, curAmount + 1);
   }
 
-  function handleChangeProductAmount(productId: string, newAmount: number) {
-    if (newAmount >= 1) setProductAmount(productId, newAmount);
+  function handleChangeProductAmount(id: string, newAmount: number) {
+    if (newAmount >= 1) setProductAmount(id, newAmount);
+  }
+
+  function handleRemoveSelectedProduct(id: string) {
+    const updatedSelectedProducts = selectedProducts.filter(
+      (selProd) => selProd.id !== id,
+    );
+
+    setSelectedProducts(updatedSelectedProducts);
   }
 
   return (
@@ -189,13 +197,7 @@ export function ProductMultiSelect({
                 />
                 <button
                   type="button"
-                  onClick={() =>
-                    setSelectedProducts(
-                      selectedProducts.filter(
-                        (selProd) => selProd.id !== selProdData.id,
-                      ),
-                    )
-                  }
+                  onClick={() => handleRemoveSelectedProduct(selProdData.id)}
                   aria-label="Удалить"
                 >
                   <X className="size-4" />
