@@ -2,8 +2,6 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-import { FORM_STORAGE_KEY } from "@/constants";
-
 import { SelectedProduct } from "@/types";
 
 import { loadFormData, saveFormData } from "@/lib/localStorage";

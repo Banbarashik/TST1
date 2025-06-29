@@ -1,6 +1,6 @@
 import type { ContactFormData } from "@/types";
 
-const FORM_STORAGE_KEY = "contactFormData";
+import { FORM_STORAGE_KEY } from "@/constants";
 
 export function saveFormData(data: ContactFormData) {
   localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(data));
@@ -16,4 +16,8 @@ export function loadFormData(): ContactFormData | null {
   } catch {
     return null;
   }
+}
+
+export function removeFormData() {
+  localStorage.removeItem(FORM_STORAGE_KEY);
 }

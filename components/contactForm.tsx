@@ -5,13 +5,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
 
-import { FORM_STORAGE_KEY } from "@/constants";
-
 import { SelectedProduct } from "@/types";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { getTotalPrice } from "@/lib/totalPrice";
+import { loadFormData, removeFormData, saveFormData } from "@/lib/localStorage";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -82,17 +81,14 @@ export default function ContactForm({
   const getInitialFormData = React.useCallback(() => {
     if (outOfContext || typeof window === "undefined") return undefined;
     try {
-      const raw = localStorage.getItem(FORM_STORAGE_KEY);
-      if (!raw) return undefined;
-      const parsed = JSON.parse(raw);
+      const parsed = loadFormData();
       return {
-        username: parsed.username || "",
-        company: parsed.company || "",
-        email: parsed.email || "",
-        region: parsed.region || "",
-        // Always use current selection for product
-        products: selectedProducts,
-        message: parsed.message || "",
+        username: parsed?.username || "",
+        company: parsed?.company || "",
+        email: parsed?.email || "",
+        region: parsed?.region || "",
+        products: selectedProducts, // Always use current selection for product
+        message: parsed?.message || "",
       };
     } catch {
       return undefined;
@@ -127,11 +123,20 @@ export default function ContactForm({
   // 6. Save form data to localStorage on change (only when using context)
   React.useEffect(() => {
     if (outOfContext) return;
+
     const subscription = form.watch((values) => {
       if (typeof window !== "undefined") {
-        localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(values));
+        saveFormData({
+          ...values,
+          products: (values.products ?? []).filter(
+            (p): p is SelectedProduct => p !== undefined,
+          ),
+          email: values.email ?? "",
+          message: values.message ?? "",
+        });
       }
     });
+
     return () => subscription.unsubscribe();
   }, [form, outOfContext]);
 
@@ -150,7 +155,7 @@ export default function ContactForm({
 
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
-      localStorage.removeItem(FORM_STORAGE_KEY);
+      removeFormData();
     }
   }
 
