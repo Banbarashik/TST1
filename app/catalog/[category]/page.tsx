@@ -1,4 +1,4 @@
-import { products } from "@/data/products";
+import { productData } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
 import { findCategoryBySlug, sortProducts } from "@/lib/utils";
@@ -19,8 +19,10 @@ export default async function Catalog({
 
   const filteredProducts =
     categorySlug === "all"
-      ? products
-      : products.filter((product) => product.categories.includes(categorySlug));
+      ? productData
+      : productData.filter((product) =>
+          product.categories.includes(categorySlug),
+        );
 
   const sortedProducts = filteredProducts.sort((a, b) =>
     sortProducts(a.name, b.name),

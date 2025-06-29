@@ -2,8 +2,9 @@
 
 import * as React from "react";
 
-import { SelectedProduct } from "@/context/ProductSelectionContext";
-import { products } from "@/data/products";
+import { Product, SelectedProduct } from "@/types";
+
+import { productData } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
 import { sortProducts } from "@/lib/utils";
@@ -26,18 +27,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 
-type Product = (typeof products)[number];
-
 interface ProductMultiSelectProps {
-  value: SelectedProduct[];
-  onChange: (items: SelectedProduct[]) => void;
-  setAmount?: (id: string, amount: number) => void;
+  selectedProducts: SelectedProduct[];
+  setSelectedProducts: (selectedProducts: SelectedProduct[]) => void;
+  setProductAmount?: (id: string, amount: number) => void;
 }
 
 export function ProductMultiSelect({
-  value,
-  onChange,
-  setAmount,
+  selectedProducts,
+  setSelectedProducts,
+  setProductAmount,
 }: ProductMultiSelectProps) {
   // Group products by main category slug
   const mainCategories = categoryTree.map((cat) => ({
@@ -45,15 +44,15 @@ export function ProductMultiSelect({
     title: cat.menuTitle || cat.title,
   }));
 
-  const productsByMainCategory: Record<string, Product[]> = {};
-  for (const cat of mainCategories) {
-    productsByMainCategory[cat.slug] = products
-      .filter((p) => p.categories.includes(cat.slug))
+  const productDataByMainCategory: Record<string, Product[]> = {};
+  for (const category of mainCategories) {
+    productDataByMainCategory[category.slug] = productData
+      .filter((p) => p.categories.includes(category.slug))
       .sort((a, b) => sortProducts(a.name, b.name));
   }
 
-  const selectedProducts = value.map((selectedProduct) =>
-    products.find((product) => selectedProduct.id === product.id),
+  const selectedProductData = selectedProducts.map((selProd) =>
+    productData.find((prodData) => selProd.id === prodData.id),
   );
 
   return (
@@ -65,14 +64,16 @@ export function ProductMultiSelect({
             type="button"
             className="hover:border-ring hover:ring-ring/50 w-full max-w-full justify-start overflow-hidden border text-ellipsis whitespace-nowrap hover:ring-[3px]"
           >
-            {selectedProducts.length === 0
+            {selectedProductData.length === 0
               ? "Выберите товары"
-              : selectedProducts.length <= 3
-                ? selectedProducts.map((p) => p.name).join(", ")
-                : `${selectedProducts
+              : selectedProductData.length <= 3
+                ? selectedProductData
+                    .map((selProdData) => selProdData.name)
+                    .join(", ")
+                : `${selectedProductData
                     .slice(0, 3)
-                    .map((p) => p.name)
-                    .join(", ")} и ещё ${selectedProducts.length - 3}`}
+                    .map((selProdData) => selProdData.name)
+                    .join(", ")} и ещё ${selectedProductData.length - 3}`}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0">
@@ -81,32 +82,40 @@ export function ProductMultiSelect({
             <CommandList>
               <CommandEmpty>Товар не найден</CommandEmpty>
               {mainCategories.map((cat) =>
-                productsByMainCategory[cat.slug].length > 0 ? (
+                productDataByMainCategory[cat.slug].length > 0 ? (
                   <CommandGroup
                     key={cat.slug}
                     heading={cat.title}
                     className="[&_[cmdk-group-heading]]:text-foreground"
                   >
-                    {productsByMainCategory[cat.slug].map((product) => (
+                    {productDataByMainCategory[cat.slug].map((prodData) => (
                       <CommandItem
-                        key={product.id}
+                        key={prodData.id}
                         onSelect={() => {
-                          const exists = value.find(
-                            (item) => item.id === product.id,
+                          const exists = selectedProducts.find(
+                            (selProd) => selProd.id === prodData.id,
                           );
-                          console.log(value);
                           if (exists) {
-                            onChange(
-                              value.filter((item) => item.id !== product.id),
+                            setSelectedProducts(
+                              selectedProducts.filter(
+                                (selProd) => selProd.id !== prodData.id,
+                              ),
                             );
                           } else {
-                            onChange([...value, { id: product.id, amount: 1 }]);
+                            setSelectedProducts([
+                              ...selectedProducts,
+                              { id: prodData.id, amount: 1 },
+                            ]);
                           }
                         }}
-                        data-selected={value.some((v) => v.id === product.id)}
+                        data-selected={selectedProducts.some(
+                          (selProd) => selProd.id === prodData.id,
+                        )}
                       >
-                        {product.name}
-                        {value.some((v) => v.id === product.id) && (
+                        {prodData.name}
+                        {selectedProducts.some(
+                          (selProd) => selProd.id === prodData.id,
+                        ) && (
                           <Check className="ml-auto size-4 text-black opacity-50" />
                         )}
                       </CommandItem>
@@ -120,20 +129,20 @@ export function ProductMultiSelect({
       </Popover>
       {/* Chips for selected products */}
       <div className="mt-2 flex flex-col gap-2">
-        {selectedProducts.map((product) => {
+        {selectedProductData.map((selProdData) => {
           // map data products to selected product
-          const selectedProduct = value.find(
-            (selProd) => selProd.id === product.id,
+          const selectedProduct = selectedProducts.find(
+            (selProd) => selProd.id === selProdData.id,
           );
 
-          const price = product.price;
+          const price = selProdData.price;
           const amount = selectedProduct?.amount ?? 1;
           const total = price * amount;
 
           return (
-            <div key={product.id} className="flex items-center gap-4">
+            <div key={selProdData.id} className="flex items-center gap-4">
               <div className="bg-accent flex max-w-fit items-center gap-5 rounded px-3 py-1.5 text-sm">
-                {product.name}
+                {selProdData.name}
                 <NumberInput
                   className={{
                     root: "bg-white",
@@ -145,25 +154,31 @@ export function ProductMultiSelect({
                   decrease={(e) => {
                     e.preventDefault();
                     if (selectedProduct.amount > 1) {
-                      setAmount(selectedProduct.id, selectedProduct.amount - 1);
+                      setProductAmount(
+                        selectedProduct.id,
+                        selectedProduct.amount - 1,
+                      );
                     }
                   }}
                   increase={(e) => {
                     e.preventDefault();
-                    setAmount(selectedProduct.id, selectedProduct.amount + 1);
+                    setProductAmount(
+                      selectedProduct.id,
+                      selectedProduct.amount + 1,
+                    );
                   }}
                   change={(e) => {
                     const newAmount = Number(e.target.value);
                     if (newAmount >= 1)
-                      setAmount(selectedProduct.id, newAmount);
+                      setProductAmount(selectedProduct.id, newAmount);
                   }}
                 />
                 <button
                   type="button"
                   onClick={() =>
-                    onChange(
-                      value.filter(
-                        (selectedProduct) => selectedProduct.id !== product.id,
+                    setSelectedProducts(
+                      selectedProducts.filter(
+                        (selProd) => selProd.id !== selProdData.id,
                       ),
                     )
                   }

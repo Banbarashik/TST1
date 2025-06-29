@@ -2,9 +2,9 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-const FORM_STORAGE_KEY = "contactFormData";
+import { SelectedProduct } from "@/types";
 
-export type SelectedProduct = { id: string; amount: number };
+const FORM_STORAGE_KEY = "contactFormData";
 
 type ProductSelectionContextType = {
   selected: SelectedProduct[];
@@ -19,7 +19,11 @@ const ProductSelectionContext = createContext<
   ProductSelectionContextType | undefined
 >(undefined);
 
-export function ProductSelectionProvider({ children }) {
+export function ProductSelectionProvider({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   // 1. Hydrate from localStorage on mount
   const [selected, setSelected] = useState<SelectedProduct[]>(() => {
     if (typeof window === "undefined") return [];

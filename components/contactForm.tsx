@@ -1,16 +1,13 @@
 "use client";
 
-import { products } from "@/data/products";
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
 
-import {
-  type SelectedProduct,
-  useProductSelection,
-} from "@/context/ProductSelectionContext";
+import { SelectedProduct } from "@/types";
+
+import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { getTotalPrice } from "@/lib/totalPrice";
 
@@ -26,24 +23,18 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 import { ProductMultiSelect } from "@/components/productMultiSelect";
 
-// Имя, название организации
-// E-mail
-// Регион, город
-// Интересующий продукт
-// Сообщение
 const formSchema = z.object({
-  username: z.string().max(200),
-  company: z.string().max(200),
+  username: z.string().max(200), // Имя
+  company: z.string().max(200), // Название организации
   email: z.email({
     error: (iss) =>
       iss.input === "" || iss.input === undefined
         ? "Обязательное поле"
         : "Некорректная электронная почта",
-  }),
-  region: z.string().max(200),
+  }), // E-mail
+  region: z.string().max(200), // Регион, город
   product: z
     .array(
       z.object({
@@ -51,8 +42,8 @@ const formSchema = z.object({
         amount: z.number().min(1),
       }),
     )
-    .min(1, "Выберите хотя бы один товар"),
-  message: z.string().min(1, "Обязательное поле").max(4000),
+    .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
+  message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
 });
 
 const FORM_STORAGE_KEY = "contactFormData";
@@ -67,19 +58,25 @@ export default function ContactForm({
   } catch {
     context = undefined;
   }
-  const [localSelected, setLocalSelected] = React.useState<SelectedProduct[]>(
-    [],
-  );
-  const localSetAmount = (id: string, amount: number) => {
-    setLocalSelected((prev) =>
+  const [localSelectedProducts, setLocalSelectedProducts] = React.useState<
+    SelectedProduct[]
+  >([]);
+  const localSetProductAmount = (id: string, amount: number) => {
+    setLocalSelectedProducts((prev) =>
       prev.map((item) => (item.id === id ? { ...item, amount } : item)),
     );
   };
 
   // 2. Choose which selection state to use
-  const selected = outOfContext ? localSelected : context!.selected;
-  const set = outOfContext ? setLocalSelected : context!.set;
-  const setAmount = outOfContext ? localSetAmount : context!.setAmount;
+  const selectedProducts = outOfContext
+    ? localSelectedProducts
+    : context!.selected;
+  const setSelectedProducts = outOfContext
+    ? setLocalSelectedProducts
+    : context!.set;
+  const setProductAmount = outOfContext
+    ? localSetProductAmount
+    : context!.setAmount;
 
   // 3. Load saved form data from localStorage (only for text fields, not product)
   const getInitialFormData = React.useCallback(() => {
@@ -94,13 +91,13 @@ export default function ContactForm({
         email: parsed.email || "",
         region: parsed.region || "",
         // Always use current selection for product
-        product: selected,
+        product: selectedProducts,
         message: parsed.message || "",
       };
     } catch {
       return undefined;
     }
-  }, [selected, outOfContext]);
+  }, [selectedProducts, outOfContext]);
 
   // 4. Initialize the form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -110,7 +107,7 @@ export default function ContactForm({
       company: "",
       email: "",
       region: "",
-      product: selected,
+      product: selectedProducts,
       message: "",
     },
   });
@@ -119,13 +116,13 @@ export default function ContactForm({
   React.useEffect(() => {
     // Only sync when using context (not outOfContext)
     if (!outOfContext) {
-      form.setValue("product", selected, {
+      form.setValue("product", selectedProducts, {
         shouldDirty: true,
         shouldTouch: true,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selected, outOfContext]);
+  }, [selectedProducts, outOfContext]);
 
   // 6. Save form data to localStorage on change (only when using context)
   React.useEffect(() => {
@@ -227,9 +224,9 @@ export default function ContactForm({
                   <FormLabel>Интересующие товары</FormLabel>
                   <FormControl>
                     <ProductMultiSelect
-                      value={selected}
-                      onChange={set} // update context directly
-                      setAmount={setAmount}
+                      selectedProducts={selectedProducts}
+                      setSelectedProducts={setSelectedProducts} // update context directly
+                      setProductAmount={setProductAmount}
                     />
                   </FormControl>
                   <FormMessage />
@@ -256,10 +253,10 @@ export default function ContactForm({
         <Button type="submit" form="contactForm">
           Оставить заявку
         </Button>
-        {selected.length > 0 && (
+        {selectedProducts.length > 0 && (
           <p className="ml-auto">
             Итоговая стоимость:{" "}
-            {getTotalPrice(selected).toLocaleString("ru-RU")} руб.
+            {getTotalPrice(selectedProducts).toLocaleString("ru-RU")} руб.
           </p>
         )}
       </CardFooter>

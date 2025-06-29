@@ -1,4 +1,4 @@
-export const products = [
+export const productData = [
   // КСк 2-1_2-12
   {
     id: "42",

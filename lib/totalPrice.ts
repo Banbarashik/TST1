@@ -1,5 +1,6 @@
-import { products } from "@/data/products";
-import type { SelectedProduct } from "@/context/ProductSelectionContext";
+import { productData } from "@/data/products";
+
+import { SelectedProduct } from "@/types";
 
 /**
  * Calculates the total price for an array of selected products.
@@ -9,7 +10,7 @@ import type { SelectedProduct } from "@/context/ProductSelectionContext";
  */
 export function getTotalPrice(
   selected: SelectedProduct[],
-  productList = products,
+  productList = productData,
 ): number {
   return selected.reduce((sum, sel) => {
     const product = productList.find((p) => p.id === sel.id);
