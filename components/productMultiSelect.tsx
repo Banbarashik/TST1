@@ -119,53 +119,62 @@ export function ProductMultiSelect({
         </PopoverContent>
       </Popover>
       {/* Chips for selected products */}
-      <div className="mt-2 flex flex-wrap gap-2">
-        {selectedProducts.map((selectedProduct) => {
-          // Find the amount for this product
-          const selected = value.find((item) => item.id === selectedProduct.id);
+      <div className="mt-2 flex flex-col gap-2">
+        {selectedProducts.map((product) => {
+          // map data products to selected product
+          const selectedProduct = value.find(
+            (selProd) => selProd.id === product.id,
+          );
+
+          const price = product.price;
+          const amount = selectedProduct?.amount ?? 1;
+          const total = price * amount;
+
           return (
-            <span
-              key={selectedProduct.id}
-              className="bg-accent flex items-center gap-5 rounded px-3 py-1.5 text-sm"
-            >
-              {selectedProduct.name}
-              <NumberInput
-                className={{
-                  root: "bg-white",
-                  button: "rounded-xs hover:bg-gray-200",
-                  input: "",
-                }}
-                value={selected.amount}
-                disabled={selected.amount === 1}
-                decrease={(e) => {
-                  e.preventDefault();
-                  if (selected.amount > 1) {
-                    setAmount(selected.id, selected.amount - 1);
+            <div key={product.id} className="flex items-center gap-4">
+              <div className="bg-accent flex max-w-fit items-center gap-5 rounded px-3 py-1.5 text-sm">
+                {product.name}
+                <NumberInput
+                  className={{
+                    root: "bg-white",
+                    button: "rounded-xs hover:bg-gray-200",
+                    input: "",
+                  }}
+                  value={selectedProduct.amount}
+                  disabled={selectedProduct.amount === 1}
+                  decrease={(e) => {
+                    e.preventDefault();
+                    if (selectedProduct.amount > 1) {
+                      setAmount(selectedProduct.id, selectedProduct.amount - 1);
+                    }
+                  }}
+                  increase={(e) => {
+                    e.preventDefault();
+                    setAmount(selectedProduct.id, selectedProduct.amount + 1);
+                  }}
+                  change={(e) => {
+                    const newAmount = Number(e.target.value);
+                    if (newAmount >= 1)
+                      setAmount(selectedProduct.id, newAmount);
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() =>
+                    onChange(
+                      value.filter(
+                        (selectedProduct) => selectedProduct.id !== product.id,
+                      ),
+                    )
                   }
-                }}
-                increase={(e) => {
-                  e.preventDefault();
-                  setAmount(selected.id, selected.amount + 1);
-                }}
-                change={(e) => {
-                  const newAmount = Number(e.target.value);
-                  if (newAmount >= 1) setAmount(selected.id, newAmount);
-                }}
-              />
-              <button
-                type="button"
-                onClick={() =>
-                  onChange(
-                    value.filter(
-                      (product) => product.id !== selectedProduct.id,
-                    ),
-                  )
-                }
-                aria-label="Удалить"
-              >
-                <X className="size-4" />
-              </button>
-            </span>
+                  aria-label="Удалить"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+
+              <p>{total.toLocaleString("ru-RU")} руб.</p>
+            </div>
           );
         })}
       </div>
