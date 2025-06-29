@@ -58,6 +58,17 @@ export function ProductMultiSelect({
     productData.find((prodData) => selProd.id === prodData.id),
   );
 
+  function handleSelectProduct(id: string) {
+    const exists = selectedProducts.find((selProd) => selProd.id === id);
+    if (exists) {
+      setSelectedProducts(
+        selectedProducts.filter((selProd) => selProd.id !== id),
+      );
+    } else {
+      setSelectedProducts([...selectedProducts, { id, amount: 1 }]);
+    }
+  }
+
   function handleDecreaseProductAmount(id: string, curAmount: number) {
     if (curAmount > 1) setProductAmount(id, curAmount - 1);
   }
@@ -115,23 +126,7 @@ export function ProductMultiSelect({
                       (prodData) => (
                         <CommandItem
                           key={prodData.id}
-                          onSelect={() => {
-                            const exists = selectedProducts.find(
-                              (selProd) => selProd.id === prodData.id,
-                            );
-                            if (exists) {
-                              setSelectedProducts(
-                                selectedProducts.filter(
-                                  (selProd) => selProd.id !== prodData.id,
-                                ),
-                              );
-                            } else {
-                              setSelectedProducts([
-                                ...selectedProducts,
-                                { id: prodData.id, amount: 1 },
-                              ]);
-                            }
-                          }}
+                          onSelect={() => handleSelectProduct(prodData.id)}
                           data-selected={selectedProducts.some(
                             (selProd) => selProd.id === prodData.id,
                           )}
