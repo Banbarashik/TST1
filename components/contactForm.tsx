@@ -1,5 +1,7 @@
 "use client";
 
+import { products } from "@/data/products";
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,7 +11,8 @@ import {
   type SelectedProduct,
   useProductSelection,
 } from "@/context/ProductSelectionContext";
-import { products } from "@/data/products";
+
+import { getTotalPrice } from "@/lib/totalPrice";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -249,10 +252,16 @@ export default function ContactForm({
           </form>
         </Form>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex">
         <Button type="submit" form="contactForm">
           Оставить заявку
         </Button>
+        {selected.length > 0 && (
+          <p className="ml-auto">
+            Итоговая стоимость:{" "}
+            {getTotalPrice(selected).toLocaleString("ru-RU")} руб.
+          </p>
+        )}
       </CardFooter>
     </Card>
   );
