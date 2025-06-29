@@ -24,9 +24,9 @@ export default function ProductCard({ product }) {
     <div className="rounded-lg border p-4 transition hover:shadow-md">
       <Link href={`/product/${product.id}`} key={product.id}>
         <Image src={product.img} alt={product.name} width={300} height={300} />
-        <h2 className="text-lg font-semibold">{product.name}</h2>
+        <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
       </Link>
-      <p>
+      <p className="mb-1">
         Характеристики: {product.airPower} м<sup>3</sup>/ч; {product.heatPower}{" "}
         кВт
       </p>
