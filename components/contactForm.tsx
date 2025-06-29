@@ -67,10 +67,16 @@ export default function ContactForm({
   const [localSelected, setLocalSelected] = React.useState<SelectedProduct[]>(
     [],
   );
+  const localSetAmount = (id: string, amount: number) => {
+    setLocalSelected((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, amount } : item)),
+    );
+  };
 
   // 2. Choose which selection state to use
   const selected = outOfContext ? localSelected : context!.selected;
   const set = outOfContext ? setLocalSelected : context!.set;
+  const setAmount = outOfContext ? localSetAmount : context!.setAmount;
 
   // 3. Load saved form data from localStorage (only for text fields, not product)
   const getInitialFormData = React.useCallback(() => {
@@ -220,6 +226,7 @@ export default function ContactForm({
                     <ProductMultiSelect
                       value={selected}
                       onChange={set} // update context directly
+                      setAmount={setAmount}
                     />
                   </FormControl>
                   <FormMessage />

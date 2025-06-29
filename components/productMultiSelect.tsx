@@ -2,10 +2,7 @@
 
 import * as React from "react";
 
-import {
-  SelectedProduct,
-  useProductSelection,
-} from "@/context/ProductSelectionContext";
+import { SelectedProduct } from "@/context/ProductSelectionContext";
 import { products } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
@@ -34,14 +31,14 @@ type Product = (typeof products)[number];
 interface ProductMultiSelectProps {
   value: SelectedProduct[];
   onChange: (items: SelectedProduct[]) => void;
+  setAmount?: (id: string, amount: number) => void;
 }
 
 export function ProductMultiSelect({
   value,
   onChange,
+  setAmount,
 }: ProductMultiSelectProps) {
-  const { setAmount } = useProductSelection();
-
   // Group products by main category slug
   const mainCategories = categoryTree.map((cat) => ({
     slug: cat.slug,
