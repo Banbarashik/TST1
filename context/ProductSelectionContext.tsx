@@ -2,9 +2,9 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-import { SelectedProduct } from "@/types";
+import { FORM_STORAGE_KEY } from "@/constants";
 
-const FORM_STORAGE_KEY = "contactFormData";
+import { SelectedProduct } from "@/types";
 
 type ProductSelectionContextType = {
   selected: SelectedProduct[];

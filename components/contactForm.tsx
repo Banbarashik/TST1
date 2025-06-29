@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
 
+import { FORM_STORAGE_KEY } from "@/constants";
+
 import { SelectedProduct } from "@/types";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
@@ -45,8 +47,6 @@ const formSchema = z.object({
     .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
 });
-
-const FORM_STORAGE_KEY = "contactFormData";
 
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
