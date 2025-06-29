@@ -39,9 +39,9 @@ export function ProductMultiSelect({
   setProductAmount,
 }: ProductMultiSelectProps) {
   // Group products by main category slug
-  const mainCategories = categoryTree.map((cat) => ({
-    slug: cat.slug,
-    title: cat.menuTitle || cat.title,
+  const mainCategories = categoryTree.map((category) => ({
+    slug: category.slug,
+    title: category.menuTitle || category.title,
   }));
 
   const productDataByMainCategory: Record<string, Product[]> = {};
