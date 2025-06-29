@@ -6,6 +6,8 @@ import { FORM_STORAGE_KEY } from "@/constants";
 
 import { SelectedProduct } from "@/types";
 
+import { loadFormData, saveFormData } from "@/lib/localStorage";
+
 type ProductSelectionContextType = {
   selected: SelectedProduct[];
   add: (id: string, amount?: number) => void;
@@ -39,15 +41,8 @@ export function ProductSelectionProvider({
 
   // 2. Update localStorage whenever selected changes
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      const raw = localStorage.getItem(FORM_STORAGE_KEY);
-      const parsed = raw ? JSON.parse(raw) : {};
-      localStorage.setItem(
-        FORM_STORAGE_KEY,
-        JSON.stringify({ ...parsed, products: selected }),
-      );
-    } catch {}
+    const parsed = loadFormData();
+    saveFormData({ ...parsed, products: selected });
   }, [selected]);
 
   const add = (id: string, amount = 1) =>
