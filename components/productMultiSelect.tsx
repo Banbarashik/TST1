@@ -58,6 +58,18 @@ export function ProductMultiSelect({
     productData.find((prodData) => selProd.id === prodData.id),
   );
 
+  function handleDecreaseProductAmount(productId: string, curAmount: number) {
+    if (curAmount > 1) setProductAmount(productId, curAmount - 1);
+  }
+
+  function handleIncreaseProductAmount(productId: string, curAmount: number) {
+    setProductAmount(productId, curAmount + 1);
+  }
+
+  function handleChangeProductAmount(productId: string, newAmount: number) {
+    if (newAmount >= 1) setProductAmount(productId, newAmount);
+  }
+
   return (
     <div>
       <Popover>
@@ -156,26 +168,23 @@ export function ProductMultiSelect({
                   }}
                   value={selectedProduct.amount}
                   disabled={selectedProduct.amount === 1}
-                  decrease={(e) => {
-                    e.preventDefault();
-                    if (selectedProduct.amount > 1) {
-                      setProductAmount(
-                        selectedProduct.id,
-                        selectedProduct.amount - 1,
-                      );
-                    }
+                  decrease={() => {
+                    handleDecreaseProductAmount(
+                      selectedProduct?.id,
+                      selectedProduct?.amount,
+                    );
                   }}
-                  increase={(e) => {
-                    e.preventDefault();
-                    setProductAmount(
-                      selectedProduct.id,
-                      selectedProduct.amount + 1,
+                  increase={() => {
+                    handleIncreaseProductAmount(
+                      selectedProduct?.id,
+                      selectedProduct?.amount,
                     );
                   }}
                   change={(e) => {
-                    const newAmount = Number(e.target.value);
-                    if (newAmount >= 1)
-                      setProductAmount(selectedProduct.id, newAmount);
+                    handleChangeProductAmount(
+                      selectedProduct?.id,
+                      Number(e.target.value),
+                    );
                   }}
                 />
                 <button
