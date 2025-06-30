@@ -3,7 +3,7 @@
 import { categoryTree } from "@/data/categories";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import * as Accordion from "@radix-ui/react-accordion";
@@ -93,18 +93,33 @@ function RecursiveAccordion({
 }
 
 export default function Sidebar() {
-  const pathname = usePathname(); // e.g. /catalog/ksk-2-1
-  const currentSlug = pathname.split("/").pop() ?? "";
+  const pathname = usePathname();
+  const pathParts = pathname.split("/").filter(Boolean);
+  const currentSlug =
+    pathParts[0] === "catalog" && pathParts.length > 1
+      ? pathParts[pathParts.length - 1]
+      : "";
 
-  const defaultOpenItems = useMemo(() => {
-    return findOpenAccordions(categoryTree, currentSlug);
-  }, [currentSlug]);
+  // Compute open items for the current slug
+  const openItems = useMemo(
+    () => findOpenAccordions(categoryTree, currentSlug),
+    [currentSlug],
+  );
+
+  // Controlled state for Accordion
+  const [open, setOpen] = useState<string[]>(openItems);
+
+  // Update open state when currentSlug changes
+  useEffect(() => {
+    setOpen(openItems);
+  }, [openItems]);
 
   return (
     <aside className="w-68 shrink-0">
       <Accordion.Root
         type="multiple"
-        defaultValue={defaultOpenItems}
+        value={open}
+        onValueChange={setOpen}
         className="fixed w-64"
       >
         <RecursiveAccordion nodes={categoryTree} currentSlug={currentSlug} />
