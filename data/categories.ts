@@ -5,6 +5,23 @@ export const categoryTree = [
     slug: "vodiany-kalorifery",
     children: [
       {
+        title: "Приточные водяные калориферы",
+        menuTitle: "Приточные водяные калориферы",
+        slug: "pritochny-vodiany-kalorifery",
+        children: [
+          {
+            title: "Приточные калориферы КСк",
+            menuTitle: "Приточные калориферы КСк",
+            slug: "pritochny-kalorifery-ksk",
+          },
+          {
+            title: "Приточные калориферы ТВВ",
+            menuTitle: "Приточные калориферы ТВВ",
+            slug: "pritochny-kalorifery-tvv",
+          },
+        ],
+      },
+      {
         title: "Калориферы КСк",
         menuTitle: "Калориферы КСк",
         slug: "ksk",
