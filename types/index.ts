@@ -6,6 +6,7 @@ export type Product = {
   heatPower: number;
   price: number;
   img: string;
+  variants?: Product[];
 };
 
 export type SelectedProduct = {
