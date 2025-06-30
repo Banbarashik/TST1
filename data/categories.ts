@@ -32,11 +32,37 @@ export const categoryTree = [
         ],
       },
       {
+        title: "Калориферы ТВВ",
         menuTitle: "Калориферы ТВВ",
         slug: "tvv",
         children: [
-          { menuTitle: "Трехрядные", slug: "tvv-3" },
-          { menuTitle: "Четырехрядные", slug: "tvv-4" },
+          {
+            title: "Трехрядные калориферы ТВВ",
+            menuTitle: "Трехрядные",
+            slug: "tvv-3",
+          },
+          {
+            title: "Четырехрядные калориферы ТВВ",
+            menuTitle: "Четырехрядные",
+            slug: "tvv-4",
+          },
+        ],
+      },
+      {
+        title: "Калориферы КФБ-А М",
+        menuTitle: "Калориферы КФБ-А М",
+        slug: "kfb-a-m",
+        children: [
+          {
+            title: "Трехрядные калориферы КФБ-А М",
+            menuTitle: "Трехрядные",
+            slug: "kfb-a3-m",
+          },
+          {
+            title: "Четырехрядные калориферы КФБ-А М",
+            menuTitle: "Четырехрядные",
+            slug: "kfb-a4-m",
+          },
         ],
       },
     ],
