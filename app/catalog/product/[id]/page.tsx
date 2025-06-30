@@ -1,16 +1,17 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useProductSelection } from "@/context/ProductSelectionContext";
 import { productData } from "@/data/products";
 import { Button } from "@/components/ui/button";
+import { NumberInput } from "@/components/ui/input";
 
 export default function ProductPage() {
   const params = useParams();
   const { id } = params;
   const product = productData.find((p) => p.id === id);
-  const { add } = useProductSelection();
+  const { selected, add, remove, setAmount } = useProductSelection();
 
   if (!product) return <div>Товар не найден</div>;
 
@@ -19,8 +20,25 @@ export default function ProductPage() {
     product.variants?.[0]?.id || "",
   );
 
-  const handleAdd = () => {
-    add(selectedVariantId || product.id);
+  // Determine which id is currently being worked with
+  const currentId =
+    product.variants && product.variants.length > 0
+      ? selectedVariantId
+      : product.id;
+
+  // Find if this product/variant is already selected
+  const selectedProduct = selected.find((item) => item.id === currentId);
+  const isSelected = !!selectedProduct;
+
+  // For SSR hydration safety (optional, as in ProductCard)
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const handleAddOrRemove = () => {
+    if (!isMounted) return;
+    isSelected ? remove(currentId) : add(currentId);
   };
 
   return (
@@ -44,18 +62,65 @@ export default function ProductPage() {
               </label>
             ))}
           </div>
-          <Button
-            className="mt-4"
-            onClick={handleAdd}
-            disabled={!selectedVariantId}
-          >
-            В заявку
-          </Button>
+          <div className="mt-4 flex items-center gap-4">
+            <Button
+              onClick={handleAddOrRemove}
+              disabled={!selectedVariantId}
+              variant={isMounted && isSelected ? "secondary" : "default"}
+            >
+              {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
+            </Button>
+            {isMounted && isSelected && (
+              <NumberInput
+                value={selectedProduct.amount}
+                disabled={selectedProduct.amount === 1}
+                decrease={(e) => {
+                  e.preventDefault();
+                  if (selectedProduct.amount > 1) {
+                    setAmount(currentId, selectedProduct.amount - 1);
+                  }
+                }}
+                increase={(e) => {
+                  e.preventDefault();
+                  setAmount(currentId, selectedProduct.amount + 1);
+                }}
+                change={(e) => {
+                  const newAmount = Number(e.target.value);
+                  if (newAmount >= 1) setAmount(currentId, newAmount);
+                }}
+              />
+            )}
+          </div>
         </div>
       ) : (
-        <Button className="mt-4" onClick={() => add(product.id)}>
-          В заявку
-        </Button>
+        <div className="mt-4 flex items-center gap-4">
+          <Button
+            onClick={handleAddOrRemove}
+            variant={isMounted && isSelected ? "secondary" : "default"}
+          >
+            {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
+          </Button>
+          {isMounted && isSelected && (
+            <NumberInput
+              value={selectedProduct.amount}
+              disabled={selectedProduct.amount === 1}
+              decrease={(e) => {
+                e.preventDefault();
+                if (selectedProduct.amount > 1) {
+                  setAmount(product.id, selectedProduct.amount - 1);
+                }
+              }}
+              increase={(e) => {
+                e.preventDefault();
+                setAmount(product.id, selectedProduct.amount + 1);
+              }}
+              change={(e) => {
+                const newAmount = Number(e.target.value);
+                if (newAmount >= 1) setAmount(product.id, newAmount);
+              }}
+            />
+          )}
+        </div>
       )}
     </div>
   );
