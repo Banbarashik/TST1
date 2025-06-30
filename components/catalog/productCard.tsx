@@ -20,6 +20,9 @@ export default function ProductCard({ product }) {
   const selectedProduct = selected.find((item) => item.id === product.id);
   const isSelected = !!selectedProduct;
 
+  const hasVariants =
+    Array.isArray(product.variants) && product.variants.length > 0;
+
   return (
     <div className="rounded-lg border p-4 transition hover:shadow-md">
       <Link href={`product/${product.id}`} key={product.id}>
@@ -32,17 +35,23 @@ export default function ProductCard({ product }) {
       </p>
       <p className="text-gray-600">{product.price} руб. с НДС</p>
       <div className="mt-2 flex items-center justify-between">
-        <Button
-          type="button"
-          variant={isMounted && isSelected ? "secondary" : "default"}
-          onClick={(e) => {
-            e.preventDefault();
-            if (!isMounted) return;
-            isSelected ? remove(product.id) : add(product.id);
-          }}
-        >
-          {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
-        </Button>
+        {hasVariants ? (
+          <Button asChild>
+            <Link href={`product/${product.id}`}>В заявку</Link>
+          </Button>
+        ) : (
+          <Button
+            type="button"
+            variant={isMounted && isSelected ? "secondary" : "default"}
+            onClick={(e) => {
+              e.preventDefault();
+              if (!isMounted) return;
+              isSelected ? remove(product.id) : add(product.id);
+            }}
+          >
+            {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
+          </Button>
+        )}
         {/* Amount input, only if selected */}
         {isMounted && isSelected && (
           <NumberInput
