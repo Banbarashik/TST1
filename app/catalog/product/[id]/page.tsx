@@ -1,11 +1,13 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import { useProductSelection } from "@/context/ProductSelectionContext";
 import { productData } from "@/data/products";
 import { Button } from "@/components/ui/button";
 
-export default function ProductPage({ params }) {
+export default function ProductPage() {
+  const params = useParams();
   const { id } = params;
   const product = productData.find((p) => p.id === id);
   const { add } = useProductSelection();
