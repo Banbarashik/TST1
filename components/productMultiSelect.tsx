@@ -27,6 +27,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 
+function flattenProducts(products: Product[]): Product[] {
+  return products.flatMap((product) => {
+    if (product.variants && product.variants.length > 0) {
+      // Each variant should inherit main product's categories (and other shared fields if needed)
+      return product.variants.map((variant) => ({
+        ...variant,
+        categories: product.categories,
+      }));
+    }
+    return product;
+  });
+}
+
 interface ProductMultiSelectProps {
   selectedProducts: SelectedProduct[];
   setSelectedProducts: (selectedProducts: SelectedProduct[]) => void;
@@ -38,6 +51,8 @@ export function ProductMultiSelect({
   setSelectedProducts,
   setProductAmount,
 }: ProductMultiSelectProps) {
+  const flatProductData = flattenProducts(productData);
+
   // Group products by main category slug
   const mainCategories = categoryTree.map((category) => ({
     slug: category.slug,
@@ -46,7 +61,7 @@ export function ProductMultiSelect({
 
   const productDataByMainCategory: Record<string, Product[]> = {};
   for (const category of mainCategories) {
-    productDataByMainCategory[category.slug] = productData
+    productDataByMainCategory[category.slug] = flatProductData
       .filter((prodData) => prodData.categories.includes(category.slug))
       .sort((prodDataA, prodDataB) =>
         sortProducts(prodDataA.name, prodDataB.name),
@@ -55,7 +70,7 @@ export function ProductMultiSelect({
 
   // map product data to selected products
   const selectedProductData = selectedProducts.map((selProd) =>
-    productData.find((prodData) => selProd.id === prodData.id),
+    flatProductData.find((prodData) => selProd.id === prodData.id),
   );
 
   function handleSelectProduct(id: string) {
