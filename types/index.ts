@@ -3,7 +3,7 @@ export type Product = {
   name: string;
   categories: string[];
   airPower: number;
-  heatPower: number;
+  heatPower?: number;
   price?: number;
   img: string;
   variants?: Product[];
