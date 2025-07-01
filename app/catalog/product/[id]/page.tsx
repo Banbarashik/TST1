@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Image from "next/image";
 
 export default function ProductPage() {
   const params = useParams();
@@ -48,8 +49,8 @@ export default function ProductPage() {
 
   return (
     <div>
-      <h1>{product.name}</h1>
-      {/* ...other product info... */}
+      <h1 className="text-2xl font-bold">{product.name}</h1>
+      <Image src={product.img} alt={product.name} width={400} height={400} />
       {product.variants && product.variants.length > 0 ? (
         <div className="my-4">
           <div className="flex flex-col gap-2">
