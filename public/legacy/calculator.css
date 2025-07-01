@@ -1,0 +1,114 @@
+/* Калькуляторы (начало) */
+.calculator {
+  padding-top: 8px;
+  padding-bottom: 3px;
+  padding-right: 11px;
+  border: 1px solid rgb(102, 102, 102);
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  text-align: right;
+
+  box-shadow: 2px 2px 3px 0 rgb(128, 128, 128);
+
+  line-height: 18px;
+}
+
+.calculator label,
+.calculator-buttons {
+  display: block;
+
+  margin-bottom: 5px;
+}
+.calculator input {
+  font: inherit;
+}
+.calculator select {
+  margin-bottom: 15px;
+}
+.calculator input[type="text"] {
+  box-sizing: border-box;
+
+  padding: 5px;
+  border: 1px solid rgb(114, 57, 16);
+  border-radius: 4px;
+
+  background-color: rgb(217, 217, 217);
+}
+.calculator-buttons input[type="button"],
+.calculator-buttons input[type="reset"] {
+  box-sizing: content-box;
+
+  padding: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+
+  background-color: rgb(153, 153, 153);
+
+  cursor: pointer;
+}
+/* Калькуляторы (конец) */
+
+/* Сложные калькуляторы (начало) */
+:disabled {
+  color: rgb(50, 50, 50);
+}
+.advanced-calculator input,
+.advanced-calculator select {
+  box-sizing: border-box;
+
+  padding: 5px;
+  border: 1px solid rgb(114, 57, 16);
+  border-radius: 4px;
+  outline: none;
+
+  background-color: rgb(217, 217, 217);
+
+  font: inherit;
+}
+.advanced-calculator input[type="range"] {
+  overflow: hidden;
+  width: 180px;
+  padding: 0;
+  margin-left: 5px;
+  -webkit-appearance: none;
+  background-color: rgb(192, 192, 192);
+  outline: none;
+}
+.advanced-calculator input[type="radio"] {
+  display: initial;
+}
+.calculator input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 15px;
+  background: #434343;
+  box-shadow: -89px 0 0 80px rgb(176, 196, 222);
+}
+.numbers_input {
+  margin-bottom: 10px;
+}
+.results input {
+  width: 100px;
+}
+.numbers_input input[type="number"] {
+  background-color: rgb(176, 196, 222);
+}
+.results span {
+  font-weight: 600;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Сложные калькуляторы (конец) */
