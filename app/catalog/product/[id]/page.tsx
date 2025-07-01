@@ -6,6 +6,13 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import { productData } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function ProductPage() {
   const params = useParams();
@@ -47,20 +54,24 @@ export default function ProductPage() {
       {/* ...other product info... */}
       {product.variants && product.variants.length > 0 ? (
         <div className="my-4">
-          <div className="mb-2 font-semibold">Выберите вариант:</div>
           <div className="flex flex-col gap-2">
-            {product.variants.map((variant) => (
-              <label key={variant.id} className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name="variant"
-                  value={variant.id}
-                  checked={selectedVariantId === variant.id}
-                  onChange={() => setSelectedVariantId(variant.id)}
-                />
-                {variant.name}
-              </label>
-            ))}
+            {
+              <Select
+                value={selectedVariantId}
+                onValueChange={setSelectedVariantId}
+              >
+                <SelectTrigger className="data-[placeholder]:text-black">
+                  <SelectValue placeholder="Выберите вариант" />
+                </SelectTrigger>
+                <SelectContent>
+                  {product.variants.map((variant) => (
+                    <SelectItem key={variant.id} value={variant.id}>
+                      {variant.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            }
           </div>
           <div className="mt-4 flex items-center gap-4">
             <Button
