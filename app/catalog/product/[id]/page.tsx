@@ -46,7 +46,7 @@ export default function ProductPage() {
       <h1 className="mb-6 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants && product.variants.length > 0 ? (
         <div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="mb-20 grid grid-cols-3 gap-5">
             {product.variants.map(function (variant) {
               return (
                 <>
