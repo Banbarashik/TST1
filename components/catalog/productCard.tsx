@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+import { Product } from "@/types";
+
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product }: { product: Product }) {
   const { selected, add, remove, setAmount } = useProductSelection();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -30,7 +32,12 @@ export default function ProductCard({ product }) {
         <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
       </Link>
       <p className="mb-1">
-        Характеристики: {product.airPower} м<sup>3</sup>/ч; {product.heatPower}{" "}
+        Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
+        {product.heatPower
+          ? product.heatPower
+          : product.variants
+              ?.map((variant) => variant.heatPower)
+              .join(", ")}{" "}
         кВт
       </p>
       {product.price && (
