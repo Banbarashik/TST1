@@ -64,7 +64,9 @@ export default function ProductCard({
         кВт
       </p>
       {product.price && (
-        <p className="text-gray-600">{product.price} руб. с НДС</p>
+        <p className="text-gray-600">
+          {product.price.toLocaleString("ru-RU")} руб. с НДС
+        </p>
       )}
       <div className="mt-2 flex items-center justify-between">
         {hasVariants ? (
