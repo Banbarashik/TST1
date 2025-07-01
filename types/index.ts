@@ -1,3 +1,11 @@
+export type Category = {
+  title?: string;
+  menuTitle: string;
+  slug: string;
+  description?: string[];
+  children?: Category[];
+};
+
 export type Product = {
   id: string;
   name: string;

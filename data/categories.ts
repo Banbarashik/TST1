@@ -1,4 +1,6 @@
-export const categoryTree = [
+import type { Category } from "@/types";
+
+export const categoryTree: Category[] = [
   {
     title: "Водяные калориферы",
     menuTitle: "Водяные калориферы",
