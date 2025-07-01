@@ -49,6 +49,7 @@ export default function ProductPage() {
           {product.variants.map(function (variant) {
             return (
               <ProductCard
+                key={variant.id}
                 product={{
                   ...variant,
                   airPower: product.airPower,
