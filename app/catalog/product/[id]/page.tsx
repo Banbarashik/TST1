@@ -47,7 +47,11 @@ export default function ProductPage() {
       {product.variants && product.variants.length > 0 ? (
         <div className="grid grid-cols-3 gap-5">
           {product.variants.map(function (variant) {
-            return <ProductCard product={variant} />;
+            return (
+              <ProductCard
+                product={{ ...variant, airPower: product.airPower }}
+              />
+            );
           })}
         </div>
       ) : (
