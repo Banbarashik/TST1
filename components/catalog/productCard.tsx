@@ -50,8 +50,8 @@ export default function ProductCard({ product }: { product: Product }) {
       )}
       <div className="mt-2 flex items-center justify-between">
         {hasVariants ? (
-          <Button asChild>
-            <Link href={`product/${product.id}`}>В заявку</Link>
+          <Button asChild className="bg-primary-dark">
+            <Link href={`product/${product.id}`}>Подобрать</Link>
           </Button>
         ) : (
           <Button
