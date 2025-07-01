@@ -4,7 +4,7 @@ export type Product = {
   categories: string[];
   airPower: number;
   heatPower: number;
-  price: number;
+  price?: number;
   img: string;
   variants?: Product[];
 };
