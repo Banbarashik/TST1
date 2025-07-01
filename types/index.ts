@@ -1,7 +1,7 @@
 export type Product = {
   id: string;
   name: string;
-  categories: string[];
+  categories?: string[];
   airPower: number;
   heatPower?: number;
   price?: number;
