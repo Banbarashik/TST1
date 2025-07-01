@@ -23,9 +23,7 @@ export default function ProductPage() {
   if (!product) return <div>Товар не найден</div>;
 
   // If product has variants, let user select one
-  const [selectedVariantId, setSelectedVariantId] = useState(
-    product.variants?.[0]?.id || "",
-  );
+  const [selectedVariantId, setSelectedVariantId] = useState("");
 
   // Determine which id is currently being worked with
   const currentId =
