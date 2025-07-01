@@ -6,14 +6,8 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import { productData } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import Image from "next/image";
+import ProductCard from "@/components/catalog/productCard";
 
 export default function ProductPage() {
   const params = useParams();
@@ -50,55 +44,11 @@ export default function ProductPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold">{product.name}</h1>
-      <Image src={product.img} alt={product.name} width={400} height={400} />
       {product.variants && product.variants.length > 0 ? (
-        <div className="my-4">
-          <div className="flex flex-col gap-2">
-            {
-              <Select
-                value={selectedVariantId}
-                onValueChange={setSelectedVariantId}
-              >
-                <SelectTrigger className="data-[placeholder]:text-black">
-                  <SelectValue placeholder="Выберите вариант" />
-                </SelectTrigger>
-                <SelectContent>
-                  {product.variants.map((variant) => (
-                    <SelectItem key={variant.id} value={variant.id}>
-                      {`${variant.name} (${variant.price.toLocaleString("ru-RU")} руб. с НДС)`}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            }
-          </div>
-          <div className="mt-4 flex items-center gap-4">
-            <Button
-              onClick={handleAddOrRemove}
-              disabled={!selectedVariantId}
-              variant={isMounted && isSelected ? "secondary" : "default"}
-            >
-              {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
-            </Button>
-            {isMounted && isSelected && (
-              <NumberInput
-                value={selectedProduct.amount}
-                disabled={selectedProduct.amount === 1}
-                decrease={() => {
-                  if (selectedProduct.amount > 1) {
-                    setAmount(currentId, selectedProduct.amount - 1);
-                  }
-                }}
-                increase={() =>
-                  setAmount(currentId, selectedProduct.amount + 1)
-                }
-                change={(e) => {
-                  const newAmount = Number(e.target.value);
-                  if (newAmount >= 1) setAmount(currentId, newAmount);
-                }}
-              />
-            )}
-          </div>
+        <div className="grid grid-cols-3 gap-5">
+          {product.variants.map(function (variant) {
+            return <ProductCard product={variant} />;
+          })}
         </div>
       ) : (
         <div className="mt-4 flex items-center gap-4">
