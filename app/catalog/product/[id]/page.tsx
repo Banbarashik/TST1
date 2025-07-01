@@ -84,16 +84,14 @@ export default function ProductPage() {
               <NumberInput
                 value={selectedProduct.amount}
                 disabled={selectedProduct.amount === 1}
-                decrease={(e) => {
-                  e.preventDefault();
+                decrease={() => {
                   if (selectedProduct.amount > 1) {
                     setAmount(currentId, selectedProduct.amount - 1);
                   }
                 }}
-                increase={(e) => {
-                  e.preventDefault();
-                  setAmount(currentId, selectedProduct.amount + 1);
-                }}
+                increase={() =>
+                  setAmount(currentId, selectedProduct.amount + 1)
+                }
                 change={(e) => {
                   const newAmount = Number(e.target.value);
                   if (newAmount >= 1) setAmount(currentId, newAmount);
@@ -114,16 +112,12 @@ export default function ProductPage() {
             <NumberInput
               value={selectedProduct.amount}
               disabled={selectedProduct.amount === 1}
-              decrease={(e) => {
-                e.preventDefault();
+              decrease={() => {
                 if (selectedProduct.amount > 1) {
                   setAmount(product.id, selectedProduct.amount - 1);
                 }
               }}
-              increase={(e) => {
-                e.preventDefault();
-                setAmount(product.id, selectedProduct.amount + 1);
-              }}
+              increase={() => setAmount(product.id, selectedProduct.amount + 1)}
               change={(e) => {
                 const newAmount = Number(e.target.value);
                 if (newAmount >= 1) setAmount(product.id, newAmount);
