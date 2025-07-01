@@ -1,6 +1,6 @@
 export const productData = [
   {
-    id: "airheater-572x572",
+    id: "ksk-572x572",
     name: "Приточный калорифер КСк 572x572",
     categories: [
       "kalorifer",
@@ -9,22 +9,22 @@ export const productData = [
       "pritochny-kalorifery-ksk",
     ],
     airPower: 2500,
-    img: "/",
+    img: "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_572x572.png",
     variants: [
       {
-        id: "airheater-572x572-2",
+        id: "ksk-572x572-2",
         name: "Приточный калорифер КСк 2 572x572",
         heatPower: 26,
         price: 13093,
       },
       {
-        id: "airheater-572x572-3",
+        id: "ksk-572x572-3",
         name: "Приточный калорифер КСк 3 572x572",
         heatPower: 34,
         price: 17548,
       },
       {
-        id: "airheater-572x572-4",
+        id: "ksk-572x572-4",
         name: "Приточный калорифер КСк 4 572x572",
         heatPower: 40,
         price: 21632,
