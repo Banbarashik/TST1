@@ -33,7 +33,9 @@ export default function ProductCard({ product }) {
         Характеристики: {product.airPower} м<sup>3</sup>/ч; {product.heatPower}{" "}
         кВт
       </p>
-      <p className="text-gray-600">{product.price} руб. с НДС</p>
+      {product.price && (
+        <p className="text-gray-600">{product.price} руб. с НДС</p>
+      )}
       <div className="mt-2 flex items-center justify-between">
         {hasVariants ? (
           <Button asChild>
