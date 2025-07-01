@@ -45,19 +45,33 @@ export default function ProductPage() {
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants && product.variants.length > 0 ? (
-        <div className="grid grid-cols-3 gap-5">
-          {product.variants.map(function (variant) {
-            return (
-              <ProductCard
-                key={variant.id}
-                product={{
-                  ...variant,
-                  airPower: product.airPower,
-                  img: product.img,
-                }}
-              />
-            );
-          })}
+        <div>
+          <div className="grid grid-cols-3 gap-5">
+            {product.variants.map(function (variant) {
+              return (
+                <>
+                  <ProductCard
+                    key={variant.id}
+                    product={{
+                      ...variant,
+                      airPower: product.airPower,
+                      img: product.img,
+                    }}
+                  />
+                </>
+              );
+            })}
+          </div>
+
+          <iframe
+            src={product.calculator}
+            title="Калькулятор калорифера"
+            style={{
+              width: "100%",
+              height: "800px", // adjust height as needed
+              border: "none",
+            }}
+          />
         </div>
       ) : (
         <div className="mt-4 flex items-center gap-4">
