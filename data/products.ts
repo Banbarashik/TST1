@@ -9,7 +9,7 @@ export const productData = [
       "pritochny-kalorifery-ksk",
     ],
     airPower: 2500,
-    img: "",
+    img: "/",
     variants: [
       {
         id: "airheater-572x572-2",
