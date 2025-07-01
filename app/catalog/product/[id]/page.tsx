@@ -39,16 +39,15 @@ export default function ProductPage() {
           <div className="mb-20 grid grid-cols-3 gap-5">
             {product.variants.map(function (variant) {
               return (
-                <>
-                  <ProductCard
-                    key={variant.id}
-                    product={{
-                      ...variant,
-                      airPower: product.airPower,
-                      img: product.img,
-                    }}
-                  />
-                </>
+                <ProductCard
+                  key={variant.id}
+                  isVariant
+                  product={{
+                    ...variant,
+                    airPower: product.airPower,
+                    img: product.img,
+                  }}
+                />
               );
             })}
           </div>

@@ -11,7 +11,13 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({
+  product,
+  isVariant = false,
+}: {
+  product: Product;
+  isVariant?: boolean;
+}) {
   const { selected, add, remove, setAmount } = useProductSelection();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -27,15 +33,27 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="rounded-lg border p-4 transition hover:shadow-md">
-      <Link href={`product/${product.id}`} key={product.id}>
-        <Image
-          src={product.img ?? ""}
-          alt={product.name}
-          width={300}
-          height={300}
-        />
-        <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
-      </Link>
+      {isVariant ? (
+        <>
+          <Image
+            src={product.img ?? ""}
+            alt={product.name}
+            width={300}
+            height={300}
+          />
+          <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
+        </>
+      ) : (
+        <Link href={`product/${product.id}`}>
+          <Image
+            src={product.img ?? ""}
+            alt={product.name}
+            width={300}
+            height={300}
+          />
+          <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
+        </Link>
+      )}
       <p className="mb-1">
         Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
         {product.heatPower
