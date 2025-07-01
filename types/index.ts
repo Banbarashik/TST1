@@ -14,6 +14,7 @@ export type Product = {
   heatPower?: number;
   price?: number;
   img?: string;
+  calculator?: string;
   variants?: Product[];
 };
 
