@@ -1,11 +1,16 @@
 import { productData } from "@/data/products";
 import { categoryTree } from "@/data/categories";
 
-import { findCategoryBySlug, sortProducts } from "@/lib/utils";
+import { sortProducts } from "@/lib/utils";
+import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
 import ProductCard from "@/components/catalog/productCard";
 
-const defaultCategory = { title: "Вся продукция", slug: "all" };
+const defaultCategory = {
+  title: "Вся продукция",
+  slug: "all",
+  description: [""],
+};
 
 export default async function Catalog({
   params,
@@ -21,7 +26,7 @@ export default async function Catalog({
     categorySlug === "all"
       ? productData
       : productData.filter((product) =>
-          product.categories.includes(categorySlug),
+          product.categories?.includes(categorySlug),
         );
 
   const sortedProducts = filteredProducts.sort((a, b) =>

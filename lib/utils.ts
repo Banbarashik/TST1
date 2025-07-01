@@ -5,17 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function findCategoryBySlug(slug: string, nodes) {
-  for (const node of nodes) {
-    if (node.slug === slug) return node;
-    if (node.children) {
-      const found = findCategoryBySlug(slug, node.children);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
 export function sortProducts(a: string, b: string) {
   // Split into digit and non-digit parts
   const ax = [];
