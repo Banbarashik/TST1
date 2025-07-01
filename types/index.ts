@@ -2,7 +2,7 @@ export type Product = {
   id: string;
   name: string;
   categories?: string[];
-  airPower: number;
+  airPower?: number;
   heatPower?: number;
   price?: number;
   img: string;
