@@ -65,7 +65,7 @@ export default function ProductPage() {
                 <SelectContent>
                   {product.variants.map((variant) => (
                     <SelectItem key={variant.id} value={variant.id}>
-                      {variant.name}
+                      {`${variant.name} (${variant.price.toLocaleString("ru-RU")} руб. с НДС)`}
                     </SelectItem>
                   ))}
                 </SelectContent>
