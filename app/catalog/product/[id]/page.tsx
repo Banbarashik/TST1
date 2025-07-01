@@ -1,12 +1,13 @@
 "use client";
+import { productData } from "@/data/products";
 
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+
 import { useProductSelection } from "@/context/ProductSelectionContext";
-import { productData } from "@/data/products";
+
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
-import Image from "next/image";
 import ProductCard from "@/components/catalog/productCard";
 
 export default function ProductPage() {
@@ -17,20 +18,9 @@ export default function ProductPage() {
 
   if (!product) return <div>Товар не найден</div>;
 
-  // If product has variants, let user select one
-  const [selectedVariantId, setSelectedVariantId] = useState("");
-
-  // Determine which id is currently being worked with
-  const currentId =
-    product.variants && product.variants.length > 0
-      ? selectedVariantId
-      : product.id;
-
-  // Find if this product/variant is already selected
-  const selectedProduct = selected.find((item) => item.id === currentId);
+  const selectedProduct = selected.find((item) => item.id === product.id);
   const isSelected = !!selectedProduct;
 
-  // For SSR hydration safety (optional, as in ProductCard)
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
@@ -38,7 +28,7 @@ export default function ProductPage() {
 
   const handleAddOrRemove = () => {
     if (!isMounted) return;
-    isSelected ? remove(currentId) : add(currentId);
+    isSelected ? remove(product.id) : add(product.id);
   };
 
   return (
