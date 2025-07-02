@@ -176,16 +176,6 @@
 }
 
 /* Стилизация непосредственно таблицы (начало) */
-.table-wrap {
-  padding: 10px 12px;
-  margin-top: 4px;
-  margin-bottom: 5px;
-  border: 1px solid black;
-
-  background-color: rgb(204, 204, 204);
-
-  overflow: auto;
-}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -213,16 +203,6 @@ th {
 .water-and-steam .small-cols th {
   width: 50px;
 }
-.water-and-steam .measurements {
-  /* width: 250px; */
-}
-.water-and-steam .model,
-.water-and-steam .performance {
-  /* width: 175px; */
-}
-.water-and-steam .area {
-  /* width: 300px; */
-}
 .water-and-steam .small-cols .kal {
   width: 100px;
 }
@@ -235,14 +215,9 @@ th {
   font-weight: 400;
   font-size: 11pt;
 }
-.water-and-steam-inner .performance {
-  /* width: 170px; */
-}
 .water-and-steam-inner .dy {
+  font-size: 14px;
   width: 90px;
-}
-.water-and-steam-inner .area {
-  /* width: 300px; */
 }
 .water-and-steam-inner .mass {
   width: 160px;

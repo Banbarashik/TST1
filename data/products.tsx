@@ -48,6 +48,109 @@ export const productData: Product[] = [
     drawing:
       "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_chertez.png",
     calculator: "/legacy/calculator-ksk-572-572.html",
+    textContent: ["Приточный водяной калорифер КСК-572*572 выпускается ..."],
+    tableData: {
+      headers: [
+        {
+          cells: [
+            {
+              content: (
+                <>
+                  Производительность <br /> по воздуху, м<sup>3</sup>/час
+                </>
+              ),
+              rowspan: 2,
+            },
+            {
+              content: (
+                <>
+                  Габаритные и <br /> присоединительные размеры, мм
+                </>
+              ),
+              colspan: 5,
+            },
+            { content: "dy", colspan: 2, className: "dy" },
+            {
+              content: (
+                <>
+                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                </>
+              ),
+              colspan: 3,
+            },
+            { content: "Масса, кг", colspan: 3, className: "mass" },
+          ],
+        },
+        {
+          cells: [
+            {
+              content: (
+                <>
+                  L<br />H
+                </>
+              ),
+              className: "small-cols",
+            },
+            {
+              content: (
+                <>
+                  L1
+                  <br />
+                  H1
+                </>
+              ),
+              className: "small-cols",
+            },
+            {
+              content: (
+                <>
+                  L2
+                  <br />
+                  H2
+                </>
+              ),
+              className: "small-cols",
+            },
+            { content: "L3", className: "small-cols" },
+            { content: "C", className: "small-cols" },
+            { content: "мм", className: "small-cols w-10" },
+            { content: '"', className: "small-cols w-10 pt-1" },
+            { content: "КСк2", className: "kal2" },
+            { content: "КСк3", className: "kal2" },
+            { content: "КСк4", className: "kal2" },
+            { content: "КСк2", className: "kal2" },
+            { content: "КСк3", className: "kal2" },
+            { content: "КСк4", className: "kal2" },
+          ],
+        },
+      ],
+      rows: [
+        {
+          cells: [
+            { content: 2500 },
+            { content: 500 },
+            { content: 548 },
+            { content: 572 },
+            { content: 637 },
+            { content: 435 },
+            { content: 32 },
+            {
+              content: (
+                <>
+                  1 <sup>1</sup>/<sub>4</sub>
+                </>
+              ),
+            },
+            { content: 6.8 },
+            { content: 10.4 },
+            { content: 13.7 },
+            { content: 31 },
+            { content: 37 },
+            { content: 43 },
+          ],
+        },
+      ],
+    },
     variants: [
       {
         id: "ksk-572x572-2",
@@ -676,7 +779,7 @@ export const productData: Product[] = [
     airPower: 4400,
     heatPower: 118,
     price: 38343,
-    categories: ["kalorifer", "vodiany-kalorifery", "kfb-a-m", "kfb-a4-m"],
+    categories: ["kalorifer", "vodiany-kalорifery", "kfb-a-m", "kfb-a4-m"],
     img: "/img/kalorifery/kfb-m/kalorifer_kfb-2_6.png",
   },
   {
@@ -685,7 +788,7 @@ export const productData: Product[] = [
     airPower: 5500,
     heatPower: 147,
     price: 42231,
-    categories: ["kalorifer", "vodiany-kalorifery", "kfb-a-m", "kfb-a4-m"],
+    categories: ["kalorifer", "vodiany-kalорifery", "kfb-a-m", "kfb-a4-m"],
     img: "/img/kalorifery/kfb-m/kalorifer_kfb-2_6.png",
   },
   {
@@ -748,7 +851,7 @@ export const productData: Product[] = [
     airPower: 16000,
     heatPower: 445,
     price: 98049,
-    categories: ["kalorifer", "vodiany-kalorifery", "kfb-a-m", "kfb-a4-m"],
+    categories: ["kalorifer", "vodiany-kalорifery", "kfb-a-m", "kfb-a4-m"],
     img: "/img/kalorifery/kfb-m/kalorifer_kfb-10_14.png",
   },
   {

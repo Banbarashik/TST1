@@ -16,6 +16,8 @@ export type Product = {
   img?: string;
   drawing?: string;
   calculator?: string;
+  textContent?: string[];
+  tableData?: ProductTableData;
   variants?: Product[];
 };
 
@@ -33,4 +35,22 @@ export interface ContactFormData {
   region?: string;
   products: SelectedProduct[];
   message: string;
+}
+
+export interface TableCellData {
+  content: React.ReactNode;
+  colspan?: number;
+  rowspan?: number;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export interface TableRowData {
+  cells: TableCellData[];
+}
+
+export interface ProductTableData {
+  headers: TableRowData[];
+  rows: TableRowData[];
+  caption?: string;
 }
