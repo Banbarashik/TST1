@@ -168,3 +168,91 @@
     -moz-appearance: textfield;
   }
 }
+
+.single-table {
+  /* margin: 0 auto; */
+
+  background-color: rgb(204, 204, 204);
+}
+
+/* Стилизация непосредственно таблицы (начало) */
+.table-wrap {
+  padding: 10px 12px;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+
+  background-color: rgb(204, 204, 204);
+
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 10pt;
+  text-align: center;
+}
+table,
+td,
+th {
+  border: 1px solid #723910;
+}
+th {
+  font-weight: normal;
+  font-size: 9pt;
+  line-height: 18px;
+}
+/* Стилизация непосредственно таблицы (конец) */
+
+/* Таблицы для АО+ вода и АО+ пар (начало) */
+.water-and-steam th {
+  font-size: 10pt;
+  font-weight: 700;
+}
+.water-and-steam .small-cols th {
+  width: 50px;
+}
+.water-and-steam .measurements {
+  /* width: 250px; */
+}
+.water-and-steam .model,
+.water-and-steam .performance {
+  /* width: 175px; */
+}
+.water-and-steam .area {
+  /* width: 300px; */
+}
+.water-and-steam .small-cols .kal {
+  width: 100px;
+}
+
+.water-and-steam-inner {
+  font-size: 11pt;
+  background-color: transparent;
+}
+.water-and-steam-inner .small-cols {
+  font-weight: 400;
+  font-size: 11pt;
+}
+.water-and-steam-inner .performance {
+  /* width: 170px; */
+}
+.water-and-steam-inner .dy {
+  width: 90px;
+}
+.water-and-steam-inner .area {
+  /* width: 300px; */
+}
+.water-and-steam-inner .mass {
+  width: 160px;
+}
+.water-and-steam-inner .kal2 {
+  font-weight: 400;
+  font-size: 11pt;
+}
+
+.table-legend {
+  font-family: "Times New Roman", serif;
+}
+/* Таблицы для АО+ вода и АО+ пар (конец) */

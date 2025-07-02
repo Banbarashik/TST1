@@ -3,13 +3,22 @@ import { productData } from "@/data/products";
 
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 import ProductCard from "@/components/catalog/productCard";
-import Image from "next/image";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export default function ProductPage() {
   const params = useParams();
@@ -69,6 +78,78 @@ export default function ProductPage() {
             width={968}
             height={1}
           />
+
+          <table className="single-table water-and-steam water-and-steam-inner">
+            <thead>
+              <tr>
+                <th rowSpan={2} className="performance">
+                  Производительность
+                  <br />
+                  по воздуху, м<sup>3</sup>/час
+                </th>
+                <th colSpan={5} className="measurements">
+                  Габаритные и <br /> присоединительные размеры, мм
+                </th>
+                <th colSpan={2} className="dy" style={{ fontSize: "11pt" }}>
+                  dy
+                </th>
+                <th colSpan={3} className="area">
+                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                </th>
+                <th colSpan={3} className="mass">
+                  Масса, кг
+                </th>
+              </tr>
+              <tr>
+                <th className="small-cols">
+                  L <br /> H
+                </th>
+                <th className="small-cols">
+                  L1 <br /> H1
+                </th>
+                <th className="small-cols">
+                  L2 <br /> H2
+                </th>
+                <th className="small-cols">L3</th>
+                <th className="small-cols">C</th>
+                <th className="small-cols" style={{ width: "40px" }}>
+                  мм
+                </th>
+                <th
+                  className="small-cols"
+                  style={{ width: "40px", paddingTop: "5px" }}
+                >
+                  "
+                </th>
+                <th className="kal2">КСк2</th>
+                <th className="kal2">КСк3</th>
+                <th className="kal2">КСк4</th>
+                <th className="kal2">КСк2</th>
+                <th className="kal2">КСк3</th>
+                <th className="kal2">КСк4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2500</td>
+                <td>500</td>
+                <td>548</td>
+                <td>572</td>
+                <td>637</td>
+                <td>435</td>
+                <td>32</td>
+                <td>
+                  1 <sup>1</sup>/<sub>4</sub>
+                </td>
+                <td>6.8</td>
+                <td>10.4</td>
+                <td>13.7</td>
+                <td>31</td>
+                <td>37</td>
+                <td>43</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       ) : (
         <div className="mt-4 flex items-center gap-4">
