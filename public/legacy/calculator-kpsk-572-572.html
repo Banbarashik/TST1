@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="calculator.css" rel="stylesheet" />
+    <script>
+      function calculate() {
+        let cal = document.getElementById("calorifer");
+        let steamPressure = document.getElementById("pressure");
+
+        let B1 = cal.value;
+        let B3 = +document.getElementById("volume").value;
+        let B4 = +document.getElementById("airInputT").value;
+        let B5 = +document.getElementById("airOutputT").value;
+        let B7 = steamPressure.value;
+
+        let kpskF = [6.3, 0.25, 0.5, 34.3, 0.357, -0.072, 4.23, 1.832];
+        let kpskG = [9.6, 0.25, 0.5, 30.3, 0.405, -0.066, 6.05, 1.832];
+        let kpskH = [12.7, 0.25, 0.5, 26.1, 0.476, -0.036, 8.63, 1.833];
+
+        let pressureF = [
+          99.6, 111.4, 120.2, 127.4, 133.5, 138.9, 143.6, 147.9, 151.8, 158.8,
+          165, 170.4, 175.4, 179.9, 184.1, 188,
+        ];
+        let pressureG = [
+          2257510, 2226030, 2201560, 2181150, 2163440, 2147650, 2133330,
+          2120160, 2107920, 2085640, 2065610, 2047290, 2030310, 2014440,
+          1999470, 1985270,
+        ];
+
+        let F1 = kpskF1();
+        let F2 = kpskF2();
+        let F3 = kpskF3();
+
+        let F5 = kpskF4();
+        let F6 = kpskF5();
+        let F7 = kpskF6();
+        let F8 = kpskF7();
+        let F9 = kpskF8();
+
+        // вывод результатов
+        document.getElementById("result1").value = B9().toFixed(0) + " %";
+
+        document.getElementById("result2").value = B11().toFixed(0);
+        document.getElementById("result3").value = B12().toFixed(0);
+
+        document.getElementById("result4").value = B14().toFixed(0);
+        document.getElementById("result5").value = B15().toFixed(2);
+
+        if (
+          parseInt(document.getElementById("result1").value) < 0 ||
+          parseInt(document.getElementById("result1").value) > 20
+        ) {
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 160, 122)";
+        } else {
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 255, 255)";
+        }
+        if (
+          document.getElementById("result5").value < 1.5 ||
+          document.getElementById("result5").value > 8
+        ) {
+          document.getElementById("result5").style.backgroundColor =
+            "rgb(255, 160, 122)";
+        } else if (
+          document.getElementById("result5").value > 1.5 &&
+          document.getElementById("result5").value < 8
+        ) {
+          document.getElementById("result5").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+
+        if (
+          document.getElementById("result1").value == "NaN %" ||
+          document.getElementById("result1").value == "Infinity %" ||
+          document.getElementById("result1").value == "-Infinity %"
+        ) {
+          document.getElementById("result1").value = "%";
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 255, 255)";
+        }
+        if (
+          document.getElementById("result2").value == "NaN" ||
+          document.getElementById("result2").value == "Infinity" ||
+          document.getElementById("result2").value == "-Infinity"
+        ) {
+          document.getElementById("result2").value = "";
+        }
+        if (
+          document.getElementById("result3").value == "NaN" ||
+          document.getElementById("result3").value == "Infinity" ||
+          document.getElementById("result3").value == "-Infinity"
+        ) {
+          document.getElementById("result3").value = "";
+        }
+        if (
+          document.getElementById("result4").value == "NaN" ||
+          document.getElementById("result4").value == "Infinity" ||
+          document.getElementById("result4").value == "-Infinity"
+        ) {
+          document.getElementById("result4").value = "";
+        }
+        if (
+          document.getElementById("result5").value == "NaN" ||
+          document.getElementById("result5").value == "Infinity" ||
+          document.getElementById("result5").value == "-Infinity"
+        ) {
+          document.getElementById("result5").value = "";
+          document.getElementById("result5").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+
+        function B9() {
+          return ((B11() - B25()) / B25()) * 100;
+        }
+
+        function B11() {
+          return (B28() * F1 * B31()) / 1000;
+        }
+        function B12() {
+          return ((B11() * 1000) / B22()) * 3600;
+        }
+
+        function B14() {
+          return F8 * Math.pow(B15(), F9);
+        }
+        function B15() {
+          return B20() / 3600 / F2;
+        }
+
+        function B18() {
+          return (B4 + B5) / 2;
+        }
+        function B19() {
+          return 353 / (273.15 + B18());
+        }
+        function B20() {
+          return B3 * B19();
+        }
+
+        function B22() {
+          if (B7 == "0,1 МПа") {
+            return pressureG[0];
+          } else if (B7 == "0,15 МПа") {
+            return pressureG[1];
+          } else if (B7 == "0,2 МПа") {
+            return pressureG[2];
+          } else if (B7 == "0,25 МПа") {
+            return pressureG[3];
+          } else if (B7 == "0,3 МПа") {
+            return pressureG[4];
+          } else if (B7 == "0,35 МПа") {
+            return pressureG[5];
+          } else if (B7 == "0,4 МПа") {
+            return pressureG[6];
+          } else if (B7 == "0,45 МПа") {
+            return pressureG[7];
+          } else if (B7 == "0,5 МПа") {
+            return pressureG[8];
+          } else if (B7 == "0,6 МПа") {
+            return pressureG[9];
+          } else if (B7 == "0,7 МПа") {
+            return pressureG[10];
+          } else if (B7 == "0,8 МПа") {
+            return pressureG[11];
+          } else if (B7 == "0,9 МПа") {
+            return pressureG[12];
+          } else if (B7 == "1 МПа") {
+            return pressureG[13];
+          } else if (B7 == "1,1 МПа") {
+            return pressureG[14];
+          } else if (B7 == "1,2 МПа") {
+            return pressureG[15];
+          }
+        }
+
+        function B23() {
+          if (B7 == "0,1 МПа") {
+            return pressureF[0];
+          } else if (B7 == "0,15 МПа") {
+            return pressureF[1];
+          } else if (B7 == "0,2 МПа") {
+            return pressureF[2];
+          } else if (B7 == "0,25 МПа") {
+            return pressureF[3];
+          } else if (B7 == "0,3 МПа") {
+            return pressureF[4];
+          } else if (B7 == "0,35 МПа") {
+            return pressureF[5];
+          } else if (B7 == "0,4 МПа") {
+            return pressureF[6];
+          } else if (B7 == "0,45 МПа") {
+            return pressureF[7];
+          } else if (B7 == "0,5 МПа") {
+            return pressureF[8];
+          } else if (B7 == "0,6 МПа") {
+            return pressureF[9];
+          } else if (B7 == "0,7 МПа") {
+            return pressureF[10];
+          } else if (B7 == "0,8 МПа") {
+            return pressureF[11];
+          } else if (B7 == "0,9 МПа") {
+            return pressureF[12];
+          } else if (B7 == "1 МПа") {
+            return pressureF[13];
+          } else if (B7 == "1,1 МПа") {
+            return pressureF[14];
+          } else if (B7 == "1,2 МПа") {
+            return pressureF[15];
+          }
+        }
+
+        function B25() {
+          return ((B20() / 3600) * 1005 * (B5 - B4)) / 1000;
+        }
+        function B26() {
+          return ((B25() * 1000) / B22()) * 3600;
+        }
+
+        function B28() {
+          return F5 * Math.pow(B15(), F6) * Math.pow(F3, F7);
+        }
+        function B29() {
+          return B23() - B4;
+        }
+        function B30() {
+          return B23() - B5;
+        }
+        function B31() {
+          return (B29() - B30()) / Math.log(B29() / B30());
+        }
+
+        function kpskF1() {
+          if (B1 == "572Х572_2") {
+            return kpskF[0];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[0];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[0];
+          }
+        }
+        function kpskF2() {
+          if (B1 == "572Х572_2") {
+            return kpskF[1];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[1];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[1];
+          }
+        }
+        function kpskF3() {
+          if (B1 == "572Х572_2") {
+            return kpskF[2];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[2];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[2];
+          }
+        }
+        function kpskF4() {
+          if (B1 == "572Х572_2") {
+            return kpskF[3];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[3];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[3];
+          }
+        }
+        function kpskF5() {
+          if (B1 == "572Х572_2") {
+            return kpskF[4];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[4];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[4];
+          }
+        }
+        function kpskF6() {
+          if (B1 == "572Х572_2") {
+            return kpskF[5];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[5];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[5];
+          }
+        }
+        function kpskF7() {
+          if (B1 == "572Х572_2") {
+            return kpskF[6];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[6];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[6];
+          }
+        }
+        function kpskF8() {
+          if (B1 == "572Х572_2") {
+            return kpskF[7];
+          } else if (B1 == "572Х572_3") {
+            return kpskG[7];
+          } else if (B1 == "572Х572_4") {
+            return kpskH[7];
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Калькулятор (начало) -->
+    <form
+      onsubmit="return false;"
+      oninput="calculate()"
+      name="calculator"
+      class="calculator advanced-calculator"
+    >
+      <div>
+        <span class="unselectable">Модель калорифера</span>
+        <select id="calorifer" style="background-color: rgb(176, 196, 222)">
+          <option value="572Х572_2">КПСК-572x572_2 двухрядный</option>
+          <option value="572Х572_3">КПСК-572x572_3 трехрядный</option>
+          <option value="572Х572_4">КПСК-572x572_4 четырехрядный</option>
+        </select>
+      </div>
+
+      <div class="numbers_input">
+        <p class="unselectable">
+          Объем нагреваемого воздуха:
+          <input type="number" id="volume" placeholder="м³/ч" />
+        </p>
+
+        <p class="unselectable">
+          Температура входящего воздуха:
+          <input type="number" id="airInputT" placeholder="°С" />
+        </p>
+
+        <p class="unselectable">
+          Требуемая температура воздуха на выходе:
+          <input type="number" id="airOutputT" placeholder="°С" />
+        </p>
+      </div>
+
+      <div>
+        <span class="unselectable">Давление сухого насыщенного пара</span>
+        <select
+          id="pressure"
+          style="background-color: rgb(176, 196, 222); margin-bottom: 0"
+        >
+          <option>0,1 МПа</option>
+          <option>0,15 МПа</option>
+          <option>0,2 МПа</option>
+          <option>0,25 МПа</option>
+          <option>0,3 МПа</option>
+          <option>0,35 МПа</option>
+          <option>0,4 МПа</option>
+          <option>0,45 МПа</option>
+          <option>0,5 МПа</option>
+          <option>0,6 МПа</option>
+          <option>0,7 МПа</option>
+          <option>0,8 МПа</option>
+          <option>0,9 МПа</option>
+          <option>1 МПа</option>
+          <option>1,1 МПа</option>
+          <option>1,2 МПа</option>
+        </select>
+      </div>
+
+      <div class="results">
+        <p style="margin: 20px 0" class="unselectable">
+          Запас площади поверхности нагрева калорифера:
+          <input
+            id="result1"
+            oninput="calculate();"
+            style="width: 65px; background-color: rgb(255, 255, 255)"
+            disabled
+          />
+        </p>
+        <p style="margin-bottom: 5px" class="unselectable">
+          Тепловая мощность, кВт
+          <input id="result2" oninput="calculate()" disabled />
+        </p>
+        <p style="margin-top: 0; margin-bottom: 8px" class="unselectable">
+          Расход пара, кг/час
+          <input id="result3" oninput="calculate()" disabled />
+        </p>
+        <p style="margin-top: 0; margin-bottom: 5px" class="unselectable">
+          Аэродинамическое сопротивление, Па
+          <input id="result4" oninput="calculate()" disabled />
+        </p>
+
+        <p style="margin-top: 0" class="unselectable">
+          Массовая скорость воздуха в фронтальном сечении, кг/м<sup>2</sup
+          ><span style="font-weight: 100">•</span>с
+          <input id="result5" oninput="calculate()" disabled />
+        </p>
+      </div>
+    </form>
+    <!-- Калькулятор (конец) -->
+  </body>
+</html>
