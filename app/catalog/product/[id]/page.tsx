@@ -9,6 +9,7 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
 import ProductCard from "@/components/catalog/productCard";
+import Image from "next/image";
 
 export default function ProductPage() {
   const params = useParams();
@@ -60,6 +61,13 @@ export default function ProductPage() {
               height: "800px", // adjust height as needed
               border: "none",
             }}
+          />
+
+          <Image
+            src={product.drawing ?? ""}
+            alt={product.name}
+            width={968}
+            height={1}
           />
         </div>
       ) : (
