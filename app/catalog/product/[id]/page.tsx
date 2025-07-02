@@ -65,12 +65,14 @@ export default function ProductPage() {
             }}
           />
 
-          <Image
-            src={product.drawing ?? ""}
-            alt={product.name}
-            width={968}
-            height={1}
-          />
+          {product.drawing && (
+            <Image
+              src={product.drawing}
+              alt={product.name}
+              width={968}
+              height={1}
+            />
+          )}
 
           {product.tableData && (
             <table className="single-table water-and-steam water-and-steam-inner">
