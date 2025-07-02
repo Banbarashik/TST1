@@ -92,6 +92,18 @@ export const categoryTree: Category[] = [
     slug: "parovy-kalorifery",
     children: [
       {
+        title: "Приточные паровые калориферы",
+        menuTitle: "Приточные паровые калориферы",
+        slug: "pritochny-parovy-kalorifery",
+        children: [
+          {
+            title: "Приточные калориферы КПСк",
+            menuTitle: "Приточные калориферы КПСк",
+            slug: "pritochny-kalorifery-kpsk",
+          },
+        ],
+      },
+      {
         title: "Калориферы КПСк",
         menuTitle: "Калориферы КПСк",
         slug: "kpsk",
