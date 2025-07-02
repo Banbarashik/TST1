@@ -2,6 +2,39 @@ import type { Product } from "@/types";
 
 export const productData: Product[] = [
   {
+    id: "kpsk-572x572",
+    name: "Приточный калорифер КПСк 572x572",
+    categories: [
+      "kalorifer",
+      "parovy-kalorifery",
+      "pritochny-parovy-kalorifery",
+      "pritochny-kalorifery-kpsk",
+    ],
+    airPower: 2500,
+    img: "/img/kalorifery/pritochny-kpsk/kalorifer_pritochnyi_parovoi_kpsk_572x572.png",
+    calculator: "/legacy/calculator-kpsk-572-572.html",
+    variants: [
+      {
+        id: "kpsk-572x572-2",
+        name: "Приточный калорифер КПСк 572x572_2",
+        heatPower: 35,
+        price: 13093,
+      },
+      {
+        id: "kpsk-572x572-3",
+        name: "Приточный калорифер КПСк 572x572_3",
+        heatPower: 46,
+        price: 17548,
+      },
+      {
+        id: "kpsk-572x572-4",
+        name: "Приточный калорифер КПСк 572x572_4",
+        heatPower: 53,
+        price: 21632,
+      },
+    ],
+  },
+  {
     id: "ksk-572x572",
     name: "Приточный калорифер КСк 572x572",
     categories: [
