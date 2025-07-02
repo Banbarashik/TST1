@@ -45,6 +45,8 @@ export const productData: Product[] = [
     ],
     airPower: 2500,
     img: "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_572x572.png",
+    drawing:
+      "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_chertez.png",
     calculator: "/legacy/calculator-ksk-572-572.html",
     variants: [
       {
