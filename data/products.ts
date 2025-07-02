@@ -1187,7 +1187,7 @@ export const productData: Product[] = [
     airPower: 2000,
     heatPower: 55,
     price: 16293,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1196,7 +1196,7 @@ export const productData: Product[] = [
     airPower: 2500,
     heatPower: 68,
     price: 20068,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1205,7 +1205,7 @@ export const productData: Product[] = [
     airPower: 3200,
     heatPower: 85,
     price: 24700,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1214,7 +1214,7 @@ export const productData: Product[] = [
     airPower: 4400,
     heatPower: 117,
     price: 31622,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1223,7 +1223,7 @@ export const productData: Product[] = [
     airPower: 5500,
     heatPower: 143,
     price: 33800,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1232,7 +1232,7 @@ export const productData: Product[] = [
     airPower: 6700,
     heatPower: 176,
     price: 40320,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1241,7 +1241,7 @@ export const productData: Product[] = [
     airPower: 8000,
     heatPower: 208,
     price: 45367,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1250,7 +1250,7 @@ export const productData: Product[] = [
     airPower: 9200,
     heatPower: 237,
     price: 50138,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1259,7 +1259,7 @@ export const productData: Product[] = [
     airPower: 10500,
     heatPower: 268,
     price: 54303,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1268,7 +1268,7 @@ export const productData: Product[] = [
     airPower: 12000,
     heatPower: 311,
     price: 61567,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1277,7 +1277,7 @@ export const productData: Product[] = [
     airPower: 13500,
     heatPower: 348,
     price: 68965,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1286,7 +1286,7 @@ export const productData: Product[] = [
     airPower: 16000,
     heatPower: 407,
     price: 76735,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1295,7 +1295,7 @@ export const productData: Product[] = [
     airPower: 18000,
     heatPower: 456,
     price: 84972,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a3"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a3-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   // КФБ п 2_14 А4
@@ -1305,7 +1305,7 @@ export const productData: Product[] = [
     airPower: 2000,
     heatPower: 59,
     price: 19339,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1314,7 +1314,7 @@ export const productData: Product[] = [
     airPower: 2500,
     heatPower: 75,
     price: 25238,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1323,7 +1323,7 @@ export const productData: Product[] = [
     airPower: 3200,
     heatPower: 95,
     price: 30838,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1332,7 +1332,7 @@ export const productData: Product[] = [
     airPower: 4400,
     heatPower: 127,
     price: 38343,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1341,7 +1341,7 @@ export const productData: Product[] = [
     airPower: 5500,
     heatPower: 155,
     price: 42231,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_2_6.png",
   },
   {
@@ -1350,7 +1350,7 @@ export const productData: Product[] = [
     airPower: 6700,
     heatPower: 193,
     price: 50498,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1359,7 +1359,7 @@ export const productData: Product[] = [
     airPower: 8000,
     heatPower: 226,
     price: 57446,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1368,7 +1368,7 @@ export const productData: Product[] = [
     airPower: 9200,
     heatPower: 261,
     price: 63158,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_7_9.png",
   },
   {
@@ -1377,7 +1377,7 @@ export const productData: Product[] = [
     airPower: 10500,
     heatPower: 298,
     price: 68792,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1386,7 +1386,7 @@ export const productData: Product[] = [
     airPower: 12000,
     heatPower: 340,
     price: 78600,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1395,7 +1395,7 @@ export const productData: Product[] = [
     airPower: 13500,
     heatPower: 380,
     price: 87817,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1404,7 +1404,7 @@ export const productData: Product[] = [
     airPower: 16000,
     heatPower: 446,
     price: 98049,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
   {
@@ -1413,7 +1413,7 @@ export const productData: Product[] = [
     airPower: 18000,
     heatPower: 500,
     price: 108367,
-    categories: ["kalorifer", "parovy-kalorifery", "kfb-p", "kfb-p-a4"],
+    categories: ["kalorifer", "parovy-kalorifery", "kfb-a-p", "kfb-a4-p"],
     img: "/img/kalorifery/kfb-p/kalorifer_kfb-p_10_14.png",
   },
 ];
