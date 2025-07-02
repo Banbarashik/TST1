@@ -87,16 +87,64 @@ export const categoryTree: Category[] = [
     ],
   },
   {
+    title: "Паровые калориферы",
     menuTitle: "Паровые калориферы",
     slug: "parovy-kalorifery",
     children: [
       {
+        title: "Калориферы КПСк",
         menuTitle: "Калориферы КПСк",
         slug: "kpsk",
         children: [
-          { menuTitle: "Двухрядные", slug: "kpsk-2" },
-          { menuTitle: "Трехрядные", slug: "kpsk-3" },
-          { menuTitle: "Четырехрядные", slug: "kpsk-4" },
+          {
+            title: "Двухрядные калориферы КПСк",
+            menuTitle: "Двухрядные",
+            slug: "kpsk-2",
+          },
+          {
+            title: "Трехрядные калориферы КПСк",
+            menuTitle: "Трехрядные",
+            slug: "kpsk-3",
+          },
+          {
+            title: "Четырехрядные калориферы КПСк",
+            menuTitle: "Четырехрядные",
+            slug: "kpsk-4",
+          },
+        ],
+      },
+      {
+        title: "Калориферы КП",
+        menuTitle: "Калориферы КП",
+        slug: "kp",
+        children: [
+          {
+            title: "Трехрядные калориферы КП",
+            menuTitle: "Трехрядные",
+            slug: "kp-3",
+          },
+          {
+            title: "Четырехрядные калориферы КП",
+            menuTitle: "Четырехрядные",
+            slug: "kp-4",
+          },
+        ],
+      },
+      {
+        title: "Калориферы КФБ-А",
+        menuTitle: "Калориферы КФБ-А",
+        slug: "kfb-a-p",
+        children: [
+          {
+            title: "Трехрядные калориферы КФБ-А",
+            menuTitle: "Трехрядные",
+            slug: "kfb-a3-p",
+          },
+          {
+            title: "Четырехрядные калориферы КФБ-А",
+            menuTitle: "Четырехрядные",
+            slug: "kfb-a4-p",
+          },
         ],
       },
     ],
