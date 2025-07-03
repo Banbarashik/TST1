@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
+import Link from "next/link";
 
 export async function generateMetadata({
   params,
@@ -33,7 +34,15 @@ export default async function ProductPage({
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold uppercase">{product.name}</h1>
+      <div className="mb-6 flex items-center justify-between">
+        <h1 className="text-2xl font-bold uppercase">{product.name}</h1>
+        <Link
+          href="#"
+          className="text-md bg-accent rounded-lg p-3 font-semibold"
+        >
+          Скачать 3D-модель
+        </Link>
+      </div>
       <p className="mb-10 text-lg">{product.textContent?.[0]}</p>
 
       {product.variants && product.variants.length > 0 ? (
