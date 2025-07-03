@@ -6,6 +6,7 @@ import Image from "next/image";
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export async function generateMetadata({
   params,
@@ -34,11 +35,11 @@ export default async function ProductPage({
 
   return (
     <div>
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-8 flex items-center justify-between">
         <h1 className="text-2xl font-bold uppercase">{product.name}</h1>
         <Link
           href="#"
-          className="text-md bg-accent rounded-lg p-3 font-semibold"
+          className="bg-accent rounded-md px-3 py-2 text-sm font-semibold"
         >
           Скачать 3D-модель
         </Link>
@@ -128,7 +129,17 @@ export default async function ProductPage({
           </tbody>
         </table>
       )}
-      <p className="text-lg">{product.textContent?.[2]}</p>
+      <p className="mb-10 border-b-[1px] border-black pb-6 text-lg">
+        {product.textContent?.[2]}
+      </p>
+      <div className="flex gap-6">
+        <Button className="text-md bg-gray-200 font-semibold text-black">
+          <Link href="#">Приточные водяные калориферы</Link>
+        </Button>
+        <Button className="text-md bg-gray-200 font-semibold text-black">
+          <Link href="#">Скачать каталог PDF</Link>
+        </Button>
+      </div>
     </div>
   );
 }
