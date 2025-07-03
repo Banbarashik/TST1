@@ -35,86 +35,23 @@ export default function ProductPage() {
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{product.name}</h1>
-      {product.textContent && <p>{product.textContent[0]}</p>}
+      <p>{product.textContent?.[0]}</p>
 
       {product.variants && product.variants.length > 0 ? (
-        <div>
-          <div className="mb-20 grid grid-cols-3 gap-5">
-            {product.variants.map(function (variant) {
-              return (
-                <ProductCard
-                  key={variant.id}
-                  isVariant
-                  product={{
-                    ...variant,
-                    airPower: product.airPower,
-                    img: product.img,
-                  }}
-                />
-              );
-            })}
-          </div>
-
-          <iframe
-            src={product.calculator}
-            title="Калькулятор калорифера"
-            style={{
-              width: "100%",
-              height: "800px", // adjust height as needed
-              border: "none",
-            }}
-          />
-
-          {product.drawing && (
-            <Image
-              src={product.drawing}
-              alt={product.name}
-              width={968}
-              height={1}
-            />
-          )}
-
-          {product.tableData && (
-            <table className="single-table water-and-steam water-and-steam-inner">
-              {product.tableData.caption && (
-                <caption>{product.tableData.caption}</caption>
-              )}
-              <thead>
-                {product.tableData.headers.map((row, i) => (
-                  <tr key={i}>
-                    {row.cells.map((cell, j) => (
-                      <th
-                        key={j}
-                        rowSpan={cell.rowspan}
-                        colSpan={cell.colspan}
-                        className={cell.className}
-                        style={cell.style}
-                      >
-                        {cell.content}
-                      </th>
-                    ))}
-                  </tr>
-                ))}
-              </thead>
-              <tbody>
-                {product.tableData.rows.map((row, i) => (
-                  <tr key={i}>
-                    {row.cells.map((cell, j) => (
-                      <td
-                        key={j}
-                        rowSpan={cell.rowspan}
-                        colSpan={cell.colspan}
-                        className={cell.className}
-                        style={cell.style}
-                      >
-                        {cell.content}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+        <div className="mb-20 grid grid-cols-3 gap-5">
+          {product.variants.map(function (variant) {
+            return (
+              <ProductCard
+                key={variant.id}
+                isVariant
+                product={{
+                  ...variant,
+                  airPower: product.airPower,
+                  img: product.img,
+                }}
+              />
+            );
+          })}
         </div>
       ) : (
         <div className="mt-4 flex items-center gap-4">
@@ -142,6 +79,69 @@ export default function ProductPage() {
           )}
         </div>
       )}
+
+      <h2>{product.headers?.[0]}</h2>
+      <p>{product.textContent?.[1]}</p>
+      <iframe
+        src={product.calculator}
+        title="Калькулятор калорифера"
+        style={{
+          width: "100%",
+          height: "800px", // adjust height as needed
+          border: "none",
+        }}
+      />
+      <h2>{product.headers?.[1]}</h2>
+      {product.drawing && (
+        <Image
+          src={product.drawing}
+          alt={product.name}
+          width={968}
+          height={1}
+        />
+      )}
+      {product.tableData && (
+        <table className="single-table water-and-steam water-and-steam-inner">
+          {product.tableData.caption && (
+            <caption>{product.tableData.caption}</caption>
+          )}
+          <thead>
+            {product.tableData.headers.map((row, i) => (
+              <tr key={i}>
+                {row.cells.map((cell, j) => (
+                  <th
+                    key={j}
+                    rowSpan={cell.rowspan}
+                    colSpan={cell.colspan}
+                    className={cell.className}
+                    style={cell.style}
+                  >
+                    {cell.content}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {product.tableData.rows.map((row, i) => (
+              <tr key={i}>
+                {row.cells.map((cell, j) => (
+                  <td
+                    key={j}
+                    rowSpan={cell.rowspan}
+                    colSpan={cell.colspan}
+                    className={cell.className}
+                    style={cell.style}
+                  >
+                    {cell.content}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      {product.textContent?.[2]}
     </div>
   );
 }

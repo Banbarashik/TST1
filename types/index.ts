@@ -16,6 +16,7 @@ export type Product = {
   img?: string;
   drawing?: string;
   calculator?: string;
+  headers?: string[];
   textContent?: string[];
   tableData?: ProductTableData;
   variants?: Product[];
