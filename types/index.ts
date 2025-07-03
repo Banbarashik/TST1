@@ -16,6 +16,11 @@ export type Product = {
   img?: string;
   drawing?: string;
   calculator?: string;
+  metadata?: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   headers?: string[];
   textContent?: string[];
   tableData?: ProductTableData;
