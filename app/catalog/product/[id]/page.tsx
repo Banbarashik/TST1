@@ -34,10 +34,10 @@ export default async function ProductPage({
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{product.name}</h1>
-      <p>{product.textContent?.[0]}</p>
+      <p className="mb-10 text-lg">{product.textContent?.[0]}</p>
 
       {product.variants && product.variants.length > 0 ? (
-        <div className="mb-20 grid grid-cols-3 gap-5">
+        <div className="mb-16 grid grid-cols-3 gap-5">
           {product.variants.map(function (variant) {
             return (
               <ProductCard
@@ -56,28 +56,30 @@ export default async function ProductPage({
         <ProductRequestControls product={product} />
       )}
 
-      <h2>{product.headers?.[0]}</h2>
-      <p>{product.textContent?.[1]}</p>
+      <h2 className="mb-6 text-2xl">{product.headers?.[0]}</h2>
+      <p className="mb-10 text-lg">{product.textContent?.[1]}</p>
       <iframe
         src={product.calculator}
         title="Калькулятор калорифера"
         style={{
           width: "100%",
-          height: "800px", // adjust height as needed
+          height: "690px", // adjust height as needed
           border: "none",
         }}
+        className="mb-16"
       />
-      <h2>{product.headers?.[1]}</h2>
+      <h2 className="mb-6 text-2xl">{product.headers?.[1]}</h2>
       {product.drawing && (
         <Image
           src={product.drawing}
           alt={product.name}
           width={968}
           height={1}
+          className="mb-10"
         />
       )}
       {product.tableData && (
-        <table className="single-table water-and-steam water-and-steam-inner">
+        <table className="single-table water-and-steam water-and-steam-inner mb-10">
           {product.tableData.caption && (
             <caption>{product.tableData.caption}</caption>
           )}
@@ -117,7 +119,7 @@ export default async function ProductPage({
           </tbody>
         </table>
       )}
-      {product.textContent?.[2]}
+      <p className="text-lg">{product.textContent?.[2]}</p>
     </div>
   );
 }
