@@ -1,9 +1,25 @@
 import { productData } from "@/data/products";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product = productData.find((p) => p.id === id);
+
+  return {
+    title: product?.metadata.title,
+    description: product?.metadata.description,
+    keywords: product?.metadata.keywords,
+  };
+}
 
 export default async function ProductPage({
   params,
