@@ -73,7 +73,7 @@ export default async function ProductPage({
         title="Калькулятор калорифера"
         style={{
           width: "100%",
-          height: "690px", // adjust height as needed
+          height: "697px", // adjust height as needed
           border: "none",
         }}
         className="mb-16"
