@@ -17,9 +17,9 @@ export async function generateMetadata({
   const product = productData.find((p) => p.id === id);
 
   return {
-    title: product?.metadata.title,
-    description: product?.metadata.description,
-    keywords: product?.metadata.keywords,
+    title: product?.metadata?.title,
+    description: product?.metadata?.description,
+    keywords: product?.metadata?.keywords,
   };
 }
 

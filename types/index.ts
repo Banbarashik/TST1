@@ -16,7 +16,7 @@ export type Product = {
   img?: string;
   drawing?: string;
   calculator?: string;
-  metadata: {
+  metadata?: {
     title: string;
     description: string;
     keywords: string;
