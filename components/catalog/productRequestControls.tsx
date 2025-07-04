@@ -26,7 +26,9 @@ export default function ProductRequestControls({
 
   const handleAddOrRemove = () => {
     if (!isMounted) return;
-    isSelected ? remove(product.id) : add(product.id);
+
+    if (isSelected) remove(product.id);
+    else add(product.id);
   };
 
   return (

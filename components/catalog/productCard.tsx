@@ -80,7 +80,9 @@ export default function ProductCard({
             onClick={(e) => {
               e.preventDefault();
               if (!isMounted) return;
-              isSelected ? remove(product.id) : add(product.id);
+
+              if (isSelected) remove(product.id);
+              else add(product.id);
             }}
           >
             {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}

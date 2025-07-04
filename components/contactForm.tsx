@@ -50,13 +50,8 @@ const formSchema = z.object({
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
 }) {
-  // 1. Always call both hooks at the top level
-  let context;
-  try {
-    context = useProductSelection();
-  } catch {
-    context = undefined;
-  }
+  const context = useProductSelection();
+
   const [localSelectedProducts, setLocalSelectedProducts] = React.useState<
     SelectedProduct[]
   >([]);
@@ -141,7 +136,7 @@ export default function ContactForm({
   }, [form, outOfContext]);
 
   // 7. Handle form submission
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(/* values: z.infer<typeof formSchema> */) {
     // Map product IDs to product names
     /* const selectedProducts = products.filter((p) =>
       values.product.includes(p.id),
@@ -224,7 +219,7 @@ export default function ContactForm({
             <FormField
               control={form.control}
               name="products"
-              render={({ field }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel>Интересующие товары</FormLabel>
                   <FormControl>
