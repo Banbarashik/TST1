@@ -28,21 +28,25 @@ export type Product = {
   headers: string[];
   textContent: string[];
   tableData?: ProductTableData;
-  variants?: Product[];
+  variants?: ProductVariant[];
 };
 
 type ProductVariant = Omit<
   Product,
   | "variants"
+  | "categories"
   | "nextProduct"
   | "airPower"
+  | "img"
   | "drawing"
   | "calculator"
   | "metadata"
   | "headers"
   | "textContent"
   | "tableData"
->;
+> & {
+  img?: string;
+};
 
 export type SelectedProduct = {
   id: string;

@@ -4,6 +4,26 @@ export const productData: Product[] = [
   {
     id: "kpvs-572x572",
     name: "Калорифер КПВС-572×572 водяной",
+    variants: [
+      {
+        id: "kpvs-572x572-2",
+        name: "Приточный калорифер КПВС 572x572_2",
+        heatPower: 26,
+        price: 13093,
+      },
+      {
+        id: "kpvs-572x572-3",
+        name: "Приточный калорифер КПВС 572x572_3",
+        heatPower: 34,
+        price: 17548,
+      },
+      {
+        id: "kpvs-572x572-4",
+        name: "Приточный калорифер КПВС 572x572_4",
+        heatPower: 40,
+        price: 21632,
+      },
+    ],
     categories: [
       "kalorifer",
       "vodiany-kalorifery",
@@ -15,10 +35,6 @@ export const productData: Product[] = [
       name: "КПВС-614х614",
     },
     airPower: 2500,
-    img: "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_572x572.png",
-    drawing:
-      "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_chertez.png",
-    calculator: "/legacy/calculator-ksk-572-572.html",
     metadata: {
       title: "Калорифер приточный КПВС-572x572",
       description:
@@ -26,6 +42,10 @@ export const productData: Product[] = [
       keywords:
         "калорифер 572 572,калорифер кпвс 572 572,калорифер водяной 572 572,калорифер водяной кпвс 572 572,калорифер приточный 572 572,калорифер водяной приточный 572 572,калорифер 572 572 технические характеристики,калорифер кпвс 572 572 расчет и подбор,приточный калорифер 572 572 производительность по воздуху 2500,водяной калорифер 500 500",
     },
+    img: "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_572x572.png",
+    drawing:
+      "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_chertez.png",
+    calculator: "/legacy/calculator-ksk-572-572.html",
     headers: [
       "Калькулятор подбора калорифера КПВС 572х572",
       "Технические характеристики КПВС 572х572",
@@ -137,26 +157,6 @@ export const productData: Product[] = [
         },
       ],
     },
-    variants: [
-      {
-        id: "kpvs-572x572-2",
-        name: "Приточный калорифер КПВС 572x572_2",
-        heatPower: 26,
-        price: 13093,
-      },
-      {
-        id: "kpvs-572x572-3",
-        name: "Приточный калорифер КПВС 572x572_3",
-        heatPower: 34,
-        price: 17548,
-      },
-      {
-        id: "kpvs-572x572-4",
-        name: "Приточный калорифер КПВС 572x572_4",
-        heatPower: 40,
-        price: 21632,
-      },
-    ],
   },
   {
     id: "kpsk-572x572",
