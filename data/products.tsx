@@ -35,7 +35,7 @@ export const productData: Product[] = [
         модели КПВС 572х572 (двух, трех и четырех рядной) нужно перейти к
         следующему номеру водяного калорифера:{" "}
         <Link
-          href="/ksk-614x614"
+          href="/kpvs-614x614"
           className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
         >
           КПВС-614х614

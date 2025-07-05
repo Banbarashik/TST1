@@ -58,7 +58,7 @@ export default function ProductCard({
         Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
         {product.heatPower && product.heatPower + " кВт"}
       </p>
-      {!product.heatPower && (
+      {product.variants && (
         <p>
           {product.variants?.map((variant) => variant.heatPower).join(", ")} кВт
         </p>
