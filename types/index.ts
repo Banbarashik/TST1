@@ -22,7 +22,7 @@ export type Product = {
     keywords: string;
   };
   headers?: string[];
-  textContent?: string[];
+  textContent?: React.ReactNode[];
   tableData?: ProductTableData;
   variants?: Product[];
 };

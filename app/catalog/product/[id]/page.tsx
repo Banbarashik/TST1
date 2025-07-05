@@ -44,10 +44,10 @@ export default async function ProductPage({
           Скачать 3D-модель
         </Link>
       </div>
-      <p className="mb-10 text-lg">{product.textContent?.[0]}</p>
+      <p className="mb-6 text-lg">{product.textContent?.[0]}</p>
 
       {product.variants && product.variants.length > 0 ? (
-        <div className="mb-16 grid grid-cols-3 gap-5">
+        <div className="mb-12 grid grid-cols-3 gap-5">
           {product.variants.map(function (variant) {
             return (
               <ProductCard
@@ -66,8 +66,8 @@ export default async function ProductPage({
         <ProductRequestControls product={product} />
       )}
 
-      <h2 className="mb-6 text-2xl">{product.headers?.[0]}</h2>
-      <p className="mb-10 text-lg">{product.textContent?.[1]}</p>
+      <h2 className="mb-4 text-2xl">{product.headers?.[0]}</h2>
+      <p className="mb-2.5 text-lg">{product.textContent?.[1]}</p>
       <iframe
         src={product.calculator}
         title="Калькулятор калорифера"
@@ -76,20 +76,12 @@ export default async function ProductPage({
           height: "697px", // adjust height as needed
           border: "none",
         }}
-        className="mb-16"
+        className="mb-0.5"
       />
+      {product.textContent?.[2]}
       <h2 className="mb-6 text-2xl">{product.headers?.[1]}</h2>
-      {product.drawing && (
-        <Image
-          src={product.drawing}
-          alt={product.name}
-          width={968}
-          height={1}
-          className="mb-10"
-        />
-      )}
       {product.tableData && (
-        <table className="single-table water-and-steam water-and-steam-inner mb-10">
+        <table className="single-table water-and-steam water-and-steam-inner mb-1">
           {product.tableData.caption && (
             <caption>{product.tableData.caption}</caption>
           )}
@@ -129,17 +121,28 @@ export default async function ProductPage({
           </tbody>
         </table>
       )}
-      <p className="mb-10 border-b-[1px] border-black pb-6 text-lg">
-        {product.textContent?.[2]}
-      </p>
-      <div className="flex gap-6">
-        <Button className="text-md bg-gray-200 font-semibold text-black">
+      {product.drawing && (
+        <Image
+          src={product.drawing}
+          alt={product.name}
+          width={968}
+          height={1}
+          className="mb-10"
+        />
+      )}
+
+      <div className="flex h-12 w-full gap-6">
+        <Button className="text-md h-full flex-1/2 bg-gray-300 font-semibold text-black">
           <Link href="#">Приточные водяные калориферы</Link>
         </Button>
-        <Button className="text-md bg-gray-200 font-semibold text-black">
+        <Button className="text-md h-full flex-1/2 bg-gray-300 font-semibold text-black">
           <Link href="#">Скачать каталог PDF</Link>
         </Button>
       </div>
+
+      <Button size="xl" className="fixed bottom-[200px] left-[100px]">
+        Задать вопрос
+      </Button>
     </div>
   );
 }

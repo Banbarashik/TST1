@@ -1,42 +1,10 @@
 import type { Product } from "@/types";
+import Link from "next/link";
 
 export const productData: Product[] = [
   {
-    id: "kpsk-572x572",
-    name: "Приточный калорифер КПСк 572x572",
-    categories: [
-      "kalorifer",
-      "parovy-kalorifery",
-      "pritochny-parovy-kalorifery",
-      "pritochny-kalorifery-kpsk",
-    ],
-    airPower: 2500,
-    img: "/img/kalorifery/pritochny-kpsk/kalorifer_pritochnyi_parovoi_kpsk_572x572.png",
-    calculator: "/legacy/calculator-kpsk-572-572.html",
-    variants: [
-      {
-        id: "kpsk-572x572-2",
-        name: "Приточный калорифер КПСк 572x572_2",
-        heatPower: 35,
-        price: 13093,
-      },
-      {
-        id: "kpsk-572x572-3",
-        name: "Приточный калорифер КПСк 572x572_3",
-        heatPower: 46,
-        price: 17548,
-      },
-      {
-        id: "kpsk-572x572-4",
-        name: "Приточный калорифер КПСк 572x572_4",
-        heatPower: 53,
-        price: 21632,
-      },
-    ],
-  },
-  {
     id: "ksk-572x572",
-    name: "Калорифер КСк-572*572 водяной",
+    name: "Калорифер КСк-572×572 водяной",
     categories: [
       "kalorifer",
       "vodiany-kalorifery",
@@ -49,7 +17,7 @@ export const productData: Product[] = [
       "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_chertez.png",
     calculator: "/legacy/calculator-ksk-572-572.html",
     metadata: {
-      title: "Калорифер приточный КСк-572*572",
+      title: "Калорифер приточный КСк-572x572",
       description:
         "Приточный водяной калорифер КСК 572x572 производительностью по воздуху 2500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
       keywords:
@@ -60,9 +28,19 @@ export const productData: Product[] = [
       "Технические характеристики КСк 572х572",
     ],
     textContent: [
-      "Приточный водяной калорифер КСК-572*572 выпускается в двух, трех и четырех рядном исполнении. Номинальная производительность по воздуху – 2500 метров кубических в час, тепловая мощность варьируется в зависимости от рядности калорифера КСК-572*572 и параметров эксплуатации.",
+      "Приточный водяной калорифер КСК-572x572 выпускается в двух, трех и четырех рядном исполнении. Номинальная производительность по воздуху – 2500 метров кубических в час, тепловая мощность варьируется в зависимости от рядности калорифера КСК-572x572 и параметров эксплуатации.",
       "Синие поля обязательны для заполнения. Запас площади поверхности нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с. Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с.",
-      "Если запас площади поверхности теплообмена не достаточен ни для одной модели приточного калорифера (двух, трех и четырех рядной) нужно перейти к следующему номеру водяного воздухонагревателя: КСК-614х614",
+      <p className="mb-10 text-lg">
+        Если запас площади поверхности теплообмена не достаточен ни для одной
+        модели приточного калорифера (двух, трех и четырех рядной) нужно перейти
+        к следующему номеру водяного воздухонагревателя:{" "}
+        <Link
+          href="/ksk-614x614"
+          className="text-primary-dark outline-primary-dark rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+        >
+          КСК-614х614
+        </Link>
+      </p>,
     ],
     tableData: {
       headers: [
@@ -183,6 +161,39 @@ export const productData: Product[] = [
         id: "ksk-572x572-4",
         name: "Приточный калорифер КСк 572x572_4",
         heatPower: 40,
+        price: 21632,
+      },
+    ],
+  },
+  {
+    id: "kpsk-572x572",
+    name: "Приточный калорифер КПСк 572x572",
+    categories: [
+      "kalorifer",
+      "parovy-kalorifery",
+      "pritochny-parovy-kalorifery",
+      "pritochny-kalorifery-kpsk",
+    ],
+    airPower: 2500,
+    img: "/img/kalorifery/pritochny-kpsk/kalorifer_pritochnyi_parovoi_kpsk_572x572.png",
+    calculator: "/legacy/calculator-kpsk-572-572.html",
+    variants: [
+      {
+        id: "kpsk-572x572-2",
+        name: "Приточный калорифер КПСк 572x572_2",
+        heatPower: 35,
+        price: 13093,
+      },
+      {
+        id: "kpsk-572x572-3",
+        name: "Приточный калорифер КПСк 572x572_3",
+        heatPower: 46,
+        price: 17548,
+      },
+      {
+        id: "kpsk-572x572-4",
+        name: "Приточный калорифер КПСк 572x572_4",
+        heatPower: 53,
         price: 21632,
       },
     ],
