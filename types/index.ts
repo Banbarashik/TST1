@@ -34,7 +34,7 @@ export type KPVSProduct = Product & {
   calculator: string;
 };
 
-type ProductVariant = Omit<
+export type ProductVariant = Omit<
   Product,
   | "variants"
   | "categories"

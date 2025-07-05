@@ -45,7 +45,6 @@ export default async function ProductPage({
         </Link>
       </div>
       <p className="mb-6 text-lg">{product.textContent?.[0]}</p>
-
       {product.variants && product.variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">
           {product.variants.map(function (variant) {
@@ -65,19 +64,20 @@ export default async function ProductPage({
       ) : (
         <ProductRequestControls product={product} />
       )}
-
       <h2 className="mb-4 text-2xl">{product.headers?.[0]}</h2>
       <p className="mb-2.5 text-lg">{product.textContent?.[1]}</p>
-      <iframe
-        src={product.calculator}
-        title="Калькулятор калорифера"
-        style={{
-          width: "100%",
-          height: "697px", // adjust height as needed
-          border: "none",
-        }}
-        className="mb-0.5"
-      />
+      {"calculator" in product && product.calculator && (
+        <iframe
+          src={product.calculator}
+          title="Калькулятор калорифера"
+          style={{
+            width: "100%",
+            height: "697px",
+            border: "none",
+          }}
+          className="mb-0.5"
+        />
+      )}
       <p className="mb-10 text-lg">
         {product.textContent?.[2]}
         {product.nextProduct && (

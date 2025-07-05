@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import { Product } from "@/types";
+import type { Product, ProductVariant } from "@/types";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
@@ -15,7 +15,7 @@ export default function ProductCard({
   product,
   isVariant = false,
 }: {
-  product: Product;
+  product: Product | ProductVariant;
   isVariant?: boolean;
 }) {
   const { selected, add, remove, setAmount } = useProductSelection();
