@@ -88,6 +88,15 @@ export default async function ProductPage({
             {product.nextProduct.name}
           </Link>
         )}
+        {product.textContent[3]}
+        {product.prevProduct && (
+          <Link
+            href={product.prevProduct.slug}
+            className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+          >
+            {product.prevProduct.name}
+          </Link>
+        )}
       </p>
       <h2 className="mb-6 text-2xl">{product.headers?.[1]}</h2>
       {product.tableData && (
