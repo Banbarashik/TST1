@@ -9,6 +9,7 @@ export type Category = {
 export type Product = {
   id: string;
   name: string;
+  variants?: ProductVariant[];
   categories: string[];
   nextProduct?: {
     slug: string;
@@ -18,8 +19,7 @@ export type Product = {
   heatPower?: number;
   price?: number;
   img: string;
-  drawing?: string;
-  calculator?: string;
+  drawing: string;
   metadata: {
     title: string;
     description: string;
@@ -28,7 +28,10 @@ export type Product = {
   headers: string[];
   textContent: string[];
   tableData?: ProductTableData;
-  variants?: ProductVariant[];
+};
+
+export type KPVSProduct = Product & {
+  calculator: string;
 };
 
 type ProductVariant = Omit<
