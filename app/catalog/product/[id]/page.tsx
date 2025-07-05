@@ -78,7 +78,15 @@ export default async function ProductPage({
         }}
         className="mb-0.5"
       />
-      {product.textContent?.[2]}
+      <p className="mb-10 text-lg">
+        {product.textContent?.[2]}
+        <Link
+          href={product.nextProduct.slug}
+          className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+        >
+          {product.nextProduct.name}
+        </Link>
+      </p>
       <h2 className="mb-6 text-2xl">{product.headers?.[1]}</h2>
       {product.tableData && (
         <table className="single-table water-and-steam water-and-steam-inner mb-1">

@@ -10,6 +10,10 @@ export type Product = {
   id: string;
   name: string;
   categories?: string[];
+  nextProduct: {
+    slug: string;
+    name: string;
+  };
   airPower?: number;
   heatPower?: number;
   price?: number;
@@ -22,7 +26,7 @@ export type Product = {
     keywords: string;
   };
   headers?: string[];
-  textContent?: React.ReactNode[];
+  textContent?: string[];
   tableData?: ProductTableData;
   variants?: Product[];
 };
