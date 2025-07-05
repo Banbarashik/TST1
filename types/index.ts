@@ -31,6 +31,19 @@ export type Product = {
   variants?: Product[];
 };
 
+type ProductVariant = Omit<
+  Product,
+  | "variants"
+  | "nextProduct"
+  | "airPower"
+  | "drawing"
+  | "calculator"
+  | "metadata"
+  | "headers"
+  | "textContent"
+  | "tableData"
+>;
+
 export type SelectedProduct = {
   id: string;
   amount: number;
