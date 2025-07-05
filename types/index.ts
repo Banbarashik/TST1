@@ -10,7 +10,7 @@ export type Product = {
   id: string;
   name: string;
   categories?: string[];
-  nextProduct: {
+  nextProduct?: {
     slug: string;
     name: string;
   };
