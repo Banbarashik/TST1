@@ -9,24 +9,24 @@ export type Category = {
 export type Product = {
   id: string;
   name: string;
-  categories?: string[];
+  categories: string[];
   nextProduct?: {
     slug: string;
     name: string;
   };
-  airPower?: number;
+  airPower: number;
   heatPower?: number;
   price?: number;
-  img?: string;
+  img: string;
   drawing?: string;
   calculator?: string;
-  metadata?: {
+  metadata: {
     title: string;
     description: string;
     keywords: string;
   };
-  headers?: string[];
-  textContent?: string[];
+  headers: string[];
+  textContent: string[];
   tableData?: ProductTableData;
   variants?: Product[];
 };
