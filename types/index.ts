@@ -11,6 +11,10 @@ export type Product = {
   name: string;
   variants?: ProductVariant[];
   categories: string[];
+  prevProduct?: {
+    slug: string;
+    name: string;
+  };
   nextProduct?: {
     slug: string;
     name: string;
