@@ -47,6 +47,7 @@
   /* BRAND COLORS */
   --primary: #e4572e; /* Heating orange-red */
   --primary-dark: #c74f2b;
+  --primary-darker: #bd4b28;
   --primary-foreground: #fff; /* White text on primary */
   --secondary: #232f34; /* Industrial blue-gray */
   --secondary-foreground: #fff; /* White text on secondary */
@@ -92,6 +93,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-darker: var(--primary-darker);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);

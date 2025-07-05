@@ -12,13 +12,13 @@ export const categoryTree: Category[] = [
         slug: "pritochny-vodiany-kalorifery",
         children: [
           {
-            title: "Приточные калориферы КСк",
-            menuTitle: "Приточные калориферы КСк",
+            title: "Приточные калориферы КПВС",
+            menuTitle: "Приточные калориферы КПВС",
             slug: "pritochny-kalorifery-ksk",
           },
           {
-            title: "Приточные калориферы ТВВ",
-            menuTitle: "Приточные калориферы ТВВ",
+            title: "Приточные калориферы КПВУ",
+            menuTitle: "Приточные калориферы КПВУ",
             slug: "pritochny-kalorifery-tvv",
           },
         ],

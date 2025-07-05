@@ -54,15 +54,16 @@ export default function ProductCard({
           <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
         </Link>
       )}
-      <p className="mb-1">
+      <p>
         Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
-        {product.heatPower
-          ? product.heatPower
-          : product.variants
-              ?.map((variant) => variant.heatPower)
-              .join(", ")}{" "}
-        кВт
+        {product.heatPower && product.heatPower + " кВт"}
       </p>
+      {!product.heatPower && (
+        <p>
+          {product.variants?.map((variant) => variant.heatPower).join(", ")} кВт
+        </p>
+      )}
+
       {product.price && (
         <p className="text-gray-600">
           {product.price.toLocaleString("ru-RU")} руб. с НДС
