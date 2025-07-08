@@ -72,7 +72,7 @@ export default function ProductCard({
       <div className="mt-2 flex items-center justify-between">
         {hasVariants ? (
           <Button asChild className="ml-auto bg-[#6c51a2] hover:bg-[#8b68d2]">
-            <Link href={`product/${product.id}`}>Подобрать</Link>
+            <Link href={`/${product.id}`}>Подобрать</Link>
           </Button>
         ) : (
           <Button
