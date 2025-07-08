@@ -61,7 +61,7 @@ function RecursiveAccordion({
                 style={{ paddingLeft }}
               >
                 <Link
-                  href={`/catalog/${node.slug}`}
+                  href={`/${node.slug}`}
                   className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
                 >
                   {node.menuTitle}
@@ -79,7 +79,7 @@ function RecursiveAccordion({
         ) : (
           <div key={node.slug}>
             <Link
-              href={`/catalog/${node.slug}`}
+              href={`/${node.slug}`}
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
               style={{ paddingLeft }}
             >
