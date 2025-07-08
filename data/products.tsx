@@ -29,7 +29,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -185,7 +185,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -345,7 +345,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -505,7 +505,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -665,7 +665,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -825,7 +825,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -985,7 +985,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1145,7 +1145,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1305,7 +1305,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1465,7 +1465,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1625,7 +1625,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1785,7 +1785,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -1945,7 +1945,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2105,7 +2105,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2276,7 +2276,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2447,7 +2447,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2618,7 +2618,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2789,7 +2789,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -2960,7 +2960,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3131,7 +3131,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3302,7 +3302,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3473,7 +3473,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3644,7 +3644,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3815,7 +3815,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     // конец (оставляй как есть)
     prevProduct: {
@@ -3985,7 +3985,7 @@ export const productData: (Product | KPVSProduct)[] = [
       "kalorifer",
       "vodiany-kalorifery",
       "pritochny-vodiany-kalorifery",
-      "pritochny-kalorifery-ksk",
+      "kpvs",
     ],
     nextProduct: {
       slug: "kpvs-614x614",
