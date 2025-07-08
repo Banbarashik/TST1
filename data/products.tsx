@@ -58,104 +58,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 25000 }, // Производительность по воздуху
-            { content: 1500 }, // L H
-            { content: 1548 }, // L1 H1
-            { content: 1572 }, // L2 H2
-            { content: 1637 }, // L3
-            { content: 1402 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 62.6 }, // КПВС2
-            { content: 94.4 }, // КПВС3
-            { content: 125.3 }, // КПВС4
-            { content: 170 }, // КПВС2
-            { content: 230 }, // КПВС3
-            { content: 287 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 25000 }, // Производительность по воздуху
+              { content: 1500 }, // L H
+              { content: 1548 }, // L1 H1
+              { content: 1572 }, // L2 H2
+              { content: 1637 }, // L3
+              { content: 1402 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 62.6 }, // КПВС2
+              { content: 94.4 }, // КПВС3
+              { content: 125.3 }, // КПВС4
+              { content: 170 }, // КПВС2
+              { content: 230 }, // КПВС3
+              { content: 287 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1530x1530",
@@ -218,104 +220,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 23000 }, // Производительность по воздуху
-            { content: 1458 }, // L H
-            { content: 1506 }, // L1 H1
-            { content: 1530 }, // L2 H2
-            { content: 1595 }, // L3
-            { content: 1360 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 59.2 }, // КПВС2
-            { content: 89.2 }, // КПВС3
-            { content: 118.4 }, // КПВС4
-            { content: 163 }, // КПВС2
-            { content: 219 }, // КПВС3
-            { content: 273 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 23000 }, // Производительность по воздуху
+              { content: 1458 }, // L H
+              { content: 1506 }, // L1 H1
+              { content: 1530 }, // L2 H2
+              { content: 1595 }, // L3
+              { content: 1360 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 59.2 }, // КПВС2
+              { content: 89.2 }, // КПВС3
+              { content: 118.4 }, // КПВС4
+              { content: 163 }, // КПВС2
+              { content: 219 }, // КПВС3
+              { content: 273 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1489x1489",
@@ -378,104 +382,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 22000 }, // Производительность по воздуху
-            { content: 1417 }, // L H
-            { content: 1465 }, // L1 H1
-            { content: 1489 }, // L2 H2
-            { content: 1554 }, // L3
-            { content: 1319 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 55.8 }, // КПВС2
-            { content: 84.2 }, // КПВС3
-            { content: 111.8 }, // КПВС4
-            { content: 154 }, // КПВС2
-            { content: 207 }, // КПВС3
-            { content: 259 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 22000 }, // Производительность по воздуху
+              { content: 1417 }, // L H
+              { content: 1465 }, // L1 H1
+              { content: 1489 }, // L2 H2
+              { content: 1554 }, // L3
+              { content: 1319 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 55.8 }, // КПВС2
+              { content: 84.2 }, // КПВС3
+              { content: 111.8 }, // КПВС4
+              { content: 154 }, // КПВС2
+              { content: 207 }, // КПВС3
+              { content: 259 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1447x1447",
@@ -538,104 +544,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 21000 }, // Производительность по воздуху
-            { content: 1375 }, // L H
-            { content: 1423 }, // L1 H1
-            { content: 1447 }, // L2 H2
-            { content: 1512 }, // L3
-            { content: 1277 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 52.6 }, // КПВС2
-            { content: 79.3 }, // КПВС3
-            { content: 105.2 }, // КПВС4
-            { content: 147 }, // КПВС2
-            { content: 197 }, // КПВС3
-            { content: 246 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 21000 }, // Производительность по воздуху
+              { content: 1375 }, // L H
+              { content: 1423 }, // L1 H1
+              { content: 1447 }, // L2 H2
+              { content: 1512 }, // L3
+              { content: 1277 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 52.6 }, // КПВС2
+              { content: 79.3 }, // КПВС3
+              { content: 105.2 }, // КПВС4
+              { content: 147 }, // КПВС2
+              { content: 197 }, // КПВС3
+              { content: 246 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1405x1405",
@@ -698,104 +706,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 20000 }, // Производительность по воздуху
-            { content: 1333 }, // L H
-            { content: 1381 }, // L1 H1
-            { content: 1405 }, // L2 H2
-            { content: 1470 }, // L3
-            { content: 1235 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 49.4 }, // КПВС2
-            { content: 74.6 }, // КПВС3
-            { content: 98.9 }, // КПВС4
-            { content: 139 }, // КПВС2
-            { content: 186 }, // КПВС3
-            { content: 232 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 20000 }, // Производительность по воздуху
+              { content: 1333 }, // L H
+              { content: 1381 }, // L1 H1
+              { content: 1405 }, // L2 H2
+              { content: 1470 }, // L3
+              { content: 1235 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 49.4 }, // КПВС2
+              { content: 74.6 }, // КПВС3
+              { content: 98.9 }, // КПВС4
+              { content: 139 }, // КПВС2
+              { content: 186 }, // КПВС3
+              { content: 232 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1364x1364",
@@ -858,104 +868,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 19000 }, // Производительность по воздуху
-            { content: 1292 }, // L H
-            { content: 1340 }, // L1 H1
-            { content: 1364 }, // L2 H2
-            { content: 1429 }, // L3
-            { content: 1194 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 46.4 }, // КПВС2
-            { content: "70.0" }, // КПВС3
-            { content: 92.8 }, // КПВС4
-            { content: 133 }, // КПВС2
-            { content: 177 }, // КПВС3
-            { content: 219 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 19000 }, // Производительность по воздуху
+              { content: 1292 }, // L H
+              { content: 1340 }, // L1 H1
+              { content: 1364 }, // L2 H2
+              { content: 1429 }, // L3
+              { content: 1194 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 46.4 }, // КПВС2
+              { content: "70.0" }, // КПВС3
+              { content: 92.8 }, // КПВС4
+              { content: 133 }, // КПВС2
+              { content: 177 }, // КПВС3
+              { content: 219 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1322x1322",
@@ -1018,104 +1030,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 18000 }, // Производительность по воздуху
-            { content: 1250 }, // L H
-            { content: 1298 }, // L1 H1
-            { content: 1322 }, // L2 H2
-            { content: 1387 }, // L3
-            { content: 1152 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 43.4 }, // КПВС2
-            { content: 65.5 }, // КПВС3
-            { content: 86.9 }, // КПВС4
-            { content: 125 }, // КПВС2
-            { content: 166 }, // КПВС3
-            { content: 206 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 18000 }, // Производительность по воздуху
+              { content: 1250 }, // L H
+              { content: 1298 }, // L1 H1
+              { content: 1322 }, // L2 H2
+              { content: 1387 }, // L3
+              { content: 1152 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 43.4 }, // КПВС2
+              { content: 65.5 }, // КПВС3
+              { content: 86.9 }, // КПВС4
+              { content: 125 }, // КПВС2
+              { content: 166 }, // КПВС3
+              { content: 206 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1280x1280",
@@ -1178,104 +1192,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 17000 }, // Производительность по воздуху
-            { content: 1208 }, // L H
-            { content: 1256 }, // L1 H1
-            { content: 1280 }, // L2 H2
-            { content: 1345 }, // L3
-            { content: 1110 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 40.6 }, // КПВС2
-            { content: 61.2 }, // КПВС3
-            { content: 81.1 }, // КПВС4
-            { content: 119 }, // КПВС2
-            { content: 157 }, // КПВС3
-            { content: 194 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 17000 }, // Производительность по воздуху
+              { content: 1208 }, // L H
+              { content: 1256 }, // L1 H1
+              { content: 1280 }, // L2 H2
+              { content: 1345 }, // L3
+              { content: 1110 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 40.6 }, // КПВС2
+              { content: 61.2 }, // КПВС3
+              { content: 81.1 }, // КПВС4
+              { content: 119 }, // КПВС2
+              { content: 157 }, // КПВС3
+              { content: 194 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1239x1239",
@@ -1338,104 +1354,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 16000 }, // Производительность по воздуху
-            { content: 1167 }, // L H
-            { content: 1215 }, // L1 H1
-            { content: 1239 }, // L2 H2
-            { content: 1304 }, // L3
-            { content: 1069 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 37.8 }, // КПВС2
-            { content: "57.0" }, // КПВС3
-            { content: 75.6 }, // КПВС4
-            { content: 112 }, // КПВС2
-            { content: 148 }, // КПВС3
-            { content: 182 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 16000 }, // Производительность по воздуху
+              { content: 1167 }, // L H
+              { content: 1215 }, // L1 H1
+              { content: 1239 }, // L2 H2
+              { content: 1304 }, // L3
+              { content: 1069 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 37.8 }, // КПВС2
+              { content: "57.0" }, // КПВС3
+              { content: 75.6 }, // КПВС4
+              { content: 112 }, // КПВС2
+              { content: 148 }, // КПВС3
+              { content: 182 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1197x1197",
@@ -1498,104 +1516,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 15000 }, // Производительность по воздуху
-            { content: 1125 }, // L H
-            { content: 1173 }, // L1 H1
-            { content: 1197 }, // L2 H2
-            { content: 1262 }, // L3
-            { content: 1027 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 35.1 }, // КПВС2
-            { content: "53.0" }, // КПВС3
-            { content: 70.2 }, // КПВС4
-            { content: 106 }, // КПВС2
-            { content: 139 }, // КПВС3
-            { content: 171 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 15000 }, // Производительность по воздуху
+              { content: 1125 }, // L H
+              { content: 1173 }, // L1 H1
+              { content: 1197 }, // L2 H2
+              { content: 1262 }, // L3
+              { content: 1027 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 35.1 }, // КПВС2
+              { content: "53.0" }, // КПВС3
+              { content: 70.2 }, // КПВС4
+              { content: 106 }, // КПВС2
+              { content: 139 }, // КПВС3
+              { content: 171 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1155x1155",
@@ -1658,104 +1678,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 14000 }, // Производительность по воздуху
-            { content: 1083 }, // L H
-            { content: 1131 }, // L1 H1
-            { content: 1155 }, // L2 H2
-            { content: 1220 }, // L3
-            { content: 985 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 32.6 }, // КПВС2
-            { content: 49.1 }, // КПВС3
-            { content: 65.1 }, // КПВС4
-            { content: 99 }, // КПВС2
-            { content: 130 }, // КПВС3
-            { content: 160 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 14000 }, // Производительность по воздуху
+              { content: 1083 }, // L H
+              { content: 1131 }, // L1 H1
+              { content: 1155 }, // L2 H2
+              { content: 1220 }, // L3
+              { content: 985 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 32.6 }, // КПВС2
+              { content: 49.1 }, // КПВС3
+              { content: 65.1 }, // КПВС4
+              { content: 99 }, // КПВС2
+              { content: 130 }, // КПВС3
+              { content: 160 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1114x1114",
@@ -1818,104 +1840,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 13000 }, // Производительность по воздуху
-            { content: 1042 }, // L H
-            { content: 1090 }, // L1 H1
-            { content: 1114 }, // L2 H2
-            { content: 1179 }, // L3
-            { content: 944 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 30.1 }, // КПВС2
-            { content: 45.4 }, // КПВС3
-            { content: 60.2 }, // КПВС4
-            { content: 93 }, // КПВС2
-            { content: 122 }, // КПВС3
-            { content: 149 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 13000 }, // Производительность по воздуху
+              { content: 1042 }, // L H
+              { content: 1090 }, // L1 H1
+              { content: 1114 }, // L2 H2
+              { content: 1179 }, // L3
+              { content: 944 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 30.1 }, // КПВС2
+              { content: 45.4 }, // КПВС3
+              { content: 60.2 }, // КПВС4
+              { content: 93 }, // КПВС2
+              { content: 122 }, // КПВС3
+              { content: 149 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1072x1072",
@@ -1978,104 +2002,106 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 12000 }, // Производительность по воздуху
-            { content: 1000 }, // L H
-            { content: 1048 }, // L1 H1
-            { content: 1072 }, // L2 H2
-            { content: 1137 }, // L3
-            { content: 902 }, // C
-            { content: 50 }, // dy мм
-            { content: 2 }, // dy "
-            { content: 27.7 }, // КПВС2
-            { content: 41.8 }, // КПВС3
-            { content: 55.4 }, // КПВС4
-            { content: 87 }, // КПВС2
-            { content: 113 }, // КПВС3
-            { content: 138 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 12000 }, // Производительность по воздуху
+              { content: 1000 }, // L H
+              { content: 1048 }, // L1 H1
+              { content: 1072 }, // L2 H2
+              { content: 1137 }, // L3
+              { content: 902 }, // C
+              { content: 50 }, // dy мм
+              { content: 2 }, // dy "
+              { content: 27.7 }, // КПВС2
+              { content: 41.8 }, // КПВС3
+              { content: 55.4 }, // КПВС4
+              { content: 87 }, // КПВС2
+              { content: 113 }, // КПВС3
+              { content: 138 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-1030x1030",
@@ -2138,115 +2164,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 11000 }, // Производительность по воздуху
-            { content: 958 }, // L H
-            { content: 1006 }, // L1 H1
-            { content: 1030 }, // L2 H2
-            { content: 1095 }, // L3
-            { content: 860 }, // C
-            { content: 40 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>2</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 25.4 }, // КПВС2
-            { content: 38.4 }, // КПВС3
-            { content: 50.9 }, // КПВС4
-            { content: 81 }, // КПВС2
-            { content: 106 }, // КПВС3
-            { content: 129 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 11000 }, // Производительность по воздуху
+              { content: 958 }, // L H
+              { content: 1006 }, // L1 H1
+              { content: 1030 }, // L2 H2
+              { content: 1095 }, // L3
+              { content: 860 }, // C
+              { content: 40 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>2</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 25.4 }, // КПВС2
+              { content: 38.4 }, // КПВС3
+              { content: 50.9 }, // КПВС4
+              { content: 81 }, // КПВС2
+              { content: 106 }, // КПВС3
+              { content: 129 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-989x989",
@@ -2309,115 +2337,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 10000 }, // Производительность по воздуху
-            { content: 917 }, // L H
-            { content: 965 }, // L1 H1
-            { content: 989 }, // L2 H2
-            { content: 1054 }, // L3
-            { content: 819 }, // C
-            { content: 40 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>2</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 23.3 }, // КПВС2
-            { content: 35.2 }, // КПВС3
-            { content: 46.6 }, // КПВС4
-            { content: 75 }, // КПВС2
-            { content: 98 }, // КПВС3
-            { content: 119 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 10000 }, // Производительность по воздуху
+              { content: 917 }, // L H
+              { content: 965 }, // L1 H1
+              { content: 989 }, // L2 H2
+              { content: 1054 }, // L3
+              { content: 819 }, // C
+              { content: 40 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>2</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 23.3 }, // КПВС2
+              { content: 35.2 }, // КПВС3
+              { content: 46.6 }, // КПВС4
+              { content: 75 }, // КПВС2
+              { content: 98 }, // КПВС3
+              { content: 119 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-947x947",
@@ -2480,115 +2510,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 9000 }, // Производительность по воздуху
-            { content: 875 }, // L H
-            { content: 923 }, // L1 H1
-            { content: 947 }, // L2 H2
-            { content: 1012 }, // L3
-            { content: 777 }, // C
-            { content: 40 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>2</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 21.2 }, // КПВС2
-            { content: "32.0" }, // КПВС3
-            { content: 42.3 }, // КПВС4
-            { content: 70 }, // КПВС2
-            { content: 91 }, // КПВС3
-            { content: 110 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 9000 }, // Производительность по воздуху
+              { content: 875 }, // L H
+              { content: 923 }, // L1 H1
+              { content: 947 }, // L2 H2
+              { content: 1012 }, // L3
+              { content: 777 }, // C
+              { content: 40 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>2</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 21.2 }, // КПВС2
+              { content: "32.0" }, // КПВС3
+              { content: 42.3 }, // КПВС4
+              { content: 70 }, // КПВС2
+              { content: 91 }, // КПВС3
+              { content: 110 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-905x905",
@@ -2651,115 +2683,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 8000 }, // Производительность по воздуху
-            { content: 833 }, // L H
-            { content: 881 }, // L1 H1
-            { content: 905 }, // L2 H2
-            { content: 970 }, // L3
-            { content: 768 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 19.2 }, // КПВС2
-            { content: "29.0" }, // КПВС3
-            { content: 38.4 }, // КПВС4
-            { content: 65 }, // КПВС2
-            { content: 83 }, // КПВС3
-            { content: 100 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 8000 }, // Производительность по воздуху
+              { content: 833 }, // L H
+              { content: 881 }, // L1 H1
+              { content: 905 }, // L2 H2
+              { content: 970 }, // L3
+              { content: 768 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 19.2 }, // КПВС2
+              { content: "29.0" }, // КПВС3
+              { content: 38.4 }, // КПВС4
+              { content: 65 }, // КПВС2
+              { content: 83 }, // КПВС3
+              { content: 100 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-864x864",
@@ -2822,115 +2856,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 7000 }, // Производительность по воздуху
-            { content: 792 }, // L H
-            { content: 840 }, // L1 H1
-            { content: 864 }, // L2 H2
-            { content: 929 }, // L3
-            { content: 727 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 17.3 }, // КПВС2
-            { content: 26.2 }, // КПВС3
-            { content: 34.6 }, // КПВС4
-            { content: 60 }, // КПВС2
-            { content: 77 }, // КПВС3
-            { content: 92 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 7000 }, // Производительность по воздуху
+              { content: 792 }, // L H
+              { content: 840 }, // L1 H1
+              { content: 864 }, // L2 H2
+              { content: 929 }, // L3
+              { content: 727 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 17.3 }, // КПВС2
+              { content: 26.2 }, // КПВС3
+              { content: 34.6 }, // КПВС4
+              { content: 60 }, // КПВС2
+              { content: 77 }, // КПВС3
+              { content: 92 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-822x822",
@@ -2993,115 +3029,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 6000 }, // Производительность по воздуху
-            { content: 750 }, // L H
-            { content: 798 }, // L1 H1
-            { content: 822 }, // L2 H2
-            { content: 887 }, // L3
-            { content: 685 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 15.5 }, // КПВС2
-            { content: 23.5 }, // КПВС3
-            { content: "31.0" }, // КПВС4
-            { content: 55 }, // КПВС2
-            { content: 70 }, // КПВС3
-            { content: 84 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 6000 }, // Производительность по воздуху
+              { content: 750 }, // L H
+              { content: 798 }, // L1 H1
+              { content: 822 }, // L2 H2
+              { content: 887 }, // L3
+              { content: 685 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 15.5 }, // КПВС2
+              { content: 23.5 }, // КПВС3
+              { content: "31.0" }, // КПВС4
+              { content: 55 }, // КПВС2
+              { content: 70 }, // КПВС3
+              { content: 84 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-780x780",
@@ -3164,115 +3202,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 5000 }, // Производительность по воздуху
-            { content: 708 }, // L H
-            { content: 756 }, // L1 H1
-            { content: 780 }, // L2 H2
-            { content: 845 }, // L3
-            { content: 643 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 13.8 }, // КПВС2
-            { content: "21.0" }, // КПВС3
-            { content: 27.6 }, // КПВС4
-            { content: 51 }, // КПВС2
-            { content: 64 }, // КПВС3
-            { content: 76 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 5000 }, // Производительность по воздуху
+              { content: 708 }, // L H
+              { content: 756 }, // L1 H1
+              { content: 780 }, // L2 H2
+              { content: 845 }, // L3
+              { content: 643 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 13.8 }, // КПВС2
+              { content: "21.0" }, // КПВС3
+              { content: 27.6 }, // КПВС4
+              { content: 51 }, // КПВС2
+              { content: 64 }, // КПВС3
+              { content: 76 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-739x739",
@@ -3335,115 +3375,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 4500 }, // Производительность по воздуху
-            { content: 667 }, // L H
-            { content: 715 }, // L1 H1
-            { content: 739 }, // L2 H2
-            { content: 804 }, // L3
-            { content: 602 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 12.2 }, // КПВС2
-            { content: 18.6 }, // КПВС3
-            { content: 24.5 }, // КПВС4
-            { content: 46 }, // КПВС2
-            { content: 57 }, // КПВС3
-            { content: 68 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 4500 }, // Производительность по воздуху
+              { content: 667 }, // L H
+              { content: 715 }, // L1 H1
+              { content: 739 }, // L2 H2
+              { content: 804 }, // L3
+              { content: 602 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 12.2 }, // КПВС2
+              { content: 18.6 }, // КПВС3
+              { content: 24.5 }, // КПВС4
+              { content: 46 }, // КПВС2
+              { content: 57 }, // КПВС3
+              { content: 68 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-697x697",
@@ -3506,115 +3548,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 4000 }, // Производительность по воздуху
-            { content: 625 }, // L H
-            { content: 673 }, // L1 H1
-            { content: 697 }, // L2 H2
-            { content: 762 }, // L3
-            { content: 560 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 10.7 }, // КПВС2
-            { content: 16.3 }, // КПВС3
-            { content: 21.4 }, // КПВС4
-            { content: 42 }, // КПВС2
-            { content: 52 }, // КПВС3
-            { content: 62 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 4000 }, // Производительность по воздуху
+              { content: 625 }, // L H
+              { content: 673 }, // L1 H1
+              { content: 697 }, // L2 H2
+              { content: 762 }, // L3
+              { content: 560 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 10.7 }, // КПВС2
+              { content: 16.3 }, // КПВС3
+              { content: 21.4 }, // КПВС4
+              { content: 42 }, // КПВС2
+              { content: 52 }, // КПВС3
+              { content: 62 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-655x655",
@@ -3677,115 +3721,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 3500 }, // Производительность по воздуху
-            { content: 583 }, // L H
-            { content: 631 }, // L1 H1
-            { content: 655 }, // L2 H2
-            { content: 720 }, // L3
-            { content: 518 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: 9.4 }, // КПВС2
-            { content: 14.2 }, // КПВС3
-            { content: 18.6 }, // КПВС4
-            { content: 38 }, // КПВС2
-            { content: 47 }, // КПВС3
-            { content: 56 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 3500 }, // Производительность по воздуху
+              { content: 583 }, // L H
+              { content: 631 }, // L1 H1
+              { content: 655 }, // L2 H2
+              { content: 720 }, // L3
+              { content: 518 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: 9.4 }, // КПВС2
+              { content: 14.2 }, // КПВС3
+              { content: 18.6 }, // КПВС4
+              { content: 38 }, // КПВС2
+              { content: 47 }, // КПВС3
+              { content: 56 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-614x614",
@@ -3848,115 +3894,117 @@ export const productData: (Product | KPVSProduct)[] = [
       " При избыточном запасе следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            // начало части со значениями
-            { content: 3000 }, // Производительность по воздуху
-            { content: 542 }, // L H
-            { content: 590 }, // L1 H1
-            { content: 614 }, // L2 H2
-            { content: 679 }, // L3
-            { content: 477 }, // C
-            { content: 32 }, // dy мм
-            // начало числа с дробью
-            // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
-            // { content: число },
-            // (с запятой в конце)
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            // конец числа с дробью
-            { content: "8.0" }, // КПВС2
-            { content: 12.2 }, // КПВС3
-            { content: 16.1 }, // КПВС4
-            { content: 34 }, // КПВС2
-            { content: 42 }, // КПВС3
-            { content: 49 }, // КПВС4
-            // конец части со значениями
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              // начало части со значениями
+              { content: 3000 }, // Производительность по воздуху
+              { content: 542 }, // L H
+              { content: 590 }, // L1 H1
+              { content: 614 }, // L2 H2
+              { content: 679 }, // L3
+              { content: 477 }, // C
+              { content: 32 }, // dy мм
+              // начало числа с дробью
+              // если вместо числа с дробью обычное число - меняй эту часть по подобию других на
+              // { content: число },
+              // (с запятой в конце)
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              // конец числа с дробью
+              { content: "8.0" }, // КПВС2
+              { content: 12.2 }, // КПВС3
+              { content: 16.1 }, // КПВС4
+              { content: 34 }, // КПВС2
+              { content: 42 }, // КПВС3
+              { content: 49 }, // КПВС4
+              // конец части со значениями
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpvs-572x572",
@@ -4012,108 +4060,110 @@ export const productData: (Product | KPVSProduct)[] = [
       "Синие поля обязательны для заполнения. Запас площади поверхности нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с. Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с.",
       "Если запас площади поверхности теплообмена не достаточен ни для одной модели КПВС 572х572 (двух, трех и четырех рядной) нужно перейти к следующему номеру водяного калорифера: ",
     ],
-    tableData: {
-      headers: [
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  Производительность <br /> по воздуху, м<sup>3</sup>/час
-                </>
-              ),
-              rowspan: 2,
-            },
-            {
-              content: (
-                <>
-                  Габаритные и <br /> присоединительные размеры, мм
-                </>
-              ),
-              colspan: 5,
-            },
-            { content: "dy", colspan: 2, className: "dy" },
-            {
-              content: (
-                <>
-                  Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                </>
-              ),
-              colspan: 3,
-            },
-            { content: "Масса, кг", colspan: 3, className: "mass" },
-          ],
-        },
-        {
-          cells: [
-            {
-              content: (
-                <>
-                  L<br />H
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L1
-                  <br />
-                  H1
-                </>
-              ),
-              className: "small-cols",
-            },
-            {
-              content: (
-                <>
-                  L2
-                  <br />
-                  H2
-                </>
-              ),
-              className: "small-cols",
-            },
-            { content: "L3", className: "small-cols" },
-            { content: "C", className: "small-cols" },
-            { content: "мм", className: "small-cols w-10" },
-            { content: '"', className: "small-cols w-10 pt-1" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-            { content: "КПВС2", className: "kal2" },
-            { content: "КПВС3", className: "kal2" },
-            { content: "КПВС4", className: "kal2" },
-          ],
-        },
-      ],
-      rows: [
-        {
-          cells: [
-            { content: 2500 },
-            { content: 500 },
-            { content: 548 },
-            { content: 572 },
-            { content: 637 },
-            { content: 435 },
-            { content: 32 },
-            {
-              content: (
-                <>
-                  1 <sup>1</sup>/<sub>4</sub>
-                </>
-              ),
-            },
-            { content: 6.8 },
-            { content: 10.4 },
-            { content: 13.7 },
-            { content: 31 },
-            { content: 37 },
-            { content: 43 },
-          ],
-        },
-      ],
-    },
+    tableData: [
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    Производительность <br /> по воздуху, м<sup>3</sup>/час
+                  </>
+                ),
+                rowspan: 2,
+              },
+              {
+                content: (
+                  <>
+                    Габаритные и <br /> присоединительные размеры, мм
+                  </>
+                ),
+                colspan: 5,
+              },
+              { content: "dy", colspan: 2, className: "dy" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
+                  </>
+                ),
+                colspan: 3,
+              },
+              { content: "Масса, кг", colspan: 3, className: "mass" },
+            ],
+          },
+          {
+            cells: [
+              {
+                content: (
+                  <>
+                    L<br />H
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L1
+                    <br />
+                    H1
+                  </>
+                ),
+                className: "small-cols",
+              },
+              {
+                content: (
+                  <>
+                    L2
+                    <br />
+                    H2
+                  </>
+                ),
+                className: "small-cols",
+              },
+              { content: "L3", className: "small-cols" },
+              { content: "C", className: "small-cols" },
+              { content: "мм", className: "small-cols w-10" },
+              { content: '"', className: "small-cols w-10 pt-1" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+              { content: "КПВС2", className: "kal2" },
+              { content: "КПВС3", className: "kal2" },
+              { content: "КПВС4", className: "kal2" },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              { content: 2500 },
+              { content: 500 },
+              { content: 548 },
+              { content: 572 },
+              { content: 637 },
+              { content: 435 },
+              { content: 32 },
+              {
+                content: (
+                  <>
+                    1 <sup>1</sup>/<sub>4</sub>
+                  </>
+                ),
+              },
+              { content: 6.8 },
+              { content: 10.4 },
+              { content: 13.7 },
+              { content: 31 },
+              { content: 37 },
+              { content: 43 },
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: "kpsk-572x572",
