@@ -54,8 +54,7 @@ export const productData: (Product | KPVSProduct)[] = [
     textContent: [
       "Приточный водяной калорифер КПВС-1572x1572 выпускается в двух, трех и четырех рядном исполнении. Номинальная производительность по воздуху – 25000 метров кубических в час, тепловая мощность варьируется в зависимости от рядности калорифера КПВС-1572x1572 и параметров эксплуатации.",
       "Синие поля обязательны для заполнения. Запас площади поверхности нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с. Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с.",
-      "Если запас площади поверхности теплообмена не достаточен ни для одной модели КПВС 1572х1572 (двух, трех и четырех рядной) нужно перейти к следующему номеру водяного калорифера: ",
-      " При избыточном запасе следует рассмотреть меньший теплообменник: ",
+      "Если запас площади поверхности теплообмена превышает допустимые значения для всех моделей КПВС 1572х1572 (двух, трех и четырех рядных) следует рассмотреть меньший теплообменник: ",
     ], // абзацы, должны идти по порядку
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
     tableData: [
@@ -4200,16 +4199,7 @@ export const productData: (Product | KPVSProduct)[] = [
   },
   // КСк 2-1_2-12
   {
-    id: "42",
-    name: "Калорифер КСк 2-2",
-    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
-    airPower: 2500,
-    heatPower: 37,
-    price: 14416,
-    img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
-  },
-  {
-    id: "1",
+    id: "kalorifer-ksk-2-1",
     name: "Калорифер КСк 2-1",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 2000,
@@ -4218,7 +4208,16 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
-    id: "3",
+    id: "kalorifer-ksk-2-2",
+    name: "Калорифер КСк 2-2",
+    categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
+    airPower: 2500,
+    heatPower: 37,
+    price: 14416,
+    img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
+  },
+  {
+    id: "kalorifer-ksk-2-3",
     name: "Калорифер КСк 2-3",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 3150,
@@ -4227,7 +4226,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
-    id: "4",
+    id: "kalorifer-ksk-2-4",
     name: "Калорифер КСк 2-4",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 4000,
@@ -4236,7 +4235,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
-    id: "11",
+    id: "kalorifer-ksk-2-5",
     name: "Калорифер КСк 2-5",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 5000,
@@ -4245,7 +4244,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
-    id: "12",
+    id: "kalorifer-ksk-2-6",
     name: "Калорифер КСк 2-6",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 2500,
@@ -4254,7 +4253,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-6_2-10.png",
   },
   {
-    id: "13",
+    id: "kalorifer-ksk-2-7",
     name: "Калорифер КСк 2-7",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 3150,
@@ -4263,7 +4262,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-6_2-10.png",
   },
   {
-    id: "14",
+    id: "kalorifer-ksk-2-8",
     name: "Калорифер КСк 2-8",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 4000,
@@ -4272,7 +4271,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-6_2-10.png",
   },
   {
-    id: "15",
+    id: "kalorifer-ksk-2-9",
     name: "Калорифер КСк 2-9",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 5000,
@@ -4281,7 +4280,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-6_2-10.png",
   },
   {
-    id: "16",
+    id: "kalorifer-ksk-2-10",
     name: "Калорифер КСк 2-10",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 6300,
@@ -4290,7 +4289,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-6_2-10.png",
   },
   {
-    id: "17",
+    id: "kalorifer-ksk-2-11",
     name: "Калорифер КСк 2-11",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 16000,
@@ -4299,7 +4298,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-11.png",
   },
   {
-    id: "18",
+    id: "kalorifer-ksk-2-12",
     name: "Калорифер КСк 2-12",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 25000,
@@ -4309,7 +4308,7 @@ export const productData: (Product | KPVSProduct)[] = [
   },
   // КСк 3-1_3-12
   {
-    id: "19",
+    id: "kalorifer-ksk-3-1",
     name: "Калорифер КСк 3-1",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 2000,
@@ -4318,7 +4317,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
   },
   {
-    id: "20",
+    id: "kalorifer-ksk-3-2",
     name: "Калорифер КСк 3-2",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 2500,
@@ -4327,7 +4326,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
   },
   {
-    id: "21",
+    id: "kalorifer-ksk-3-3",
     name: "Калорифер КСк 3-3",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 3150,
@@ -4336,7 +4335,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
   },
   {
-    id: "22",
+    id: "kalorifer-ksk-3-4",
     name: "Калорифер КСк 3-4",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 4000,
@@ -4345,7 +4344,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
   },
   {
-    id: "23",
+    id: "kalorifer-ksk-3-5",
     name: "Калорифер КСк 3-5",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 5000,
@@ -4354,7 +4353,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
   },
   {
-    id: "24",
+    id: "kalorifer-ksk-3-6",
     name: "Калорифер КСк 3-6",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 2500,
@@ -4363,7 +4362,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
   },
   {
-    id: "25",
+    id: "kalorifer-ksk-3-7",
     name: "Калорифер КСк 3-7",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 3150,
@@ -4372,7 +4371,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
   },
   {
-    id: "26",
+    id: "kalorifer-ksk-3-8",
     name: "Калорифер КСк 3-8",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 4000,
@@ -4381,7 +4380,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
   },
   {
-    id: "27",
+    id: "kalorifer-ksk-3-9",
     name: "Калорифер КСк 3-9",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 5000,
@@ -4390,7 +4389,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
   },
   {
-    id: "28",
+    id: "kalorifer-ksk-3-10",
     name: "Калорифер КСк 3-10",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 6300,
@@ -4399,7 +4398,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
   },
   {
-    id: "29",
+    id: "kalorifer-ksk-3-11",
     name: "Калорифер КСк 3-11",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 16000,
@@ -4408,7 +4407,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_3-11.png",
   },
   {
-    id: "30",
+    id: "kalorifer-ksk-3-12",
     name: "Калорифер КСк 3-12",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 25000,
@@ -4418,7 +4417,7 @@ export const productData: (Product | KPVSProduct)[] = [
   },
   // КСк 4-1_4-12
   {
-    id: "31",
+    id: "kalorifer-ksk-4-1",
     name: "Калорифер КСк 4-1",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 2000,
@@ -4427,7 +4426,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-1_4-5.png",
   },
   {
-    id: "32",
+    id: "kalorifer-ksk-4-2",
     name: "Калорифер КСк 4-2",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 2500,
@@ -4436,7 +4435,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-1_4-5.png",
   },
   {
-    id: "33",
+    id: "kalorifer-ksk-4-3",
     name: "Калорифер КСк 4-3",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 3150,
@@ -4445,7 +4444,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-1_4-5.png",
   },
   {
-    id: "34",
+    id: "kalorifer-ksk-4-4",
     name: "Калорифер КСк 4-4",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 4000,
@@ -4454,7 +4453,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-1_4-5.png",
   },
   {
-    id: "35",
+    id: "kalorifer-ksk-4-5",
     name: "Калорифер КСк 4-5",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 5000,
@@ -4463,7 +4462,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-1_4-5.png",
   },
   {
-    id: "36",
+    id: "kalorifer-ksk-4-6",
     name: "Калорифер КСк 4-6",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 2500,
@@ -4472,7 +4471,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
   },
   {
-    id: "37",
+    id: "kalorifer-ksk-4-7",
     name: "Калорифер КСк 4-7",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 3150,
@@ -4481,7 +4480,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
   },
   {
-    id: "38",
+    id: "kalorifer-ksk-4-8",
     name: "Калорифер КСк 4-8",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 4000,
@@ -4490,7 +4489,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
   },
   {
-    id: "39",
+    id: "kalorifer-ksk-4-9",
     name: "Калорифер КСк 4-9",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 5000,
@@ -4499,7 +4498,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
   },
   {
-    id: "40",
+    id: "kalorifer-ksk-4-10",
     name: "Калорифер КСк 4-10",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 6300,
@@ -4508,7 +4507,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
   },
   {
-    id: "41",
+    id: "kalorifer-ksk-4-11",
     name: "Калорифер КСк 4-11",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 16000,
@@ -4517,7 +4516,7 @@ export const productData: (Product | KPVSProduct)[] = [
     img: "/img/kalorifery/ksk/kalorifer_ksk_4-11.png",
   },
   {
-    id: "2",
+    id: "kalorifer-ksk-4-12",
     name: "Калорифер КСк 4-12",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 25000,
