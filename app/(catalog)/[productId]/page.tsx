@@ -3,6 +3,7 @@ import { productData } from "@/data/products";
 import type { Metadata } from "next";
 
 import KPVSProductPage from "@/components/catalog/KPVSProductPage";
+import KSKProductPage from "@/components/catalog/KSKProductPage";
 
 export async function generateMetadata({
   params,
@@ -31,4 +32,7 @@ export default async function ProductPage({
 
   if (product.categories.includes("kpvs"))
     return <KPVSProductPage product={product} />;
+
+  if (product.categories.includes("ksk"))
+    return <KSKProductPage product={product} />;
 }

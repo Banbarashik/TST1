@@ -1,0 +1,58 @@
+import { productData } from "@/data/products";
+
+import { sortProducts } from "@/lib/utils";
+import Link from "next/link";
+import { Button } from "../ui/button";
+
+const sizeRegex = /ksk-\d+-(\d+)$/;
+const shortNameRegex = /КСк \d+-\d+/;
+
+export default function KSKProductPage({ product }: { product: KSKProduct }) {
+  const category = product.categories.find((cat: string) =>
+    ["ksk-2", "ksk-3", "ksk-4"].includes(cat),
+  );
+  const KSKProducts = productData.filter((p) => p.categories.includes("ksk"));
+
+  const [, thisProductsize] = product.id.match(sizeRegex);
+  const sameSizeProducts = KSKProducts.filter(function (product) {
+    const [, anotherProductSize] = product.id.match(sizeRegex)!;
+    return thisProductsize === anotherProductSize;
+  })
+    .sort((a, b) => sortProducts(a.name, b.name))
+    .map((p) => ({
+      id: p.id,
+      shortName: p.name.match(shortNameRegex)![0],
+    }));
+
+  const sameNumOfRowsProducts = KSKProducts.filter((p) =>
+    p.categories.includes(category),
+  )
+    .sort((a, b) => sortProducts(a.name, b.name))
+    .map((p) => ({
+      id: p.id,
+      shortName: p.name.match(shortNameRegex)![0],
+    }));
+
+  return (
+    <>
+      <ul>
+        {sameSizeProducts.map(({ id, shortName }) => (
+          <li key={id}>
+            <Button variant="outline" asChild>
+              <Link href={`/${id}`}>{shortName}</Link>
+            </Button>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {sameNumOfRowsProducts.map(({ id, shortName }) => (
+          <li key={id}>
+            <Button variant="outline" asChild>
+              <Link href={`/${id}`}>{shortName}</Link>
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
