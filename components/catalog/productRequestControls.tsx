@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
-import { Product } from "@/types";
+import type { Product, ProductVariant } from "@/types";
 
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import { NumberInput } from "@/components/ui/input";
 export default function ProductRequestControls({
   product,
 }: {
-  product: Product;
+  product: Product | ProductVariant;
 }) {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {

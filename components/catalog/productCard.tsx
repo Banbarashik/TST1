@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 import type { Product, ProductVariant } from "@/types";
 
-import { useProductSelection } from "@/context/ProductSelectionContext";
-
 import { Button } from "@/components/ui/button";
-import { NumberInput } from "@/components/ui/input";
+import ProductRequestControls from "@/components/catalog/productRequestControls";
 
 export default function ProductCard({
   product,
@@ -18,16 +15,6 @@ export default function ProductCard({
   product: Product | ProductVariant;
   isVariant?: boolean;
 }) {
-  const { selected, add, remove, setAmount } = useProductSelection();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const selectedProduct = selected.find((item) => item.id === product.id);
-  const isSelected = !!selectedProduct;
-
   const hasVariants =
     Array.isArray(product.variants) && product.variants.length > 0;
 
@@ -75,35 +62,7 @@ export default function ProductCard({
             <Link href={`/${product.id}`}>Подобрать</Link>
           </Button>
         ) : (
-          <Button
-            type="button"
-            variant={isMounted && isSelected ? "secondary" : "default"}
-            onClick={(e) => {
-              e.preventDefault();
-              if (!isMounted) return;
-
-              if (isSelected) remove(product.id);
-              else add(product.id);
-            }}
-          >
-            {isMounted && isSelected ? "Убрать из заявки" : "В заявку"}
-          </Button>
-        )}
-        {isMounted && isSelected && (
-          <NumberInput
-            value={selectedProduct.amount}
-            disabled={selectedProduct.amount === 1}
-            decrease={() => {
-              if (selectedProduct.amount > 1) {
-                setAmount(product.id, selectedProduct.amount - 1);
-              }
-            }}
-            increase={() => setAmount(product.id, selectedProduct.amount + 1)}
-            change={(e) => {
-              const newAmount = Number(e.target.value);
-              if (newAmount >= 1) setAmount(product.id, newAmount);
-            }}
-          />
+          <ProductRequestControls product={product} />
         )}
       </div>
     </div>
