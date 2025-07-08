@@ -44,7 +44,7 @@ export default function ProductCard({
           <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
         </>
       ) : (
-        <Link href={`product/${product.id}`}>
+        <Link href={`/${product.id}`}>
           <Image
             src={product.img ?? ""}
             alt={product.name}
