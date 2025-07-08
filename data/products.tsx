@@ -48,7 +48,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1572 1572,калорифер кпвс 1572 1572,калорифер водяной 1572 1572,калорифер водяной кпвс 1572 1572,калорифер приточный 1572 1572,калорифер водяной приточный 1572 1572,калорифер 1572 1572 технические характеристики,калорифер кпвс 1572 1572 расчет и подбор,приточный калорифер 1572 1572 производительность по воздуху 25000,водяной калорифер 1600 1600",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1572-1572.html",
     headers: [
@@ -208,7 +208,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1530 1530,калорифер кпвс 1530 1530,калорифер водяной 1530 1530,калорифер водяной кпвс 1530 1530,калорифер приточный 1530 1530,калорифер водяной приточный 1530 1530,калорифер 1530 1530 технические характеристики,калорифер кпвс 1530 1530 расчет и подбор,приточный калорифер 1530 1530 производительность по воздуху 23000,водяной калорифер 1500 1500",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1530-1530.html",
     headers: [
@@ -368,7 +368,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1489 1489,калорифер кпвс 1489 1489,калорифер водяной 1489 1489,калорифер водяной кпвс 1489 1489,калорифер приточный 1489 1489,калорифер водяной приточный 1489 1489,калорифер 1489 1489 технические характеристики,калорифер кпвс 1489 1489 расчет и подбор,приточный калорифер 1489 1489 производительность по воздуху 22000,водяной калорифер 1500 1500",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1489-1489.html",
     headers: [
@@ -528,7 +528,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1447 1447,калорифер кпвс 1447 1447,калорифер водяной 1447 1447,калорифер водяной кпвс 1447 1447,калорифер приточный 1447 1447,калорифер водяной приточный 1447 1447,калорифер 1447 1447 технические характеристики,калорифер кпвс 1447 1447 расчет и подбор,приточный калорифер 1447 1447 производительность по воздуху 21000,водяной калорифер 1400 1400",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1447-1447.html",
     headers: [
@@ -688,7 +688,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1405 1405,калорифер кпвс 1405 1405,калорифер водяной 1405 1405,калорифер водяной кпвс 1405 1405,калорифер приточный 1405 1405,калорифер водяной приточный 1405 1405,калорифер 1405 1405 технические характеристики,калорифер кпвс 1405 1405 расчет и подбор,приточный калорифер 1405 1405 производительность по воздуху 20000,водяной калорифер 1400 1400",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1405-1405.html",
     headers: [
@@ -848,7 +848,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1364 1364,калорифер кпвс 1364 1364,калорифер водяной 1364 1364,калорифер водяной кпвс 1364 1364,калорифер приточный 1364 1364,калорифер водяной приточный 1364 1364,калорифер 1364 1364 технические характеристики,калорифер кпвс 1364 1364 расчет и подбор,приточный калорифер 1364 1364 производительность по воздуху 19000,водяной калорифер 1300 1300",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1364-1364.html",
     headers: [
@@ -1008,7 +1008,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1322 1322,калорифер кпвс 1322 1322,калорифер водяной 1322 1322,калорифер водяной кпвс 1322 1322,калорифер приточный 1322 1322,калорифер водяной приточный 1322 1322,калорифер 1322 1322 технические характеристики,калорифер кпвс 1322 1322 расчет и подбор,приточный калорифер 1322 1322 производительность по воздуху 18000,водяной калорифер 1300 1300",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1322-1322.html",
     headers: [
@@ -1168,7 +1168,7 @@ export const productData: (Product | KPVSProduct)[] = [
       keywords:
         "калорифер 1280 1280,калорифер кпвс 1280 1280,калорифер водяной 1280 1280,калорифер водяной кпвс 1280 1280,калорифер приточный 1280 1280,калорифер водяной приточный 1280 1280,калорифер 1280 1280 технические характеристики,калорифер кпвс 1280 1280 расчет и подбор,приточный калорифер 1280 1280 производительность по воздуху 17000,водяной калорифер 1300 1300",
     },
-    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572_1572.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1280-1280.html",
     headers: [
