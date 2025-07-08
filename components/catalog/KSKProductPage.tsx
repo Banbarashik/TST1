@@ -3,6 +3,7 @@ import { productData } from "@/data/products";
 import { sortProducts } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import SimilarProductLink from "./similarProductLink";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
@@ -38,18 +39,18 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ul>
         {sameSizeProducts.map(({ id, shortName }) => (
           <li key={id}>
-            <Button variant="outline" asChild>
-              <Link href={`/${id}`}>{shortName}</Link>
-            </Button>
+            <SimilarProductLink id={id} isActive={id === product.id}>
+              {shortName}
+            </SimilarProductLink>
           </li>
         ))}
       </ul>
       <ul>
         {sameNumOfRowsProducts.map(({ id, shortName }) => (
           <li key={id}>
-            <Button variant="outline" asChild>
-              <Link href={`/${id}`}>{shortName}</Link>
-            </Button>
+            <SimilarProductLink id={id} isActive={id === product.id}>
+              {shortName}
+            </SimilarProductLink>
           </li>
         ))}
       </ul>
