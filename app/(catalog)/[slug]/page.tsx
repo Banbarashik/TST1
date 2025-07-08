@@ -1,5 +1,6 @@
 import { productData } from "@/data/products";
 
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,11 +12,21 @@ import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const resolved = resolveSlug(slug);
+  const { metadata } = resolved?.data;
+
+  return metadata;
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = await params;
-
   const resolved = resolveSlug(slug);
-
   if (!resolved) return notFound();
 
   if (resolved.type === "category") {
