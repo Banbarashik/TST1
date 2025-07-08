@@ -41,18 +41,16 @@ export default function KPVSProductPage({ product }: { product: KPVSProduct }) {
       )}
       <h2 className="mb-4 text-2xl">{product.headers?.[0]}</h2>
       <p className="mb-2.5 text-lg">{product.textContent?.[1]}</p>
-      {"calculator" in product && product.calculator && (
-        <iframe
-          src={product.calculator}
-          title="Калькулятор калорифера"
-          style={{
-            width: "100%",
-            height: "697px",
-            border: "none",
-          }}
-          className="mb-0.5"
-        />
-      )}
+      <iframe
+        src={product.calculator}
+        title="Калькулятор калорифера"
+        style={{
+          width: "100%",
+          height: "697px",
+          border: "none",
+        }}
+        className="mb-0.5"
+      />
       <p className="mb-10 text-lg">
         {product.textContent?.[2]}
         {product.nextProduct && (
@@ -74,47 +72,45 @@ export default function KPVSProductPage({ product }: { product: KPVSProduct }) {
         )}
       </p>
       <h2 className="mb-6 text-2xl">{product.headers?.[1]}</h2>
-      {product.tableData && (
-        <table className="single-table water-and-steam water-and-steam-inner mb-1">
-          {product.tableData.caption && (
-            <caption>{product.tableData.caption}</caption>
-          )}
-          <thead>
-            {product.tableData.headers.map((row, i) => (
-              <tr key={i}>
-                {row.cells.map((cell, j) => (
-                  <th
-                    key={j}
-                    rowSpan={cell.rowspan}
-                    colSpan={cell.colspan}
-                    className={cell.className}
-                    style={cell.style}
-                  >
-                    {cell.content}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {product.tableData.rows.map((row, i) => (
-              <tr key={i}>
-                {row.cells.map((cell, j) => (
-                  <td
-                    key={j}
-                    rowSpan={cell.rowspan}
-                    colSpan={cell.colspan}
-                    className={cell.className}
-                    style={cell.style}
-                  >
-                    {cell.content}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      <table className="single-table water-and-steam water-and-steam-inner mb-1">
+        {product.tableData.caption && (
+          <caption>{product.tableData.caption}</caption>
+        )}
+        <thead>
+          {product.tableData.headers.map((row, i) => (
+            <tr key={i}>
+              {row.cells.map((cell, j) => (
+                <th
+                  key={j}
+                  rowSpan={cell.rowspan}
+                  colSpan={cell.colspan}
+                  className={cell.className}
+                  style={cell.style}
+                >
+                  {cell.content}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody>
+          {product.tableData.rows.map((row, i) => (
+            <tr key={i}>
+              {row.cells.map((cell, j) => (
+                <td
+                  key={j}
+                  rowSpan={cell.rowspan}
+                  colSpan={cell.colspan}
+                  className={cell.className}
+                  style={cell.style}
+                >
+                  {cell.content}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
       {product.drawing && (
         <Image
           src={product.drawing}

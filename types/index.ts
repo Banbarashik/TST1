@@ -31,11 +31,11 @@ export type Product = {
   };
   headers: string[];
   textContent: string[];
-  tableData?: ProductTableData;
 };
 
 export type KPVSProduct = Product & {
   calculator: string;
+  tableData: ProductTableData;
 };
 
 export type ProductVariant = Omit<
