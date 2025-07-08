@@ -1,9 +1,9 @@
 import { productData } from "@/data/products";
 
 import { sortProducts } from "@/lib/utils";
-import Link from "next/link";
-import { Button } from "../ui/button";
-import SimilarProductLink from "./similarProductLink";
+
+import ProductCard from "@/components/catalog/productCard";
+import SimilarProductLink from "@/components/catalog/similarProductLink";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
@@ -36,24 +36,29 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   return (
     <>
-      <ul>
-        {sameSizeProducts.map(({ id, shortName }) => (
-          <li key={id}>
-            <SimilarProductLink id={id} isActive={id === product.id}>
-              {shortName}
-            </SimilarProductLink>
-          </li>
-        ))}
-      </ul>
-      <ul>
-        {sameNumOfRowsProducts.map(({ id, shortName }) => (
-          <li key={id}>
-            <SimilarProductLink id={id} isActive={id === product.id}>
-              {shortName}
-            </SimilarProductLink>
-          </li>
-        ))}
-      </ul>
+      <div className="flex items-start">
+        <ProductCard product={product} />
+        <div>
+          <ul className="flex flex-wrap gap-4">
+            {sameSizeProducts.map(({ id, shortName }) => (
+              <li key={id}>
+                <SimilarProductLink id={id} isActive={id === product.id}>
+                  {shortName}
+                </SimilarProductLink>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex flex-wrap gap-4">
+            {sameNumOfRowsProducts.map(({ id, shortName }) => (
+              <li key={id}>
+                <SimilarProductLink id={id} isActive={id === product.id}>
+                  {shortName}
+                </SimilarProductLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   );
 }

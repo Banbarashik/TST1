@@ -11,7 +11,8 @@ import { NumberInput } from "@/components/ui/input";
 
 export default function ProductRequestControls({
   product,
-}: {
+  ...props
+}: React.ComponentProps<"div"> & {
   product: Product | ProductVariant;
 }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -32,7 +33,7 @@ export default function ProductRequestControls({
   };
 
   return (
-    <div className="mt-4 flex items-center gap-4">
+    <div className={props.className + " flex items-center gap-4"}>
       <Button
         onClick={handleAddOrRemove}
         variant={isMounted && isSelected ? "secondary" : "default"}

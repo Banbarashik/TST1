@@ -19,7 +19,7 @@ export default function ProductCard({
     Array.isArray(product.variants) && product.variants.length > 0;
 
   return (
-    <div className="rounded-lg border p-4 transition hover:shadow-md">
+    <div className="flex shrink-0 flex-col rounded-lg border p-4 transition hover:shadow-md">
       {isVariant ? (
         <>
           <Image
@@ -41,30 +41,32 @@ export default function ProductCard({
           <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
         </Link>
       )}
-      <p>
-        Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
-        {product.heatPower && product.heatPower + " кВт"}
-      </p>
-      {product.variants && (
+      <div className="mb-4">
         <p>
-          {product.variants?.map((variant) => variant.heatPower).join(", ")} кВт
+          Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
+          {product.heatPower && product.heatPower + " кВт"}
         </p>
-      )}
-
-      {product.price && (
-        <p className="text-gray-600">
-          {product.price.toLocaleString("ru-RU")} руб. с НДС
-        </p>
-      )}
-      <div className="mt-2 flex items-center justify-between">
-        {hasVariants ? (
+        {product.variants && (
+          <p>
+            {product.variants?.map((variant) => variant.heatPower).join(", ")}{" "}
+            кВт
+          </p>
+        )}
+        {product.price && (
+          <p className="text-gray-600">
+            {product.price.toLocaleString("ru-RU")} руб. с НДС
+          </p>
+        )}
+      </div>
+      {hasVariants ? (
+        <div className="mt-2 flex items-center justify-between">
           <Button asChild className="ml-auto bg-[#6c51a2] hover:bg-[#8b68d2]">
             <Link href={`/${product.id}`}>Подобрать</Link>
           </Button>
-        ) : (
-          <ProductRequestControls product={product} />
-        )}
-      </div>
+        </div>
+      ) : (
+        <ProductRequestControls product={product} className="mt-auto" />
+      )}
     </div>
   );
 }
