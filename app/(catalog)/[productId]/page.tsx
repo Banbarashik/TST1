@@ -11,10 +11,10 @@ import { Button } from "@/components/ui/button";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ productId: string }>;
 }): Promise<Metadata> {
-  const { id } = await params;
-  const product = productData.find((p) => p.id === id);
+  const { productId } = await params;
+  const product = productData.find((p) => p.id === productId);
 
   return {
     title: product?.metadata?.title,
@@ -26,10 +26,10 @@ export async function generateMetadata({
 export default async function ProductPage({
   params,
 }: {
-  params: { id: string };
+  params: { productId: string };
 }) {
-  const { id } = await params;
-  const product = productData.find((p) => p.id === id);
+  const { productId } = await params;
+  const product = productData.find((p) => p.id === productId);
 
   if (!product) return <div>Товар не найден</div>;
 

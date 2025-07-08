@@ -61,7 +61,7 @@ function RecursiveAccordion({
                 style={{ paddingLeft }}
               >
                 <Link
-                  href={`/${node.slug}`}
+                  href={`/catalog/${node.slug}`}
                   className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
                 >
                   {node.menuTitle}
@@ -79,7 +79,7 @@ function RecursiveAccordion({
         ) : (
           <div key={node.slug}>
             <Link
-              href={`/${node.slug}`}
+              href={`/catalog/${node.slug}`}
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
               style={{ paddingLeft }}
             >
@@ -95,14 +95,10 @@ function RecursiveAccordion({
 export default function Sidebar() {
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
-
-  // Determine currentSlug for both /catalog and top-level category routes
-  let currentSlug = "";
-  if (pathParts[0] === "catalog" && pathParts.length > 1) {
-    currentSlug = pathParts[pathParts.length - 1];
-  } else if (pathParts[0] && pathParts[0] !== "catalog") {
-    currentSlug = pathParts[0];
-  }
+  const currentSlug =
+    pathParts[0] === "catalog" && pathParts.length > 1
+      ? pathParts[pathParts.length - 1]
+      : "";
 
   // Compute open items for the current slug
   const openItems = useMemo(
