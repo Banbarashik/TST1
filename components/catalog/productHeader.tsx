@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import type { KPVSProduct, Product } from "@/types";
+import type { KPVSKPVUProduct, Product } from "@/types";
 
 export default function ProductHeader({
   product,
 }: {
-  product: Product | KPVSProduct;
+  product: Product | KPVSKPVUProduct;
 }) {
   return (
     <div className="mb-8 flex items-center justify-between">

@@ -30,7 +30,10 @@ export default async function ProductPage({
 
   if (!product) return <div>Товар не найден</div>;
 
-  if (product.categories.includes("kpvs"))
+  if (
+    product.categories.includes("kpvs") ||
+    product.categories.includes("kpvu")
+  )
     return <KPVSProductPage product={product} />;
 
   if (product.categories.includes("ksk"))

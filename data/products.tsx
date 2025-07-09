@@ -1,6 +1,6 @@
-import type { Product, KPVSProduct } from "@/types";
+import type { Product, KPVSKPVUProduct } from "@/types";
 
-export const productData: (Product | KPVSProduct)[] = [
+export const productData: (Product | KPVSKPVUProduct)[] = [
   {
     id: "kpvu-1572x1572",
     name: "Калорифер КПВУ-1572×1572 водяной", // главный заголовок страницы калорифера

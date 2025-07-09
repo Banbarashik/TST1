@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { KPVSProduct } from "@/types";
+import type { KPVSKPVUProduct } from "@/types";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
 import { Button } from "@/components/ui/button";
 
-export default function KPVSProductPage({ product }: { product: KPVSProduct }) {
+export default function KPVSKPVUProductPage({
+  product,
+}: {
+  product: KPVSKPVUProduct;
+}) {
   const {
     name,
     variants,
