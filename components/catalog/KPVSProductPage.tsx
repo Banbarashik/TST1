@@ -14,7 +14,6 @@ export default function KPVSKPVUProductPage({
   product: KPVSKPVUProduct;
 }) {
   const {
-    name,
     variants,
     prevProduct,
     nextProduct,

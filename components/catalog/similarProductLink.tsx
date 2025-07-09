@@ -8,7 +8,7 @@ export default function SimilarProductLink({
   children,
 }: {
   id: string;
-  isActive?: Boolean;
+  isActive?: boolean;
   children: React.ReactNode;
 }) {
   return (
