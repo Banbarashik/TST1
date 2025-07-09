@@ -19,7 +19,7 @@ export const categoryTree: Category[] = [
           {
             title: "Приточные калориферы КПВУ",
             menuTitle: "Приточные калориферы КПВУ",
-            slug: "pritochny-kalorifery-tvv",
+            slug: "kpvu",
           },
         ],
       },
