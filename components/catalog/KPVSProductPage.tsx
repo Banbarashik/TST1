@@ -5,6 +5,7 @@ import type { KPVSProduct } from "@/types";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
+import ProductHeader from "@/components/catalog/productHeader";
 import { Button } from "@/components/ui/button";
 
 export default function KPVSProductPage({ product }: { product: KPVSProduct }) {
@@ -25,15 +26,7 @@ export default function KPVSProductPage({ product }: { product: KPVSProduct }) {
 
   return (
     <div>
-      <div className="mb-8 flex items-center justify-between">
-        <h1 className="text-2xl font-bold uppercase">{name}</h1>
-        <Link
-          href="#"
-          className="bg-accent rounded-md px-3 py-2 text-sm font-semibold"
-        >
-          Скачать 3D-модель
-        </Link>
-      </div>
+      <ProductHeader product={product} />
       <p className="mb-6 text-lg">{textContent[0]}</p>
       {variants && variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">

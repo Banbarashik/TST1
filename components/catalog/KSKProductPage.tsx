@@ -3,6 +3,7 @@ import { productData } from "@/data/products";
 import { sortProducts } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
+import ProductHeader from "@/components/catalog/productHeader";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
@@ -35,30 +36,42 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     }));
 
   return (
-    <>
+    <div>
+      <ProductHeader product={product} />
       <div className="flex items-start">
         <ProductCard product={product} />
         <div>
-          <ul className="flex flex-wrap gap-4">
-            {sameSizeProducts.map(({ id, shortName }) => (
-              <li key={id}>
-                <SimilarProductLink id={id} isActive={id === product.id}>
-                  {shortName}
-                </SimilarProductLink>
-              </li>
-            ))}
+          <p>{product.textContent[0]}</p>
+          <ul>
+            <li>{product.textContent[1]}</li>
+            <li>{product.textContent[2]}</li>
           </ul>
-          <ul className="flex flex-wrap gap-4">
-            {sameNumOfRowsProducts.map(({ id, shortName }) => (
-              <li key={id}>
-                <SimilarProductLink id={id} isActive={id === product.id}>
-                  {shortName}
-                </SimilarProductLink>
-              </li>
-            ))}
-          </ul>
+          <div className="flex">
+            <p>{product.textContent[3]}</p>
+            <ul className="flex flex-wrap gap-4">
+              {sameSizeProducts.map(({ id, shortName }) => (
+                <li key={id}>
+                  <SimilarProductLink id={id} isActive={id === product.id}>
+                    {shortName}
+                  </SimilarProductLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex">
+            <p>{product.textContent[4]}</p>
+            <ul className="flex flex-wrap gap-4">
+              {sameNumOfRowsProducts.map(({ id, shortName }) => (
+                <li key={id}>
+                  <SimilarProductLink id={id} isActive={id === product.id}>
+                    {shortName}
+                  </SimilarProductLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
