@@ -48,7 +48,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </ul>
           <div className="flex">
             <p>{product.textContent[3]}</p>
-            <ul className="flex flex-wrap gap-4">
+            <ul className="flex flex-wrap gap-2">
               {sameSizeProducts.map(({ id, shortName }) => (
                 <li key={id}>
                   <SimilarProductLink id={id} isActive={id === product.id}>
@@ -58,9 +58,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               ))}
             </ul>
           </div>
-          <div className="flex">
+          <div className="flex flex-col">
             <p>{product.textContent[4]}</p>
-            <ul className="flex flex-wrap gap-4">
+            <ul className="flex flex-wrap gap-2">
               {sameNumOfRowsProducts.map(({ id, shortName }) => (
                 <li key={id}>
                   <SimilarProductLink id={id} isActive={id === product.id}>
