@@ -72,6 +72,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
+      <h2>{product.headers[0]}</h2>
+      <p>{product.textContent[5]}</p>
     </div>
   );
 }
