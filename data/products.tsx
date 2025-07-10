@@ -95,7 +95,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -105,7 +105,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -115,7 +115,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -255,7 +255,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -265,7 +265,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -275,7 +275,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -415,7 +415,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -425,7 +425,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -435,7 +435,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -575,7 +575,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -585,7 +585,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -595,7 +595,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -735,7 +735,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -745,7 +745,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -755,7 +755,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -895,7 +895,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -905,7 +905,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -915,7 +915,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1055,7 +1055,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1065,7 +1065,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1075,7 +1075,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1215,7 +1215,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1225,7 +1225,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1235,7 +1235,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1375,7 +1375,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1385,7 +1385,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1395,7 +1395,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1535,7 +1535,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1545,7 +1545,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1555,7 +1555,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1695,7 +1695,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1705,7 +1705,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1715,7 +1715,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -1855,7 +1855,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -1865,7 +1865,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -1875,7 +1875,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2015,7 +2015,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2025,7 +2025,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2035,7 +2035,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2175,7 +2175,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2185,7 +2185,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2195,7 +2195,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2335,7 +2335,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2345,7 +2345,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2355,7 +2355,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2495,7 +2495,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2505,7 +2505,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2515,7 +2515,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2655,7 +2655,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2665,7 +2665,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2675,7 +2675,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2815,7 +2815,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2825,7 +2825,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2835,7 +2835,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -2975,7 +2975,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -2985,7 +2985,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -2995,7 +2995,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -3135,7 +3135,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -3145,7 +3145,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -3155,7 +3155,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -3295,7 +3295,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -3305,7 +3305,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -3315,7 +3315,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -3455,7 +3455,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -3465,7 +3465,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -3475,7 +3475,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
@@ -3607,7 +3607,7 @@ export const productData: (Product | PritochnyProduct)[] = [
               {
                 content: (
                   <>
-                    H<br />H
+                    H<br />B
                   </>
                 ),
                 className: "small-cols",
@@ -3617,7 +3617,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H1
                     <br />
-                    H1
+                    B1
                   </>
                 ),
                 className: "small-cols",
@@ -3627,7 +3627,7 @@ export const productData: (Product | PritochnyProduct)[] = [
                   <>
                     H2
                     <br />
-                    H2
+                    B2
                   </>
                 ),
                 className: "small-cols",
