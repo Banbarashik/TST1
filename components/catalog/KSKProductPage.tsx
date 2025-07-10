@@ -5,6 +5,7 @@ import { sortProducts } from "@/lib/utils";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
+import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import Table from "@/components/ui/table";
 import Image from "next/image";
@@ -45,13 +46,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <div className="flex items-start">
         <ProductCard product={product} />
         <div>
-          <p>{product.textContent[0]}</p>
+          <ProductParagraph>{product.textContent[0]}</ProductParagraph>
           <ul>
             <li>{product.textContent[1]}</li>
             <li>{product.textContent[2]}</li>
           </ul>
           <div className="flex">
-            <p>{product.textContent[3]}</p>
+            <ProductParagraph>{product.textContent[3]}</ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {sameSizeProducts.map(({ id, shortName }) => (
                 <li key={id}>
@@ -63,7 +64,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </ul>
           </div>
           <div className="flex flex-col">
-            <p>{product.textContent[4]}</p>
+            <ProductParagraph>{product.textContent[4]}</ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {sameNumOfRowsProducts.map(({ id, shortName }) => (
                 <li key={id}>
@@ -77,7 +78,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
       <ProductSubheader text={product.headers[0]} />
-      <p>{product.textContent[5]}</p>
+      <ProductParagraph>{product.textContent[5]}</ProductParagraph>
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
