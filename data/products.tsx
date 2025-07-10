@@ -8055,6 +8055,7 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
     heatPower: 29,
     price: 12705,
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
+    drawing: "/img/kalorifery/ksk/kalorifer_ksk_2-1_chertez.png",
     headers: [
       "Таблица рабочих параметров калорифера КСк 2-1",
       "Технические характеристики КСк 2-1",

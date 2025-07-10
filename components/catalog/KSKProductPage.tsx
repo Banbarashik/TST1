@@ -6,6 +6,7 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import Table from "../ui/table";
+import Image from "next/image";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
@@ -78,6 +79,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       {/* PLACE FOR TABLE WITH TABS */}
       <h2>{product.headers[1]}</h2>
       <Table tableData={product.tableData[0]} />
+      <Image
+        src={product.drawing}
+        alt={product.name}
+        width={968}
+        height={1}
+        className="mb-10"
+      />
     </div>
   );
 }

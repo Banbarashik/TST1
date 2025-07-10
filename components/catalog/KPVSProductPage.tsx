@@ -15,11 +15,13 @@ export default function KPVSKPVUProductPage({
   product: KPVSKPVUProduct;
 }) {
   const {
+    name,
     variants,
     prevProduct,
     nextProduct,
     airPower,
     img,
+    drawing,
     textContent,
     headers,
     calculator,
@@ -84,10 +86,10 @@ export default function KPVSKPVUProductPage({
         tableData={table}
         className="single-table water-and-steam water-and-steam-inner mb-1"
       />
-      {product.drawing && (
+      {drawing && (
         <Image
-          src={product.drawing}
-          alt={product.name}
+          src={drawing}
+          alt={name}
           width={968}
           height={1}
           className="mb-10"
