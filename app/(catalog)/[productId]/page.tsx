@@ -32,7 +32,8 @@ export default async function ProductPage({
 
   if (
     product.categories.includes("kpvs") ||
-    product.categories.includes("kpvu")
+    product.categories.includes("kpvu") ||
+    product.categories.includes("kppu")
   )
     return <KPVSProductPage product={product} />;
 

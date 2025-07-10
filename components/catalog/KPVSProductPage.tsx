@@ -98,7 +98,11 @@ export default function KPVSKPVUProductPage({
       )}
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText="Приточные водяные калориферы"
+        tableLinkText={
+          product.categories.includes("pritochny-vodiany-kalorifery")
+            ? "Приточные водяные калориферы"
+            : "Приточные паровые калориферы"
+        }
         catalogURL="#"
       />
       <Button
