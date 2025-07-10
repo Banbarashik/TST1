@@ -74,6 +74,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </div>
       <h2>{product.headers[0]}</h2>
       <p>{product.textContent[5]}</p>
+      {/* PLACE FOR TABLE WITH TABS */}
+      <h2>{product.headers[1]}</h2>
     </div>
   );
 }
