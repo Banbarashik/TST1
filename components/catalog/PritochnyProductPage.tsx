@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { KPVSKPVUProduct } from "@/types";
+import type { PritochnyProduct } from "@/types";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 import Table from "@/components/ui/table";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-export default function KPVSKPVUProductPage({
+export default function PritochnyProductPage({
   product,
 }: {
-  product: KPVSKPVUProduct;
+  product: PritochnyProduct;
 }) {
   const {
     name,

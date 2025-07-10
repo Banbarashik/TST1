@@ -34,7 +34,7 @@ export type Product = {
   tableData: ProductTableData[];
 };
 
-export type KPVSKPVUProduct = Product & {
+export type PritochnyProduct = Product & {
   calculator: string;
 };
 

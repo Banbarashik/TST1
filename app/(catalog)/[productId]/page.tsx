@@ -2,7 +2,7 @@ import { productData } from "@/data/products";
 
 import type { Metadata } from "next";
 
-import KPVSProductPage from "@/components/catalog/KPVSProductPage";
+import PritochnyProductPage from "@/components/catalog/PritochnyProductPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
 
 export async function generateMetadata({
@@ -31,11 +31,10 @@ export default async function ProductPage({
   if (!product) return <div>Товар не найден</div>;
 
   if (
-    product.categories.includes("kpvs") ||
-    product.categories.includes("kpvu") ||
-    product.categories.includes("kppu")
+    product.categories.includes("pritochny-vodiany-kalorifery") ||
+    product.categories.includes("pritochny-parovy-kalorifery")
   )
-    return <KPVSProductPage product={product} />;
+    return <PritochnyProductPage product={product} />;
 
   if (product.categories.includes("ksk"))
     return <KSKProductPage product={product} />;
