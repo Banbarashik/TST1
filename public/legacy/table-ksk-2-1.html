@@ -5,6 +5,10 @@
     <script src="tables.js"></script>
     <link href="../../app/globals.css" rel="stylesheet" />
     <style>
+      body {
+        font-family: "Arial", sans-serif;
+      }
+
       /* Скрытие всех таблиц, кроме выбранной (начало) */
       #secondary div,
       #secondary2 div,
@@ -110,6 +114,28 @@
         background-color: rgb(204, 204, 204);
 
         overflow: auto;
+      }
+
+      .table-wrap td:first-child {
+        padding-left: 3px;
+        text-align: left;
+        font-size: 9pt;
+        line-height: 18px;
+      }
+
+      .table-wrap tr:nth-child(2) td:nth-child(n + 2) {
+        width: 180px;
+        font-weight: 700;
+      }
+
+      .table-wrap tr:first-child td:nth-child(2) {
+        width: 540px;
+        font-weight: 700;
+      }
+
+      .table-wrap tr:nth-child(3) td:nth-child(n + 2) {
+        width: 45px;
+        font-weight: 700;
       }
 
       /* Стилизация таблиц, которым требуется скролл (начало) */
