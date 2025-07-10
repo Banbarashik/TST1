@@ -1012,7 +1012,7 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
               { content: 2 }, // dy "
               { content: 35.5 }, // КПВУ2
               { content: 53.6 }, // КПВУ3
-              { content: 71.0 }, // КПВУ4
+              { content: "71.0" }, // КПВУ4
               { content: 135 }, // КПВУ2
               { content: 182 }, // КПВУ3
               { content: 240 }, // КПВУ4
@@ -5836,7 +5836,7 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
         id: "kpvs-1072x1072-3",
         name: "Приточный калорифер КПВС 1072x1072_3",
         heatPower: 171,
-        price: 53644,
+        price: 52644,
       },
       {
         id: "kpvs-1072x1072-4",
