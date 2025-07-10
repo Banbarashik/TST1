@@ -8,6 +8,7 @@ import ProductRequestControls from "@/components/catalog/productRequestControls"
 import ProductHeader from "@/components/catalog/productHeader";
 import { Button } from "@/components/ui/button";
 import Table from "@/components/ui/table";
+import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
 export default function KPVSKPVUProductPage({
   product,
@@ -95,16 +96,11 @@ export default function KPVSKPVUProductPage({
           className="mb-10"
         />
       )}
-
-      <div className="flex h-12 w-full gap-6">
-        <Button className="text-md h-full flex-1/2 bg-gray-300 font-semibold text-black">
-          <Link href="#">Приточные водяные калориферы</Link>
-        </Button>
-        <Button className="text-md h-full flex-1/2 bg-gray-300 font-semibold text-black">
-          <Link href="#">Скачать каталог PDF</Link>
-        </Button>
-      </div>
-
+      <TableAndCatalogLinks
+        tableURL="#"
+        tableLinkText="Приточные водяные калориферы"
+        catalogURL="#"
+      />
       <Button
         size="xl"
         className="fixed bottom-[200px] left-[100px] cursor-pointer bg-[#574184] hover:bg-[#7e5ebd]"
