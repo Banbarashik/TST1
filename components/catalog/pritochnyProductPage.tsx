@@ -3,10 +3,11 @@ import Link from "next/link";
 
 import type { PritochnyProduct } from "@/types";
 
-import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
+import ProductSubheader from "@/components/catalog/productSubheader";
+import ProductParagraph from "@/components/catalog/productParagraph";
 import { Button } from "@/components/ui/button";
 import Table from "@/components/ui/table";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
@@ -35,7 +36,7 @@ export default function PritochnyProductPage({
   return (
     <div>
       <ProductHeader product={product} />
-      <p className="mb-6 text-lg">{textContent[0]}</p>
+      <ProductParagraph className="mb-6">{textContent[0]}</ProductParagraph>
       {variants && variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">
           {variants.map(function (variant) {
@@ -52,7 +53,7 @@ export default function PritochnyProductPage({
         <ProductRequestControls product={product} />
       )}
       <ProductSubheader text={headers[0]} />
-      <p className="mb-2.5 text-lg">{textContent[1]}</p>
+      <ProductParagraph className="mb-2.5">{textContent[1]}</ProductParagraph>
       <iframe
         src={calculator}
         title="Калькулятор калорифера"
@@ -63,7 +64,7 @@ export default function PritochnyProductPage({
         }}
         className="mb-0.5"
       />
-      <p className="mb-10 text-lg">
+      <ProductParagraph className="mb-10">
         {textContent[2]}
         {nextProduct && (
           <Link
@@ -82,7 +83,7 @@ export default function PritochnyProductPage({
             {prevProduct.name}
           </Link>
         )}
-      </p>
+      </ProductParagraph>
       <ProductSubheader text={headers[1]} />
       <Table
         tableData={table}
