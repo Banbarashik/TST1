@@ -7,6 +7,7 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
 import { Button } from "@/components/ui/button";
+import Table from "@/components/ui/table";
 
 export default function KPVSKPVUProductPage({
   product,
@@ -79,43 +80,10 @@ export default function KPVSKPVUProductPage({
         )}
       </p>
       <h2 className="mb-6 text-2xl">{headers[1]}</h2>
-      <table className="single-table water-and-steam water-and-steam-inner mb-1">
-        {table.caption && <caption>{table.caption}</caption>}
-        <thead>
-          {table.headers.map((row, i) => (
-            <tr key={i}>
-              {row.cells.map((cell, j) => (
-                <th
-                  key={j}
-                  rowSpan={cell.rowspan}
-                  colSpan={cell.colspan}
-                  className={cell.className}
-                  style={cell.style}
-                >
-                  {cell.content}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.rows.map((row, i) => (
-            <tr key={i}>
-              {row.cells.map((cell, j) => (
-                <td
-                  key={j}
-                  rowSpan={cell.rowspan}
-                  colSpan={cell.colspan}
-                  className={cell.className}
-                  style={cell.style}
-                >
-                  {cell.content}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <Table
+        tableData={table}
+        className="single-table water-and-steam water-and-steam-inner mb-1"
+      />
       {product.drawing && (
         <Image
           src={product.drawing}
