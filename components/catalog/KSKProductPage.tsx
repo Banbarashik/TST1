@@ -86,6 +86,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         height={1}
         className="mb-10"
       />
+      <Table tableData={product.tableData[1]} />
     </div>
   );
 }

@@ -8114,6 +8114,49 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
           },
         ],
       },
+      {
+        headers: [
+          {
+            cells: [
+              {
+                content:
+                  "Габаритные и присоединительные размеры оребренного теплообменника КСк 2-1, мм",
+                colspan: 9,
+                className: "text-left pl-1",
+                style: { fontSize: "11pt" },
+              },
+            ],
+          },
+        ],
+        rows: [
+          {
+            cells: [
+              { content: "L" },
+              { content: "L 1" },
+              { content: "L 2" },
+              { content: "L 3" },
+              { content: "H" },
+              { content: "H 1" },
+              { content: "H 2" },
+              { content: "C" },
+              { content: "dy" },
+            ],
+          },
+          {
+            cells: [
+              { content: "530", style: { fontSize: "11pt" } },
+              { content: "578", style: { fontSize: "11pt" } },
+              { content: "602", style: { fontSize: "11pt" } },
+              { content: "650", style: { fontSize: "11pt" } },
+              { content: "378", style: { fontSize: "11pt" } },
+              { content: "426", style: { fontSize: "11pt" } },
+              { content: "450", style: { fontSize: "11pt" } },
+              { content: "305", style: { fontSize: "11pt" } },
+              { content: "32", style: { fontSize: "11pt" } },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
