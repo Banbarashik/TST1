@@ -3767,8 +3767,7 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
         "калорифер 572 572,калорифер КПВУ 572 572,калорифер водяной 572 572,калорифер водяной КПВУ 572 572,калорифер приточный 572 572,калорифер водяной приточный 572 572,калорифер 572 572 технические характеристики,калорифер КПВУ 572 572 расчет и подбор,приточный калорифер 572 572 производительность по воздуху 2000,водяной калорифер 500 500",
     },
     img: "/img/kalorifery/kpvu/kalorifer_kpvu_572x572_890x890.png",
-    drawing:
-      "/img/kalorifery/pritochny-tvv/kalorifer_pritochnyi_vodianoi_tvv_chertez.png",
+    drawing: "/img/kalorifery/kpvu/kpvu_chertez.png",
     calculator: "/legacy/calculator-tvv-572-572.html",
     headers: [
       "Калькулятор подбора калорифера КПВУ 572х572",
