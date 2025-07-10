@@ -40,7 +40,7 @@ input[type="radio"] {
   background-color: rgba(153, 153, 153, 1);
 
   color: rgba(0, 32, 96, 1);
-  font-size: 10pt;
+  font-size: 11pt;
   font-weight: 700;
 
   cursor: pointer;
@@ -51,15 +51,6 @@ input[type="radio"] {
   padding-bottom: 5px;
 }
 /* Внешний вид кнопок переключения таблиц (конец) */
-
-/* Кнопки меньшего размера (начало) */
-.small-btn {
-  padding-left: 5px;
-  padding-right: 5px;
-
-  font-size: 9pt;
-}
-/* Кнопки меньшего размера (конец) */
 
 /* Правая граница для последней кнопки (начало) */
 .btn:last-child {
@@ -109,7 +100,7 @@ table {
   width: 100%;
   border-collapse: collapse;
 
-  font-size: 10pt;
+  font-size: 10.3pt;
   text-align: center;
 }
 table,
@@ -175,22 +166,20 @@ th {
 .table-wrap td:first-child {
   padding-left: 3px;
   text-align: left;
-  font-size: 9pt;
+  font-size: 11pt;
   line-height: 18px;
 }
 
 .table-wrap tr:nth-child(2) td:nth-child(n + 2) {
-  width: 180px;
   font-weight: 700;
 }
 
 .table-wrap tr:first-child td:nth-child(2) {
-  width: 540px;
   font-weight: 700;
 }
 
 .table-wrap tr:nth-child(3) td:nth-child(n + 2) {
-  width: 45px;
+  width: 43px;
   font-weight: 700;
 }
 
