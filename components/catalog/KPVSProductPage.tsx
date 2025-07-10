@@ -8,7 +8,7 @@ import ProductRequestControls from "@/components/catalog/productRequestControls"
 import ProductHeader from "@/components/catalog/productHeader";
 import { Button } from "@/components/ui/button";
 import Table from "@/components/ui/table";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export default function KPVSKPVUProductPage({
   product,

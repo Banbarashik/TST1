@@ -7,6 +7,7 @@ import ProductHeader from "@/components/catalog/productHeader";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import Table from "../ui/table";
 import Image from "next/image";
+import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
@@ -87,6 +88,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         className="mb-10"
       />
       <Table tableData={product.tableData[1]} />
+      <TableAndCatalogLinks
+        tableURL="#"
+        tableLinkText="Водяные калориферы КСк"
+        catalogURL="#"
+      />
     </div>
   );
 }
