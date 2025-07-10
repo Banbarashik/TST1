@@ -8076,6 +8076,7 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
                 content:
                   "Основные технические характеристики водяного воздухонагревателя КСк 2-1-02-ХЛ3",
                 colspan: 4,
+                className: "text-left pl-1",
                 style: { fontSize: "11pt" },
               },
             ],
@@ -8084,9 +8085,21 @@ export const productData: (Product | KPVSKPVUProduct)[] = [
         rows: [
           {
             cells: [
-              { content: "Производительность по воздуху, м³/ч" },
+              {
+                content: (
+                  <>
+                    Производительность по воздуху, м<sup>3</sup>/ч
+                  </>
+                ),
+              },
               { content: "Производительность по теплу, кВт" },
-              { content: "Площадь поверхности теплообмена, м²" },
+              {
+                content: (
+                  <>
+                    Площадь поверхности теплообмена, м<sup>2</sup>
+                  </>
+                ),
+              },
               { content: "Масса, кг" },
             ],
           },

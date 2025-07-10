@@ -5,6 +5,7 @@ import { sortProducts } from "@/lib/utils";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
+import Table from "../ui/table";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
@@ -76,6 +77,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <p>{product.textContent[5]}</p>
       {/* PLACE FOR TABLE WITH TABS */}
       <h2>{product.headers[1]}</h2>
+      <Table tableData={product.tableData[0]} />
     </div>
   );
 }
