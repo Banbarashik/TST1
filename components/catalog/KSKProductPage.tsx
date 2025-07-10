@@ -81,7 +81,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
-        className="mb-0.5 h-76 w-full"
+        className="mb-0.5 h-62 w-full"
       />
       <ProductSubheader text={product.headers[1]} />
       <Table tableData={product.tableData[0]} />
