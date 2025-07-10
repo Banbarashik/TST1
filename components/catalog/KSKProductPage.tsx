@@ -1,15 +1,16 @@
 import { productData } from "@/data/products";
 
+import Image from "next/image";
+
 import { sortProducts } from "@/lib/utils";
 
+import Table from "@/components/ui/table";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import Table from "@/components/ui/table";
-import Image from "next/image";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 const sizeRegex = /ksk-\d+-(\d+)$/;
 const shortNameRegex = /КСк \d+-\d+/;
