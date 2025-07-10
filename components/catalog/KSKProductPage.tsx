@@ -78,7 +78,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </div>
       <ProductSubheader text={product.headers[0]} />
       <p>{product.textContent[5]}</p>
-      {/* PLACE FOR TABLE WITH TABS */}
+      <iframe
+        src={product.tableWithTabs}
+        title="Таблица рабочих параметров калорифера"
+        className="mb-0.5 h-76 w-full"
+      />
       <ProductSubheader text={product.headers[1]} />
       <Table tableData={product.tableData[0]} />
       <Image
