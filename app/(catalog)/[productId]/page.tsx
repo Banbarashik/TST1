@@ -2,7 +2,7 @@ import { productData } from "@/data/products";
 
 import type { Metadata } from "next";
 
-import PritochnyProductPage from "@/components/catalog/PritochnyProductPage";
+import PritochnyProductPage from "@/components/catalog/pritochnyProductPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
 
 export async function generateMetadata({
