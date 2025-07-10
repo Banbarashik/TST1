@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import type { PritochnyProduct } from "@/types";
 
+import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
@@ -50,7 +51,7 @@ export default function PritochnyProductPage({
       ) : (
         <ProductRequestControls product={product} />
       )}
-      <h2 className="mb-4 text-2xl">{headers[0]}</h2>
+      <ProductSubheader text={headers[0]} />
       <p className="mb-2.5 text-lg">{textContent[1]}</p>
       <iframe
         src={calculator}
@@ -82,7 +83,7 @@ export default function PritochnyProductPage({
           </Link>
         )}
       </p>
-      <h2 className="mb-6 text-2xl">{headers[1]}</h2>
+      <ProductSubheader text={headers[1]} />
       <Table
         tableData={table}
         className="single-table water-and-steam water-and-steam-inner mb-1"

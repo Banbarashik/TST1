@@ -4,8 +4,9 @@ import { sortProducts } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
+import ProductSubheader from "@/components/catalog/productSubheader";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import Table from "../ui/table";
+import Table from "@/components/ui/table";
 import Image from "next/image";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
@@ -75,10 +76,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
-      <h2>{product.headers[0]}</h2>
+      <ProductSubheader text={product.headers[0]} />
       <p>{product.textContent[5]}</p>
       {/* PLACE FOR TABLE WITH TABS */}
-      <h2>{product.headers[1]}</h2>
+      <ProductSubheader text={product.headers[1]} />
       <Table tableData={product.tableData[0]} />
       <Image
         src={product.drawing}
