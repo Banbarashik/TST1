@@ -44,16 +44,18 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   return (
     <div>
       <ProductHeader product={product} />
-      <div className="flex items-start">
+      <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} />
         <div>
-          <ProductParagraph>{product.textContent[0]}</ProductParagraph>
-          <ul>
+          <ProductSubheader text={product.textContent[0]} />
+          <ul className="mb-4 text-lg">
             <li>{product.textContent[1]}</li>
             <li>{product.textContent[2]}</li>
           </ul>
-          <div className="flex">
-            <ProductParagraph>{product.textContent[3]}</ProductParagraph>
+          <div className="mb-4 flex flex-col gap-1">
+            <ProductParagraph className="font-bold">
+              {product.textContent[3]}
+            </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {sameSizeProducts.map(({ id, shortName }) => (
                 <li key={id}>
@@ -64,8 +66,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col">
-            <ProductParagraph>{product.textContent[4]}</ProductParagraph>
+          <div className="flex flex-col gap-1">
+            <ProductParagraph className="font-bold">
+              {product.textContent[4]}
+            </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {sameNumOfRowsProducts.map(({ id, shortName }) => (
                 <li key={id}>
@@ -83,18 +87,18 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
-        className="mb-0.5 h-62 w-full"
+        className="mb-3 h-62 w-full"
       />
       <ProductSubheader text={product.headers[1]} />
-      <Table tableData={product.tableData[0]} />
+      <Table tableData={product.tableData[0]} className="mb-4" />
       <Image
         src={product.drawing}
         alt={product.name}
         width={968}
         height={1}
-        className="mb-10"
+        className="mb-4"
       />
-      <Table tableData={product.tableData[1]} />
+      <Table tableData={product.tableData[1]} className="mb-10" />
       <TableAndCatalogLinks
         tableURL="#"
         tableLinkText="Водяные калориферы КСк"
