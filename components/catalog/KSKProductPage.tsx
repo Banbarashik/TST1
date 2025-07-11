@@ -43,7 +43,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   return (
     <div>
-      <ProductHeader product={product} />
+      <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} />
         <div>
