@@ -6,7 +6,6 @@ import { sortProducts } from "@/lib/utils";
 
 import Table from "@/components/ui/table";
 import ProductCard from "@/components/catalog/productCard";
-import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
@@ -45,7 +44,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     <div>
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 flex items-start gap-4">
-        <ProductCard product={product} />
+        <ProductCard product={product} isLink={false} />
         <div>
           <ProductSubheader text={product.headers[0]} />
           <ProductParagraph>{product.textContent[0]}</ProductParagraph>

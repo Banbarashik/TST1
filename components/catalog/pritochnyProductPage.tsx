@@ -43,7 +43,7 @@ export default function PritochnyProductPage({
             return (
               <ProductCard
                 key={variant.id}
-                isVariant
+                isLink={false}
                 product={{ ...variant, airPower, img }}
               />
             );

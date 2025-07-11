@@ -10,27 +10,17 @@ import ProductRequestControls from "@/components/catalog/productRequestControls"
 
 export default function ProductCard({
   product,
-  isVariant = false,
+  isLink = true,
 }: {
   product: Product | ProductVariant;
-  isVariant?: boolean;
+  isLink?: boolean;
 }) {
   const hasVariants =
     Array.isArray(product.variants) && product.variants.length > 0;
 
   return (
     <div className="flex shrink-0 flex-col rounded-lg border p-4 transition hover:shadow-md">
-      {isVariant ? (
-        <>
-          <Image
-            src={product.img ?? ""}
-            alt={product.name}
-            width={300}
-            height={300}
-          />
-          <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
-        </>
-      ) : (
+      {isLink ? (
         <Link href={`/${product.id}`}>
           <Image
             src={product.img ?? ""}
@@ -40,6 +30,16 @@ export default function ProductCard({
           />
           <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
         </Link>
+      ) : (
+        <>
+          <Image
+            src={product.img ?? ""}
+            alt={product.name}
+            width={300}
+            height={300}
+          />
+          <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
+        </>
       )}
       <div className="mb-4">
         <p>
