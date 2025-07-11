@@ -38,6 +38,10 @@ export type PritochnyProduct = Product & {
   calculator: string;
 };
 
+export type KSKProduct = Product & {
+  tableWithTabs: string;
+};
+
 export type ProductVariant = Omit<
   Product,
   | "variants"

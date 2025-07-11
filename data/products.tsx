@@ -1,6 +1,6 @@
-import type { Product, PritochnyProduct } from "@/types";
+import type { Product, PritochnyProduct, KSKProduct } from "@/types";
 
-export const productData: (Product | PritochnyProduct)[] = [
+export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
   {
     id: "kpps-1572x1572",
     name: "Калорифер КППС-1572×1572 паровой", // главный заголовок страницы калорифера
@@ -15706,6 +15706,13 @@ export const productData: (Product | PritochnyProduct)[] = [
     price: 12705,
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
     drawing: "/img/kalorifery/ksk/kalorifer_ksk_2-1_chertez.png",
+    metadata: {
+      title: "Калорифер водяной КСк 2-1",
+      description:
+        "Калорифер КСк 2-1 водяной - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, вес, расчет и цена калорифера КСк 2-1 02 ХЛ3",
+      keywords:
+        "алорифер кск 2-1,калорифер кск 2-1 02 хл3,калорифер кск 2 1 водяной,калорифер кск 2 1 технические характеристики,калорифер кск 2 1 габаритные размеры,купить калорифер кск 2-1,калорифер кск 2 1 цена,калорифер кск 2 1 производительность,калорифер кск 2 1 масса,кск 2 1",
+    },
     headers: [
       "Калорифер КСк 2-1 02 ХЛ3. ТУ 4863-002-55613706-02",
       "Таблица рабочих параметров калорифера КСк 2-1",
