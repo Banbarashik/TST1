@@ -15708,8 +15708,16 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     airPower: 2000,
     heatPower: 29,
     price: 12705,
-    img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
-    drawing: "/img/kalorifery/ksk/kalorifer_ksk_2-1_chertez.png",
+    img: {
+      url: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
+      alt: "Воздухонагреватель КСк 2-1",
+      title: "Калорифер КСк 2 1 водяной",
+    },
+    drawing: {
+      url: "/img/kalorifery/ksk/kalorifer_ksk_2-1_chertez.png",
+      alt: "Габаритные и присоединительные размеры калорифера КСк 2-1",
+      title: "Чертеж водяного калорифера КСк 2 1",
+    },
     metadata: {
       title: "Калорифер водяной КСк 2-1",
       description:

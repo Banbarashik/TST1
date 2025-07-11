@@ -94,8 +94,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ProductSubheader text={product.headers[2]} />
       <Table tableData={product.tableData[0]} className="mb-4" />
       <Image
-        src={product.drawing}
-        alt={product.name}
+        src={product.drawing.url}
+        alt={product.drawing.alt}
+        title={product.drawing.title}
         width={968}
         height={1}
         className="mb-4"
