@@ -33,8 +33,8 @@ export default function ProductCard({
       ) : (
         <>
           <Image
-            src={product.img ?? ""}
-            alt={product.name}
+            src={product.img?.url ? product.img.url : product.img}
+            alt={product.img?.alt ? product.img.alt : product.name}
             width={300}
             height={300}
           />
