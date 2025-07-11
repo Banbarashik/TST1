@@ -34,7 +34,6 @@ input[type="radio"] {
   padding-bottom: 7px;
   padding-left: 10px;
   border: 1px solid black;
-  border-bottom-width: 0;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-right: none;
@@ -46,6 +45,8 @@ input[type="radio"] {
   cursor: pointer;
 
   white-space: nowrap;
+
+  background-color: rgb(204, 204, 204);
 }
 /* Внешний вид кнопок переключения таблиц (конец) */
 
@@ -193,3 +194,7 @@ th {
   margin-top: -4px;
 }
 /* Стилизация таблиц, которым требуется скролл (конец) */
+
+.gray-col {
+  background-color: #e5e7eb;
+}
