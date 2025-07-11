@@ -84,11 +84,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
       <ProductSubheader text={product.headers[0]} />
-      <ProductParagraph>{product.textContent[5]}</ProductParagraph>
+      <ProductParagraph className="mb-3">
+        {product.textContent[5]}
+      </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
-        className="mb-3 h-62 w-full"
+        className="mb-3 h-65 w-full"
       />
       <ProductSubheader text={product.headers[1]} />
       <Table tableData={product.tableData[0]} className="mb-4" />
