@@ -25,7 +25,6 @@ export default function ProductCard({
           <Image
             src={product.img?.url ? product.img.url : product.img}
             alt={product.img?.alt ? product.img.alt : product.name}
-            title={product.img?.title ? product.img.title : product.name}
             width={300}
             height={300}
           />
