@@ -15582,9 +15582,8 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       keywords:
         "калорифер 572 572,калорифер кпвс 572 572,калорифер водяной 572 572,калорифер водяной кпвс 572 572,калорифер приточный 572 572,калорифер водяной приточный 572 572,калорифер 572 572 технические характеристики,калорифер кпвс 572 572 расчет и подбор,приточный калорифер 572 572 производительность по воздуху 2500,водяной калорифер 500 500",
     },
-    img: "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_572x572.png",
-    drawing:
-      "/img/kalorifery/pritochny-ksk/kalorifer_pritochnyi_vodianoi_ksk_chertez.png",
+    img: "/img/kalorifery/kpvs/kalorifer_kpvs_572x572_905x905.png",
+    drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-572-572.html",
     headers: [
       "Калькулятор подбора калорифера КПВС 572х572",
