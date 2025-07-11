@@ -101,6 +101,11 @@ export const categoryTree: Category[] = [
             menuTitle: "Приточные калориферы КППУ",
             slug: "kppu",
           },
+          {
+            title: "Приточные калориферы КППС",
+            menuTitle: "Приточные калориферы КППС",
+            slug: "kpps",
+          },
         ],
       },
       {

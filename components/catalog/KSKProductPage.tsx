@@ -83,7 +83,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
-      <ProductSubheader text={product.headers[0]} />
+      <ProductSubheader text={product.headers[1]} />
       <ProductParagraph className="mb-3">
         {product.textContent[5]}
       </ProductParagraph>
@@ -92,7 +92,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         title="Таблица рабочих параметров калорифера"
         className="mb-3 h-65 w-full"
       />
-      <ProductSubheader text={product.headers[1]} />
+      <ProductSubheader text={product.headers[2]} />
       <Table tableData={product.tableData[0]} className="mb-4" />
       <Image
         src={product.drawing}
