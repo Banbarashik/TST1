@@ -47,7 +47,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} />
         <div>
-          <ProductSubheader text={product.textContent[0]} />
+          <ProductSubheader text={product.headers[0]} />
+          <ProductParagraph>{product.textContent[0]}</ProductParagraph>
           <ul className="mb-4 text-lg">
             <li>{product.textContent[1]}</li>
             <li>{product.textContent[2]}</li>
