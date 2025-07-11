@@ -22,8 +22,8 @@ RUN corepack enable
 # Copy only the dependency-related files
 COPY package.json pnpm-lock.yaml .npmrc* ./
 
-# Install only production dependencies
-RUN pnpm install --frozen-lockfile --prod
+# Install production AND devolopment dependencies
+RUN pnpm install --frozen-lockfile
 
 ##############################
 # 3. Build the app
