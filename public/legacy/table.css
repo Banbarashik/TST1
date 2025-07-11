@@ -34,11 +34,10 @@ input[type="radio"] {
   padding-bottom: 7px;
   padding-left: 10px;
   border: 1px solid black;
+  border-bottom-width: 0;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-right: none;
-
-  background-color: rgba(153, 153, 153, 1);
 
   color: rgba(0, 32, 96, 1);
   font-size: 11pt;
@@ -47,9 +46,6 @@ input[type="radio"] {
   cursor: pointer;
 
   white-space: nowrap;
-}
-.table-with-scroll .btn {
-  padding-bottom: 5px;
 }
 /* Внешний вид кнопок переключения таблиц (конец) */
 
@@ -84,17 +80,11 @@ input[type="radio"] {
 #table_btn444:checked ~ .btn444,
 #table_btn555:checked ~ .btn555,
 #table_btn666:checked ~ .btn666 {
-  border-bottom-color: rgb(204, 204, 204);
-  color: rgba(192, 0, 0, 1);
-  background-color: rgb(204, 204, 204);
+  color: #e4572e;
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #f3f4f6;
 }
 /* Поведение кнопок для переключения таблиц (конец) */
-
-.single-table {
-  /* margin: 0 auto; */
-
-  background-color: rgb(204, 204, 204);
-}
 
 /* Стилизация непосредственно таблицы (начало) */
 table {
@@ -155,11 +145,9 @@ th {
 
 .table-wrap {
   padding: 10px 12px;
-  margin-top: 4px;
   margin-bottom: 5px;
+  margin-top: -1px;
   border: 1px solid black;
-
-  background-color: rgb(204, 204, 204);
 
   overflow: auto;
 }
@@ -190,10 +178,6 @@ th {
 #primary3.table-with-scroll,
 #primary4.table-with-scroll {
   overflow-x: auto;
-  overflow-y: hidden;
-
-  width: 100%;
-  margin-top: 15px;
 }
 #primary.tabs-fix,
 #primary2.tabs-fix {
@@ -204,10 +188,6 @@ th {
 #primary3.table-with-scroll::-webkit-scrollbar,
 #primary4.table-with-scroll::-webkit-scrollbar {
   display: none;
-}
-.table-wrap.table-with-scroll {
-  /* margin-top: -3px; */
-  margin-top: -2px;
 }
 .table-wrap.table2.table-with-scroll {
   margin-top: -4px;
