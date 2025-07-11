@@ -1,6 +1,7 @@
 import type { Product, PritochnyProduct, KSKProduct } from "@/types";
 
 export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
+  // КППС-572_1572
   {
     id: "kpps-1572x1572",
     name: "Калорифер КППС-1572×1572 паровой", // главный заголовок страницы калорифера
@@ -3986,6 +3987,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       },
     ],
   },
+  // КППУ-572_1572
   {
     id: "kppu-1572x1572",
     name: "Калорифер КППУ-1572×1572 паровой", // главный заголовок страницы калорифера
@@ -7651,6 +7653,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       },
     ],
   },
+  // КПВУ-572_1572
   {
     id: "kpvu-1572x1572",
     name: "Калорифер КПВУ-1572×1572 водяной", // главный заголовок страницы калорифера
@@ -11533,6 +11536,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       },
     ],
   },
+  // КПВС-572_1572
   {
     id: "kpvs-1572x1572",
     name: "Калорифер КПВС-1572×1572 водяной", // главный заголовок страницы калорифера
