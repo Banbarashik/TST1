@@ -165,7 +165,7 @@ th {
 }
 
 .table-wrap td:first-child {
-  padding-left: 3px;
+  padding: 3px 0 3px 3px;
   text-align: left;
   font-size: 11pt;
   line-height: 18px;
