@@ -144,9 +144,9 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
               { content: 1637 }, // H3
               { content: 1388 }, // C
               { content: 65 }, // dy мм
-              { content: 58.0 }, // КППС2
+              { content: "58.0" }, // КППС2
               { content: 87.4 }, // КППС3
-              { content: 116.0 }, // КППС4
+              { content: "116.0" }, // КППС4
               { content: 170 }, // КППС2
               { content: 230 }, // КППС3
               { content: 287 }, // КППС4
@@ -624,9 +624,9 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
               { content: 1512 }, // H3
               { content: 1263 }, // C
               { content: 65 }, // dy мм
-              { content: 52.6 }, // КППС2
-              { content: 79.3 }, // КППС3
-              { content: 105.2 }, // КППС4
+              { content: 48.7 }, // КППС2
+              { content: 73.4 }, // КППС3
+              { content: 97.4 }, // КППС4
               { content: 147 }, // КППС2
               { content: 197 }, // КППС3
               { content: 246 }, // КППС4
@@ -785,7 +785,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
               { content: 1221 }, // C
               { content: 65 }, // dy мм
               { content: 45.8 }, // КППС2
-              { content: 69.0 }, // КППС3
+              { content: "69.0" }, // КППС3
               { content: 91.6 }, // КППС4
               { content: 139 }, // КППС2
               { content: 186 }, // КППС3
