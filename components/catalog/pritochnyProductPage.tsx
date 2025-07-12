@@ -19,33 +19,49 @@ export default function PritochnyProductPage({
 }) {
   const {
     name,
+    shortName,
     variants,
     prevProduct,
     nextProduct,
     airPower,
     img,
     drawing,
-    textContent,
-    headers,
     calculator,
     tableData,
   } = product;
 
   const [table] = tableData;
 
+  const typeForms = {
+    "vodiany-kalorifery": {
+      nom: "водяной", // именительный
+      gen: "водяного", // родительный
+      plu: "водяные", // множественное
+    },
+    "parovy-kalorifery": {
+      nom: "паровой",
+      gen: "парового",
+      plu: "паровые", // множественное
+    },
+  };
+  const typeKey = product.categories.includes("vodiany-kalorifery")
+    ? "vodiany-kalorifery"
+    : product.categories.includes("parovy-kalorifery")
+      ? "parovy-kalorifery"
+      : null;
+  const type = typeKey ? typeForms[typeKey] : null;
+
+  const shortNameWithHyphen = shortName?.replace(" ", "-");
+
   return (
     <div>
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
-        Приточный{" "}
-        {product.categories.includes("vodiany-kalorifery")
-          ? "водяной"
-          : "паровой"}{" "}
-        калорифер {product.shortName?.replace(" ", "-")} выпускается в двух,
-        трех и четырех рядном исполнении. Номинальная производительность по
-        воздуху –{product.airPower} метров кубических в час, тепловая мощность
-        варьируется в зависимости от рядности калорифера{" "}
-        {product.shortName?.replace(" ", "-")} и параметров эксплуатации.
+        Приточный {type?.nom} калорифер {shortNameWithHyphen} выпускается в
+        двух, трех и четырех рядном исполнении. Номинальная производительность
+        по воздуху – {airPower} метров кубических в час, тепловая мощность
+        варьируется в зависимости от рядности калорифера {shortNameWithHyphen} и
+        параметров эксплуатации.
       </ProductParagraph>
       {variants && variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">
@@ -62,14 +78,12 @@ export default function PritochnyProductPage({
       ) : (
         <ProductRequestControls product={product} />
       )}
-      <ProductSubheader
-        text={`Калькулятор подбора калорифера ${product.shortName}`}
-      />
+      <ProductSubheader text={`Калькулятор подбора калорифера ${shortName}`} />
       <ProductParagraph className="mb-2.5">
         Синие поля обязательны для заполнения. Запас площади поверхности
         нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
         фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.
-        {product.categories.includes("vodiany-kalorifery") &&
+        {typeKey === "vodiany-kalorifery" &&
           "Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с."}
       </ProductParagraph>
       <iframe
@@ -86,12 +100,8 @@ export default function PritochnyProductPage({
         {nextProduct && (
           <>
             Если запас площади поверхности теплообмена не достаточен ни для
-            одной модели {product.shortName} (двух, трех и четырех рядной) нужно
-            перейти к следующему номеру{" "}
-            {product.categories.includes("vodiany-kalorifery")
-              ? "водяного "
-              : "парового "}
-            калорифера:{" "}
+            одной модели {shortName} (двух, трех и четырех рядной) нужно перейти
+            к следующему номеру {type?.gen} калорифера:{" "}
             <Link
               href={nextProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
@@ -114,8 +124,8 @@ export default function PritochnyProductPage({
         {!nextProduct && prevProduct && (
           <>
             Если запас площади поверхности теплообмена превышает допустимые
-            значения для всех моделей {product.shortName} (двух, трех и четырех
-            рядных) следует рассмотреть меньший теплообменник:
+            значения для всех моделей {shortName} (двух, трех и четырех рядных)
+            следует рассмотреть меньший теплообменник:
             <Link
               href={prevProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
@@ -125,9 +135,7 @@ export default function PritochnyProductPage({
           </>
         )}
       </ProductParagraph>
-      <ProductSubheader
-        text={`Технические характеристики ${product.shortName}`}
-      />
+      <ProductSubheader text={`Технические характеристики ${shortName}`} />
       <Table
         tableData={table}
         className="single-table water-and-steam water-and-steam-inner mb-1"
@@ -143,11 +151,7 @@ export default function PritochnyProductPage({
       )}
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText={
-          product.categories.includes("pritochny-vodiany-kalorifery")
-            ? "Приточные водяные калориферы"
-            : "Приточные паровые калориферы"
-        }
+        tableLinkText={`Приточные ${type?.plu} калориферы`}
         catalogURL="#"
       />
       <Button
