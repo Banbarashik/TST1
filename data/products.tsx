@@ -17515,7 +17515,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 141,
     price: 29452,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_2-10.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
       alt: "Воздухонагреватель КСк 3-10",
       title: "Калорифер КСк 3 10 водяной",
     },
@@ -17644,7 +17644,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 108,
     price: 24383,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_2-10.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
       alt: "Воздухонагреватель КСк 3-9",
       title: "Калорифер КСк 3 9 водяной",
     },
@@ -17773,7 +17773,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 86,
     price: 21841,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_2-10.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
       alt: "Воздухонагреватель КСк 3-8",
       title: "Калорифер КСк 3 8 водяной",
     },
@@ -17902,7 +17902,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 68,
     price: 19283,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_2-10.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
       alt: "Воздухонагреватель КСк 3-7",
       title: "Калорифер КСк 3 7 водяной",
     },
@@ -18031,7 +18031,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 53,
     price: 16556,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_2-10.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-6_3-10.png",
       alt: "Воздухонагреватель КСк 3-6",
       title: "Калорифер КСк 3 6 водяной",
     },
@@ -18160,7 +18160,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 103,
     price: 23445,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_2-5.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
       alt: "Воздухонагреватель КСк 3-5",
       title: "Калорифер КСк 3 5 водяной",
     },
@@ -18289,7 +18289,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 79,
     price: 19605,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_2-5.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
       alt: "Воздухонагреватель КСк 3-4",
       title: "Калорифер КСк 3 4 водяной",
     },
@@ -18418,7 +18418,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 63,
     price: 17589,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_2-5.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
       alt: "Воздухонагреватель КСк 3-3",
       title: "Калорифер КСк 3 3 водяной",
     },
@@ -18547,7 +18547,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 50,
     price: 15563,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_2-5.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
       alt: "Воздухонагреватель КСк 3-2",
       title: "Калорифер КСк 3 2 водяной",
     },
@@ -18676,7 +18676,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     heatPower: 39,
     price: 13475,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_2-5.png",
+      url: "/img/kalorifery/ksk/kalorifer_ksk_3-1_3-5.png",
       alt: "Воздухонагреватель КСк 3-1",
       title: "Калорифер КСк 3 1 водяной",
     },
