@@ -198,3 +198,8 @@ th {
 .gray-col {
   background-color: #e5e7eb;
 }
+
+.coolant-graph {
+  background-color: rgb(204, 204, 204);
+  color: #b04322;
+}
