@@ -112,7 +112,8 @@ export default function PritochnyProductPage({
         )}
         {nextProduct && prevProduct && (
           <>
-            При избыточном запасе следует рассмотреть меньший теплообменник:
+            {" "}
+            При избыточном запасе следует рассмотреть меньший теплообменник:{" "}
             <Link
               href={prevProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
@@ -125,7 +126,7 @@ export default function PritochnyProductPage({
           <>
             Если запас площади поверхности теплообмена превышает допустимые
             значения для всех моделей {shortName} (двух, трех и четырех рядных)
-            следует рассмотреть меньший теплообменник:
+            следует рассмотреть меньший теплообменник:{" "}
             <Link
               href={prevProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
