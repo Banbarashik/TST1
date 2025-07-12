@@ -5,6 +5,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
   {
     id: "kpps-1572x1572",
     name: "Калорифер КППС-1572×1572 паровой", // главный заголовок страницы калорифера
+    shortName: "КППС-1572x1572",
     variants: [
       {
         id: "kpps-1572x1572-2",

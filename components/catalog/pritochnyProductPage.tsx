@@ -36,7 +36,17 @@ export default function PritochnyProductPage({
   return (
     <div>
       <ProductHeader product={product} />
-      <ProductParagraph className="mb-6">{textContent[0]}</ProductParagraph>
+      <ProductParagraph className="mb-6">
+        Приточный{" "}
+        {product.categories.includes("vodiany-kalorifery")
+          ? "водяной"
+          : "паровой"}{" "}
+        калорифер {product.shortName} выпускается в двух, трех и четырех рядном
+        исполнении. Номинальная производительность по воздуху –
+        {product.airPower} метров кубических в час, тепловая мощность
+        варьируется в зависимости от рядности калорифера {product.shortName} и
+        параметров эксплуатации.
+      </ProductParagraph>
       {variants && variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">
           {variants.map(function (variant) {
@@ -52,8 +62,14 @@ export default function PritochnyProductPage({
       ) : (
         <ProductRequestControls product={product} />
       )}
-      <ProductSubheader text={headers[0]} />
-      <ProductParagraph className="mb-2.5">{textContent[1]}</ProductParagraph>
+      <ProductSubheader
+        text={`Калькулятор подбора калорифера ${product.shortName?.replace("-", " ")}`}
+      />
+      <ProductParagraph className="mb-2.5">
+        Синие поля обязательны для заполнения. Запас площади поверхности
+        нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
+        фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.
+      </ProductParagraph>
       <iframe
         src={calculator}
         title="Калькулятор калорифера"
@@ -65,23 +81,47 @@ export default function PritochnyProductPage({
         className="mb-0.5"
       />
       <ProductParagraph className="mb-10">
-        {textContent[2]}
         {nextProduct && (
-          <Link
-            href={nextProduct.slug}
-            className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
-          >
-            {nextProduct.name}
-          </Link>
+          <>
+            Если запас площади поверхности теплообмена не достаточен ни для
+            одной модели {product.shortName?.replace("-", " ")} (двух, трех и
+            четырех рядной) нужно перейти к следующему номеру{" "}
+            {product.categories.includes("vodiany-kalorifery")
+              ? "водяного "
+              : "парового "}
+            калорифера:{" "}
+            <Link
+              href={nextProduct.slug}
+              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+            >
+              {nextProduct.name}
+            </Link>
+          </>
         )}
-        {textContent[3]}
-        {prevProduct && (
-          <Link
-            href={prevProduct.slug}
-            className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
-          >
-            {prevProduct.name}
-          </Link>
+        {nextProduct && prevProduct && (
+          <>
+            При избыточном запасе следует рассмотреть меньший теплообменник:
+            <Link
+              href={prevProduct.slug}
+              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+            >
+              {prevProduct.name}
+            </Link>
+          </>
+        )}
+        {!nextProduct && prevProduct && (
+          <>
+            Если запас площади поверхности теплообмена превышает допустимые
+            значения для всех моделей {product.shortName?.replace("-", " ")}{" "}
+            (двух, трех и четырех рядных) следует рассмотреть меньший
+            теплообменник:
+            <Link
+              href={prevProduct.slug}
+              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+            >
+              {prevProduct.name}
+            </Link>
+          </>
         )}
       </ProductParagraph>
       <ProductSubheader text={headers[1]} />
