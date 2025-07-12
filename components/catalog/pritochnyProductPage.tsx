@@ -41,11 +41,11 @@ export default function PritochnyProductPage({
         {product.categories.includes("vodiany-kalorifery")
           ? "водяной"
           : "паровой"}{" "}
-        калорифер {product.shortName} выпускается в двух, трех и четырех рядном
-        исполнении. Номинальная производительность по воздуху –
-        {product.airPower} метров кубических в час, тепловая мощность
-        варьируется в зависимости от рядности калорифера {product.shortName} и
-        параметров эксплуатации.
+        калорифер {product.shortName?.replace(" ", "-")} выпускается в двух,
+        трех и четырех рядном исполнении. Номинальная производительность по
+        воздуху –{product.airPower} метров кубических в час, тепловая мощность
+        варьируется в зависимости от рядности калорифера{" "}
+        {product.shortName?.replace(" ", "-")} и параметров эксплуатации.
       </ProductParagraph>
       {variants && variants.length > 0 ? (
         <div className="mb-12 grid grid-cols-3 gap-5">
@@ -63,12 +63,14 @@ export default function PritochnyProductPage({
         <ProductRequestControls product={product} />
       )}
       <ProductSubheader
-        text={`Калькулятор подбора калорифера ${product.shortName?.replace("-", " ")}`}
+        text={`Калькулятор подбора калорифера ${product.shortName}`}
       />
       <ProductParagraph className="mb-2.5">
         Синие поля обязательны для заполнения. Запас площади поверхности
         нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
         фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.
+        {product.categories.includes("vodiany-kalorifery") &&
+          "Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с."}
       </ProductParagraph>
       <iframe
         src={calculator}
@@ -84,8 +86,8 @@ export default function PritochnyProductPage({
         {nextProduct && (
           <>
             Если запас площади поверхности теплообмена не достаточен ни для
-            одной модели {product.shortName?.replace("-", " ")} (двух, трех и
-            четырех рядной) нужно перейти к следующему номеру{" "}
+            одной модели {product.shortName} (двух, трех и четырех рядной) нужно
+            перейти к следующему номеру{" "}
             {product.categories.includes("vodiany-kalorifery")
               ? "водяного "
               : "парового "}
@@ -112,9 +114,8 @@ export default function PritochnyProductPage({
         {!nextProduct && prevProduct && (
           <>
             Если запас площади поверхности теплообмена превышает допустимые
-            значения для всех моделей {product.shortName?.replace("-", " ")}{" "}
-            (двух, трех и четырех рядных) следует рассмотреть меньший
-            теплообменник:
+            значения для всех моделей {product.shortName} (двух, трех и четырех
+            рядных) следует рассмотреть меньший теплообменник:
             <Link
               href={prevProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
@@ -124,7 +125,9 @@ export default function PritochnyProductPage({
           </>
         )}
       </ProductParagraph>
-      <ProductSubheader text={headers[1]} />
+      <ProductSubheader
+        text={`Технические характеристики ${product.shortName}`}
+      />
       <Table
         tableData={table}
         className="single-table water-and-steam water-and-steam-inner mb-1"
