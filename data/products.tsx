@@ -14857,11 +14857,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       alt: "Воздухонагреватель КСк 2-12",
       title: "Калорифер КСк 2 12 водяной",
     },
-    drawing: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_2-12_chertez.png",
-      alt: "Габаритные и присоединительные размеры калорифера КСк 2-12",
-      title: "Чертеж водяного калорифера КСк 2 12",
-    },
+    drawing: "/img/kalorifery/ksk/kalorifer_ksk_2-12_chertez.png",
     metadata: {
       title: "Калорифер водяной КСк 2-12",
       description:

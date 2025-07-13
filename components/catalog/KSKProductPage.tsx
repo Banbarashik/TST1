@@ -20,6 +20,27 @@ const rowLabels: Record<number, string> = {
 };
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
+  const typeForms = {
+    "vodiany-kalorifery": {
+      nom: "водяной", // именительный
+      gen: "водяного", // родительный
+      plu: "водяные", // множественное
+    },
+    "parovy-kalorifery": {
+      nom: "паровой",
+      gen: "парового",
+      plu: "паровые", // множественное
+    },
+  };
+  const typeKey = product.categories.includes("vodiany-kalorifery")
+    ? "vodiany-kalorifery"
+    : product.categories.includes("parovy-kalorifery")
+      ? "parovy-kalorifery"
+      : null;
+  const type = typeKey ? typeForms[typeKey] : null;
+
+  const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+
   const category = product.categories.includes("ksk")
     ? "ksk"
     : product.categories.includes("kpsk")
@@ -95,21 +116,30 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
-      <ProductSubheader text={product.headers[1]} />
+      <ProductSubheader
+        text={`Таблица рабочих параметров калорифера ${product.shortName}`}
+      />
       <ProductParagraph className="mb-3">
-        {product.textContent[5]}
+        Ниже представлены расчетные данные водяного калорифера{" "}
+        {shortNameWithoutHyphen} производства ООО Т.С.Т. Выбрав в верхней части
+        таблицы подходящий вам график теплоносителя, можно ознакомиться с
+        основными теплотехническими показателями: температурой воздуха на
+        выходе, гидравлическим и аэродинамическим сопротивлением, вырабатываемой
+        мощностью.
       </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
         className="mb-3 h-65 w-full"
       />
-      <ProductSubheader text={product.headers[2]} />
+      <ProductSubheader
+        text={`Технические характеристики ${product.shortName}`}
+      />
       <Table tableData={product.tableData[0]} className="mb-4" />
       <Image
-        src={product.drawing.url}
-        alt={product.drawing.alt}
-        title={product.drawing.title}
+        src={product.drawing}
+        alt={`Габаритные и присоединительные размеры калорифера ${product.shortName}`}
+        title={`Чертеж ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
         width={968}
         height={1}
         className="mb-4"
@@ -117,7 +147,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <Table tableData={product.tableData[1]} className="mb-10" />
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText="Водяные калориферы КСк"
+        tableLinkText={`${type?.plu} калориферы КСк`}
         catalogURL="#"
       />
     </div>
