@@ -125,6 +125,39 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         text={`Технические характеристики ${product.shortName}`}
       />
       <Table tableData={product.tableData[0]} className="mb-4" />
+      <table className="mb-4">
+        <thead>
+          <tr>
+            <th
+              colSpan={4}
+              className="pl-1 text-left"
+              style={{ fontSize: "11pt" }}
+            >
+              Основные технические характеристики водяного воздухонагревателя{" "}
+              {product.shortName}-02-ХЛ3
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Производительность по воздуху, м<sup>3</sup>/ч
+            </td>
+            <td>Производительность по теплу, кВт</td>
+            <td>
+              Площадь поверхности теплообмена, м<sup>2</sup>
+            </td>
+            <td>Масса, кг</td>
+          </tr>
+          <tr>
+            {product.specsTableValues.map((value, i) => (
+              <td key={i} style={{ fontSize: "11pt" }}>
+                {value}
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
       <Image
         src={product.drawing}
         alt={`Габаритные и присоединительные размеры калорифера ${product.shortName}`}
@@ -134,6 +167,40 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         className="mb-4"
       />
       <Table tableData={product.tableData[1]} className="mb-10" />
+      <table className="mb-10">
+        <thead>
+          <tr>
+            <th
+              colSpan={9}
+              className="pl-1 text-left"
+              style={{ fontSize: "11pt" }}
+            >
+              Габаритные и присоединительные размеры оребренного теплообменника{" "}
+              {product.shortName}, мм
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>L</td>
+            <td>L 1</td>
+            <td>L 2</td>
+            <td>L 3</td>
+            <td>H</td>
+            <td>H 1</td>
+            <td>H 2</td>
+            <td>C</td>
+            <td>dy</td>
+          </tr>
+          <tr>
+            {product.sizeTableValues.map((value, i) => (
+              <td key={i} style={{ fontSize: "11pt" }}>
+                {value}
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
       <TableAndCatalogLinks
         tableURL="#"
         tableLinkText={`${type?.plu} калориферы ${categoryLabel}`}
