@@ -46,15 +46,22 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} isLink={false} />
         <div>
-          <ProductSubheader text={product.headers[0]} />
-          <ProductParagraph>{product.textContent[0]}</ProductParagraph>
+          <ProductSubheader
+            text={`Калорифер ${product.shortName} 02 ХЛ3. ТУ 4863-002-55613706-02`}
+          />
+          <ProductParagraph>Теплоотдающие элементы: </ProductParagraph>
           <ul className="mb-4 text-lg">
-            <li>{product.textContent[1]}</li>
-            <li>{product.textContent[2]}</li>
+            <li>
+              - электросварные прямошовные трубки 16х1.5 мм по ГОСТ 10704-91
+            </li>
+            <li>
+              - цельнотянутые бесшовные трубки 16х1.5 мм по ГОСТ 8734-75 с
+              алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
+            </li>
           </ul>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              {product.textContent[3]}
+              Все калориферы данного типоразмера
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {sameSizeProducts.map(({ id, shortName }) => (
