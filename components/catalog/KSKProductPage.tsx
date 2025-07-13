@@ -5,7 +5,6 @@ import Image from "next/image";
 import { sortProducts } from "@/lib/utils";
 import { getProductTypeForms } from "@/lib/productType";
 
-import Table from "@/components/ui/table";
 import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
@@ -124,7 +123,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ProductSubheader
         text={`Технические характеристики ${product.shortName}`}
       />
-      <Table tableData={product.tableData[0]} className="mb-4" />
       <table className="mb-4">
         <thead>
           <tr>
@@ -166,7 +164,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         height={1}
         className="mb-4"
       />
-      <Table tableData={product.tableData[1]} className="mb-10" />
       <table className="mb-10">
         <thead>
           <tr>
