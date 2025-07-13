@@ -11,6 +11,7 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
+const categoryNameRegex = /^([А-Яа-яA-Za-z]+)/;
 const sizeRegex = /\d+-(\d+)/;
 const rowsRegex = /-(\d+)$/;
 const rowLabels: Record<number, string> = {
@@ -41,6 +42,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
+  const [, categoryName] = product.shortName.match(categoryNameRegex);
   const category = product.categories.includes("ksk")
     ? "ksk"
     : product.categories.includes("kpsk")
@@ -147,7 +149,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <Table tableData={product.tableData[1]} className="mb-10" />
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText={`${type?.plu} калориферы КСк`}
+        tableLinkText={`${type?.plu} калориферы ${categoryName}`}
         catalogURL="#"
       />
     </div>
