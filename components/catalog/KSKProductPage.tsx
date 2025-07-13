@@ -11,7 +11,13 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const rowsAndSizeRegex = /(\d+)-(\d+)/;
+const sizeRegex = /\d+-(\d+)/;
+const rowsRegex = /-(\d+)$/;
+const rowLabels: Record<number, string> = {
+  2: "двухрядные",
+  3: "трехрядные",
+  4: "четырехрядные",
+};
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const category = product.categories.includes("ksk")
@@ -19,7 +25,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     : product.categories.includes("kpsk")
       ? "kpsk"
       : "";
-  const [, rows, size] = product.shortName.match(rowsAndSizeRegex);
   const exactCategory = product.categories.find((cat) =>
     [`${category}-2`, `${category}-3`, `${category}-4`].includes(cat),
   );
@@ -32,10 +37,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     p.categories.includes(exactCategory),
   );
 
+  const [, size] = product.shortName.match(sizeRegex);
   const productsBySize = productsByCategory.filter(function (p) {
-    const [, , pSize] = p.id.match(rowsAndSizeRegex)!;
+    const [, pSize] = p.id.match(sizeRegex)!;
     return size === pSize;
   });
+
+  const [, rows] = exactCategory.match(rowsRegex);
+  const rowsPluAdj = rowLabels[rows] || "";
 
   return (
     <div>
@@ -72,7 +81,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
           <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              {product.textContent[4]}
+              Стандартные {rowsPluAdj} типоразмеры
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsByRows.map((p) => (
