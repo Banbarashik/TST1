@@ -11,34 +11,31 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const sizeRegex = /ksk-\d+-(\d+)$/;
-const shortNameRegex = /КСк \d+-\d+/;
+const rowsAndSizeRegex = /(\d+)-(\d+)/;
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
-  const category = product.categories.find((cat: string) =>
-    ["ksk-2", "ksk-3", "ksk-4"].includes(cat),
+  const category = product.categories.includes("ksk")
+    ? "ksk"
+    : product.categories.includes("kpsk")
+      ? "kpsk"
+      : "";
+  const [, rows, size] = product.shortName.match(rowsAndSizeRegex);
+  const exactCategory = product.categories.find((cat) =>
+    [`${category}-2`, `${category}-3`, `${category}-4`].includes(cat),
   );
-  const KSKProducts = productData.filter((p) => p.categories.includes("ksk"));
 
-  const [, thisProductsize] = product.id.match(sizeRegex);
-  const sameSizeProducts = KSKProducts.filter(function (product) {
-    const [, anotherProductSize] = product.id.match(sizeRegex)!;
-    return thisProductsize === anotherProductSize;
-  })
-    .sort((a, b) => sortProducts(a.name, b.name))
-    .map((p) => ({
-      id: p.id,
-      shortName: p.name.match(shortNameRegex)![0],
-    }));
+  const productsByCategory = productData
+    .filter((p) => p.categories.includes(category))
+    .sort((a, b) => sortProducts(a.name, b.name));
 
-  const sameNumOfRowsProducts = KSKProducts.filter((p) =>
-    p.categories.includes(category),
-  )
-    .sort((a, b) => sortProducts(a.name, b.name))
-    .map((p) => ({
-      id: p.id,
-      shortName: p.name.match(shortNameRegex)![0],
-    }));
+  const productsByRows = productsByCategory.filter((p) =>
+    p.categories.includes(exactCategory),
+  );
+
+  const productsBySize = productsByCategory.filter(function (p) {
+    const [, , pSize] = p.id.match(rowsAndSizeRegex)!;
+    return size === pSize;
+  });
 
   return (
     <div>
@@ -64,10 +61,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               Все калориферы данного типоразмера
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
-              {sameSizeProducts.map(({ id, shortName }) => (
-                <li key={id}>
-                  <SimilarProductLink id={id} isActive={id === product.id}>
-                    {shortName}
+              {productsBySize.map((p) => (
+                <li key={p.id}>
+                  <SimilarProductLink id={p.id} isActive={p.id === product.id}>
+                    {p.shortName}
                   </SimilarProductLink>
                 </li>
               ))}
@@ -78,10 +75,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {product.textContent[4]}
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
-              {sameNumOfRowsProducts.map(({ id, shortName }) => (
-                <li key={id}>
-                  <SimilarProductLink id={id} isActive={id === product.id}>
-                    {shortName}
+              {productsByRows.map((p) => (
+                <li key={p.id}>
+                  <SimilarProductLink id={p.id} isActive={p.id === product.id}>
+                    {p.shortName}
                   </SimilarProductLink>
                 </li>
               ))}

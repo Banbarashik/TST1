@@ -16397,6 +16397,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
   {
     id: "kalorifer-ksk-3-12",
     name: "Калорифер КСк 3-12",
+    shortName: "КСк 3-12",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-3"],
     airPower: 25000,
     heatPower: 576,
@@ -17946,6 +17947,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
   {
     id: "kalorifer-ksk-4-12",
     name: "Калорифер КСк 4-12",
+    shortName: "КСк 4-12",
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 25000,
     heatPower: 665,

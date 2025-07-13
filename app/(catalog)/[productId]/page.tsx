@@ -36,6 +36,6 @@ export default async function ProductPage({
   )
     return <PritochnyProductPage product={product} />;
 
-  if (product.categories.includes("ksk"))
+  if (product.categories.includes("ksk") || product.categories.includes("kpsk"))
     return <KSKProductPage product={product} />;
 }
