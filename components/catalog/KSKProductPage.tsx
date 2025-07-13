@@ -3,6 +3,7 @@ import { productData } from "@/data/products";
 import Image from "next/image";
 
 import { sortProducts } from "@/lib/utils";
+import { getProductTypeForms } from "@/lib/productType";
 
 import Table from "@/components/ui/table";
 import ProductCard from "@/components/catalog/productCard";
@@ -21,24 +22,7 @@ const rowLabels: Record<number, string> = {
 };
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
-  const typeForms = {
-    "vodiany-kalorifery": {
-      nom: "водяной", // именительный
-      gen: "водяного", // родительный
-      plu: "водяные", // множественное
-    },
-    "parovy-kalorifery": {
-      nom: "паровой",
-      gen: "парового",
-      plu: "паровые", // множественное
-    },
-  };
-  const typeKey = product.categories.includes("vodiany-kalorifery")
-    ? "vodiany-kalorifery"
-    : product.categories.includes("parovy-kalorifery")
-      ? "parovy-kalorifery"
-      : null;
-  const type = typeKey ? typeForms[typeKey] : null;
+  const type = getProductTypeForms(product.categories);
 
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
