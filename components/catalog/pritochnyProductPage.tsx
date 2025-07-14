@@ -52,6 +52,7 @@ export default function PritochnyProductPage({
   const type = typeKey ? typeForms[typeKey] : null;
 
   const shortNameWithHyphen = shortName?.replace(" ", "-");
+  const [nameAbbrev] = shortName.match(/^[А-ЯA-Z]+/);
 
   const isWater = product.heatCarrier === "water";
   const isSteam = product.heatCarrier === "steam";
@@ -192,12 +193,12 @@ export default function PritochnyProductPage({
             <th className="small-cols">C</th>
             <th className="small-cols w-10">мм</th>
             {isWater && <th className="small-cols w-10 pt-1">"</th>}
-            <th className="kal2">КПВС2</th>
-            <th className="kal2">КПВС3</th>
-            <th className="kal2">КПВС4</th>
-            <th className="kal2">КПВС2</th>
-            <th className="kal2">КПВС3</th>
-            <th className="kal2">КПВС4</th>
+            <th className="kal2">{nameAbbrev}2</th>
+            <th className="kal2">{nameAbbrev}3</th>
+            <th className="kal2">{nameAbbrev}4</th>
+            <th className="kal2">{nameAbbrev}2</th>
+            <th className="kal2">{nameAbbrev}3</th>
+            <th className="kal2">{nameAbbrev}4</th>
           </tr>
         </thead>
         <tbody>
