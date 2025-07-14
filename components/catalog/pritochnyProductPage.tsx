@@ -53,6 +53,9 @@ export default function PritochnyProductPage({
 
   const shortNameWithHyphen = shortName?.replace(" ", "-");
 
+  const isWater = product.heatCarrier === "water";
+  const isSteam = product.heatCarrier === "steam";
+
   return (
     <div>
       <ProductHeader product={product} />
@@ -150,7 +153,7 @@ export default function PritochnyProductPage({
             <th colSpan={5}>
               Габаритные и <br /> присоединительные размеры, мм
             </th>
-            <th colSpan={2} className="dy">
+            <th colSpan={isWater ? 2 : 1} className="dy">
               dy
             </th>
             <th colSpan={3}>
@@ -162,22 +165,33 @@ export default function PritochnyProductPage({
           </tr>
           <tr>
             <th className="small-cols">
-              L<br />H
+              {isWater && "L"}
+              {isSteam && "H"}
+              <br />
+              {isWater && "H"}
+              {isSteam && "B"}
             </th>
             <th className="small-cols">
-              L1
+              {isWater && "L1"}
+              {isSteam && "H1"}
               <br />
-              H1
+              {isWater && "H1"}
+              {isSteam && "B1"}
             </th>
             <th className="small-cols">
-              L2
+              {isWater && "L2"}
+              {isSteam && "H2"}
               <br />
-              H2
+              {isWater && "H2"}
+              {isSteam && "B2"}
             </th>
-            <th className="small-cols">L3</th>
+            <th className="small-cols">
+              {isWater && "L3"}
+              {isSteam && "H3"}
+            </th>
             <th className="small-cols">C</th>
             <th className="small-cols w-10">мм</th>
-            <th className="small-cols w-10 pt-1">"</th>
+            {isWater && <th className="small-cols w-10 pt-1">"</th>}
             <th className="kal2">КПВС2</th>
             <th className="kal2">КПВС3</th>
             <th className="kal2">КПВС4</th>
@@ -188,22 +202,9 @@ export default function PritochnyProductPage({
         </thead>
         <tbody>
           <tr>
-            <td>2500</td>
-            <td>500</td>
-            <td>548</td>
-            <td>572</td>
-            <td>637</td>
-            <td>435</td>
-            <td>32</td>
-            <td>
-              1 <sup>1</sup>/<sub>4</sub>
-            </td>
-            <td>6.8</td>
-            <td>10.4</td>
-            <td>13.7</td>
-            <td>31</td>
-            <td>37</td>
-            <td>43</td>
+            {product.specsTableValues.map((value, i) => (
+              <td key={i}>{value}</td>
+            ))}
           </tr>
         </tbody>
       </table>

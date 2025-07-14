@@ -3769,6 +3769,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     id: "kppu-1572x1572",
     name: "Калорифер КППУ-1572×1572 паровой", // главный заголовок страницы калорифера
     shortName: "КППУ 1572x1572",
+    heatCarrier: "steam",
     variants: [
       {
         id: "kppu-1572x1572-2",
@@ -3813,6 +3814,9 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1572-1572.html",
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
+    specsTableValues: [
+      24000, 1500, 1548, 1572, 1637, 1376, 80, 46.2, 69.7, 92.5, 182, 247, 319,
+    ],
     tableData: [
       {
         headers: [
@@ -10908,6 +10912,7 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     id: "kpvs-1572x1572",
     name: "Калорифер КПВС-1572×1572 водяной", // главный заголовок страницы калорифера
     shortName: "КПВС 1572×1572",
+    heatCarrier: "water",
     variants: [
       {
         id: "kpvs-1572x1572-2",
@@ -10952,6 +10957,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1572-1572.html",
     // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
+    specsTableValues: [
+      25000, 1500, 1548, 1572, 1637, 1402, 50, 2, 62.6, 94.4, 125.3, 170, 230,
+      287,
+    ],
     tableData: [
       {
         headers: [
