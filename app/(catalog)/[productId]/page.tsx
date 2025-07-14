@@ -47,9 +47,9 @@ export async function generateMetadata({
 
   if (productType === "standardCalorifier") {
     return {
-      title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
-      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, вес, расчет и цена калорифера ${product.shortName} 02 ХЛ3`,
-      keywords: `калорифер ${product.shortName},калорифер ${product.shortName} 02 хл3,калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj.nom},калорифер ${shortNameWithoutHyphen} технические характеристики,калорифер ${shortNameWithoutHyphen} габаритные размеры,купить калорифер ${product.shortName},калорифер ${shortNameWithoutHyphen} цена,калорифер ${shortNameWithoutHyphen} производительность,калорифер ${shortNameWithoutHyphen} масса,кск ${shortNameWithoutHyphen}`,
+      title: `Калорифер ${heatCarrierAdj.nom} ${shortNameWithoutHyphen}`,
+      description: `Калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, вес, расчет и цена калорифера ${shortNameWithoutHyphen} 02 ХЛ3`,
+      keywords: `калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} 02 хл3,калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj.nom},калорифер ${shortNameWithoutHyphen} технические характеристики,калорифер ${shortNameWithoutHyphen} габаритные размеры,купить калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} цена,калорифер ${shortNameWithoutHyphen} производительность,калорифер ${shortNameWithoutHyphen} масса,кск ${shortNameWithoutHyphen}`,
     };
   }
 }
