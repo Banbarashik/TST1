@@ -30,8 +30,6 @@ export default function PritochnyProductPage({
     tableData,
   } = product;
 
-  const [table] = tableData;
-
   const typeForms = {
     "vodiany-kalorifery": {
       nom: "водяной", // именительный
@@ -141,10 +139,6 @@ export default function PritochnyProductPage({
         )}
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${shortName}`} />
-      <Table
-        tableData={table}
-        className="single-table water-and-steam water-and-steam-inner mb-1"
-      />
       <table className="single-table water-and-steam water-and-steam-inner mb-1">
         <thead>
           <tr>

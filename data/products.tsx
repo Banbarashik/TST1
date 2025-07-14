@@ -4,14 +4,14 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
   // КППС-572_1572
   {
     id: "kpps-1572x1572",
-    name: "Калорифер КППС-1572×1572 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1572×1572 паровой",
     shortName: "КППС 1572x1572",
     variants: [
       {
         id: "kpps-1572x1572-2",
         name: "Приточный калорифер КППС 1572x1572_2",
-        heatPower: 321, // производительность по теплу
-        price: 65202, // цена
+        heatPower: 321,
+        price: 65202,
       },
       {
         id: "kpps-1572x1572-3",
@@ -26,139 +26,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 120951,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1530x1530", // номер предыдущего калорифера
-      name: "КППС-1530x1530", // номер предыдущего калорифера
+      slug: "kpps-1530x1530",
+      name: "КППС-1530x1530",
     },
-    airPower: 25000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1572x1572",
-      description:
-        "Приточный паровой калорифер КППС 1572x1572 производительностью по воздуху 25000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1572 1572,калорифер КППС 1572 1572,калорифер паровой 1572 1572,калорифер паровой КППС 1572 1572,калорифер приточный 1572 1572,калорифер паровой приточный 1572 1572,калорифер 1572 1572 технические характеристики,калорифер КППС 1572 1572 расчет и подбор,приточный калорифер 1572 1572 производительность по воздуху 25000,паровой калорифер 1600 1600",
-    },
+    airPower: 25000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1572-1572.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 25000 }, // Производительность по воздуху
-              { content: 1500 }, // H B
-              { content: 1548 }, // H1 B1
-              { content: 1572 }, // H2 B2
-              { content: 1637 }, // H3
-              { content: 1388 }, // C
-              { content: 65 }, // dy мм
-              { content: "58.0" }, // КППС2
-              { content: 87.4 }, // КППС3
-              { content: "116.0" }, // КППС4
-              { content: 170 }, // КППС2
-              { content: 230 }, // КППС3
-              { content: 287 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      25000,
+      1500,
+      1548,
+      1572,
+      1637,
+      1388,
+      65,
+      "58.0",
+      87.4,
+      "116.0",
+      170,
+      230,
+      287,
     ],
   },
   {
     id: "kpps-1530x1530",
-    name: "Калорифер КППС-1530×1530 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1530×1530 паровой",
     shortName: "КППС 1530x1530",
     variants: [
       {
         id: "kpps-1530x1530-2",
         name: "Приточный калорифер КППС 1530x1530_2",
-        heatPower: 301, // производительность по теплу
-        price: 63035, // цена
+        heatPower: 301,
+        price: 63035,
       },
       {
         id: "kpps-1530x1530-3",
@@ -173,143 +81,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 116630,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1489x1489", // номер предыдущего калорифера
-      name: "КППС-1489x1489", // номер предыдущего калорифера
+      slug: "kpps-1489x1489",
+      name: "КППС-1489x1489",
     },
-    nextProduct: {
-      slug: "kpps-1572x1572", // номер следующего калорифера
-      name: "КППС-1572х1572", // номер следующего калорифера
-    },
-    airPower: 23000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1530x1530",
-      description:
-        "Приточный паровой калорифер КППС 1530x1530 производительностью по воздуху 23000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1530 1530,калорифер КППС 1530 1530,калорифер паровой 1530 1530,калорифер паровой КППС 1530 1530,калорифер приточный 1530 1530,калорифер паровой приточный 1530 1530,калорифер 1530 1530 технические характеристики,калорифер КППС 1530 1530 расчет и подбор,приточный калорифер 1530 1530 производительность по воздуху 23000,паровой калорифер 1500 1500",
-    },
+    airPower: 23000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1530-1530.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 23000 }, // Производительность по воздуху
-              { content: 1458 }, // H B
-              { content: 1506 }, // H1 B1
-              { content: 1530 }, // H2 B2
-              { content: 1595 }, // H3
-              { content: 1346 }, // C
-              { content: 65 }, // dy мм
-              { content: 54.8 }, // КППС2
-              { content: 82.6 }, // КППС3
-              { content: 109.6 }, // КППС4
-              { content: 163 }, // КППС2
-              { content: 219 }, // КППС3
-              { content: 273 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      23000, 1458, 1506, 1530, 1595, 1346, 65, 54.8, 82.6, 109.6, 163, 219, 273,
     ],
   },
   {
     id: "kpps-1489x1489",
-    name: "Калорифер КППС-1489×1489 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1489×1489 паровой",
     shortName: "КППС 1489x1489",
     variants: [
       {
         id: "kpps-1489x1489-2",
         name: "Приточный калорифер КППС 1489x1489_2",
-        heatPower: 286, // производительность по теплу
-        price: 60694, // цена
+        heatPower: 286,
+        price: 60694,
       },
       {
         id: "kpps-1489x1489-3",
@@ -324,143 +124,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 112153,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1447x1447", // номер предыдущего калорифера
-      name: "КППС-1447x1447", // номер предыдущего калорифера
+      slug: "kpps-1447x1447",
+      name: "КППС-1447x1447",
     },
-    nextProduct: {
-      slug: "kpps-1530x1530", // номер следующего калорифера
-      name: "КППС-1530х1530", // номер следующего калорифера
-    },
-    airPower: 22000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1489x1489",
-      description:
-        "Приточный паровой калорифер КППС 1489x1489 производительностью по воздуху 22000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1489 1489,калорифер КППС 1489 1489,калорифер паровой 1489 1489,калорифер паровой КППС 1489 1489,калорифер приточный 1489 1489,калорифер паровой приточный 1489 1489,калорифер 1489 1489 технические характеристики,калорифер КППС 1489 1489 расчет и подбор,приточный калорифер 1489 1489 производительность по воздуху 22000,паровой калорифер 1500 1500",
-    },
+    airPower: 22000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1489-1489.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 22000 }, // Производительность по воздуху
-              { content: 1417 }, // H B
-              { content: 1465 }, // H1 B1
-              { content: 1489 }, // H2 B2
-              { content: 1554 }, // H3
-              { content: 1305 }, // C
-              { content: 65 }, // dy мм
-              { content: 51.7 }, // КППС2
-              { content: 78.0 }, // КППС3
-              { content: 103.5 }, // КППС4
-              { content: 154 }, // КППС2
-              { content: 207 }, // КППС3
-              { content: 259 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      22000, 1417, 1465, 1489, 1554, 1305, 65, 51.7, 78.0, 103.5, 154, 207, 259,
     ],
   },
   {
     id: "kpps-1447x1447",
-    name: "Калорифер КППС-1447×1447 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1447×1447 паровой",
     shortName: "КППС 1447x1447",
     variants: [
       {
         id: "kpps-1447x1447-2",
         name: "Приточный калорифер КППС 1447x1447_2",
-        heatPower: 272, // производительность по теплу
-        price: 58478, // цена
+        heatPower: 272,
+        price: 58478,
       },
       {
         id: "kpps-1447x1447-3",
@@ -475,143 +167,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 107751,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1405x1405", // номер предыдущего калорифера
-      name: "КППС-1405x1405", // номер предыдущего калорифера
+      slug: "kpps-1405x1405",
+      name: "КППС-1405x1405",
     },
-    nextProduct: {
-      slug: "kpps-1489x1489", // номер следующего калорифера
-      name: "КППС-1489х1489", // номер следующего калорифера
-    },
-    airPower: 21000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1447x1447",
-      description:
-        "Приточный паровой калорифер КППС 1447x1447 производительностью по воздуху 21000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1447 1447,калорифер КППС 1447 1447,калорифер паровой 1447 1447,калорифер паровой КППС 1447 1447,калорифер приточный 1447 1447,калорифер паровой приточный 1447 1447,калорифер 1447 1447 технические характеристики,калорифер КППС 1447 1447 расчет и подбор,приточный калорифер 1447 1447 производительность по воздуху 21000,паровой калорифер 1400 1400",
-    },
+    airPower: 21000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1447-1447.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 21000 }, // Производительность по воздуху
-              { content: 1375 }, // H B
-              { content: 1423 }, // H1 B1
-              { content: 1447 }, // H2 B2
-              { content: 1512 }, // H3
-              { content: 1263 }, // C
-              { content: 65 }, // dy мм
-              { content: 48.7 }, // КППС2
-              { content: 73.4 }, // КППС3
-              { content: 97.4 }, // КППС4
-              { content: 147 }, // КППС2
-              { content: 197 }, // КППС3
-              { content: 246 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      21000, 1375, 1423, 1447, 1512, 1263, 65, 48.7, 73.4, 97.4, 147, 197, 246,
     ],
   },
   {
     id: "kpps-1405x1405",
-    name: "Калорифер КППС-1405×1405 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1405×1405 паровой",
     shortName: "КППС 1405x1405",
     variants: [
       {
         id: "kpps-1405x1405-2",
         name: "Приточный калорифер КППС 1405x1405_2",
-        heatPower: 257, // производительность по теплу
-        price: 56055, // цена
+        heatPower: 257,
+        price: 56055,
       },
       {
         id: "kpps-1405x1405-3",
@@ -626,143 +210,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 103133,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1364x1364", // номер предыдущего калорифера
-      name: "КППС-1364x1364", // номер предыдущего калорифера
+      slug: "kpps-1364x1364",
+      name: "КППС-1364x1364",
     },
-    nextProduct: {
-      slug: "kpps-1447x1447", // номер следующего калорифера
-      name: "КППС-1447х1447", // номер следующего калорифера
-    },
-    airPower: 20000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1405x1405",
-      description:
-        "Приточный паровой калорифер КППС 1405x1405 производительностью по воздуху 20000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1405 1405,калорифер КППС 1405 1405,калорифер паровой 1405 1405,калорифер паровой КППС 1405 1405,калорифер приточный 1405 1405,калорифер паровой приточный 1405 1405,калорифер 1405 1405 технические характеристики,калорифер КППС 1405 1405 расчет и подбор,приточный калорифер 1405 1405 производительность по воздуху 20000,паровой калорифер 1400 1400",
-    },
+    airPower: 20000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1405-1405.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 20000 }, // Производительность по воздуху
-              { content: 1333 }, // H B
-              { content: 1381 }, // H1 B1
-              { content: 1405 }, // H2 B2
-              { content: 1470 }, // H3
-              { content: 1221 }, // C
-              { content: 65 }, // dy мм
-              { content: 45.8 }, // КППС2
-              { content: "69.0" }, // КППС3
-              { content: 91.6 }, // КППС4
-              { content: 139 }, // КППС2
-              { content: 186 }, // КППС3
-              { content: 232 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      20000,
+      1333,
+      1381,
+      1405,
+      1470,
+      1221,
+      65,
+      45.8,
+      "69.0",
+      91.6,
+      139,
+      186,
+      232,
     ],
   },
   {
     id: "kpps-1364x1364",
-    name: "Калорифер КППС-1364×1364 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1364×1364 паровой",
     shortName: "КППС 1364x1364",
     variants: [
       {
         id: "kpps-1364x1364-2",
         name: "Приточный калорифер КППС 1364x1364_2",
-        heatPower: 243, // производительность по теплу
-        price: 53845, // цена
+        heatPower: 243,
+        price: 53845,
       },
       {
         id: "kpps-1364x1364-3",
@@ -777,143 +265,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 98757,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1322x1322", // номер предыдущего калорифера
-      name: "КППС-1322x1322", // номер предыдущего калорифера
+      slug: "kpps-1322x1322",
+      name: "КППС-1322x1322",
     },
-    nextProduct: {
-      slug: "kpps-1405x1405", // номер следующего калорифера
-      name: "КППС-1405х1405", // номер следующего калорифера
-    },
-    airPower: 19000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1364x1364",
-      description:
-        "Приточный паровой калорифер КППС 1364x1364 производительностью по воздуху 19000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1364 1364,калорифер КППС 1364 1364,калорифер паровой 1364 1364,калорифер паровой КППС 1364 1364,калорифер приточный 1364 1364,калорифер паровой приточный 1364 1364,калорифер 1364 1364 технические характеристики,калорифер КППС 1364 1364 расчет и подбор,приточный калорифер 1364 1364 производительность по воздуху 19000,паровой калорифер 1300 1300",
-    },
+    airPower: 19000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1364-1364.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 19000 }, // Производительность по воздуху
-              { content: 1292 }, // H B
-              { content: 1340 }, // H1 B1
-              { content: 1364 }, // H2 B2
-              { content: 1429 }, // H3
-              { content: 1180 }, // C
-              { content: 65 }, // dy мм
-              { content: "43.0" }, // КППС2
-              { content: 64.8 }, // КППС3
-              { content: 85.9 }, // КППС4
-              { content: 133 }, // КППС2
-              { content: 177 }, // КППС3
-              { content: 219 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      19000,
+      1292,
+      1340,
+      1364,
+      1429,
+      1180,
+      65,
+      "43.0",
+      64.8,
+      85.9,
+      133,
+      177,
+      219,
     ],
   },
   {
     id: "kpps-1322x1322",
-    name: "Калорифер КППС-1322×1322 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1322×1322 паровой",
     shortName: "КППС 1322x1322",
     variants: [
       {
         id: "kpps-1322x1322-2",
         name: "Приточный калорифер КППС 1322x1322_2",
-        heatPower: 230, // производительность по теплу
-        price: 51395, // цена
+        heatPower: 230,
+        price: 51395,
       },
       {
         id: "kpps-1322x1322-3",
@@ -928,143 +320,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 94108,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1280x1280", // номер предыдущего калорифера
-      name: "КППС-1280x1280", // номер предыдущего калорифера
+      slug: "kpps-1280x1280",
+      name: "КППС-1280x1280",
     },
-    nextProduct: {
-      slug: "kpps-1364x1364", // номер следующего калорифера
-      name: "КППС-1364х1364", // номер следующего калорифера
-    },
-    airPower: 18000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1322x1322",
-      description:
-        "Приточный паровой калорифер КППС 1322x1322 производительностью по воздуху 18000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1322 1322,калорифер КППС 1322 1322,калорифер паровой 1322 1322,калорифер паровой КППС 1322 1322,калорифер приточный 1322 1322,калорифер паровой приточный 1322 1322,калорифер 1322 1322 технические характеристики,калорифер КППС 1322 1322 расчет и подбор,приточный калорифер 1322 1322 производительность по воздуху 18000,паровой калорифер 1300 1300",
-    },
+    airPower: 18000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1322-1322.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 18000 }, // Производительность по воздуху
-              { content: 1250 }, // H B
-              { content: 1298 }, // H1 B1
-              { content: 1322 }, // H2 B2
-              { content: 1387 }, // H3
-              { content: 1138 }, // C
-              { content: 65 }, // dy мм
-              { content: 40.2 }, // КППС2
-              { content: 60.7 }, // КППС3
-              { content: 80.4 }, // КППС4
-              { content: 125 }, // КППС2
-              { content: 166 }, // КППС3
-              { content: 206 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      18000, 1250, 1298, 1322, 1387, 1138, 65, 40.2, 60.7, 80.4, 125, 166, 206,
     ],
   },
   {
     id: "kpps-1280x1280",
-    name: "Калорифер КППС-1280×1280 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1280×1280 паровой",
     shortName: "КППС 1280x1280",
     variants: [
       {
         id: "kpps-1280x1280-2",
         name: "Приточный калорифер КППС 1280x1280_2",
-        heatPower: 216, // производительность по теплу
-        price: 49139, // цена
+        heatPower: 216,
+        price: 49139,
       },
       {
         id: "kpps-1280x1280-3",
@@ -1079,143 +363,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 89656,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1239x1239", // номер предыдущего калорифера
-      name: "КППС-1239x1239", // номер предыдущего калорифера
+      slug: "kpps-1239x1239",
+      name: "КППС-1239x1239",
     },
-    nextProduct: {
-      slug: "kpps-1322x1322", // номер следующего калорифера
-      name: "КППС-1322х1322", // номер следующего калорифера
-    },
-    airPower: 17000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1280x1280",
-      description:
-        "Приточный паровой калорифер КППС 1280x1280 производительностью по воздуху 17000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1280 1280,калорифер КППС 1280 1280,калорифер паровой 1280 1280,калорифер паровой КППС 1280 1280,калорифер приточный 1280 1280,калорифер паровой приточный 1280 1280,калорифер 1280 1280 технические характеристики,калорифер КППС 1280 1280 расчет и подбор,приточный калорифер 1280 1280 производительность по воздуху 17000,паровой калорифер 1300 1300",
-    },
+    airPower: 17000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1280-1280.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 17000 }, // Производительность по воздуху
-              { content: 1208 }, // H B
-              { content: 1256 }, // H1 B1
-              { content: 1280 }, // H2 B2
-              { content: 1345 }, // H3
-              { content: 1096 }, // C
-              { content: 65 }, // dy мм
-              { content: 37.6 }, // КППС2
-              { content: 56.7 }, // КППС3
-              { content: 75.1 }, // КППС4
-              { content: 119 }, // КППС2
-              { content: 157 }, // КППС3
-              { content: 194 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      17000, 1208, 1256, 1280, 1345, 1096, 65, 37.6, 56.7, 75.1, 119, 157, 194,
     ],
   },
   {
     id: "kpps-1239x1239",
-    name: "Калорифер КППС-1239×1239 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1239×1239 паровой",
     shortName: "КППС 1239x1239",
     variants: [
       {
         id: "kpps-1239x1239-2",
         name: "Приточный калорифер КППС 1239x1239_2",
-        heatPower: 203, // производительность по теплу
-        price: 46714, // цена
+        heatPower: 203,
+        price: 46714,
       },
       {
         id: "kpps-1239x1239-3",
@@ -1230,143 +406,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 85079,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1197x1197", // номер предыдущего калорифера
-      name: "КППС-1197x1197", // номер предыдущего калорифера
+      slug: "kpps-1197x1197",
+      name: "КППС-1197x1197",
     },
-    nextProduct: {
-      slug: "kpps-1280x1280", // номер следующего калорифера
-      name: "КППС-1280х1280", // номер следующего калорифера
-    },
-    airPower: 16000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1239x1239",
-      description:
-        "Приточный паровой калорифер КППС 1239x1239 производительностью по воздуху 16000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1239 1239,калорифер КППС 1239 1239,калорифер паровой 1239 1239,калорифер паровой КППС 1239 1239,калорифер приточный 1239 1239,калорифер паровой приточный 1239 1239,калорифер 1239 1239 технические характеристики,калорифер КППС 1239 1239 расчет и подбор,приточный калорифер 1239 1239 производительность по воздуху 16000,паровой калорифер 1200 1200",
-    },
+    airPower: 16000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1239-1239.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 16000 }, // Производительность по воздуху
-              { content: 1167 }, // H B
-              { content: 1215 }, // H1 B1
-              { content: 1239 }, // H2 B2
-              { content: 1304 }, // H3
-              { content: 1055 }, // C
-              { content: 65 }, // dy мм
-              { content: "35.0" }, // КППС2
-              { content: 52.8 }, // КППС3
-              { content: "70.0" }, // КППС4
-              { content: 112 }, // КППС2
-              { content: 148 }, // КППС3
-              { content: 182 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      16000,
+      1167,
+      1215,
+      1239,
+      1304,
+      1055,
+      65,
+      "35.0",
+      52.8,
+      "70.0",
+      112,
+      148,
+      182,
     ],
   },
   {
     id: "kpps-1197x1197",
-    name: "Калорифер КППС-1197×1197 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1197×1197 паровой",
     shortName: "КППС 1197x1197",
     variants: [
       {
         id: "kpps-1197x1197-2",
         name: "Приточный калорифер КППС 1197x1197_2",
-        heatPower: 189, // производительность по теплу
-        price: 44465, // цена
+        heatPower: 189,
+        price: 44465,
       },
       {
         id: "kpps-1197x1197-3",
@@ -1381,143 +461,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 80657,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1155x1155", // номер предыдущего калорифера
-      name: "КППС-1155x1155", // номер предыдущего калорифера
+      slug: "kpps-1155x1155",
+      name: "КППС-1155x1155",
     },
-    nextProduct: {
-      slug: "kpps-1239x1239", // номер следующего калорифера
-      name: "КППС-1239х1239", // номер следующего калорифера
-    },
-    airPower: 15000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1197x1197",
-      description:
-        "Приточный паровой калорифер КППС 1197x1197 производительностью по воздуху 15000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1197 1197,калорифер КППС 1197 1197,калорифер паровой 1197 1197,калорифер паровой КППС 1197 1197,калорифер приточный 1197 1197,калорифер паровой приточный 1197 1197,калорифер 1197 1197 технические характеристики,калорифер КППС 1197 1197 расчет и подбор,приточный калорифер 1197 1197 производительность по воздуху 15000,паровой калорифер 1200 1200",
-    },
+    airPower: 15000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1197-1197.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 15000 }, // Производительность по воздуху
-              { content: 1125 }, // H B
-              { content: 1173 }, // H1 B1
-              { content: 1197 }, // H2 B2
-              { content: 1262 }, // H3
-              { content: 1013 }, // C
-              { content: 65 }, // dy мм
-              { content: 32.5 }, // КППС2
-              { content: 49.1 }, // КППС3
-              { content: "65.0" }, // КППС4
-              { content: 106 }, // КППС2
-              { content: 139 }, // КППС3
-              { content: 171 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      15000,
+      1125,
+      1173,
+      1197,
+      1262,
+      1013,
+      65,
+      32.5,
+      49.1,
+      "65.0",
+      106,
+      139,
+      171,
     ],
   },
   {
     id: "kpps-1155x1155",
-    name: "Калорифер КППС-1155×1155 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1155×1155 паровой",
     shortName: "КППС 1155x1155",
     variants: [
       {
         id: "kpps-1155x1155-2",
         name: "Приточный калорифер КППС 1155x1155_2",
-        heatPower: 176, // производительность по теплу
-        price: 42018, // цена
+        heatPower: 176,
+        price: 42018,
       },
       {
         id: "kpps-1155x1155-3",
@@ -1532,143 +516,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 76057,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1114x1114", // номер предыдущего калорифера
-      name: "КППС-1114x1114", // номер предыдущего калорифера
+      slug: "kpps-1114x1114",
+      name: "КППС-1114x1114",
     },
-    nextProduct: {
-      slug: "kpps-1197x1197", // номер следующего калорифера
-      name: "КППС-1197х1197", // номер следующего калорифера
-    },
-    airPower: 14000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1155x1155",
-      description:
-        "Приточный паровой калорифер КППС 1155x1155 производительностью по воздуху 14000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1155 1155,калорифер КППС 1155 1155,калорифер паровой 1155 1155,калорифер паровой КППС 1155 1155,калорифер приточный 1155 1155,калорифер паровой приточный 1155 1155,калорифер 1155 1155 технические характеристики,калорифер КППС 1155 1155 расчет и подбор,приточный калорифер 1155 1155 производительность по воздуху 14000,паровой калорифер 1100 1100",
-    },
+    airPower: 14000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1155-1155.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 14000 }, // Производительность по воздуху
-              { content: 1083 }, // H B
-              { content: 1131 }, // H1 B1
-              { content: 1155 }, // H2 B2
-              { content: 1220 }, // H3
-              { content: 971 }, // C
-              { content: 65 }, // dy мм
-              { content: 30.1 }, // КППС2
-              { content: 45.5 }, // КППС3
-              { content: 60.3 }, // КППС4
-              { content: 99 }, // КППС2
-              { content: 130 }, // КППС3
-              { content: 160 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      14000, 1083, 1131, 1155, 1220, 971, 65, 30.1, 45.5, 60.3, 99, 130, 160,
     ],
   },
   {
     id: "kpps-1114x1114",
-    name: "Калорифер КППС-1114×1114 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1114×1114 паровой",
     shortName: "КППС 1114x1114",
     variants: [
       {
         id: "kpps-1114x1114-2",
         name: "Приточный калорифер КППС 1114x1114_2",
-        heatPower: 164, // производительность по теплу
-        price: 39826, // цена
+        heatPower: 164,
+        price: 39826,
       },
       {
         id: "kpps-1114x1114-3",
@@ -1683,143 +559,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 71766,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1072x1072", // номер предыдущего калорифера
-      name: "КППС-1072x1072", // номер предыдущего калорифера
+      slug: "kpps-1072x1072",
+      name: "КППС-1072x1072",
     },
-    nextProduct: {
-      slug: "kpps-1155x1155", // номер следующего калорифера
-      name: "КППС-1155х1155", // номер следующего калорифера
-    },
-    airPower: 13000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1114x1114",
-      description:
-        "Приточный паровой калорифер КППС 1114x1114 производительностью по воздуху 13000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1114 1114,калорифер КППС 1114 1114,калорифер паровой 1114 1114,калорифер паровой КППС 1114 1114,калорифер приточный 1114 1114,калорифер паровой приточный 1114 1114,калорифер 1114 1114 технические характеристики,калорифер КППС 1114 1114 расчет и подбор,приточный калорифер 1114 1114 производительность по воздуху 13000,паровой калорифер 1100 1100",
-    },
+    airPower: 13000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1114-1114.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 13000 }, // Производительность по воздуху
-              { content: 1042 }, // H B
-              { content: 1090 }, // H1 B1
-              { content: 1114 }, // H2 B2
-              { content: 1179 }, // H3
-              { content: 930 }, // C
-              { content: 65 }, // dy мм
-              { content: 27.9 }, // КППС2
-              { content: 42.1 }, // КППС3
-              { content: 55.8 }, // КППС4
-              { content: 93 }, // КППС2
-              { content: 122 }, // КППС3
-              { content: 149 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      13000, 1042, 1090, 1114, 1179, 930, 65, 27.9, 42.1, 55.8, 93, 122, 149,
     ],
   },
   {
     id: "kpps-1072x1072",
-    name: "Калорифер КППС-1072×1072 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1072×1072 паровой",
     shortName: "КППС 1072x1072",
     variants: [
       {
         id: "kpps-1072x1072-2",
         name: "Приточный калорифер КППС 1072x1072_2",
-        heatPower: 151, // производительность по теплу
-        price: 37408, // цена
+        heatPower: 151,
+        price: 37408,
       },
       {
         id: "kpps-1072x1072-3",
@@ -1834,143 +602,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 67246,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-1030x1030", // номер предыдущего калорифера
-      name: "КППС-1030x1030", // номер предыдущего калорифера
+      slug: "kpps-1030x1030",
+      name: "КППС-1030x1030",
     },
-    nextProduct: {
-      slug: "kpps-1114x1114", // номер следующего калорифера
-      name: "КППС-1114х1114", // номер следующего калорифера
-    },
-    airPower: 12000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1072x1072",
-      description:
-        "Приточный паровой калорифер КППС 1072x1072 производительностью по воздуху 12000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1072 1072,калорифер КППС 1072 1072,калорифер паровой 1072 1072,калорифер паровой КППС 1072 1072,калорифер приточный 1072 1072,калорифер паровой приточный 1072 1072,калорифер 1072 1072 технические характеристики,калорифер КППС 1072 1072 расчет и подбор,приточный калорифер 1072 1072 производительность по воздуху 12000,паровой калорифер 1000 1000",
-    },
+    airPower: 12000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1072-1072.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 12000 }, // Производительность по воздуху
-              { content: 1000 }, // H B
-              { content: 1048 }, // H1 B1
-              { content: 1072 }, // H2 B2
-              { content: 1137 }, // H3
-              { content: 888 }, // C
-              { content: 65 }, // dy мм
-              { content: 25.6 }, // КППС2
-              { content: 38.7 }, // КППС3
-              { content: 51.3 }, // КППС4
-              { content: 87 }, // КППС2
-              { content: 113 }, // КППС3
-              { content: 138 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      12000, 1000, 1048, 1072, 1137, 888, 65, 25.6, 38.7, 51.3, 87, 113, 138,
     ],
   },
   {
     id: "kpps-1030x1030",
-    name: "Калорифер КППС-1030×1030 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-1030×1030 паровой",
     shortName: "КППС 1030x1030",
     variants: [
       {
         id: "kpps-1030x1030-2",
         name: "Приточный калорифер КППС 1030x1030_2",
-        heatPower: 139, // производительность по теплу
-        price: 35230, // цена
+        heatPower: 139,
+        price: 35230,
       },
       {
         id: "kpps-1030x1030-3",
@@ -1985,143 +645,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 62998,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-989x989", // номер предыдущего калорифера
-      name: "КППС-989x989", // номер предыдущего калорифера
+      slug: "kpps-989x989",
+      name: "КППС-989x989",
     },
-    nextProduct: {
-      slug: "kpps-1072x1072", // номер следующего калорифера
-      name: "КППС-1072х1072", // номер следующего калорифера
-    },
-    airPower: 11000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-1030x1030",
-      description:
-        "Приточный паровой калорифер КППС 1030x1030 производительностью по воздуху 11000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1030 1030,калорифер КППС 1030 1030,калорифер паровой 1030 1030,калорифер паровой КППС 1030 1030,калорифер приточный 1030 1030,калорифер паровой приточный 1030 1030,калорифер 1030 1030 технические характеристики,калорифер КППС 1030 1030 расчет и подбор,приточный калорифер 1030 1030 производительность по воздуху 11000,паровой калорифер 1000 1000",
-    },
+    airPower: 11000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1030-1030.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 11000 }, // Производительность по воздуху
-              { content: 958 }, // H B
-              { content: 1006 }, // H1 B1
-              { content: 1030 }, // H2 B2
-              { content: 1095 }, // H3
-              { content: 860 }, // C
-              { content: 50 }, // dy мм
-              { content: 23.6 }, // КППС2
-              { content: 35.6 }, // КППС3
-              { content: 47.1 }, // КППС4
-              { content: 81 }, // КППС2
-              { content: 106 }, // КППС3
-              { content: 129 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      11000, 958, 1006, 1030, 1095, 860, 50, 23.6, 35.6, 47.1, 81, 106, 129,
     ],
   },
   {
     id: "kpps-989x989",
-    name: "Калорифер КППС-989×989 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-989×989 паровой",
     shortName: "КППС 989x989",
     variants: [
       {
         id: "kpps-989x989-2",
         name: "Приточный калорифер КППС 989x989_2",
-        heatPower: 127, // производительность по теплу
-        price: 32889, // цена
+        heatPower: 127,
+        price: 32889,
       },
       {
         id: "kpps-989x989-3",
@@ -2136,143 +688,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 58653,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-947x947", // номер предыдущего калорифера
-      name: "КППС-947x947", // номер предыдущего калорифера
+      slug: "kpps-947x947",
+      name: "КППС-947x947",
     },
-    nextProduct: {
-      slug: "kpps-1030x1030", // номер следующего калорифера
-      name: "КППС-1030х1030", // номер следующего калорифера
-    },
-    airPower: 10000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-989x989",
-      description:
-        "Приточный паровой калорифер КППС 989x989 производительностью по воздуху 10000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 989 989,калорифер КППС 989 989,калорифер паровой 989 989,калорифер паровой КППС 989 989,калорифер приточный 989 989,калорифер паровой приточный 989 989,калорифер 989 989 технические характеристики,калорифер КППС 989 989 расчет и подбор,приточный калорифер 989 989 производительность по воздуху 10000,паровой калорифер 1000 1000",
-    },
+    airPower: 10000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-989-989.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 10000 }, // Производительность по воздуху
-              { content: 917 }, // H B
-              { content: 965 }, // H1 B1
-              { content: 989 }, // H2 B2
-              { content: 1054 }, // H3
-              { content: 819 }, // C
-              { content: 50 }, // dy мм
-              { content: 21.6 }, // КППС2
-              { content: 32.6 }, // КППС3
-              { content: 43.1 }, // КППС4
-              { content: 75 }, // КППС2
-              { content: 98 }, // КППС3
-              { content: 119 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      10000, 917, 965, 989, 1054, 819, 50, 21.6, 32.6, 43.1, 75, 98, 119,
     ],
   },
   {
     id: "kpps-947x947",
-    name: "Калорифер КППС-947×947 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-947×947 паровой",
     shortName: "КППС 947x947",
     variants: [
       {
         id: "kpps-947x947-2",
         name: "Приточный калорифер КППС 947x947_2",
-        heatPower: 115, // производительность по теплу
-        price: 30774, // цена
+        heatPower: 115,
+        price: 30774,
       },
       {
         id: "kpps-947x947-3",
@@ -2287,143 +731,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 54547,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-905x905", // номер предыдущего калорифера
-      name: "КППС-905x905", // номер предыдущего калорифера
+      slug: "kpps-905x905",
+      name: "КППС-905x905",
     },
-    nextProduct: {
-      slug: "kpps-989x989", // номер следующего калорифера
-      name: "КППС-989х989", // номер следующего калорифера
-    },
-    airPower: 9000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-947x947",
-      description:
-        "Приточный паровой калорифер КППС 947x947 производительностью по воздуху 9000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 947 947,калорифер КППС 947 947,калорифер паровой 947 947,калорифер паровой КППС 947 947,калорифер приточный 947 947,калорифер паровой приточный 947 947,калорифер 947 947 технические характеристики,калорифер КППС 947 947 расчет и подбор,приточный калорифер 947 947 производительность по воздуху 9000,паровой калорифер 900 900",
-    },
+    airPower: 9000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_947x947_1239_1239.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-947-947.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 9000 }, // Производительность по воздуху
-              { content: 875 }, // H B
-              { content: 923 }, // H1 B1
-              { content: 947 }, // H2 B2
-              { content: 1012 }, // H3
-              { content: 777 }, // C
-              { content: 50 }, // dy мм
-              { content: 19.6 }, // КППС2
-              { content: 29.6 }, // КППС3
-              { content: 39.2 }, // КППС4
-              { content: 70 }, // КППС2
-              { content: 91 }, // КППС3
-              { content: 110 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      9000, 875, 923, 947, 1012, 777, 50, 19.6, 29.6, 39.2, 70, 91, 110,
     ],
   },
   {
     id: "kpps-905x905",
-    name: "Калорифер КППС-905×905 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-905×905 паровой",
     shortName: "КППС 905x905",
     variants: [
       {
         id: "kpps-905x905-2",
         name: "Приточный калорифер КППС 905x905_2",
-        heatPower: 104, // производительность по теплу
-        price: 28470, // цена
+        heatPower: 104,
+        price: 28470,
       },
       {
         id: "kpps-905x905-3",
@@ -2438,143 +774,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 50300,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-864x864", // номер предыдущего калорифера
-      name: "КППС-864x864", // номер предыдущего калорифера
+      slug: "kpps-864x864",
+      name: "КППС-864x864",
     },
-    nextProduct: {
-      slug: "kpps-947x947", // номер следующего калорифера
-      name: "КППС-947х947", // номер следующего калорифера
-    },
-    airPower: 8000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-905x905",
-      description:
-        "Приточный паровой калорифер КППС 905x905 производительностью по воздуху 8000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 905 905,калорифер КППС 905 905,калорифер паровой 905 905,калорифер паровой КППС 905 905,калорифер приточный 905 905,калорифер паровой приточный 905 905,калорифер 905 905 технические характеристики,калорифер КППС 905 905 расчет и подбор,приточный калорифер 905 905 производительность по воздуху 8000,паровой калорифер 900 900",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 8000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-905-905.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 8000 }, // Производительность по воздуху
-              { content: 833 }, // H B
-              { content: 881 }, // H1 B1
-              { content: 905 }, // H2 B2
-              { content: 970 }, // H3
-              { content: 735 }, // C
-              { content: 50 }, // dy мм
-              { content: 17.8 }, // КППС2
-              { content: 26.9 }, // КППС3
-              { content: 35.6 }, // КППС4
-              { content: 65 }, // КППС2
-              { content: 83 }, // КППС3
-              { content: 100 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      8000, 833, 881, 905, 970, 735, 50, 17.8, 26.9, 35.6, 65, 83, 100,
     ],
   },
   {
     id: "kpps-864x864",
-    name: "Калорифер КППС-864×864 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-864×864 паровой",
     shortName: "КППС 864x864",
     variants: [
       {
         id: "kpps-864x864-2",
         name: "Приточный калорифер КППС 864x864_2",
-        heatPower: 92, // производительность по теплу
-        price: 26463, // цена
+        heatPower: 92,
+        price: 26463,
       },
       {
         id: "kpps-864x864-3",
@@ -2589,143 +817,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 46426,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-822x822", // номер предыдущего калорифера
-      name: "КППС-822x822", // номер предыдущего калорифера
+      slug: "kpps-822x822",
+      name: "КППС-822x822",
     },
-    nextProduct: {
-      slug: "kpps-905x905", // номер следующего калорифера
-      name: "КППС-905х905", // номер следующего калорифера
-    },
-    airPower: 7000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-864x864",
-      description:
-        "Приточный паровой калорифер КППС 864x864 производительностью по воздуху 7000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 864 864,калорифер КППС 864 864,калорифер паровой 864 864,калорифер паровой КППС 864 864,калорифер приточный 864 864,калорифер паровой приточный 864 864,калорифер 864 864 технические характеристики,калорифер КППС 864 864 расчет и подбор,приточный калорифер 864 864 производительность по воздуху 7000,паровой калорифер 800 800",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 7000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-864-864.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 7000 }, // Производительность по воздуху
-              { content: 792 }, // H B
-              { content: 840 }, // H1 B1
-              { content: 864 }, // H2 B2
-              { content: 929 }, // H3
-              { content: 694 }, // C
-              { content: 50 }, // dy мм
-              { content: "16.0" }, // КППС2
-              { content: 24.3 }, // КППС3
-              { content: 32.1 }, // КППС4
-              { content: 60 }, // КППС2
-              { content: 77 }, // КППС3
-              { content: 92 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      7000,
+      792,
+      840,
+      864,
+      929,
+      694,
+      50,
+      "16.0",
+      24.3,
+      32.1,
+      60,
+      77,
+      92,
     ],
   },
   {
     id: "kpps-822x822",
-    name: "Калорифер КППС-822×822 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-822×822 паровой",
     shortName: "КППС 822x822",
     variants: [
       {
         id: "kpps-822x822-2",
         name: "Приточный калорифер КППС 822x822_2",
-        heatPower: 81, // производительность по теплу
-        price: 24244, // цена
+        heatPower: 81,
+        price: 24244,
       },
       {
         id: "kpps-822x822-3",
@@ -2740,143 +872,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 42370,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-780x780", // номер предыдущего калорифера
-      name: "КППС-780x780", // номер предыдущего калорифера
+      slug: "kpps-780x780",
+      name: "КППС-780x780",
     },
-    nextProduct: {
-      slug: "kpps-864x864", // номер следующего калорифера
-      name: "КППС-864х864", // номер следующего калорифера
-    },
-    airPower: 6000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-822x822",
-      description:
-        "Приточный паровой калорифер КППС 822x822 производительностью по воздуху 6000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 822 822,калорифер КППС 822 822,калорифер паровой 822 822,калорифер паровой КППС 822 822,калорифер приточный 822 822,калорифер паровой приточный 822 822,калорифер 822 822 технические характеристики,калорифер КППС 822 822 расчет и подбор,приточный калорифер 822 822 производительность по воздуху 6000,паровой калорифер 800 800",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 6000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-822-822.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 6000 }, // Производительность по воздуху
-              { content: 750 }, // H B
-              { content: 798 }, // H1 B1
-              { content: 822 }, // H2 B2
-              { content: 887 }, // H3
-              { content: 652 }, // C
-              { content: 50 }, // dy мм
-              { content: 14.4 }, // КППС2
-              { content: 21.8 }, // КППС3
-              { content: 28.7 }, // КППС4
-              { content: 55 }, // КППС2
-              { content: 70 }, // КППС3
-              { content: 84 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      6000, 750, 798, 822, 887, 652, 50, 14.4, 21.8, 28.7, 55, 70, 84,
     ],
   },
   {
     id: "kpps-780x780",
-    name: "Калорифер КППС-780×780 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-780×780 паровой",
     shortName: "КППС 780x780",
     variants: [
       {
         id: "kpps-780x780-2",
         name: "Приточный калорифер КППС 780x780_2",
-        heatPower: 71, // производительность по теплу
-        price: 22312, // цена
+        heatPower: 71,
+        price: 22312,
       },
       {
         id: "kpps-780x780-3",
@@ -2891,143 +915,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 38662,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-739x739", // номер предыдущего калорифера
-      name: "КППС-739x739", // номер предыдущего калорифера
+      slug: "kpps-739x739",
+      name: "КППС-739x739",
     },
-    nextProduct: {
-      slug: "kpps-822x822", // номер следующего калорифера
-      name: "КППС-822х822", // номер следующего калорифера
-    },
-    airPower: 5000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-780x780",
-      description:
-        "Приточный паровой калорифер КППС 780x780 производительностью по воздуху 5000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 780 780,калорифер КППС 780 780,калорифер паровой 780 780,калорифер паровой КППС 780 780,калорифер приточный 780 780,калорифер паровой приточный 780 780,калорифер 780 780 технические характеристики,калорифер КППС 780 780 расчет и подбор,приточный калорифер 780 780 производительность по воздуху 5000,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 5000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-780-780.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 5000 }, // Производительность по воздуху
-              { content: 708 }, // H B
-              { content: 756 }, // H1 B1
-              { content: 780 }, // H2 B2
-              { content: 845 }, // H3
-              { content: 610 }, // C
-              { content: 50 }, // dy мм
-              { content: 12.8 }, // КППС2
-              { content: 19.4 }, // КППС3
-              { content: 25.6 }, // КППС4
-              { content: 51 }, // КППС2
-              { content: 64 }, // КППС3
-              { content: 76 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      5000, 708, 756, 780, 845, 610, 50, 12.8, 19.4, 25.6, 51, 64, 76,
     ],
   },
   {
     id: "kpps-739x739",
-    name: "Калорифер КППС-739×739 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-739×739 паровой",
     shortName: "КППС 739x739",
     variants: [
       {
         id: "kpps-739x739-2",
         name: "Приточный калорифер КППС 739x739_2",
-        heatPower: 63, // производительность по теплу
-        price: 20219, // цена
+        heatPower: 63,
+        price: 20219,
       },
       {
         id: "kpps-739x739-3",
@@ -3042,143 +958,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 34881,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-697x697", // номер предыдущего калорифера
-      name: "КППС-697x697", // номер предыдущего калорифера
+      slug: "kpps-697x697",
+      name: "КППС-697x697",
     },
-    nextProduct: {
-      slug: "kpps-780x780", // номер следующего калорифера
-      name: "КППС-780х780", // номер следующего калорифера
-    },
-    airPower: 4500, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-739x739",
-      description:
-        "Приточный паровой калорифер КППС 739x739 производительностью по воздуху 4500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 739 739,калорифер КППС 739 739,калорифер паровой 739 739,калорифер паровой КППС 739 739,калорифер приточный 739 739,калорифер паровой приточный 739 739,калорифер 739 739 технические характеристики,калорифер КППС 739 739 расчет и подбор,приточный калорифер 739 739 производительность по воздуху 4500,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 4500,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-739-739.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 4500 }, // Производительность по воздуху
-              { content: 667 }, // H B
-              { content: 715 }, // H1 B1
-              { content: 739 }, // H2 B2
-              { content: 804 }, // H3
-              { content: 569 }, // C
-              { content: 50 }, // dy мм
-              { content: 11.3 }, // КППС2
-              { content: 17.2 }, // КППС3
-              { content: 22.7 }, // КППС4
-              { content: 46 }, // КППС2
-              { content: 57 }, // КППС3
-              { content: 68 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      4500, 667, 715, 739, 804, 569, 50, 11.3, 17.2, 22.7, 46, 57, 68,
     ],
   },
   {
     id: "kpps-697x697",
-    name: "Калорифер КППС-697×697 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-697×697 паровой",
     shortName: "КППС 697x697",
     variants: [
       {
         id: "kpps-697x697-2",
         name: "Приточный калорифер КППС 697x697_2",
-        heatPower: 56, // производительность по теплу
-        price: 18406, // цена
+        heatPower: 56,
+        price: 18406,
       },
       {
         id: "kpps-697x697-3",
@@ -3193,143 +1001,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 31426,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-655x655", // номер предыдущего калорифера
-      name: "КППС-655x655", // номер предыдущего калорифера
+      slug: "kpps-655x655",
+      name: "КППС-655x655",
     },
-    nextProduct: {
-      slug: "kpps-739x739", // номер следующего калорифера
-      name: "КППС-739х739", // номер следующего калорифера
-    },
-    airPower: 4000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-697x697",
-      description:
-        "Приточный паровой калорифер КППС 697x697 производительностью по воздуху 4000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 697 697,калорифер КППС 697 697,калорифер паровой 697 697,калорифер паровой КППС 697 697,калорифер приточный 697 697,калорифер паровой приточный 697 697,калорифер 697 697 технические характеристики,калорифер КППС 697 697 расчет и подбор,приточный калорифер 697 697 производительность по воздуху 4000,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 4000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-697-697.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 4000 }, // Производительность по воздуху
-              { content: 625 }, // H B
-              { content: 673 }, // H1 B1
-              { content: 697 }, // H2 B2
-              { content: 762 }, // H3
-              { content: 527 }, // C
-              { content: 50 }, // dy мм
-              { content: 9.9 }, // КППС2
-              { content: 15.1 }, // КППС3
-              { content: 19.9 }, // КППС4
-              { content: 42 }, // КППС2
-              { content: 52 }, // КППС3
-              { content: 62 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      4000, 625, 673, 697, 762, 527, 50, 9.9, 15.1, 19.9, 42, 52, 62,
     ],
   },
   {
     id: "kpps-655x655",
-    name: "Калорифер КППС-655×655 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-655×655 паровой",
     shortName: "КППС 655x655",
     variants: [
       {
         id: "kpps-655x655-2",
         name: "Приточный калорифер КППС 655x655_2",
-        heatPower: 49, // производительность по теплу
-        price: 16661, // цена
+        heatPower: 49,
+        price: 16661,
       },
       {
         id: "kpps-655x655-3",
@@ -3344,143 +1044,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 28115,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kpps-614x614", // номер предыдущего калорифера
-      name: "КППС-614x614", // номер предыдущего калорифера
+      slug: "kpps-614x614",
+      name: "КППС-614x614",
     },
-    nextProduct: {
-      slug: "kpps-697x697", // номер следующего калорифера
-      name: "КППС-697х697", // номер следующего калорифера
-    },
-    airPower: 3500, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-655x655",
-      description:
-        "Приточный паровой калорифер КППС 655x655 производительностью по воздуху 3500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 655 655,калорифер КППС 655 655,калорифер паровой 655 655,калорифер паровой КППС 655 655,калорифер приточный 655 655,калорифер паровой приточный 655 655,калорифер 655 655 технические характеристики,калорифер КППС 655 655 расчет и подбор,приточный калорифер 655 655 производительность по воздуху 3500,паровой калорифер 600 600",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 3500,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-655-655.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 3500 }, // Производительность по воздуху
-              { content: 583 }, // H B
-              { content: 631 }, // H1 B1
-              { content: 655 }, // H2 B2
-              { content: 720 }, // H3
-              { content: 485 }, // C
-              { content: 50 }, // dy мм
-              { content: 8.7 }, // КППС2
-              { content: 13.1 }, // КППС3
-              { content: 17.3 }, // КППС4
-              { content: 38 }, // КППС2
-              { content: 47 }, // КППС3
-              { content: 56 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      3500, 583, 631, 655, 720, 485, 50, 8.7, 13.1, 17.3, 38, 47, 56,
     ],
   },
   {
     id: "kpps-614x614",
-    name: "Калорифер КППС-614×614 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППС-614×614 паровой",
     shortName: "КППС 614x614",
     variants: [
       {
         id: "kpps-614x614-2",
         name: "Приточный калорифер КППС 614x614_2",
-        heatPower: 42, // производительность по теплу
-        price: 14756, // цена
+        heatPower: 42,
+        price: 14756,
       },
       {
         id: "kpps-614x614-3",
@@ -3495,131 +1087,23 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 24742,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
       slug: "kpps-572x572",
       name: "КППС-572x572",
     },
-    nextProduct: {
-      slug: "kpps-655x655",
-      name: "КППС-655х655",
-    },
-    airPower: 3000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППС-614x614",
-      description:
-        "Приточный паровой калорифер КППС 614x614 производительностью по воздуху 3000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 614 614,калорифер КППС 614 614,калорифер паровой 614 614,калорифер паровой КППС 614 614,калорифер приточный 614 614,калорифер паровой приточный 614 614,калорифер 614 614 технические характеристики,калорифер КППС 614 614 расчет и подбор,приточный калорифер 614 614 производительность по воздуху 3000,паровой калорифер 600 600",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 3000,
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-614-614.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 3000 }, // Производительность по воздуху
-              { content: 542 }, // H B
-              { content: 590 }, // H1 B1
-              { content: 614 }, // H2 B2
-              { content: 679 }, // H3
-              { content: 444 }, // C
-              { content: 50 }, // dy мм
-              { content: 7.4 }, // КППС2
-              { content: 11.3 }, // КППС3
-              { content: 14.9 }, // КППС4
-              { content: 34 }, // КППС2
-              { content: 42 }, // КППС3
-              { content: 49 }, // КППС4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      3000, 542, 590, 614, 679, 444, 50, 7.4, 11.3, 14.9, 34, 42, 49,
     ],
   },
   {
@@ -3652,130 +1136,27 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       "pritochny-parovy-kalorifery",
       "kpps",
     ],
-    nextProduct: {
-      slug: "kpps-614x614",
-      name: "КППС-614х614",
-    },
     airPower: 2500,
-    metadata: {
-      title: "Калорифер приточный КППС-572x572",
-      description:
-        "Приточный паровой калорифер КППС 572x572 производительностью по воздуху 2500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 572 572,калорифер КППС 572 572,калорифер паровой 572 572,калорифер паровой КППС 572 572,калорифер приточный 572 572,калорифер паровой приточный 572 572,калорифер 572 572 технические характеристики,калорифер КППС 572 572 расчет и подбор,приточный калорифер 572 572 производительность по воздуху 2500,паровой калорифер 500 500",
-    },
-    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png", // 572x572_905x905 и 947x947_1155x1155
+    img: "/img/kalorifery/kpps/kalorifer_kpps_572x572_905x905.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-572-572.html",
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-              { content: "КППС2", className: "kal2" },
-              { content: "КППС3", className: "kal2" },
-              { content: "КППС4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              { content: 2500 },
-              { content: 500 },
-              { content: 548 },
-              { content: 572 },
-              { content: 637 },
-              { content: 402 },
-              { content: 50 },
-              { content: 6.3 },
-              { content: 9.6 },
-              { content: 12.7 },
-              { content: 31 },
-              { content: 37 },
-              { content: 43 },
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      2500, 500, 548, 572, 637, 402, 50, 6.3, 9.6, 12.7, 31, 37, 43,
     ],
   },
   // КППУ-572_1572
   {
     id: "kppu-1572x1572",
-    name: "Калорифер КППУ-1572×1572 паровой", // главный заголовок страницы калорифера
+    name: "Калорифер КППУ-1572×1572 паровой",
     shortName: "КППУ 1572x1572",
     heatCarrier: "steam",
     variants: [
       {
         id: "kppu-1572x1572-2",
         name: "Приточный калорифер КППУ 1572x1572_2",
-        heatPower: 410, // производительность по теплу
-        price: 68195, // цена
+        heatPower: 410,
+        price: 68195,
       },
       {
         id: "kppu-1572x1572-3",
@@ -3790,142 +1171,34 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 128263,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1526x1526", // номер предыдущего калорифера
-      name: "КППУ-1526x1526", // номер предыдущего калорифера
+      slug: "kppu-1526x1526",
+      name: "КППУ-1526x1526",
     },
-    airPower: 24000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1572x1572",
-      description:
-        "Приточный паровой калорифер КППУ 1572x1572 производительностью по воздуху 24000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1572 1572,калорифер КППУ 1572 1572,калорифер паровой 1572 1572,калорифер паровой КППУ 1572 1572,калорифер приточный 1572 1572,калорифер паровой приточный 1572 1572,калорифер 1572 1572 технические характеристики,калорифер КППУ 1572 1572 расчет и подбор,приточный калорифер 1572 1572 производительность по воздуху 24000,паровой калорифер 1600 1600",
-    },
+    airPower: 24000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1572-1572.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
     specsTableValues: [
       24000, 1500, 1548, 1572, 1637, 1376, 80, 46.2, 69.7, 92.5, 182, 247, 319,
-    ],
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 24000 }, // Производительность по воздуху
-              { content: 1500 }, // H H
-              { content: 1548 }, // H1 H1
-              { content: 1572 }, // H2 H2
-              { content: 1637 }, // H3
-              { content: 1376 }, // C
-              { content: 80 }, // dy мм
-              { content: 46.2 }, // КППУ2
-              { content: 69.7 }, // КППУ3
-              { content: 92.5 }, // КППУ4
-              { content: 182 }, // КППУ2
-              { content: 247 }, // КППУ3
-              { content: 319 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
     ],
   },
   {
     id: "kppu-1526x1526",
-    name: "Калорифер КППУ-1526×1526 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1526×1526",
+    name: "Калорифер КППУ-1526×1526 паровой",
+    shortName: "КППУ 1526x1526",
     variants: [
       {
         id: "kppu-1526x1526-2",
         name: "Приточный калорифер КППУ 1526x1526_2",
-        heatPower: 380, // производительность по теплу
-        price: 65393, // цена
+        heatPower: 380,
+        price: 65393,
       },
       {
         id: "kppu-1526x1526-3",
@@ -3940,143 +1213,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 123084,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1481x1481", // номер предыдущего калорифера
-      name: "КППУ-1481x1481", // номер предыдущего калорифера
+      slug: "kppu-1481x1481",
+      name: "КППУ-1481x1481",
     },
-    nextProduct: {
-      slug: "kppu-1572x1572", // номер следующего калорифера
-      name: "КППУ-1572х1572", // номер следующего калорифера
-    },
-    airPower: 22000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1526x1526",
-      description:
-        "Приточный паровой калорифер КППУ 1526x1526 производительностью по воздуху 22000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1526 1526,калорифер КППУ 1526 1526,калорифер паровой 1526 1526,калорифер паровой КППУ 1526 1526,калорифер приточный 1526 1526,калорифер паровой приточный 1526 1526,калорифер 1526 1526 технические характеристики,калорифер КППУ 1526 1526 расчет и подбор,приточный калорифер 1526 1526 производительность по воздуху 22000,паровой калорифер 1500 1500",
-    },
+    airPower: 22000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1526-1526.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 22000 }, // Производительность по воздуху
-              { content: 1454 }, // H H
-              { content: 1502 }, // H1 H1
-              { content: 1526 }, // H2 H2
-              { content: 1591 }, // H3
-              { content: 1330 }, // C
-              { content: 80 }, // dy мм
-              { content: 43.4 }, // КППУ2
-              { content: 65.5 }, // КППУ3
-              { content: 86.9 }, // КППУ4
-              { content: 172 }, // КППУ2
-              { content: 233 }, // КППУ3
-              { content: 303 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      22000, 1454, 1502, 1526, 1591, 1330, 80, 43.4, 65.5, 86.9, 172, 233, 303,
     ],
   },
   {
     id: "kppu-1481x1481",
-    name: "Калорифер КППУ-1481×1481 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1481×1481",
+    name: "Калорифер КППУ-1481×1481 паровой",
+    shortName: "КППУ 1481x1481",
     variants: [
       {
         id: "kppu-1481x1481-2",
         name: "Приточный калорифер КППУ 1481x1481_2",
-        heatPower: 351, // производительность по теплу
-        price: 62610, // цена
+        heatPower: 351,
+        price: 62610,
       },
       {
         id: "kppu-1481x1481-3",
@@ -4091,143 +1256,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 117961,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1435x1435", // номер предыдущего калорифера
-      name: "КППУ-1435x1435", // номер предыдущего калорифера
+      slug: "kppu-1435x1435",
+      name: "КППУ-1435x1435",
     },
-    nextProduct: {
-      slug: "kppu-1526x1526", // номер следующего калорифера
-      name: "КППУ-1526х1526", // номер следующего калорифера
-    },
-    airPower: 20000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1481x1481",
-      description:
-        "Приточный паровой калорифер КППУ 1481x1481 производительностью по воздуху 20000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1481 1481,калорифер КППУ 1481 1481,калорифер паровой 1481 1481,калорифер паровой КППУ 1481 1481,калорифер приточный 1481 1481,калорифер паровой приточный 1481 1481,калорифер 1481 1481 технические характеристики,калорифер КППУ 1481 1481 расчет и подбор,приточный калорифер 1481 1481 производительность по воздуху 20000,паровой калорифер 1500 1500",
-    },
+    airPower: 20000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1481-1481.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 20000 }, // Производительность по воздуху
-              { content: 1409 }, // H H
-              { content: 1457 }, // H1 H1
-              { content: 1481 }, // H2 H2
-              { content: 1546 }, // H3
-              { content: 1285 }, // C
-              { content: 80 }, // dy мм
-              { content: 40.8 }, // КППУ2
-              { content: 61.5 }, // КППУ3
-              { content: 81.5 }, // КППУ4
-              { content: 162 }, // КППУ2
-              { content: 220 }, // КППУ3
-              { content: 287 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      20000, 1409, 1457, 1481, 1546, 1285, 80, 40.8, 61.5, 81.5, 162, 220, 287,
     ],
   },
   {
     id: "kppu-1435x1435",
-    name: "Калорифер КППУ-1435×1435 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1435×1435",
+    name: "Калорифер КППУ-1435×1435 паровой",
+    shortName: "КППУ 1435x1435",
     variants: [
       {
         id: "kppu-1435x1435-2",
         name: "Приточный калорифер КППУ 1435x1435_2",
-        heatPower: 331, // производительность по теплу
-        price: 59774, // цена
+        heatPower: 331,
+        price: 59774,
       },
       {
         id: "kppu-1435x1435-3",
@@ -4242,143 +1299,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 112751,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1390x1390", // номер предыдущего калорифера
-      name: "КППУ-1390x1390", // номер предыдущего калорифера
+      slug: "kppu-1390x1390",
+      name: "КППУ-1390x1390",
     },
-    nextProduct: {
-      slug: "kppu-1481x1481", // номер следующего калорифера
-      name: "КППУ-1481х1481", // номер следующего калорифера
-    },
-    airPower: 18000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1435x1435",
-      description:
-        "Приточный паровой калорифер КППУ 1435x1435 производительностью по воздуху 18000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1435 1435,калорифер КППУ 1435 1435,калорифер паровой 1435 1435,калорифер паровой КППУ 1435 1435,калорифер приточный 1435 1435,калорифер паровой приточный 1435 1435,калорифер 1435 1435 технические характеристики,калорифер КППУ 1435 1435 расчет и подбор,приточный калорифер 1435 1435 производительность по воздуху 18000,паровой калорифер 1400 1400",
-    },
+    airPower: 18000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1435-1435.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 18000 }, // Производительность по воздуху
-              { content: 1363 }, // H H
-              { content: 1411 }, // H1 H1
-              { content: 1435 }, // H2 H2
-              { content: 1500 }, // H3
-              { content: 1239 }, // C
-              { content: 80 }, // dy мм
-              { content: 38.2 }, // КППУ2
-              { content: 57.5 }, // КППУ3
-              { content: 76.3 }, // КППУ4
-              { content: 153 }, // КППУ2
-              { content: 207 }, // КППУ3
-              { content: 271 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      18000, 1363, 1411, 1435, 1500, 1239, 80, 38.2, 57.5, 76.3, 153, 207, 271,
     ],
   },
   {
     id: "kppu-1390x1390",
-    name: "Калорифер КППУ-1390×1390 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1390×1390",
+    name: "Калорифер КППУ-1390×1390 паровой",
+    shortName: "КППУ 1390x1390",
     variants: [
       {
         id: "kppu-1390x1390-2",
         name: "Приточный калорифер КППУ 1390x1390_2",
-        heatPower: 314, // производительность по теплу
-        price: 56966, // цена
+        heatPower: 314,
+        price: 56966,
       },
       {
         id: "kppu-1390x1390-3",
@@ -4393,143 +1342,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 107420,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1345x1345", // номер предыдущего калорифера
-      name: "КППУ-1345x1345", // номер предыдущего калорифера
+      slug: "kppu-1345x1345",
+      name: "КППУ-1345x1345",
     },
-    nextProduct: {
-      slug: "kppu-1435x1435", // номер следующего калорифера
-      name: "КППУ-1435х1435", // номер следующего калорифера
-    },
-    airPower: 17000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1390x1390",
-      description:
-        "Приточный паровой калорифер КППУ 1390x1390 производительностью по воздуху 17000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1390 1390,калорифер КППУ 1390 1390,калорифер паровой 1390 1390,калорифер паровой КППУ 1390 1390,калорифер приточный 1390 1390,калорифер паровой приточный 1390 1390,калорифер 1390 1390 технические характеристики,калорифер КППУ 1390 1390 расчет и подбор,приточный калорифер 1390 1390 производительность по воздуху 17000,паровой калорифер 1400 1400",
-    },
+    airPower: 17000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1390-1390.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 17000 }, // Производительность по воздуху
-              { content: 1318 }, // H H
-              { content: 1366 }, // H1 H1
-              { content: 1390 }, // H2 H2
-              { content: 1455 }, // H3
-              { content: 1194 }, // C
-              { content: 80 }, // dy мм
-              { content: 35.7 }, // КППУ2
-              { content: 53.8 }, // КППУ3
-              { content: 71.3 }, // КППУ4
-              { content: 144 }, // КППУ2
-              { content: 195 }, // КППУ3
-              { content: 255 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      17000, 1318, 1366, 1390, 1455, 1194, 80, 35.7, 53.8, 71.3, 144, 195, 255,
     ],
   },
   {
     id: "kppu-1345x1345",
-    name: "Калорифер КППУ-1345×1345 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1345×1345",
+    name: "Калорифер КППУ-1345×1345 паровой",
+    shortName: "КППУ 1345x1345",
     variants: [
       {
         id: "kppu-1345x1345-2",
         name: "Приточный калорифер КППУ 1345x1345_2",
-        heatPower: 294, // производительность по теплу
-        price: 54154, // цена
+        heatPower: 294,
+        price: 54154,
       },
       {
         id: "kppu-1345x1345-3",
@@ -4544,143 +1385,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 102093,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1299x1299", // номер предыдущего калорифера
-      name: "КППУ-1299x1299", // номер предыдущего калорифера
+      slug: "kppu-1299x1299",
+      name: "КППУ-1299x1299",
     },
-    nextProduct: {
-      slug: "kppu-1390x1390", // номер следующего калорифера
-      name: "КППУ-1390х1390", // номер следующего калорифера
-    },
-    airPower: 16000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1345x1345",
-      description:
-        "Приточный паровой калорифер КППУ 1345x1345 производительностью по воздуху 16000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1345 1345,калорифер КППУ 1345 1345,калорифер паровой 1345 1345,калорифер паровой КППУ 1345 1345,калорифер приточный 1345 1345,калорифер паровой приточный 1345 1345,калорифер 1345 1345 технические характеристики,калорифер КППУ 1345 1345 расчет и подбор,приточный калорифер 1345 1345 производительность по воздуху 16000,паровой калорифер 1300 1300",
-    },
+    airPower: 16000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1345-1345.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 16000 }, // Производительность по воздуху
-              { content: 1273 }, // H H
-              { content: 1321 }, // H1 H1
-              { content: 1345 }, // H2 H2
-              { content: 1410 }, // H3
-              { content: 1161 }, // C
-              { content: 65 }, // dy мм
-              { content: 33.2 }, // КППУ2
-              { content: 50.2 }, // КППУ3
-              { content: 66.5 }, // КППУ4
-              { content: 135 }, // КППУ2
-              { content: 182 }, // КППУ3
-              { content: 240 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      16000, 1273, 1321, 1345, 1410, 1161, 65, 33.2, 50.2, 66.5, 135, 182, 240,
     ],
   },
   {
     id: "kppu-1299x1299",
-    name: "Калорифер КППУ-1299×1299 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1299×1299",
+    name: "Калорифер КППУ-1299×1299 паровой",
+    shortName: "КППУ 1299x1299",
     variants: [
       {
         id: "kppu-1299x1299-2",
         name: "Приточный калорифер КППУ 1299x1299_2",
-        heatPower: 276, // производительность по теплу
-        price: 51309, // цена
+        heatPower: 276,
+        price: 51309,
       },
       {
         id: "kppu-1299x1299-3",
@@ -4695,143 +1428,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 96711,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1254x1254", // номер предыдущего калорифера
-      name: "КППУ-1254x1254", // номер предыдущего калорифера
+      slug: "kppu-1254x1254",
+      name: "КППУ-1254x1254",
     },
-    nextProduct: {
-      slug: "kppu-1345x1345", // номер следующего калорифера
-      name: "КППУ-1345х1345", // номер следующего калорифера
-    },
-    airPower: 15000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1299x1299",
-      description:
-        "Приточный паровой калорифер КППУ 1299x1299 производительностью по воздуху 15000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1299 1299,калорифер КППУ 1299 1299,калорифер паровой 1299 1299,калорифер паровой КППУ 1299 1299,калорифер приточный 1299 1299,калорифер паровой приточный 1299 1299,калорифер 1299 1299 технические характеристики,калорифер КППУ 1299 1299 расчет и подбор,приточный калорифер 1299 1299 производительность по воздуху 15000,паровой калорифер 1300 1300",
-    },
+    airPower: 15000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1299-1299.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 15000 }, // Производительность по воздуху
-              { content: 1227 }, // H H
-              { content: 1275 }, // H1 H1
-              { content: 1299 }, // H2 H2
-              { content: 1364 }, // H3
-              { content: 1115 }, // C
-              { content: 65 }, // dy мм
-              { content: 30.9 }, // КППУ2
-              { content: 46.6 }, // КППУ3
-              { content: 61.8 }, // КППУ4
-              { content: 127 }, // КППУ2
-              { content: 171 }, // КППУ3
-              { content: 225 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      15000, 1227, 1275, 1299, 1364, 1115, 65, 30.9, 46.6, 61.8, 127, 171, 225,
     ],
   },
   {
     id: "kppu-1254x1254",
-    name: "Калорифер КППУ-1254×1254 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1254×1254",
+    name: "Калорифер КППУ-1254×1254 паровой",
+    shortName: "КППУ 1254x1254",
     variants: [
       {
         id: "kppu-1254x1254-2",
         name: "Приточный калорифер КППУ 1254x1254_2",
-        heatPower: 258, // производительность по теплу
-        price: 48713, // цена
+        heatPower: 258,
+        price: 48713,
       },
       {
         id: "kppu-1254x1254-3",
@@ -4846,143 +1471,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 91427,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1208x1208", // номер предыдущего калорифера
-      name: "КППУ-1208x1208", // номер предыдущего калорифера
+      slug: "kppu-1208x1208",
+      name: "КППУ-1208x1208",
     },
-    nextProduct: {
-      slug: "kppu-1299x1299", // номер следующего калорифера
-      name: "КППУ-1299х1299", // номер следующего калорифера
-    },
-    airPower: 14000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1254x1254",
-      description:
-        "Приточный паровой калорифер КППУ 1254x1254 производительностью по воздуху 14000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1254 1254,калорифер КППУ 1254 1254,калорифер паровой 1254 1254,калорифер паровой КППУ 1254 1254,калорифер приточный 1254 1254,калорифер паровой приточный 1254 1254,калорифер 1254 1254 технические характеристики,калорифер КППУ 1254 1254 расчет и подбор,приточный калорифер 1254 1254 производительность по воздуху 14000,паровой калорифер 1200 1200",
-    },
+    airPower: 14000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1254-1254.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 14000 }, // Производительность по воздуху
-              { content: 1182 }, // H H
-              { content: 1230 }, // H1 H1
-              { content: 1254 }, // H2 H2
-              { content: 1319 }, // H3
-              { content: 1070 }, // C
-              { content: 65 }, // dy мм
-              { content: 28.6 }, // КППУ2
-              { content: 43.2 }, // КППУ3
-              { content: 57.3 }, // КППУ4
-              { content: 120 }, // КППУ2
-              { content: 160 }, // КППУ3
-              { content: 210 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      14000, 1182, 1230, 1254, 1319, 1070, 65, 28.6, 43.2, 57.3, 120, 160, 210,
     ],
   },
   {
     id: "kppu-1208x1208",
-    name: "Калорифер КППУ-1208×1208 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1208×1208",
+    name: "Калорифер КППУ-1208×1208 паровой",
+    shortName: "КППУ 1208x1208",
     variants: [
       {
         id: "kppu-1208x1208-2",
         name: "Приточный калорифер КППУ 1208x1208_2",
-        heatPower: 239, // производительность по теплу
-        price: 45892, // цена
+        heatPower: 239,
+        price: 45892,
       },
       {
         id: "kppu-1208x1208-3",
@@ -4997,143 +1514,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 86115,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1163x1163", // номер предыдущего калорифера
-      name: "КППУ-1163x1163", // номер предыдущего калорифера
+      slug: "kppu-1163x1163",
+      name: "КППУ-1163x1163",
     },
-    nextProduct: {
-      slug: "kppu-1254x1254", // номер следующего калорифера
-      name: "КППУ-1254х1254", // номер следующего калорифера
-    },
-    airPower: 13000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1208x1208",
-      description:
-        "Приточный паровой калорифер КППУ 1208x1208 производительностью по воздуху 13000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1208 1208,калорифер КППУ 1208 1208,калорифер паровой 1208 1208,калорифер паровой КППУ 1208 1208,калорифер приточный 1208 1208,калорифер паровой приточный 1208 1208,калорифер 1208 1208 технические характеристики,калорифер КППУ 1208 1208 расчет и подбор,приточный калорифер 1208 1208 производительность по воздуху 13000,паровой калорифер 1200 1200",
-    },
+    airPower: 13000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1208-1208.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 13000 }, // Производительность по воздуху
-              { content: 1136 }, // H H
-              { content: 1184 }, // H1 H1
-              { content: 1208 }, // H2 H2
-              { content: 1273 }, // H3
-              { content: 1025 }, // C
-              { content: 65 }, // dy мм
-              { content: 26.4 }, // КППУ2
-              { content: 39.9 }, // КППУ3
-              { content: 52.9 }, // КППУ4
-              { content: 111 }, // КППУ2
-              { content: 149 }, // КППУ3
-              { content: 196 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      13000, 1136, 1184, 1208, 1273, 1025, 65, 26.4, 39.9, 52.9, 111, 149, 196,
     ],
   },
   {
     id: "kppu-1163x1163",
-    name: "Калорифер КППУ-1163×1163 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1163×1163",
+    name: "Калорифер КППУ-1163×1163 паровой",
+    shortName: "КППУ 1163x1163",
     variants: [
       {
         id: "kppu-1163x1163-2",
         name: "Приточный калорифер КППУ 1163x1163_2",
-        heatPower: 222, // производительность по теплу
-        price: 43337, // цена
+        heatPower: 222,
+        price: 43337,
       },
       {
         id: "kppu-1163x1163-3",
@@ -5148,143 +1557,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 80919,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1117x1117", // номер предыдущего калорифера
-      name: "КППУ-1117x1117", // номер предыдущего калорифера
+      slug: "kppu-1117x1117",
+      name: "КППУ-1117x1117",
     },
-    nextProduct: {
-      slug: "kppu-1208x1208", // номер следующего калорифера
-      name: "КППУ-1208х1208", // номер следующего калорифера
-    },
-    airPower: 12000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1163x1163",
-      description:
-        "Приточный паровой калорифер КППУ 1163x1163 производительностью по воздуху 12000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1163 1163,калорифер КППУ 1163 1163,калорифер паровой 1163 1163,калорифер паровой КППУ 1163 1163,калорифер приточный 1163 1163,калорифер паровой приточный 1163 1163,калорифер 1163 1163 технические характеристики,калорифер КППУ 1163 1163 расчет и подбор,приточный калорифер 1163 1163 производительность по воздуху 12000,паровой калорифер 1100 1100",
-    },
+    airPower: 12000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1163-1163.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 12000 }, // Производительность по воздуху
-              { content: 1091 }, // H H
-              { content: 1139 }, // H1 H1
-              { content: 1163 }, // H2 H2
-              { content: 1228 }, // H3
-              { content: 979 }, // C
-              { content: 65 }, // dy мм
-              { content: 24.3 }, // КППУ2
-              { content: 36.8 }, // КППУ3
-              { content: 48.7 }, // КППУ4
-              { content: 105 }, // КППУ2
-              { content: 139 }, // КППУ3
-              { content: 182 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      12000, 1091, 1139, 1163, 1228, 979, 65, 24.3, 36.8, 48.7, 105, 139, 182,
     ],
   },
   {
     id: "kppu-1117x1117",
-    name: "Калорифер КППУ-1117×1117 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1117×1117",
+    name: "Калорифер КППУ-1117×1117 паровой",
+    shortName: "КППУ 1117x1117",
     variants: [
       {
         id: "kppu-1117x1117-2",
         name: "Приточный калорифер КППУ 1117x1117_2",
-        heatPower: 205, // производительность по теплу
-        price: 40564, // цена
+        heatPower: 205,
+        price: 40564,
       },
       {
         id: "kppu-1117x1117-3",
@@ -5299,143 +1600,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 75721,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1072x1072", // номер предыдущего калорифера
-      name: "КППУ-1072x1072", // номер предыдущего калорифера
+      slug: "kppu-1072x1072",
+      name: "КППУ-1072x1072",
     },
-    nextProduct: {
-      slug: "kppu-1163x1163", // номер следующего калорифера
-      name: "КППУ-1163х1163", // номер следующего калорифера
-    },
-    airPower: 11000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1117x1117",
-      description:
-        "Приточный паровой калорифер КППУ 1117x1117 производительностью по воздуху 11000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1117 1117,калорифер КППУ 1117 1117,калорифер паровой 1117 1117,калорифер паровой КППУ 1117 1117,калорифер приточный 1117 1117,калорифер паровой приточный 1117 1117,калорифер 1117 1117 технические характеристики,калорифер КППУ 1117 1117 расчет и подбор,приточный калорифер 1117 1117 производительность по воздуху 11000,паровой калорифер 1100 1100",
-    },
+    airPower: 11000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1117-1117.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 11000 }, // Производительность по воздуху
-              { content: 1045 }, // H H
-              { content: 1093 }, // H1 H1
-              { content: 1117 }, // H2 H2
-              { content: 1182 }, // H3
-              { content: 933 }, // C
-              { content: 65 }, // dy мм
-              { content: 22.3 }, // КППУ2
-              { content: 33.8 }, // КППУ3
-              { content: 44.7 }, // КППУ4
-              { content: 97 }, // КППУ2
-              { content: 129 }, // КППУ3
-              { content: 169 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      11000, 1045, 1093, 1117, 1182, 933, 65, 22.3, 33.8, 44.7, 97, 129, 169,
     ],
   },
   {
     id: "kppu-1072x1072",
-    name: "Калорифер КППУ-1072×1072 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 1072×1072",
+    name: "Калорифер КППУ-1072×1072 паровой",
+    shortName: "КППУ 1072x1072",
     variants: [
       {
         id: "kppu-1072x1072-2",
         name: "Приточный калорифер КППУ 1072x1072_2",
-        heatPower: 188, // производительность по теплу
-        price: 38073, // цена
+        heatPower: 188,
+        price: 38073,
       },
       {
         id: "kppu-1072x1072-3",
@@ -5450,143 +1643,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 70658,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-1026x1026", // номер предыдущего калорифера
-      name: "КППУ-1026x1026", // номер предыдущего калорифера
+      slug: "kppu-1026x1026",
+      name: "КППУ-1026x1026",
     },
-    nextProduct: {
-      slug: "kppu-1117x1117", // номер следующего калорифера
-      name: "КППУ-1117х1117", // номер следующего калорифера
-    },
-    airPower: 10000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1072x1072",
-      description:
-        "Приточный паровой калорифер КППУ 1072x1072 производительностью по воздуху 10000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1072 1072,калорифер КППУ 1072 1072,калорифер паровой 1072 1072,калорифер паровой КППУ 1072 1072,калорифер приточный 1072 1072,калорифер паровой приточный 1072 1072,калорифер 1072 1072 технические характеристики,калорифер КППУ 1072 1072 расчет и подбор,приточный калорифер 1072 1072 производительность по воздуху 10000,паровой калорифер 1000 1000",
-    },
+    airPower: 10000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1072-1072.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 10000 }, // Производительность по воздуху
-              { content: 1000 }, // H H
-              { content: 1048 }, // H1 H1
-              { content: 1072 }, // H2 H2
-              { content: 1137 }, // H3
-              { content: 888 }, // C
-              { content: 65 }, // dy мм
-              { content: 20.4 }, // КППУ2
-              { content: 30.9 }, // КППУ3
-              { content: 40.9 }, // КППУ4
-              { content: 91 }, // КППУ2
-              { content: 120 }, // КППУ3
-              { content: 157 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      10000, 1000, 1048, 1072, 1137, 888, 65, 20.4, 30.9, 40.9, 91, 120, 157,
     ],
   },
   {
     id: "kppu-1026x1026",
-    name: "Калорифер КППУ-1026×1026 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ-1026×1026",
+    name: "Калорифер КППУ-1026×1026 паровой",
+    shortName: "КППУ 1026x1026",
     variants: [
       {
         id: "kppu-1026x1026-2",
         name: "Приточный калорифер КППУ 1026x1026_2",
-        heatPower: 172, // производительность по теплу
-        price: 35370, // цена
+        heatPower: 172,
+        price: 35370,
       },
       {
         id: "kppu-1026x1026-3",
@@ -5601,143 +1686,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 65619,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-981x981", // номер предыдущего калорифера
-      name: "КППУ-981x981", // номер предыдущего калорифера
+      slug: "kppu-981x981",
+      name: "КППУ-981x981",
     },
-    nextProduct: {
-      slug: "kppu-1072x1072", // номер следующего калорифера
-      name: "КППУ-1072х1072", // номер следующего калорифера
-    },
-    airPower: 9000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-1026x1026",
-      description:
-        "Приточный паровой калорифер КППУ 1026x1026 производительностью по воздуху 9000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 1026 1026,калорифер КППУ 1026 1026,калорифер паровой 1026 1026,калорифер паровой КППУ 1026 1026,калорифер приточный 1026 1026,калорифер паровой приточный 1026 1026,калорифер 1026 1026 технические характеристики,калорифер КППУ 1026 1026 расчет и подбор,приточный калорифер 1026 1026 производительность по воздуху 9000,паровой калорифер 1000 1000",
-    },
+    airPower: 9000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1026-1026.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 9000 }, // Производительность по воздуху
-              { content: 954 }, // H H
-              { content: 1002 }, // H1 H1
-              { content: 1026 }, // H2 H2
-              { content: 1091 }, // H3
-              { content: 856 }, // C
-              { content: 50 }, // dy мм
-              { content: 18.6 }, // КППУ2
-              { content: 28.2 }, // КППУ3
-              { content: 37.2 }, // КППУ4
-              { content: 84 }, // КППУ2
-              { content: 110 }, // КППУ3
-              { content: 144 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      9000, 954, 1002, 1026, 1091, 856, 50, 18.6, 28.2, 37.2, 84, 110, 144,
     ],
   },
   {
     id: "kppu-981x981",
-    name: "Калорифер КППУ-981×981 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ-981×981",
+    name: "Калорифер КППУ-981×981 паровой",
+    shortName: "КППУ 981x981",
     variants: [
       {
         id: "kppu-981x981-2",
         name: "Приточный калорифер КППУ 981x981_2",
-        heatPower: 156, // производительность по теплу
-        price: 32964, // цена
+        heatPower: 156,
+        price: 32964,
       },
       {
         id: "kppu-981x981-3",
@@ -5752,143 +1729,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 60734,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-935x935", // номер предыдущего калорифера
-      name: "КППУ-935x935", // номер предыдущего калорифера
+      slug: "kppu-935x935",
+      name: "КППУ-935x935",
     },
-    nextProduct: {
-      slug: "kppu-1026x1026", // номер следующего калорифера
-      name: "КППУ-1026х1026", // номер следующего калорифера
-    },
-    airPower: 8000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-981x981",
-      description:
-        "Приточный паровой калорифер КППУ 981x981 производительностью по воздуху 8000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 981 981,калорифер КППУ 981 981,калорифер паровой 981 981,калорифер паровой КППУ 981 981,калорифер приточный 981 981,калорифер паровой приточный 981 981,калорифер 981 981 технические характеристики,калорифер КППУ 981 981 расчет и подбор,приточный калорифер 981 981 производительность по воздуху 8000,паровой калорифер 1000 1000",
-    },
+    airPower: 8000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-981-981.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 8000 }, // Производительность по воздуху
-              { content: 909 }, // H H
-              { content: 957 }, // H1 H1
-              { content: 981 }, // H2 H2
-              { content: 1046 }, // H3
-              { content: 811 }, // C
-              { content: 50 }, // dy мм
-              { content: 16.9 }, // КППУ2
-              { content: 25.5 }, // КППУ3
-              { content: 33.8 }, // КППУ4
-              { content: 78 }, // КППУ2
-              { content: 102 }, // КППУ3
-              { content: 133 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      8000, 909, 957, 981, 1046, 811, 50, 16.9, 25.5, 33.8, 78, 102, 133,
     ],
   },
   {
     id: "kppu-935x935",
-    name: "Калорифер КППУ-935×935 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 935×935",
+    name: "Калорифер КППУ-935×935 паровой",
+    shortName: "КППУ 935x935",
     variants: [
       {
         id: "kppu-935x935-2",
         name: "Приточный калорифер КППУ 935x935_2",
-        heatPower: 139, // производительность по теплу
-        price: 30353, // цена
+        heatPower: 139,
+        price: 30353,
       },
       {
         id: "kppu-935x935-3",
@@ -5903,143 +1772,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 55898,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-890x890", // номер предыдущего калорифера
-      name: "КППУ-890x890", // номер предыдущего калорифера
+      slug: "kppu-890x890",
+      name: "КППУ-890x890",
     },
-    nextProduct: {
-      slug: "kppu-981x981", // номер следующего калорифера
-      name: "КППУ-981х981", // номер следующего калорифера
-    },
-    airPower: 7000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-935x935",
-      description:
-        "Приточный паровой калорифер КППУ 935x935 производительностью по воздуху 7000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 935 935,калорифер КППУ 935 935,калорифер паровой 935 935,калорифер паровой КППУ 935 935,калорифер приточный 935 935,калорифер паровой приточный 935 935,калорифер 935 935 технические характеристики,калорифер КППУ 935 935 расчет и подбор,приточный калорифер 935 935 производительность по воздуху 7000,паровой калорифер 900 900",
-    },
+    airPower: 7000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_935x935_1254x1254.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-935-935.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 7000 }, // Производительность по воздуху
-              { content: 863 }, // H H
-              { content: 911 }, // H1 H1
-              { content: 935 }, // H2 H2
-              { content: 1000 }, // H3
-              { content: 765 }, // C
-              { content: 50 }, // dy мм
-              { content: 15.2 }, // КППУ2
-              { content: "23.0" }, // КППУ3
-              { content: 30.4 }, // КППУ4
-              { content: 71 }, // КППУ2
-              { content: 93 }, // КППУ3
-              { content: 121 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      7000,
+      863,
+      911,
+      935,
+      1000,
+      765,
+      50,
+      15.2,
+      "23.0",
+      30.4,
+      71,
+      93,
+      121,
     ],
   },
   {
     id: "kppu-890x890",
-    name: "Калорифер КППУ-890×890 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 890×890",
+    name: "Калорифер КППУ-890×890 паровой",
+    shortName: "КППУ 890x890",
     variants: [
       {
         id: "kppu-890x890-2",
         name: "Приточный калорифер КППУ 890x890_2",
-        heatPower: 124, // производительность по теплу
-        price: 28055, // цена
+        heatPower: 124,
+        price: 28055,
       },
       {
         id: "kppu-890x890-3",
@@ -6054,143 +1827,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 51236,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-845x845", // номер предыдущего калорифера
-      name: "КППУ-845x845", // номер предыдущего калорифера
+      slug: "kppu-845x845",
+      name: "КППУ-845x845",
     },
-    nextProduct: {
-      slug: "kppu-935x935", // номер следующего калорифера
-      name: "КППУ-935х935", // номер следующего калорифера
-    },
-    airPower: 6000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-890x890",
-      description:
-        "Приточный паровой калорифер КППУ 890x890 производительностью по воздуху 6000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 890 890,калорифер КППУ 890 890,калорифер паровой 890 890,калорифер паровой КППУ 890 890,калорифер приточный 890 890,калорифер паровой приточный 890 890,калорифер 890 890 технические характеристики,калорифер КППУ 890 890 расчет и подбор,приточный калорифер 890 890 производительность по воздуху 6000,паровой калорифер 900 900",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_890x890 и 947x947_1155x1155
+    airPower: 6000,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-890-890.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 6000 }, // Производительность по воздуху
-              { content: 818 }, // H H
-              { content: 866 }, // H1 H1
-              { content: 890 }, // H2 H2
-              { content: 955 }, // H3
-              { content: 720 }, // C
-              { content: 50 }, // dy мм
-              { content: 13.6 }, // КППУ2
-              { content: 20.6 }, // КППУ3
-              { content: 27.3 }, // КППУ4
-              { content: 66 }, // КППУ2
-              { content: 85 }, // КППУ3
-              { content: 111 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      6000, 818, 866, 890, 955, 720, 50, 13.6, 20.6, 27.3, 66, 85, 111,
     ],
   },
   {
     id: "kppu-845x845",
-    name: "Калорифер КППУ-845×845 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ-845×845",
+    name: "Калорифер КППУ-845×845 паровой",
+    shortName: "КППУ 845x845",
     variants: [
       {
         id: "kppu-845x845-2",
         name: "Приточный калорифер КППУ 845x845_2",
-        heatPower: 109, // производительность по теплу
-        price: 25585, // цена
+        heatPower: 109,
+        price: 25585,
       },
       {
         id: "kppu-845x845-3",
@@ -6205,143 +1870,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 46699,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-799x799", // номер предыдущего калорифера
-      name: "КППУ-799x799", // номер предыдущего калорифера
+      slug: "kppu-799x799",
+      name: "КППУ-799x799",
     },
-    nextProduct: {
-      slug: "kppu-890x890", // номер следующего калорифера
-      name: "КППУ-890х890", // номер следующего калорифера
-    },
-    airPower: 5000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-845x845",
-      description:
-        "Приточный паровой калорифер КППУ 845x845 производительностью по воздуху 5000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 845 845,калорифер КППУ 845 845,калорифер паровой 845 845,калорифер паровой КППУ 845 845,калорифер приточный 845 845,калорифер паровой приточный 845 845,калорифер 845 845 технические характеристики,калорифер КППУ 845 845 расчет и подбор,приточный калорифер 845 845 производительность по воздуху 5000,паровой калорифер 800 800",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 5000,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-845-845.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 5000 }, // Производительность по воздуху
-              { content: 773 }, // H H
-              { content: 821 }, // H1 H1
-              { content: 845 }, // H2 H2
-              { content: 910 }, // H3
-              { content: 675 }, // C
-              { content: 50 }, // dy мм
-              { content: 12.2 }, // КППУ2
-              { content: 18.4 }, // КППУ3
-              { content: 24.3 }, // КППУ4
-              { content: 60 }, // КППУ2
-              { content: 77 }, // КППУ3
-              { content: 100 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      5000, 773, 821, 845, 910, 675, 50, 12.2, 18.4, 24.3, 60, 77, 100,
     ],
   },
   {
     id: "kppu-799x799",
-    name: "Калорифер КППУ-799×799 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ-799×799",
+    name: "Калорифер КППУ-799×799 паровой",
+    shortName: "КППУ 799x799",
     variants: [
       {
         id: "kppu-799x799-2",
         name: "Приточный калорифер КППУ 799x799_2",
-        heatPower: 93, // производительность по теплу
-        price: 23392, // цена
+        heatPower: 93,
+        price: 23392,
       },
       {
         id: "kppu-799x799-3",
@@ -6356,143 +1913,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 42253,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-754x754", // номер предыдущего калорифера
-      name: "КППУ-754x754", // номер предыдущего калорифера
+      slug: "kppu-754x754",
+      name: "КППУ-754x754",
     },
-    nextProduct: {
-      slug: "kppu-845x845", // номер следующего калорифера
-      name: "КППУ-845х845", // номер следующего калорифера
-    },
-    airPower: 4500, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-799x799",
-      description:
-        "Приточный паровой калорифер КППУ 799x799 производительностью по воздуху 4500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 799 799,калорифер КППУ 799 799,калорифер паровой 799 799,калорифер паровой КППУ 799 799,калорифер приточный 799 799,калорифер паровой приточный 799 799,калорифер 799 799 технические характеристики,калорифер КППУ 799 799 расчет и подбор,приточный калорифер 799 799 производительность по воздуху 4500,паровой калорифер 800 800",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 4500,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-799-799.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 4500 }, // Производительность по воздуху
-              { content: 727 }, // H H
-              { content: 775 }, // H1 H1
-              { content: 799 }, // H2 H2
-              { content: 864 }, // H3
-              { content: 629 }, // C
-              { content: 50 }, // dy мм
-              { content: 10.7 }, // КППУ2
-              { content: 16.3 }, // КППУ3
-              { content: 21.4 }, // КППУ4
-              { content: 55 }, // КППУ2
-              { content: 70 }, // КППУ3
-              { content: 90 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      4500, 727, 775, 799, 864, 629, 50, 10.7, 16.3, 21.4, 55, 70, 90,
     ],
   },
   {
     id: "kppu-754x754",
-    name: "Калорифер КППУ-754×754 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 754×754",
+    name: "Калорифер КППУ-754×754 паровой",
+    shortName: "КППУ 754x754",
     variants: [
       {
         id: "kppu-754x754-2",
         name: "Приточный калорифер КППУ 754x754_2",
-        heatPower: 83, // производительность по теплу
-        price: 21057, // цена
+        heatPower: 83,
+        price: 21057,
       },
       {
         id: "kppu-754x754-3",
@@ -6507,143 +1956,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 38006,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-708x708", // номер предыдущего калорифера
-      name: "КППУ-708x708", // номер предыдущего калорифера
+      slug: "kppu-708x708",
+      name: "КППУ-708x708",
     },
-    nextProduct: {
-      slug: "kppu-799x799", // номер следующего калорифера
-      name: "КППУ-799х799", // номер следующего калорифера
-    },
-    airPower: 4000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-754x754",
-      description:
-        "Приточный паровой калорифер КППУ 754x754 производительностью по воздуху 4000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 754 754,калорифер КППУ 754 754,калорифер паровой 754 754,калорифер паровой КППУ 754 754,калорифер приточный 754 754,калорифер паровой приточный 754 754,калорифер 754 754 технические характеристики,калорифер КППУ 754 754 расчет и подбор,приточный калорифер 754 754 производительность по воздуху 4000,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 4000,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-754-754.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 4000 }, // Производительность по воздуху
-              { content: 682 }, // H H
-              { content: 730 }, // H1 H1
-              { content: 754 }, // H2 H2
-              { content: 819 }, // H3
-              { content: 584 }, // C
-              { content: 50 }, // dy мм
-              { content: 9.4 }, // КППУ2
-              { content: 14.3 }, // КППУ3
-              { content: 18.9 }, // КППУ4
-              { content: 49 }, // КППУ2
-              { content: 63 }, // КППУ3
-              { content: 81 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      4000, 682, 730, 754, 819, 584, 50, 9.4, 14.3, 18.9, 49, 63, 81,
     ],
   },
   {
     id: "kppu-708x708",
-    name: "Калорифер КППУ-708×708 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 708×708",
+    name: "Калорифер КППУ-708×708 паровой",
+    shortName: "КППУ 708x708",
     variants: [
       {
         id: "kppu-708x708-2",
         name: "Приточный калорифер КППУ 708x708_2",
-        heatPower: 73, // производительность по теплу
-        price: 19018, // цена
+        heatPower: 73,
+        price: 19018,
       },
       {
         id: "kppu-708x708-3",
@@ -6658,143 +1999,35 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 33876,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-663x663", // номер предыдущего калорифера
-      name: "КППУ-663x663", // номер предыдущего калорифера
+      slug: "kppu-663x663",
+      name: "КППУ-663x663",
     },
-    nextProduct: {
-      slug: "kppu-754x754", // номер следующего калорифера
-      name: "КППУ-754х754", // номер следующего калорифера
-    },
-    airPower: 3500, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-708x708",
-      description:
-        "Приточный паровой калорифер КППУ 708x708 производительностью по воздуху 3500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 708 708,калорифер КППУ 708 708,калорифер паровой 708 708,калорифер паровой КППУ 708 708,калорифер приточный 708 708,калорифер паровой приточный 708 708,калорифер 708 708 технические характеристики,калорифер КППУ 708 708 расчет и подбор,приточный калорифер 708 708 производительность по воздуху 3500,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 3500,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-708-708.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 3500 }, // Производительность по воздуху
-              { content: 636 }, // H H
-              { content: 684 }, // H1 H1
-              { content: 708 }, // H2 H2
-              { content: 773 }, // H3
-              { content: 538 }, // C
-              { content: 50 }, // dy мм
-              { content: 8.2 }, // КППУ2
-              { content: 12.5 }, // КППУ3
-              { content: 16.4 }, // КППУ4
-              { content: 45 }, // КППУ2
-              { content: 56 }, // КППУ3
-              { content: 72 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      3500, 636, 684, 708, 773, 538, 50, 8.2, 12.5, 16.4, 45, 56, 72,
     ],
   },
   {
     id: "kppu-663x663",
-    name: "Калорифер КППУ-663×663 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 663×663",
+    name: "Калорифер КППУ-663×663 паровой",
+    shortName: "КППУ 663x663",
     variants: [
       {
         id: "kppu-663x663-2",
         name: "Приточный калорифер КППУ 663x663_2",
-        heatPower: 64, // производительность по теплу
-        price: 17089, // цена
+        heatPower: 64,
+        price: 17089,
       },
       {
         id: "kppu-663x663-3",
@@ -6809,143 +2042,47 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 29962,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
-      slug: "kppu-617x617", // номер предыдущего калорифера
-      name: "КППУ-617x617", // номер предыдущего калорифера
+      slug: "kppu-617x617",
+      name: "КППУ-617x617",
     },
-    nextProduct: {
-      slug: "kppu-708x708", // номер следующего калорифера
-      name: "КППУ-708х708", // номер следующего калорифера
-    },
-    airPower: 3000, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-663x663",
-      description:
-        "Приточный паровой калорифер КППУ 663x663 производительностью по воздуху 3000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 663 663,калорифер КППУ 663 663,калорифер паровой 663 663,калорифер паровой КППУ 663 663,калорифер приточный 663 663,калорифер паровой приточный 663 663,калорифер 663 663 технические характеристики,калорифер КППУ 663 663 расчет и подбор,приточный калорифер 663 663 производительность по воздуху 3000,паровой калорифер 700 700",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 3000,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-663-663.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 3000 }, // Производительность по воздуху
-              { content: 591 }, // H H
-              { content: 639 }, // H1 H1
-              { content: 663 }, // H2 H2
-              { content: 728 }, // H3
-              { content: 493 }, // C
-              { content: 50 }, // dy мм
-              { content: "7.0" }, // КППУ2
-              { content: 10.7 }, // КППУ3
-              { content: 14.1 }, // КППУ4
-              { content: 41 }, // КППУ2
-              { content: 51 }, // КППУ3
-              { content: 64 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      3000,
+      591,
+      639,
+      663,
+      728,
+      493,
+      50,
+      "7.0",
+      10.7,
+      14.1,
+      41,
+      51,
+      64,
     ],
   },
   {
     id: "kppu-617x617",
-    name: "Калорифер КППУ-617×617 паровой", // главный заголовок страницы калорифера
-    shortName: "КППУ 617×617",
+    name: "Калорифер КППУ-617×617 паровой",
+    shortName: "КППУ 617x617",
     variants: [
       {
         id: "kppu-617x617-2",
         name: "Приточный калорифер КППУ 617x617_2",
-        heatPower: 55, // производительность по теплу
-        price: 14980, // цена
+        heatPower: 55,
+        price: 14980,
       },
       {
         id: "kppu-617x617-3",
@@ -6960,137 +2097,41 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
         price: 26194,
       },
     ],
-    // начало (оставляй как есть)
     categories: [
       "kalorifer",
       "parovy-kalorifery",
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    // конец (оставляй как есть)
     prevProduct: {
       slug: "kppu-572x572",
       name: "КППУ-572x572",
     },
-    nextProduct: {
-      slug: "kppu-663x663",
-      name: "КППУ-663х663",
-    },
-    airPower: 2500, // производительность по воздуху
-    metadata: {
-      title: "Калорифер приточный КППУ-617x617",
-      description:
-        "Приточный паровой калорифер КППУ 617x617 производительностью по воздуху 2500 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 617 617,калорифер КППУ 617 617,калорифер паровой 617 617,калорифер паровой КППУ 617 617,калорифер приточный 617 617,калорифер паровой приточный 617 617,калорифер 617 617 технические характеристики,калорифер КППУ 617 617 расчет и подбор,приточный калорифер 617 617 производительность по воздуху 2500,паровой калорифер 600 600",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    airPower: 2500,
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-617-617.html",
-    // ниже - таблица. менять нужно только часть со значениями, в конце. помечу ее границы
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              // начало части со значениями
-              { content: 2500 }, // Производительность по воздуху
-              { content: 545 }, // H H
-              { content: 593 }, // H1 H1
-              { content: 617 }, // H2 H2
-              { content: 682 }, // H3
-              { content: 447 }, // C
-              { content: 50 }, // dy мм
-              { content: "6.0" }, // КППУ2
-              { content: 9.1 }, // КППУ3
-              { content: "12.0" }, // КППУ4
-              { content: 36 }, // КППУ2
-              { content: 44 }, // КППУ3
-              { content: 56 }, // КППУ4
-              // конец части со значениями
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      2500,
+      545,
+      593,
+      617,
+      682,
+      447,
+      50,
+      "6.0",
+      9.1,
+      "12.0",
+      36,
+      44,
+      56,
     ],
   },
   {
     id: "kppu-572x572",
     name: "Калорифер КППУ-572×572 паровой",
-    shortName: "КППУ 572×572",
+    shortName: "КППУ 572x572",
     variants: [
       {
         id: "kppu-572x572-2",
@@ -7117,116 +2158,25 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       "pritochny-parovy-kalorifery",
       "kppu",
     ],
-    nextProduct: {
-      slug: "kppu-617x617",
-      name: "КППУ-617х617",
-    },
     airPower: 2000,
-    metadata: {
-      title: "Калорифер приточный КППУ-572x572",
-      description:
-        "Приточный паровой калорифер КППУ 572x572 производительностью по воздуху 2000 м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора",
-      keywords:
-        "калорифер 572 572,калорифер КППУ 572 572,калорифер паровой 572 572,калорифер паровой КППУ 572 572,калорифер приточный 572 572,калорифер паровой приточный 572 572,калорифер 572 572 технические характеристики,калорифер КППУ 572 572 расчет и подбор,приточный калорифер 572 572 производительность по воздуху 2000,паровой калорифер 500 500",
-    },
-    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png", // 572x572_905x905 и 947x947_1155x1155
+    img: "/img/kalorifery/kppu/kalorifer_kppu_572x572_890x890.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-572-572.html",
-    tableData: [
-      {
-        headers: [
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    Производительность <br /> по воздуху, м<sup>3</sup>/час
-                  </>
-                ),
-                rowspan: 2,
-              },
-              {
-                content: (
-                  <>
-                    Габаритные и <br /> присоединительные размеры, мм
-                  </>
-                ),
-                colspan: 5,
-              },
-              { content: "dy", className: "dy" },
-              {
-                content: (
-                  <>
-                    Площадь поверхности <br /> теплообмена, м<sup>2</sup>
-                  </>
-                ),
-                colspan: 3,
-              },
-              { content: "Масса, кг", colspan: 3, className: "mass" },
-            ],
-          },
-          {
-            cells: [
-              {
-                content: (
-                  <>
-                    H<br />B
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H1
-                    <br />
-                    B1
-                  </>
-                ),
-                className: "small-cols",
-              },
-              {
-                content: (
-                  <>
-                    H2
-                    <br />
-                    B2
-                  </>
-                ),
-                className: "small-cols",
-              },
-              { content: "H3", className: "small-cols" },
-              { content: "C", className: "small-cols" },
-              { content: "мм", className: "small-cols w-10" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-              { content: "КППУ2", className: "kal2" },
-              { content: "КППУ3", className: "kal2" },
-              { content: "КППУ4", className: "kal2" },
-            ],
-          },
-        ],
-        rows: [
-          {
-            cells: [
-              { content: 2000 },
-              { content: 500 },
-              { content: 548 },
-              { content: 572 },
-              { content: 637 },
-              { content: 402 },
-              { content: 50 },
-              { content: "5.0" },
-              { content: 7.7 },
-              { content: 10.1 },
-              { content: 32 },
-              { content: 39 },
-              { content: 49 },
-            ],
-          },
-        ],
-      },
+    heatCarrier: "steam",
+    specsTableValues: [
+      2000,
+      500,
+      548,
+      572,
+      637,
+      402,
+      50,
+      "5.0",
+      7.7,
+      10.1,
+      32,
+      39,
+      49,
     ],
   },
   // КПВУ-572_1572
