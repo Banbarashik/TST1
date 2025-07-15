@@ -89,12 +89,7 @@ export default function PritochnyProductPage({
       <iframe
         src={calculator}
         title="Калькулятор калорифера"
-        style={{
-          width: "100%",
-          height: "697px",
-          border: "none",
-        }}
-        className="mb-0.5"
+        className={`${isWater ? "h-174" : "h-124"} mb-0.5 w-full`}
       />
       <ProductParagraph className="mb-10">
         {nextProduct && (
