@@ -2403,7 +2403,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     img: "/img/kalorifery/kpvs/kalorifer_kpvs_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpvs/kpvs_chertez.png",
     calculator: "/legacy/calculator-ksk-1572-1572.html",
-    specsTableValues: [],
+    specsTableValues: [
+      25000, 1500, 1548, 1572, 1637, 1402, 50, 2, 62.6, 94.4, 125.3, 170, 230,
+      287,
+    ],
   },
   {
     id: "kpvs-1530x1530",
