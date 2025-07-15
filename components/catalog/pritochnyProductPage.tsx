@@ -9,7 +9,6 @@ import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import { Button } from "@/components/ui/button";
-import Table from "@/components/ui/table";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export default function PritochnyProductPage({
@@ -27,7 +26,6 @@ export default function PritochnyProductPage({
     img,
     drawing,
     calculator,
-    tableData,
   } = product;
 
   const typeForms = {
@@ -84,7 +82,7 @@ export default function PritochnyProductPage({
       <ProductParagraph className="mb-2.5">
         Синие поля обязательны для заполнения. Запас площади поверхности
         нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
-        фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.
+        фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.{" "}
         {typeKey === "vodiany-kalorifery" &&
           "Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с."}
       </ProductParagraph>

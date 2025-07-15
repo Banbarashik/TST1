@@ -99,6 +99,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       23000, 1458, 1506, 1530, 1595, 1346, 65, 54.8, 82.6, 109.6, 163, 219, 273,
     ],
+    nextProduct: {
+      slug: "kpps-1572x1572",
+      name: "КППС-1572x1572",
+    },
   },
   {
     id: "kpps-1489x1489",
@@ -142,6 +146,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       22000, 1417, 1465, 1489, 1554, 1305, 65, 51.7, 78.0, 103.5, 154, 207, 259,
     ],
+    nextProduct: {
+      slug: "kpps-1530x1530",
+      name: "КППС-1530x1530",
+    },
   },
   {
     id: "kpps-1447x1447",
@@ -185,6 +193,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       21000, 1375, 1423, 1447, 1512, 1263, 65, 48.7, 73.4, 97.4, 147, 197, 246,
     ],
+    nextProduct: {
+      slug: "kpps-1489x1489",
+      name: "КППС-1489x1489",
+    },
   },
   {
     id: "kpps-1405x1405",
@@ -240,6 +252,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       186,
       232,
     ],
+    nextProduct: {
+      slug: "kpps-1447x1447",
+      name: "КППС-1447x1447",
+    },
   },
   {
     id: "kpps-1364x1364",
@@ -295,6 +311,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       177,
       219,
     ],
+    nextProduct: {
+      slug: "kpps-1405x1405",
+      name: "КППС-1405x1405",
+    },
   },
   {
     id: "kpps-1322x1322",
@@ -338,6 +358,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       18000, 1250, 1298, 1322, 1387, 1138, 65, 40.2, 60.7, 80.4, 125, 166, 206,
     ],
+    nextProduct: {
+      slug: "kpps-1364x1364",
+      name: "КППС-1364x1364",
+    },
   },
   {
     id: "kpps-1280x1280",
@@ -381,6 +405,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       17000, 1208, 1256, 1280, 1345, 1096, 65, 37.6, 56.7, 75.1, 119, 157, 194,
     ],
+    nextProduct: {
+      slug: "kpps-1322x1322",
+      name: "КППС-1322x1322",
+    },
   },
   {
     id: "kpps-1239x1239",
@@ -436,6 +464,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       148,
       182,
     ],
+    nextProduct: {
+      slug: "kpps-1280x1280",
+      name: "КППС-1280x1280",
+    },
   },
   {
     id: "kpps-1197x1197",
@@ -491,6 +523,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       139,
       171,
     ],
+    nextProduct: {
+      slug: "kpps-1239x1239",
+      name: "КППС-1239x1239",
+    },
   },
   {
     id: "kpps-1155x1155",
@@ -534,6 +570,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       14000, 1083, 1131, 1155, 1220, 971, 65, 30.1, 45.5, 60.3, 99, 130, 160,
     ],
+    nextProduct: {
+      slug: "kpps-1197x1197",
+      name: "КППС-1197x1197",
+    },
   },
   {
     id: "kpps-1114x1114",
@@ -577,6 +617,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       13000, 1042, 1090, 1114, 1179, 930, 65, 27.9, 42.1, 55.8, 93, 122, 149,
     ],
+    nextProduct: {
+      slug: "kpps-1155x1155",
+      name: "КППС-1155x1155",
+    },
   },
   {
     id: "kpps-1072x1072",
@@ -620,6 +664,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       12000, 1000, 1048, 1072, 1137, 888, 65, 25.6, 38.7, 51.3, 87, 113, 138,
     ],
+    nextProduct: {
+      slug: "kpps-1114x1114",
+      name: "КППС-1114x1114",
+    },
   },
   {
     id: "kpps-1030x1030",
@@ -663,6 +711,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       11000, 958, 1006, 1030, 1095, 860, 50, 23.6, 35.6, 47.1, 81, 106, 129,
     ],
+    nextProduct: {
+      slug: "kpps-1072x1072",
+      name: "КППС-1072x1072",
+    },
   },
   {
     id: "kpps-989x989",
@@ -706,6 +758,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       10000, 917, 965, 989, 1054, 819, 50, 21.6, 32.6, 43.1, 75, 98, 119,
     ],
+    nextProduct: {
+      slug: "kpps-1030x1030",
+      name: "КППС-1030x1030",
+    },
   },
   {
     id: "kpps-947x947",
@@ -749,6 +805,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       9000, 875, 923, 947, 1012, 777, 50, 19.6, 29.6, 39.2, 70, 91, 110,
     ],
+    nextProduct: {
+      slug: "kpps-989x989",
+      name: "КППС-989x989",
+    },
   },
   {
     id: "kpps-905x905",
@@ -792,6 +852,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       8000, 833, 881, 905, 970, 735, 50, 17.8, 26.9, 35.6, 65, 83, 100,
     ],
+    nextProduct: {
+      slug: "kpps-947x947",
+      name: "КППС-947x947",
+    },
   },
   {
     id: "kpps-864x864",
@@ -847,6 +911,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       77,
       92,
     ],
+    nextProduct: {
+      slug: "kpps-905x905",
+      name: "КППС-905x905",
+    },
   },
   {
     id: "kpps-822x822",
@@ -890,6 +958,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       6000, 750, 798, 822, 887, 652, 50, 14.4, 21.8, 28.7, 55, 70, 84,
     ],
+    nextProduct: {
+      slug: "kpps-864x864",
+      name: "КППС-864x864",
+    },
   },
   {
     id: "kpps-780x780",
@@ -933,6 +1005,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       5000, 708, 756, 780, 845, 610, 50, 12.8, 19.4, 25.6, 51, 64, 76,
     ],
+    nextProduct: {
+      slug: "kpps-822x822",
+      name: "КППС-822x822",
+    },
   },
   {
     id: "kpps-739x739",
@@ -976,6 +1052,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       4500, 667, 715, 739, 804, 569, 50, 11.3, 17.2, 22.7, 46, 57, 68,
     ],
+    nextProduct: {
+      slug: "kpps-780x780",
+      name: "КППС-780x780",
+    },
   },
   {
     id: "kpps-697x697",
@@ -1019,6 +1099,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       4000, 625, 673, 697, 762, 527, 50, 9.9, 15.1, 19.9, 42, 52, 62,
     ],
+    nextProduct: {
+      slug: "kpps-739x739",
+      name: "КППС-739x739",
+    },
   },
   {
     id: "kpps-655x655",
@@ -1062,6 +1146,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       3500, 583, 631, 655, 720, 485, 50, 8.7, 13.1, 17.3, 38, 47, 56,
     ],
+    nextProduct: {
+      slug: "kpps-697x697",
+      name: "КППС-697x697",
+    },
   },
   {
     id: "kpps-614x614",
@@ -1105,6 +1193,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       3000, 542, 590, 614, 679, 444, 50, 7.4, 11.3, 14.9, 34, 42, 49,
     ],
+    nextProduct: {
+      slug: "kpps-655x655",
+      name: "КППС-655x655",
+    },
   },
   {
     id: "kpps-572x572",
@@ -1144,6 +1236,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       2500, 500, 548, 572, 637, 402, 50, 6.3, 9.6, 12.7, 31, 37, 43,
     ],
+    nextProduct: {
+      slug: "kpps-614x614",
+      name: "КППС-614x614",
+    },
   },
   // КППУ-572_1572
   {
@@ -1231,6 +1327,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       22000, 1454, 1502, 1526, 1591, 1330, 80, 43.4, 65.5, 86.9, 172, 233, 303,
     ],
+    nextProduct: {
+      slug: "kppu-1572x1572",
+      name: "КППУ-1572x1572",
+    },
   },
   {
     id: "kppu-1481x1481",
@@ -1274,6 +1374,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       20000, 1409, 1457, 1481, 1546, 1285, 80, 40.8, 61.5, 81.5, 162, 220, 287,
     ],
+    nextProduct: {
+      slug: "kppu-1526x1526",
+      name: "КППУ-1526x1526",
+    },
   },
   {
     id: "kppu-1435x1435",
@@ -1317,6 +1421,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       18000, 1363, 1411, 1435, 1500, 1239, 80, 38.2, 57.5, 76.3, 153, 207, 271,
     ],
+    nextProduct: {
+      slug: "kppu-1481x1481",
+      name: "КППУ-1481x1481",
+    },
   },
   {
     id: "kppu-1390x1390",
@@ -1360,6 +1468,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       17000, 1318, 1366, 1390, 1455, 1194, 80, 35.7, 53.8, 71.3, 144, 195, 255,
     ],
+    nextProduct: {
+      slug: "kppu-1435x1435",
+      name: "КППУ-1435x1435",
+    },
   },
   {
     id: "kppu-1345x1345",
@@ -1403,6 +1515,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       16000, 1273, 1321, 1345, 1410, 1161, 65, 33.2, 50.2, 66.5, 135, 182, 240,
     ],
+    nextProduct: {
+      slug: "kppu-1390x1390",
+      name: "КППУ-1390x1390",
+    },
   },
   {
     id: "kppu-1299x1299",
@@ -1446,6 +1562,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       15000, 1227, 1275, 1299, 1364, 1115, 65, 30.9, 46.6, 61.8, 127, 171, 225,
     ],
+    nextProduct: {
+      slug: "kppu-1345x1345",
+      name: "КППУ-1345x1345",
+    },
   },
   {
     id: "kppu-1254x1254",
@@ -1489,6 +1609,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       14000, 1182, 1230, 1254, 1319, 1070, 65, 28.6, 43.2, 57.3, 120, 160, 210,
     ],
+    nextProduct: {
+      slug: "kppu-1299x1299",
+      name: "КППУ-1299x1299",
+    },
   },
   {
     id: "kppu-1208x1208",
@@ -1532,6 +1656,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       13000, 1136, 1184, 1208, 1273, 1025, 65, 26.4, 39.9, 52.9, 111, 149, 196,
     ],
+    nextProduct: {
+      slug: "kppu-1254x1254",
+      name: "КППУ-1254x1254",
+    },
   },
   {
     id: "kppu-1163x1163",
@@ -1575,6 +1703,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       12000, 1091, 1139, 1163, 1228, 979, 65, 24.3, 36.8, 48.7, 105, 139, 182,
     ],
+    nextProduct: {
+      slug: "kppu-1208x1208",
+      name: "КППУ-1208x1208",
+    },
   },
   {
     id: "kppu-1117x1117",
@@ -1618,6 +1750,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       11000, 1045, 1093, 1117, 1182, 933, 65, 22.3, 33.8, 44.7, 97, 129, 169,
     ],
+    nextProduct: {
+      slug: "kppu-1163x1163",
+      name: "КППУ-1163x1163",
+    },
   },
   {
     id: "kppu-1072x1072",
@@ -1661,6 +1797,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       10000, 1000, 1048, 1072, 1137, 888, 65, 20.4, 30.9, 40.9, 91, 120, 157,
     ],
+    nextProduct: {
+      slug: "kppu-1117x1117",
+      name: "КППУ-1117x1117",
+    },
   },
   {
     id: "kppu-1026x1026",
@@ -1704,6 +1844,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       9000, 954, 1002, 1026, 1091, 856, 50, 18.6, 28.2, 37.2, 84, 110, 144,
     ],
+    nextProduct: {
+      slug: "kppu-1072x1072",
+      name: "КППУ-1072x1072",
+    },
   },
   {
     id: "kppu-981x981",
@@ -1747,6 +1891,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       8000, 909, 957, 981, 1046, 811, 50, 16.9, 25.5, 33.8, 78, 102, 133,
     ],
+    nextProduct: {
+      slug: "kppu-1026x1026",
+      name: "КППУ-1026x1026",
+    },
   },
   {
     id: "kppu-935x935",
@@ -1802,6 +1950,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       93,
       121,
     ],
+    nextProduct: {
+      slug: "kppu-981x981",
+      name: "КППУ-981x981",
+    },
   },
   {
     id: "kppu-890x890",
@@ -1845,6 +1997,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       6000, 818, 866, 890, 955, 720, 50, 13.6, 20.6, 27.3, 66, 85, 111,
     ],
+    nextProduct: {
+      slug: "kppu-935x935",
+      name: "КППУ-935x935",
+    },
   },
   {
     id: "kppu-845x845",
@@ -1888,6 +2044,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       5000, 773, 821, 845, 910, 675, 50, 12.2, 18.4, 24.3, 60, 77, 100,
     ],
+    nextProduct: {
+      slug: "kppu-890x890",
+      name: "КППУ-890x890",
+    },
   },
   {
     id: "kppu-799x799",
@@ -1931,6 +2091,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       4500, 727, 775, 799, 864, 629, 50, 10.7, 16.3, 21.4, 55, 70, 90,
     ],
+    nextProduct: {
+      slug: "kppu-845x845",
+      name: "КППУ-845x845",
+    },
   },
   {
     id: "kppu-754x754",
@@ -1974,6 +2138,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       4000, 682, 730, 754, 819, 584, 50, 9.4, 14.3, 18.9, 49, 63, 81,
     ],
+    nextProduct: {
+      slug: "kppu-799x799",
+      name: "КППУ-799x799",
+    },
   },
   {
     id: "kppu-708x708",
@@ -2017,6 +2185,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       3500, 636, 684, 708, 773, 538, 50, 8.2, 12.5, 16.4, 45, 56, 72,
     ],
+    nextProduct: {
+      slug: "kppu-754x754",
+      name: "КППУ-754x754",
+    },
   },
   {
     id: "kppu-663x663",
@@ -2072,6 +2244,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       51,
       64,
     ],
+    nextProduct: {
+      slug: "kppu-708x708",
+      name: "КППУ-708x708",
+    },
   },
   {
     id: "kppu-617x617",
@@ -2127,6 +2303,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       44,
       56,
     ],
+    nextProduct: {
+      slug: "kppu-663x663",
+      name: "КППУ-663x663",
+    },
   },
   {
     id: "kppu-572x572",
@@ -2178,6 +2358,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       39,
       49,
     ],
+    nextProduct: {
+      slug: "kppu-617x617",
+      name: "КППУ-617x617",
+    },
   },
   // КПВС-572_1572
   {
@@ -2264,6 +2448,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       23000, 1458, 1506, 1530, 1595, 1360, 50, 2, 59.2, 89.2, 118.4, 163, 219,
       273,
     ],
+    nextProduct: {
+      slug: "kpvs-1572x1572",
+      name: "КПВС-1572x1572",
+    },
   },
   {
     id: "kpvs-1489x1489",
@@ -2308,6 +2496,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       22000, 1417, 1465, 1489, 1554, 1319, 50, 2, 55.8, 84.2, 111.8, 154, 207,
       259,
     ],
+    nextProduct: {
+      slug: "kpvs-1530x1530",
+      name: "КПВС-1530x1530",
+    },
   },
   {
     id: "kpvs-1447x1447",
@@ -2352,6 +2544,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       21000, 1375, 1423, 1447, 1512, 1277, 50, 2, 52.6, 79.3, 105.2, 147, 197,
       246,
     ],
+    nextProduct: {
+      slug: "kpvs-1489x1489",
+      name: "КПВС-1489x1489",
+    },
   },
   {
     id: "kpvs-1405x1405",
@@ -2396,6 +2592,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       20000, 1333, 1381, 1405, 1470, 1235, 50, 2, 49.4, 74.6, 98.9, 139, 186,
       232,
     ],
+    nextProduct: {
+      slug: "kpvs-1447x1447",
+      name: "КПВС-1447x1447",
+    },
   },
   {
     id: "kpvs-1364x1364",
@@ -2452,6 +2652,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       177,
       219,
     ],
+    nextProduct: {
+      slug: "kpvs-1405x1405",
+      name: "КПВС-1405x1405",
+    },
   },
   {
     id: "kpvs-1322x1322",
@@ -2496,6 +2700,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       18000, 1250, 1298, 1322, 1387, 1152, 50, 2, 43.4, 65.5, 86.9, 125, 166,
       206,
     ],
+    nextProduct: {
+      slug: "kpvs-1364x1364",
+      name: "КПВС-1364x1364",
+    },
   },
   {
     id: "kpvs-1280x1280",
@@ -2540,6 +2748,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       17000, 1208, 1256, 1280, 1345, 1110, 50, 2, 40.6, 61.2, 81.1, 119, 157,
       194,
     ],
+    nextProduct: {
+      slug: "kpvs-1322x1322",
+      name: "КПВС-1322x1322",
+    },
   },
   {
     id: "kpvs-1239x1239",
@@ -2596,6 +2808,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       148,
       182,
     ],
+    nextProduct: {
+      slug: "kpvs-1280x1280",
+      name: "КПВС-1280x1280",
+    },
   },
   {
     id: "kpvs-1197x1197",
@@ -2652,6 +2868,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       139,
       171,
     ],
+    nextProduct: {
+      slug: "kpvs-1239x1239",
+      name: "КПВС-1239x1239",
+    },
   },
   {
     id: "kpvs-1155x1155",
@@ -2695,6 +2915,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       14000, 1083, 1131, 1155, 1220, 985, 50, 2, 32.6, 49.1, 65.1, 99, 130, 160,
     ],
+    nextProduct: {
+      slug: "kpvs-1197x1197",
+      name: "КПВС-1197x1197",
+    },
   },
   {
     id: "kpvs-1114x1114",
@@ -2738,6 +2962,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       13000, 1042, 1090, 1114, 1179, 944, 50, 2, 30.1, 45.4, 60.2, 93, 122, 149,
     ],
+    nextProduct: {
+      slug: "kpvs-1155x1155",
+      name: "КПВС-1155x1155",
+    },
   },
   {
     id: "kpvs-1072x1072",
@@ -2781,6 +3009,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       12000, 1000, 1048, 1072, 1137, 902, 50, 2, 27.7, 41.8, 55.4, 87, 113, 138,
     ],
+    nextProduct: {
+      slug: "kpvs-1114x1114",
+      name: "КПВС-1114x1114",
+    },
   },
   {
     id: "kpvs-1030x1030",
@@ -2837,6 +3069,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       106,
       129,
     ],
+    nextProduct: {
+      slug: "kpvs-1072x1072",
+      name: "КПВС-1072x1072",
+    },
   },
   {
     id: "kpvs-989x989",
@@ -2893,6 +3129,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       98,
       119,
     ],
+    nextProduct: {
+      slug: "kpvs-1030x1030",
+      name: "КПВС-1030x1030",
+    },
   },
   {
     id: "kpvs-947x947",
@@ -2949,6 +3189,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       91,
       110,
     ],
+    nextProduct: {
+      slug: "kpvs-989x989",
+      name: "КПВС-989x989",
+    },
   },
   {
     id: "kpvs-905x905",
@@ -3005,6 +3249,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       83,
       100,
     ],
+    nextProduct: {
+      slug: "kpvs-947x947",
+      name: "КПВС-947x947",
+    },
   },
   {
     id: "kpvs-864x864",
@@ -3061,6 +3309,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       77,
       92,
     ],
+    nextProduct: {
+      slug: "kpvs-905x905",
+      name: "КПВС-905x905",
+    },
   },
   {
     id: "kpvs-822x822",
@@ -3117,6 +3369,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       70,
       84,
     ],
+    nextProduct: {
+      slug: "kpvs-864x864",
+      name: "КПВС-864x864",
+    },
   },
   {
     id: "kpvs-780x780",
@@ -3173,6 +3429,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       64,
       76,
     ],
+    nextProduct: {
+      slug: "kpvs-822x822",
+      name: "КПВС-822x822",
+    },
   },
   {
     id: "kpvs-739x739",
@@ -3229,6 +3489,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       57,
       68,
     ],
+    nextProduct: {
+      slug: "kpvs-780x780",
+      name: "КПВС-780x780",
+    },
   },
   {
     id: "kpvs-697x697",
@@ -3285,6 +3549,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       52,
       62,
     ],
+    nextProduct: {
+      slug: "kpvs-739x739",
+      name: "КПВС-739x739",
+    },
   },
   {
     id: "kpvs-655x655",
@@ -3341,6 +3609,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       47,
       56,
     ],
+    nextProduct: {
+      slug: "kpvs-697x697",
+      name: "КПВС-697x697",
+    },
   },
   {
     id: "kpvs-614x614",
@@ -3397,6 +3669,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       42,
       49,
     ],
+    nextProduct: {
+      slug: "kpvs-655x655",
+      name: "КПВС-655x655",
+    },
   },
   {
     id: "kpvs-572x572",
@@ -3449,6 +3725,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       37,
       43,
     ],
+    nextProduct: {
+      slug: "kpvs-614x614",
+      name: "КПВС-614x614",
+    },
   },
   // КПВУ-572_1572
   {
@@ -3562,6 +3842,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       233,
       303,
     ],
+    nextProduct: {
+      slug: "kpvu-1572x1572",
+      name: "КПВУ-1572x1572",
+    },
   },
   {
     id: "kpvu-1481x1481",
@@ -3618,6 +3902,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       220,
       287,
     ],
+    nextProduct: {
+      slug: "kpvu-1526x1526",
+      name: "КПВУ-1526x1526",
+    },
   },
   {
     id: "kpvu-1435x1435",
@@ -3674,6 +3962,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       207,
       271,
     ],
+    nextProduct: {
+      slug: "kpvu-1481x1481",
+      name: "КПВУ-1481x1481",
+    },
   },
   {
     id: "kpvu-1390x1390",
@@ -3730,6 +4022,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       195,
       255,
     ],
+    nextProduct: {
+      slug: "kpvu-1435x1435",
+      name: "КПВУ-1435x1435",
+    },
   },
   {
     id: "kpvu-1345x1345",
@@ -3786,6 +4082,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       182,
       240,
     ],
+    nextProduct: {
+      slug: "kpvu-1390x1390",
+      name: "КПВУ-1390x1390",
+    },
   },
   {
     id: "kpvu-1299x1299",
@@ -3842,6 +4142,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       171,
       225,
     ],
+    nextProduct: {
+      slug: "kpvu-1345x1345",
+      name: "КПВУ-1345x1345",
+    },
   },
   {
     id: "kpvu-1254x1254",
@@ -3886,6 +4190,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       14000, 1182, 1230, 1254, 1319, 1084, 50, 2, 30.6, 46.2, 61.2, 120, 160,
       210,
     ],
+    nextProduct: {
+      slug: "kpvu-1299x1299",
+      name: "КПВУ-1299x1299",
+    },
   },
   {
     id: "kpvu-1208x1208",
@@ -3930,6 +4238,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       13000, 1136, 1184, 1208, 1273, 1038, 50, 2, 28.2, 42.6, 56.5, 111, 149,
       196,
     ],
+    nextProduct: {
+      slug: "kpvu-1254x1254",
+      name: "КПВУ-1254x1254",
+    },
   },
   {
     id: "kpvu-1163x1163",
@@ -3986,6 +4298,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       139,
       182,
     ],
+    nextProduct: {
+      slug: "kpvu-1208x1208",
+      name: "КПВУ-1208x1208",
+    },
   },
   {
     id: "kpvu-1117x1117",
@@ -4029,6 +4345,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
     specsTableValues: [
       11000, 1045, 1093, 1117, 1182, 947, 50, 2, 23.8, 36.1, 47.8, 97, 129, 169,
     ],
+    nextProduct: {
+      slug: "kpvu-1163x1163",
+      name: "КПВУ-1163x1163",
+    },
   },
   {
     id: "kpvu-1072x1072",
@@ -4085,6 +4405,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       120,
       157,
     ],
+    nextProduct: {
+      slug: "kpvu-1117x1117",
+      name: "КПВУ-1117x1117",
+    },
   },
   {
     id: "kpvu-1026x1026",
@@ -4141,6 +4465,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       110,
       144,
     ],
+    nextProduct: {
+      slug: "kpvu-1072x1072",
+      name: "КПВУ-1072x1072",
+    },
   },
   {
     id: "kpvu-981x981",
@@ -4197,6 +4525,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       102,
       133,
     ],
+    nextProduct: {
+      slug: "kpvu-1026x1026",
+      name: "КПВУ-1026x1026",
+    },
   },
   {
     id: "kpvu-935x935",
@@ -4253,6 +4585,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       93,
       121,
     ],
+    nextProduct: {
+      slug: "kpvu-981x981",
+      name: "КПВУ-981x981",
+    },
   },
   {
     id: "kpvu-890x890",
@@ -4309,6 +4645,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       85,
       111,
     ],
+    nextProduct: {
+      slug: "kpvu-935x935",
+      name: "КПВУ-935x935",
+    },
   },
   {
     id: "kpvu-845x845",
@@ -4365,6 +4705,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       77,
       100,
     ],
+    nextProduct: {
+      slug: "kpvu-890x890",
+      name: "КПВУ-890x890",
+    },
   },
   {
     id: "kpvu-799x799",
@@ -4421,6 +4765,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       70,
       90,
     ],
+    nextProduct: {
+      slug: "kpvu-845x845",
+      name: "КПВУ-845x845",
+    },
   },
   {
     id: "kpvu-754x754",
@@ -4477,6 +4825,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       63,
       81,
     ],
+    nextProduct: {
+      slug: "kpvu-799x799",
+      name: "КПВУ-799x799",
+    },
   },
   {
     id: "kpvu-708x708",
@@ -4533,6 +4885,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       56,
       72,
     ],
+    nextProduct: {
+      slug: "kpvu-754x754",
+      name: "КПВУ-754x754",
+    },
   },
   {
     id: "kpvu-663x663",
@@ -4589,6 +4945,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       51,
       64,
     ],
+    nextProduct: {
+      slug: "kpvu-708x708",
+      name: "КПВУ-708x708",
+    },
   },
   {
     id: "kpvu-617x617",
@@ -4645,6 +5005,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       44,
       56,
     ],
+    nextProduct: {
+      slug: "kpvu-663x663",
+      name: "КПВУ-663x663",
+    },
   },
   {
     id: "kpvu-572x572",
@@ -4697,6 +5061,10 @@ export const productData: (Product | PritochnyProduct | KSKProduct)[] = [
       39,
       49,
     ],
+    nextProduct: {
+      slug: "kpvu-617x617",
+      name: "КПВУ-617x617",
+    },
   },
   // КСк 2-1_2-12
   {
