@@ -31,12 +31,12 @@ export async function generateMetadata({
   const productType = getProductType(product.categories);
   const heatCarrierAdj = getProductTypeForms(product.categories);
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
-  const shortNameWithHyphen = product.shortName.replace(" ", "-");
 
   if (productType === "supplyCalorifier") {
     const [sizeStr] = product.shortName.match(/\d+/);
     const size = Number(sizeStr);
     const roundedSize = Math.round(size / 100) * 100;
+    const shortNameWithHyphen = product.shortName.replace(" ", "-");
 
     return {
       title: `Калорифер приточный ${shortNameWithHyphen}`,
@@ -46,10 +46,12 @@ export async function generateMetadata({
   }
 
   if (productType === "standardCalorifier") {
+    const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+
     return {
-      title: `Калорифер ${heatCarrierAdj.nom} ${shortNameWithoutHyphen}`,
-      description: `Калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, вес, расчет и цена калорифера ${shortNameWithoutHyphen} 02 ХЛ3`,
-      keywords: `калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} 02 хл3,калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj.nom},калорифер ${shortNameWithoutHyphen} технические характеристики,калорифер ${shortNameWithoutHyphen} габаритные размеры,купить калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} цена,калорифер ${shortNameWithoutHyphen} производительность,калорифер ${shortNameWithoutHyphen} масса,кск ${shortNameWithoutHyphen}`,
+      title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
+      description: `Калорифер ${product.shortName} ${heatCarrierAdj?.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${product.shortName}`,
+      keywords: `калорифер ${product.rows} ${product.size} ${heatCarrierAdj?.nom},${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj?.nom},калорифер ${shortNameWithoutHyphen} технические характеристики,калорифер ${shortNameWithoutHyphen} габаритные размеры,калорифер ${shortNameWithoutHyphen} производительность,калорифер ${shortNameWithoutHyphen} мощность,калорифер ${shortNameWithoutHyphen} купить,калорифер ${shortNameWithoutHyphen} цена`,
     };
   }
 }
