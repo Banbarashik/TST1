@@ -5,11 +5,11 @@ import type { SupplyCalorifier } from "@/types";
 
 import { getProductTypeForms } from "@/lib/productType";
 
+import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import { Button } from "@/components/ui/button";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export default function SupplyCalorifierPage({
@@ -33,7 +33,7 @@ export default function SupplyCalorifierPage({
 
   const shortNameWithoutHyphen = shortName.replace("-", " ");
   const shortNameWithHyphen = shortName.replace(" ", "-");
-  const [nameAbbrev] = shortName.match(/^[А-ЯA-Z]+/);
+  const [nameAbbrev] = shortName.match(/^[А-ЯA-Z]+/)!;
 
   const isWater = heatCarrier === "water";
   const isSteam = heatCarrier === "steam";
@@ -42,9 +42,9 @@ export default function SupplyCalorifierPage({
     <div>
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
-        Приточный {type.nom} калорифер {shortNameWithHyphen} выпускается в двух,
-        трех и четырех рядном исполнении. Номинальная производительность по
-        воздуху – {airPower} метров кубических в час, тепловая мощность
+        Приточный {type?.nom} калорифер {shortNameWithHyphen} выпускается в
+        двух, трех и четырех рядном исполнении. Номинальная производительность
+        по воздуху – {airPower} метров кубических в час, тепловая мощность
         варьируется в зависимости от рядности калорифера {shortNameWithHyphen} и
         параметров эксплуатации.
       </ProductParagraph>

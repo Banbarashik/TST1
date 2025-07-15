@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import type { Product, ProductVariant } from "@/types";
+import type { Product, ProductVariant, SupplyCalorifier } from "@/types";
 
 import { Button } from "@/components/ui/button";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
@@ -12,7 +12,7 @@ export default function ProductCard({
   product,
   isLink = true,
 }: {
-  product: Product | ProductVariant;
+  product: Product | ProductVariant | SupplyCalorifier;
   isLink?: boolean;
 }) {
   const hasVariants =

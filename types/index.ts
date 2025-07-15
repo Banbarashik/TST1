@@ -9,7 +9,8 @@ export type Category = {
 export type Product = {
   id: string;
   name: string;
-  variants?: ProductVariant[];
+  shortName: string;
+  heatCarrier: "water" | "steam";
   categories: string[];
   prevProduct?: {
     slug: string;
@@ -22,19 +23,17 @@ export type Product = {
   airPower: number;
   heatPower?: number;
   price?: number;
-  img: string;
-  drawing: string;
-  metadata: {
+  img: {
+    url: string;
+    alt: string;
     title: string;
-    description: string;
-    keywords: string;
   };
-  headers: string[];
-  textContent: string[];
-  tableData: ProductTableData[];
+  drawing: string;
+  specsTableValues: (string | number)[];
 };
 
 export type SupplyCalorifier = Product & {
+  variants: ProductVariant[];
   calculator: string;
 };
 
