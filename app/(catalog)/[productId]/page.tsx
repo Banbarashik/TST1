@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 import { getProductTypeForms } from "@/lib/productType";
 
-import PritochnyProductPage from "@/components/catalog/pritochnyProductPage";
+import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
 
 function getProductType(categories: string[]) {
@@ -67,7 +67,7 @@ export default async function ProductPage({
   const productType = getProductType(product.categories);
 
   if (productType === "supplyCalorifier")
-    return <PritochnyProductPage product={product} />;
+    return <SupplyCalorifierPage product={product} />;
 
   if (productType === "standardCalorifier")
     return <KSKProductPage product={product} />;

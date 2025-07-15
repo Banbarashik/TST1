@@ -1,22 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { PritochnyProduct } from "@/types";
+import type { SupplyCalorifier } from "@/types";
 
 import { getProductTypeForms } from "@/lib/productType";
 
 import ProductCard from "@/components/catalog/productCard";
-import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import { Button } from "@/components/ui/button";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-export default function PritochnyProductPage({
+export default function SupplyCalorifierPage({
   product,
 }: {
-  product: PritochnyProduct;
+  product: SupplyCalorifier;
 }) {
   const {
     shortName,

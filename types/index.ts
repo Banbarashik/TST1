@@ -34,7 +34,7 @@ export type Product = {
   tableData: ProductTableData[];
 };
 
-export type PritochnyProduct = Product & {
+export type SupplyCalorifier = Product & {
   calculator: string;
 };
 

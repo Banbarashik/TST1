@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import type { PritochnyProduct, Product } from "@/types";
+import type { SupplyCalorifier, Product } from "@/types";
 
 export default function ProductHeader({
   product,
 }: {
-  product: Product | PritochnyProduct;
+  product: Product | SupplyCalorifier;
 }) {
   return (
     <div className="mb-8 flex items-center justify-between">
