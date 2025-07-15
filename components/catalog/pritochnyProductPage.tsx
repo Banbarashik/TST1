@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import type { PritochnyProduct } from "@/types";
 
+import { getProductTypeForms } from "@/lib/productType";
+
 import ProductCard from "@/components/catalog/productCard";
 import ProductRequestControls from "@/components/catalog/productRequestControls";
 import ProductHeader from "@/components/catalog/productHeader";
@@ -28,24 +30,7 @@ export default function PritochnyProductPage({
     calculator,
   } = product;
 
-  const typeForms = {
-    "vodiany-kalorifery": {
-      nom: "водяной", // именительный
-      gen: "водяного", // родительный
-      plu: "водяные", // множественное
-    },
-    "parovy-kalorifery": {
-      nom: "паровой",
-      gen: "парового",
-      plu: "паровые", // множественное
-    },
-  };
-  const typeKey = product.categories.includes("vodiany-kalorifery")
-    ? "vodiany-kalorifery"
-    : product.categories.includes("parovy-kalorifery")
-      ? "parovy-kalorifery"
-      : null;
-  const type = typeKey ? typeForms[typeKey] : null;
+  const type = getProductTypeForms(product.categories);
 
   const shortNameWithHyphen = shortName?.replace(" ", "-");
   const [nameAbbrev] = shortName.match(/^[А-ЯA-Z]+/);
@@ -83,7 +68,7 @@ export default function PritochnyProductPage({
         Синие поля обязательны для заполнения. Запас площади поверхности
         нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
         фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.{" "}
-        {typeKey === "vodiany-kalorifery" &&
+        {isWater &&
           "Скорость теплоносителя в трубках: оптимальная 0.2-0.5 м/с, допустимая - 0.12-1.2 м/с."}
       </ProductParagraph>
       <iframe
