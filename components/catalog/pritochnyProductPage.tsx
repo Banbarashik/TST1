@@ -195,9 +195,21 @@ export default function PritochnyProductPage({
         </thead>
         <tbody>
           <tr>
-            {product.specsTableValues.map((value, i) => (
-              <td key={i}>{value}</td>
-            ))}
+            {product.specsTableValues.map((value, i) => {
+              const fractionMatch = String(value).match(
+                /^(\d+)\s+(\d+)\/(\d+)$/,
+              );
+              if (fractionMatch) {
+                const [, whole, numerator, denominator] = fractionMatch;
+                return (
+                  <td key={i}>
+                    {whole} <sup>{numerator}</sup>/<sub>{denominator}</sub>
+                  </td>
+                );
+              }
+
+              return <td key={i}>{value}</td>;
+            })}
           </tr>
         </tbody>
       </table>
