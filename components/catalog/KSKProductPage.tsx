@@ -11,8 +11,6 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const sizeRegex = /\d+-(\d+)/;
-const rowsRegex = /-(\d+)$/;
 const rowLabels: Record<number, string> = {
   2: "двухрядные",
   3: "трехрядные",
@@ -47,14 +45,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     p.categories.includes(exactCategory),
   );
 
-  const [, size] = product.shortName.match(sizeRegex);
-  const productsBySize = productsByCategory.filter(function (p) {
-    const [, pSize] = p.id.match(sizeRegex)!;
-    return size === pSize;
-  });
+  const productsBySize = productsByCategory.filter(
+    (p) => p.size === product.size,
+  );
 
-  const [, rows] = exactCategory.match(rowsRegex);
-  const rowsPluAdj = rowLabels[rows];
+  const rowsPluAdj = rowLabels[product.rows];
 
   return (
     <div>
@@ -63,16 +58,17 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <ProductCard product={product} isLink={false} />
         <div>
           <ProductSubheader
-            text={`Калорифер ${product.shortName} 02 ХЛ3. ТУ 4863-002-55613706-02`}
+            text={`Калорифер ${product.model} ${product.climate}. ТУ 4863-002-55613706-02`}
           />
           <ProductParagraph>Теплоотдающие элементы: </ProductParagraph>
           <ul className="mb-4 text-lg">
             <li>
-              - электросварные прямошовные трубки 16х1.5 мм по ГОСТ 10704-91
+              - электросварные прямошовные трубки {product.tubeSize} мм по ГОСТ
+              10704-91
             </li>
             <li>
-              - цельнотянутые бесшовные трубки 16х1.5 мм по ГОСТ 8734-75 с
-              алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
+              - цельнотянутые бесшовные трубки {product.tubeSize} мм по ГОСТ
+              8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
             </li>
           </ul>
           <div className="mb-4 flex flex-col gap-1">
@@ -106,7 +102,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
       <ProductSubheader
-        text={`Таблица рабочих параметров калорифера ${product.shortName}`}
+        text={`Таблица расчета и подбора ${type?.gen} калорифера ${product.shortName}`}
       />
       <ProductParagraph className="mb-3">
         Ниже представлены расчетные данные водяного калорифера{" "}
@@ -119,10 +115,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <iframe
         src={product.tableWithTabs}
         title="Таблица рабочих параметров калорифера"
-        className="mb-3 h-65 w-full"
+        className="mb-1 h-65 w-full"
       />
+      <ProductParagraph className="mb-4">
+        Табличные данные можно использовать при подборе сопутствующего
+        вентиляционного и насосно-смесительного оборудования.
+      </ProductParagraph>
       <ProductSubheader
-        text={`Технические характеристики ${product.shortName}`}
+        text={`Технические характеристики ${product.shortName} ${type?.gen}`}
       />
       <table className="mb-4">
         <thead>
@@ -132,8 +132,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               className="pl-1 text-left"
               style={{ fontSize: "11pt" }}
             >
-              Основные технические характеристики водяного воздухонагревателя{" "}
-              {product.shortName}-02-ХЛ3
+              Технические характеристики {type.gen} калорифера{" "}
+              {product.shortName}
             </th>
           </tr>
         </thead>
@@ -159,8 +159,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
       <Image
         src={product.drawing}
-        alt={`Габаритные и присоединительные размеры калорифера ${product.shortName}`}
-        title={`Чертеж ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
+        alt={`${type.nom} калорифер ${product.shortName} габаритные размеры`}
+        title={`Калорифер ${product.shortName} ${type?.nom} технические характеристики`}
         width={968}
         height={1}
         className="mb-4"
@@ -173,8 +173,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               className="pl-1 text-left"
               style={{ fontSize: "11pt" }}
             >
-              Габаритные и присоединительные размеры оребренного теплообменника{" "}
-              {product.shortName}, мм
+              Габаритные и присоединительные размеры калорифера{" "}
+              {product.shortName} {type?.gen}
             </th>
           </tr>
         </thead>
