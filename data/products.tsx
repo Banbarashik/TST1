@@ -5074,6 +5074,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "kalorifer-ksk-2-12",
     name: "Калорифер КСк 2-12",
     shortName: "КСк 2-12",
+    rows: 2,
+    size: 12,
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-2"],
     airPower: 25000,
     heatPower: 448,
