@@ -48,21 +48,17 @@ export default function PritochnyProductPage({
         варьируется в зависимости от рядности калорифера {shortNameWithHyphen} и
         параметров эксплуатации.
       </ProductParagraph>
-      {variants && variants.length > 0 ? (
-        <div className="mb-12 grid grid-cols-3 gap-5">
-          {variants.map(function (variant) {
-            return (
-              <ProductCard
-                key={variant.id}
-                isLink={false}
-                product={{ ...variant, airPower, img }}
-              />
-            );
-          })}
-        </div>
-      ) : (
-        <ProductRequestControls product={product} />
-      )}
+      <div className="mb-12 grid grid-cols-3 gap-5">
+        {variants.map(function (variant) {
+          return (
+            <ProductCard
+              key={variant.id}
+              isLink={false}
+              product={{ ...variant, airPower, img }}
+            />
+          );
+        })}
+      </div>
       <ProductSubheader text={`Калькулятор подбора калорифера ${shortName}`} />
       <ProductParagraph className="mb-2.5">
         Синие поля обязательны для заполнения. Запас площади поверхности
