@@ -26,6 +26,7 @@ const categoryLabels: Record<string, string> = {
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const type = getProductTypeForms(product.categories);
 
+  const shortNameWithHyphen = product.shortName.replace(" ", "-");
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
   const category = product.categories.includes("ksk")

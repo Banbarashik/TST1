@@ -19,8 +19,8 @@ export default function PritochnyProductPage({
   product: PritochnyProduct;
 }) {
   const {
-    name,
     shortName,
+    heatCarrier,
     variants,
     prevProduct,
     nextProduct,
@@ -32,19 +32,20 @@ export default function PritochnyProductPage({
 
   const type = getProductTypeForms(product.categories);
 
-  const shortNameWithHyphen = shortName?.replace(" ", "-");
+  const shortNameWithoutHyphen = shortName.replace("-", " ");
+  const shortNameWithHyphen = shortName.replace(" ", "-");
   const [nameAbbrev] = shortName.match(/^[А-ЯA-Z]+/);
 
-  const isWater = product.heatCarrier === "water";
-  const isSteam = product.heatCarrier === "steam";
+  const isWater = heatCarrier === "water";
+  const isSteam = heatCarrier === "steam";
 
   return (
     <div>
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
-        Приточный {type?.nom} калорифер {shortNameWithHyphen} выпускается в
-        двух, трех и четырех рядном исполнении. Номинальная производительность
-        по воздуху – {airPower} метров кубических в час, тепловая мощность
+        Приточный {type.nom} калорифер {shortNameWithHyphen} выпускается в двух,
+        трех и четырех рядном исполнении. Номинальная производительность по
+        воздуху – {airPower} метров кубических в час, тепловая мощность
         варьируется в зависимости от рядности калорифера {shortNameWithHyphen} и
         параметров эксплуатации.
       </ProductParagraph>
@@ -192,7 +193,8 @@ export default function PritochnyProductPage({
       {drawing && (
         <Image
           src={drawing}
-          alt={name}
+          alt={`Габаритные размеры ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
+          title={`Технические характеристики ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
           width={968}
           height={1}
           className="mb-10"
