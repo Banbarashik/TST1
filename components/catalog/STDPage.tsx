@@ -34,7 +34,7 @@ export default function STDPage({ product }) {
               </ul>
               {variant.relatedProducts.map(function (p) {
                 return (
-                  <div className="mb-4 flex flex-col gap-1">
+                  <div key={p.caption} className="mb-4 flex flex-col gap-1">
                     <ProductParagraph className="font-bold">
                       {p.caption}
                     </ProductParagraph>
@@ -76,6 +76,31 @@ export default function STDPage({ product }) {
         насосно-смесительного оборудования.
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
+
+      <div className="single-table-wrap">
+        <table className="single-table">
+          <thead>
+            <tr>
+              <th rowSpan={2}>Наименование агрегата</th>
+              <th colSpan={2}>Производительность</th>
+              <th colSpan={3}>Габаритные размеры, мм</th>
+              <th rowSpan={2} className="w-18">
+                Масса, кг
+              </th>
+            </tr>
+            <tr>
+              <th>по воздуху, м³/ч</th>
+              <th>по теплу, кВт</th>
+              <th>L</th>
+              <th>B</th>
+              <th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

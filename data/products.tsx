@@ -31,8 +31,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
           {
             caption: "Агрегаты АО 2 в трехрядные",
             links: [
-              { slug: "", text: "АО 2-3 в3" },
-              { slug: "", text: "АО 2-4 в3" },
+              { slug: "#", text: "АО 2-3 в3" },
+              { slug: "_", text: "АО 2-4 в3" },
             ],
           },
         ],
@@ -56,8 +56,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
           {
             caption: "Агрегаты АО 2 в четырехрядные",
             links: [
-              { slug: "", text: "АО 2-3 в4" },
-              { slug: "", text: "АО 2-4 в4" },
+              { slug: "#", text: "АО 2-3 в4" },
+              { slug: "_", text: "АО 2-4 в4" },
             ],
           },
         ],
