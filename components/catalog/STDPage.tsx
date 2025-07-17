@@ -54,6 +54,28 @@ export default function STDPage({ product }) {
           </div>
         );
       })}
+      <ProductSubheader
+        text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
+      />
+      <ProductParagraph className="mb-3">
+        Ниже представлены расчетные данные воздушно-отопительного агрегата{" "}
+        {product.shortName} (на базе трех и четырех рядного многоходового{" "}
+        {heatCarrierAdj.gen} калорифера {product.calorifier}) производства ООО
+        Т.С.Т. Выбрав в верхней части таблицы подходящий вам график
+        теплоносителя, можно ознакомиться с основными теплотехническими
+        показателями: температурой воздуха на выходе, сопротивлением по воде и
+        расходом теплоносителя, вырабатываемой мощностью.
+      </ProductParagraph>
+      <iframe
+        src={product.tableWithTabs}
+        title={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
+        className="mb-1 h-65 w-full"
+      />
+      <ProductParagraph className="mb-4">
+        Табличные данные можно использовать при подборе сопутствующего
+        насосно-смесительного оборудования.
+      </ProductParagraph>
+      <ProductSubheader text={`Технические характеристики ${product.model}`} />
     </div>
   );
 }
