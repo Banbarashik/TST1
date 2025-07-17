@@ -81,7 +81,7 @@ export default function STDPage({ product }) {
 
       <UniversalTable
         rows={product.variants}
-        getRowValues={(variant) => variant.specsTableValues}
+        getRowValues={(variant) => variant.specsTablesValues[0]}
         headers={
           <thead>
             <tr>
@@ -112,17 +112,4 @@ export default function STDPage({ product }) {
       />
     </div>
   );
-}
-
-function getRowSpan(values, variants, colIdx) {
-  // Count how many consecutive variants have the same value at colIdx
-  let span = 1;
-  for (let i = 1; i < variants.length; i++) {
-    if (variants[i].specsTableValues[colIdx] === values[colIdx]) {
-      span++;
-    } else {
-      break;
-    }
-  }
-  return span > 1 ? span : undefined;
 }
