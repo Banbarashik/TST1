@@ -2,7 +2,7 @@ import { productData } from "@/data/products";
 
 import type { Metadata } from "next";
 
-import { getProductTypeForms } from "@/lib/productType";
+import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 
 import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
@@ -32,7 +32,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   const productType = getProductType(product.categories);
-  const heatCarrierAdj = getProductTypeForms(product.categories);
+  const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
   if (productType === "supplyCalorifier") {

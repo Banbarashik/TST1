@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { SupplyCalorifier } from "@/types";
 
-import { getProductTypeForms } from "@/lib/productType";
+import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
@@ -29,7 +29,7 @@ export default function SupplyCalorifierPage({
     calculator,
   } = product;
 
-  const type = getProductTypeForms(product.categories);
+  const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
   const shortNameWithoutHyphen = shortName.replace("-", " ");
   const shortNameWithHyphen = shortName.replace(" ", "-");
@@ -42,11 +42,11 @@ export default function SupplyCalorifierPage({
     <div>
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
-        Приточный {type?.nom} калорифер {shortNameWithHyphen} выпускается в
-        двух, трех и четырех рядном исполнении. Номинальная производительность
-        по воздуху – {airPower} метров кубических в час, тепловая мощность
-        варьируется в зависимости от рядности калорифера {shortNameWithHyphen} и
-        параметров эксплуатации.
+        Приточный {heatCarrierAdj?.nom} калорифер {shortNameWithHyphen}{" "}
+        выпускается в двух, трех и четырех рядном исполнении. Номинальная
+        производительность по воздуху – {airPower} метров кубических в час,
+        тепловая мощность варьируется в зависимости от рядности калорифера{" "}
+        {shortNameWithHyphen} и параметров эксплуатации.
       </ProductParagraph>
       <div className="mb-12 grid grid-cols-3 gap-5">
         {variants.map(function (variant) {
@@ -77,7 +77,7 @@ export default function SupplyCalorifierPage({
           <>
             Если запас площади поверхности теплообмена не достаточен ни для
             одной модели {shortName} (двух, трех и четырех рядной) нужно перейти
-            к следующему номеру {type?.gen} калорифера:{" "}
+            к следующему номеру {heatCarrierAdj?.gen} калорифера:{" "}
             <Link
               href={nextProduct.slug}
               className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
@@ -192,8 +192,8 @@ export default function SupplyCalorifierPage({
       {drawing && (
         <Image
           src={drawing}
-          alt={`Габаритные размеры ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
-          title={`Технические характеристики ${type?.gen} калорифера ${shortNameWithoutHyphen}`}
+          alt={`Габаритные размеры ${heatCarrierAdj?.gen} калорифера ${shortNameWithoutHyphen}`}
+          title={`Технические характеристики ${heatCarrierAdj?.gen} калорифера ${shortNameWithoutHyphen}`}
           width={968}
           height={1}
           className="mb-10"
@@ -201,7 +201,7 @@ export default function SupplyCalorifierPage({
       )}
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText={`Приточные ${type?.plu} калориферы`}
+        tableLinkText={`Приточные ${heatCarrierAdj?.plu} калориферы`}
         catalogURL="#"
       />
       <Button

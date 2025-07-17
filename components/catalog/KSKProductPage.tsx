@@ -3,7 +3,7 @@ import { productData } from "@/data/products";
 import Image from "next/image";
 
 import { sortProducts } from "@/lib/utils";
-import { getProductTypeForms } from "@/lib/productType";
+import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
@@ -22,7 +22,7 @@ const categoryLabels: Record<string, string> = {
 };
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
-  const type = getProductTypeForms(product.categories);
+  const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
   const shortNameWithHyphen = product.shortName.replace(" ", "-");
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
@@ -102,7 +102,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
       <ProductSubheader
-        text={`Таблица расчета и подбора ${type?.gen} калорифера ${product.shortName}`}
+        text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} калорифера ${product.shortName}`}
       />
       <ProductParagraph className="mb-3">
         Ниже представлены расчетные данные водяного калорифера{" "}
@@ -122,7 +122,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         вентиляционного и насосно-смесительного оборудования.
       </ProductParagraph>
       <ProductSubheader
-        text={`Технические характеристики ${product.shortName} ${type?.gen}`}
+        text={`Технические характеристики ${product.shortName} ${heatCarrierAdj?.gen}`}
       />
       <table className="mb-4">
         <thead>
@@ -132,7 +132,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               className="pl-1 text-left"
               style={{ fontSize: "11pt" }}
             >
-              Технические характеристики {type.gen} калорифера{" "}
+              Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
               {product.shortName}
             </th>
           </tr>
@@ -159,8 +159,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
       <Image
         src={product.drawing}
-        alt={`${type.nom} калорифер ${product.shortName} габаритные размеры`}
-        title={`Калорифер ${product.shortName} ${type?.nom} технические характеристики`}
+        alt={`${heatCarrierAdj.nom} калорифер ${product.shortName} габаритные размеры`}
+        title={`Калорифер ${product.shortName} ${heatCarrierAdj?.nom} технические характеристики`}
         width={968}
         height={1}
         className="mb-4"
@@ -174,7 +174,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               style={{ fontSize: "11pt" }}
             >
               Габаритные и присоединительные размеры калорифера{" "}
-              {product.shortName} {type?.gen}
+              {product.shortName} {heatCarrierAdj?.gen}
             </th>
           </tr>
         </thead>
@@ -201,7 +201,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText={`${type?.plu} калориферы ${categoryLabel}`}
+        tableLinkText={`${heatCarrierAdj?.plu} калориферы ${categoryLabel}`}
         catalogURL="#"
       />
     </div>
