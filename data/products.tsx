@@ -18,6 +18,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк3",
         tubeSize: "16х1.5",
         categories: ["agregaty-ksk3"],
+        specsTableValues: ["СТД-300 (КСк3)", 25000, 333, 1090, 1505, 1460, 315],
         relatedProducts: [
           {
             caption: "Агрегаты СТД-300 ХЛ водяные",
@@ -43,6 +44,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк4",
         tubeSize: "16х1.5",
         categories: ["agregaty-ksk4"],
+        specsTableValues: ["СТД-300 (КСк4)", 25000, 391, 1090, 1505, 1460, 360],
         relatedProducts: [
           {
             caption: "Агрегаты СТД-300 паровые",
