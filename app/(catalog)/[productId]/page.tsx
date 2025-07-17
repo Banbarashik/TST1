@@ -16,6 +16,8 @@ function getProductType(categories: string[]) {
 
   if (categories.includes("ksk") || categories.includes("kpsk"))
     return "standardCalorifier";
+
+  if (categories.includes("std300")) return "std300";
 }
 
 export async function generateMetadata({
@@ -73,4 +75,6 @@ export default async function ProductPage({
 
   if (productType === "standardCalorifier")
     return <KSKProductPage product={product} />;
+
+  if (productType === "std300") return <STDPage />;
 }
