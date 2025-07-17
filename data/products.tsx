@@ -1,6 +1,31 @@
 import type { Product, SupplyCalorifier, KSKProduct } from "@/types";
 
 export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
+  // СТД-300
+  {
+    id: "std300-ksk",
+    name: "Агрегат СТД 300 водяной",
+    shortName: "СТД-300",
+    model: "СТД-300 в",
+    heatCarrier: "water",
+    categories: ["agregaty", "vodiany-agregaty", "std300", "std300-ksk"],
+    variants: [
+      {
+        id: "std300-ksk3",
+        model: "СТД-300 в3",
+        calorifier: "КСк3",
+        tubeSize: "16х1.5",
+        categories: ["agregaty-ksk3"],
+      },
+      {
+        id: "std300-ksk4",
+        model: "СТД-300 в4",
+        calorifier: "КСк4",
+        tubeSize: "16х1.5",
+        categories: ["agregaty-ksk4"],
+      },
+    ],
+  },
   // КППС-572_1572
   {
     id: "kpps-1572x1572",
