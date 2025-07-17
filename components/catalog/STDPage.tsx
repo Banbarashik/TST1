@@ -3,6 +3,7 @@ import ProductCard from "./productCard";
 import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
+import Image from "next/image";
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -123,6 +124,14 @@ export default function STDPage({ product }) {
             ))}
           </tbody>
         </table>
+        <Image
+          src={product.drawing}
+          alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
+          title={`Отопительный агрегат ${product.model} технические характеристики`}
+          width={968}
+          height={1}
+          className="mb-4"
+        />
       </div>
     </div>
   );

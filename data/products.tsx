@@ -10,6 +10,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calorifier: "КСк",
     heatCarrier: "water",
     img: "/",
+    drawing: "/",
     categories: ["agregaty", "vodiany-agregaty", "std300", "std300-ksk"],
     variants: [
       {
