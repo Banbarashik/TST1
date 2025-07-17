@@ -97,7 +97,15 @@ export default function STDPage({ product }) {
             </tr>
           </thead>
           <tbody>
-            <tr></tr>
+            {product.variants.map(function (variant, i) {
+              return (
+                <tr>
+                  {variant.specsTableValues.map(function (value) {
+                    return <td>{value}</td>;
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
