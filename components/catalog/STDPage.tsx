@@ -2,6 +2,7 @@ import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 import ProductCard from "./productCard";
 import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
+import SimilarProductLink from "./similarProductLink";
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -31,6 +32,24 @@ export default function STDPage({ product }) {
                   8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
                 </li>
               </ul>
+              {variant.relatedProducts.map(function (p) {
+                return (
+                  <div className="mb-4 flex flex-col gap-1">
+                    <ProductParagraph className="font-bold">
+                      {p.caption}
+                    </ProductParagraph>
+                    <ul className="flex flex-wrap gap-2">
+                      {p.links.map((link) => (
+                        <li key={link.slug}>
+                          <SimilarProductLink id={link.slug}>
+                            {p.shortName}
+                          </SimilarProductLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         );
