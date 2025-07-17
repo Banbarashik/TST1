@@ -6,6 +6,7 @@ import { getProductTypeForms } from "@/lib/productType";
 
 import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
+import STDPage from "@/components/catalog/STDPage";
 
 function getProductType(categories: string[]) {
   if (
@@ -76,5 +77,5 @@ export default async function ProductPage({
   if (productType === "standardCalorifier")
     return <KSKProductPage product={product} />;
 
-  if (productType === "std300") return <STDPage />;
+  if (productType === "std300") return <STDPage product={product} />;
 }
