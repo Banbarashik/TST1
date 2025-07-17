@@ -97,26 +97,46 @@ export default function STDPage({ product }) {
             </tr>
           </thead>
           <tbody>
-            {product.variants.map(function (variant, i, arr) {
-              return (
-                <tr>
-                  {variant.specsTableValues.map(function (value) {
-                    if (i === 0 && arr[1].specsTableValues.includes(value)) {
-                      return <td rowSpan={2}>{value}</td>;
-                    }
-
-                    if (i === 1 && arr[0].specsTableValues.includes(value)) {
-                      return;
-                    }
-
-                    return <td>{value}</td>;
-                  })}
-                </tr>
-              );
-            })}
+            {product.variants.map((variant, rowIdx, arr) => (
+              <tr key={variant.id}>
+                {variant.specsTableValues.map((value, colIdx) => {
+                  // Only render the cell if it's the first occurrence in a group
+                  if (
+                    rowIdx === 0 ||
+                    arr[rowIdx - 1].specsTableValues[colIdx] !== value
+                  ) {
+                    const rowSpan = getRowSpan(
+                      variant.specsTableValues,
+                      arr.slice(rowIdx),
+                      colIdx,
+                    );
+                    return (
+                      <td key={colIdx} rowSpan={rowSpan}>
+                        {value}
+                      </td>
+                    );
+                  }
+                  // Otherwise, skip rendering this cell
+                  return null;
+                })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
     </div>
   );
+}
+
+function getRowSpan(values, variants, colIdx) {
+  // Count how many consecutive variants have the same value at colIdx
+  let span = 1;
+  for (let i = 1; i < variants.length; i++) {
+    if (variants[i].specsTableValues[colIdx] === values[colIdx]) {
+      span++;
+    } else {
+      break;
+    }
+  }
+  return span > 1 ? span : undefined;
 }
