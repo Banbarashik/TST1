@@ -97,10 +97,18 @@ export default function STDPage({ product }) {
             </tr>
           </thead>
           <tbody>
-            {product.variants.map(function (variant, i) {
+            {product.variants.map(function (variant, i, arr) {
               return (
                 <tr>
                   {variant.specsTableValues.map(function (value) {
+                    if (i === 0 && arr[1].specsTableValues.includes(value)) {
+                      return <td rowSpan={2}>{value}</td>;
+                    }
+
+                    if (i === 1 && arr[0].specsTableValues.includes(value)) {
+                      return;
+                    }
+
                     return <td>{value}</td>;
                   })}
                 </tr>
