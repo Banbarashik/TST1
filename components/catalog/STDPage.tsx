@@ -4,6 +4,7 @@ import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import Image from "next/image";
+import UniversalTable from "./UniversalTable";
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -78,8 +79,10 @@ export default function STDPage({ product }) {
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
 
-      <div className="single-table-wrap">
-        <table className="single-table">
+      <UniversalTable
+        rows={product.variants}
+        getRowValues={(variant) => variant.specsTableValues}
+        headers={
           <thead>
             <tr>
               <th rowSpan={2}>Наименование агрегата</th>
@@ -97,42 +100,16 @@ export default function STDPage({ product }) {
               <th>H</th>
             </tr>
           </thead>
-          <tbody>
-            {product.variants.map((variant, rowIdx, arr) => (
-              <tr key={variant.id}>
-                {variant.specsTableValues.map((value, colIdx) => {
-                  // Only render the cell if it's the first occurrence in a group
-                  if (
-                    rowIdx === 0 ||
-                    arr[rowIdx - 1].specsTableValues[colIdx] !== value
-                  ) {
-                    const rowSpan = getRowSpan(
-                      variant.specsTableValues,
-                      arr.slice(rowIdx),
-                      colIdx,
-                    );
-                    return (
-                      <td key={colIdx} rowSpan={rowSpan}>
-                        {value}
-                      </td>
-                    );
-                  }
-                  // Otherwise, skip rendering this cell
-                  return null;
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <Image
-          src={product.drawing}
-          alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
-          title={`Отопительный агрегат ${product.model} технические характеристики`}
-          width={968}
-          height={1}
-          className="mb-4"
-        />
-      </div>
+        }
+      />
+      <Image
+        src={product.drawing}
+        alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
+        title={`Отопительный агрегат ${product.model} технические характеристики`}
+        width={968}
+        height={1}
+        className="mb-4"
+      />
     </div>
   );
 }
