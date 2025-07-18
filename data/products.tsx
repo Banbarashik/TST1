@@ -1,6 +1,70 @@
 import type { Product, SupplyCalorifier, KSKProduct } from "@/types";
 
 export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
+  // АВО
+  {
+    id: "avo-tvv",
+    name: "Агрегат АВО ХЛ ТВВ4",
+    shortName: "АВО ХЛ",
+    tubeSize: "22х1.5",
+    heatCarrier: "water",
+    categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
+    img: "/",
+    drawing: "/",
+    variants: [
+      {
+        id: "avo-tvv-3-55-01",
+        name: "Агрегат АВО 3-55-01 ХЛ водяной",
+        airPower: 2800,
+        heatPower: 49,
+        price: 60542,
+        specsTableValues: ["АВО 3-55-01", 2800, 49, "840 х 710 х 620", 91],
+        componentsTableValues: [
+          "АВО 3-55-01",
+          "ВО-06-300-4 (0.25 кВт / 1500 об. мин.)",
+          "ТВВ 4 (АВО 3-55)",
+          12.5,
+          32,
+        ],
+      },
+      {
+        id: "avo-tvv-4-95-01",
+        name: "Агрегат АВО 4-95-01 ХЛ водяной",
+        airPower: 5000,
+        heatPower: 92,
+        price: 82528,
+        specsTableValues: ["АВО 4-95-01", 5000, 92, "865 х 920 х 830", 144],
+        componentsTableValues: [
+          "АВО 4-95-01",
+          "ВО-06-300-5 (0.37 кВт / 1500 об. мин.)",
+          "ТВВ 4 (АВО 4-95)",
+          "25.3",
+          32,
+        ],
+      },
+      {
+        id: "avo-tvv-7-165-01",
+        name: "Агрегат АВО 7-165-01 ХЛ водяной",
+        airPower: 10500,
+        heatPower: 10500,
+        price: 108623,
+        specsTableValues: [
+          "АВО 7-165-01",
+          10500,
+          170,
+          "1025 х 1050 х 1000",
+          194,
+        ],
+        componentsTableValues: [
+          "АВО 7-165-01",
+          "ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)",
+          "ТВВ 4 (АВО 7-165)",
+          34.9,
+          32,
+        ],
+      },
+    ],
+  },
   // СТД-300
   {
     id: "std300-kp",
