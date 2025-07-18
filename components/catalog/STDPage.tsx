@@ -14,6 +14,11 @@ const tableIndicators: Record<string, string> = {
     "температурой воздуха на выходе, вырабатываемой мощностью и расходом пара",
 };
 
+const tableEquipment: Record<string, string> = {
+  water: "насосно-смесительного",
+  steam: "пароконденсатного",
+};
+
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
@@ -81,8 +86,8 @@ export default function STDPage({ product }) {
         className="mb-1 h-65 w-full"
       />
       <ProductParagraph className="mb-4">
-        Табличные данные можно использовать при подборе сопутствующего
-        насосно-смесительного оборудования.
+        Табличные данные можно использовать при подборе сопутствующего{" "}
+        {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
 

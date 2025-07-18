@@ -5,8 +5,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "std300-kp",
     name: "Агрегат СТД 300 ХЛ паровой",
-    shortName: "СТД-300",
-    model: "СТД-300 п",
+    shortName: "СТД-300 ХЛ",
+    model: "СТД-300 ХЛ п",
     calorifier: "КП",
     heatCarrier: "steam",
     img: "/",
@@ -15,7 +15,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "std300-kp3",
-        model: "СТД-300 п3",
+        model: "СТД-300 ХЛ п3",
         calorifier: "КП3",
         tubeSize: "22х1.5",
         categories: ["agregaty-kp3"],
@@ -47,7 +47,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       },
       {
         id: "std300-kp4",
-        model: "СТД-300 п4",
+        model: "СТД-300 ХЛ п4",
         calorifier: "КП4",
         tubeSize: "22х1.5",
         categories: ["agregaty-kp4"],
