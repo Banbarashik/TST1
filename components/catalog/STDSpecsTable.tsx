@@ -21,13 +21,14 @@ export default function STDSpecsTable({
   rows,
   getRowValues,
   headers,
+  ...props
 }: {
   rows: any[];
   getRowValues: (row: any) => any[];
   headers: React.ReactNode;
-}) {
+} & React.ComponentProps<"table">) {
   return (
-    <table className="single-table">
+    <table className={`single-table ${props.className}`}>
       {headers}
       <tbody>
         {rows.map((row, rowIdx, arr) => {

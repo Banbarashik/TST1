@@ -5,6 +5,7 @@ import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import Image from "next/image";
 import STDSpecsTable from "./STDSpecsTable";
+import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -124,6 +125,16 @@ export default function STDPage({ product }) {
             </tr>
           </thead>
         }
+        className="mb-10"
+      />
+      <TableAndCatalogLinks
+        tableURL={
+          product.shortName === "СТД-300"
+            ? "/std300-ksk-kpsk"
+            : "/std300-tvv-kp"
+        }
+        tableLinkText={`Водяные и паровые агрегаты ${product.shortName}`}
+        catalogURL="#"
       />
     </div>
   );
