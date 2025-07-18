@@ -17,7 +17,7 @@ function getRowSpan(
   return span > 1 ? span : undefined;
 }
 
-export default function UniversalTable({
+export default function STDSpecsTable({
   rows,
   getRowValues,
   headers,

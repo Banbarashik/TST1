@@ -4,7 +4,7 @@ import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import Image from "next/image";
-import UniversalTable from "./UniversalTable";
+import STDSpecsTable from "./STDSpecsTable";
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -79,7 +79,7 @@ export default function STDPage({ product }) {
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
 
-      <UniversalTable
+      <STDSpecsTable
         rows={product.variants}
         getRowValues={(variant) => variant.specsTablesValues[0]}
         headers={
@@ -110,7 +110,7 @@ export default function STDPage({ product }) {
         height={1}
         className="mb-4"
       />
-      <UniversalTable
+      <STDSpecsTable
         rows={product.variants}
         getRowValues={(variant) => variant.specsTablesValues[1]}
         headers={
