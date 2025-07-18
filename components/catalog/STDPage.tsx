@@ -7,6 +7,13 @@ import Image from "next/image";
 import STDSpecsTable from "./STDSpecsTable";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
+const tableIndicators: Record<string, string> = {
+  water:
+    "температурой воздуха на выходе, сопротивлением по воде и расходом теплоносителя, вырабатываемой мощностью",
+  steam:
+    "температурой воздуха на выходе, вырабатываемой мощностью и расходом пара",
+};
+
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
@@ -66,8 +73,7 @@ export default function STDPage({ product }) {
         {heatCarrierAdj.gen} калорифера {product.calorifier}) производства ООО
         Т.С.Т. Выбрав в верхней части таблицы подходящий вам график
         теплоносителя, можно ознакомиться с основными теплотехническими
-        показателями: температурой воздуха на выходе, сопротивлением по воде и
-        расходом теплоносителя, вырабатываемой мощностью.
+        показателями: {tableIndicators[product.heatCarrier]}.
       </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
