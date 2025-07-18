@@ -3,6 +3,83 @@ import type { Product, SupplyCalorifier, KSKProduct } from "@/types";
 export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   // СТД-300
   {
+    id: "std300-kp",
+    name: "Агрегат СТД 300 ХЛ паровой",
+    shortName: "СТД-300",
+    model: "СТД-300 п",
+    calorifier: "КП",
+    heatCarrier: "steam",
+    img: "/",
+    drawing: "/",
+    categories: ["agregaty", "parovy-agregaty", "std300", "std300-kp"],
+    variants: [
+      {
+        id: "std300-kp3",
+        model: "СТД-300 п3",
+        calorifier: "КП3",
+        tubeSize: "22х1.5",
+        categories: ["agregaty-kp3"],
+        specsTablesValues: [
+          ["СТД-300 (КП3)", 24000, 385, 1090, 1400, 1490, 375],
+          [
+            "СТД-300 (КП3)",
+            "ВО-06-300-8 (3.0 кВт / 1400 об. мин.)",
+            "КП3 (СТД-300)",
+            67.1,
+            65,
+          ],
+        ],
+        relatedProducts: [
+          {
+            caption: "Агрегаты СТД-300 паровые",
+            links: [
+              {
+                slug: "std300-kpsk",
+                text: "СТД-300 п",
+              },
+            ],
+          },
+          {
+            caption: "Агрегаты АВО ХЛ паровые",
+            links: [{ slug: "avo-kp", text: "АВО ХЛ п" }],
+          },
+        ],
+      },
+      {
+        id: "std300-kp4",
+        model: "СТД-300 п4",
+        calorifier: "КП4",
+        tubeSize: "22х1.5",
+        categories: ["agregaty-kp4"],
+        specsTablesValues: [
+          ["СТД-300 (КП4)", 24000, 424, 1130, 1400, 1490, 440],
+          [
+            "СТД-300 (КП4)",
+            "ВО-06-300-8 (3.0 кВт / 1400 об. мин.)",
+            "КП4 (СТД-300)",
+            89.0,
+            65,
+          ],
+        ],
+        relatedProducts: [
+          {
+            caption: "Агрегаты СТД-300 ХЛ водяные",
+            links: [
+              {
+                slug: "std300-tvv",
+                text: "СТД-300 ХЛ в",
+              },
+            ],
+          },
+          {
+            caption: "Агрегаты АВО ХЛ водяные",
+            links: [{ slug: "avo-tvv", text: "АВО ХЛ в" }],
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "std300-ksk",
     name: "Агрегат СТД 300 водяной",
     shortName: "СТД-300",
