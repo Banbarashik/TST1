@@ -110,6 +110,21 @@ export default function STDPage({ product }) {
         height={1}
         className="mb-4"
       />
+      <UniversalTable
+        rows={product.variants}
+        getRowValues={(variant) => variant.specsTablesValues[1]}
+        headers={
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Комплектуемый осевой вентилятор</th>
+              <th>Комплектуемый калорифер</th>
+              <th>Площадь поверхности нагрева, м²</th>
+              <th>Ду, мм</th>
+            </tr>
+          </thead>
+        }
+      />
     </div>
   );
 }

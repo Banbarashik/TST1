@@ -21,6 +21,13 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         categories: ["agregaty-ksk3"],
         specsTablesValues: [
           ["СТД-300 (КСк3)", 25000, 333, 1090, 1505, 1460, 315],
+          [
+            "СТД-300 (КСк3)",
+            "ВО-06-300-8 (3.0 кВт / 1500 об. мин.)",
+            "КСк3 (СТД-300)",
+            87.3,
+            50,
+          ],
         ],
         relatedProducts: [
           {
@@ -49,6 +56,13 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         categories: ["agregaty-ksk4"],
         specsTablesValues: [
           ["СТД-300 (КСк4)", 25000, 391, 1090, 1505, 1460, 360],
+          [
+            "СТД-300 (КСк4)",
+            "ВО-06-300-8 (3.0 кВт / 1500 об. мин.)",
+            "КСк4 (СТД-300)",
+            115.8,
+            50,
+          ],
         ],
         relatedProducts: [
           {
