@@ -8,9 +8,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     shortName: "АВО ХЛ",
     tubeSize: "22х1.5",
     heatCarrier: "water",
+    calorifier: "ТВВ4",
     categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
     img: "/",
     drawing: "/",
+    relatedProducts: [
+      {
+        caption: "Паровые агрегаты АВО ХЛ",
+        links: [
+          {
+            slug: "avo-tvv",
+            text: "АВО ХЛ паровые",
+          },
+        ],
+      },
+    ],
     variants: [
       {
         id: "avo-tvv-3-55-01",
