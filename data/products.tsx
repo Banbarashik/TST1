@@ -6,6 +6,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "avo-tvv",
     name: "Агрегат АВО ХЛ ТВВ4",
     shortName: "АВО ХЛ",
+    model: "АВО ХЛ ТВВ4",
     tubeSize: "22х1.5",
     heatCarrier: "water",
     calorifier: "ТВВ4",

@@ -4,6 +4,8 @@ import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import STDSpecsTable from "./STDSpecsTable";
+import Image from "next/image";
+import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -118,6 +120,37 @@ export default function AVOPage({ product }) {
             </tr>
           </thead>
         }
+      />
+      <Image
+        src={product.drawing}
+        alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
+        title={`Отопительный агрегат ${product.model} технические характеристики`}
+        width={968}
+        height={1}
+        className="mb-4"
+      />
+      <STDSpecsTable
+        rows={product.variants}
+        getRowValues={(variant) => variant.componentsTableValues}
+        headers={
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Комплектуемый осевой вентилятор</th>
+              <th>Комплектуемый калорифер</th>
+              <th>
+                Площадь поверхности нагрева, м<sup>2</sup>
+              </th>
+              <th>dy, мм</th>
+            </tr>
+          </thead>
+        }
+      />
+
+      <TableAndCatalogLinks
+        tableURL="avo-tvv-kp"
+        tableLinkText={`Водяные и паровые агрегаты ${product.shortName}`}
+        catalogURL="#"
       />
     </div>
   );
