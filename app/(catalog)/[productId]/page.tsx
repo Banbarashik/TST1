@@ -7,6 +7,7 @@ import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
 import STDPage from "@/components/catalog/STDPage";
+import AVOPage from "@/components/catalog/AVOPage";
 
 function getProductType(categories: string[]) {
   if (
@@ -19,6 +20,8 @@ function getProductType(categories: string[]) {
     return "standardCalorifier";
 
   if (categories.includes("std300")) return "std300";
+
+  if (categories.includes("avo")) return "avo";
 }
 
 export async function generateMetadata({
@@ -78,4 +81,6 @@ export default async function ProductPage({
     return <KSKProductPage product={product} />;
 
   if (productType === "std300") return <STDPage product={product} />;
+
+  if (productType === "avo") return <AVOPage product={product} />;
 }
