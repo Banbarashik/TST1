@@ -46,7 +46,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         id: "avo-tvv-7-165-01",
         name: "Агрегат АВО 7-165-01 ХЛ водяной",
         airPower: 10500,
-        heatPower: 10500,
+        heatPower: 170,
         price: 108623,
         specsTableValues: [
           "АВО 7-165-01",

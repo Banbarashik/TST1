@@ -44,11 +44,22 @@ export default function ProductCard({
         </>
       )}
       <div className="mb-4">
-        <p>
-          Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
-          {product.heatPower && product.heatPower + " кВт"}
-        </p>
-        {product.variants && (
+        {product.airPower && (
+          <p>
+            Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
+            {product.heatPower && product.heatPower + " кВт"}
+          </p>
+        )}
+        {!product.airPower && hasVariants && (
+          <div>
+            <p>Характеристики:</p>
+            {product.variants
+              .map((variant) => variant.airPower)
+              .join(", ", "")}{" "}
+            м<sup>3</sup>/ч;
+          </div>
+        )}
+        {hasVariants && (
           <p>
             {product.variants?.map((variant) => variant.heatPower).join(", ")}{" "}
             кВт
