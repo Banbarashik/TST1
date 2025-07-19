@@ -69,6 +69,7 @@ export default function STDPage({ product }) {
           </div>
         );
       })}
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
       />
@@ -89,8 +90,8 @@ export default function STDPage({ product }) {
         Табличные данные можно использовать при подборе сопутствующего{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
-      <ProductSubheader text={`Технические характеристики ${product.model}`} />
 
+      <ProductSubheader text={`Технические характеристики ${product.model}`} />
       <STDSpecsTable
         rows={product.variants}
         getRowValues={(variant) => variant.specsTablesValues[0]}
