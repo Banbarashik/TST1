@@ -31,7 +31,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const isAgregat = product.categories.includes("agregaty");
   const isKFB = product.categories.includes("kfb");
 
-  const categories = ["ksk", "kpsk", "tvv", "kp", "kfb"];
+  const categories = ["ksk", "kpsk", "tvv", "kp", "kfb", "ao2"];
   const category = categories.find((cat) => product.categories.includes(cat));
   const categoryLabel = categoryLabels[category];
   const exactCategory = product.categories.find((cat) =>
