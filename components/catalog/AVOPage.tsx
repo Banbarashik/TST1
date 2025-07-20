@@ -40,7 +40,7 @@ export default function AVOPage({ product }) {
           );
         })}
       </div>
-      <div className="flex">
+      <div className="mb-10 flex gap-20">
         <div>
           <ProductSubheader text={name} />
           <ProductParagraph>
@@ -58,7 +58,7 @@ export default function AVOPage({ product }) {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="shrink-0">
           {product.relatedProducts.map(function (p) {
             return (
               <div key={p.caption} className="mb-4 flex flex-col gap-1">
@@ -130,6 +130,7 @@ export default function AVOPage({ product }) {
         className="mb-4"
       />
       <STDSpecsTable
+        className="mb-10"
         rows={product.variants}
         getRowValues={(variant) => variant.componentsTableValues}
         headers={

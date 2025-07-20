@@ -18,7 +18,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         caption: "Паровые агрегаты АВО ХЛ",
         links: [
           {
-            slug: "avo-tvv",
+            slug: "avo-kp",
             text: "АВО ХЛ паровые",
           },
         ],
