@@ -27,11 +27,12 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const shortNameWithHyphen = product.shortName.replace(" ", "-");
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
-  const category = product.categories.includes("ksk")
-    ? "ksk"
-    : product.categories.includes("kpsk")
-      ? "kpsk"
-      : "";
+  const isCalorifier = product.categories.includes("kalorifer");
+  const isAgregat = product.categories.includes("agregaty");
+  const isKFB = product.categories.includes("kfb");
+
+  const categories = ["ksk", "kpsk", "tvv", "kp", "kfb"];
+  const category = categories.find((cat) => product.categories.includes(cat));
   const categoryLabel = categoryLabels[category];
   const exactCategory = product.categories.find((cat) =>
     [`${category}-2`, `${category}-3`, `${category}-4`].includes(cat),
