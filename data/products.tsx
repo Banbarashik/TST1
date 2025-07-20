@@ -5312,7 +5312,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "agregat-ao2-3-ksk3-vozdushniy-vodyanoy",
     name: "Агрегат АО 2-3 в3",
     shortName: "АО 2-3 в3",
-    type: "agregat",
     calorifier: "КСк3",
     tubeSize: "16x1.5",
     rows: 3,
@@ -5320,7 +5319,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     airPower: 3000,
     heatPower: 35,
     price: 56932,
-    categories: ["agregaty", "vodiany-agregaty", "ao2-3", "ao-v3"],
+    categories: ["agregaty", "vodiany-agregaty", "ao2", "ao2-3", "ao-v3"],
   },
   // КСк 2-1_2-12
   {
@@ -5328,6 +5327,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     name: "Калорифер КСк 2-12",
     shortName: "КСк 2-12",
     model: "КСк 2-12 02",
+    heatCarrier: "water",
     climate: "ХЛ3",
     tubeSize: "16x1.5",
     rows: 2,
