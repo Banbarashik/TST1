@@ -12,9 +12,15 @@ import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 const rowLabels: Record<number, string> = {
-  2: "двухрядные",
-  3: "трехрядные",
-  4: "четырехрядные",
+  2: {
+    plu: "двухрядные",
+    gen: "двухрядного",
+  },
+  3: {
+    plu: "трехрядные",
+    gen: "трехрядного",
+  },
+  4: { plu: "четырехрядные", gen: "четырехрядного" },
 };
 const categoryLabels: Record<string, string> = {
   ksk: "КСк",
@@ -45,7 +51,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     (p) => p.size === product.size,
   );
 
-  const rowsPluAdj = rowLabels[product.rows];
+  const rowsAdj = rowLabels[product.rows];
 
   return (
     <div>
@@ -87,7 +93,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
           <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              {isCalorifier ? "Стандартные" : "Все"} {rowsPluAdj} типоразмеры
+              {isCalorifier ? "Стандартные" : "Все"} {rowsAdj.plu} типоразмеры
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsByRows.map((p) => (
@@ -102,15 +108,17 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
       <ProductSubheader
-        text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} калорифера ${product.shortName}`}
+        text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
       />
       <ProductParagraph className="mb-3">
-        Ниже представлены расчетные данные водяного калорифера{" "}
-        {shortNameWithoutHyphen} производства ООО Т.С.Т. Выбрав в верхней части
-        таблицы подходящий вам график теплоносителя, можно ознакомиться с
-        основными теплотехническими показателями: температурой воздуха на
-        выходе, гидравлическим и аэродинамическим сопротивлением, вырабатываемой
-        мощностью.
+        Ниже представлены расчетные данные {heatCarrierAdj?.gen}{" "}
+        {isCalorifier
+          ? `калорифера ${shortNameWithoutHyphen}`
+          : `агрегата ${product.shortName} (на базе ${rowsAdj.gen} ${heatCarrierAdj.gen} калорифера ${product.calorifier.replace(/[0-9]/g, "")})`}{" "}
+        производства ООО Т.С.Т. Выбрав в верхней части таблицы подходящий вам
+        график теплоносителя, можно ознакомиться с основными теплотехническими
+        показателями: температурой воздуха на выходе, гидравлическим и
+        аэродинамическим сопротивлением, вырабатываемой мощностью.
       </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
