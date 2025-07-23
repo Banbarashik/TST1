@@ -19,6 +19,7 @@ function getProductType(categories: string[]) {
   if (
     categories.includes("ksk") ||
     categories.includes("kpsk") ||
+    categories.includes("tvv") ||
     categories.includes("kfb")
   )
     return "standardCalorifier";
