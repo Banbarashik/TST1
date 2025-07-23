@@ -200,28 +200,42 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <table className="mb-10">
         <thead>
           <tr>
-            <th
-              colSpan={9}
-              className="pl-1 text-left"
-              style={{ fontSize: "11pt" }}
-            >
-              Габаритные и присоединительные размеры калорифера{" "}
-              {product.shortName} {heatCarrierAdj?.gen}
-            </th>
+            {isCalorifier ? (
+              <th
+                colSpan={9}
+                className="pl-1 text-left"
+                style={{ fontSize: "11pt" }}
+              >
+                Габаритные и присоединительные размеры калорифера{" "}
+                {product.shortName} {heatCarrierAdj?.gen}
+              </th>
+            ) : (
+              <>
+                <th>Комплектуемый вентилятор</th>
+                <th colSpan={2}>Двигатель, кВт/об. мин.</th>
+                <th>Комплектуемый калорифер</th>
+                <th>
+                  Площадь поверхности теплообмена, м<sup>2</sup>
+                </th>
+                <th>Ду, мм</th>
+              </>
+            )}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>L</td>
-            <td>L 1</td>
-            <td>L 2</td>
-            <td>L 3</td>
-            <td>H</td>
-            <td>H 1</td>
-            <td>H 2</td>
-            <td>C</td>
-            <td>dy</td>
-          </tr>
+          {isCalorifier && (
+            <tr>
+              <td>L</td>
+              <td>L 1</td>
+              <td>L 2</td>
+              <td>L 3</td>
+              <td>H</td>
+              <td>H 1</td>
+              <td>H 2</td>
+              <td>C</td>
+              <td>dy</td>
+            </tr>
+          )}
           <tr>
             {product.sizeTableValues.map((value, i) => (
               <td key={i} style={{ fontSize: "11pt" }}>
