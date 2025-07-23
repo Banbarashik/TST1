@@ -142,7 +142,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       />
       <ProductParagraph className="mb-4">
         Табличные данные можно использовать при подборе сопутствующего
-        {isCalorifier && " вентиляционного"} и{" "}
+        {isCalorifier && " вентиляционного и"}{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
       <ProductSubheader
