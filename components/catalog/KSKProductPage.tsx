@@ -25,6 +25,7 @@ const rowLabels: Record<number, string> = {
 const categoryLabels: Record<string, string> = {
   ksk: "КСк",
   kpsk: "КПСк",
+  ao2: "АО 2",
 };
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
@@ -224,7 +225,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
       <TableAndCatalogLinks
         tableURL="#"
-        tableLinkText={`${heatCarrierAdj?.plu} калориферы ${categoryLabel}`}
+        tableLinkText={`${heatCarrierAdj?.plu} ${isCalorifier ? "калориферы" : "агрегаты"} ${categoryLabel}`}
         catalogURL="#"
       />
     </div>
