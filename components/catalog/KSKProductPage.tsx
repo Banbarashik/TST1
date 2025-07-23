@@ -237,7 +237,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </tr>
           )}
           <tr>
-            {product.sizeTableValues.map((value, i) => (
+            {[
+              ...(isCalorifier
+                ? product.sizeTableValues
+                : product.componentsTableValues),
+            ].map((value, i) => (
               <td key={i} style={{ fontSize: "11pt" }}>
                 {value}
               </td>

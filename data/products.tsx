@@ -5323,7 +5323,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     price: 56932,
     categories: ["agregaty", "vodiany-agregaty", "ao2", "ao2-3", "ao-v3"],
     specsTableValues: [3000, 35, "800 x 700 x 620", 77],
-    /* componentsTableValues */ sizeTableValues: [
+    componentsTableValues: [
       "ВО-06-300-4",
       0.25,
       1500,
