@@ -38,12 +38,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const productsByCategory = productData
     .filter((p) => p.categories.includes(category))
     .sort((a, b) => sortProducts(a.name, b.name));
-
   const productsByRows = productsByCategory.filter(
     (p) => p.rows === product.rows,
   );
-
-  // suitable for any product of this page
   const productsBySize = productsByCategory.filter(
     (p) => p.size === product.size,
   );
@@ -57,9 +54,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <ProductCard product={product} isLink={false} />
         <div>
           <ProductSubheader
-            text={`Калорифер ${product.model} ${product.climate}. ТУ 4863-002-55613706-02`}
+            text={`${isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"} ${product.model}${product.climate ? ` ${product.climate}` : ""}. ТУ 4863-002-55613706-02`}
           />
-          <ProductParagraph>Теплоотдающие элементы: </ProductParagraph>
+          <ProductParagraph>
+            {isCalorifier
+              ? "Теплоотдающие элементы:"
+              : `Теплоотдающие элементы ${heatCarrierAdj.gen} калорифера ${product.calorifier}:`}{" "}
+          </ProductParagraph>
           <ul className="mb-4 text-lg">
             <li>
               - электросварные прямошовные трубки {product.tubeSize} мм по ГОСТ
@@ -72,7 +73,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </ul>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              Все калориферы данного типоразмера
+              {isCalorifier ? "Все калориферы" : "Агрегаты"} данного типоразмера
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsBySize.map((p) => (
@@ -86,7 +87,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
           <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              Стандартные {rowsPluAdj} типоразмеры
+              {isCalorifier ? "Стандартные" : "Все"} {rowsPluAdj} типоразмеры
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsByRows.map((p) => (
