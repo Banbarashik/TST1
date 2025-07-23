@@ -6556,11 +6556,16 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "kpsk-2-12",
     name: "Калорифер КПСК 2-12",
+    shortName: "КПСК 2-12",
+    heatCarrier: "steam",
+    rows: 2,
     airPower: 25000,
     heatPower: 436,
     price: 87386,
     categories: ["kalorifer", "parovy-kalorifery", "kpsk", "kpsk-2"],
     img: "/img/kalorifery/kpsk/kalorifer_kpsk_2-12.png",
+    specsTableValues: [],
+    sizeTableValues: [],
   },
   // КПСк 3-1_3-12
   {

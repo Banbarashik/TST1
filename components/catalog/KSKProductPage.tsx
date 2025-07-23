@@ -117,8 +117,18 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           : `агрегата ${product.shortName} (на базе ${rowsAdj.gen} ${heatCarrierAdj.gen} калорифера ${product.calorifier.replace(/[0-9]/g, "")})`}{" "}
         производства ООО Т.С.Т. Выбрав в верхней части таблицы подходящий вам
         график теплоносителя, можно ознакомиться с основными теплотехническими
-        показателями: температурой воздуха на выходе, гидравлическим и
-        аэродинамическим сопротивлением, вырабатываемой мощностью.
+        показателями: температурой воздуха на выходе,
+        {isCalorifier &&
+          product.heatCarrier === "water" &&
+          " гидравлическим и аэродинамическим сопротивлением"}
+        {!isCalorifier &&
+          product.heatCarrier === "water" &&
+          " сопротивлением по воде и расходом теплоносителя"}
+        {isCalorifier &&
+          product.heatCarrier === "steam" &&
+          " аэродинамическим сопротивлением"}
+        , вырабатываемой мощностью
+        {product.heatCarrier === "steam" && " и расходом пара"}.
       </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
