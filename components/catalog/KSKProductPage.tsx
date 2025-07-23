@@ -26,6 +26,10 @@ const categoryLabels: Record<string, string> = {
   ksk: "КСк",
   kpsk: "КПСк",
 };
+const tableEquipment: Record<string, string> = {
+  water: "насосно-смесительного",
+  steam: "пароконденсатного",
+};
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -132,12 +136,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </ProductParagraph>
       <iframe
         src={product.tableWithTabs}
-        title="Таблица рабочих параметров калорифера"
+        title={`Таблица рабочих параметров ${isCalorifier ? "калорифера" : "агрегата"}`}
         className="mb-1 h-65 w-full"
       />
       <ProductParagraph className="mb-4">
         Табличные данные можно использовать при подборе сопутствующего
-        вентиляционного и насосно-смесительного оборудования.
+        {isCalorifier && " вентиляционного"} и{" "}
+        {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
       <ProductSubheader
         text={`Технические характеристики ${product.shortName} ${heatCarrierAdj?.gen}`}
