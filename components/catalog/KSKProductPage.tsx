@@ -11,7 +11,7 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const rowLabels: Record<number, string> = {
+const rowLabels: Record<number, { plu: string; gen: string }> = {
   2: {
     plu: "двухрядные",
     gen: "двухрядного",
@@ -149,18 +149,20 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         text={`Технические характеристики ${isCalorifier ? `${product.shortName} ${heatCarrierAdj?.gen}` : `${product.model}`}`}
       />
       <table className="mb-4">
-        <thead>
-          <tr>
-            <th
-              colSpan={4}
-              className="pl-1 text-left"
-              style={{ fontSize: "11pt" }}
-            >
-              Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
-              {product.shortName}
-            </th>
-          </tr>
-        </thead>
+        {isCalorifier && (
+          <thead>
+            <tr>
+              <th
+                colSpan={4}
+                className="pl-1 text-left"
+                style={{ fontSize: "11pt" }}
+              >
+                Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
+                {product.shortName}
+              </th>
+            </tr>
+          </thead>
+        )}
         <tbody>
           <tr>
             <td>
@@ -168,7 +170,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </td>
             <td>Производительность по теплу, кВт</td>
             <td>
-              Площадь поверхности теплообмена, м<sup>2</sup>
+              {isCalorifier ? (
+                <>
+                  Площадь поверхности теплообмена, м<sup>2</sup>
+                </>
+              ) : (
+                "Габариты, мм (длина L - ширина B - высота H)"
+              )}
             </td>
             <td>Масса, кг</td>
           </tr>
