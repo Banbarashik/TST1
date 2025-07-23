@@ -182,8 +182,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
       <Image
         src={product.drawing}
-        alt={`${heatCarrierAdj.nom} калорифер ${product.shortName} габаритные размеры`}
-        title={`Калорифер ${product.shortName} ${heatCarrierAdj?.nom} технические характеристики`}
+        alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
+        title={`${isCalorifier ? `Калорифер ${product.shortName} ${heatCarrierAdj?.nom}` : `Отопительный агрегат ${product.model}`} технические характеристики`}
         width={968}
         height={1}
         className="mb-4"
