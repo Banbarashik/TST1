@@ -25,6 +25,7 @@ const rowLabels: Record<number, { plu: string; gen: string }> = {
 const categoryLabels: Record<string, string> = {
   ksk: "КСк",
   kpsk: "КПСк",
+  kfb: "КФБ",
   ao2: "АО 2",
 };
 const tableEquipment: Record<string, string> = {
@@ -90,7 +91,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {productsBySize.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
-                    {p.shortName}
+                    {isCalorifier ? p.shortName : p.model}
                   </SimilarProductLink>
                 </li>
               ))}
@@ -104,7 +105,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {productsByRows.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
-                    {p.shortName}
+                    {isCalorifier ? p.shortName : p.model}
                   </SimilarProductLink>
                 </li>
               ))}
@@ -118,7 +119,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ProductParagraph className="mb-3">
         Ниже представлены расчетные данные {heatCarrierAdj?.gen}{" "}
         {isCalorifier
-          ? `калорифера ${shortNameWithoutHyphen}`
+          ? `калорифера ${product.shortName}`
           : `агрегата ${product.shortName} (на базе ${rowsAdj.gen} ${heatCarrierAdj.gen} калорифера ${product.calorifier.replace(/[0-9]/g, "")})`}{" "}
         производства ООО Т.С.Т. Выбрав в верхней части таблицы подходящий вам
         график теплоносителя, можно ознакомиться с основными теплотехническими

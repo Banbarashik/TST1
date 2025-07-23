@@ -16,7 +16,11 @@ function getProductType(categories: string[]) {
   )
     return "supplyCalorifier";
 
-  if (categories.includes("ksk") || categories.includes("kpsk"))
+  if (
+    categories.includes("ksk") ||
+    categories.includes("kpsk") ||
+    categories.includes("kfb")
+  )
     return "standardCalorifier";
 
   if (categories.includes("ao2")) return "ao2";
