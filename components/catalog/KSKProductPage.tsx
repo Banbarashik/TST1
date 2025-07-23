@@ -145,7 +145,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
       <ProductSubheader
-        text={`Технические характеристики ${product.shortName} ${heatCarrierAdj?.gen}`}
+        text={`Технические характеристики ${isCalorifier ? `${product.shortName} ${heatCarrierAdj?.gen}` : `${product.model}`}`}
       />
       <table className="mb-4">
         <thead>
