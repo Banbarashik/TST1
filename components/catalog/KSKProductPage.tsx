@@ -34,18 +34,16 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const categories = ["ksk", "kpsk", "tvv", "kp", "kfb", "ao2"];
   const category = categories.find((cat) => product.categories.includes(cat));
   const categoryLabel = categoryLabels[category];
-  const exactCategory = product.categories.find((cat) =>
-    [`${category}-2`, `${category}-3`, `${category}-4`].includes(cat),
-  );
 
   const productsByCategory = productData
     .filter((p) => p.categories.includes(category))
     .sort((a, b) => sortProducts(a.name, b.name));
 
-  const productsByRows = productsByCategory.filter((p) =>
-    p.categories.includes(exactCategory),
+  const productsByRows = productsByCategory.filter(
+    (p) => p.rows === product.rows,
   );
 
+  // suitable for any product of this page
   const productsBySize = productsByCategory.filter(
     (p) => p.size === product.size,
   );

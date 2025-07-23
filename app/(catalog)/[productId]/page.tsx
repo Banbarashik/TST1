@@ -19,6 +19,8 @@ function getProductType(categories: string[]) {
   if (categories.includes("ksk") || categories.includes("kpsk"))
     return "standardCalorifier";
 
+  if (categories.includes("ao2")) return "ao2";
+
   if (categories.includes("std300")) return "std300";
 
   if (categories.includes("avo")) return "avo";
@@ -77,7 +79,7 @@ export default async function ProductPage({
   if (productType === "supplyCalorifier")
     return <SupplyCalorifierPage product={product} />;
 
-  if (productType === "standardCalorifier")
+  if (productType === "standardCalorifier" || productType === "ao2")
     return <KSKProductPage product={product} />;
 
   if (productType === "std300") return <STDPage product={product} />;
