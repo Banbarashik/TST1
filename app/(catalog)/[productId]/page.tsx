@@ -8,6 +8,7 @@ import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
 import KSKProductPage from "@/components/catalog/KSKProductPage";
 import STDPage from "@/components/catalog/STDPage";
 import AVOPage from "@/components/catalog/AVOPage";
+import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 
 function getProductType(categories: string[]) {
   if (
@@ -64,6 +65,18 @@ export async function generateMetadata({
       title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
       description: `Калорифер ${shortName} ${heatCarrierAdj?.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${shortName}`,
       keywords: `калорифер ${isKFB ? `${product.size} a${product.rows}` : `${product.rows} ${product.size}`} ${heatCarrierAdj?.nom},${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} ${heatCarrierAdj?.nom},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} технические характеристики,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} габаритные размеры,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} производительность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} мощность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} купить,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} цена`,
+    };
+  }
+
+  if (productType === "ao2") {
+    const rowsNumberAdj = getRowsNumberAdj(product.rows);
+    const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+    const modelWithoutHyphen = product.model.replace("-", " ");
+
+    return {
+      title: `Агрегает ${product.shortName} отопительный ${heatCarrierAdj.nom} ${rowsNumberAdj.nom}`,
+      description: `Агрегат ${shortNameWithoutHyphen} воздушно отопительный ${heatCarrierAdj.nom} ${rowsNumberAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена водяного агрегата ${product.model}`,
+      keywords: `${modelWithoutHyphen},агрегат ${modelWithoutHyphen} ${heatCarrierAdj.nom},агрегат ${shortNameWithoutHyphen} ${product.calorifier},отопительный агрегат ${modelWithoutHyphen} расчет и подбор,воздушно-отопительный агрегат ${modelWithoutHyphen},агрегат ${modelWithoutHyphen} технические характеристики,агрегат отопительный ${modelWithoutHyphen} мощность,воздушный агрегат ${modelWithoutHyphen} производительность,отопительный агрегат ${modelWithoutHyphen} купить,${heatCarrierAdj.nom} агрегат ${modelWithoutHyphen} цена`,
     };
   }
 }

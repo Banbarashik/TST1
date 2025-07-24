@@ -5311,7 +5311,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "agregat-ao2-3-ksk3-vozdushniy-parovoy",
     name: "Агрегат АО 2-3 п3",
-    shortName: "АО2-3",
+    shortName: "АО 2-3",
     model: "АО 2-3 п3",
     calorifier: "КПСк3",
     tubeSize: "16x1.5",
@@ -5337,7 +5337,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "agregat-ao2-3-ksk3-vozdushniy-vodyanoy",
     name: "Агрегат АО 2-3 в3",
-    shortName: "АО2-3",
+    shortName: "АО 2-3",
     model: "АО 2-3 в3",
     calorifier: "КСк3",
     tubeSize: "16x1.5",
@@ -5363,7 +5363,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "agregat-ao2-4-ksk3-vozdushniy-vodyanoy",
     name: "Агрегат АО 2-4 в3",
-    shortName: "АО2-4",
+    shortName: "АО 2-4",
     model: "АО 2-4 в3",
     calorifier: "КСк3",
     tubeSize: "16x1.5",
@@ -5382,7 +5382,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "agregat-ao2-3-ksk4-vozdushniy-vodyanoy",
     name: "Агрегат АО 2-3 в4",
-    shortName: "АО2-3",
+    shortName: "АО 2-3",
     model: "АО 2-3 в4",
     calorifier: "КСк4",
     tubeSize: "16x1.5",

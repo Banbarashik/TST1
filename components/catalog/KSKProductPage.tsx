@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { sortProducts } from "@/lib/utils";
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
+import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 
 import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
@@ -11,17 +12,6 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const rowLabels: Record<number, { plu: string; gen: string }> = {
-  2: {
-    plu: "двухрядные",
-    gen: "двухрядного",
-  },
-  3: {
-    plu: "трехрядные",
-    gen: "трехрядного",
-  },
-  4: { plu: "четырехрядные", gen: "четырехрядного" },
-};
 const categoryLabels: Record<string, string> = {
   ksk: "КСк",
   kpsk: "КПСк",
@@ -57,7 +47,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     (p) => p.size === product.size,
   );
 
-  const rowsAdj = rowLabels[product.rows];
+  const rowsNumberAdj = getRowsNumberAdj(product.rows);
 
   return (
     <div>
@@ -99,7 +89,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
           <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              {isCalorifier ? "Стандартные" : "Все"} {rowsAdj.plu} типоразмеры
+              {isCalorifier ? "Стандартные" : "Все"} {rowsNumberAdj.plu}{" "}
+              типоразмеры
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsByRows.map((p) => (
@@ -120,7 +111,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         Ниже представлены расчетные данные {heatCarrierAdj?.gen}{" "}
         {isCalorifier
           ? `калорифера ${product.shortName}`
-          : `агрегата ${product.shortName} (на базе ${rowsAdj.gen} ${heatCarrierAdj.gen} калорифера ${product.calorifier.replace(/[0-9]/g, "")})`}{" "}
+          : `агрегата ${product.shortName.replace(" ", "")} (на базе ${rowsNumberAdj.gen} ${heatCarrierAdj.gen} калорифера ${product.calorifier.replace(/[0-9]/g, "")})`}{" "}
         производства ООО Т.С.Т. Выбрав в верхней части таблицы подходящий вам
         график теплоносителя, можно ознакомиться с основными теплотехническими
         показателями: температурой воздуха на выходе,
