@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="calculator.css" rel="stylesheet" />
+    <script>
+      function calculate() {
+        let cool = document.calculator.coolant;
+        let cal = document.getElementById("calorifer");
+
+        let B1 = cal.value;
+        let B3 = +document.getElementById("concentration").value / 100;
+        let B4 = +document.getElementById("coolantInputT").value;
+        let B5 = +document.getElementById("coolantOutputT").value;
+        let B6 = +document.getElementById("volume").value;
+        let B7 = +document.getElementById("airInputT").value;
+        let B8 = +document.getElementById("airOutputT").value;
+
+        // значения которые нужно менять (начало)
+        let F = [8.7, 0.405, 0.00128, 10.79, 30.4, 0.512, 0.1299, 4.67, 1.864];
+        let G = [13.3, 0.405, 0.00194, 15.61, 29.4, 0.515, 0.0945, 6.37, 1.864];
+        let H = [17.5, 0.405, 0.00255, 18.73, 28.1, 0.518, 0.0681, 8.67, 1.848];
+        // значения которые нужно менять (конец)
+
+        let square = [
+          999.840377 +
+            0.0611638 * B21() -
+            0.0077702 * Math.pow(B21(), 2) +
+            0.00004266 * Math.pow(B21(), 3) -
+            0.00000012 * Math.pow(B21(), 4),
+          658.49825 -
+            54.81501 * B3 +
+            (664.71643 * 273.15) / (B21() + 273.15) +
+            (232.72605 * B3 * 273.15) / (B21() + 273.15) -
+            322.61661 * (273.15 / (B21() + 273.15)) ** 2,
+          508.41109 -
+            182.4082 * B3 +
+            (965.76507 * 273.15) / (B21() + 273.15) +
+            (280.29104 * B3 * 273.15) / (B21() + 273.15) -
+            472.2551 * (273.15 / (B21() + 273.15)) ** 2,
+        ];
+
+        let coolant = [
+          4216.55956404788 -
+            3.41468886028714 * B21() +
+            0.118928750860574 * Math.pow(B21(), 2) -
+            0.0021884779894615 * Math.pow(B21(), 3) +
+            0.0000237891891163297 * Math.pow(B21(), 4) -
+            1.38782227132789e-7 * Math.pow(B21(), 5) +
+            3.43018824949952e-10 * Math.pow(B21(), 6),
+          (5.36449 +
+            0.78863 * B3 -
+            (2.59001 * 273.15) / (B21() + 273.15) -
+            (2.73187 * B3 * 273.15) / (B21() + 273.15) +
+            1.43759 * (273.15 / (B21() + 273.15)) ** 2) *
+            1000,
+          (4.47642 +
+            0.60863 * B3 -
+            (0.71497 * 273.15) / (B21() + 273.15) -
+            (1.93855 * B3 * 273.15) / (B21() + 273.15) +
+            0.47873 * (273.15 / (B21() + 273.15)) ** 2) *
+            1000,
+        ];
+
+        // вывод результатов
+        document.getElementById("percents").innerHTML =
+          (B3 * 100).toFixed(0) + " %";
+        document.getElementById("result1").value = B9().toFixed(0) + " %";
+        document.getElementById("result2").value = B10().toFixed(2);
+        document.getElementById("result3").value = B11().toFixed(2);
+        document.getElementById("result4").value = B12().toFixed(0);
+        document.getElementById("result5").value = B13().toFixed(1);
+        document.getElementById("result6").value = B14().toFixed(0);
+        document.getElementById("result7").value = B15().toFixed(0);
+
+        if (
+          document.getElementById("result2").value < 1.5 ||
+          document.getElementById("result2").value > 8
+        ) {
+          document.getElementById("result2").style.backgroundColor =
+            "rgb(255, 160, 122)";
+        } else if (
+          document.getElementById("result2").value > 1.5 &&
+          document.getElementById("result2").value < 8
+        ) {
+          document.getElementById("result2").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+
+        if (
+          document.getElementById("result3").value < 0.12 ||
+          document.getElementById("result3").value > 1.2
+        ) {
+          document.getElementById("result3").style.backgroundColor =
+            "rgb(255, 160, 122)";
+        } else {
+          document.getElementById("result3").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+
+        if (
+          parseInt(document.getElementById("result1").value) < 0 ||
+          parseInt(document.getElementById("result1").value) > 20
+        ) {
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 160, 122)";
+        } else {
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 255, 255)";
+        }
+
+        if (
+          document.getElementById("result1").value == "NaN %" ||
+          document.getElementById("result1").value == "Infinity %" ||
+          document.getElementById("result1").value == "-Infinity %"
+        ) {
+          document.getElementById("result1").value = "%";
+          document.getElementById("result1").style.backgroundColor =
+            "rgb(255, 255, 255)";
+        }
+        if (
+          document.getElementById("result2").value == "NaN" ||
+          document.getElementById("result2").value == "Infinity" ||
+          document.getElementById("result2").value == "-Infinity"
+        ) {
+          document.getElementById("result2").value = "";
+          document.getElementById("result2").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+        if (
+          document.getElementById("result3").value == "NaN" ||
+          document.getElementById("result3").value == "Infinity" ||
+          document.getElementById("result3").value == "-Infinity"
+        ) {
+          document.getElementById("result3").value = "";
+          document.getElementById("result3").style.backgroundColor =
+            "rgb(217, 217, 217)";
+        }
+        if (
+          document.getElementById("result4").value == "NaN" ||
+          document.getElementById("result4").value == "Infinity" ||
+          document.getElementById("result4").value == "-Infinity"
+        ) {
+          document.getElementById("result4").value = "";
+        }
+        if (
+          document.getElementById("result5").value == "NaN" ||
+          document.getElementById("result5").value == "Infinity" ||
+          document.getElementById("result5").value == "-Infinity"
+        ) {
+          document.getElementById("result5").value = "";
+        }
+        if (
+          document.getElementById("result6").value == "NaN" ||
+          document.getElementById("result6").value == "Infinity" ||
+          document.getElementById("result6").value == "-Infinity"
+        ) {
+          document.getElementById("result6").value = "";
+        }
+        if (
+          document.getElementById("result7").value == "NaN" ||
+          document.getElementById("result7").value == "Infinity" ||
+          document.getElementById("result7").value == "-Infinity"
+        ) {
+          document.getElementById("result7").value = "";
+        }
+
+        function B9() {
+          return ((B15() - B25()) / B25()) * 100;
+        }
+        function B10() {
+          return B19() / 3600 / F2();
+        }
+        function B11() {
+          return B14() / 3600 / (B22() * F3());
+        }
+        function B12() {
+          return F8() * B10() ** F9();
+        }
+        function B13() {
+          return F4() * B11() ** 2;
+        }
+        function B14() {
+          return ((B15() * 1000) / (B23() * (B4 - B5))) * 3600;
+        }
+        function B15() {
+          return (B29() * F1() * B32()) / 1000;
+        }
+
+        function B17() {
+          return (B7 + B8) / 2;
+        }
+        function B18() {
+          return 353 / (273.15 + B17());
+        }
+        function B19() {
+          return B6 * B18();
+        }
+
+        function B21() {
+          return (B4 + B5) / 2;
+        }
+
+        function B22() {
+          if (cool.value == "water") {
+            return square[0];
+          } else if (cool.value == "ethyleneGlycol") {
+            return square[1];
+          } else if (cool.value == "propyleneGlycol") {
+            return square[2];
+          }
+        }
+        function B23() {
+          if (cool.value == "water") {
+            return coolant[0];
+          } else if (cool.value == "ethyleneGlycol") {
+            return coolant[1];
+          } else if (cool.value == "propyleneGlycol") {
+            return coolant[2];
+          }
+        }
+
+        function B25() {
+          return ((B19() / 3600) * 1005 * (B8 - B7)) / 1000;
+        }
+        function B26() {
+          return ((B25() * 1000) / (B23() * (B4 - B5))) * 3600;
+        }
+        function B27() {
+          return B26() / 3600 / (B22() * F3());
+        }
+
+        function B29() {
+          return F5() * B10() ** F6() * B27() ** F7();
+        }
+        function B30() {
+          return B4 - B8;
+        }
+        function B31() {
+          return B5 - B7;
+        }
+        function B32() {
+          return (B30() + B31()) / 2;
+        }
+
+        function F1() {
+          if (B1 == "2_rows") {
+            return F[0];
+          } else if (B1 == "3_rows") {
+            return G[0];
+          } else if (B1 == "4_rows") {
+            return H[0];
+          }
+        }
+        function F2() {
+          if (B1 == "2_rows") {
+            return F[1];
+          } else if (B1 == "3_rows") {
+            return G[1];
+          } else if (B1 == "4_rows") {
+            return H[1];
+          }
+        }
+        function F3() {
+          if (B1 == "2_rows") {
+            return F[2];
+          } else if (B1 == "3_rows") {
+            return G[2];
+          } else if (B1 == "4_rows") {
+            return H[2];
+          }
+        }
+        function F4() {
+          if (B1 == "2_rows") {
+            return F[3];
+          } else if (B1 == "3_rows") {
+            return G[3];
+          } else if (B1 == "4_rows") {
+            return H[3];
+          }
+        }
+        function F5() {
+          if (B1 == "2_rows") {
+            return F[4];
+          } else if (B1 == "3_rows") {
+            return G[4];
+          } else if (B1 == "4_rows") {
+            return H[4];
+          }
+        }
+        function F6() {
+          if (B1 == "2_rows") {
+            return F[5];
+          } else if (B1 == "3_rows") {
+            return G[5];
+          } else if (B1 == "4_rows") {
+            return H[5];
+          }
+        }
+        function F7() {
+          if (B1 == "2_rows") {
+            return F[6];
+          } else if (B1 == "3_rows") {
+            return G[6];
+          } else if (B1 == "4_rows") {
+            return H[6];
+          }
+        }
+        function F8() {
+          if (B1 == "2_rows") {
+            return F[7];
+          } else if (B1 == "3_rows") {
+            return G[7];
+          } else if (B1 == "4_rows") {
+            return H[7];
+          }
+        }
+        function F9() {
+          if (B1 == "2_rows") {
+            return F[8];
+          } else if (B1 == "3_rows") {
+            return G[8];
+          } else if (B1 == "4_rows") {
+            return H[8];
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Калькулятор (начало) -->
+    <form
+      onsubmit="return false;"
+      oninput="calculate()"
+      name="calculator"
+      class="calculator advanced-calculator"
+    >
+      <div>
+        <span class="unselectable">Модель калорифера</span>
+        <select id="calorifer" style="background-color: rgb(176, 196, 222)">
+          <!-- здесь нужно поменять текст (начало) -->
+          <option value="2_rows">КПВУ-708x708_2 двухрядный</option>
+          <option value="3_rows">КПВУ-708x708_3 трехрядный</option>
+          <option value="4_rows">КПВУ-708x708_4 четырехрядный</option>
+          <!-- здесь нужно поменять текст (конец) -->
+        </select>
+      </div>
+
+      <div class="numbers_input">
+        <p class="unselectable">
+          Объем нагреваемого воздуха:
+          <input type="number" id="volume" placeholder="м³/ч" />
+        </p>
+
+        <p class="unselectable">
+          Температура входящего воздуха:
+          <input type="number" id="airInputT" placeholder="°С" />
+        </p>
+
+        <p class="unselectable">
+          Требуемая температура воздуха на выходе:
+          <input type="number" id="airOutputT" placeholder="°С" />
+        </p>
+      </div>
+
+      <div style="margin-top: 15px" class="unselectable">
+        <span>Теплоноситель</span>
+        <input type="radio" name="coolant" value="water" checked /> вода
+        <input type="radio" name="coolant" value="ethyleneGlycol" />
+        этиленгликоль
+        <input type="radio" name="coolant" value="propyleneGlycol" />
+        пропиленгликоль
+      </div>
+
+      <div class="numbers_input">
+        <p
+          style="display: flex; justify-content: flex-end; align-items: center"
+          class="unselectable"
+        >
+          <span>Концентрация гликолей:</span
+          ><span id="percents" style="width: 50px">0 %</span
+          ><input
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            id="concentration"
+            value="0"
+          />
+        </p>
+
+        <p class="unselectable">
+          Температура теплоносителя на входе:
+          <input type="number" id="coolantInputT" placeholder="°С" />
+        </p>
+
+        <p class="unselectable">
+          Температура теплоносителя на выходе:
+          <input type="number" id="coolantOutputT" placeholder="°С" />
+        </p>
+      </div>
+
+      <div class="results">
+        <p style="margin: 20px 0" class="unselectable">
+          Запас площади поверхности нагрева калорифера:
+          <input
+            id="result1"
+            oninput="calculate();"
+            style="width: 65px; background-color: rgb(255, 255, 255)"
+            disabled
+          />
+        </p>
+        <p style="margin-bottom: 8px" class="unselectable">
+          Тепловая мощность, кВт
+          <input id="result7" oninput="calculate()" disabled />
+        </p>
+        <p style="margin-top: 0; margin-bottom: 5px" class="unselectable">
+          Аэродинамическое сопротивление, Па
+          <input id="result4" oninput="calculate()" disabled />
+        </p>
+        <p style="margin: 0" class="unselectable">
+          Гидравлическое сопротивление, кПа
+          <input id="result5" oninput="calculate()" disabled />
+        </p>
+        <p style="margin-top: 8px; margin-bottom: 7px" class="unselectable">
+          Расход теплоносителя, кг/час
+          <input id="result6" oninput="calculate()" disabled />
+        </p>
+        <p style="margin: 0" class="unselectable">
+          Массовая скорость воздуха в фронтальном сечении, кг/м<sup>2</sup
+          ><span style="font-weight: 100">•</span>с
+          <input id="result2" oninput="calculate()" disabled />
+        </p>
+        <p style="margin-top: 6px" class="unselectable">
+          Скорость теплоносителя, м/сек
+          <input id="result3" oninput="calculate()" disabled />
+        </p>
+      </div>
+    </form>
+    <!-- Калькулятор (конец) -->
+  </body>
+</html>
