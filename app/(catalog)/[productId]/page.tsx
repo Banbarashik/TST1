@@ -9,6 +9,7 @@ import KSKProductPage from "@/components/catalog/KSKProductPage";
 import STDPage from "@/components/catalog/STDPage";
 import AVOPage from "@/components/catalog/AVOPage";
 import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
+import ElectroEquipmentPage from "@/components/catalog/ElectroEquipmentPage";
 
 function getProductType(categories: string[]) {
   if (
@@ -27,6 +28,8 @@ function getProductType(categories: string[]) {
   if (categories.includes("ao2")) return "ao2";
   if (categories.includes("std300")) return "std300";
   if (categories.includes("avo")) return "avo";
+  if (categories.includes("energonagrevatelynoe-oborudovanie"))
+    return "electroEquipment";
 }
 
 export async function generateMetadata({
@@ -95,11 +98,10 @@ export default async function ProductPage({
 
   if (productType === "supplyCalorifier")
     return <SupplyCalorifierPage product={product} />;
-
   if (productType === "standardCalorifier" || productType === "ao2")
     return <KSKProductPage product={product} />;
-
   if (productType === "std300") return <STDPage product={product} />;
-
   if (productType === "avo") return <AVOPage product={product} />;
+  if (productType === "electroEquipment")
+    return <ElectroEquipmentPage product={product} />;
 }
