@@ -15,19 +15,16 @@ function getProductType(categories: string[]) {
     categories.includes("pritochny-parovy-kalorifery")
   )
     return "supplyCalorifier";
-
   if (
     categories.includes("ksk") ||
     categories.includes("kpsk") ||
     categories.includes("tvv") ||
+    categories.includes("kp") ||
     categories.includes("kfb")
   )
     return "standardCalorifier";
-
   if (categories.includes("ao2")) return "ao2";
-
   if (categories.includes("std300")) return "std300";
-
   if (categories.includes("avo")) return "avo";
 }
 
@@ -59,12 +56,14 @@ export async function generateMetadata({
   }
 
   if (productType === "standardCalorifier") {
-    const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+    const isKFB = product.categories.includes("kfb");
+    const shortName = isKFB ? product.model : product.shortName;
+    const shortNameWithoutHyphen = shortName.replace("-", " ");
 
     return {
       title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
-      description: `Калорифер ${product.shortName} ${heatCarrierAdj?.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${product.shortName}`,
-      keywords: `калорифер ${product.rows} ${product.size} ${heatCarrierAdj?.nom},${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen},калорифер ${shortNameWithoutHyphen} ${heatCarrierAdj?.nom},калорифер ${shortNameWithoutHyphen} технические характеристики,калорифер ${shortNameWithoutHyphen} габаритные размеры,калорифер ${shortNameWithoutHyphen} производительность,калорифер ${shortNameWithoutHyphen} мощность,калорифер ${shortNameWithoutHyphen} купить,калорифер ${shortNameWithoutHyphen} цена`,
+      description: `Калорифер ${shortName} ${heatCarrierAdj?.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${shortName}`,
+      keywords: `калорифер ${isKFB ? `${product.size} a${product.rows}` : `${product.rows} ${product.size}`} ${heatCarrierAdj?.nom},${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} ${heatCarrierAdj?.nom},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} технические характеристики,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} габаритные размеры,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} производительность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} мощность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} купить,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} цена`,
     };
   }
 }
