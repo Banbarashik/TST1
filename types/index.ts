@@ -2,7 +2,6 @@ export type Category = {
   title?: string;
   menuTitle: string;
   slug: string;
-  description?: string[];
   children?: Category[];
 };
 

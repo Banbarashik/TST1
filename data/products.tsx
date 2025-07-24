@@ -6349,7 +6349,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatPower: 448,
     price: 87386,
     img: {
-      url: "/img/kalorifery/ksk/kalorifer_ksk_2-12.png",
+      url: "/img/kalorifery/tvv/kalorifer_tvv_306_310.png",
       alt: "Воздухонагреватель КСк 2-12",
       title: "Калорифер КСк 2 12 водяной",
     },
