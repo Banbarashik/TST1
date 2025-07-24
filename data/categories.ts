@@ -166,4 +166,65 @@ export const categoryTree: Category[] = [
       },
     ],
   },
+  {
+    title: "Воздушно-отопительные агрегаты",
+    menuTitle: "Воздушно-отопительные агрегаты",
+    slug: "agregaty",
+    children: [
+      {
+        title: "Водяные отопительные агрегаты",
+        menuTitle: "Водяные отопительные агрегаты",
+        slug: "vodiany-agregaty",
+        children: [
+          {
+            title: "Агрегаты отопительные АО2",
+            menuTitle: "АО2",
+            slug: "ao2-v",
+          },
+          {
+            title: "Агрегаты отопительные АВО ХЛ",
+            menuTitle: "АВО ХЛ",
+            slug: "avo-tvv",
+          },
+          {
+            title: "Агрегаты отопительные СТД-300",
+            menuTitle: "СТД-300",
+            slug: "std300-ksk",
+          },
+          {
+            title: "Агрегаты отопительные СТД-300 ХЛ",
+            menuTitle: "СТД-300 ХЛ",
+            slug: "std300-tvv",
+          },
+        ],
+      },
+      {
+        title: "Паровые отопительные агрегаты",
+        menuTitle: "Паровые отопительные агрегаты",
+        slug: "parovy-agregaty",
+        children: [
+          {
+            title: "Агрегаты отопительные АО2",
+            menuTitle: "АО2",
+            slug: "ao2-p",
+          },
+          {
+            title: "Агрегаты отопительные АВО ХЛ",
+            menuTitle: "АВО ХЛ",
+            slug: "avo-kp",
+          },
+          {
+            title: "Агрегаты отопительные СТД-300",
+            menuTitle: "СТД-300",
+            slug: "std300-kpsk",
+          },
+          {
+            title: "Агрегаты отопительные СТД-300 ХЛ",
+            menuTitle: "СТД-300 ХЛ",
+            slug: "std300-kp",
+          },
+        ],
+      },
+    ],
+  },
 ];
