@@ -153,6 +153,10 @@ th {
   overflow: auto;
 }
 
+.table-wrap tr:nth-child(1) td:nth-child(2) {
+  width: 520px;
+}
+
 .table-wrap td:first-child {
   padding: 3px 0 3px 3px;
   text-align: left;
@@ -169,7 +173,6 @@ th {
 }
 
 .table-wrap tr:nth-child(3) td:nth-child(n + 2) {
-  width: 43px;
   font-weight: 700;
 }
 

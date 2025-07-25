@@ -6962,6 +6962,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     price: 87386,
     categories: ["kalorifer", "parovy-kalorifery", "kpsk", "kpsk-2"],
     img: "/img/kalorifery/kpsk/kalorifer_kpsk_2-12.png",
+    tableWithTabs: "/legacy/table-kpsk-2-12.html",
     specsTableValues: [],
     sizeTableValues: [],
   },
