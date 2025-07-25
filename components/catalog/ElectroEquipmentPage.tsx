@@ -30,6 +30,9 @@ export default function ElectroEquipmentPage({ product }) {
   const productsByPreciseCategory = productsByCategory.filter((p) =>
     p.categories.includes(preciseCategory),
   );
+  const productsBySize = productsByCategory.filter(
+    (p) => p.id !== product.id && p.size === product.size,
+  );
 
   return (
     <div>
@@ -49,6 +52,29 @@ export default function ElectroEquipmentPage({ product }) {
             <ProductParagraph className="font-bold">
               Все типоразмеры {oborudovanie[preciseCategory]}
             </ProductParagraph>
+            <ul className="flex flex-wrap gap-2">
+              {productsByPreciseCategory.map((p) => (
+                <li key={p.id}>
+                  <SimilarProductLink id={p.id} isActive={p.id === product.id}>
+                    {p.shortName}
+                  </SimilarProductLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-1">
+            <ProductParagraph className="font-bold">
+              Сопутствующее оборудование
+            </ProductParagraph>
+            <ul className="flex flex-wrap gap-2">
+              {productsBySize.map((p) => (
+                <li key={p.id}>
+                  <SimilarProductLink id={p.id} isActive={p.id === product.id}>
+                    {p.shortName}
+                  </SimilarProductLink>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
