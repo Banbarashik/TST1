@@ -138,6 +138,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         {isCalorifier && " вентиляционного и"}{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
+
       <ProductSubheader
         text={`Технические характеристики ${isCalorifier ? `${product.shortName} ${heatCarrierAdj?.gen}` : `${product.model}`}`}
       />

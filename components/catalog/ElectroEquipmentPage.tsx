@@ -106,16 +106,27 @@ export default function ElectroEquipmentPage({ product }) {
       <ProductSubheader
         text={`Технические характеристики ${product.shortName}`}
       />
-      <table className="mx-auto w-176">
+      <table className="mx-auto mb-6 w-176">
         <tbody>
           {tableLabels.map((label, i) => (
-            <tr>
+            <tr key={label}>
               <td className="py-1 pl-1 text-left">{label}</td>
               <td>{product.specsTableValues[i]}</td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      <ProductSubheader
+        text={`Чертеж и электрическая схема подключения ${product.shortName}`}
+      />
+      <Image
+        src={product.drawing}
+        alt={`${product.name} габаритные размеры`}
+        title={`${product.name} электрическая схема подключения`}
+        width={968}
+        height={1}
+      />
     </div>
   );
 }

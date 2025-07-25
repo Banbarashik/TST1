@@ -97,7 +97,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       alt: "",
       title: "",
     },
-    drawing: "",
+    drawing: "/",
     specsTableValues: [
       2.5,
       380,
