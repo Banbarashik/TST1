@@ -18,6 +18,12 @@ const oborudovanie = {
   shuk: "шкафов ШУК",
 };
 
+const tableLinkText = {
+  sfo: "электрокалориферы СФО",
+  sfotc: "электрокалориферные установки СФОЦ",
+  shuk: "шкафы управления калорифером ШУК",
+};
+
 const tableLabels = [
   "Номинальная мощность одного нагревателя, кВт",
   "Напряжение питающей сети, В ",
@@ -121,11 +127,18 @@ export default function ElectroEquipmentPage({ product }) {
         text={`Чертеж и электрическая схема подключения ${product.shortName}`}
       />
       <Image
+        className="mb-10"
         src={product.drawing}
         alt={`${product.name} габаритные размеры`}
         title={`${product.name} электрическая схема подключения`}
         width={968}
         height={1}
+      />
+
+      <TableAndCatalogLinks
+        tableURL="#"
+        tableLinkText={tableLinkText[preciseCategory]}
+        catalogURL="#"
       />
     </div>
   );

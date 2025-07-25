@@ -243,6 +243,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </tr>
         </tbody>
       </table>
+
       <TableAndCatalogLinks
         tableURL="#"
         tableLinkText={`${heatCarrierAdj?.plu} ${isCalorifier ? "калориферы" : "агрегаты"} ${categoryLabel}`}
