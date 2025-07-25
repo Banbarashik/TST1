@@ -104,6 +104,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
       />
