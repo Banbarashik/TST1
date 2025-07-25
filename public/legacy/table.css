@@ -164,15 +164,10 @@ th {
   line-height: 18px;
 }
 
-.table-wrap tr:nth-child(2) td:nth-child(n + 2) {
-  font-weight: 700;
-}
-
-.table-wrap tr:first-child td:nth-child(2) {
-  font-weight: 700;
-}
-
-.table-wrap tr:nth-child(3) td:nth-child(n + 2) {
+.table-wrap tr:nth-child(2) td:nth-child(n + 2),
+.table-wrap tr:first-child td:nth-child(2),
+.table-wrap tr:nth-child(3) td:nth-child(n + 2),
+.kpsk-table tr:nth-child(4) td:nth-child(n + 2) {
   font-weight: 700;
 }
 
