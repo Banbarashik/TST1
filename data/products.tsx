@@ -9,7 +9,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     size: 16,
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 1000,
-    power: 15,
+    heatPower: 15,
     price: 87386,
     img: {
       url: "/",
@@ -50,7 +50,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calorifier: "СФО-16",
     categories: ["energonagrevatelynoe-oborudovanie", "sfotc"],
     airPower: 1000,
-    power: 15,
+    heatPower: 15,
     price: 87386,
     img: {
       url: "/",
@@ -90,7 +90,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     size: 16,
     categories: ["kalorifer", "energonagrevatelynoe-oborudovanie", "sfo"],
     airPower: 1000,
-    power: 15,
+    heatPower: 15,
     price: 87386,
     img: {
       url: "/",
