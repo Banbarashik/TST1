@@ -41,7 +41,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     .filter((p) => p.categories.includes(category))
     .sort((a, b) => sortProducts(a.name, b.name));
   const productsByRows = productsByCategory.filter(
-    (p) => p.rows === product.rows,
+    (p) =>
+      p.rows === product.rows &&
+      (!isKFB || p.heatCarrier === product.heatCarrier),
   );
   const productsBySize = productsByCategory.filter(
     (p) => p.size === product.size,
