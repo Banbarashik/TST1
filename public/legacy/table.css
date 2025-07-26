@@ -153,8 +153,13 @@ th {
   overflow: auto;
 }
 
-.table-wrap tr:nth-child(1) td:nth-child(2) {
+/* .table-wrap tr:nth-child(1) td:nth-child(2) {
   width: 520px;
+} */
+
+.ksk-table tr:nth-child(3) td:nth-child(n + 2),
+.kpsk-table tr:nth-child(4) td:nth-child(n + 2) {
+  width: 43px;
 }
 
 .table-wrap td:first-child {

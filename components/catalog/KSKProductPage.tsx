@@ -70,8 +70,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </li>
             <li>
               - цельнотянутые бесшовные трубки {product.tubeSize} мм по ГОСТ
-              8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
+              8734-75
             </li>
+            <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
