@@ -185,7 +185,7 @@ th {
 }
 #primary.tabs-fix,
 #primary2.tabs-fix {
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 #primary.table-with-scroll::-webkit-scrollbar,
 #primary2.table-with-scroll::-webkit-scrollbar,
