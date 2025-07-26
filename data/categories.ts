@@ -143,8 +143,8 @@ export const categoryTree: Category[] = [
         ],
       },
       {
-        title: "Калориферы КФБ-А",
-        menuTitle: "Калориферы КФБ-А",
+        title: "Калориферы КФБ-А П",
+        menuTitle: "Калориферы КФБ-А П",
         slug: "kfb-a-p",
         children: [
           {

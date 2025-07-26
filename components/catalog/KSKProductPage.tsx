@@ -51,13 +51,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
+      <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} isLink={false} />
         <div>
-          <ProductSubheader
-            text={`${isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"} ${product.model}${product.climate ? ` ${product.climate}` : ""}. ТУ 4863-002-55613706-02`}
-          />
+          <h2 className="mb-3 text-[22px]">{`${isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"} ${product.model}${product.climate ? ` ${product.climate}` : ""}. ТУ 4863-002-55613706-02`}</h2>
           <ProductParagraph>
             {isCalorifier
               ? "Теплоотдающие элементы:"
@@ -82,7 +80,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {productsBySize.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
-                    {isCalorifier ? p.shortName : p.model}
+                    {isCalorifier && !isKFB ? p.shortName : p.model}
                   </SimilarProductLink>
                 </li>
               ))}
@@ -97,7 +95,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {productsByRows.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
-                    {isCalorifier ? p.shortName : p.model}
+                    {isCalorifier && !isKFB ? p.shortName : p.model}
                   </SimilarProductLink>
                 </li>
               ))}
