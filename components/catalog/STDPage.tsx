@@ -75,7 +75,14 @@ export default function STDPage({ product }) {
             key={variant.id}
             className="itemsagregat-ao2-3-ksk3-vozdushniy-vodyanoy-start mb-6 flex gap-4"
           >
-            <ProductCard product={{ ...variant, img: product.img, name }} />
+            <ProductCard
+              product={{
+                ...variant,
+                airPower: product.airPower,
+                img: product.img,
+                name,
+              }}
+            />
             <div>
               <ProductSubheader text={name} />
               <ProductParagraph>

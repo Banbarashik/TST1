@@ -254,6 +254,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     model: "СТД-300 в",
     calorifier: "КСк",
     heatCarrier: "water",
+    airPower: 25000,
     img: "/",
     drawing: "/",
     categories: ["agregaty", "vodiany-agregaty", "std300", "std300-v"],
@@ -264,6 +265,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк3",
         rows: 3,
         tubeSize: "16х1.5",
+        heatPower: 333,
         specsTablesValues: [
           ["СТД-300 (КСк3)", 25000, 333, 1090, 1505, 1460, 315],
           [
@@ -281,6 +283,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк4",
         rows: 4,
         tubeSize: "16х1.5",
+        heatPower: 391,
         categories: ["agregaty-ksk4"],
         specsTablesValues: [
           ["СТД-300 (КСк4)", 25000, 391, 1090, 1505, 1460, 360],
