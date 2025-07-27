@@ -182,14 +182,9 @@ export const categoryTree: Category[] = [
             slug: "avo-tvv",
           },
           {
-            title: "Агрегаты отопительные СТД-300",
-            menuTitle: "СТД-300",
-            slug: "std300-ksk",
-          },
-          {
             title: "Агрегаты отопительные СТД-300 ХЛ",
             menuTitle: "СТД-300 ХЛ",
-            slug: "std300-tvv",
+            slug: "std300-v",
           },
         ],
       },
@@ -209,14 +204,9 @@ export const categoryTree: Category[] = [
             slug: "avo-kp",
           },
           {
-            title: "Агрегаты отопительные СТД-300",
-            menuTitle: "СТД-300",
-            slug: "std300-kpsk",
-          },
-          {
             title: "Агрегаты отопительные СТД-300 ХЛ",
             menuTitle: "СТД-300 ХЛ",
-            slug: "std300-kp",
+            slug: "std300-p",
           },
         ],
       },

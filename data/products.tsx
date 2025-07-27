@@ -209,14 +209,14 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "steam",
     img: "/",
     drawing: "/",
-    categories: ["agregaty", "parovy-agregaty", "std300-hl", "std300-kp"],
+    categories: ["agregaty", "parovy-agregaty", "std300-hl", "std300-p"],
     variants: [
       {
         id: "std300-kp3",
         model: "СТД-300 ХЛ п3",
         calorifier: "КП3",
+        rows: 3,
         tubeSize: "22х1.5",
-        categories: ["agregaty-kp3"],
         specsTablesValues: [
           ["СТД-300 (КП3)", 24000, 385, 1090, 1400, 1490, 375],
           [
@@ -232,8 +232,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         id: "std300-kp4",
         model: "СТД-300 ХЛ п4",
         calorifier: "КП4",
+        rows: 4,
         tubeSize: "22х1.5",
-        categories: ["agregaty-kp4"],
         specsTablesValues: [
           ["СТД-300 (КП4)", 24000, 424, 1130, 1400, 1490, 440],
           [
@@ -243,21 +243,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
             89.0,
             65,
           ],
-        ],
-        relatedProducts: [
-          {
-            caption: "Агрегаты СТД-300 ХЛ водяные",
-            links: [
-              {
-                slug: "std300-tvv",
-                text: "СТД-300 ХЛ в",
-              },
-            ],
-          },
-          {
-            caption: "Агрегаты АВО ХЛ водяные",
-            links: [{ slug: "avo-tvv", text: "АВО ХЛ в" }],
-          },
         ],
       },
     ],
@@ -271,7 +256,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "water",
     img: "/",
     drawing: "/",
-    categories: ["agregaty", "vodiany-agregaty", "std300", "std300-ksk"],
+    categories: ["agregaty", "vodiany-agregaty", "std300", "std300-v"],
     variants: [
       {
         id: "std300-ksk3",
@@ -306,24 +291,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
             115.8,
             50,
           ],
-        ],
-        relatedProducts: [
-          {
-            caption: "Агрегаты СТД-300 паровые",
-            links: [
-              {
-                slug: "std300-kpsk",
-                text: "СТД-300 п",
-              },
-            ],
-          },
-          {
-            caption: "Агрегаты АО 2 в четырехрядные",
-            links: [
-              { slug: "#", text: "АО 2-3 в4" },
-              { slug: "_", text: "АО 2-4 в4" },
-            ],
-          },
         ],
       },
     ],
