@@ -146,7 +146,7 @@ export default function STDPage({ product }) {
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
       <STDSpecsTable
         rows={product.variants}
-        getRowValues={(variant) => variant.specsTablesValues[0]}
+        getRowValues={(variant) => variant.specsTablesValues}
         headers={
           <thead>
             <tr>
@@ -177,7 +177,7 @@ export default function STDPage({ product }) {
       />
       <STDSpecsTable
         rows={product.variants}
-        getRowValues={(variant) => variant.specsTablesValues[1]}
+        getRowValues={(variant) => variant.componentsTableValues}
         headers={
           <thead>
             <tr>
