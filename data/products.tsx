@@ -227,21 +227,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
             65,
           ],
         ],
-        relatedProducts: [
-          {
-            caption: "Агрегаты СТД-300 паровые",
-            links: [
-              {
-                slug: "std300-kpsk",
-                text: "СТД-300 п",
-              },
-            ],
-          },
-          {
-            caption: "Агрегаты АВО ХЛ паровые",
-            links: [{ slug: "avo-kp", text: "АВО ХЛ п" }],
-          },
-        ],
       },
       {
         id: "std300-kp4",
@@ -303,27 +288,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
             87.3,
             50,
           ],
-        ],
-        relatedProducts: [
-          {
-            caption: "Агрегаты СТД-300 ХЛ водяные",
-            links: [
-              {
-                slug: "std300-tvv",
-                text: "СТД-300 ХЛ в",
-              },
-            ],
-          },
-          {
-            caption: "Агрегаты АО 2 в трехрядные",
-            links: [
-              {
-                slug: "agregat-ao2-3-ksk3-vozdushniy-vodyanoy",
-                text: "АО 2-3 в3",
-              },
-              { slug: "_", text: "АО 2-4 в3" },
-            ],
-          },
         ],
       },
       {
