@@ -47,15 +47,10 @@ export async function generateMetadata({
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
   if (productType === "supplyCalorifier") {
-    const [sizeStr] = product.shortName.match(/\d+/);
-    const size = Number(sizeStr);
-    const roundedSize = Math.round(size / 100) * 100;
-    const shortNameWithHyphen = product.shortName.replace(" ", "-");
-
     return {
-      title: `Калорифер приточный ${shortNameWithHyphen}`,
-      description: `Приточный ${heatCarrierAdj?.nom} калорифер ${shortNameWithoutHyphen} производительностью по воздуху ${product.airPower} м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора`,
-      keywords: `калорифер ${size} ${size},калорифер ${shortNameWithoutHyphen},калорифер ${heatCarrierAdj?.nom} ${size} ${size},калорифер ${heatCarrierAdj?.nom} ${shortNameWithoutHyphen},калорифер приточный ${size} ${size},калорифер ${heatCarrierAdj?.nom} приточный ${size} ${size},калорифер ${size} ${size} технические характеристики,калорифер ${shortNameWithoutHyphen} расчет и подбор,приточный калорифер ${size} ${size} производительность по воздуху ${product.airPower},${heatCarrierAdj?.nom} калорифер ${roundedSize} ${roundedSize}`,
+      title: ``,
+      description: ``,
+      keywords: ``,
     };
   }
 
