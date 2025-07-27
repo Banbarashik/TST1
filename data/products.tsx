@@ -206,10 +206,16 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     shortName: "СТД-300 ХЛ",
     model: "СТД-300 ХЛ п",
     calorifier: "КП",
-    heatCarrier: "steam",
+    heatCarrier: "water",
     img: "/",
     drawing: "/",
-    categories: ["agregaty", "parovy-agregaty", "std300", "std300-kp"],
+    categories: [
+      "agregaty",
+      "parovy-agregaty",
+      "std300",
+      "std300-kp",
+      "std300-hl",
+    ],
     variants: [
       {
         id: "std300-kp3",
@@ -292,8 +298,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         id: "std300-ksk3",
         model: "СТД-300 в3",
         calorifier: "КСк3",
+        rows: 3,
         tubeSize: "16х1.5",
-        categories: ["agregaty-ksk3"],
         specsTablesValues: [
           ["СТД-300 (КСк3)", 25000, 333, 1090, 1505, 1460, 315],
           [
@@ -317,7 +323,10 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
           {
             caption: "Агрегаты АО 2 в трехрядные",
             links: [
-              { slug: "#", text: "АО 2-3 в3" },
+              {
+                slug: "agregat-ao2-3-ksk3-vozdushniy-vodyanoy",
+                text: "АО 2-3 в3",
+              },
               { slug: "_", text: "АО 2-4 в3" },
             ],
           },

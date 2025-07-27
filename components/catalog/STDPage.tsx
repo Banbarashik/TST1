@@ -6,6 +6,7 @@ import SimilarProductLink from "./similarProductLink";
 import Image from "next/image";
 import STDSpecsTable from "./STDSpecsTable";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
+import { productData } from "@/data/products";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -28,8 +29,35 @@ export default function STDPage({ product }) {
       {product.variants.map(function (variant) {
         const name = `Воздушно-отопительный агрегат ${variant.model}`;
 
+        const relatedProducts =
+          product.categories.includes("std300-ksk") ||
+          product.categories.includes("std300-kpsk")
+            ? [
+                {
+                  caption: `Агрегаты СТД-300 ХЛ ${heatCarrierAdj.plu}`,
+                  products: productData.filter(
+                    (p) =>
+                      p.categories.includes("std300-hl") &&
+                      p.heatCarrier === product.heatCarrier,
+                  ),
+                },
+                {
+                  caption: `Агрегаты АО 2 в трехрядные`,
+                  products: productData.filter(
+                    (p) =>
+                      p.categories.includes("ao2") &&
+                      p.heatCarrier === product.heatCarrier &&
+                      p.rows === variant.rows,
+                  ),
+                },
+              ]
+            : product.relatedProducts;
+
         return (
-          <div key={variant.id} className="mb-6 flex items-start gap-4">
+          <div
+            key={variant.id}
+            className="itemsagregat-ao2-3-ksk3-vozdushniy-vodyanoy-start mb-6 flex gap-4"
+          >
             <ProductCard product={{ ...variant, img: product.img, name }} />
             <div>
               <ProductSubheader text={name} />
@@ -47,17 +75,17 @@ export default function STDPage({ product }) {
                   8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
                 </li>
               </ul>
-              {variant.relatedProducts.map(function (p) {
+              {relatedProducts.map(function (p) {
                 return (
                   <div key={p.caption} className="mb-4 flex flex-col gap-1">
                     <ProductParagraph className="font-bold">
                       {p.caption}
                     </ProductParagraph>
                     <ul className="flex flex-wrap gap-2">
-                      {p.links.map((link) => (
-                        <li key={link.slug}>
-                          <SimilarProductLink id={link.slug}>
-                            {p.shortName}
+                      {p.products.map((product) => (
+                        <li key={product.id}>
+                          <SimilarProductLink id={product.id}>
+                            {product.model}
                           </SimilarProductLink>
                         </li>
                       ))}
