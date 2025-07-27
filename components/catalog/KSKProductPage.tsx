@@ -43,7 +43,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const productsByRows = productsByCategory.filter(
     (p) =>
       p.rows === product.rows &&
-      (!isKFB || p.heatCarrier === product.heatCarrier),
+      ((!isKFB && !isAgregat) || p.heatCarrier === product.heatCarrier),
   );
   const productsBySize = productsByCategory.filter(
     (p) => p.size === product.size,
