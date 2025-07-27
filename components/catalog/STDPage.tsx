@@ -28,7 +28,6 @@ export default function STDPage({ product }) {
     <div>
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants.map(function (variant) {
-        const name = `Воздушно-отопительный агрегат ${variant.model}`;
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
 
         const relatedProducts = product.categories.includes("std300")
@@ -79,12 +78,10 @@ export default function STDPage({ product }) {
               product={{
                 ...variant,
                 airPower: product.airPower,
-                img: product.img,
-                name,
               }}
             />
             <div>
-              <ProductSubheader text={name} />
+              <ProductSubheader text={variant.name} />
               <ProductParagraph>
                 Теплоотдающие элементы {heatCarrierAdj.gen} калорифера{" "}
                 {variant.calorifier}:

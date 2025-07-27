@@ -251,17 +251,28 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calorifier: "КСк",
     heatCarrier: "water",
     airPower: 25000,
-    img: "/",
-    drawing: "/",
+    img: {
+      url: "/img/agregaty/std300/agregat_std-300_v.png",
+      alt: "Водяной воздушно-отопительный агрегат СТД-300",
+      title: "Отопительный агрегат СТД-300 кск3 водяной",
+    },
+    drawing:
+      "/img/agregaty/std300/agregat_otopitelnyi_std-300_vodianoi_razmery.png",
     categories: ["agregaty", "vodiany-agregaty", "std300", "std300-v"],
     variants: [
       {
         id: "std300-ksk3",
+        name: "Воздушно-отопительный агрегат в3",
         model: "СТД-300 в3",
         calorifier: "КСк3",
         rows: 3,
         tubeSize: "16х1.5",
         heatPower: 333,
+        img: {
+          url: "/img/agregaty/std300/agregat_std-300_v.png",
+          alt: "Водяной воздушно-отопительный агрегат СТД-300 в 3",
+          title: "Отопительный агрегат СТД-300 кск3 водяной",
+        },
         specsTablesValues: [
           "СТД-300 (КСк3)",
           25000,
@@ -282,10 +293,16 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       {
         id: "std300-ksk4",
         model: "СТД-300 в4",
+        name: "Воздушно-отопительный агрегат в4",
         calorifier: "КСк4",
         rows: 4,
         tubeSize: "16х1.5",
         heatPower: 391,
+        img: {
+          url: "/img/agregaty/std300/agregat_std-300_v.png",
+          alt: "Водяной воздушно-отопительный агрегат СТД-300 в 4",
+          title: "Отопительный агрегат СТД-300 кск4 водяной",
+        },
         specsTablesValues: [
           "СТД-300 (КСк4)",
           25000,
