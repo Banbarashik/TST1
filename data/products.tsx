@@ -294,6 +294,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         id: "std300-ksk4",
         model: "СТД-300 в4",
         calorifier: "КСк4",
+        rows: 4,
         tubeSize: "16х1.5",
         categories: ["agregaty-ksk4"],
         specsTablesValues: [

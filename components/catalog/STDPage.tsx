@@ -1,4 +1,5 @@
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
+import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 import ProductCard from "./productCard";
 import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
@@ -28,47 +29,46 @@ export default function STDPage({ product }) {
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants.map(function (variant) {
         const name = `Воздушно-отопительный агрегат ${variant.model}`;
+        const rowsNumberAdj = getRowsNumberAdj(variant.rows);
 
-        const relatedProducts =
-          product.categories.includes("std300-ksk") ||
-          product.categories.includes("std300-kpsk")
-            ? [
-                {
-                  caption: `Агрегаты СТД-300 ХЛ ${heatCarrierAdj.plu}`,
-                  products: productData.filter(
-                    (p) =>
-                      p.categories.includes("std300-hl") &&
-                      p.heatCarrier === product.heatCarrier,
-                  ),
-                },
-                {
-                  caption: `Агрегаты АО 2 в трехрядные`,
-                  products: productData.filter(
-                    (p) =>
-                      p.categories.includes("ao2") &&
-                      p.heatCarrier === product.heatCarrier &&
-                      p.rows === variant.rows,
-                  ),
-                },
-              ]
-            : [
-                {
-                  caption: `Агрегаты СТД-300 ${heatCarrierAdj.plu}`,
-                  products: productData.filter(
-                    (p) =>
-                      p.categories.includes("std300") &&
-                      p.heatCarrier === product.heatCarrier,
-                  ),
-                },
-                {
-                  caption: `Агрегаты АВО ХЛ ${heatCarrierAdj.plu}`,
-                  products: productData.filter(
-                    (p) =>
-                      p.categories.includes("avo") &&
-                      p.heatCarrier === product.heatCarrier,
-                  ),
-                },
-              ];
+        const relatedProducts = product.categories.includes("std300")
+          ? [
+              {
+                caption: `Агрегаты СТД-300 ХЛ ${heatCarrierAdj.plu}`,
+                products: productData.filter(
+                  (p) =>
+                    p.categories.includes("std300-hl") &&
+                    p.heatCarrier === product.heatCarrier,
+                ),
+              },
+              {
+                caption: `Агрегаты АО 2 ${product.heatCarrier === "water" ? "в" : "п"} ${rowsNumberAdj.plu}`,
+                products: productData.filter(
+                  (p) =>
+                    p.categories.includes("ao2") &&
+                    p.heatCarrier === product.heatCarrier &&
+                    p.rows === variant.rows,
+                ),
+              },
+            ]
+          : [
+              {
+                caption: `Агрегаты СТД-300 ${heatCarrierAdj.plu}`,
+                products: productData.filter(
+                  (p) =>
+                    p.categories.includes("std300") &&
+                    p.heatCarrier === product.heatCarrier,
+                ),
+              },
+              {
+                caption: `Агрегаты АВО ХЛ ${heatCarrierAdj.plu}`,
+                products: productData.filter(
+                  (p) =>
+                    p.categories.includes("avo") &&
+                    p.heatCarrier === product.heatCarrier,
+                ),
+              },
+            ];
 
         return (
           <div
