@@ -26,7 +26,8 @@ function getProductType(categories: string[]) {
   )
     return "standardCalorifier";
   if (categories.includes("ao2")) return "ao2";
-  if (categories.includes("std300")) return "std300";
+  if (categories.includes("std300") || categories.includes("std300-hl"))
+    return "std300";
   if (categories.includes("avo")) return "avo";
   if (categories.includes("energonagrevatelynoe-oborudovanie"))
     return "electroEquipment";

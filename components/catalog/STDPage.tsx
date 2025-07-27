@@ -51,7 +51,24 @@ export default function STDPage({ product }) {
                   ),
                 },
               ]
-            : product.relatedProducts;
+            : [
+                {
+                  caption: `Агрегаты СТД-300 ${heatCarrierAdj.plu}`,
+                  products: productData.filter(
+                    (p) =>
+                      p.categories.includes("std300") &&
+                      p.heatCarrier === product.heatCarrier,
+                  ),
+                },
+                {
+                  caption: `Агрегаты АВО ХЛ ${heatCarrierAdj.plu}`,
+                  products: productData.filter(
+                    (p) =>
+                      p.categories.includes("avo") &&
+                      p.heatCarrier === product.heatCarrier,
+                  ),
+                },
+              ];
 
         return (
           <div

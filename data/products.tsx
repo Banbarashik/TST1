@@ -206,16 +206,10 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     shortName: "СТД-300 ХЛ",
     model: "СТД-300 ХЛ п",
     calorifier: "КП",
-    heatCarrier: "water",
+    heatCarrier: "steam",
     img: "/",
     drawing: "/",
-    categories: [
-      "agregaty",
-      "parovy-agregaty",
-      "std300",
-      "std300-kp",
-      "std300-hl",
-    ],
+    categories: ["agregaty", "parovy-agregaty", "std300-hl", "std300-kp"],
     variants: [
       {
         id: "std300-kp3",
