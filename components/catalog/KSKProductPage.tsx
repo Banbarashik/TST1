@@ -119,14 +119,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         показателями: температурой воздуха на выходе,
         {isCalorifier &&
           product.heatCarrier === "water" &&
-          " гидравлическим и аэродинамическим сопротивлением"}
+          " гидравлическим и аэродинамическим сопротивлением,"}{" "}
         {!isCalorifier &&
           product.heatCarrier === "water" &&
-          " сопротивлением по воде и расходом теплоносителя"}
+          " сопротивлением по воде и расходом теплоносителя,"}{" "}
         {isCalorifier &&
           product.heatCarrier === "steam" &&
-          " аэродинамическим сопротивлением"}
-        , вырабатываемой мощностью
+          " аэродинамическим сопротивлением,"}{" "}
+        вырабатываемой мощностью
         {product.heatCarrier === "steam" && " и расходом пара"}.
       </ProductParagraph>
       <iframe
