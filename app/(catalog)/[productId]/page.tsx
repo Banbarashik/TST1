@@ -17,14 +17,10 @@ function getProductType(categories: string[]) {
     categories.includes("pritochny-parovy-kalorifery")
   )
     return "supplyCalorifier";
-  if (
-    categories.includes("ksk") ||
-    categories.includes("kpsk") ||
-    categories.includes("tvv") ||
-    categories.includes("kp") ||
-    categories.includes("kfb")
-  )
-    return "standardCalorifier";
+  if (categories.includes("ksk") || categories.includes("kpsk"))
+    return "ksk_kpsk";
+  if (categories.includes("tvv") || categories.includes("kp")) return "tvv_kp";
+  if (categories.includes("kfb")) return "kfb";
   if (categories.includes("ao2")) return "ao2";
   if (categories.includes("std300") || categories.includes("std300-hl"))
     return "std300";
@@ -46,6 +42,16 @@ export async function generateMetadata({
   const productType = getProductType(product.categories);
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+
+  if (productType === "ksk_kpsk") {
+    const name = `${product.series} ${product.rows} ${product.size}`;
+
+    return {
+      title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
+      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${name}`,
+      keywords: `${name},калорифер ${name},калорифер ${name} водяной,калорифер ${name} технические характеристики,калорифер ${name} габаритные размеры,купить калорифер ${product.shortName},калорифер ${name} цена,калорифер ${name} расчет,калорифер ${name} подбор,калорифер ${name} мощность`,
+    };
+  }
 
   if (productType === "supplyCalorifier") {
     const isKPVS = product.categories.includes("kpvs");
@@ -78,18 +84,6 @@ export async function generateMetadata({
     };
   }
 
-  if (productType === "standardCalorifier") {
-    const isKFB = product.categories.includes("kfb");
-    const shortName = isKFB ? product.model : product.shortName;
-    const shortNameWithoutHyphen = shortName.replace("-", " ");
-
-    return {
-      title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
-      description: `Калорифер ${shortName} ${heatCarrierAdj?.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${shortName}`,
-      keywords: `калорифер ${isKFB ? `${product.size} a${product.rows}` : `${product.rows} ${product.size}`} ${heatCarrierAdj?.nom},${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} ${heatCarrierAdj?.nom},калорифер ${isKFB ? shortName : shortNameWithoutHyphen} технические характеристики,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} габаритные размеры,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} производительность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} мощность,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} купить,калорифер ${isKFB ? shortName : shortNameWithoutHyphen} цена`,
-    };
-  }
-
   if (productType === "ao2") {
     const rowsNumberAdj = getRowsNumberAdj(product.rows);
     const shortNameWithoutHyphen = product.shortName.replace("-", " ");
@@ -117,7 +111,12 @@ export default async function ProductPage({
 
   if (productType === "supplyCalorifier")
     return <SupplyCalorifierPage product={product} />;
-  if (productType === "standardCalorifier" || productType === "ao2")
+  if (
+    productType === "ksk_kpsk" ||
+    productType === "tvv_kp" ||
+    productType === "kfb" ||
+    productType === "ao2"
+  )
     return <KSKProductPage product={product} />;
   if (productType === "std300") return <STDPage product={product} />;
   if (productType === "avo") return <AVOPage product={product} />;

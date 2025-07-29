@@ -7006,6 +7006,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     name: "Калорифер КСк 2-12",
     shortName: "КСк 2-12",
     model: "КСк 2-12 02",
+    series: "КСк",
     heatCarrier: "water",
     climate: "ХЛ3",
     tubeSize: "16x1.5",
