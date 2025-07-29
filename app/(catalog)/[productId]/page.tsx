@@ -52,18 +52,29 @@ export async function generateMetadata({
     const isKPVU = product.categories.includes("kpvu");
     const isKPPS = product.categories.includes("kpps");
     const isKPPU = product.categories.includes("kppu");
-    console.log(isKPPS, isKPPU, isKPVU, isKPVS);
 
     const size = `${product.size} ${product.size}`;
 
-    const diffKeys = [
-      `калорифер ${size} ${isKPVU || isKPPS ? heatCarrierAdj.nom : isKPPU ? "мощность" : ""}`,
-    ];
+    let heatPower = 0;
+    if (isKPVS || isKPPS)
+      heatPower = product.variants.find((p) => p.rows === 2).heatPower;
+    if (isKPVU || isKPPU)
+      heatPower = product.variants.find((p) => p.rows === 4).heatPower;
+
+    let keys = "";
+    if (isKPVS)
+      keys = `калорифер ${size},калорифер ${size} приточный,калорифер ${size} производитель,калорифер производительность ${product.airPower} м3/час,калорифер тепловая мощность ${heatPower} кВт`;
+    if (isKPVU)
+      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный ${heatCarrierAdj.nom},калорифер ${size} расчет,калорифер объем нагреваемого воздуха ${product.airPower} м3/час,калорифер производительность по теплу ${heatPower} кВт`;
+    if (isKPPS)
+      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный,калорифер ${size} ${heatCarrierAdj.nom} производитель,${heatCarrierAdj.nom} калорифер для нагрева воздуха ${product.airPower} м3/час,мощность ${heatCarrierAdj.gen} калорифера ${heatPower} кВт`;
+    if (isKPPU)
+      keys = `калорифер ${size} мощность,калорифер ${size} технические характеристики,калорифер ${size} производительность,${heatCarrierAdj.nom} калорифер для сушильной камеры ${product.airPower} м3/час,${heatCarrierAdj.nom} калорифер для сушки ${heatPower} кВт`;
 
     return {
-      title: ``,
-      description: ``,
-      keywords: diffKeys.join(","),
+      title: product.name,
+      description: `${heatCarrierAdj.nom} приточный калорифер ${product.shortName} производительностью по воздуху ${product.airPower} м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора`,
+      keywords: `${product.series} ${size},калорифер ${product.series} ${size},калорифер ${product.series} ${size} водяной,калорифер ${product.series} ${size} цена,калорифер ${product.series} ${size} купить,${keys}`,
     };
   }
 
