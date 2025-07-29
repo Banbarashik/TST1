@@ -52,11 +52,12 @@ export async function generateMetadata({
     const isKPVU = product.categories.includes("kpvu");
     const isKPPS = product.categories.includes("kpps");
     const isKPPU = product.categories.includes("kppu");
+    console.log(isKPPS, isKPPU, isKPVU, isKPVS);
 
     const size = `${product.size} ${product.size}`;
 
     const diffKeys = [
-      `калорифер ${size} ${isKPVU || isKPPS ? heatCarrierAdj.nom : "мощность"}`,
+      `калорифер ${size} ${isKPVU || isKPPS ? heatCarrierAdj.nom : isKPPU ? "мощность" : ""}`,
     ];
 
     return {
