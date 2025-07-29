@@ -23,23 +23,26 @@ const tableEquipment: Record<string, string> = {
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
+  const oppositeHeatCarrier =
+    product.heatCarrier === "water" ? "steam" : "water";
+  const oppositeHeatCarrierAdj = getHeatCarrierAdj(oppositeHeatCarrier);
 
   return (
     <div>
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
-      {product.variants.map(function (variant) {
+      {product.variants.map(function (variant, i) {
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
 
-        // для первого - p.heatCarrier === product.heatCarrier
-        // для второго - наоборот
         const relatedProducts = product.categories.includes("std300")
           ? [
               {
-                caption: `Агрегаты СТД-300 ХЛ ${heatCarrierAdj.plu}`,
+                caption: `Агрегаты СТД-300 ХЛ ${i === 0 ? heatCarrierAdj.plu : oppositeHeatCarrierAdj.plu}`,
                 products: productData.filter(
                   (p) =>
                     p.categories.includes("std300-hl") &&
-                    p.heatCarrier === product.heatCarrier,
+                    (i === 0
+                      ? p.heatCarrier === product.heatCarrier
+                      : p.heatCarrier !== product.heatCarrier),
                 ),
               },
               {
@@ -54,11 +57,13 @@ export default function STDPage({ product }) {
             ]
           : [
               {
-                caption: `Агрегаты СТД-300 ${heatCarrierAdj.plu}`,
+                caption: `Агрегаты СТД-300 ${i === 0 ? heatCarrierAdj.plu : oppositeHeatCarrierAdj.plu}`,
                 products: productData.filter(
                   (p) =>
                     p.categories.includes("std300") &&
-                    p.heatCarrier === product.heatCarrier,
+                    (i === 0
+                      ? p.heatCarrier === product.heatCarrier
+                      : p.heatCarrier !== product.heatCarrier),
                 ),
               },
               {
