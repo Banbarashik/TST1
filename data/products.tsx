@@ -490,11 +490,13 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       },
     ],
   },
-  // КППС-572_1572
+  // КППС
   {
     id: "kpps-1572x1572",
     name: "Калорифер КППС-1572×1572 паровой",
     shortName: "КППС 1572x1572",
+    size: 1572,
+    airPower: 25000,
     variants: [
       {
         id: "kpps-1572x1572-2",
@@ -525,7 +527,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       slug: "kpps-1530x1530",
       name: "КППС-1530x1530",
     },
-    airPower: 25000,
     img: "/img/kalorifery/kpps/kalorifer_kpps_1280x1280_1572x1572.png",
     drawing: "/img/kalorifery/kpps/kpps_chertez.png",
     calculator: "/legacy/calculator-kpsk-1572-1572.html",
@@ -1730,12 +1731,14 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       name: "КППС-614x614",
     },
   },
-  // КППУ-572_1572
+  // КППУ
   {
     id: "kppu-1572x1572",
     name: "Калорифер КППУ-1572×1572 паровой",
     shortName: "КППУ 1572x1572",
     heatCarrier: "steam",
+    size: 1572,
+    airPower: 24000,
     variants: [
       {
         id: "kppu-1572x1572-2",
@@ -1766,7 +1769,6 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       slug: "kppu-1526x1526",
       name: "КППУ-1526x1526",
     },
-    airPower: 24000,
     img: "/img/kalorifery/kppu/kalorifer_kppu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kppu/kppu_chertez.png",
     calculator: "/legacy/calculator-kp-1572-1572.html",
@@ -2858,6 +2860,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     name: "Калорифер КПВС-1572×1572 водяной",
     shortName: "КПВС 1572x1572",
     heatCarrier: "water",
+    size: 1572,
     airPower: 25000,
     variants: [
       {
@@ -4227,6 +4230,9 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "kpvu-1572x1572",
     name: "Калорифер КПВУ-1572×1572 водяной",
     shortName: "КПВУ 1572x1572",
+    heatCarrier: "water",
+    size: 1572,
+    airPower: 24000,
     variants: [
       {
         id: "kpvu-1572x1572-2",
@@ -4257,11 +4263,9 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       slug: "kpvu-1526x1526",
       name: "КПВУ-1526x1526",
     },
-    airPower: 24000,
     img: "/img/kalorifery/kpvu/kalorifer_kpvu_1299x1299_1572x1572.png",
     drawing: "/img/kalorifery/kpvu/kpvu_chertez.png",
     calculator: "/legacy/calculator-tvv-1572-1572.html",
-    heatCarrier: "water",
     specsTableValues: [
       24000,
       1500,

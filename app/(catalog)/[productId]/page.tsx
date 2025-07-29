@@ -48,10 +48,21 @@ export async function generateMetadata({
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
   if (productType === "supplyCalorifier") {
+    const isKPVS = product.categories.includes("kpvs");
+    const isKPVU = product.categories.includes("kpvu");
+    const isKPPS = product.categories.includes("kpps");
+    const isKPPU = product.categories.includes("kppu");
+
+    const size = `${product.size} ${product.size}`;
+
+    const diffKeys = [
+      `калорифер ${size} ${isKPVU || isKPPS ? heatCarrierAdj.nom : "мощность"}`,
+    ];
+
     return {
       title: ``,
       description: ``,
-      keywords: ``,
+      keywords: diffKeys.join(","),
     };
   }
 
