@@ -41,7 +41,17 @@ export async function generateMetadata({
 
   const productType = getProductType(product.categories);
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
-  const shortNameWithoutHyphen = product.shortName.replace("-", " ");
+
+  if (productType === "kfb") {
+    const amountOfWays =
+      product.heatCarrier === "water" ? "многоходовой" : "одноходовой";
+
+    return {
+      title: `Калорифер ${heatCarrierAdj.nom} ${product.model}`,
+      description: `Калорифер ${product.series}-${product.size} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, технические характеристики, размеры, расчет, подбор, цена ${heatCarrierAdj.gen} калорифера ${product.shortName}`,
+      keywords: `калорифер ${product.model},калорифер ${product.shortName} ${heatCarrierAdj.nom},калорифер ${product.shortName} ${heatCarrierAdj.nom} технические характеристики,калорифер ${product.shortName} ${heatCarrierAdj.nom} габаритные размеры,калорифер ${product.model} расчет и подбор,цена калорифера ${product.shortName} ${heatCarrierAdj.gen},купить калорифер ${product.shortName} ${heatCarrierAdj.nom},калорифер для шахт ${product.shortName} ${heatCarrierAdj.nom},калорифер ${product.shortName} ${amountOfWays},${product.heatCarrier === "water" ? "калориферная секция водяная" : "калорифер для сушилок паровой"} ${product.shortName}`,
+    };
+  }
 
   if (productType === "tvv_kp") {
     const series = product.heatCarrier === "water" ? "ВНВ" : "ВНП";
