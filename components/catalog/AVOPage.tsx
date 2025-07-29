@@ -6,6 +6,7 @@ import SimilarProductLink from "./similarProductLink";
 import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
+import { productData } from "@/data/products";
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -21,6 +22,11 @@ export default function AVOPage({ product }) {
     water: "насосно-смесительного",
     steam: "пароконденсатного",
   };
+
+  const relatedProducts = productData.filter(
+    (p) =>
+      p.categories.includes("avo") && p.heatCarrier !== product.heatCarrier,
+  );
 
   return (
     <div>
@@ -59,7 +65,7 @@ export default function AVOPage({ product }) {
           </ul>
         </div>
         <div className="shrink-0">
-          {product.relatedProducts.map(function (p) {
+          {relatedProducts.map(function (p) {
             return (
               <div key={p.caption} className="mb-4 flex flex-col gap-1">
                 <ProductParagraph className="font-bold">

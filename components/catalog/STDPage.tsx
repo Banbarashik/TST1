@@ -30,6 +30,8 @@ export default function STDPage({ product }) {
       {product.variants.map(function (variant) {
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
 
+        // для первого - p.heatCarrier === product.heatCarrier
+        // для второго - наоборот
         const relatedProducts = product.categories.includes("std300")
           ? [
               {
@@ -93,8 +95,9 @@ export default function STDPage({ product }) {
                 </li>
                 <li>
                   - цельнотянутые бесшовные трубки {variant.tubeSize} мм по ГОСТ
-                  8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
+                  8734-75
                 </li>
+                <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
               </ul>
               {relatedProducts.map(function (p) {
                 return (
