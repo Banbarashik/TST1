@@ -43,6 +43,19 @@ export async function generateMetadata({
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
   const shortNameWithoutHyphen = product.shortName.replace("-", " ");
 
+  if (productType === "tvv_kp") {
+    const series = product.heatCarrier === "water" ? "ВНВ" : "ВНП";
+    const size = `${product.rows}${product.size.length > 1 ? product.size : "0" + product.size}`;
+    const altName = `воздухонагреватель ${series} 113 ${size}`;
+    const shortAltName = `${series} ${size}`;
+
+    return {
+      title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
+      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, характеристики, расчет, цена водяного воздухонагревателя для холодного климата ${series} 113 22 ХЛ`,
+      keywords: `калорифер ${product.shortName},калорифер ${product.shortName} цена,калорифер ${product.shortName} технические характеристики,калорифер ${product.shortName} габаритные размеры,калорифер ${product.shortName} подбор,калорифер ${shortAltName},калорифер ${shortAltName} ${heatCarrierAdj.nom},${altName},${altName} 22 хл,${altName} купить`,
+    };
+  }
+
   if (productType === "ksk_kpsk") {
     const name = `${product.series} ${product.rows} ${product.size}`;
 
