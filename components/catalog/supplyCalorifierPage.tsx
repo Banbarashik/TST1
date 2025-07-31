@@ -160,7 +160,7 @@ export default function SupplyCalorifierPage({
             </th>
             <th className="small-cols">C</th>
             <th className="small-cols w-10">мм</th>
-            {isWater && <th className="small-cols w-10 pt-1">"</th>}
+            {isWater && <th className="small-cols w-10 pt-1">&quot;</th>}
             <th className="kal2">{nameAbbrev}2</th>
             <th className="kal2">{nameAbbrev}3</th>
             <th className="kal2">{nameAbbrev}4</th>

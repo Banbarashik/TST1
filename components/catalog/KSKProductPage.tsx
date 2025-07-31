@@ -26,9 +26,6 @@ const tableEquipment: Record<string, string> = {
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
-  const shortNameWithHyphen = product.shortName.replace(" ", "-");
-  const shortNameWithoutHyphen = product.shortName.replace("-", " ");
-
   const isCalorifier = product.categories.includes("kalorifer");
   const isAgregat = product.categories.includes("agregaty");
   const isKFB = product.categories.includes("kfb");

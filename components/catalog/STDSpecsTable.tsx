@@ -1,11 +1,6 @@
 import React from "react";
 
-function getRowSpan(
-  values: any[],
-  rows: any[],
-  colIdx: number,
-  getRowValues: (row: any) => any[],
-) {
+function getRowSpan(values, rows, colIdx: number, getRowValues: (row) => []) {
   let span = 1;
   for (let i = 1; i < rows.length; i++) {
     if (getRowValues(rows[i])[colIdx] === values[colIdx]) {
@@ -23,8 +18,8 @@ export default function STDSpecsTable({
   headers,
   ...props
 }: {
-  rows: any[];
-  getRowValues: (row: any) => any[];
+  rows: [];
+  getRowValues: (row) => [];
   headers: React.ReactNode;
 } & React.ComponentProps<"table">) {
   return (

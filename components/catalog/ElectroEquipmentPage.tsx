@@ -2,10 +2,6 @@ import { productData } from "@/data/products";
 
 import Image from "next/image";
 
-import { sortProducts } from "@/lib/utils";
-import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
-import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
-
 import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
