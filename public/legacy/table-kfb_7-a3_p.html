@@ -1,679 +1,655 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
-<script src="https://code.jquery.com/jquery-git.min.js"></script>
-<script src="tables.js"></script>
-<link href="table.css" rel="stylesheet"/>
-</head>
-<body>
-<!-- Таблицы (начало) -->
-<!--  Кнопки переключения таблиц (начало) -->
-<div class="table-with-scroll" id="primary">
-<form class="table-buttons-wrap">
-<input checked="" id="table_btn1" name="as" type="radio"/>
-<input id="table_btn2" name="as" type="radio"/>
-<input id="table_btn3" name="as" type="radio"/>
-<input id="table_btn4" name="as" type="radio"/>
-<input id="table_btn5" name="as" type="radio"/>
-<input id="table_btn6" name="as" type="radio"/>
-<label class="btn btn1" for="table_btn1"> 0.1 МПа/100 °С </label>
-<label class="btn btn2" for="table_btn2"> 0.2 МПа/120 °С </label>
-<label class="btn btn3" for="table_btn3"> 0.3 МПа/130 °С </label>
-<label class="btn btn4" for="table_btn4"> 0.5 МПа/150 °С </label>
-<label class="btn btn5" for="table_btn5"> 0.7 МПа/165 °С </label>
-<label class="btn btn6" for="table_btn6"> 1.1 МПа/185 °С </label>
-</form>
-</div>
-<!--  Кнопки переключения таблиц (конец) -->
-<div class="table-wrap table-with-scroll">
-<!-- Обёртка для таблиц (начало) -->
-<div id="secondary">
-<!-- Начало 1-й таблицы -->
-<div class="table-with-opacity-change" style="display: block">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,1
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                99,6
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>46</td>
-<td>41</td>
-<td>35</td>
-<td>30</td>
-<td>36</td>
-<td>30</td>
-<td>24</td>
-<td>17</td>
-<td>30</td>
-<td>23</td>
-<td>17</td>
-<td>10</td>
-</tr>
+  <head>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="tables.js"></script>
+    <link href="table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Таблицы (начало) -->
+    <!--  Кнопки переключения таблиц (начало) -->
+    <div class="table-with-scroll" id="primary">
+      <form class="table-buttons-wrap">
+        <input checked="" id="table_btn1" name="as" type="radio" />
+        <input id="table_btn2" name="as" type="radio" />
+        <input id="table_btn3" name="as" type="radio" />
+        <input id="table_btn4" name="as" type="radio" />
+        <input id="table_btn5" name="as" type="radio" />
+        <input id="table_btn6" name="as" type="radio" />
+        <label class="btn btn1" for="table_btn1"> 0.1 МПа/100 °С </label>
+        <label class="btn btn2" for="table_btn2"> 0.2 МПа/120 °С </label>
+        <label class="btn btn3" for="table_btn3"> 0.3 МПа/130 °С </label>
+        <label class="btn btn4" for="table_btn4"> 0.5 МПа/150 °С </label>
+        <label class="btn btn5" for="table_btn5"> 0.7 МПа/165 °С </label>
+        <label class="btn btn6" for="table_btn6"> 1.1 МПа/185 °С </label>
+      </form>
+    </div>
+    <!--  Кнопки переключения таблиц (конец) -->
+    <div class="table-wrap table-with-scroll">
+      <!-- Обёртка для таблиц (начало) -->
+      <div id="secondary">
+        <!-- Начало 1-й таблицы -->
+        <div class="table-with-opacity-change" style="display: block">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,1</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">99,6</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>46</td>
+              <td>41</td>
+              <td>35</td>
+              <td>30</td>
+              <td>36</td>
+              <td>30</td>
+              <td>24</td>
+              <td>17</td>
+              <td>30</td>
+              <td>23</td>
+              <td>17</td>
+              <td>10</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>73</td>
-<td>77</td>
-<td>81</td>
-<td>86</td>
-<td>160</td>
-<td>169</td>
-<td>178</td>
-<td>189</td>
-<td>266</td>
-<td>282</td>
-<td>298</td>
-<td>317</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>73</td>
+              <td>77</td>
+              <td>81</td>
+              <td>86</td>
+              <td>160</td>
+              <td>169</td>
+              <td>178</td>
+              <td>189</td>
+              <td>266</td>
+              <td>282</td>
+              <td>298</td>
+              <td>317</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>245</td>
-<td>269</td>
-<td>296</td>
-<td>322</td>
-<td>316</td>
-<td>348</td>
-<td>381</td>
-<td>418</td>
-<td>370</td>
-<td>409</td>
-<td>447</td>
-<td>488</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>153</td>
-<td>169</td>
-<td>186</td>
-<td>202</td>
-<td>198</td>
-<td>218</td>
-<td>239</td>
-<td>262</td>
-<td>232</td>
-<td>257</td>
-<td>280</td>
-<td>306</td>
-</tr>
-</table>
-</div>
-<!-- Конец 1-й таблицы -->
-<!-- Начало 2-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,2
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                120,2
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>58</td>
-<td>53</td>
-<td>47</td>
-<td>42</td>
-<td>46</td>
-<td>40</td>
-<td>34</td>
-<td>27</td>
-<td>39</td>
-<td>32</td>
-<td>26</td>
-<td>19</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>245</td>
+              <td>269</td>
+              <td>296</td>
+              <td>322</td>
+              <td>316</td>
+              <td>348</td>
+              <td>381</td>
+              <td>418</td>
+              <td>370</td>
+              <td>409</td>
+              <td>447</td>
+              <td>488</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>153</td>
+              <td>169</td>
+              <td>186</td>
+              <td>202</td>
+              <td>198</td>
+              <td>218</td>
+              <td>239</td>
+              <td>262</td>
+              <td>232</td>
+              <td>257</td>
+              <td>280</td>
+              <td>306</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 1-й таблицы -->
+        <!-- Начало 2-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,2</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">120,2</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>58</td>
+              <td>53</td>
+              <td>47</td>
+              <td>42</td>
+              <td>46</td>
+              <td>40</td>
+              <td>34</td>
+              <td>27</td>
+              <td>39</td>
+              <td>32</td>
+              <td>26</td>
+              <td>19</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>71</td>
-<td>74</td>
-<td>78</td>
-<td>82</td>
-<td>155</td>
-<td>163</td>
-<td>172</td>
-<td>183</td>
-<td>258</td>
-<td>273</td>
-<td>289</td>
-<td>307</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>71</td>
+              <td>74</td>
+              <td>78</td>
+              <td>82</td>
+              <td>155</td>
+              <td>163</td>
+              <td>172</td>
+              <td>183</td>
+              <td>258</td>
+              <td>273</td>
+              <td>289</td>
+              <td>307</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>290</td>
-<td>315</td>
-<td>344</td>
-<td>370</td>
-<td>376</td>
-<td>409</td>
-<td>443</td>
-<td>481</td>
-<td>441</td>
-<td>481</td>
-<td>520</td>
-<td>563</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>177</td>
-<td>193</td>
-<td>210</td>
-<td>226</td>
-<td>230</td>
-<td>250</td>
-<td>271</td>
-<td>294</td>
-<td>269</td>
-<td>294</td>
-<td>318</td>
-<td>345</td>
-</tr>
-</table>
-</div>
-<!-- Конец 2-й таблицы -->
-<!-- Начало 3-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,3
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                133,5
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>66</td>
-<td>60</td>
-<td>55</td>
-<td>50</td>
-<td>53</td>
-<td>47</td>
-<td>40</td>
-<td>34</td>
-<td>45</td>
-<td>38</td>
-<td>31</td>
-<td>25</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>290</td>
+              <td>315</td>
+              <td>344</td>
+              <td>370</td>
+              <td>376</td>
+              <td>409</td>
+              <td>443</td>
+              <td>481</td>
+              <td>441</td>
+              <td>481</td>
+              <td>520</td>
+              <td>563</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>177</td>
+              <td>193</td>
+              <td>210</td>
+              <td>226</td>
+              <td>230</td>
+              <td>250</td>
+              <td>271</td>
+              <td>294</td>
+              <td>269</td>
+              <td>294</td>
+              <td>318</td>
+              <td>345</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 2-й таблицы -->
+        <!-- Начало 3-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,3</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">133,5</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>66</td>
+              <td>60</td>
+              <td>55</td>
+              <td>50</td>
+              <td>53</td>
+              <td>47</td>
+              <td>40</td>
+              <td>34</td>
+              <td>45</td>
+              <td>38</td>
+              <td>31</td>
+              <td>25</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>69</td>
-<td>72</td>
-<td>76</td>
-<td>80</td>
-<td>151</td>
-<td>159</td>
-<td>169</td>
-<td>178</td>
-<td>253</td>
-<td>268</td>
-<td>284</td>
-<td>300</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>69</td>
+              <td>72</td>
+              <td>76</td>
+              <td>80</td>
+              <td>151</td>
+              <td>159</td>
+              <td>169</td>
+              <td>178</td>
+              <td>253</td>
+              <td>268</td>
+              <td>284</td>
+              <td>300</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>320</td>
-<td>348</td>
-<td>375</td>
-<td>402</td>
-<td>415</td>
-<td>449</td>
-<td>487</td>
-<td>523</td>
-<td>488</td>
-<td>529</td>
-<td>572</td>
-<td>613</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>192</td>
-<td>209</td>
-<td>225</td>
-<td>242</td>
-<td>249</td>
-<td>270</td>
-<td>293</td>
-<td>314</td>
-<td>293</td>
-<td>318</td>
-<td>344</td>
-<td>369</td>
-</tr>
-</table>
-</div>
-<!-- Конец 3-й таблицы -->
-<!-- Начало 4-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,5
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                151,8
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>77</td>
-<td>71</td>
-<td>66</td>
-<td>60</td>
-<td>91</td>
-<td>85</td>
-<td>80</td>
-<td>74</td>
-<td>91</td>
-<td>85</td>
-<td>79</td>
-<td>72</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>320</td>
+              <td>348</td>
+              <td>375</td>
+              <td>402</td>
+              <td>415</td>
+              <td>449</td>
+              <td>487</td>
+              <td>523</td>
+              <td>488</td>
+              <td>529</td>
+              <td>572</td>
+              <td>613</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>192</td>
+              <td>209</td>
+              <td>225</td>
+              <td>242</td>
+              <td>249</td>
+              <td>270</td>
+              <td>293</td>
+              <td>314</td>
+              <td>293</td>
+              <td>318</td>
+              <td>344</td>
+              <td>369</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 3-й таблицы -->
+        <!-- Начало 4-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,5</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">151,8</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>77</td>
+              <td>71</td>
+              <td>66</td>
+              <td>60</td>
+              <td>91</td>
+              <td>85</td>
+              <td>80</td>
+              <td>74</td>
+              <td>91</td>
+              <td>85</td>
+              <td>79</td>
+              <td>72</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>66</td>
-<td>70</td>
-<td>73</td>
-<td>77</td>
-<td>116</td>
-<td>122</td>
-<td>127</td>
-<td>133</td>
-<td>184</td>
-<td>193</td>
-<td>202</td>
-<td>212</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>66</td>
+              <td>70</td>
+              <td>73</td>
+              <td>77</td>
+              <td>116</td>
+              <td>122</td>
+              <td>127</td>
+              <td>133</td>
+              <td>184</td>
+              <td>193</td>
+              <td>202</td>
+              <td>212</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>363</td>
-<td>392</td>
-<td>420</td>
-<td>450</td>
-<td>311</td>
-<td>342</td>
-<td>372</td>
-<td>405</td>
-<td>330</td>
-<td>365</td>
-<td>400</td>
-<td>439</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>213</td>
-<td>230</td>
-<td>246</td>
-<td>264</td>
-<td>182</td>
-<td>200</td>
-<td>218</td>
-<td>237</td>
-<td>193</td>
-<td>213</td>
-<td>234</td>
-<td>257</td>
-</tr>
-</table>
-</div>
-<!-- Конец 4-й таблицы -->
-<!-- Начало 5-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,7
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                165,0
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>85</td>
-<td>79</td>
-<td>74</td>
-<td>68</td>
-<td>98</td>
-<td>92</td>
-<td>87</td>
-<td>81</td>
-<td>97</td>
-<td>91</td>
-<td>85</td>
-<td>78</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>363</td>
+              <td>392</td>
+              <td>420</td>
+              <td>450</td>
+              <td>311</td>
+              <td>342</td>
+              <td>372</td>
+              <td>405</td>
+              <td>330</td>
+              <td>365</td>
+              <td>400</td>
+              <td>439</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>213</td>
+              <td>230</td>
+              <td>246</td>
+              <td>264</td>
+              <td>182</td>
+              <td>200</td>
+              <td>218</td>
+              <td>237</td>
+              <td>193</td>
+              <td>213</td>
+              <td>234</td>
+              <td>257</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 4-й таблицы -->
+        <!-- Начало 5-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,7</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">165,0</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>85</td>
+              <td>79</td>
+              <td>74</td>
+              <td>68</td>
+              <td>98</td>
+              <td>92</td>
+              <td>87</td>
+              <td>81</td>
+              <td>97</td>
+              <td>91</td>
+              <td>85</td>
+              <td>78</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>65</td>
-<td>68</td>
-<td>71</td>
-<td>75</td>
-<td>114</td>
-<td>119</td>
-<td>124</td>
-<td>130</td>
-<td>181</td>
-<td>189</td>
-<td>198</td>
-<td>208</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>65</td>
+              <td>68</td>
+              <td>71</td>
+              <td>75</td>
+              <td>114</td>
+              <td>119</td>
+              <td>124</td>
+              <td>130</td>
+              <td>181</td>
+              <td>189</td>
+              <td>198</td>
+              <td>208</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>396</td>
-<td>425</td>
-<td>453</td>
-<td>485</td>
-<td>349</td>
-<td>381</td>
-<td>412</td>
-<td>445</td>
-<td>375</td>
-<td>411</td>
-<td>447</td>
-<td>487</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>227</td>
-<td>244</td>
-<td>260</td>
-<td>278</td>
-<td>200</td>
-<td>219</td>
-<td>236</td>
-<td>256</td>
-<td>215</td>
-<td>236</td>
-<td>256</td>
-<td>279</td>
-</tr>
-</table>
-</div>
-<!-- Конец 5-й таблицы -->
-<!-- Начало 6-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                1,1
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                184,1
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">6700</td>
-<td colspan="4">10000</td>
-<td colspan="4">13000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>96</td>
-<td>91</td>
-<td>85</td>
-<td>80</td>
-<td>108</td>
-<td>102</td>
-<td>97</td>
-<td>91</td>
-<td>106</td>
-<td>100</td>
-<td>94</td>
-<td>87</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>396</td>
+              <td>425</td>
+              <td>453</td>
+              <td>485</td>
+              <td>349</td>
+              <td>381</td>
+              <td>412</td>
+              <td>445</td>
+              <td>375</td>
+              <td>411</td>
+              <td>447</td>
+              <td>487</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>227</td>
+              <td>244</td>
+              <td>260</td>
+              <td>278</td>
+              <td>200</td>
+              <td>219</td>
+              <td>236</td>
+              <td>256</td>
+              <td>215</td>
+              <td>236</td>
+              <td>256</td>
+              <td>279</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 5-й таблицы -->
+        <!-- Начало 6-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">1,1</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">184,1</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">6700</td>
+              <td colspan="4">10000</td>
+              <td colspan="4">13000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>96</td>
+              <td>91</td>
+              <td>85</td>
+              <td>80</td>
+              <td>108</td>
+              <td>102</td>
+              <td>97</td>
+              <td>91</td>
+              <td>106</td>
+              <td>100</td>
+              <td>94</td>
+              <td>87</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>63</td>
-<td>66</td>
-<td>69</td>
-<td>72</td>
-<td>111</td>
-<td>116</td>
-<td>121</td>
-<td>127</td>
-<td>177</td>
-<td>185</td>
-<td>193</td>
-<td>203</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>63</td>
+              <td>66</td>
+              <td>69</td>
+              <td>72</td>
+              <td>111</td>
+              <td>116</td>
+              <td>121</td>
+              <td>127</td>
+              <td>177</td>
+              <td>185</td>
+              <td>193</td>
+              <td>203</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>447</td>
-<td>475</td>
-<td>507</td>
-<td>537</td>
-<td>408</td>
-<td>442</td>
-<td>473</td>
-<td>508</td>
-<td>443</td>
-<td>481</td>
-<td>518</td>
-<td>560</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>248</td>
-<td>264</td>
-<td>282</td>
-<td>298</td>
-<td>227</td>
-<td>245</td>
-<td>263</td>
-<td>282</td>
-<td>246</td>
-<td>267</td>
-<td>288</td>
-<td>311</td>
-</tr>
-</table>
-</div>
-<!-- Конец 6-й таблицы -->
-</div>
-</div>
-<!-- Обёртка для таблиц (конец) -->
-<!-- Таблицы (конец) -->
-</body>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>447</td>
+              <td>475</td>
+              <td>507</td>
+              <td>537</td>
+              <td>408</td>
+              <td>442</td>
+              <td>473</td>
+              <td>508</td>
+              <td>443</td>
+              <td>481</td>
+              <td>518</td>
+              <td>560</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>248</td>
+              <td>264</td>
+              <td>282</td>
+              <td>298</td>
+              <td>227</td>
+              <td>245</td>
+              <td>263</td>
+              <td>282</td>
+              <td>246</td>
+              <td>267</td>
+              <td>288</td>
+              <td>311</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 6-й таблицы -->
+      </div>
+    </div>
+    <!-- Обёртка для таблиц (конец) -->
+    <!-- Таблицы (конец) -->
+  </body>
 </html>

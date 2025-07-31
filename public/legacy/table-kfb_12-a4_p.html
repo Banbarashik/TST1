@@ -1,690 +1,666 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
-<script src="https://code.jquery.com/jquery-git.min.js"></script>
-<script src="tables.js"></script>
-<link href="table.css" rel="stylesheet"/>
-</head>
-<body>
-<!-- Таблицы (начало) -->
-<!--  Кнопки переключения таблиц (начало) -->
-<div class="table-with-scroll tabs-fix" id="primary2">
-<form class="table-buttons-wrap">
-<input checked="" id="table_btn7" name="as" type="radio"/>
-<input id="table_btn8" name="as" type="radio"/>
-<input id="table_btn11" name="as" type="radio"/>
-<input id="table_btn22" name="as" type="radio"/>
-<input id="table_btn33" name="as" type="radio"/>
-<input id="table_btn44" name="as" type="radio"/>
-<label class="btn btn7" for="table_btn7"> 0.1 МПа/100 °С </label>
-<label class="btn btn8" for="table_btn8"> 0.2 МПа/120 °С </label>
-<label class="btn btn1" for="table_btn11"> 0.3 МПа/130 °С </label>
-<label class="btn btn2" for="table_btn22"> 0.5 МПа/150 °С </label>
-<label class="btn btn3" for="table_btn33"> 0.7 МПа/165 °С </label>
-<label class="btn btn4" for="table_btn44"> 1.1 МПа/185 °С </label>
-</form>
-</div>
-<!--  Кнопки переключения таблиц (конец) -->
-<div class="table-wrap table-with-scroll">
-<!-- Обёртка для таблиц (начало) -->
-<div id="secondary2">
-<!-- Начало 1-й таблицы -->
-<div class="table-with-opacity-change" style="display: block">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,1
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                99,6
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>51</td>
-<td>46</td>
-<td>41</td>
-<td>36</td>
-<td>41</td>
-<td>36</td>
-<td>30</td>
-<td>24</td>
-<td>35</td>
-<td>29</td>
-<td>23</td>
-<td>17</td>
-</tr>
+  <head>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="tables.js"></script>
+    <link href="table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Таблицы (начало) -->
+    <!--  Кнопки переключения таблиц (начало) -->
+    <div class="table-with-scroll tabs-fix" id="primary2">
+      <form class="table-buttons-wrap">
+        <input checked="" id="table_btn7" name="as" type="radio" />
+        <input id="table_btn8" name="as" type="radio" />
+        <input id="table_btn11" name="as" type="radio" />
+        <input id="table_btn22" name="as" type="radio" />
+        <input id="table_btn33" name="as" type="radio" />
+        <input id="table_btn44" name="as" type="radio" />
+        <label class="btn btn7" for="table_btn7"> 0.1 МПа/100 °С </label>
+        <label class="btn btn8" for="table_btn8"> 0.2 МПа/120 °С </label>
+        <label class="btn btn1" for="table_btn11"> 0.3 МПа/130 °С </label>
+        <label class="btn btn2" for="table_btn22"> 0.5 МПа/150 °С </label>
+        <label class="btn btn3" for="table_btn33"> 0.7 МПа/165 °С </label>
+        <label class="btn btn4" for="table_btn44"> 1.1 МПа/185 °С </label>
+      </form>
+    </div>
+    <!--  Кнопки переключения таблиц (конец) -->
+    <div class="table-wrap table-with-scroll">
+      <!-- Обёртка для таблиц (начало) -->
+      <div id="secondary2">
+        <!-- Начало 1-й таблицы -->
+        <div class="table-with-opacity-change" style="display: block">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,1</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">99,6</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>51</td>
+              <td>46</td>
+              <td>41</td>
+              <td>36</td>
+              <td>41</td>
+              <td>36</td>
+              <td>30</td>
+              <td>24</td>
+              <td>35</td>
+              <td>29</td>
+              <td>23</td>
+              <td>17</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>95</td>
-<td>99</td>
-<td>104</td>
-<td>110</td>
-<td>202</td>
-<td>212</td>
-<td>224</td>
-<td>237</td>
-<td>335</td>
-<td>353</td>
-<td>373</td>
-<td>395</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>95</td>
+              <td>99</td>
+              <td>104</td>
+              <td>110</td>
+              <td>202</td>
+              <td>212</td>
+              <td>224</td>
+              <td>237</td>
+              <td>335</td>
+              <td>353</td>
+              <td>373</td>
+              <td>395</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>526</td>
-<td>581</td>
-<td>637</td>
-<td>695</td>
-<td>686</td>
-<td>753</td>
-<td>828</td>
-<td>905</td>
-<td>811</td>
-<td>893</td>
-<td>979</td>
-<td>1066</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>330</td>
-<td>364</td>
-<td>400</td>
-<td>436</td>
-<td>430</td>
-<td>472</td>
-<td>519</td>
-<td>567</td>
-<td>508</td>
-<td>560</td>
-<td>614</td>
-<td>669</td>
-</tr>
-</table>
-</div>
-<!-- Начало 2-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,2
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                120,2
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>64</td>
-<td>59</td>
-<td>54</td>
-<td>49</td>
-<td>52</td>
-<td>47</td>
-<td>41</td>
-<td>35</td>
-<td>45</td>
-<td>39</td>
-<td>33</td>
-<td>26</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>526</td>
+              <td>581</td>
+              <td>637</td>
+              <td>695</td>
+              <td>686</td>
+              <td>753</td>
+              <td>828</td>
+              <td>905</td>
+              <td>811</td>
+              <td>893</td>
+              <td>979</td>
+              <td>1066</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>330</td>
+              <td>364</td>
+              <td>400</td>
+              <td>436</td>
+              <td>430</td>
+              <td>472</td>
+              <td>519</td>
+              <td>567</td>
+              <td>508</td>
+              <td>560</td>
+              <td>614</td>
+              <td>669</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Начало 2-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,2</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">120,2</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>64</td>
+              <td>59</td>
+              <td>54</td>
+              <td>49</td>
+              <td>52</td>
+              <td>47</td>
+              <td>41</td>
+              <td>35</td>
+              <td>45</td>
+              <td>39</td>
+              <td>33</td>
+              <td>26</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>91</td>
-<td>95</td>
-<td>100</td>
-<td>105</td>
-<td>195</td>
-<td>205</td>
-<td>216</td>
-<td>228</td>
-<td>324</td>
-<td>341</td>
-<td>360</td>
-<td>382</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>91</td>
+              <td>95</td>
+              <td>100</td>
+              <td>105</td>
+              <td>195</td>
+              <td>205</td>
+              <td>216</td>
+              <td>228</td>
+              <td>324</td>
+              <td>341</td>
+              <td>360</td>
+              <td>382</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>622</td>
-<td>679</td>
-<td>737</td>
-<td>797</td>
-<td>815</td>
-<td>884</td>
-<td>962</td>
-<td>1041</td>
-<td>964</td>
-<td>1050</td>
-<td>1138</td>
-<td>1236</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>380</td>
-<td>415</td>
-<td>451</td>
-<td>487</td>
-<td>498</td>
-<td>541</td>
-<td>588</td>
-<td>637</td>
-<td>589</td>
-<td>642</td>
-<td>696</td>
-<td>756</td>
-</tr>
-</table>
-</div>
-<!-- Конец 2-й таблицы -->
-<!-- Начало 3-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,3
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                133,5
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>72</td>
-<td>67</td>
-<td>62</td>
-<td>57</td>
-<td>60</td>
-<td>54</td>
-<td>48</td>
-<td>42</td>
-<td>52</td>
-<td>45</td>
-<td>39</td>
-<td>33</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>622</td>
+              <td>679</td>
+              <td>737</td>
+              <td>797</td>
+              <td>815</td>
+              <td>884</td>
+              <td>962</td>
+              <td>1041</td>
+              <td>964</td>
+              <td>1050</td>
+              <td>1138</td>
+              <td>1236</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>380</td>
+              <td>415</td>
+              <td>451</td>
+              <td>487</td>
+              <td>498</td>
+              <td>541</td>
+              <td>588</td>
+              <td>637</td>
+              <td>589</td>
+              <td>642</td>
+              <td>696</td>
+              <td>756</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 2-й таблицы -->
+        <!-- Начало 3-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,3</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">133,5</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>72</td>
+              <td>67</td>
+              <td>62</td>
+              <td>57</td>
+              <td>60</td>
+              <td>54</td>
+              <td>48</td>
+              <td>42</td>
+              <td>52</td>
+              <td>45</td>
+              <td>39</td>
+              <td>33</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>89</td>
-<td>93</td>
-<td>97</td>
-<td>102</td>
-<td>190</td>
-<td>200</td>
-<td>211</td>
-<td>223</td>
-<td>317</td>
-<td>335</td>
-<td>353</td>
-<td>373</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>89</td>
+              <td>93</td>
+              <td>97</td>
+              <td>102</td>
+              <td>190</td>
+              <td>200</td>
+              <td>211</td>
+              <td>223</td>
+              <td>317</td>
+              <td>335</td>
+              <td>353</td>
+              <td>373</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>688</td>
-<td>747</td>
-<td>806</td>
-<td>867</td>
-<td>896</td>
-<td>973</td>
-<td>1052</td>
-<td>1134</td>
-<td>1063</td>
-<td>1158</td>
-<td>1248</td>
-<td>1341</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>414</td>
-<td>449</td>
-<td>484</td>
-<td>521</td>
-<td>539</td>
-<td>585</td>
-<td>632</td>
-<td>681</td>
-<td>639</td>
-<td>696</td>
-<td>750</td>
-<td>806</td>
-</tr>
-</table>
-</div>
-<!-- Конец 3-й таблицы -->
-<!-- Начало 4-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,5
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                151,8
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>84</td>
-<td>79</td>
-<td>74</td>
-<td>69</td>
-<td>96</td>
-<td>91</td>
-<td>86</td>
-<td>81</td>
-<td>95</td>
-<td>90</td>
-<td>84</td>
-<td>79</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>688</td>
+              <td>747</td>
+              <td>806</td>
+              <td>867</td>
+              <td>896</td>
+              <td>973</td>
+              <td>1052</td>
+              <td>1134</td>
+              <td>1063</td>
+              <td>1158</td>
+              <td>1248</td>
+              <td>1341</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>414</td>
+              <td>449</td>
+              <td>484</td>
+              <td>521</td>
+              <td>539</td>
+              <td>585</td>
+              <td>632</td>
+              <td>681</td>
+              <td>639</td>
+              <td>696</td>
+              <td>750</td>
+              <td>806</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 3-й таблицы -->
+        <!-- Начало 4-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,5</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">151,8</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>84</td>
+              <td>79</td>
+              <td>74</td>
+              <td>69</td>
+              <td>96</td>
+              <td>91</td>
+              <td>86</td>
+              <td>81</td>
+              <td>95</td>
+              <td>90</td>
+              <td>84</td>
+              <td>79</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>85</td>
-<td>89</td>
-<td>94</td>
-<td>98</td>
-<td>148</td>
-<td>154</td>
-<td>161</td>
-<td>168</td>
-<td>234</td>
-<td>244</td>
-<td>255</td>
-<td>266</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>85</td>
+              <td>89</td>
+              <td>94</td>
+              <td>98</td>
+              <td>148</td>
+              <td>154</td>
+              <td>161</td>
+              <td>168</td>
+              <td>234</td>
+              <td>244</td>
+              <td>255</td>
+              <td>266</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>779</td>
-<td>839</td>
-<td>900</td>
-<td>963</td>
-<td>673</td>
-<td>738</td>
-<td>804</td>
-<td>872</td>
-<td>724</td>
-<td>796</td>
-<td>876</td>
-<td>952</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>456</td>
-<td>491</td>
-<td>527</td>
-<td>564</td>
-<td>394</td>
-<td>432</td>
-<td>471</td>
-<td>511</td>
-<td>424</td>
-<td>466</td>
-<td>513</td>
-<td>557</td>
-</tr>
-</table>
-</div>
-<!-- Конец 4-й таблицы -->
-<!-- Начало 5-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                0,7
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                165,0
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>92</td>
-<td>88</td>
-<td>83</td>
-<td>78</td>
-<td>104</td>
-<td>99</td>
-<td>94</td>
-<td>88</td>
-<td>102</td>
-<td>97</td>
-<td>91</td>
-<td>85</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>779</td>
+              <td>839</td>
+              <td>900</td>
+              <td>963</td>
+              <td>673</td>
+              <td>738</td>
+              <td>804</td>
+              <td>872</td>
+              <td>724</td>
+              <td>796</td>
+              <td>876</td>
+              <td>952</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>456</td>
+              <td>491</td>
+              <td>527</td>
+              <td>564</td>
+              <td>394</td>
+              <td>432</td>
+              <td>471</td>
+              <td>511</td>
+              <td>424</td>
+              <td>466</td>
+              <td>513</td>
+              <td>557</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 4-й таблицы -->
+        <!-- Начало 5-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">0,7</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">165,0</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>92</td>
+              <td>88</td>
+              <td>83</td>
+              <td>78</td>
+              <td>104</td>
+              <td>99</td>
+              <td>94</td>
+              <td>88</td>
+              <td>102</td>
+              <td>97</td>
+              <td>91</td>
+              <td>85</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>83</td>
-<td>87</td>
-<td>91</td>
-<td>96</td>
-<td>144</td>
-<td>151</td>
-<td>157</td>
-<td>164</td>
-<td>230</td>
-<td>239</td>
-<td>250</td>
-<td>262</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>83</td>
+              <td>87</td>
+              <td>91</td>
+              <td>96</td>
+              <td>144</td>
+              <td>151</td>
+              <td>157</td>
+              <td>164</td>
+              <td>230</td>
+              <td>239</td>
+              <td>250</td>
+              <td>262</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>851</td>
-<td>906</td>
-<td>969</td>
-<td>1033</td>
-<td>753</td>
-<td>819</td>
-<td>887</td>
-<td>963</td>
-<td>819</td>
-<td>893</td>
-<td>975</td>
-<td>1059</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>488</td>
-<td>520</td>
-<td>556</td>
-<td>593</td>
-<td>432</td>
-<td>470</td>
-<td>509</td>
-<td>552</td>
-<td>470</td>
-<td>512</td>
-<td>560</td>
-<td>608</td>
-</tr>
-</table>
-</div>
-<!-- Конец 5-й таблицы -->
-<!-- Начало 6-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<!-- Please do not remove this header -->
-<!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
-<tr>
-<td>Давление сухого насыщенного пара, МПа</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                1,1
-              </td>
-</tr>
-<tr>
-<td>Температура пара, °С</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                184,1
-              </td>
-</tr>
-<tr>
-<td>Объем нагреваемого воздуха, м³/ч</td>
-<td colspan="4">13500</td>
-<td colspan="4">20000</td>
-<td colspan="4">26000</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-20</td>
-<td>-30</td>
-<td>-40</td>
-<td>-50</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-<td>0</td>
-<td>+40</td>
-<td>+30</td>
-<td>+20</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>Температура воздуха на выходе из калорифера, °С</td>
-<td>105</td>
-<td>100</td>
-<td>95</td>
-<td>90</td>
-<td>115</td>
-<td>110</td>
-<td>104</td>
-<td>99</td>
-<td>112</td>
-<td>107</td>
-<td>101</td>
-<td>95</td>
-</tr>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>851</td>
+              <td>906</td>
+              <td>969</td>
+              <td>1033</td>
+              <td>753</td>
+              <td>819</td>
+              <td>887</td>
+              <td>963</td>
+              <td>819</td>
+              <td>893</td>
+              <td>975</td>
+              <td>1059</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>488</td>
+              <td>520</td>
+              <td>556</td>
+              <td>593</td>
+              <td>432</td>
+              <td>470</td>
+              <td>509</td>
+              <td>552</td>
+              <td>470</td>
+              <td>512</td>
+              <td>560</td>
+              <td>608</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 5-й таблицы -->
+        <!-- Начало 6-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <!-- Please do not remove this header -->
+            <!-- Table easily created from Excel with ASAP Utilities (https://www.asap-utilities.com)  -->
+            <tr>
+              <td>Давление сухого насыщенного пара, МПа</td>
+              <td colspan="12" class="coolant-graph">1,1</td>
+            </tr>
+            <tr>
+              <td>Температура пара, °С</td>
+              <td colspan="12" class="coolant-graph">184,1</td>
+            </tr>
+            <tr>
+              <td>Объем нагреваемого воздуха, м³/ч</td>
+              <td colspan="4">13500</td>
+              <td colspan="4">20000</td>
+              <td colspan="4">26000</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-20</td>
+              <td>-30</td>
+              <td>-40</td>
+              <td>-50</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+              <td>0</td>
+              <td>+40</td>
+              <td>+30</td>
+              <td>+20</td>
+              <td>+10</td>
+            </tr>
+            <tr>
+              <td>Температура воздуха на выходе из калорифера, °С</td>
+              <td>105</td>
+              <td>100</td>
+              <td>95</td>
+              <td>90</td>
+              <td>115</td>
+              <td>110</td>
+              <td>104</td>
+              <td>99</td>
+              <td>112</td>
+              <td>107</td>
+              <td>101</td>
+              <td>95</td>
+            </tr>
 
-<tr>
-<td>Аэродинамическое сопротивление, Па</td>
-<td>80</td>
-<td>84</td>
-<td>88</td>
-<td>92</td>
-<td>140</td>
-<td>146</td>
-<td>153</td>
-<td>159</td>
-<td>224</td>
-<td>233</td>
-<td>243</td>
-<td>254</td>
-</tr>
+            <tr>
+              <td>Аэродинамическое сопротивление, Па</td>
+              <td>80</td>
+              <td>84</td>
+              <td>88</td>
+              <td>92</td>
+              <td>140</td>
+              <td>146</td>
+              <td>153</td>
+              <td>159</td>
+              <td>224</td>
+              <td>233</td>
+              <td>243</td>
+              <td>254</td>
+            </tr>
 
-<tr>
-<td>Расход пара калорифером, кг/ч</td>
-<td>953</td>
-<td>1017</td>
-<td>1082</td>
-<td>1148</td>
-<td>878</td>
-<td>947</td>
-<td>1024</td>
-<td>1097</td>
-<td>966</td>
-<td>1043</td>
-<td>1129</td>
-<td>1216</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>529</td>
-<td>565</td>
-<td>601</td>
-<td>638</td>
-<td>488</td>
-<td>526</td>
-<td>569</td>
-<td>609</td>
-<td>536</td>
-<td>579</td>
-<td>627</td>
-<td>675</td>
-</tr>
-</table>
-</div>
-<!-- Конец 6-й таблицы -->
-</div>
-</div>
-<!-- Обёртка для таблиц (конец) -->
-<!-- Таблицы (конец) -->
-</body>
+            <tr>
+              <td>Расход пара калорифером, кг/ч</td>
+              <td>953</td>
+              <td>1017</td>
+              <td>1082</td>
+              <td>1148</td>
+              <td>878</td>
+              <td>947</td>
+              <td>1024</td>
+              <td>1097</td>
+              <td>966</td>
+              <td>1043</td>
+              <td>1129</td>
+              <td>1216</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>529</td>
+              <td>565</td>
+              <td>601</td>
+              <td>638</td>
+              <td>488</td>
+              <td>526</td>
+              <td>569</td>
+              <td>609</td>
+              <td>536</td>
+              <td>579</td>
+              <td>627</td>
+              <td>675</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 6-й таблицы -->
+      </div>
+    </div>
+    <!-- Обёртка для таблиц (конец) -->
+    <!-- Таблицы (конец) -->
+  </body>
 </html>

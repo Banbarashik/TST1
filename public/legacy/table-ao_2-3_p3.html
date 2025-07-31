@@ -1,258 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
-<script src="https://code.jquery.com/jquery-git.min.js"></script>
-<script src="tables.js"></script>
-<link href="table.css" rel="stylesheet"/>
-</head>
-<body>
-<!-- Таблицы (начало) -->
-<!--  Кнопки переключения таблиц (начало) -->
-<div class="table-with-scroll" id="primary">
-<form class="table-buttons-wrap">
-<input checked="" id="table_btn1" name="as" type="radio"/>
-<input id="table_btn2" name="as" type="radio"/>
-<input id="table_btn3" name="as" type="radio"/>
-<label class="btn btn1" for="table_btn1"> 85°С — 95°С — 100°С </label>
-<label class="btn btn2" for="table_btn2"> 110°С — 120°С — 130°С </label>
-<label class="btn btn3" for="table_btn3"> 135°С — 140°С — 150°С </label>
-</form>
-</div>
-<!--  Кнопки переключения таблиц (конец) -->
-<div class="table-wrap table-with-scroll">
-<!-- Обёртка для таблиц (начало) -->
-<div id="secondary">
-<!-- Начало 1-й таблицы -->
-<div class="table-with-opacity-change" style="display: block">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>1) Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                2800
-              </td>
-</tr>
-<tr>
-<td>2) Давление сухого насыщенного пара, МПа</td>
-<td colspan="4">0,06</td>
-<td colspan="4">0,08</td>
-<td colspan="4">0,1</td>
-</tr>
-<tr>
-<td>3) Температура пара, °С</td>
-<td colspan="4">85,9</td>
-<td colspan="4">93,5</td>
-<td colspan="4">99,6</td>
-</tr>
+  <head>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="tables.js"></script>
+    <link href="table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Таблицы (начало) -->
+    <!--  Кнопки переключения таблиц (начало) -->
+    <div class="table-with-scroll" id="primary">
+      <form class="table-buttons-wrap">
+        <input checked="" id="table_btn1" name="as" type="radio" />
+        <input id="table_btn2" name="as" type="radio" />
+        <input id="table_btn3" name="as" type="radio" />
+        <label class="btn btn1" for="table_btn1"> 85°С — 95°С — 100°С </label>
+        <label class="btn btn2" for="table_btn2"> 110°С — 120°С — 130°С </label>
+        <label class="btn btn3" for="table_btn3"> 135°С — 140°С — 150°С </label>
+      </form>
+    </div>
+    <!--  Кнопки переключения таблиц (конец) -->
+    <div class="table-wrap table-with-scroll">
+      <!-- Обёртка для таблиц (начало) -->
+      <div id="secondary">
+        <!-- Начало 1-й таблицы -->
+        <div class="table-with-opacity-change" style="display: block">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>1) Производительность по воздуху, м³/ч</td>
+              <td colspan="12" class="coolant-graph">2800</td>
+            </tr>
+            <tr>
+              <td>2) Давление сухого насыщенного пара, МПа</td>
+              <td colspan="4">0,06</td>
+              <td colspan="4">0,08</td>
+              <td colspan="4">0,1</td>
+            </tr>
+            <tr>
+              <td>3) Температура пара, °С</td>
+              <td colspan="4">85,9</td>
+              <td colspan="4">93,5</td>
+              <td colspan="4">99,6</td>
+            </tr>
 
-<tr>
-<td>4) Температура входящего воздуха, °С</td>
-<td>39</td>
-<td>45</td>
-<td>47</td>
-<td>52</td>
-<td>44</td>
-<td>49</td>
-<td>51</td>
-<td>57</td>
-<td>47</td>
-<td>52</td>
-<td>55</td>
-<td>60</td>
-</tr>
-<tr>
-<td>5) Температура выходящего воздуха, °С</td>
-<td>76</td>
-<td>66</td>
-<td>62</td>
-<td>54</td>
-<td>81</td>
-<td>73</td>
-<td>69</td>
-<td>59</td>
-<td>87</td>
-<td>78</td>
-<td>73</td>
-<td>65</td>
-</tr>
-<tr>
-<td>6) Расход пара агрегатом, кг/ч</td>
-<td>48</td>
-<td>42</td>
-<td>40</td>
-<td>34</td>
-<td>51</td>
-<td>46</td>
-<td>43</td>
-<td>37</td>
-<td>54</td>
-<td>49</td>
-<td>46</td>
-<td>40</td>
-</tr>
-</table>
-</div>
-<!-- Конец 1-й таблицы -->
-<!-- Начало 2-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>1) Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                2800
-              </td>
-</tr>
-<tr>
-<td>2) Давление сухого насыщенного пара, МПа</td>
-<td colspan="4">0,15</td>
-<td colspan="4">0,2</td>
-<td colspan="4">0,25</td>
-</tr>
-<tr>
-<td>3) Температура пара, °С</td>
-<td colspan="4">111,4</td>
-<td colspan="4">120,2</td>
-<td colspan="4">127,4</td>
-</tr>
+            <tr>
+              <td>4) Температура входящего воздуха, °С</td>
+              <td>39</td>
+              <td>45</td>
+              <td>47</td>
+              <td>52</td>
+              <td>44</td>
+              <td>49</td>
+              <td>51</td>
+              <td>57</td>
+              <td>47</td>
+              <td>52</td>
+              <td>55</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td>5) Температура выходящего воздуха, °С</td>
+              <td>76</td>
+              <td>66</td>
+              <td>62</td>
+              <td>54</td>
+              <td>81</td>
+              <td>73</td>
+              <td>69</td>
+              <td>59</td>
+              <td>87</td>
+              <td>78</td>
+              <td>73</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>6) Расход пара агрегатом, кг/ч</td>
+              <td>48</td>
+              <td>42</td>
+              <td>40</td>
+              <td>34</td>
+              <td>51</td>
+              <td>46</td>
+              <td>43</td>
+              <td>37</td>
+              <td>54</td>
+              <td>49</td>
+              <td>46</td>
+              <td>40</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 1-й таблицы -->
+        <!-- Начало 2-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>1) Производительность по воздуху, м³/ч</td>
+              <td colspan="12" class="coolant-graph">2800</td>
+            </tr>
+            <tr>
+              <td>2) Давление сухого насыщенного пара, МПа</td>
+              <td colspan="4">0,15</td>
+              <td colspan="4">0,2</td>
+              <td colspan="4">0,25</td>
+            </tr>
+            <tr>
+              <td>3) Температура пара, °С</td>
+              <td colspan="4">111,4</td>
+              <td colspan="4">120,2</td>
+              <td colspan="4">127,4</td>
+            </tr>
 
-<tr>
-<td>4) Температура входящего воздуха, °С</td>
-<td>53</td>
-<td>59</td>
-<td>61</td>
-<td>66</td>
-<td>58</td>
-<td>64</td>
-<td>66</td>
-<td>71</td>
-<td>62</td>
-<td>68</td>
-<td>70</td>
-<td>75</td>
-</tr>
-<tr>
-<td>5) Температура выходящего воздуха, °С</td>
-<td>97</td>
-<td>87</td>
-<td>83</td>
-<td>74</td>
-<td>105</td>
-<td>95</td>
-<td>91</td>
-<td>82</td>
-<td>111</td>
-<td>101</td>
-<td>97</td>
-<td>88</td>
-</tr>
-<tr>
-<td>6) Расход пара агрегатом, кг/ч</td>
-<td>60</td>
-<td>54</td>
-<td>51</td>
-<td>46</td>
-<td>64</td>
-<td>58</td>
-<td>55</td>
-<td>50</td>
-<td>67</td>
-<td>61</td>
-<td>59</td>
-<td>53</td>
-</tr>
-</table>
-</div>
-<!-- Конец 2-й таблицы -->
-<!-- Начало 3-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>1) Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
-                2800
-              </td>
-</tr>
-<tr>
-<td>2) Давление сухого насыщенного пара, МПа</td>
-<td colspan="4">0,3</td>
-<td colspan="4">0,4</td>
-<td colspan="4">0,5</td>
-</tr>
-<tr>
-<td>3) Температура пара, °С</td>
-<td colspan="4">133,5</td>
-<td colspan="4">143,6</td>
-<td colspan="4">151,8</td>
-</tr>
+            <tr>
+              <td>4) Температура входящего воздуха, °С</td>
+              <td>53</td>
+              <td>59</td>
+              <td>61</td>
+              <td>66</td>
+              <td>58</td>
+              <td>64</td>
+              <td>66</td>
+              <td>71</td>
+              <td>62</td>
+              <td>68</td>
+              <td>70</td>
+              <td>75</td>
+            </tr>
+            <tr>
+              <td>5) Температура выходящего воздуха, °С</td>
+              <td>97</td>
+              <td>87</td>
+              <td>83</td>
+              <td>74</td>
+              <td>105</td>
+              <td>95</td>
+              <td>91</td>
+              <td>82</td>
+              <td>111</td>
+              <td>101</td>
+              <td>97</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>6) Расход пара агрегатом, кг/ч</td>
+              <td>60</td>
+              <td>54</td>
+              <td>51</td>
+              <td>46</td>
+              <td>64</td>
+              <td>58</td>
+              <td>55</td>
+              <td>50</td>
+              <td>67</td>
+              <td>61</td>
+              <td>59</td>
+              <td>53</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 2-й таблицы -->
+        <!-- Начало 3-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>1) Производительность по воздуху, м³/ч</td>
+              <td colspan="12" class="coolant-graph">2800</td>
+            </tr>
+            <tr>
+              <td>2) Давление сухого насыщенного пара, МПа</td>
+              <td colspan="4">0,3</td>
+              <td colspan="4">0,4</td>
+              <td colspan="4">0,5</td>
+            </tr>
+            <tr>
+              <td>3) Температура пара, °С</td>
+              <td colspan="4">133,5</td>
+              <td colspan="4">143,6</td>
+              <td colspan="4">151,8</td>
+            </tr>
 
-<tr>
-<td>4) Температура входящего воздуха, °С</td>
-<td>66</td>
-<td>71</td>
-<td>74</td>
-<td>81</td>
-<td>71</td>
-<td>77</td>
-<td>79</td>
-<td>90</td>
-<td>76</td>
-<td>81</td>
-<td>84</td>
-<td>97</td>
-</tr>
-<tr>
-<td>5) Температура выходящего воздуха, °С</td>
-<td>116</td>
-<td>107</td>
-<td>101</td>
-<td>88</td>
-<td>126</td>
-<td>115</td>
-<td>111</td>
-<td>92</td>
-<td>133</td>
-<td>123</td>
-<td>118</td>
-<td>95</td>
-</tr>
-<tr>
-<td>6) Расход пара агрегатом, кг/ч</td>
-<td>70</td>
-<td>64</td>
-<td>61</td>
-<td>53</td>
-<td>74</td>
-<td>68</td>
-<td>66</td>
-<td>54</td>
-<td>78</td>
-<td>72</td>
-<td>69</td>
-<td>55</td>
-</tr>
-</table>
-</div>
-<!-- Конец 3-й таблицы -->
-</div>
-</div>
-<!-- Обёртка для таблиц (конец) -->
-</body>
+            <tr>
+              <td>4) Температура входящего воздуха, °С</td>
+              <td>66</td>
+              <td>71</td>
+              <td>74</td>
+              <td>81</td>
+              <td>71</td>
+              <td>77</td>
+              <td>79</td>
+              <td>90</td>
+              <td>76</td>
+              <td>81</td>
+              <td>84</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>5) Температура выходящего воздуха, °С</td>
+              <td>116</td>
+              <td>107</td>
+              <td>101</td>
+              <td>88</td>
+              <td>126</td>
+              <td>115</td>
+              <td>111</td>
+              <td>92</td>
+              <td>133</td>
+              <td>123</td>
+              <td>118</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>6) Расход пара агрегатом, кг/ч</td>
+              <td>70</td>
+              <td>64</td>
+              <td>61</td>
+              <td>53</td>
+              <td>74</td>
+              <td>68</td>
+              <td>66</td>
+              <td>54</td>
+              <td>78</td>
+              <td>72</td>
+              <td>69</td>
+              <td>55</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 3-й таблицы -->
+      </div>
+    </div>
+    <!-- Обёртка для таблиц (конец) -->
+  </body>
 </html>
