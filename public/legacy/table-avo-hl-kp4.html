@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.min.js"></script>
+<script src="tables.js"></script>
+<link href="table.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Таблицы -->
+<div class="table-with-scroll" id="primary2">
+<form class="table-buttons-wrap">
+<input checked="" id="table_btn11" name="as" type="radio"/>
+<input id="table_btn22" name="as" type="radio"/>
+<input id="table_btn33" name="as" type="radio"/>
+<input id="table_btn44" name="as" type="radio"/>
+<input id="table_btn55" name="as" type="radio"/>
+<input id="table_btn66" name="as" type="radio"/>
+<input id="table_btn77" name="as" type="radio"/>
+<input id="table_btn88" name="as" type="radio"/>
+<input id="table_btn99" name="as" type="radio"/>
+<input id="table_btn100" name="as" type="radio"/>
+<input id="table_btn111" name="as" type="radio"/>
+<input id="table_btn222" name="as" type="radio"/>
+<label class="btn btn1" for="table_btn11">80°С</label><label class="btn btn2" for="table_btn22">90°С</label><label class="btn btn3" for="table_btn33">100°С</label><label class="btn btn4" for="table_btn44">110°С</label><label class="btn btn5" for="table_btn55">120°С</label><label class="btn btn6" for="table_btn66">130°С</label><label class="btn btn7" for="table_btn77">140°С</label><label class="btn btn8" for="table_btn88">150°С</label><label class="btn btn9" for="table_btn99">160°С</label><label class="btn btn100" for="table_btn100">170°С</label><label class="btn btn111" for="table_btn111">180°С</label><label class="btn btn222" for="table_btn222">190°С</label>
+</form>
+</div>
+<div class="table-wrap table-with-scroll">
+<div id="secondary2">
+<!-- Начало 1-й таблицы -->
+<div class="table-with-opacity-change" style="display: block">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.05
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  81.3
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>40</td>
+<td>45</td>
+<td>49</td>
+<td>53</td>
+<td>42</td>
+<td>47</td>
+<td>51</td>
+<td>55</td>
+<td>33</td>
+<td>38</td>
+<td>43</td>
+<td>48</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>94</td>
+<td>83</td>
+<td>73</td>
+<td>63</td>
+<td>172</td>
+<td>151</td>
+<td>132</td>
+<td>114</td>
+<td>310</td>
+<td>275</td>
+<td>241</td>
+<td>208</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>60</td>
+<td>53</td>
+<td>47</td>
+<td>40</td>
+<td>110</td>
+<td>97</td>
+<td>85</td>
+<td>73</td>
+<td>198</td>
+<td>176</td>
+<td>154</td>
+<td>133</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 1-й таблицы -->
+<!-- Начало 2-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.07
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  89.9
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>46</td>
+<td>50</td>
+<td>55</td>
+<td>59</td>
+<td>48</td>
+<td>52</td>
+<td>56</td>
+<td>60</td>
+<td>38</td>
+<td>43</td>
+<td>48</td>
+<td>53</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>101</td>
+<td>91</td>
+<td>80</td>
+<td>70</td>
+<td>186</td>
+<td>167</td>
+<td>148</td>
+<td>130</td>
+<td>336</td>
+<td>301</td>
+<td>267</td>
+<td>234</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>64</td>
+<td>58</td>
+<td>51</td>
+<td>45</td>
+<td>118</td>
+<td>106</td>
+<td>94</td>
+<td>82</td>
+<td>213</td>
+<td>191</td>
+<td>169</td>
+<td>148</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 2-й таблицы -->
+<!-- Начало 3-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.1
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  99.6
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>52</td>
+<td>56</td>
+<td>61</td>
+<td>65</td>
+<td>54</td>
+<td>58</td>
+<td>63</td>
+<td>67</td>
+<td>43</td>
+<td>48</td>
+<td>53</td>
+<td>58</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>111</td>
+<td>100</td>
+<td>89</td>
+<td>79</td>
+<td>203</td>
+<td>184</td>
+<td>163</td>
+<td>145</td>
+<td>369</td>
+<td>333</td>
+<td>299</td>
+<td>265</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>69</td>
+<td>63</td>
+<td>56</td>
+<td>50</td>
+<td>128</td>
+<td>115</td>
+<td>102</td>
+<td>91</td>
+<td>231</td>
+<td>209</td>
+<td>187</td>
+<td>166</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 3-й таблицы -->
+<!-- Начало 4-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.15
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  111.4
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>59</td>
+<td>64</td>
+<td>68</td>
+<td>73</td>
+<td>62</td>
+<td>66</td>
+<td>70</td>
+<td>75</td>
+<td>50</td>
+<td>55</td>
+<td>60</td>
+<td>65</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>123</td>
+<td>111</td>
+<td>101</td>
+<td>90</td>
+<td>224</td>
+<td>204</td>
+<td>185</td>
+<td>164</td>
+<td>406</td>
+<td>370</td>
+<td>335</td>
+<td>300</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>76</td>
+<td>69</td>
+<td>62</td>
+<td>55</td>
+<td>138</td>
+<td>126</td>
+<td>114</td>
+<td>101</td>
+<td>251</td>
+<td>229</td>
+<td>207</td>
+<td>186</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 4-й таблицы -->
+<!-- Начало 5-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.2
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  120.2
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>65</td>
+<td>70</td>
+<td>74</td>
+<td>78</td>
+<td>68</td>
+<td>72</td>
+<td>76</td>
+<td>80</td>
+<td>54</td>
+<td>60</td>
+<td>65</td>
+<td>70</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>131</td>
+<td>119</td>
+<td>109</td>
+<td>99</td>
+<td>239</td>
+<td>219</td>
+<td>200</td>
+<td>181</td>
+<td>439</td>
+<td>399</td>
+<td>363</td>
+<td>328</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>80</td>
+<td>73</td>
+<td>67</td>
+<td>60</td>
+<td>146</td>
+<td>134</td>
+<td>122</td>
+<td>111</td>
+<td>269</td>
+<td>244</td>
+<td>222</td>
+<td>201</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 5-й таблицы -->
+<!-- Начало 6-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.3
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  133.5
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>74</td>
+<td>78</td>
+<td>83</td>
+<td>87</td>
+<td>77</td>
+<td>81</td>
+<td>85</td>
+<td>89</td>
+<td>62</td>
+<td>67</td>
+<td>73</td>
+<td>78</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>144</td>
+<td>133</td>
+<td>121</td>
+<td>111</td>
+<td>264</td>
+<td>243</td>
+<td>223</td>
+<td>204</td>
+<td>483</td>
+<td>446</td>
+<td>406</td>
+<td>370</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>87</td>
+<td>80</td>
+<td>73</td>
+<td>67</td>
+<td>158</td>
+<td>146</td>
+<td>134</td>
+<td>123</td>
+<td>290</td>
+<td>268</td>
+<td>244</td>
+<td>222</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 6-й таблицы -->
+<!-- Начало 7-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.4
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  143.6
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>85</td>
+<td>89</td>
+<td>94</td>
+<td>98</td>
+<td>88</td>
+<td>92</td>
+<td>96</td>
+<td>100</td>
+<td>73</td>
+<td>78</td>
+<td>83</td>
+<td>88</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>143</td>
+<td>132</td>
+<td>120</td>
+<td>110</td>
+<td>262</td>
+<td>241</td>
+<td>222</td>
+<td>202</td>
+<td>480</td>
+<td>443</td>
+<td>406</td>
+<td>371</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>85</td>
+<td>78</td>
+<td>71</td>
+<td>65</td>
+<td>155</td>
+<td>143</td>
+<td>131</td>
+<td>120</td>
+<td>284</td>
+<td>262</td>
+<td>241</td>
+<td>220</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 7-й таблицы -->
+<!-- Начало 8-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.5
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  151.8
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>90</td>
+<td>95</td>
+<td>99</td>
+<td>103</td>
+<td>93</td>
+<td>97</td>
+<td>102</td>
+<td>106</td>
+<td>78</td>
+<td>83</td>
+<td>88</td>
+<td>93</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>152</td>
+<td>140</td>
+<td>129</td>
+<td>119</td>
+<td>278</td>
+<td>258</td>
+<td>236</td>
+<td>216</td>
+<td>508</td>
+<td>470</td>
+<td>433</td>
+<td>397</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>89</td>
+<td>82</td>
+<td>76</td>
+<td>69</td>
+<td>163</td>
+<td>151</td>
+<td>138</td>
+<td>126</td>
+<td>298</td>
+<td>275</td>
+<td>254</td>
+<td>232</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 8-й таблицы -->
+<!-- Начало 9-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.6
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  158.8
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>95</td>
+<td>99</td>
+<td>104</td>
+<td>108</td>
+<td>98</td>
+<td>102</td>
+<td>106</td>
+<td>110</td>
+<td>82</td>
+<td>87</td>
+<td>92</td>
+<td>97</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>159</td>
+<td>148</td>
+<td>136</td>
+<td>125</td>
+<td>291</td>
+<td>271</td>
+<td>250</td>
+<td>230</td>
+<td>534</td>
+<td>495</td>
+<td>458</td>
+<td>421</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>92</td>
+<td>86</td>
+<td>79</td>
+<td>73</td>
+<td>169</td>
+<td>157</td>
+<td>145</td>
+<td>133</td>
+<td>309</td>
+<td>287</td>
+<td>265</td>
+<td>244</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 9-й таблицы -->
+<!-- Начало 10-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  0.8
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  170.4
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>107</td>
+<td>111</td>
+<td>116</td>
+<td>120</td>
+<td>110</td>
+<td>114</td>
+<td>118</td>
+<td>122</td>
+<td>94</td>
+<td>99</td>
+<td>104</td>
+<td>109</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>160</td>
+<td>149</td>
+<td>137</td>
+<td>126</td>
+<td>293</td>
+<td>272</td>
+<td>252</td>
+<td>232</td>
+<td>537</td>
+<td>498</td>
+<td>461</td>
+<td>424</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>91</td>
+<td>85</td>
+<td>78</td>
+<td>72</td>
+<td>167</td>
+<td>155</td>
+<td>143</td>
+<td>132</td>
+<td>305</td>
+<td>283</td>
+<td>262</td>
+<td>241</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 10-й таблицы -->
+<!-- Начало 11-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  1.0
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  179.9
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>113</td>
+<td>118</td>
+<td>122</td>
+<td>126</td>
+<td>117</td>
+<td>121</td>
+<td>125</td>
+<td>129</td>
+<td>99</td>
+<td>105</td>
+<td>110</td>
+<td>115</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>171</td>
+<td>158</td>
+<td>147</td>
+<td>136</td>
+<td>311</td>
+<td>290</td>
+<td>269</td>
+<td>249</td>
+<td>575</td>
+<td>532</td>
+<td>494</td>
+<td>457</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>96</td>
+<td>89</td>
+<td>82</td>
+<td>76</td>
+<td>174</td>
+<td>162</td>
+<td>151</td>
+<td>139</td>
+<td>322</td>
+<td>298</td>
+<td>276</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 11-й таблицы -->
+<!-- Начало 12-й таблицы -->
+<div class="table-with-opacity-change">
+<table>
+<colgroup>
+<col style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+<col span="4" style="background-color: transparent"/>
+<col span="4" style="background-color: rgb(189, 189, 189)"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="first-two-cols" width="350px">Давление сухого насыщенного пара, МПа</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  1.2
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура пара, °С</td>
+<td colspan="12" style="background-color: rgb(204, 204, 204); font-weight: 700">
+                  188.0
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Модель отопительного агрегата</td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 3-55-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 4-95-01
+                </td>
+<td colspan="4" style="font-weight: 700; width: 180px">
+                  АВО 7-165-01
+                </td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по воздуху, м³/ч</td>
+<td colspan="4" style="font-weight: 700">2800</td>
+<td colspan="4" style="font-weight: 700">5000</td>
+<td colspan="4" style="font-weight: 700">10500</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура входящего воздуха, °С</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+<td class="degrees">-20</td>
+<td class="degrees">-10</td>
+<td class="degrees">0</td>
+<td class="degrees">+10</td>
+</tr>
+<tr>
+<td class="first-two-cols">Температура выходящего воздуха, °С</td>
+<td>123</td>
+<td>127</td>
+<td>132</td>
+<td>136</td>
+<td>126</td>
+<td>131</td>
+<td>135</td>
+<td>139</td>
+<td>109</td>
+<td>115</td>
+<td>120</td>
+<td>125</td>
+</tr>
+<tr>
+<td class="first-two-cols">Расход пара агрегатом, кг/ч</td>
+<td>168</td>
+<td>157</td>
+<td>144</td>
+<td>134</td>
+<td>308</td>
+<td>285</td>
+<td>264</td>
+<td>244</td>
+<td>566</td>
+<td>523</td>
+<td>485</td>
+<td>448</td>
+</tr>
+<tr>
+<td class="first-two-cols">Производительность по теплу, кВт</td>
+<td>93</td>
+<td>86</td>
+<td>80</td>
+<td>74</td>
+<td>170</td>
+<td>157</td>
+<td>146</td>
+<td>135</td>
+<td>312</td>
+<td>289</td>
+<td>268</td>
+<td>247</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Конец 12-й таблицы -->
+</div>
+</div>
+<!-- Таблицы -->
+</body>
+</html>
