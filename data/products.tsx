@@ -6038,7 +6038,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     series: "КПВУ",
     size: 572,
   },
-  // АО 2-p
+  // АО2
   {
     id: "agregat-ao2-3-ksk3-vozdushniy-parovoy",
     name: "Агрегат АО 2-3 п3",
@@ -6058,6 +6058,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       title: "Отопительный агрегат АО 2-3 кпск3 паровой",
     },
     drawing: "/img/agregaty/ao2-p/agregat_otopitelnyi_ao2_parovoi_razmery.png",
+    tableWithTabs: "/legacy/table-ao_2-3_p3.html",
     categories: ["agregaty", "parovy-agregaty", "ao2", "ao2-p"],
     specsTableValues: [3000, 40, "800 x 575 x 790", 77],
     componentsTableValues: [
@@ -6098,6 +6099,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       15.2,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-4_p3.html",
   },
   {
     id: "agregat-ao2-5-ksk3-vozdushniy-parovoy",
@@ -6128,6 +6130,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       20.3,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-5_p3.html",
   },
   {
     id: "agregat-ao2-6.3-ksk3-vozdushniy-parovoy",
@@ -6158,6 +6161,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       26.1,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-6.3_p3.html",
   },
   {
     id: "agregat-ao2-10-ksk3-vozdushniy-parovoy",
@@ -6188,6 +6192,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       29.3,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-10_p3.html",
   },
   {
     id: "agregat-ao2-15-ksk3-vozdushniy-parovoy",
@@ -6218,6 +6223,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       39.9,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-15_p3.html",
   },
   {
     id: "agregat-ao2-20-ksk3-vozdushniy-parovoy",
@@ -6248,6 +6254,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       52.2,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-20_p3.html",
   },
   {
     id: "agregat-ao2-25-ksk3-vozdushniy-parovoy",
@@ -6278,6 +6285,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       66.2,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-25_p3.html",
   },
   {
     id: "agregat-ao2-3-ksk4-vozdushniy-parovoy",
@@ -6308,6 +6316,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       "17.0",
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-3_p4.html",
   },
   {
     id: "agregat-ao2-4-ksk4-vozdushniy-parovoy",
@@ -6338,6 +6347,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       "20.0",
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-4_p4.html",
   },
   {
     id: "agregat-ao2-5-ksk4-vozdushniy-parovoy",
@@ -6368,6 +6378,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       26.7,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-5_p4.html",
   },
   {
     id: "agregat-ao2-6.3-ksk4-vozdushniy-parovoy",
@@ -6398,6 +6409,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       34.4,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-6.3_p4.html",
   },
   {
     id: "agregat-ao2-10-ksk4-vozdushniy-parovoy",
@@ -6428,6 +6440,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       38.7,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-10_p4.html",
   },
   {
     id: "agregat-ao2-15-ksk4-vozdushniy-parovoy",
@@ -6458,6 +6471,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       52.8,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-15_p4.html",
   },
   {
     id: "agregat-ao2-20-ksk4-vozdushniy-parovoy",
@@ -6488,6 +6502,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       69.2,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-20_p4.html",
   },
   {
     id: "agregat-ao2-25-ksk4-vozdushniy-parovoy",
@@ -6518,8 +6533,8 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       87.7,
       65,
     ],
+    tableWithTabs: "/legacy/table-ao_2-25_p4.html",
   },
-  // AO 2-v
   {
     id: "agregat-ao2-3-ksk3-vozdushniy-vodyanoy",
     name: "Агрегат АО 2-3 в3",
@@ -6549,6 +6564,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       12.9,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-3_v3.html",
   },
   {
     id: "agregat-ao2-4-ksk3-vozdushniy-vodyanoy",
@@ -6579,6 +6595,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       15.2,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-4_v3.html",
   },
   {
     id: "agregat-ao2-5-ksk3-vozdushniy-vodyanoy",
@@ -6609,6 +6626,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       20.3,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-5_v3.html",
   },
   {
     id: "agregat-ao2-6.3-ksk3-vozdushniy-vodyanoy",
@@ -6639,6 +6657,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       26.1,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-6.3_v3.html",
   },
   {
     id: "agregat-ao2-10-ksk3-vozdushniy-vodyanoy",
@@ -6669,6 +6688,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       29.3,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-10_v3.html",
   },
   {
     id: "agregat-ao2-15-ksk3-vozdushniy-vodyanoy",
@@ -6699,6 +6719,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       39.9,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-15_v3.html",
   },
   {
     id: "agregat-ao2-20-ksk3-vozdushniy-vodyanoy",
@@ -6729,6 +6750,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       52.2,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-20_v3.html",
   },
   {
     id: "agregat-ao2-25-ksk3-vozdushniy-vodyanoy",
@@ -6759,6 +6781,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       66.2,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-25_v3.html",
   },
   {
     id: "agregat-ao2-3-ksk4-vozdushniy-vodyanoy",
@@ -6789,6 +6812,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       "17.0",
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-3_v4.html",
   },
   {
     id: "agregat-ao2-4-ksk4-vozdushniy-vodyanoy",
@@ -6819,6 +6843,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       "20.0",
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-4_v4.html",
   },
   {
     id: "agregat-ao2-5-ksk4-vozdushniy-vodyanoy",
@@ -6849,6 +6874,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       26.7,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-5_v4.html",
   },
   {
     id: "agregat-ao2-6.3-ksk4-vozdushniy-vodyanoy",
@@ -6879,6 +6905,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       34.4,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-6.3_v4.html",
   },
   {
     id: "agregat-ao2-10-ksk4-vozdushniy-vodyanoy",
@@ -6909,6 +6936,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       38.7,
       32,
     ],
+    tableWithTabs: "/legacy/table-ao_2-10_v4.html",
   },
   {
     id: "agregat-ao2-15-ksk4-vozdushniy-vodyanoy",
@@ -6939,6 +6967,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       52.8,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-15_v4.html",
   },
   {
     id: "agregat-ao2-20-ksk4-vozdushniy-vodyanoy",
@@ -6969,6 +6998,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       69.2,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-20_v4.html",
   },
   {
     id: "agregat-ao2-25-ksk4-vozdushniy-vodyanoy",
@@ -6999,6 +7029,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       87.7,
       50,
     ],
+    tableWithTabs: "/legacy/table-ao_2-25_v4.html",
   },
   // КСк
   {
