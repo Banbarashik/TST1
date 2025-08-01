@@ -134,6 +134,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["agregaty", "vodiany-agregaty", "avo"],
     img: "/",
     drawing: "/",
+    tableWithTabs: "/legacy/table-avo-hl-tvv4.html",
     variants: [
       {
         id: "avo-tvv-3-55-01",
@@ -204,6 +205,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing:
       "/img/agregaty/std300/agregat_otopitelnyi_std-300_vodianoi_razmery.png",
+    tableWithTabs: "/legacy/table-std-300-ksk.html",
     categories: ["agregaty", "vodiany-agregaty", "std300", "std300-v"],
     variants: [
       {
@@ -283,6 +285,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing:
       "/img/agregaty/std300/agregat_otopitelnyi_std-300_parovoi_razmery.png",
+    tableWithTabs: "/legacy/table-std-300-kpsk.html",
     categories: ["agregaty", "parovy-agregaty", "std300", "std300-p"],
     variants: [
       {
@@ -363,6 +366,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing:
       "/img/agregaty/std300/agregat_otopitelnyi_std-300_hl_vodianoi_razmery.png",
+    tableWithTabs: "/legacy/table-std-300-hl-tvv.html",
     categories: ["agregaty", "vodiany-agregaty", "std300-hl", "std300-v"],
     variants: [
       {
@@ -442,6 +446,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing:
       "/img/agregaty/std300/agregat_otopitelnyi_std-300_hl_parovoi_razmery.png",
+    tableWithTabs: "/legacy/table-std-300-hl-kp.html",
     categories: ["agregaty", "vodiany-agregaty", "std300-hl", "std300-p"],
     variants: [
       {
