@@ -149,7 +149,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <iframe
         src={product.tableWithTabs}
         title={`Таблица рабочих параметров ${isCalorifier ? "калорифера" : "агрегата"}`}
-        className="mb-1 h-65 w-full"
+        className={`${isCalorifier ? "h-65" : "h-59"} mb-1 w-full`}
       />
       <ProductParagraph className="mb-4">
         Табличные данные можно использовать при подборе сопутствующего
