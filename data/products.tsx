@@ -132,7 +132,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "water",
     calorifier: "ТВВ4",
     categories: ["agregaty", "vodiany-agregaty", "avo"],
-    img: "/",
+    img: "/img/agregaty/avo/agregat_avo_hl_v.png",
     drawing: "/",
     tableWithTabs: "/legacy/table-avo-hl-tvv4.html",
     variants: [
