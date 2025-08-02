@@ -447,7 +447,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     drawing:
       "/img/agregaty/std300/agregat_otopitelnyi_std-300_hl_parovoi_razmery.png",
     tableWithTabs: "/legacy/table-std-300-hl-kp.html",
-    categories: ["agregaty", "vodiany-agregaty", "std300-hl", "std300-p"],
+    categories: ["agregaty", "parovy-agregaty", "std300-hl", "std300-p"],
     variants: [
       {
         id: "std300-kp3",
