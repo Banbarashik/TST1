@@ -149,7 +149,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ProductSubheader
         text={`Технические характеристики ${isCalorifier ? `${product.shortName} ${heatCarrierAdj?.gen}` : `${product.model}`}`}
       />
-      <table className="mb-4">
+      <table className="mb-4 w-full">
         {isCalorifier && (
           <thead>
             <tr>
@@ -198,7 +198,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         height={1}
         className="mb-4"
       />
-      <table className="mb-10">
+      <table className="mb-10 w-full">
         <thead>
           <tr>
             {isCalorifier ? (

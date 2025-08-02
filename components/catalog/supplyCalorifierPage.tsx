@@ -113,7 +113,7 @@ export default function SupplyCalorifierPage({
         )}
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${shortName}`} />
-      <table className="single-table water-and-steam water-and-steam-inner mb-1">
+      <table className="single-table water-and-steam water-and-steam-inner mb-1 w-full">
         <thead>
           <tr>
             <th rowSpan={2}>
