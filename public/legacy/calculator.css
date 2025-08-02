@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* Калькуляторы (начало) */
 .calculator {
   padding-top: 8px;

@@ -48,7 +48,7 @@ export default function SupplyCalorifierPage({
         тепловая мощность варьируется в зависимости от рядности калорифера{" "}
         {shortNameWithHyphen} и параметров эксплуатации.
       </ProductParagraph>
-      <div className="mb-12 grid grid-cols-3 gap-5">
+      <div className="mb-8 grid grid-cols-3 gap-5">
         {variants.map(function (variant) {
           return (
             <ProductCard
@@ -60,7 +60,7 @@ export default function SupplyCalorifierPage({
         })}
       </div>
       <ProductSubheader text={`Калькулятор подбора калорифера ${shortName}`} />
-      <ProductParagraph className="mb-2.5">
+      <ProductParagraph className="mb-2">
         Синие поля обязательны для заполнения. Запас площади поверхности
         нагрева: оптимальный 10%, допустимый 0-20%. Массовая скорость воздуха в
         фронтальном сечении: оптимальная 3-5 кг/м2•с, допустимая 1.5-8 кг/м2•с.{" "}
@@ -70,9 +70,9 @@ export default function SupplyCalorifierPage({
       <iframe
         src={calculator}
         title="Калькулятор калорифера"
-        className={`${isWater ? "h-174" : "h-124"} mb-0.5 w-full`}
+        className={`${isWater ? "h-153" : "h-108"} w-full`}
       />
-      <ProductParagraph className="mb-10">
+      <ProductParagraph className="mb-8">
         {nextProduct && (
           <>
             Если запас площади поверхности теплообмена не достаточен ни для
