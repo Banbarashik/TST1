@@ -65,7 +65,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} isLink={false} />
         <div>
-          <h2 className="mb-3 text-[22px]">
+          <h2 className="mb-3 text-xl">
             {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
             {product.model}
             {product.climate && ` ${product.climate}`}.{" "}
@@ -75,12 +75,12 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               "ТУ 4863-002-55613706-02"
             )}
           </h2>
-          <ProductParagraph>
+          <ProductParagraph className="text-[16px]">
             {isCalorifier
               ? "Теплоотдающие элементы:"
               : `Теплоотдающие элементы ${heatCarrierAdj.gen} калорифера ${product.calorifier}:`}{" "}
           </ProductParagraph>
-          <ul className="mb-4 text-lg">
+          <ul className="mb-4">
             <li>
               - электросварные прямошовные трубки {product.tubeSize} мм по ГОСТ
               10704-91

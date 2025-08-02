@@ -106,5 +106,7 @@ input::-webkit-inner-spin-button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 /* Сложные калькуляторы (конец) */
