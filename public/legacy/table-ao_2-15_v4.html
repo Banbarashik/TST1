@@ -1,331 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
-<script src="https://code.jquery.com/jquery-git.min.js"></script>
-<script src="tables.js"></script>
-<link href="table.css" rel="stylesheet"/>
-</head>
-<body>
-<!-- Таблицы (начало) -->
-<!--  Кнопки переключения таблиц (начало) -->
-<div class="table-with-scroll" id="primary">
-<form class="table-buttons-wrap">
-<input checked="" id="table_btn1" name="as" type="radio"/>
-<input id="table_btn2" name="as" type="radio"/>
-<input id="table_btn3" name="as" type="radio"/>
-<label class="btn btn1" for="table_btn1">
+  <head>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="tables.js"></script>
+    <link href="table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Таблицы (начало) -->
+    <!--  Кнопки переключения таблиц (начало) -->
+    <div class="table-with-scroll" id="primary">
+      <form class="table-buttons-wrap">
+        <input checked="" id="table_btn1" name="as" type="radio" />
+        <input id="table_btn2" name="as" type="radio" />
+        <input id="table_btn3" name="as" type="radio" />
+        <label class="btn btn1" for="table_btn1">
           150/70 — 130/70 — 115/70
         </label>
-<label class="btn btn2" for="table_btn2">
+        <label class="btn btn2" for="table_btn2">
           105/65 — 95/55 — 90/55
         </label>
-<label class="btn btn3" for="table_btn3"> 85/50 — 80/45 — 70/40 </label>
-</form>
-</div>
-<!--  Кнопки переключения таблиц (конец) -->
-<div class="table-wrap table-with-scroll">
-<!-- Обёртка для таблиц (начало) -->
-<div id="secondary">
-<!-- Начало 1-й таблицы -->
-<div class="table-with-opacity-change" style="display: block">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
+        <label class="btn btn3" for="table_btn3"> 85/50 — 80/45 — 70/40 </label>
+      </form>
+    </div>
+    <!--  Кнопки переключения таблиц (конец) -->
+    <div class="table-wrap ksk-table table-with-scroll">
+      <!-- Обёртка для таблиц (начало) -->
+      <div id="secondary">
+        <!-- Начало 1-й таблицы -->
+        <div class="table-with-opacity-change" style="display: block">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Производительность по воздуху, м³/ч</td>
+              <td colspan="12" style="background-color: rgb(204, 204, 204)">
                 13500
               </td>
-</tr>
-<tr>
-<td>График теплоносителя, °С</td>
-<td colspan="4">150/70</td>
-<td colspan="4">130/70</td>
-<td colspan="4">115/70</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-</tr>
-<tr>
-<td>Температура выходящего воздуха, °С</td>
-<td>42</td>
-<td>47</td>
-<td>50</td>
-<td>54</td>
-<td>40</td>
-<td>45</td>
-<td>47</td>
-<td>52</td>
-<td>38</td>
-<td>43</td>
-<td>46</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Расход теплоносителя, м³/ч</td>
-<td>2,9</td>
-<td>2,6</td>
-<td>2,4</td>
-<td>2,0</td>
-<td>3,7</td>
-<td>3,2</td>
-<td>3,0</td>
-<td>2,6</td>
-<td>4,8</td>
-<td>4,1</td>
-<td>3,8</td>
-<td>3,2</td>
-</tr>
-<tr>
-<td>Гидравлическое сопротивление, кПа</td>
-<td>5,8</td>
-<td>4,4</td>
-<td>3,8</td>
-<td>2,8</td>
-<td>9,0</td>
-<td>6,8</td>
-<td>5,9</td>
-<td>4,2</td>
-<td>14,6</td>
-<td>10,9</td>
-<td>9,3</td>
-<td>6,5</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>268</td>
-<td>234</td>
-<td>217</td>
-<td>186</td>
-<td>256</td>
-<td>222</td>
-<td>206</td>
-<td>175</td>
-<td>248</td>
-<td>214</td>
-<td>198</td>
-<td>167</td>
-</tr>
-</table>
-</div>
-<!-- Конец 1-й таблицы -->
-<!-- Начало 2-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
+            </tr>
+            <tr>
+              <td>График теплоносителя, °С</td>
+              <td class="coolant-graph" colspan="4">150/70</td>
+              <td class="coolant-graph" colspan="4">130/70</td>
+              <td class="coolant-graph" colspan="4">115/70</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+            </tr>
+            <tr>
+              <td>Температура выходящего воздуха, °С</td>
+              <td>42</td>
+              <td>47</td>
+              <td>50</td>
+              <td>54</td>
+              <td>40</td>
+              <td>45</td>
+              <td>47</td>
+              <td>52</td>
+              <td>38</td>
+              <td>43</td>
+              <td>46</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Расход теплоносителя, м³/ч</td>
+              <td>2,9</td>
+              <td>2,6</td>
+              <td>2,4</td>
+              <td>2,0</td>
+              <td>3,7</td>
+              <td>3,2</td>
+              <td>3,0</td>
+              <td>2,6</td>
+              <td>4,8</td>
+              <td>4,1</td>
+              <td>3,8</td>
+              <td>3,2</td>
+            </tr>
+            <tr>
+              <td>Гидравлическое сопротивление, кПа</td>
+              <td>5,8</td>
+              <td>4,4</td>
+              <td>3,8</td>
+              <td>2,8</td>
+              <td>9,0</td>
+              <td>6,8</td>
+              <td>5,9</td>
+              <td>4,2</td>
+              <td>14,6</td>
+              <td>10,9</td>
+              <td>9,3</td>
+              <td>6,5</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>268</td>
+              <td>234</td>
+              <td>217</td>
+              <td>186</td>
+              <td>256</td>
+              <td>222</td>
+              <td>206</td>
+              <td>175</td>
+              <td>248</td>
+              <td>214</td>
+              <td>198</td>
+              <td>167</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 1-й таблицы -->
+        <!-- Начало 2-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Производительность по воздуху, м³/ч</td>
+              <td colspan="12" style="background-color: rgb(204, 204, 204)">
                 13500
               </td>
-</tr>
-<tr>
-<td>График теплоносителя, °С</td>
-<td colspan="4">105/70</td>
-<td colspan="4">95/65</td>
-<td colspan="4">90/60</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-</tr>
-<tr>
-<td>Температура выходящего воздуха, °С</td>
-<td>37</td>
-<td>42</td>
-<td>45</td>
-<td>49</td>
-<td>34</td>
-<td>39</td>
-<td>41</td>
-<td>46</td>
-<td>31</td>
-<td>36</td>
-<td>38</td>
-<td>43</td>
-</tr>
-<tr>
-<td>Расход теплоносителя, м³/ч</td>
-<td>6,0</td>
-<td>5,2</td>
-<td>4,8</td>
-<td>4,0</td>
-<td>6,6</td>
-<td>5,6</td>
-<td>5,1</td>
-<td>4,2</td>
-<td>6,1</td>
-<td>5,2</td>
-<td>4,7</td>
-<td>3,8</td>
-</tr>
-<tr>
-<td>Гидравлическое сопротивление, кПа</td>
-<td>23,0</td>
-<td>16,9</td>
-<td>14,3</td>
-<td>10,0</td>
-<td>26,6</td>
-<td>19,3</td>
-<td>16,2</td>
-<td>11,0</td>
-<td>23,2</td>
-<td>16,5</td>
-<td>13,6</td>
-<td>9,0</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>244</td>
-<td>209</td>
-<td>193</td>
-<td>162</td>
-<td>227</td>
-<td>193</td>
-<td>177</td>
-<td>146</td>
-<td>213</td>
-<td>179</td>
-<td>163</td>
-<td>133</td>
-</tr>
-</table>
-</div>
-<!-- Конец 2-й таблицы -->
-<!-- Начало 3-й таблицы -->
-<div class="table-with-opacity-change">
-<table>
-<colgroup>
-<col style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-<col span="4" style="background-color: transparent"/>
-<col span="4" style="background-color: rgb(189, 189, 189)"/>
-</colgroup>
-<tr>
-<td>Производительность по воздуху, м³/ч</td>
-<td colspan="12" style="background-color: rgb(204, 204, 204)">
+            </tr>
+            <tr>
+              <td>График теплоносителя, °С</td>
+              <td class="coolant-graph" colspan="4">105/70</td>
+              <td class="coolant-graph" colspan="4">95/65</td>
+              <td class="coolant-graph" colspan="4">90/60</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+            </tr>
+            <tr>
+              <td>Температура выходящего воздуха, °С</td>
+              <td>37</td>
+              <td>42</td>
+              <td>45</td>
+              <td>49</td>
+              <td>34</td>
+              <td>39</td>
+              <td>41</td>
+              <td>46</td>
+              <td>31</td>
+              <td>36</td>
+              <td>38</td>
+              <td>43</td>
+            </tr>
+            <tr>
+              <td>Расход теплоносителя, м³/ч</td>
+              <td>6,0</td>
+              <td>5,2</td>
+              <td>4,8</td>
+              <td>4,0</td>
+              <td>6,6</td>
+              <td>5,6</td>
+              <td>5,1</td>
+              <td>4,2</td>
+              <td>6,1</td>
+              <td>5,2</td>
+              <td>4,7</td>
+              <td>3,8</td>
+            </tr>
+            <tr>
+              <td>Гидравлическое сопротивление, кПа</td>
+              <td>23,0</td>
+              <td>16,9</td>
+              <td>14,3</td>
+              <td>10,0</td>
+              <td>26,6</td>
+              <td>19,3</td>
+              <td>16,2</td>
+              <td>11,0</td>
+              <td>23,2</td>
+              <td>16,5</td>
+              <td>13,6</td>
+              <td>9,0</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>244</td>
+              <td>209</td>
+              <td>193</td>
+              <td>162</td>
+              <td>227</td>
+              <td>193</td>
+              <td>177</td>
+              <td>146</td>
+              <td>213</td>
+              <td>179</td>
+              <td>163</td>
+              <td>133</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 2-й таблицы -->
+        <!-- Начало 3-й таблицы -->
+        <div class="table-with-opacity-change">
+          <table>
+            <colgroup>
+              <col style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+              <col span="4" style="background-color: transparent" />
+              <col span="4" class="gray-col" />
+            </colgroup>
+            <tr>
+              <td>Производительность по воздуху, м³/ч</td>
+              <td colspan="12" style="background-color: rgb(204, 204, 204)">
                 13500
               </td>
-</tr>
-<tr>
-<td>График теплоносителя, °С</td>
-<td colspan="4">85/55</td>
-<td colspan="4">80/50</td>
-<td colspan="4">70/45</td>
-</tr>
-<tr>
-<td>Температура входящего воздуха, °С</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-<td>-10</td>
-<td>0</td>
-<td>+5</td>
-<td>+15</td>
-</tr>
-<tr>
-<td>Температура выходящего воздуха, °С</td>
-<td>28</td>
-<td>33</td>
-<td>35</td>
-<td>40</td>
-<td>26</td>
-<td>30</td>
-<td>33</td>
-<td>37</td>
-<td>22</td>
-<td>27</td>
-<td>29</td>
-<td>34</td>
-</tr>
-<tr>
-<td>Расход теплоносителя, м³/ч</td>
-<td>5,7</td>
-<td>4,8</td>
-<td>4,3</td>
-<td>3,5</td>
-<td>5,3</td>
-<td>4,4</td>
-<td>3,9</td>
-<td>3,1</td>
-<td>5,8</td>
-<td>4,7</td>
-<td>4,2</td>
-<td>3,2</td>
-</tr>
-<tr>
-<td>Гидравлическое сопротивление, кПа</td>
-<td>19,9</td>
-<td>14,0</td>
-<td>11,4</td>
-<td>7,2</td>
-<td>17,1</td>
-<td>11,5</td>
-<td>9,3</td>
-<td>5,7</td>
-<td>20,1</td>
-<td>13,2</td>
-<td>10,3</td>
-<td>5,9</td>
-</tr>
-<tr>
-<td>Производительность по теплу, кВт</td>
-<td>198</td>
-<td>165</td>
-<td>149</td>
-<td>119</td>
-<td>184</td>
-<td>151</td>
-<td>136</td>
-<td>106</td>
-<td>167</td>
-<td>135</td>
-<td>120</td>
-<td>91</td>
-</tr>
-</table>
-</div>
-<!-- Конец 3-й таблицы -->
-</div>
-</div>
-<!-- Обёртка для таблиц (конец) -->
-</body>
+            </tr>
+            <tr>
+              <td>График теплоносителя, °С</td>
+              <td class="coolant-graph" colspan="4">85/55</td>
+              <td class="coolant-graph" colspan="4">80/50</td>
+              <td class="coolant-graph" colspan="4">70/45</td>
+            </tr>
+            <tr>
+              <td>Температура входящего воздуха, °С</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+              <td>-10</td>
+              <td>0</td>
+              <td>+5</td>
+              <td>+15</td>
+            </tr>
+            <tr>
+              <td>Температура выходящего воздуха, °С</td>
+              <td>28</td>
+              <td>33</td>
+              <td>35</td>
+              <td>40</td>
+              <td>26</td>
+              <td>30</td>
+              <td>33</td>
+              <td>37</td>
+              <td>22</td>
+              <td>27</td>
+              <td>29</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>Расход теплоносителя, м³/ч</td>
+              <td>5,7</td>
+              <td>4,8</td>
+              <td>4,3</td>
+              <td>3,5</td>
+              <td>5,3</td>
+              <td>4,4</td>
+              <td>3,9</td>
+              <td>3,1</td>
+              <td>5,8</td>
+              <td>4,7</td>
+              <td>4,2</td>
+              <td>3,2</td>
+            </tr>
+            <tr>
+              <td>Гидравлическое сопротивление, кПа</td>
+              <td>19,9</td>
+              <td>14,0</td>
+              <td>11,4</td>
+              <td>7,2</td>
+              <td>17,1</td>
+              <td>11,5</td>
+              <td>9,3</td>
+              <td>5,7</td>
+              <td>20,1</td>
+              <td>13,2</td>
+              <td>10,3</td>
+              <td>5,9</td>
+            </tr>
+            <tr>
+              <td>Производительность по теплу, кВт</td>
+              <td>198</td>
+              <td>165</td>
+              <td>149</td>
+              <td>119</td>
+              <td>184</td>
+              <td>151</td>
+              <td>136</td>
+              <td>106</td>
+              <td>167</td>
+              <td>135</td>
+              <td>120</td>
+              <td>91</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Конец 3-й таблицы -->
+      </div>
+    </div>
+    <!-- Обёртка для таблиц (конец) -->
+  </body>
 </html>
