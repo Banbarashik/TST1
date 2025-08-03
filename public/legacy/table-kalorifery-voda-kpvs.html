@@ -1,0 +1,444 @@
+<!doctype html>
+
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="tables.js"></script>
+    <link href="table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Начало блока с таблицами -->
+
+    <!-- Кнопки для переключения таблиц -->
+    <div id="primary" class="table-with-scroll">
+      <form class="table-buttons-wrap">
+        <input id="table_btn1" type="radio" checked name="as" />
+        <input id="table_btn2" type="radio" name="as" />
+        <input id="table_btn3" type="radio" name="as" />
+        <label for="table_btn1" class="btn btn1"> 2500-8000 м³/ч </label>
+        <label for="table_btn2" class="btn btn2"> 9000-16000 м³/ч </label>
+        <label for="table_btn3" class="btn btn3"> 17000-25000 м³/ч </label>
+      </form>
+    </div>
+    <!-- Кнопки для переключения таблиц -->
+
+    <!-- Непосредственно таблицы -->
+    <div class="table-wrap table-with-scroll water-and-steam">
+      <div id="secondary">
+        <!-- Начало 1-й таблицы -->
+        <div style="display: block">
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2" class="model">
+                  Модель
+                  <br />
+                  водяного калорифера
+                </th>
+                <th rowspan="2" class="performance">
+                  Производительность
+                  <br />
+                  по воздуху, м³/ч
+                </th>
+                <th colspan="5" class="measurements">Габаритные размеры, мм</th>
+                <th colspan="3" class="area">
+                  Площадь поверхности теплообмена, мм
+                </th>
+              </tr>
+              <tr class="small-cols">
+                <th>L1</th>
+                <th>H1</th>
+                <th>L</th>
+                <th>H</th>
+                <th>dy</th>
+                <th class="kal">КПВС2</th>
+                <th class="kal">КПВС3</th>
+                <th class="kal">КПВС4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="kalorifery-name">КПВС-572x572</td>
+                <td>2500</td>
+                <td>572</td>
+                <td>572</td>
+                <td>500</td>
+                <td>500</td>
+                <td>25</td>
+                <td>6.8</td>
+                <td>10.4</td>
+                <td>13.7</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-614x614</td>
+                <td>3000</td>
+                <td>614</td>
+                <td>614</td>
+                <td>542</td>
+                <td>542</td>
+                <td>25</td>
+                <td>8.0</td>
+                <td>12.2</td>
+                <td>16.1</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-655x655</td>
+                <td>3500</td>
+                <td>655</td>
+                <td>655</td>
+                <td>583</td>
+                <td>583</td>
+                <td>25</td>
+                <td>9.4</td>
+                <td>14.2</td>
+                <td>18.6</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-697x697</td>
+                <td>4000</td>
+                <td>697</td>
+                <td>697</td>
+                <td>625</td>
+                <td>625</td>
+                <td>25</td>
+                <td>10.7</td>
+                <td>16.3</td>
+                <td>21.4</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-739x739</td>
+                <td>4500</td>
+                <td>739</td>
+                <td>739</td>
+                <td>667</td>
+                <td>667</td>
+                <td>32</td>
+                <td>12.2</td>
+                <td>18.6</td>
+                <td>24.5</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-780x780</td>
+                <td>5000</td>
+                <td>780</td>
+                <td>780</td>
+                <td>708</td>
+                <td>708</td>
+                <td>32</td>
+                <td>13.8</td>
+                <td>21.0</td>
+                <td>27.6</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-822x822</td>
+                <td>6000</td>
+                <td>822</td>
+                <td>822</td>
+                <td>750</td>
+                <td>750</td>
+                <td>32</td>
+                <td>15.5</td>
+                <td>23.5</td>
+                <td>31.0</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-864x864</td>
+                <td>7000</td>
+                <td>864</td>
+                <td>864</td>
+                <td>792</td>
+                <td>792</td>
+                <td>32</td>
+                <td>17.3</td>
+                <td>26.2</td>
+                <td>34.6</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-905x905</td>
+                <td>8000</td>
+                <td>905</td>
+                <td>905</td>
+                <td>833</td>
+                <td>833</td>
+                <td>32</td>
+                <td>19.2</td>
+                <td>29.0</td>
+                <td>38.4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Конец 1-й таблицы -->
+
+        <!-- Начало 2-й таблицы -->
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2" class="model" style="width: 174px">
+                  Модель
+                  <br />
+                  водяного калорифера
+                </th>
+                <th rowspan="2" class="performance">
+                  Производительность
+                  <br />
+                  по воздуху, м³/ч
+                </th>
+                <th colspan="5" class="measurements">Габаритные размеры, мм</th>
+                <th colspan="3" class="area">
+                  Площадь поверхности теплообмена, мм
+                </th>
+              </tr>
+              <tr class="small-cols">
+                <th>L1</th>
+                <th>H1</th>
+                <th>L</th>
+                <th>H</th>
+                <th>dy</th>
+                <th class="kal">КПВС2</th>
+                <th class="kal">КПВС3</th>
+                <th class="kal">КПВС4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="kalorifery-name">КПВС-947x947</td>
+                <td>9000</td>
+                <td>947</td>
+                <td>947</td>
+                <td>875</td>
+                <td>875</td>
+                <td>40</td>
+                <td>21.2</td>
+                <td>32.0</td>
+                <td>42.3</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-989x989</td>
+                <td>10000</td>
+                <td>989</td>
+                <td>989</td>
+                <td>917</td>
+                <td>917</td>
+                <td>40</td>
+                <td>23.3</td>
+                <td>35.2</td>
+                <td>46.6</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1030x1030</td>
+                <td>11000</td>
+                <td>1030</td>
+                <td>1030</td>
+                <td>958</td>
+                <td>958</td>
+                <td>40</td>
+                <td>25.4</td>
+                <td>38.4</td>
+                <td>50.9</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1072x1072</td>
+                <td>12000</td>
+                <td>1072</td>
+                <td>1072</td>
+                <td>1000</td>
+                <td>1000</td>
+                <td>50</td>
+                <td>27.7</td>
+                <td>41.8</td>
+                <td>55.4</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1114x1114</td>
+                <td>13000</td>
+                <td>1114</td>
+                <td>1114</td>
+                <td>1042</td>
+                <td>1042</td>
+                <td>50</td>
+                <td>30.1</td>
+                <td>45.4</td>
+                <td>60.2</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1155x1155</td>
+                <td>14000</td>
+                <td>1155</td>
+                <td>1155</td>
+                <td>1083</td>
+                <td>1083</td>
+                <td>50</td>
+                <td>32.6</td>
+                <td>49.1</td>
+                <td>65.1</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1197x1197</td>
+                <td>15000</td>
+                <td>1197</td>
+                <td>1197</td>
+                <td>1125</td>
+                <td>1125</td>
+                <td>50</td>
+                <td>35.1</td>
+                <td>53.0</td>
+                <td>70.2</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1239x1239</td>
+                <td>16000</td>
+                <td>1239</td>
+                <td>1239</td>
+                <td>1167</td>
+                <td>1167</td>
+                <td>50</td>
+                <td>37.8</td>
+                <td>57.0</td>
+                <td>75.6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Конец 2-й таблицы -->
+
+        <!-- Начало 3-й таблицы -->
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2" class="model" style="width: 174px">
+                  Модель
+                  <br />
+                  водяного калорифера
+                </th>
+                <th rowspan="2" class="performance">
+                  Производительность
+                  <br />
+                  по воздуху, м³/ч
+                </th>
+                <th colspan="5" class="measurements">Габаритные размеры, мм</th>
+                <th colspan="3" class="area">
+                  Площадь поверхности теплообмена, мм
+                </th>
+              </tr>
+              <tr class="small-cols">
+                <th>L1</th>
+                <th>H1</th>
+                <th>L</th>
+                <th>H</th>
+                <th>dy</th>
+                <th class="kal">КПВС2</th>
+                <th class="kal">КПВС3</th>
+                <th class="kal">КПВС4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="kalorifery-name">КПВС-1280x1280</td>
+                <td>17000</td>
+                <td>1280</td>
+                <td>1280</td>
+                <td>1208</td>
+                <td>1208</td>
+                <td>50</td>
+                <td>40.6</td>
+                <td>61.2</td>
+                <td>81.1</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1322x1322</td>
+                <td>18000</td>
+                <td>1322</td>
+                <td>1322</td>
+                <td>1250</td>
+                <td>1250</td>
+                <td>50</td>
+                <td>43.4</td>
+                <td>65.5</td>
+                <td>86.9</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1364x1364</td>
+                <td>19000</td>
+                <td>1364</td>
+                <td>1364</td>
+                <td>1292</td>
+                <td>1292</td>
+                <td>50</td>
+                <td>46.4</td>
+                <td>70.0</td>
+                <td>92.8</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1405x1405</td>
+                <td>20000</td>
+                <td>1405</td>
+                <td>1405</td>
+                <td>1333</td>
+                <td>1333</td>
+                <td>50</td>
+                <td>49.4</td>
+                <td>74.6</td>
+                <td>98.9</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1447x1447</td>
+                <td>21000</td>
+                <td>1447</td>
+                <td>1447</td>
+                <td>1375</td>
+                <td>1375</td>
+                <td>50</td>
+                <td>52.6</td>
+                <td>79.3</td>
+                <td>105.2</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1489x1489</td>
+                <td>22000</td>
+                <td>1489</td>
+                <td>1489</td>
+                <td>1417</td>
+                <td>1417</td>
+                <td>50</td>
+                <td>55.8</td>
+                <td>84.2</td>
+                <td>111.8</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1530x1530</td>
+                <td>23000</td>
+                <td>1530</td>
+                <td>1530</td>
+                <td>1458</td>
+                <td>1458</td>
+                <td>50</td>
+                <td>59.2</td>
+                <td>89.2</td>
+                <td>118.4</td>
+              </tr>
+              <tr>
+                <td class="kalorifery-name">КПВС-1572x1572</td>
+                <td>25000</td>
+                <td>1572</td>
+                <td>1572</td>
+                <td>1500</td>
+                <td>1500</td>
+                <td>50</td>
+                <td>62.6</td>
+                <td>94.4</td>
+                <td>125.3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Конец 3-й таблицы -->
+      </div>
+    </div>
+    <!-- Непосредственно таблицы -->
+
+    <!-- Конец блока с таблицами -->
+  </body>
+</html>
