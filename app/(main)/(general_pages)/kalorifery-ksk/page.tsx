@@ -1,9 +1,24 @@
-import Image from "next/image";
+import { productData } from "@/data/products";
 
+import Image from "next/image";
+import Link from "next/link";
+
+import { sortProducts } from "@/lib/utils";
+
+import { Button } from "@/components/ui/button";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 
+import ProductLink from "@/components/general_pages/productLink";
+
 export default function KaloriferyKSKPage() {
+  const products = productData
+    .filter((p) => p.categories.includes("ksk"))
+    .sort((a, b) => sortProducts(a.name, b.name));
+  const ksk2 = products.filter((p) => p.rows === 2);
+  const ksk3 = products.filter((p) => p.rows === 3);
+  const ksk4 = products.filter((p) => p.rows === 4);
+
   return (
     <article className="flex flex-col gap-6">
       <Heading lvl={1} text="Калориферы КСк" />
@@ -25,11 +40,22 @@ export default function KaloriferyKSKPage() {
           испытаний и проверкой каждого водяного воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <Image
-          alt="Производство калориферов КСк"
-          title="Конструкция водяного калорифера КСк"
-        />
-        <Image alt="Калорифер водяной КСк" title="Калорифер КСк" />
+        <div className="flex">
+          <Image
+            src="/img/general_pages/kalorifer_vodianoi_ksk_komplektatciia.png"
+            alt="Производство калориферов КСк"
+            title="Конструкция водяного калорифера КСк"
+            width={484}
+            height={1}
+          />
+          <Image
+            src="/img/general_pages/kalorifer_vodianoi_ksk.png"
+            alt="Калорифер водяной КСк"
+            title="Калорифер КСк"
+            width={484}
+            height={1}
+          />
+        </div>
       </section>
 
       <section>
@@ -98,6 +124,18 @@ export default function KaloriferyKSKPage() {
           элементов. Применяются для нагрева воздуха на небольшую разницу
           температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
+        <ul className="flex flex-wrap gap-4">
+          {ksk2.map((p) => (
+            <li key={p.id}>
+              <ProductLink
+                id={p.id}
+                name={p.name}
+                airPower={p.airPower}
+                heatPower={p.heatPower}
+              />
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section>
