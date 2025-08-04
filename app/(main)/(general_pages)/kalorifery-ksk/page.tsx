@@ -117,45 +117,24 @@ export default function KaloriferyKSKPage() {
         />
       </section>
 
-      <section>
-        <Heading lvl={3} text="Технические характеристики калориферов КСк 2" />
-        <ProductParagraph>
-          Калориферы КСк 2 водяные изготавливаются с двумя рядами теплоотдающих
-          элементов. Применяются для нагрева воздуха на небольшую разницу
-          температур. Низкое аэродинамическое сопротивление.
-        </ProductParagraph>
-        <ul className="flex flex-wrap gap-4">
-          {ksk2.map((p) => (
-            <li key={p.id}>
-              <ProductLink
-                id={p.id}
-                name={p.name}
-                airPower={p.airPower}
-                heatPower={p.heatPower}
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
+      <SpecsSection products={ksk2}>
+        Калориферы КСк 2 водяные изготавливаются с двумя рядами теплоотдающих
+        элементов. Применяются для нагрева воздуха на небольшую разницу
+        температур. Низкое аэродинамическое сопротивление.
+      </SpecsSection>
 
-      <section>
-        <Heading lvl={3} text="Технические характеристики калориферов КСк 3" />
-        <ProductParagraph>
-          Калориферы КСк 3 изготавливаются с тремя рядами теплоотдающих
-          элементов. Наиболее экономичный вариант с хорошими теплотехническими
-          характеристиками. Повышенное гидравлическое сопротивление.
-        </ProductParagraph>
-      </section>
+      <SpecsSection products={ksk3}>
+        Калориферы КСк 3 изготавливаются с тремя рядами теплоотдающих элементов.
+        Наиболее экономичный вариант с хорошими теплотехническими
+        характеристиками. Повышенное гидравлическое сопротивление.
+      </SpecsSection>
 
-      <section>
-        <Heading lvl={3} text="Технические характеристики калориферов КСк 4" />
-        <ProductParagraph>
-          Калориферы КСк 4 изготавливаются с четырьмя рядами теплоотдающих
-          элементов. Наибольшая тепловая мощность, качественный обогрев с
-          высокой разницей температуры воздуха на входе и выходе из калорифера.
-          Увеличенное аэродинамическое сопротивление.
-        </ProductParagraph>
-      </section>
+      <SpecsSection products={ksk4}>
+        Калориферы КСк 4 изготавливаются с четырьмя рядами теплоотдающих
+        элементов. Наибольшая тепловая мощность, качественный обогрев с высокой
+        разницей температуры воздуха на входе и выходе из калорифера.
+        Увеличенное аэродинамическое сопротивление.
+      </SpecsSection>
 
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КСк" />
@@ -176,5 +155,26 @@ export default function KaloriferyKSKPage() {
         </ProductParagraph>
       </section>
     </article>
+  );
+}
+
+function SpecsSection({ products, children }) {
+  return (
+    <section>
+      <Heading lvl={3} text="Технические характеристики калориферов КСк 4" />
+      <ProductParagraph>{children}</ProductParagraph>
+      <ul className="flex flex-wrap gap-4">
+        {products.map((p) => (
+          <li key={p.id}>
+            <ProductLink
+              id={p.id}
+              name={p.name}
+              airPower={p.airPower}
+              heatPower={p.heatPower}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
