@@ -125,12 +125,18 @@ export default function KaloriferyKPSKPage() {
           варьируется от 2000 до 25000 м3/час, от 28 до 668 кВт.
         </ProductParagraph>
         <Image
+          src="/img/genetal_pages/kalorifery_parovye_kpsk.png"
           alt="Калорифер КПСк – производительность и мощность"
           title="Калорифер КПСк паровой"
+          width={484}
+          height={1}
         />
         <Image
+          src="/img/genetal_pages/kalorifer_parovoi_kpsk_riady.png"
           alt="Технические характеристики калориферов КПСк"
           title="Калориферы КПСк2, КПСк3, КПСк4"
+          width={484}
+          height={1}
         />
       </section>
 
@@ -156,8 +162,11 @@ export default function KaloriferyKPSKPage() {
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КПСк" />
         <Image
+          src="/img/general_pages/kalorifery_kpsk_gabaritnye_razmery.png"
           alt="Габаритные размеры воздухонагревателей КПСк"
           title="Габаритные размеры калориферов КПСк паровых"
+          width={968}
+          height={1}
         />
         <iframe
           src="/legacy/table-kalorifery-kpsk.html"

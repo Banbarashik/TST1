@@ -114,12 +114,18 @@ export default function KaloriferyKSKPage() {
           25000 м3/час, от 29 до 665 кВт.
         </ProductParagraph>
         <Image
+          src="/img/general_pages/kalorifery_vodianye_ksk.png"
           alt="Калорифер КСк – производительность и мощность"
           title="Калорифер КСк водяной"
+          width={484}
+          height={1}
         />
         <Image
+          src="/img/general_pages/kalorifer_vodianoi_ksk_riady.png"
           alt="Технические характеристики калориферов КСк"
           title="Калориферы КСк2, КСк3, КСк4"
+          width={484}
+          height={1}
         />
       </section>
 
@@ -145,8 +151,11 @@ export default function KaloriferyKSKPage() {
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КСк" />
         <Image
+          src="/img/general_pages/kalorifery_ksk_gabaritnye_razmery.png"
           alt="Габаритные размеры воздухонагревателей КСк"
           title="Габаритные размеры калориферов КСк водяных"
+          width={968}
+          height={1}
         />
         <iframe
           src="/legacy/table-kalorifery-ksk.html"
