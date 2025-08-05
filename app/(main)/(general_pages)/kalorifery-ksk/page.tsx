@@ -1,5 +1,6 @@
 import { productData } from "@/data/products";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import { sortProducts } from "@/lib/utils";
@@ -7,6 +8,14 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SpecsSection from "@/components/general_pages/specsSection";
+
+export const metadata: Metadata = {
+  title: "Калориферы водяные КСк",
+  description:
+    "Калориферы КСк водяные – производитель ООО Т.С.Т. Производство, технические характеристики, габаритные размеры, производительность, цена водяных калориферов КСк",
+  keywords:
+    "калорифер кск,калорифер водяной кск,калориферы кск технические характеристики,калорифер кск мощность,калориферы кск габаритные размеры купить калориферы кск,калориферы кск цена,калорифер кск 2,калорифер кск 3,калорифер кск 4",
+};
 
 export default function KaloriferyKSKPage() {
   const products = productData
