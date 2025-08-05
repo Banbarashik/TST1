@@ -2,7 +2,21 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-export default function ProductLink({ id, name, airPower, heatPower }) {
+export default function ProductLinks({ products }) {
+  return (
+    <ul className="flex flex-wrap gap-4">
+      {products.map((p) => (
+        <li key={p.id}>
+          <ProductLink product={p} />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function ProductLink({ product }) {
+  const { id, name, airPower, heatPower } = product;
+
   return (
     <Button
       className="bg-accent-background flex flex-col items-center"

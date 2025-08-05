@@ -7,7 +7,9 @@ import { sortProducts } from "@/lib/utils";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import SpecsSection from "@/components/general_pages/specsSection";
+import SpecsSection from "@/components/general_pages/productLinks";
+import SpecsSectionContent from "@/components/general_pages/productLinks";
+import ProductLinks from "@/components/general_pages/productLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные ТВВ",
@@ -106,6 +108,7 @@ export default function KaloriferyTVVPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
+        <ProductLinks products={products} />
         <ProductParagraph>
           Водяные воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -132,41 +135,23 @@ export default function KaloriferyTVVPage() {
       </section>
 
       <section>
-        <SpecsSection products={products}>
-          Калориферы водяные серии ТВВ изготавливаются в двух вариантах: ТВВ 3 –
-          трехрядная модель и ТВВ 4 – четырехрядный теплообменник. Увеличение
-          количества рядов предполагает собой нагрев входящего воздуха на
-          большую разницу температур.
-        </SpecsSection>
-        <ProductParagraph>
-          Водяные воздухонагреватели любой рядности состоят из семи
-          типоразмеров, каждому из которых присваивается свой порядковый номер.
-          Калориферы одного номера ТВВ3 и ТВВ4 имеют одинаковые длину и высоту,
-          а также производительность по воздуху, но разную тепловую мощность.
-          Диапазон производительности по воздуху и теплу, в зависимости от
-          модели и номера водяного калорифера серии ТВВ, варьируется от 2500 до
-          25000 м3/час, от 55 до 725 кВт.
-        </ProductParagraph>
-      </section>
-
-      <section>
-        <Heading lvl={2} text="Габаритные размеры калориферов КСк" />
+        <Heading lvl={2} text="Габаритные размеры калориферов ТВВ" />
         <Image
           src="/img/general_pages/kalorifery_ksk_gabaritnye_razmery.png"
-          alt="Габаритные размеры воздухонагревателей КСк"
-          title="Габаритные размеры калориферов КСк водяных"
+          alt="Габаритные размеры воздухонагревателей ВНВ 113"
+          title="Габаритные размеры водяных калориферов ТВВ"
           width={968}
           height={1}
         />
         <iframe
-          src="/legacy/table-kalorifery-ksk.html"
-          className="h-105 w-full"
+          src="/legacy/table-kalorifery-tvv.html"
+          className="h-74 w-full"
         />
         <ProductParagraph>
-          Структура условного обозначения водяных калориферов КСк производства
-          ООО «Т.С.Т.». Калорифер КСк 4-10-02 ХЛ3 (ТУ 4863-002-55613706-02): КСк
-          - калорифер спирально-катанный; 4 - количество рядов теплообменных
-          элементов; 10 - типоразмер воздухонагревателя; 02 - конструктивное
+          Структура условного обозначения водяных калориферов ТВВ производства
+          ООО «Т.С.Т.». Калорифер ТВВ 409-02 ХЛ3 (ТУ 4863-002-55613706-02): ТВВ
+          – теплообменник воздушный водяной; 4 - количество рядов теплообменных
+          элементов; 09 - типоразмер воздухонагревателя; 02 - конструктивное
           исполнение; ХЛ - климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
