@@ -26,7 +26,7 @@ export default function KaloriferyKPSKPage() {
   const kpsk4 = products.filter((p) => p.rows === 4);
 
   return (
-    <article className="flex flex-col gap-6">
+    <>
       <Heading lvl={1} text="Калориферы КПСк" />
 
       <section>
@@ -173,6 +173,6 @@ export default function KaloriferyKPSKPage() {
           размещения.
         </ProductParagraph>
       </section>
-    </article>
+    </>
   );
 }

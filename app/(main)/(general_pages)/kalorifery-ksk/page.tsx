@@ -26,7 +26,7 @@ export default function KaloriferyKSKPage() {
   const ksk4 = products.filter((p) => p.rows === 4);
 
   return (
-    <article className="flex flex-col gap-6">
+    <>
       <Heading lvl={1} text="Калориферы КСк" />
 
       <section>
@@ -160,6 +160,6 @@ export default function KaloriferyKSKPage() {
           исполнение; ХЛ - климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
-    </article>
+    </>
   );
 }

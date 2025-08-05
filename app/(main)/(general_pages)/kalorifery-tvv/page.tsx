@@ -25,7 +25,7 @@ export default function KaloriferyTVVPage() {
   const tvv4 = products.filter((p) => p.rows === 4);
 
   return (
-    <article className="flex flex-col gap-6">
+    <>
       <Heading lvl={1} text="Калориферы КСк" />
 
       <section>
@@ -122,12 +122,6 @@ export default function KaloriferyTVVPage() {
         />
       </section>
 
-      <SpecsSection products={ksk2}>
-        Калориферы КСк 2 водяные изготавливаются с двумя рядами теплоотдающих
-        элементов. Применяются для нагрева воздуха на небольшую разницу
-        температур. Низкое аэродинамическое сопротивление.
-      </SpecsSection>
-
       <SpecsSection products={tvv3}>
         Калориферы КСк 3 изготавливаются с тремя рядами теплоотдающих элементов.
         Наиболее экономичный вариант с хорошими теплотехническими
@@ -159,6 +153,6 @@ export default function KaloriferyTVVPage() {
           исполнение; ХЛ - климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
-    </article>
+    </>
   );
 }
