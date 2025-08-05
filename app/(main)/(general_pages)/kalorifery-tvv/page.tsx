@@ -7,8 +7,6 @@ import { sortProducts } from "@/lib/utils";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import SpecsSection from "@/components/general_pages/productLinks";
-import SpecsSectionContent from "@/components/general_pages/productLinks";
 import ProductLinks from "@/components/general_pages/productLinks";
 
 export const metadata: Metadata = {
