@@ -7,7 +7,7 @@ import { sortProducts } from "@/lib/utils";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import SpecsSection from "@/components/general_pages/specsSection";
+import ProductLinks from "@/components/general_pages/productLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КПСк",
@@ -140,24 +140,36 @@ export default function KaloriferyKPSKPage() {
         />
       </section>
 
-      <SpecsSection products={kpsk2}>
-        Калориферы КПСк 2 паровые изготавливаются с двумя рядами теплопередающих
-        элементов. Применяются для нагрева воздуха на небольшую разницу
-        температур. Низкое аэродинамическое сопротивление.
-      </SpecsSection>
+      <section>
+        <Heading lvl={3} text="Технические характеристики калориферов КПСк 2" />
+        <ProductParagraph>
+          Калориферы КПСк 2 паровые изготавливаются с двумя рядами
+          теплопередающих элементов. Применяются для нагрева воздуха на
+          небольшую разницу температур. Низкое аэродинамическое сопротивление.
+        </ProductParagraph>
+        <ProductLinks products={kpsk2} />
+      </section>
 
-      <SpecsSection products={kpsk3}>
-        Калориферы КПСк 3 изготавливаются с тремя рядами теплопередающих
-        элементов. Наиболее экономичный вариант с хорошими теплотехническими
-        характеристиками.
-      </SpecsSection>
+      <section>
+        <Heading lvl={3} text="Технические характеристики калориферов КПСк 3" />
+        <ProductParagraph>
+          Калориферы КПСк 3 изготавливаются с тремя рядами теплопередающих
+          элементов. Наиболее экономичный вариант с хорошими теплотехническими
+          характеристиками.
+        </ProductParagraph>
+        <ProductLinks products={kpsk3} />
+      </section>
 
-      <SpecsSection products={kpsk4}>
-        Калориферы КПСк 4 изготавливаются с четырьмя рядами теплопередающих
-        элементов. Наибольшая тепловая мощность, качественный обогрев с высокой
-        разницей температур на входе и выходе из калорифера. Увеличенное
-        аэродинамическое сопротивление.
-      </SpecsSection>
+      <section>
+        <Heading lvl={3} text="Технические характеристики калориферов КПСк 4" />
+        <ProductParagraph>
+          Калориферы КПСк 4 изготавливаются с четырьмя рядами теплопередающих
+          элементов. Наибольшая тепловая мощность, качественный обогрев с
+          высокой разницей температур на входе и выходе из калорифера.
+          Увеличенное аэродинамическое сопротивление.
+        </ProductParagraph>
+        <ProductLinks products={kpsk4} />
+      </section>
 
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КПСк" />
