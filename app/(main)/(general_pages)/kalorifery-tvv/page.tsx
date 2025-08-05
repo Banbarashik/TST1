@@ -21,6 +21,8 @@ export default function KaloriferyTVVPage() {
   const products = productData
     .filter((p) => p.categories.includes("tvv"))
     .sort((a, b) => sortProducts(a.name, b.name));
+  const tvv3 = products.filter((p) => p.rows === 3);
+  const tvv4 = products.filter((p) => p.rows === 4);
 
   return (
     <>
@@ -106,7 +108,7 @@ export default function KaloriferyTVVPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={products} />
+        <ProductLinks products={tvv3} />
         <ProductParagraph>
           Водяные воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -116,6 +118,7 @@ export default function KaloriferyTVVPage() {
           модели и номера водяного калорифера серии ТВВ, варьируется от 2500 до
           25000 м3/час, от 55 до 725 кВт.
         </ProductParagraph>
+        <ProductLinks products={tvv4} />
         <Image
           src="/img/general_pages/kalorifery_vodianye_tvv.png"
           alt="Калорифер для низких температурных режимов"

@@ -21,6 +21,8 @@ export default function KaloriferyKPPage() {
   const products = productData
     .filter((p) => p.categories.includes("kp"))
     .sort((a, b) => sortProducts(a.name, b.name));
+  const kp3 = products.filter((p) => p.rows === 3);
+  const kp4 = products.filter((p) => p.rows === 4);
 
   return (
     <>
@@ -117,7 +119,7 @@ export default function KaloriferyKPPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={products} />
+        <ProductLinks products={kp3} />
         <ProductParagraph>
           Паровые воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -127,6 +129,7 @@ export default function KaloriferyKPPage() {
           модели и номера парового калорифера серии КП, варьируется от 2500 до
           25000 м3/час, от 70 до 720 кВт.
         </ProductParagraph>
+        <ProductLinks products={kp4} />
       </section>
 
       <section>
