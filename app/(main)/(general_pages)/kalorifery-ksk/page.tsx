@@ -1,14 +1,11 @@
 import { productData } from "@/data/products";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { sortProducts } from "@/lib/utils";
 
-import { Button } from "@/components/ui/button";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
-
 import ProductLink from "@/components/general_pages/productLink";
 
 export default function KaloriferyKSKPage() {
@@ -159,9 +156,14 @@ export default function KaloriferyKSKPage() {
 }
 
 function SpecsSection({ products, children }) {
+  const { series, rows } = products[0];
+
   return (
     <section>
-      <Heading lvl={3} text="Технические характеристики калориферов КСк 4" />
+      <Heading
+        lvl={3}
+        text={`Технические характеристики калориферов ${series} ${rows}`}
+      />
       <ProductParagraph>{children}</ProductParagraph>
       <ul className="flex flex-wrap gap-4">
         {products.map((p) => (
