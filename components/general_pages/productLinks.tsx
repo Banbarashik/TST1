@@ -27,7 +27,7 @@ function ProductLink({ product }) {
       <Link href={id}>
         <span>{name}</span>
         <span>
-          {airPower} м<sup>3</sup>/ч; {heatPower} кВт
+          {airPower} м<sup>3</sup>/ч{heatPower ? `; ${heatPower} кВт` : ""}
         </span>
       </Link>
     </Button>
