@@ -79,7 +79,7 @@ export default function KaloriferyKFBAPage() {
           соединением, связывающим воедино все элементы гидравлического тракта
           многоходового воздухонагревателя КФБ-А. Для подачи и отвода
           теплоносителя предназначены патрубки{" "}
-          <span className="text-primary-dark">(4)</span>. Съемные боковые щитки
+          <span className="text-primary-dark">(4)</span>. Съемные боковые щитки{" "}
           <span className="text-primary-dark">(5)</span> крепятся к торцам
           трубных решеток болтами. Простой демонтаж щитков позволяет образовать
           весьма значительную сплошную поверхность нагрева из нескольких
@@ -169,13 +169,22 @@ export default function KaloriferyKFBAPage() {
 
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КФБ-А М" />
-        <Image
-          src="/img/general_pages/kalorifery_kfb_vodianye_gabaritnye_razmery.png"
-          alt="Технические характеристики водяных калориферов КФБ"
-          title="Габаритные размеры водяных калориферов КФБ-А"
-          width={968}
-          height={1}
-        />
+        <div className="flex">
+          <Image
+            src="/img/general_pages/kalorifery_vodianye_kfb_blok.png"
+            alt=""
+            title=""
+            width={484}
+            height={1}
+          />
+          <Image
+            src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
+            alt=""
+            title=""
+            width={484}
+            height={1}
+          />
+        </div>
         <iframe
           src="/legacy/table-kalorifery-kfb-a.html"
           title="Калориферы КФБ-А3 М Калориферы КФБ-А4 М"
