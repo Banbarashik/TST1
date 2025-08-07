@@ -19,7 +19,7 @@ function ProductLink({ product }) {
 
   return (
     <Button
-      className="bg-accent-background flex flex-col items-center"
+      className="flex flex-col items-center bg-[#e5eaeb]"
       variant="outline"
       size="content"
       asChild
