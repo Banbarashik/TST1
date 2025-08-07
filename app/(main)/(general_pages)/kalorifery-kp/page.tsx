@@ -57,14 +57,14 @@ export default function KaloriferyKPPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_vodianoi_tvv_komplektatciia.png"
+            src="/img/general_pages/kalorifer_parovoi_kp_komplektatciia.png"
             alt="Производство паровых калориферов КП"
             title="Конструкция парового калорифера КП"
             width={484}
             height={1}
           />
           <Image
-            src="/img/general_pages/kalorifer_vodianoi_tvv.png"
+            src="/img/general_pages/kalorifer_parovoi_kp.png"
             alt="Паровой воздухонагреватель ВНП 113"
             title="Калорифер КП паровой"
             width={484}

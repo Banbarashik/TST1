@@ -47,7 +47,7 @@ export default function KaloriferyTVVPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_vodianoi_ksk_komplektatciia.png"
+            src="/img/general_pages/kalorifer_vodianoi_ tvv_komplektatciia.png"
             alt="Производство водяных калориферов ТВВ"
             title="Конструкция водяного калорифера ТВВ"
             width={484}

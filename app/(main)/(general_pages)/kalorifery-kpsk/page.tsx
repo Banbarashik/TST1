@@ -57,7 +57,7 @@ export default function KaloriferyKPSKPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_parovoi_kpsk_12_komplektatciia.png"
+            src="/img/general_pages/kalorifer_parovoi_kpsk_komplektatciia.png"
             alt="Производство калориферов КПСк"
             title="Конструкция парового калорифера КПСк"
             width={484}
