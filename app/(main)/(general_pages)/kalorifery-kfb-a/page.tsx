@@ -43,7 +43,7 @@ export default function KaloriferyKFBAPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_vodianoi_ksk_11_komplektatciia.png"
+            src="/img/general_pages/kalorifer_vodianoi_kfb_komplektatciia.png"
             alt="Производство водяных калориферов КФБ"
             title="Конструкция водяного калорифера КФБ"
             width={484}
@@ -113,6 +113,22 @@ export default function KaloriferyKFBAPage() {
           являются важным элементом в системе подогрева воздуха для
           проветривания горных выработок шахт и рудников.
         </ProductParagraph>
+        <div className="flex">
+          <Image
+            src="/img/general_pages/kalorifery_vodianye_kfb_blok.png"
+            alt="Калорифер для проветривания горных выработок"
+            title="Калориферная секция"
+            width={484}
+            height={1}
+          />
+          <Image
+            src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
+            title="Калориферная установка"
+            alt="Шахтовые калориферы"
+            width={484}
+            height={1}
+          />
+        </div>
       </section>
 
       <section>
@@ -169,22 +185,13 @@ export default function KaloriferyKFBAPage() {
 
       <section>
         <Heading lvl={2} text="Габаритные размеры калориферов КФБ-А М" />
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifery_vodianye_kfb_blok.png"
-            alt=""
-            title=""
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
-            alt=""
-            title=""
-            width={484}
-            height={1}
-          />
-        </div>
+        <Image
+          src="/img/general_pages/kalorifery_kfb_vodianye_gabaritnye_razmery.png"
+          alt="Технические характеристики водяных калориферов КФБ"
+          title="Габаритные размеры водяных калориферов КФБ-А"
+          width={968}
+          height={1}
+        />
         <iframe
           src="/legacy/table-kalorifery-kfb-a.html"
           title="Калориферы КФБ-А3 М Калориферы КФБ-А4 М"

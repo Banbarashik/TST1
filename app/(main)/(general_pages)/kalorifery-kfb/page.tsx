@@ -58,7 +58,7 @@ export default function KaloriferyKFBPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_parovoi_kpsk_12_komplektatciia.png"
+            src="/img/general_pages/kalorifer_parovoi_kfb_komplektatciia.png"
             alt="Производство паровых калориферов КФБ"
             title="Конструкция парового калорифера КФБ"
             width={484}
@@ -83,7 +83,7 @@ export default function KaloriferyKFBPage() {
           , расположенных для интенсификации теплопередачи в шахматном порядке.
           Монолитность каркаса обеспечивается двумя трубными решетками{" "}
           <span className="text-primary-dark">(2)</span>, изготовленными из
-          листовой стали толщиной 4 мм, и распределительно-сборными коллекторами
+          листовой стали толщиной 4 мм, и распределительно-сборными коллекторами{" "}
           <span className="text-primary-dark">(3)</span>.
         </ProductParagraph>
         <ProductParagraph>
