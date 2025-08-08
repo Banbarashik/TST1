@@ -54,15 +54,15 @@ export default function KaloriferyVodaPage() {
         <div className="flex">
           <Image
             src="/img/general_pages/kalorifer_pritochnyi_vodianoi.png"
-            alt="Водяной калорифер для приточной установки"
+            alt="Расчет водяного приточного калорифера"
             title="Приточный водяной калорифер"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_vodianoi_pritochnyi.png"
-            alt=""
-            title=""
+            alt="Водяной калорифер для приточной вентиляции"
+            title="Водяной калорифер для приточной установки"
             width={484}
             height={1}
           />
@@ -115,6 +115,13 @@ export default function KaloriferyVodaPage() {
           src="/legacy/table-kalorifery-voda-kpvs.html"
           title="Калориферы КПВС"
           className="h-82 w-full"
+        />
+        <Image
+          src="/img/general_pages/kalorifery_pritochnye_vodianye_chertez.png"
+          alt="Водяные приточные калориферы характеристики"
+          title="Водяные приточные калориферы размеры"
+          width={968}
+          height={1}
         />
       </section>
 

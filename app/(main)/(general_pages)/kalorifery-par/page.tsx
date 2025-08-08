@@ -56,15 +56,15 @@ export default function KaloriferyParPage() {
         <div className="flex">
           <Image
             src="/img/general_pages/kalorifer_pritochnyi_parovoi.png"
-            alt="Паровой калорифер для приточной установки"
+            alt="Расчет парового приточного калорифера"
             title="Приточный паровой калорифер"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_parovoi_pritochnyi.png"
-            alt="_"
-            title="_"
+            alt="Паровой калорифер для приточной вентиляции"
+            title="Паровой калорифер для приточной установки"
             width={484}
             height={1}
           />
@@ -116,6 +116,13 @@ export default function KaloriferyParPage() {
           src="/legacy/table-kalorifery-par-kpps.html"
           title="Калориферы КППС"
           className="h-82 w-full"
+        />
+        <Image
+          src="/img/general_pages/kalorifery_pritochnye_parovye_chertez.png"
+          alt="Паровые приточные калориферы характеристики"
+          title="Паровые приточные калориферы размеры"
+          width={968}
+          height={1}
         />
       </section>
 
