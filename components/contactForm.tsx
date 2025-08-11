@@ -1,5 +1,7 @@
 "use client";
 
+import { productData } from "@/data/products";
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -136,17 +138,18 @@ export default function ContactForm({
   }, [form, outOfContext]);
 
   // 7. Handle form submission
-  function onSubmit(/* values: z.infer<typeof formSchema> */) {
-    // Map product IDs to product names
-    /* const selectedProducts = products.filter((p) =>
-      values.product.includes(p.id),
-    );
-    const humanReadable = {
-      ...values,
-      product: selectedProducts.map((p) => p.name),
-    };
-    console.log(humanReadable); */
-    // send humanReadable instead of values
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Convert products to human-readable form
+    const readableProducts = values.products.map((p) => {
+      const product = productData.find((prod) => prod.id === p.id);
+      return {
+        name: product ? product.name : "Неизвестный товар",
+        amount: p.amount,
+      };
+    });
+
+    // Example: log or send this data
+    console.log("Selected products:", readableProducts);
 
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
