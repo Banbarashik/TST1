@@ -39,14 +39,13 @@ const formSchema = z.object({
         : "Некорректная электронная почта",
   }), // E-mail
   region: z.string().max(200), // Регион, город
-  products: z
-    .array(
-      z.object({
-        id: z.string(),
-        amount: z.number().min(1),
-      }),
-    )
-    .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
+  products: z.array(
+    z.object({
+      id: z.string(),
+      amount: z.number().min(1),
+    }),
+  ),
+  // .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
 });
 
@@ -119,15 +118,17 @@ export default function ContactForm({
 
   // 5. Sync form's product field with selection state
   React.useEffect(() => {
-    // Only sync when using context (not outOfContext)
-    if (!outOfContext) {
-      form.setValue("products", selectedProducts, {
+    form.setValue(
+      "products",
+      // Sync local state to form when outOfContext
+      !outOfContext ? selectedProducts : localSelectedProducts,
+      {
         shouldDirty: true,
         shouldTouch: true,
-      });
-    }
+      },
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedProducts, outOfContext]);
+  }, [selectedProducts, localSelectedProducts, outOfContext]);
 
   // 6. Save form data to localStorage on change (only when using context)
   React.useEffect(() => {
@@ -161,7 +162,7 @@ export default function ContactForm({
     });
 
     // sendEmail({ ...values, products: readableProducts });
-    console.log("submitted");
+    console.log({ ...values, products: readableProducts });
 
     // Clear product selection BEFORE resetting the form
     if (outOfContext) {
