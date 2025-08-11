@@ -13,6 +13,7 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 
 import { getTotalPrice } from "@/lib/totalPrice";
 import { loadFormData, removeFormData, saveFormData } from "@/lib/localStorage";
+import { sendEmail } from "@/lib/sendEmail";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -158,6 +159,8 @@ export default function ContactForm({
         amount: p.amount,
       };
     });
+
+    sendEmail({ ...values, products: readableProducts });
 
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
