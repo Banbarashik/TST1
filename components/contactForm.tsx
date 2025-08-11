@@ -160,7 +160,25 @@ export default function ContactForm({
       };
     });
 
-    sendEmail({ ...values, products: readableProducts });
+    // sendEmail({ ...values, products: readableProducts });
+    console.log("submitted");
+
+    // Clear product selection BEFORE resetting the form
+    if (outOfContext) {
+      setLocalSelectedProducts([]);
+    } else {
+      context?.set([]);
+    }
+
+    // Reset the form to its default values
+    form.reset({
+      username: "",
+      company: "",
+      email: "",
+      region: "",
+      products: [],
+      message: "",
+    });
 
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
