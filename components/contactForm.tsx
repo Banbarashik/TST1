@@ -49,6 +49,17 @@ const formSchema = z.object({
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
 });
 
+function findProductOrVariantById(products, id: string) {
+  for (const product of products) {
+    if (product.id === id) return product;
+    if (product.variants) {
+      const variant = product.variants.find((v) => v.id === id);
+      if (variant) return variant;
+    }
+  }
+  return null;
+}
+
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
 }) {
@@ -141,15 +152,12 @@ export default function ContactForm({
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Convert products to human-readable form
     const readableProducts = values.products.map((p) => {
-      const product = productData.find((prod) => prod.id === p.id);
+      const product = findProductOrVariantById(productData, p.id);
       return {
-        name: product ? product.name : "Неизвестный товар",
+        name: product.name,
         amount: p.amount,
       };
     });
-
-    // Example: log or send this data
-    console.log("Selected products:", readableProducts);
 
     // Optionally clear localStorage after successful submit:
     if (!outOfContext && typeof window !== "undefined") {
