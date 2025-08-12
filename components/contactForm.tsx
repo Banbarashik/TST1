@@ -29,6 +29,32 @@ import {
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
 
+// Allowed file types/extensions
+const ALLOWED_TYPES = [
+  "application/pdf",
+  "image/jpeg",
+  "image/png",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xlsx
+  "application/vnd.ms-excel.sheet.macroEnabled.12", // .xlsm
+  "application/vnd.ms-excel", // .xls
+  "application/x-rar-compressed", // .rar
+  "application/zip", // .zip
+];
+const ALLOWED_EXTENSIONS = [
+  ".pdf",
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".docx",
+  ".xlsx",
+  ".xlsm",
+  ".xls",
+  ".rar",
+  ".zip",
+];
+const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB
+
 const formSchema = z.object({
   username: z.string().max(200), // Имя
   company: z.string().max(200), // Название организации
@@ -231,24 +257,50 @@ export default function ContactForm({
     }
   }
 
-  // Handler for file input change
+  // Handler for file input change with validation
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) return;
-    // Add new files to the list, avoiding duplicates by name and size
-    setSelectedFiles((prev) => {
-      const newFiles = Array.from(files).filter(
-        (file) =>
-          !prev.some(
-            (f) =>
-              f.name === file.name &&
-              f.size === file.size &&
-              f.lastModified === file.lastModified,
-          ),
-      );
-      return [...prev, ...newFiles];
+
+    let errorMsg = "";
+    const validFiles: File[] = [];
+
+    Array.from(files).forEach((file) => {
+      // Check file size
+      if (file.size > MAX_FILE_SIZE) {
+        errorMsg = `Файл "${file.name}" превышает 25 МБ.`;
+        return;
+      }
+      // Check file type by MIME or extension
+      const ext = file.name.slice(file.name.lastIndexOf(".")).toLowerCase();
+      if (
+        !ALLOWED_TYPES.includes(file.type) &&
+        !ALLOWED_EXTENSIONS.includes(ext)
+      ) {
+        errorMsg = `Недопустимый тип файла: "${file.name}".`;
+        return;
+      }
+      validFiles.push(file);
     });
-    // Reset input so the same file can be selected again if needed
+
+    if (errorMsg) {
+      setError(errorMsg);
+    } else {
+      setError(null);
+      setSelectedFiles((prev) => {
+        const newFiles = validFiles.filter(
+          (file) =>
+            !prev.some(
+              (f) =>
+                f.name === file.name &&
+                f.size === file.size &&
+                f.lastModified === file.lastModified,
+            ),
+        );
+        return [...prev, ...newFiles];
+      });
+    }
+
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
