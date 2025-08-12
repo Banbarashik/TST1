@@ -54,6 +54,7 @@ const ALLOWED_EXTENSIONS = [
   ".zip",
 ];
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB
+const MAX_FILES = 10; // Maximum number of files
 
 const formSchema = z.object({
   username: z.string().max(200), // Имя
@@ -257,13 +258,20 @@ export default function ContactForm({
     }
   }
 
-  // Handler for file input change with validation
+  // Handler for file input change with validation and file count limit
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) return;
 
     let errorMsg = "";
     const validFiles: File[] = [];
+
+    // Check if adding these files would exceed the limit
+    if (selectedFiles.length + files.length > MAX_FILES) {
+      setError(`Можно прикрепить не более ${MAX_FILES} файлов.`);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
 
     Array.from(files).forEach((file) => {
       // Check file size
@@ -306,7 +314,14 @@ export default function ContactForm({
 
   // Handler for removing a file from the list
   const handleRemoveFile = (index: number) => {
-    setSelectedFiles((prev) => prev.filter((_, i) => i !== index));
+    setSelectedFiles((prev) => {
+      const updated = prev.filter((_, i) => i !== index);
+      // Clear error if file count is now within the limit
+      if (updated.length <= MAX_FILES) {
+        setError(null);
+      }
+      return updated;
+    });
   };
 
   // Handler for clearing all files
