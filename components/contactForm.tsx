@@ -68,6 +68,9 @@ export default function ContactForm({
 
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
+  // Add state for selected files
+  const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
+
   const [loading, setLoading] = React.useState(false);
   const [sent, setSent] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -176,9 +179,9 @@ export default function ContactForm({
 
     // Read files as base64
     let attachments = [];
-    if (values.files && values.files.length > 0) {
+    if (selectedFiles.length > 0) {
       attachments = await Promise.all(
-        Array.from(values.files).map(async (file: File) => {
+        selectedFiles.map(async (file: File) => {
           const buffer = await file.arrayBuffer();
           const base64 = Buffer.from(buffer).toString("base64");
           return {
@@ -211,7 +214,8 @@ export default function ContactForm({
         files: undefined,
       });
 
-      // Clear file input manually
+      // Clear file input and file list
+      setSelectedFiles([]);
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
@@ -226,6 +230,38 @@ export default function ContactForm({
       setLoading(false);
     }
   }
+
+  // Handler for file input change
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+    // Add new files to the list, avoiding duplicates by name and size
+    setSelectedFiles((prev) => {
+      const newFiles = Array.from(files).filter(
+        (file) =>
+          !prev.some(
+            (f) =>
+              f.name === file.name &&
+              f.size === file.size &&
+              f.lastModified === file.lastModified,
+          ),
+      );
+      return [...prev, ...newFiles];
+    });
+    // Reset input so the same file can be selected again if needed
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
+  // Handler for removing a file from the list
+  const handleRemoveFile = (index: number) => {
+    setSelectedFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  // Handler for clearing all files
+  const handleClearFiles = () => {
+    setSelectedFiles([]);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
 
   // 8. Render the form
   return (
@@ -322,32 +358,48 @@ export default function ContactForm({
             <FormField
               control={form.control}
               name="files"
-              render={({ field }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel>Вложения</FormLabel>
                   <FormControl>
-                    <div className="flex items-center gap-2">
-                      <Input
-                        type="file"
-                        multiple
-                        accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
-                        onChange={(e) => {
-                          field.onChange(e.target.files);
-                        }}
-                        ref={fileInputRef}
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() => {
-                          form.setValue("files", undefined);
-                          if (fileInputRef.current) {
-                            fileInputRef.current.value = "";
-                          }
-                        }}
-                      >
-                        Очистить
-                      </Button>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center gap-2">
+                        <Input
+                          type="file"
+                          multiple
+                          accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
+                          onChange={handleFileChange}
+                          ref={fileInputRef}
+                        />
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={handleClearFiles}
+                        >
+                          Очистить
+                        </Button>
+                      </div>
+                      {/* Show list of selected files */}
+                      {selectedFiles.length > 0 && (
+                        <ul className="mt-2 space-y-1">
+                          {selectedFiles.map((file, idx) => (
+                            <li
+                              key={file.name + file.size + file.lastModified}
+                              className="flex items-center gap-2"
+                            >
+                              <span className="truncate">{file.name}</span>
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="ghost"
+                                onClick={() => handleRemoveFile(idx)}
+                              >
+                                ✕
+                              </Button>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </FormControl>
                   <FormMessage />
