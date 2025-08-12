@@ -5,12 +5,16 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData) {
-  const { data } = await resend.emails.send({
-    from: "next@zao-tst.ru",
-    to: "odinokiyskitalec@gmail.com",
-    subject: "Test",
-    html: `<p>${formData.email}<p>`,
-  });
+  try {
+    const { error } = await resend.emails.send({
+      from: "next@zao-tst.ru",
+      to: "odinokiyskitalec@gmail.com",
+      subject: "Test",
+      html: `<p>${formData.email}<p>`,
+    });
 
-  console.log(data);
+    if (error) throw new Error(error.message);
+  } catch {
+    throw new Error("Ошибка отправки. Попробуйте еще раз.");
+  }
 }

@@ -63,9 +63,13 @@ function findProductOrVariantById(products, id: string) {
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
 }) {
-  const context = useProductSelection();
-
   const formId = useId();
+
+  const [loading, setLoading] = React.useState(false);
+  const [sent, setSent] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+
+  const context = useProductSelection();
 
   const [localSelectedProducts, setLocalSelectedProducts] = React.useState<
     SelectedProduct[]
@@ -153,7 +157,11 @@ export default function ContactForm({
   }, [form, outOfContext]);
 
   // 7. Handle form submission
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
+    setError(null);
+    setSent(false);
+
     // Convert products to human-readable form
     const readableProducts = values.products.map((p) => {
       const product = findProductOrVariantById(productData, p.id);
@@ -163,29 +171,37 @@ export default function ContactForm({
       };
     });
 
-    // sendEmail({ ...values, products: readableProducts });
-    console.log({ ...values, products: readableProducts });
+    sendEmail({ ...values, products: readableProducts });
 
-    // Clear product selection BEFORE resetting the form
-    if (outOfContext) {
-      setLocalSelectedProducts([]);
-    } else {
-      context?.set([]);
-    }
+    try {
+      await sendEmail({ ...values, products: readableProducts });
+      setSent(true);
 
-    // Reset the form to its default values
-    form.reset({
-      username: "",
-      company: "",
-      email: "",
-      region: "",
-      products: [],
-      message: "",
-    });
+      // Clear product selection BEFORE resetting the form
+      if (outOfContext) {
+        setLocalSelectedProducts([]);
+      } else {
+        context?.set([]);
+      }
 
-    // Optionally clear localStorage after successful submit:
-    if (!outOfContext && typeof window !== "undefined") {
-      removeFormData();
+      // Reset the form to its default values
+      form.reset({
+        username: "",
+        company: "",
+        email: "",
+        region: "",
+        products: [],
+        message: "",
+      });
+
+      // Optionally clear localStorage after successful submit:
+      if (!outOfContext && typeof window !== "undefined") {
+        removeFormData();
+      }
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -283,10 +299,16 @@ export default function ContactForm({
             />
           </form>
         </Form>
+        {sent && (
+          <div className="font-bold text-green-600">
+            Заявка успешно отправлена!
+          </div>
+        )}
+        {error && <div className="font-bold text-red-600">{error}</div>}
       </CardContent>
       <CardFooter className="flex">
-        <Button type="submit" form={formId}>
-          Оставить заявку
+        <Button type="submit" form={formId} disabled={loading}>
+          {loading ? "Отправка..." : "Оставить заявку"}
         </Button>
         {selectedProducts.length > 0 && (
           <p className="ml-auto">
