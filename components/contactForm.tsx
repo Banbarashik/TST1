@@ -2,7 +2,7 @@
 
 import { productData } from "@/data/products";
 
-import React from "react";
+import React, { useId } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
@@ -64,6 +64,8 @@ export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
 }) {
   const context = useProductSelection();
+
+  const formId = useId();
 
   const [localSelectedProducts, setLocalSelectedProducts] = React.useState<
     SelectedProduct[]
@@ -193,7 +195,7 @@ export default function ContactForm({
       <CardContent>
         <Form {...form}>
           <form
-            id="contactForm"
+            id={formId}
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-8"
           >
@@ -283,7 +285,7 @@ export default function ContactForm({
         </Form>
       </CardContent>
       <CardFooter className="flex">
-        <Button type="submit" form="contactForm">
+        <Button type="submit" form={formId}>
           Оставить заявку
         </Button>
         {selectedProducts.length > 0 && (
