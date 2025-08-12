@@ -219,7 +219,7 @@ export default function ContactForm({
     }
 
     try {
-      // await sendEmail({ ...values, products: readableProducts, attachments });
+      await sendEmail({ ...values, products: readableProducts, attachments });
       setSent(true);
 
       // Clear product selection BEFORE resetting the form
@@ -419,7 +419,7 @@ export default function ContactForm({
                         <Input
                           type="file"
                           multiple
-                          accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
+                          accept={ALLOWED_EXTENSIONS.join(",")}
                           onChange={handleFileChange}
                           ref={fileInputRef}
                         />
