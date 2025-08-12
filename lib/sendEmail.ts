@@ -11,6 +11,10 @@ export async function sendEmail(formData) {
       to: "odinokiyskitalec@gmail.com",
       subject: "Test",
       html: `<p>${formData.email}<p>`,
+      attachments: formData.attachments?.map((file) => ({
+        filename: file.filename,
+        content: file.content,
+      })),
     });
 
     if (error) throw new Error(error.message);

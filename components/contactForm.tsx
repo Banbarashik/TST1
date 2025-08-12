@@ -47,6 +47,7 @@ const formSchema = z.object({
   ),
   // .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
+  files: z.any().optional(),
 });
 
 function findProductOrVariantById(products, id: string) {
@@ -171,10 +172,23 @@ export default function ContactForm({
       };
     });
 
-    sendEmail({ ...values, products: readableProducts });
+    // Read files as base64
+    let attachments = [];
+    if (values.files && values.files.length > 0) {
+      attachments = await Promise.all(
+        Array.from(values.files).map(async (file: File) => {
+          const buffer = await file.arrayBuffer();
+          const base64 = Buffer.from(buffer).toString("base64");
+          return {
+            filename: file.name,
+            content: base64,
+          };
+        }),
+      );
+    }
 
     try {
-      await sendEmail({ ...values, products: readableProducts });
+      await sendEmail({ ...values, products: readableProducts, attachments });
       setSent(true);
 
       // Clear product selection BEFORE resetting the form
@@ -199,7 +213,7 @@ export default function ContactForm({
         removeFormData();
       }
     } catch (error) {
-      setError(error);
+      setError(error.message);
     } finally {
       setLoading(false);
     }
@@ -292,6 +306,26 @@ export default function ContactForm({
                   <FormLabel>Сообщение</FormLabel>
                   <FormControl>
                     <Textarea {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="files"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Вложения</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="file"
+                      multiple
+                      accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
+                      onChange={(e) => {
+                        field.onChange(e.target.files);
+                      }}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
