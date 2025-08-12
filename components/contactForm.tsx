@@ -196,13 +196,12 @@ export default function ContactForm({
     setSent(false);
 
     // Convert products to human-readable form
-    const readableProducts = values.products.map((p) => {
-      const product = findProductOrVariantById(productData, p.id);
-      return {
-        name: product.name,
-        amount: p.amount,
-      };
-    });
+    const readableProducts = values.products
+      .map((p) => {
+        const product = findProductOrVariantById(productData, p.id);
+        return `${product.name}, количество: ${p.amount}`;
+      })
+      .join("; ");
 
     // Read files as base64
     let attachments = [];
