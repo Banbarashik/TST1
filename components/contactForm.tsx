@@ -66,6 +66,8 @@ export default function ContactForm({
 }) {
   const formId = useId();
 
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
   const [loading, setLoading] = React.useState(false);
   const [sent, setSent] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -188,7 +190,7 @@ export default function ContactForm({
     }
 
     try {
-      await sendEmail({ ...values, products: readableProducts, attachments });
+      // await sendEmail({ ...values, products: readableProducts, attachments });
       setSent(true);
 
       // Clear product selection BEFORE resetting the form
@@ -206,7 +208,13 @@ export default function ContactForm({
         region: "",
         products: [],
         message: "",
+        files: undefined,
       });
+
+      // Clear file input manually
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
 
       // Optionally clear localStorage after successful submit:
       if (!outOfContext && typeof window !== "undefined") {
@@ -318,14 +326,29 @@ export default function ContactForm({
                 <FormItem>
                   <FormLabel>Вложения</FormLabel>
                   <FormControl>
-                    <Input
-                      type="file"
-                      multiple
-                      accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
-                      onChange={(e) => {
-                        field.onChange(e.target.files);
-                      }}
-                    />
+                    <div className="flex items-center gap-2">
+                      <Input
+                        type="file"
+                        multiple
+                        accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.xlsm,.xls,.rar,.zip"
+                        onChange={(e) => {
+                          field.onChange(e.target.files);
+                        }}
+                        ref={fileInputRef}
+                      />
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => {
+                          form.setValue("files", undefined);
+                          if (fileInputRef.current) {
+                            fileInputRef.current.value = "";
+                          }
+                        }}
+                      >
+                        Очистить
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
