@@ -9,7 +9,6 @@ import ProductCard from "@/components/catalog/productCard";
 const defaultCategory = {
   title: "Вся продукция",
   slug: "all",
-  description: [""],
 };
 
 export default async function Catalog({
@@ -17,17 +16,14 @@ export default async function Catalog({
 }: {
   params: { category: string };
 }) {
-  const { category: categorySlug } = await params;
+  const { category: slug } = await params;
 
-  const { title: categoryTitle, description: categoryDescription } =
-    findCategoryBySlug(categorySlug, categoryTree) ?? defaultCategory;
+  const { title } = findCategoryBySlug(slug, categoryTree) ?? defaultCategory;
 
   const filteredProducts =
-    categorySlug === "all"
+    slug === "all"
       ? productData
-      : productData.filter((product) =>
-          product.categories?.includes(categorySlug),
-        );
+      : productData.filter((product) => product.categories?.includes(slug));
 
   const sortedProducts = filteredProducts.sort((a, b) =>
     sortProducts(a.name, b.name),
@@ -42,17 +38,10 @@ export default async function Catalog({
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold uppercase">{categoryTitle}</h1>
+      <h1 className="mb-6 text-2xl font-bold uppercase">{title}</h1>
       <div className="mb-20 grid grid-cols-3 gap-5">
         {sortedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-      <div>
-        {categoryDescription?.map((desc) => (
-          <p key={desc} className="text-lg">
-            {desc}
-          </p>
         ))}
       </div>
     </div>
