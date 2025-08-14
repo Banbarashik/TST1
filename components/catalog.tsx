@@ -121,49 +121,38 @@ const productCategories = [
 
 export default function Catalog() {
   return (
-    <div className="my-24">
-      <p className="mb-10">
-        Микроклимат производственных помещений характеризуется рядом факторов,
-        среди которых температура и влажность воздуха, скорость его движения. В
-        холодный период года, ввиду разницы температуры снаружи и внутри здания,
-        теплопотери помещения через ограждающие конструкции очень значительны.
-        Для создания и поддержания комфортных тепловых условий для работы
-        необходим обогрев промышленных корпусов с помощью отопительного
-        оборудования.
-      </p>
-      <ul className="flex flex-col items-center gap-10">
-        {productCategories.map(function (category) {
-          return (
-            <li key={category.name} className="flex w-full flex-col">
-              <p className="text-2xl font-bold uppercase">{category.name}</p>
+    <ul className="flex flex-col items-center gap-10">
+      {productCategories.map(function (category) {
+        return (
+          <li key={category.name} className="flex w-full flex-col">
+            <h2 className="text-2xl font-bold uppercase">{category.name}</h2>
 
-              <ul className="mt-6 mb-6 flex gap-12">
-                {category.items.map(function (product) {
-                  return (
-                    <li key={product.name} className="w-full">
-                      <Link
-                        href={product.url}
-                        className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border px-10 pt-5 pb-5 shadow-sm"
-                      >
-                        <Image
-                          src={product.img}
-                          alt={product.name}
-                          width={750}
-                          height={750}
-                        />
-                        <p className="font-bold tracking-wide uppercase">
-                          {product.name}
-                        </p>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <p>{category.description}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+            <ul className="mt-6 mb-6 flex gap-12">
+              {category.items.map(function (product) {
+                return (
+                  <li key={product.name} className="w-full">
+                    <Link
+                      href={product.url}
+                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border px-10 pt-5 pb-5 shadow-sm"
+                    >
+                      <Image
+                        src={product.img}
+                        alt={product.name}
+                        width={750}
+                        height={750}
+                      />
+                      <p className="font-bold tracking-wide uppercase">
+                        {product.name}
+                      </p>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <p>{category.description}</p>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
