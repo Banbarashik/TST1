@@ -1,9 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import Hero from "@/components/hero";
 import ContactForm from "@/components/contactForm";
 import Catalog from "@/components/catalog";
+
+export const metadata: Metadata = {
+  title: "Производство воздушно-отопительного оборудования",
+  description:
+    "Предприятие Т.С.Т. - производитель воздушно-отопительного оборудования. Производство водяных, паровых и электрических калориферов, отопительных агрегатов воздушного отопления",
+  keywords:
+    "водяное воздушное отопление,паровое воздушное отопление,электрическое воздушное отопление,промышленное воздушное отопление,расчет воздушного отопления,воздушное отопление производственного помещения,агрегат воздушного отопления,калорифер воздушного отопления,воздухонагреватель воздушного отопления,калорифер для вентиляции",
+};
 
 export default function Home() {
   return (
