@@ -126,7 +126,6 @@ export default function Catalog() {
         return (
           <li key={category.name} className="flex w-full flex-col">
             <h2 className="text-2xl font-bold uppercase">{category.name}</h2>
-
             <ul className="mt-6 mb-6 flex gap-12">
               {category.items.map(function (product) {
                 return (
@@ -149,6 +148,7 @@ export default function Catalog() {
                 );
               })}
             </ul>
+            <p>{category.description}</p>
           </li>
         );
       })}
