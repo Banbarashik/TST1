@@ -337,7 +337,7 @@ export default function ContactForm({
           <form
             id={formId}
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8"
+            className="space-y-6"
           >
             <FormField
               control={form.control}
