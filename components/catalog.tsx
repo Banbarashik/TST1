@@ -149,7 +149,6 @@ export default function Catalog() {
                 );
               })}
             </ul>
-            <p>{category.description}</p>
           </li>
         );
       })}
