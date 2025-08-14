@@ -331,7 +331,7 @@ export default function ContactForm({
 
   // 8. Render the form
   return (
-    <Card className="w-full max-w-2xl">
+    <Card className="max-h-screen w-full max-w-2xl overflow-y-scroll">
       <CardContent>
         <Form {...form}>
           <form
