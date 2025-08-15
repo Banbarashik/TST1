@@ -9,9 +9,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/:slug*.html",
-        destination: "/:slug*",
-        permanent: true, // 308 or 301, both are fine for SEO
+        source: "/:slug((?!legacy/).+).html", // named param :slug with negative lookahead
+        destination: "/:slug",
+        permanent: true,
       },
     ];
   },
