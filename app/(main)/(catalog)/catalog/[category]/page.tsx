@@ -23,7 +23,8 @@ export default async function Catalog({
   params: { category: string };
   searchParams?: { page?: string };
 }) {
-  const { category: slug } = params;
+  const query = await searchParams;
+  const { category: slug } = await params;
   const { title } = findCategoryBySlug(slug, categoryTree) ?? defaultCategory;
 
   const filteredProducts =
@@ -35,7 +36,7 @@ export default async function Catalog({
     sortProducts(a.name, b.name),
   );
 
-  const page = Number(searchParams?.page) || 1;
+  const page = Number(query?.page) || 1;
   const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
   const startIdx = (page - 1) * PRODUCTS_PER_PAGE;
   const paginatedProducts = sortedProducts.slice(
