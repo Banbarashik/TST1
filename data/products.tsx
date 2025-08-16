@@ -133,7 +133,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calorifier: "ТВВ4",
     categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
     img: "/img/agregaty/avo/agregat_avo_hl_v.png",
-    drawing: "/",
+    drawing: "/img/agregaty/avo/agregat_otopitelnyi_avo_vodianoi_razmery.png",
     tableWithTabs: "/legacy/table-avo-hl-tvv4.html",
     variants: [
       {
@@ -198,8 +198,9 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "steam",
     calorifier: "КП4",
     categories: ["agregaty", "parovy-agregaty", "avo", "avo-kp"],
-    img: "/",
-    drawing: "/",
+    img: "/img/agregaty/avo/agregat_avo_hl_p.png",
+    drawing: "/img/agregaty/avo/agregat_otopitelnyi_avo_parovoi_razmery.png",
+    tableWithTabs: "/legacy/table-avo-hl-kp4.html",
     variants: [
       {
         id: "avo-kp-3-55-01",
@@ -434,7 +435,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       title: "Отопительный агрегат СТД-300 твв водяной",
     },
     drawing:
-      "/img/agregaty/std300/agregat_otopitelnyi_std-300_hl_vodianoi_razmery.png",
+      "/img/agregaty/std300/agregat_otopitelnyi_std-300_vodianoi_razmery.png",
     tableWithTabs: "/legacy/table-std-300-hl-tvv.html",
     categories: ["agregaty", "vodiany-agregaty", "std300-hl", "std300-v"],
     variants: [
@@ -448,7 +449,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         heatPower: 345,
         price: 176399,
         img: {
-          url: "/img/agregaty/std300/agregat_std-300_hl_v.png",
+          url: "/img/agregaty/std300-hl/agregat_std-300_hl_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 ТВВ3",
           title: "Отопительный агрегат СТД-300 ТВВ3 ХЛ",
         },
@@ -479,7 +480,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         heatPower: 425,
         price: 200495,
         img: {
-          url: "/img/agregaty/std300/agregat_std-300_hl_v.png",
+          url: "/img/agregaty/std300-hl/agregat_std-300_hl_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 ТВВ4",
           title: "Отопительный агрегат СТД-300 ТВВ4 ХЛ",
         },
@@ -516,7 +517,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       title: "Отопительный агрегат СТД-300 кп паровой",
     },
     drawing:
-      "/img/agregaty/std300/agregat_otopitelnyi_std-300_hl_parovoi_razmery.png",
+      "/img/agregaty/std300/agregat_otopitelnyi_std-300_parovoi_razmery.png",
     tableWithTabs: "/legacy/table-std-300-hl-kp.html",
     categories: ["agregaty", "parovy-agregaty", "std300-hl", "std300-p"],
     variants: [
@@ -530,7 +531,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         heatPower: 385,
         price: 176399,
         img: {
-          url: "/img/agregaty/std300/agregat_std-300_hl_p.png",
+          url: "/img/agregaty/std300-hl/agregat_std-300_hl_p.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 КП3",
           title: "Отопительный агрегат СТД-300 КП3 ХЛ",
         },
@@ -553,7 +554,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         heatPower: 424,
         price: 200495,
         img: {
-          url: "/img/agregaty/std300/agregat_std-300_hl_p.png",
+          url: "/img/agregaty/std300-hl/agregat_std-300_hl_p.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 КП4",
           title: "Отопительный агрегат СТД-300 КП4 ХЛ",
         },
