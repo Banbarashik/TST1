@@ -28,6 +28,7 @@ export default function ProductCard({
             alt={product.img?.alt ? product.img.alt : product.name}
             width={300}
             height={300}
+            className="mx-auto"
           />
           <h2 className="mb-1 text-lg font-semibold">{product.name}</h2>
         </Link>
