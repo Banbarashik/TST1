@@ -169,7 +169,8 @@ th {
 .table-with-bold-cells tr:nth-child(2) td:nth-child(n + 2),
 .table-with-bold-cells tr:first-child td:nth-child(2),
 .table-with-bold-cells tr:nth-child(3) td:nth-child(n + 2),
-.kpsk-table tr:nth-child(4) td:nth-child(n + 2) {
+.kpsk-table tr:nth-child(4) td:nth-child(n + 2),
+.avo-hl-kp tr:nth-child(5) td:nth-child(n + 2) {
   font-weight: 700;
 }
 
@@ -202,4 +203,5 @@ th {
 .coolant-graph {
   background-color: rgb(204, 204, 204);
   color: #b04322;
+  font-weight: bold;
 }
