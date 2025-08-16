@@ -132,7 +132,11 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "water",
     calorifier: "ТВВ4",
     categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
-    img: "/img/agregaty/avo/agregat_avo_hl_v.png",
+    img: {
+      url: "/img/agregaty/avo/agregat_avo_hl_v.png",
+      alt: "Водяные воздушно-отопительные агрегаты АВО ХЛ",
+      title: "Отопительные агрегаты АВО ХЛ водяные",
+    },
     drawing: "/img/agregaty/avo/agregat_otopitelnyi_avo_vodianoi_razmery.png",
     tableWithTabs: "/legacy/table-avo-hl-tvv4.html",
     variants: [
@@ -198,7 +202,11 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "steam",
     calorifier: "КП4",
     categories: ["agregaty", "parovy-agregaty", "avo", "avo-kp"],
-    img: "/img/agregaty/avo/agregat_avo_hl_p.png",
+    img: {
+      url: "/img/agregaty/avo/agregat_avo_hl_p.png",
+      alt: "Водяные воздушно-отопительные агрегаты АВО ХЛ",
+      title: "Отопительные агрегаты АВО ХЛ водяные",
+    },
     drawing: "/img/agregaty/avo/agregat_otopitelnyi_avo_parovoi_razmery.png",
     tableWithTabs: "/legacy/table-avo-hl-kp4.html",
     variants: [
