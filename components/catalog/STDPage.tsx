@@ -150,6 +150,7 @@ export default function STDPage({ product }) {
 
       <ProductSubheader text={`Технические характеристики ${product.model}`} />
       <STDSpecsTable
+        className="mb-6"
         rows={product.variants}
         getRowValues={(variant) => variant.specsTablesValues}
         headers={
@@ -178,7 +179,7 @@ export default function STDPage({ product }) {
         title={`Отопительный агрегат ${product.model} технические характеристики`}
         width={968}
         height={1}
-        className="mb-4"
+        className="mb-5"
       />
       <STDSpecsTable
         rows={product.variants}
