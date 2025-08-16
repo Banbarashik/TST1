@@ -20,6 +20,14 @@ export const metadata: Metadata = {
 export default function AgregatySTD300V() {
   const products = productData
     .filter((p) => p.categories.includes("std300-v"))
+    .map((p) =>
+      p.variants.map((v) => ({
+        ...v,
+        name: `СТД-300 (${v.calorifier})`,
+        airPower: p.airPower,
+      })),
+    )
+    .flat()
     .sort((a, b) => sortProducts(a.name, b.name));
 
   return (
