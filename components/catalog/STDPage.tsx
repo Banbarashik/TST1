@@ -141,7 +141,7 @@ export default function STDPage({ product }) {
       <iframe
         src={product.tableWithTabs}
         title={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
-        className="mb-1 h-65 w-full"
+        className="mb-1 h-66 w-full"
       />
       <ProductParagraph className="mb-4">
         Табличные данные можно использовать при подборе сопутствующего{" "}
