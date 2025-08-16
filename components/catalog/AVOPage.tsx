@@ -7,9 +7,13 @@ import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
 import { productData } from "@/data/products";
+import { capitalizeFirst } from "@/lib/utils";
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
+  const oppositeHeatCarrier =
+    product.heatCarrier === "water" ? "steam" : "water";
+  const oppositeHeatCarrierAdj = getHeatCarrierAdj(oppositeHeatCarrier);
   const name = `Воздушно-отопительный агрегат ${product.shortName} ${heatCarrierAdj.nom} ТУ 4864-003-55613706-02`;
 
   const tableIndicators: Record<string, string> = {
@@ -23,9 +27,9 @@ export default function AVOPage({ product }) {
     steam: "пароконденсатного",
   };
 
-  const relatedProducts = productData.filter(
+  const relatedProduct = productData.find(
     (p) =>
-      p.categories.includes("avo") && p.heatCarrier !== product.heatCarrier,
+      p.categories.includes("avo") && p.heatCarrier === oppositeHeatCarrier,
   );
 
   return (
@@ -46,7 +50,7 @@ export default function AVOPage({ product }) {
           );
         })}
       </div>
-      <div className="mb-10 flex gap-20">
+      <div className="mb-5 flex gap-10">
         <div>
           <ProductSubheader text={name} />
           <ProductParagraph>
@@ -64,25 +68,13 @@ export default function AVOPage({ product }) {
             </li>
           </ul>
         </div>
-        <div className="shrink-0">
-          {relatedProducts.map(function (p) {
-            return (
-              <div key={p.caption} className="mb-4 flex flex-col gap-1">
-                <ProductParagraph className="font-bold">
-                  {p.caption}
-                </ProductParagraph>
-                <ul className="flex flex-wrap gap-2">
-                  {p.links.map((link) => (
-                    <li key={link.slug}>
-                      <SimilarProductLink id={link.slug}>
-                        {link.text}
-                      </SimilarProductLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        <div className="shrink-0 space-y-2">
+          <p className="font-bold">
+            {capitalizeFirst(oppositeHeatCarrierAdj.plu)} агрегаты АВО ХЛ
+          </p>
+          <SimilarProductLink id={relatedProduct.id}>
+            АВО ХЛ {oppositeHeatCarrierAdj.plu}
+          </SimilarProductLink>
         </div>
       </div>
 

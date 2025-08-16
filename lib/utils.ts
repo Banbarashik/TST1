@@ -5,6 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const capitalizeFirst = (str: string) =>
+  str ? str[0].toUpperCase() + str.slice(1) : str;
+
 export function sortProducts(a: string, b: string) {
   // Split into digit and non-digit parts
   const ax = [];
