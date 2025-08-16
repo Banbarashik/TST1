@@ -77,10 +77,7 @@ export default function STDPage({ product }) {
             ];
 
         return (
-          <div
-            key={variant.id}
-            className="itemsagregat-ao2-3-ksk3-vozdushniy-vodyanoy-start mb-6 flex gap-4"
-          >
+          <div key={variant.id} className="mb-6 flex gap-4">
             <ProductCard
               product={{
                 ...variant,
