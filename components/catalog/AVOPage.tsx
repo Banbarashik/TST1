@@ -64,8 +64,9 @@ export default function AVOPage({ product }) {
             </li>
             <li>
               - цельнотянутые бесшовные трубки {product.tubeSize} мм по ГОСТ
-              8734-75 с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением
+              8734-75
             </li>
+            <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
         </div>
         <div className="shrink-0 space-y-2">

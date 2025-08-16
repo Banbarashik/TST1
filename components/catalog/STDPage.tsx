@@ -67,11 +67,13 @@ export default function STDPage({ product }) {
                 ),
               },
               {
-                caption: `Агрегаты АВО ХЛ ${heatCarrierAdj.plu}`,
+                caption: `Агрегаты АВО ХЛ ${i === 0 ? heatCarrierAdj.plu : oppositeHeatCarrierAdj.plu}`,
                 products: productData.filter(
                   (p) =>
                     p.categories.includes("avo") &&
-                    p.heatCarrier === product.heatCarrier,
+                    (i === 0
+                      ? p.heatCarrier === product.heatCarrier
+                      : p.heatCarrier !== product.heatCarrier),
                 ),
               },
             ];
@@ -82,6 +84,7 @@ export default function STDPage({ product }) {
               product={{
                 ...variant,
                 airPower: product.airPower,
+                name: `Агрегат ${variant.model}`,
               }}
             />
             <div>
