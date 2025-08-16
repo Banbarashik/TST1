@@ -131,7 +131,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     tubeSize: "22х1.5",
     heatCarrier: "water",
     calorifier: "ТВВ4",
-    categories: ["agregaty", "vodiany-agregaty", "avo"],
+    categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
     img: "/img/agregaty/avo/agregat_avo_hl_v.png",
     drawing: "/",
     tableWithTabs: "/legacy/table-avo-hl-tvv4.html",
@@ -216,6 +216,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 3,
         tubeSize: "16х1.5",
         heatPower: 333,
+        price: 168203,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 в 3",
@@ -246,6 +247,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 4,
         tubeSize: "16х1.5",
         heatPower: 391,
+        price: 189000,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 в 4",
@@ -296,6 +298,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 3,
         tubeSize: "16х1.5",
         heatPower: 317,
+        price: 168203,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_p.png",
           alt: "Паровой воздушно-отопительный агрегат СТД-300 п 3",
@@ -326,6 +329,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 4,
         tubeSize: "16х1.5",
         heatPower: 379,
+        price: 189000,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_p.png",
           alt: "Паровой воздушно-отопительный агрегат СТД-300 п 4",
@@ -377,6 +381,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 3,
         tubeSize: "22х1.5",
         heatPower: 345,
+        price: 176399,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_hl_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 ТВВ3",
@@ -407,6 +412,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 4,
         tubeSize: "22х1.5",
         heatPower: 425,
+        price: 200495,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_hl_v.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 ТВВ4",
@@ -457,6 +463,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 3,
         tubeSize: "22х1.5",
         heatPower: 385,
+        price: 176399,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_hl_p.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 КП3",
@@ -479,6 +486,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         rows: 4,
         tubeSize: "22х1.5",
         heatPower: 424,
+        price: 200495,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_hl_p.png",
           alt: "Водяной воздушно-отопительный агрегат СТД-300 КП4",

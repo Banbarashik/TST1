@@ -23,7 +23,7 @@ export default function STDSpecsTable({
   headers: React.ReactNode;
 } & React.ComponentProps<"table">) {
   return (
-    <table className={`single-table w-full ${props.className}`}>
+    <table className={`w-full ${props.className}`}>
       {headers}
       <tbody>
         {rows.map((row, rowIdx, arr) => {
