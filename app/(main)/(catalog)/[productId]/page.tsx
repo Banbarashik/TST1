@@ -25,8 +25,9 @@ function getProductType(categories: string[]) {
   if (categories.includes("std300") || categories.includes("std300-hl"))
     return "std300";
   if (categories.includes("avo")) return "avo";
-  if (categories.includes("energonagrevatelynoe-oborudovanie"))
-    return "electroEquipment";
+  if (categories.includes("sfo")) return "sfo";
+  if (categories.includes("sfotc")) return "sfotc";
+  if (categories.includes("shuk")) return "shuk";
 }
 
 export async function generateMetadata({
@@ -118,6 +119,28 @@ export async function generateMetadata({
       keywords: `${modelWithoutHyphen},агрегат ${modelWithoutHyphen} ${heatCarrierAdj.nom},агрегат ${shortNameWithoutHyphen} ${product.calorifier},отопительный агрегат ${modelWithoutHyphen} расчет и подбор,воздушно-отопительный агрегат ${modelWithoutHyphen},агрегат ${modelWithoutHyphen} технические характеристики,агрегат отопительный ${modelWithoutHyphen} мощность,воздушный агрегат ${modelWithoutHyphen} производительность,отопительный агрегат ${modelWithoutHyphen} купить,${heatCarrierAdj.nom} агрегат ${modelWithoutHyphen} цена`,
     };
   }
+
+  if (productType === "sfo") {
+    return {
+      title: `${product.name}. Производство`,
+      description: `Электрокалорифер СФО (ЭКО) ${product.size} - производитель ООО Т.С.Т. Производство, технические характеристики, подбор кабеля, электрическая схема подключения, цена СФО ${product.size}`,
+      keywords: `электрокалорифер сфо ${product.size},электрокалорифер эко ${product.size},купить электрокалорифер сфо ${product.size},калорифер сфо ${product.size} цена,производство электрокалориферов сфо ${product.size},технические характеристики и габаритные размеры сфо ${product.size},комплектация и чертеж калорифера эко ${product.size},электрическая схема подключения сфо ${product.size},подбор проводов и кабелей для подключения электрического калорифера сфо ${product.size},канальный электрический калорифер СФО ${product.size}`,
+    };
+  }
+  if (productType === "sfotc") {
+    return {
+      title: `${product.name}. Производство`,
+      description: `Электрокалориферная установка СФОЦ (ЭКОЦ) ${product.size} - производитель ООО Т.С.Т. Производство, характеристики, размеры, подбор кабеля, схема подключения, цена СФОЦ ${product.size}`,
+      keywords: `электрокалориферная установка сфоц ${product.size},электрокалориферная установка экоц ${product.size},купить установку сфоц ${product.size},электрокалорифер сфоц ${product.size} цена,производство электрокалориферных установок сфоц ${product.size},технические характеристики и габаритные размеры экоц ${product.size},комплектация и чертеж калорифера экоц ${product.size},электрическая схема подключения сфоц ${product.size},подбор проводов и кабелей для подключения электрокалориферной установки сфоц ${product.size},приточная установка сфоц ${product.size} для вентиляционной сети`,
+    };
+  }
+  if (productType === "shuk") {
+    return {
+      title: `${product.name}. Производство`,
+      description: `Шкаф управления калорифером ШУК ${product.size} - производитель ООО Т.С.Т. Производство, технические характеристики, электрическая схема подключения, цена ШУК ${product.size}`,
+      keywords: `шкаф управления калорифером ШУК ${product.size},шкаф управления электрокалорифером СФО ${product.size},шкаф управления электрическим калорифером ЭКО ${product.size},шкаф управления для приточной установки СФОЦ ${product.size},шкаф управления для установки вентиляционной сети ЭКОЦ ${product.size},электрическая схема подсоединения шкафов управления ШУК ${product.size},купить шкаф управления калорифером ШУК ${product.size},технические характеристики ШУК ${product.size},комплектация шкафов управления калориферами ШУК ${product.size},пускозащитная аппаратура для шкафа управления ШУК ${product.size}`,
+    };
+  }
 }
 
 export default async function ProductPage({
@@ -143,6 +166,10 @@ export default async function ProductPage({
     return <KSKProductPage product={product} />;
   if (productType === "std300") return <STDPage product={product} />;
   if (productType === "avo") return <AVOPage product={product} />;
-  if (productType === "electroEquipment")
+  if (
+    productType === "sfo" ||
+    productType === "sfotc" ||
+    productType === "shuk"
+  )
     return <ElectroEquipmentPage product={product} />;
 }

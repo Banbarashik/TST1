@@ -90,7 +90,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "elektrokalorifer-sfo-16",
     name: "Электрокалорифер СФО-16",
     shortName: "СФО-16",
-    model: "СФО=16",
+    model: "СФО-16",
     series: "СФО",
     size: 16,
     categories: ["kalorifer", "energonagrevatelynoe-oborudovanie", "sfo"],
