@@ -8,16 +8,31 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const oborudovanie = {
-  sfo: "электрокалориферов",
-  sfotc: "электрокалориферных установок",
-  shuk: "шкафов ШУК",
+const equipmentType = {
+  sfo: {
+    nom: "электрокалорифер",
+    pluGen: "электрокалориферов",
+  },
+  sfotc: {
+    nom: "электрокалориферная установка",
+    pluGen: "электрокалориферных установок",
+  },
+  shuk: {
+    nom: "шкаф ШУК",
+    pluGen: "шкафов ШУК",
+  },
 };
 
 const tableLinkText = {
-  sfo: "электрокалориферы СФО",
-  sfotc: "электрокалориферные установки СФОЦ",
-  shuk: "шкафы управления калорифером ШУК",
+  sfo: "Электрокалориферы СФО",
+  sfotc: "Электрокалориферные установки СФОЦ",
+  shuk: "Шкафы управления калорифером ШУК",
+};
+
+const tableLinkUrl = {
+  sfo: "teploventilyatory",
+  sfotc: "",
+  shuk: "",
 };
 
 const tableLabels = [
@@ -74,7 +89,7 @@ export default function ElectroEquipmentPage({ product }) {
           </ul>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
-              Все типоразмеры {oborudovanie[preciseCategory]}
+              Все типоразмеры {equipmentType[preciseCategory].pluGen}
             </ProductParagraph>
             <ul className="flex flex-wrap gap-2">
               {productsByPreciseCategory.map((p) => (
@@ -130,15 +145,15 @@ export default function ElectroEquipmentPage({ product }) {
         />
         <Image
           src={product.scheme}
-          alt={`Электрокалорифер ${product.series} ${product.size} электрическая схема подключения`}
-          title={`Электрокалорифер ${product.altSeries} ${product.size} электрическая схема подключения`}
+          alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
+          title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
           width={484}
           height={1}
         />
       </div>
 
       <TableAndCatalogLinks
-        tableURL="#"
+        tableURL={tableLinkUrl[preciseCategory]}
         tableLinkText={tableLinkText[preciseCategory]}
         catalogURL="#"
       />
