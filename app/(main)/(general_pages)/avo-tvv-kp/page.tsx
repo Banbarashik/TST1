@@ -23,7 +23,6 @@ export default function AgregatyAVO() {
     .sort((a, b) => sortProducts(a.name, b.name));
   const avoTvv = products.find((p) => p.heatCarrier === "water");
   const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
-  const avoKp = products.find((p) => p.heatCarrier === "steam");
   // const avoKpVariants = avoKp.variants.map((p) => ({ ...p, id: avoKp.id }));
 
   return (
