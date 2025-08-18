@@ -30,8 +30,8 @@ const tableLinkText = {
 };
 
 const tableLinkUrl = {
-  sfo: "teploventilyatory",
-  sfotc: "",
+  sfo: "elektronagrevateli",
+  sfotc: "teploventilyatory",
   shuk: "",
 };
 
