@@ -69,10 +69,8 @@ export default function ElectroEquipmentPage({ product }) {
           <ProductSubheader text={`${product.name}. ТУ 3442-004-55613706-02`} />
           <ProductParagraph>Теплоотдающие элементы:</ProductParagraph>
           <ul className="mb-4 text-lg">
-            <li>
-              - трубчатые электронагреватели Р-54А-13/2.5о220 с алюминиевым (АД1
-              ТУ 1-8-267-99) накатным оребрением
-            </li>
+            <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
+            <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
@@ -122,14 +120,22 @@ export default function ElectroEquipmentPage({ product }) {
       <ProductSubheader
         text={`Чертеж и электрическая схема подключения ${product.shortName}`}
       />
-      <Image
-        className="mb-10"
-        src={product.drawing}
-        alt={`${product.name} габаритные размеры`}
-        title={`${product.name} электрическая схема подключения`}
-        width={968}
-        height={1}
-      />
+      <div className="mb-10 flex">
+        <Image
+          src={product.drawing}
+          alt={`${product.name} габаритные размеры`}
+          title={`${product.altName} габаритные размеры`}
+          width={484}
+          height={1}
+        />
+        <Image
+          src={product.scheme}
+          alt={`Электрокалорифер ${product.series} ${product.size} электрическая схема подключения`}
+          title={`Электрокалорифер ${product.altSeries} ${product.size} электрическая схема подключения`}
+          width={484}
+          height={1}
+        />
+      </div>
 
       <TableAndCatalogLinks
         tableURL="#"
