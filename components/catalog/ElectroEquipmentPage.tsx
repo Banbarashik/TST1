@@ -140,7 +140,8 @@ export default function ElectroEquipmentPage({ product }) {
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} isLink={false} />
         <div>
-          <ProductSubheader text={`${product.name}. ТУ 3442-004-55613706-02`} />
+          <h2 className="text-xl">{product.name}.</h2>
+          <p className="mb-3 text-xl">ТУ 3442-004-55613706-02</p>
           <ProductParagraph>Теплоотдающие элементы:</ProductParagraph>
           <ul className="mb-4 text-lg">
             <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
