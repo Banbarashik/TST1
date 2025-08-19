@@ -124,6 +124,10 @@ export default function ElectroEquipmentPage({ product }) {
     product.categories.includes(cat),
   );
 
+  const isSFO = preciseCategory === "sfo";
+  const isSFOTC = preciseCategory === "sfotc";
+  const isSHUK = preciseCategory === "shuk";
+
   const productsByCategory = productData.filter((p) =>
     p.categories.includes("energonagrevatelynoe-oborudovanie"),
   );
@@ -138,7 +142,16 @@ export default function ElectroEquipmentPage({ product }) {
     <div>
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 flex items-start gap-4">
-        <ProductCard product={product} isLink={false} />
+        <ProductCard
+          product={
+            isSFOTC
+              ? { ...product, name: `Установка ${product.shortName}` }
+              : isSHUK
+                ? { ...product, name: `Шкаф управления ${product.shortName}` }
+                : product
+          }
+          isLink={false}
+        />
         <div>
           <h2 className="text-xl">{product.name}.</h2>
           <p className="mb-3 text-xl">ТУ 3442-004-55613706-02</p>
