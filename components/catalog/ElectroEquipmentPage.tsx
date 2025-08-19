@@ -124,7 +124,7 @@ export default function ElectroEquipmentPage({ product }) {
     product.categories.includes(cat),
   );
 
-  const isSFO = preciseCategory === "sfo";
+  // const isSFO = preciseCategory === "sfo";
   const isSFOTC = preciseCategory === "sfotc";
   const isSHUK = preciseCategory === "shuk";
 
