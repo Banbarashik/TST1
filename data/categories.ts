@@ -212,4 +212,31 @@ export const categoryTree: Category[] = [
       },
     ],
   },
+  {
+    title: "Электронагревательное оборудование",
+    menuTitle: "Электронагревательное оборудование",
+    slug: "energonagrevatelynoe-oborudovanie",
+    children: [
+      {
+        title: "Электрокалориферы СФО",
+        menuTitle: "СФО",
+        slug: "sfo",
+      },
+      {
+        title: "Электрокалориферные установки СФОЦ",
+        menuTitle: "СФОЦ",
+        slug: "sfotc",
+      },
+      {
+        title: "Шкафы управления калориферами ШУК",
+        menuTitle: "ШУК",
+        slug: "shuk",
+      },
+      {
+        title: "ТЭНы оребренные",
+        menuTitle: "ТЭНы",
+        slug: "teny",
+      },
+    ],
+  },
 ];
