@@ -224,6 +224,14 @@ export default function ElectroEquipmentPage({ product }) {
           height={1}
         />
       </div>
+      <Image
+        src={product.scheme}
+        alt={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.series} ${product.size} электрическая схема подключения`}
+        title={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.altSeries} ${product.size} электрическая схема подключения`}
+        width={726}
+        height={1}
+        className="mx-auto"
+      />
 
       <TableAndCatalogLinks
         tableURL={tableLinkUrl[preciseCategory]}
