@@ -7,6 +7,7 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import { sortProducts } from "@/lib/utils";
 
 const equipmentType = {
   sfo: {
@@ -134,9 +135,9 @@ export default function ElectroEquipmentPage({ product }) {
   const productsByPreciseCategory = productsByCategory.filter((p) =>
     p.categories.includes(preciseCategory),
   );
-  const productsBySize = productsByCategory.filter(
-    (p) => p.id !== product.id && p.size === product.size,
-  );
+  const productsBySize = productsByCategory
+    .filter((p) => p.id !== product.id && p.size === product.size)
+    .sort((a, b) => sortProducts(a.shortName, b.shortName));
 
   return (
     <div>
