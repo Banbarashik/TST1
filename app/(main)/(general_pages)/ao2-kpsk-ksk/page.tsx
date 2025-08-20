@@ -196,10 +196,6 @@ export default function AgregatyAO2P() {
           width={968}
           height={1}
         />
-        <iframe
-          src="/legacy/table-ao2-kpsk-ksk.html"
-          className="h-105 w-full"
-        />
         <ProductParagraph>
           Структура условного обозначения паровых агрегатов серии АО2
           производства ООО «Т.С.Т.». Агрегат АО 2-5 КСк3 (ТУ
