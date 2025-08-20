@@ -208,7 +208,26 @@ export default function ElectroEquipmentPage({ product }) {
       <ProductSubheader
         text={`Чертеж и электрическая схема подключения ${product.shortName}`}
       />
-      <div className="mb-10 flex">
+
+      {isSHUK && (
+        <div className="mb-10 flex">
+          <Image
+            src={product.drawing}
+            alt={`${product.name} габаритные размеры`}
+            title={`Шкаф ${product.shortName} габаритные размеры`}
+            width={322}
+            height={1}
+          />
+          <Image
+            src={product.scheme}
+            alt={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
+            title={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
+            width={645}
+            height={1}
+          />
+        </div>
+      )}
+      {/* <div className="mb-10 flex">
         <Image
           src={product.drawing}
           alt={`${product.name} габаритные размеры`}
@@ -223,15 +242,7 @@ export default function ElectroEquipmentPage({ product }) {
           width={484}
           height={1}
         />
-      </div>
-      <Image
-        src={product.scheme}
-        alt={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.series} ${product.size} электрическая схема подключения`}
-        title={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.altSeries} ${product.size} электрическая схема подключения`}
-        width={726}
-        height={1}
-        className="mx-auto"
-      />
+      </div> */}
 
       <TableAndCatalogLinks
         tableURL={tableLinkUrl[preciseCategory]}
