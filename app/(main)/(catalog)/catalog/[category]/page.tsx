@@ -14,7 +14,7 @@ const defaultCategory = {
   slug: "all",
 };
 
-const PRODUCTS_PER_PAGE = 20;
+const PRODUCTS_PER_PAGE = 21;
 
 export default async function Catalog({
   params,
