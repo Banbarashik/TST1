@@ -197,6 +197,10 @@ export default function AgregatySTD300P() {
       </section>
 
       <section>
+        <iframe
+          src="/legacy/table-std-300-kpsk.html"
+          className="h-105 w-full"
+        />
         <Image
           src="/img/general_pages/agregat_otopitelnyi_parovoy_std-300_gabaritnye_razmery.png"
           alt="Технические характеристики паровых агрегатов СТД-300"
@@ -205,7 +209,7 @@ export default function AgregatySTD300P() {
           height={1}
         />
         <iframe
-          src="/legacy/table-std300-ksk-kpsk.html"
+          src="/legacy/table-std-300-hl-kp.html"
           className="h-105 w-full"
         />
         <ProductParagraph>

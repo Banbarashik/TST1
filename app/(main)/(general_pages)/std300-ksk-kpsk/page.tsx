@@ -197,6 +197,7 @@ export default function AgregatySTD300V() {
       </section>
 
       <section>
+        <iframe src="/legacy/table-std-300-ksk.html" className="h-105 w-full" />
         <Image
           src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
           alt="Технические характеристики водяных агрегатов СТД-300"
@@ -205,7 +206,7 @@ export default function AgregatySTD300V() {
           height={1}
         />
         <iframe
-          src="/legacy/table-std300-ksk-kpsk.html"
+          src="/legacy/table-std-300-hl-tvv.html"
           className="h-105 w-full"
         />
         <ProductParagraph>
