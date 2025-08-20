@@ -179,7 +179,7 @@ export default function AgregatyAVO() {
       </section>
 
       <section>
-        <iframe src="/legacy/table-avo-tvv.html" className="h-105 w-full" />
+        <iframe src="/legacy/table-avo-hl-tvv4.html" className="h-105 w-full" />
         <Image
           src="/img/general_pages/agregat_vozdushno-otopitelnyi_avo_gabaritnye_razmery.png"
           alt="Технические характеристики агрегатов АВО ХЛ"
@@ -187,7 +187,7 @@ export default function AgregatyAVO() {
           width={968}
           height={1}
         />
-        <iframe src="/legacy/table-avo-kp.html" className="h-105 w-full" />
+        <iframe src="/legacy/table-avo-hl-kp4.html" className="h-105 w-full" />
         <ProductParagraph>
           Структура условного обозначения агрегатов АВО ХЛ производства ООО
           «Т.С.Т.». Агрегат АВО 7-165-01 КП4 ХЛ (ТУ 4864-003-55613706-02): АВО –
