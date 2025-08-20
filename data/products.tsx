@@ -66,6 +66,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 2000,
     heatPower: 22.5,
+    kmi: 65,
     price: 36608,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-16_shuk-60.png",
@@ -117,6 +118,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 3000,
     heatPower: 45,
+    kmi: 95,
     price: 42328,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-16_shuk-60.png",
@@ -168,6 +170,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 4000,
     heatPower: 67.5,
+    kmi: 50,
     price: 53900,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-16_shuk-60.png",
@@ -219,6 +222,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 6000,
     heatPower: 90,
+    kmi: 65,
     price: 61465,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-100_shuk-250.png",
@@ -270,6 +274,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 8000,
     heatPower: 157.5,
+    kmi: 95,
     price: 91438,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-100_shuk-250.png",
@@ -321,6 +326,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 12000,
     heatPower: 247.5,
+    kmi: 25,
     price: 123768,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-100_shuk-250.png",

@@ -8,6 +8,7 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 import { sortProducts } from "@/lib/utils";
+import React from "react";
 
 const equipmentType = {
   sfo: {
@@ -219,29 +220,37 @@ export default function ElectroEquipmentPage({ product }) {
           </div>
         </div>
       </div>
-
       <ProductSubheader
         text={`Технические характеристики ${product.shortName}`}
       />
+
       <table className="mx-auto mb-6 w-176">
         <tbody>
           {tableLabels[preciseCategory].map((label, i) => (
-            <tr key={label}>
-              <td className="py-1 pl-1 text-left">
-                {isSHUK && label === "kmi_to_change"
-                  ? `Пускатель КМИ (КМН) ${product.kmi}А 220-230В`
-                  : label}
-              </td>
-              <td>{product.specsTableValues[i]}</td>
-            </tr>
+            <React.Fragment key={label}>
+              <tr>
+                <td className="py-1 pl-1 text-left">
+                  {isSHUK && label === "kmi_to_change"
+                    ? `Пускатель КМИ (КМН) ${product.kmi}А 220-230В`
+                    : label}
+                </td>
+                <td>{product.specsTableValues[i]}</td>
+              </tr>
+              {isSHUK && label === "kmi_to_change" && product.size === 250 && (
+                <tr>
+                  <td className="py-1 pl-1 text-left">
+                    Пускатель ПМ 12160150 160А 220-230В
+                  </td>
+                  <td>3</td>
+                </tr>
+              )}
+            </React.Fragment>
           ))}
         </tbody>
       </table>
-
       <ProductSubheader
         text={`Чертеж и электрическая схема подключения ${product.shortName}`}
       />
-
       {isSFO && (
         <div className="mb-10 flex">
           <Image
@@ -296,7 +305,6 @@ export default function ElectroEquipmentPage({ product }) {
           />
         </div>
       )}
-
       <TableAndCatalogLinks
         tableURL={tableLinkUrl[preciseCategory]}
         tableLinkText={tableLinkText[preciseCategory]}
