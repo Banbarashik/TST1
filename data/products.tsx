@@ -14,6 +14,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["energonagrevatelynoe-oborudovanie", "shuk"],
     airPower: 1000,
     heatPower: 15,
+    kmi: 40,
     price: 33550,
     img: {
       url: "/img/elektro/shkaf_upravleniia_kaloriferom_shuk-16_shuk-60.png",

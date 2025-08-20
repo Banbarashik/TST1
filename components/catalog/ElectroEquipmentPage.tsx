@@ -101,7 +101,7 @@ const tableLabels = {
     "Арматура светосигнальная (зеленая)",
     "Реле тепловое РТИ (РТН) 5.5 - 8А",
     "Пускатель КМИ (КМН) 9А 220-230В",
-    "Пускатель КМИ (КМН) 40А 220-230В",
+    "kmi_to_change",
     "Реле температурное ТРМ 11-01 (11-11)",
     "Реле ветровое с микрокнопкой КМ-1",
     "Мощность электрокалорифера, общая, кВт",
@@ -227,7 +227,11 @@ export default function ElectroEquipmentPage({ product }) {
         <tbody>
           {tableLabels[preciseCategory].map((label, i) => (
             <tr key={label}>
-              <td className="py-1 pl-1 text-left">{label}</td>
+              <td className="py-1 pl-1 text-left">
+                {isSHUK && label === "kmi_to_change"
+                  ? `Пускатель КМИ (КМН) ${product.kmi}А 220-230В`
+                  : label}
+              </td>
               <td>{product.specsTableValues[i]}</td>
             </tr>
           ))}
