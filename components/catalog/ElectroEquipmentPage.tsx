@@ -154,13 +154,41 @@ export default function ElectroEquipmentPage({ product }) {
           isLink={false}
         />
         <div>
-          <h2 className="text-xl">{product.name}.</h2>
-          <p className="mb-3 text-xl">ТУ 3442-004-55613706-02</p>
-          <ProductParagraph>Теплоотдающие элементы:</ProductParagraph>
-          <ul className="mb-4 text-lg">
-            <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
-            <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
-          </ul>
+          <div className="mb-3 text-xl">
+            <h2>{product.name}.</h2>
+            {!isSHUK && <p>ТУ 3442-004-55613706-02</p>}
+          </div>
+          {isSHUK ? (
+            <>
+              Шкаф управления калорифером ШУК обеспечивает:
+              <ul className="mb-4">
+                <li>
+                  - невозможность включения секций электрических нагревателей
+                  при не включенном вентиляторе;
+                </li>
+                <li>
+                  - отключение электродвигателя вентилятора при токовых
+                  перегрузках и заклинивании ротора;
+                </li>
+                <li>
+                  - отключение секций электрокалорифера при аварийном отключении
+                  электродвигателя вентилятора;
+                </li>
+                <li>
+                  - отключение всех секций при срабатывании термовыключателя
+                  защиты ТЭНов от аварийного перегрева.
+                </li>
+              </ul>
+            </>
+          ) : (
+            <>
+              <ProductParagraph>Теплоотдающие элементы:</ProductParagraph>
+              <ul className="mb-4 text-lg">
+                <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
+                <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
+              </ul>
+            </>
+          )}
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               Все типоразмеры {equipmentType[preciseCategory].pluGen}
