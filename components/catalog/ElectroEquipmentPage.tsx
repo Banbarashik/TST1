@@ -124,7 +124,7 @@ export default function ElectroEquipmentPage({ product }) {
     product.categories.includes(cat),
   );
 
-  // const isSFO = preciseCategory === "sfo";
+  const isSFO = preciseCategory === "sfo";
   const isSFOTC = preciseCategory === "sfotc";
   const isSHUK = preciseCategory === "shuk";
 
@@ -209,20 +209,20 @@ export default function ElectroEquipmentPage({ product }) {
         text={`Чертеж и электрическая схема подключения ${product.shortName}`}
       />
 
-      {isSHUK && (
+      {isSFO && (
         <div className="mb-10 flex">
           <Image
             src={product.drawing}
             alt={`${product.name} габаритные размеры`}
-            title={`Шкаф ${product.shortName} габаритные размеры`}
-            width={322}
+            title={`${product.shortName} габаритные размеры`}
+            width={484}
             height={1}
           />
           <Image
             src={product.scheme}
-            alt={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
-            title={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
-            width={645}
+            alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
+            title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+            width={484}
             height={1}
           />
         </div>
@@ -245,22 +245,24 @@ export default function ElectroEquipmentPage({ product }) {
           />
         </div>
       )}
-      {/* <div className="mb-10 flex">
-        <Image
-          src={product.drawing}
-          alt={`${product.name} габаритные размеры`}
-          title={`${preciseCategory === "shuk" ? `Шкаф ${product.shortName}` : product.shortName} габаритные размеры`}
-          width={484}
-          height={1}
-        />
-        <Image
-          src={product.scheme}
-          alt={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.series} ${product.size} электрическая схема подключения`}
-          title={`${equipmentType[preciseCategory].nom} ${preciseCategory === "shuk" ? "" : product.altSeries} ${product.size} электрическая схема подключения`}
-          width={484}
-          height={1}
-        />
-      </div> */}
+      {isSHUK && (
+        <div className="mb-10 flex">
+          <Image
+            src={product.drawing}
+            alt={`${product.name} габаритные размеры`}
+            title={`Шкаф ${product.shortName} габаритные размеры`}
+            width={322}
+            height={1}
+          />
+          <Image
+            src={product.scheme}
+            alt={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
+            title={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
+            width={645}
+            height={1}
+          />
+        </div>
+      )}
 
       <TableAndCatalogLinks
         tableURL={tableLinkUrl[preciseCategory]}
