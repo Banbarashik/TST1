@@ -227,6 +227,24 @@ export default function ElectroEquipmentPage({ product }) {
           />
         </div>
       )}
+      {isSFOTC && (
+        <div className="mx-auto mb-10 w-fit space-y-3">
+          <Image
+            src={product.drawing}
+            alt={`${product.name} габаритные размеры`}
+            title={`${product.shortName} габаритные размеры`}
+            width={645}
+            height={1}
+          />
+          <Image
+            src={product.scheme}
+            alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
+            title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+            width={645}
+            height={1}
+          />
+        </div>
+      )}
       {/* <div className="mb-10 flex">
         <Image
           src={product.drawing}
