@@ -1,6 +1,17 @@
 import type { Product, SupplyCalorifier, KSKProduct } from "@/types";
 
 export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
+  // ТЭНы
+  {
+    id: "teny-orebrenny'e",
+    name: "ТЭНы оребренные",
+    categories: ["energonagrevatelynoe-oborudovanie", "teny"],
+    img: {
+      url: "/img/general_pages/ten_orebrennyi.png",
+      alt: "",
+      title: "",
+    },
+  },
   // ШУК
   {
     id: "shkaf-upravleniia-shuk-16",
