@@ -5,6 +5,9 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   {
     id: "teny-orebrenny'e",
     name: "ТЭНы оребренные",
+    heatPower: 2.5,
+    voltage: 220,
+    price: 759,
     categories: ["energonagrevatelynoe-oborudovanie", "teny"],
     img: {
       url: "/img/general_pages/ten_orebrennyi.png",
