@@ -133,8 +133,9 @@ export default function UstanovkiSFOTC() {
           src="/img/general_pages/elektrokalorifernaia_ustanovka_sfotc_chertezh.png"
           alt="Характеристики электрокалориферных установок СФОЦ"
           title="Габаритные размеры установок СФОЦ"
-          width={968}
+          width={774}
           height={1}
+          className="mx-auto"
         />
         <ProductParagraph>
           Структура условного обозначения электрокалориферных установок СФОЦ

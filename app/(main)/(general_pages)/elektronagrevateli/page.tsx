@@ -157,8 +157,9 @@ export default function KaloriferySFO() {
           src="/img/general_pages/elektrokalorifery_sfo_chertezh.png"
           alt="Технические характеристики электрокалориферов СФО"
           title="Габаритные размеры электрокалориферов СФО"
-          width={968}
+          width={774}
           height={1}
+          className="mx-auto"
         />
         <ProductParagraph>
           Структура условного обозначения электрокалориферов СФО производства
