@@ -184,5 +184,5 @@ export default async function ProductPage({
     productType === "shuk"
   )
     return <ElectroEquipmentPage product={product} />;
-  if (productType === "teny") return <TenyPage />;
+  if (productType === "teny") return <TenyPage product={product} />;
 }

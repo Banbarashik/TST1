@@ -2,22 +2,17 @@ import Image from "next/image";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import ProductCard from "@/components/catalog/productCard";
 
-export default function TenyPage() {
+export default function TenyPage({ product }) {
   return (
-    <div>
+    <article className="flex flex-col gap-6">
       <Heading lvl={1} text="ТЭНы оребренные" />
 
-      <section>
-        <Image
-          src="/img/general_pages/ten_orebrennyi.png"
-          alt="ТЭН оребренный для нагрева воздуха"
-          title="ТЭН оребренный воздушный ТЭН ор. Р-54А-13/2.5о220"
-          width={968}
-          height={1}
-        />
+      <section className="flex items-start gap-4">
+        <ProductCard product={product} />
         <div>
-          <p>ТЭН ОР. Р-54А-13/2.5О220</p>
+          <Heading lvl={2} text="ТЭН ОР. Р-54А-13/2.5О220" />
           <p>
             Трубчатый воздушный электронагреватель с алюминиевым
             спирально-накатным оребрением:
@@ -63,7 +58,7 @@ export default function TenyPage() {
           служат для подключения тэна к питающему напряжению.
         </ProductParagraph>
         <Image
-          src="/img/general_pages/ten_orebrennyi_chertez.png"
+          src={product.drawing}
           alt="ТЭН ор. Р-54А-13/2.5о220 воздушный прямой"
           title="Чертеж оребренного воздушного ТЭНа"
           width={968}
@@ -119,6 +114,6 @@ export default function TenyPage() {
           перегреву.
         </ProductParagraph>
       </section>
-    </div>
+    </article>
   );
 }

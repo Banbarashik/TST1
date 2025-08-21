@@ -14,6 +14,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       alt: "",
       title: "",
     },
+    drawing: "/img/general_pages/ten_orebrennyi_chertez.png",
   },
   // ШУК
   {
