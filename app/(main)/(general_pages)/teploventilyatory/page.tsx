@@ -115,7 +115,12 @@ export default function UstanovkiSFOTC() {
           установок варьируется от 1000 до 12000 м3/час, тепловая мощность - от
           16 до 250 кВт.
         </ProductParagraph>
-        <ProductLinks products={products} />
+        <ProductLinks
+          products={products.map((p) => ({
+            ...p,
+            name: `Установка ${p.shortName}`,
+          }))}
+        />
       </section>
 
       <section>

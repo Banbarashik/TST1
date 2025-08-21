@@ -116,7 +116,12 @@ export default function ShkafyUpravleniyaSHUK() {
           электрический калорифер, укомплектованный оребренными нагревателями и
           радиальный вентилятор.
         </ProductParagraph>
-        <ProductLinks products={products} />
+        <ProductLinks
+          products={products.map((p) => ({
+            ...p,
+            name: `Шкаф управления ${p.shortName}`,
+          }))}
+        />
         <iframe
           src="/legacy/shkafy-upravleniya.html"
           className="h-105 w-full"
