@@ -10,6 +10,7 @@ import STDPage from "@/components/catalog/STDPage";
 import AVOPage from "@/components/catalog/AVOPage";
 import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 import ElectroEquipmentPage from "@/components/catalog/ElectroEquipmentPage";
+import TenyPage from "@/components/catalog/TenyPage";
 
 function getProductType(categories: string[]) {
   if (
@@ -28,6 +29,7 @@ function getProductType(categories: string[]) {
   if (categories.includes("sfo")) return "sfo";
   if (categories.includes("sfotc")) return "sfotc";
   if (categories.includes("shuk")) return "shuk";
+  if (categories.includes("teny")) return "teny";
 }
 
 export async function generateMetadata({
@@ -141,6 +143,16 @@ export async function generateMetadata({
       keywords: `шкаф управления калорифером ШУК ${product.size},шкаф управления электрокалорифером СФО ${product.size},шкаф управления электрическим калорифером ЭКО ${product.size},шкаф управления для приточной установки СФОЦ ${product.size},шкаф управления для установки вентиляционной сети ЭКОЦ ${product.size},электрическая схема подсоединения шкафов управления ШУК ${product.size},купить шкаф управления калорифером ШУК ${product.size},технические характеристики ШУК ${product.size},комплектация шкафов управления калориферами ШУК ${product.size},пускозащитная аппаратура для шкафа управления ШУК ${product.size}`,
     };
   }
+
+  if (productType === "teny") {
+    return {
+      title: "ТЭНы оребренные. Производство",
+      description:
+        "ТЭНы оребренные - производитель ООО Т.С.Т. ТЭН воздушный оребренный 2.5 кВт 220 В для электрокалориферов и электрокалориферных установок, цена оребренного тэна для нагрева воздуха",
+      keywords:
+        "тэн оребренный,тэн воздушный оребренный,тэн прямой оребренный,тэны для воздуха оребренные,оребренные тэны для нагрева воздуха,купить оребренный тэн,тэн оребренный воздушный купить,оребренный тэн воздушный цена,тэн воздушный оребренный 2.5 квт,тэн воздушный оребренный 220",
+    };
+  }
 }
 
 export default async function ProductPage({
@@ -172,4 +184,5 @@ export default async function ProductPage({
     productType === "shuk"
   )
     return <ElectroEquipmentPage product={product} />;
+  if (productType === "teny") return <TenyPage />;
 }
