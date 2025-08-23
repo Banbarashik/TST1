@@ -202,7 +202,7 @@ export default function STDPage({ product }) {
       />
       <TableAndCatalogLinks
         tableURL={
-          product.shortName === "СТД-300"
+          product.heatCarrier === "water"
             ? "/std300-ksk-kpsk"
             : "/std300-tvv-kp"
         }

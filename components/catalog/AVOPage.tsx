@@ -151,7 +151,7 @@ export default function AVOPage({ product }) {
       />
 
       <TableAndCatalogLinks
-        tableURL="avo-tvv-kp"
+        tableURL="/avo-tvv-kp"
         tableLinkText={`Водяные и паровые агрегаты ${product.shortName}`}
         catalogURL="#"
       />

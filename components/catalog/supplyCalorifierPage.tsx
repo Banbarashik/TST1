@@ -201,7 +201,9 @@ export default function SupplyCalorifierPage({
         />
       )}
       <TableAndCatalogLinks
-        tableURL="#"
+        tableURL={
+          heatCarrier === "water" ? "/kalorifery-voda" : "/kalorifery-par"
+        }
         tableLinkText={`Приточные ${heatCarrierAdj?.plu} калориферы`}
         catalogURL="#"
       />

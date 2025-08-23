@@ -59,6 +59,20 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   const rowsNumberAdj = getRowsNumberAdj(product.rows);
 
+  let tableUrl = "/";
+  if (category === "ksk") tableUrl = "/kalorifery-ksk";
+  if (category === "kpsk") tableUrl = "/kalorifery-kpsk";
+  if (category === "tvv") tableUrl = "/kalorifery-tvv";
+  if (category === "kp") tableUrl = "/kalorifery-kp";
+  if (category === "kfb" && product.heatCarrier === "water")
+    tableUrl = "/kalorifery-kfb-a";
+  if (category === "kfb" && product.heatCarrier === "steam")
+    tableUrl = "/kalorifery-kfb";
+  if (category === "ao2" && product.heatCarrier === "water")
+    tableUrl = "/ao2-ksk-kpsk";
+  if (category === "ao2" && product.heatCarrier === "steam")
+    tableUrl = "/ao2-kpsk-ksk";
+
   return (
     <div>
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
@@ -277,7 +291,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
 
       <TableAndCatalogLinks
-        tableURL="#"
+        tableURL={tableUrl}
         tableLinkText={`${heatCarrierAdj?.plu} ${isCalorifier ? "калориферы" : "агрегаты"} ${categoryLabel}`}
         catalogURL="#"
       />

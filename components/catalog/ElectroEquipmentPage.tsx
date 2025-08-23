@@ -34,7 +34,7 @@ const tableLinkText = {
 const tableLinkUrl = {
   sfo: "elektronagrevateli",
   sfotc: "teploventilyatory",
-  shuk: "",
+  shuk: "shkafy-upravleniya",
 };
 
 const tableLabels = {
