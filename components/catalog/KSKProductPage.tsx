@@ -219,7 +219,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                 style={{ fontSize: "11pt" }}
               >
                 Габаритные и присоединительные размеры калорифера{" "}
-                {product.shortName} {heatCarrierAdj?.gen}
+                {product.shortName} {heatCarrierAdj?.gen}, мм
               </th>
             ) : (
               <>
