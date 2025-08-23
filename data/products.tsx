@@ -1107,7 +1107,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   // АВО
   {
     id: "avo-tvv",
-    name: "Агрегат АВО ХЛ ТВВ4",
+    name: "Агрегаты АВО ХЛ ТВВ4",
     shortName: "АВО ХЛ",
     model: "АВО ХЛ ТВВ4",
     tubeSize: "22х1.5",
@@ -1177,7 +1177,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "avo-kp",
-    name: "Агрегат АВО ХЛ КП4",
+    name: "Агрегаты АВО ХЛ КП4",
     shortName: "АВО ХЛ",
     model: "АВО ХЛ КП4",
     tubeSize: "22х1.5",
