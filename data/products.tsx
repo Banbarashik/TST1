@@ -11238,7 +11238,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_14-a4_m.html",
-    specsTableValues: [18000.0, 502.0, 61.5, 221.0],
+    specsTableValues: [18000.0, 502.0, 81.4, 289.0],
     sizeTableValues: [
       1460.0, 1506.0, 1530.0, 1595.0, 1080.0, 1126.0, 1150.0, 968.0, 65.0,
     ],
@@ -11271,7 +11271,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_13-a4_m.html",
-    specsTableValues: [16000.0, 445.0, 55.2, 194.0],
+    specsTableValues: [16000.0, 445.0, "73.0", 256.0],
     sizeTableValues: [
       1310.0, 1356.0, 1380.0, 1445.0, 1080.0, 1126.0, 1150.0, 968.0, 65.0,
     ],
@@ -11304,7 +11304,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_12-a4_m.html",
-    specsTableValues: [13500.0, 376.0, 48.2, 167.0],
+    specsTableValues: [13500.0, 376.0, 63.7, 220.0],
     sizeTableValues: [
       1310.0, 1356.0, 1380.0, 1445.0, 960.0, 1006.0, 1030.0, 848.0, 65.0,
     ],
@@ -11337,7 +11337,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_11-a4_m.html",
-    specsTableValues: [12000.0, 333.0, 42.7, 149.0],
+    specsTableValues: [12000.0, 333.0, 56.5, 198.0],
     sizeTableValues: [
       1160.0, 1206.0, 1230.0, 1295.0, 960.0, 1006.0, 1030.0, 848.0, 65.0,
     ],
@@ -11370,7 +11370,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_10-a4_m.html",
-    specsTableValues: [10500.0, 291.0, 36.5, 132.0],
+    specsTableValues: [10500.0, 291.0, 49.5, 173.0],
     sizeTableValues: [
       1160.0, 1206.0, 1230.0, 1295.0, 840.0, 886.0, 910.0, 728.0, 65.0,
     ],
@@ -11403,7 +11403,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_9-a4_m.html",
-    specsTableValues: [9200.0, 253.0, 31.8, 115.0],
+    specsTableValues: [9200.0, 253.0, 43.2, 154.0],
     sizeTableValues: [
       1010.0, 1056.0, 1080.0, 1145.0, 840.0, 886.0, 910.0, 728.0, 65.0,
     ],
@@ -11436,7 +11436,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_8-a4_m.html",
-    specsTableValues: [8000.0, 219.0, 28.2, 100.0],
+    specsTableValues: [8000.0, 219.0, 37.2, 133.0],
     sizeTableValues: [
       1010.0, 1056.0, 1080.0, 1145.0, 720.0, 766.0, 790.0, 622.0, 50.0,
     ],
@@ -11469,7 +11469,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_7-a4_m.html",
-    specsTableValues: [6700.0, 183.0, 24.1, 87.0],
+    specsTableValues: [6700.0, 183.0, 31.7, 116.0],
     sizeTableValues: [
       860.0, 906.0, 930.0, 995.0, 720.0, 766.0, 790.0, 622.0, 50.0,
     ],
@@ -11502,7 +11502,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_6-a4_m.html",
-    specsTableValues: [5500.0, 147.0, 19.4, 72.0],
+    specsTableValues: [5500.0, 147.0, 25.6, 96.0],
     sizeTableValues: [
       860.0, 906.0, 930.0, 995.0, 600.0, 646.0, 670.0, 502.0, 50.0,
     ],
@@ -11535,7 +11535,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_5-a4_m.html",
-    specsTableValues: [4400.0, 118.0, 16.1, 61.0],
+    specsTableValues: [4400.0, 118.0, 21.2, 81.0],
     sizeTableValues: [
       710.0, 756.0, 780.0, 845.0, 600.0, 646.0, 670.0, 502.0, 50.0,
     ],
@@ -11568,7 +11568,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_4-a4_m.html",
-    specsTableValues: [3200.0, 88.0, 12.3, 49.0],
+    specsTableValues: [3200.0, 88.0, 16.9, 65.0],
     sizeTableValues: [
       710.0, 756.0, 780.0, 845.0, 480.0, 526.0, 550.0, 415.0, 32.0,
     ],
@@ -11601,7 +11601,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_3-a4_m.html",
-    specsTableValues: [2500.0, 68.0, 9.7, 44.0],
+    specsTableValues: [2500.0, 68.0, 13.4, 53.0],
     sizeTableValues: [
       560.0, 606.0, 630.0, 695.0, 480.0, 526.0, 550.0, 415.0, 32.0,
     ],
@@ -11634,7 +11634,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     tableWithTabs: "/legacy/table-kfb_2-a4_m.html",
-    specsTableValues: [2000.0, 52.0, 7.7, 35.0],
+    specsTableValues: [2000.0, 52.0, "10.0", 41.0],
     sizeTableValues: [
       560.0, 606.0, 630.0, 695.0, 360.0, 406.0, 430.0, 295.0, 32.0,
     ],
@@ -12097,7 +12097,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_14-a4_p.html",
-    specsTableValues: [18000.0, 500.0, 61.5, 221.0],
+    specsTableValues: [18000.0, 500.0, 81.4, 289.0],
     sizeTableValues: [
       1460.0, 1506.0, 1530.0, 1595.0, 1080.0, 1126.0, 1150.0, 968.0, 65.0,
     ],
@@ -12130,7 +12130,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_13-a4_p.html",
-    specsTableValues: [16000.0, 446.0, 55.2, 194.0],
+    specsTableValues: [16000.0, 446.0, "73.0", 256.0],
     sizeTableValues: [
       1310.0, 1356.0, 1380.0, 1445.0, 1080.0, 1126.0, 1150.0, 968.0, 65.0,
     ],
@@ -12163,7 +12163,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_12-a4_p.html",
-    specsTableValues: [13500.0, 380.0, 48.2, 167.0],
+    specsTableValues: [13500.0, 380.0, 63.7, 220.0],
     sizeTableValues: [
       1310.0, 1356.0, 1380.0, 1445.0, 960.0, 1006.0, 1030.0, 848.0, 65.0,
     ],
@@ -12196,7 +12196,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_11-a4_p.html",
-    specsTableValues: [12000.0, 340.0, 42.7, 149.0],
+    specsTableValues: [12000.0, 340.0, 56.5, 198.0],
     sizeTableValues: [
       1160.0, 1206.0, 1230.0, 1295.0, 960.0, 1006.0, 1030.0, 848.0, 65.0,
     ],
@@ -12229,7 +12229,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_10-a4_p.html",
-    specsTableValues: [10500.0, 298.0, 36.5, 132.0],
+    specsTableValues: [10500.0, 298.0, 49.5, 173.0],
     sizeTableValues: [
       1160.0, 1206.0, 1230.0, 1295.0, 840.0, 886.0, 910.0, 728.0, 65.0,
     ],
@@ -12262,7 +12262,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_9-a4_p.html",
-    specsTableValues: [9200.0, 261.0, 31.8, 115.0],
+    specsTableValues: [9200.0, 261.0, 43.2, 154.0],
     sizeTableValues: [
       1010.0, 1056.0, 1080.0, 1145.0, 840.0, 886.0, 910.0, 728.0, 65.0,
     ],
@@ -12295,7 +12295,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_8-a4_p.html",
-    specsTableValues: [8000.0, 226.0, 28.2, 100.0],
+    specsTableValues: [8000.0, 226.0, 37.2, 133.0],
     sizeTableValues: [
       1010.0, 1056.0, 1080.0, 1145.0, 720.0, 766.0, 790.0, 622.0, 50.0,
     ],
@@ -12328,7 +12328,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_7-a4_p.html",
-    specsTableValues: [6700.0, 193.0, 24.1, 87.0],
+    specsTableValues: [6700.0, 193.0, 31.7, 116.0],
     sizeTableValues: [
       860.0, 906.0, 930.0, 995.0, 720.0, 766.0, 790.0, 622.0, 50.0,
     ],
@@ -12361,7 +12361,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_6-a4_p.html",
-    specsTableValues: [5500.0, 155.0, 19.4, 72.0],
+    specsTableValues: [5500.0, 155.0, 25.6, 96.0],
     sizeTableValues: [
       860.0, 906.0, 930.0, 995.0, 600.0, 646.0, 670.0, 502.0, 50.0,
     ],
@@ -12394,7 +12394,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_5-a4_p.html",
-    specsTableValues: [4400.0, 127.0, 16.1, 61.0],
+    specsTableValues: [4400.0, 127.0, 21.2, 81.0],
     sizeTableValues: [
       710.0, 756.0, 780.0, 845.0, 600.0, 646.0, 670.0, 502.0, 50.0,
     ],
@@ -12427,7 +12427,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_4-a4_p.html",
-    specsTableValues: [3200.0, 95.0, 12.3, 49.0],
+    specsTableValues: [3200.0, 95.0, 16.9, 65.0],
     sizeTableValues: [
       710.0, 756.0, 780.0, 845.0, 480.0, 526.0, 550.0, 415.0, 32.0,
     ],
@@ -12460,7 +12460,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_3-a4_p.html",
-    specsTableValues: [2500.0, 75.0, 9.7, 44.0],
+    specsTableValues: [2500.0, 75.0, 13.4, 53.0],
     sizeTableValues: [
       560.0, 606.0, 630.0, 695.0, 480.0, 526.0, 550.0, 415.0, 32.0,
     ],
@@ -12493,7 +12493,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     tableWithTabs: "/legacy/table-kfb_2-a4_p.html",
-    specsTableValues: [2000.0, 59.0, 7.7, 35.0],
+    specsTableValues: [2000.0, 59.0, "10.0", 41.0],
     sizeTableValues: [
       560.0, 606.0, 630.0, 695.0, 360.0, 406.0, 430.0, 295.0, 32.0,
     ],
