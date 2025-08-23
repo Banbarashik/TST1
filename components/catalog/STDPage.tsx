@@ -88,12 +88,13 @@ export default function STDPage({ product }) {
               }}
             />
             <div>
-              <ProductSubheader text={variant.name} />
+              <h2 className="text-xl">{variant.name}.</h2>
+              <p className="mb-3 text-xl">ТУ 4864-003-55613706-02</p>
               <ProductParagraph>
                 Теплоотдающие элементы {heatCarrierAdj.gen} калорифера{" "}
                 {variant.calorifier}:
               </ProductParagraph>
-              <ul className="mb-4 text-lg">
+              <ul className="mb-4 text-[17px]">
                 <li>
                   - электросварные прямошовные трубки {variant.tubeSize} мм по
                   ГОСТ 10704-91
