@@ -237,13 +237,27 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <tbody>
           {isCalorifier && (
             <tr>
-              <td>L</td>
-              <td>L 1</td>
-              <td>L 2</td>
-              <td>L 3</td>
-              <td>H</td>
-              <td>H 1</td>
-              <td>H 2</td>
+              {product.heatCarrier === "water" ? (
+                <>
+                  <td>L</td>
+                  <td>L 1</td>
+                  <td>L 2</td>
+                  <td>L 3</td>
+                  <td>H</td>
+                  <td>H 1</td>
+                  <td>H 2</td>
+                </>
+              ) : (
+                <>
+                  <td>H</td>
+                  <td>H 1</td>
+                  <td>H 2</td>
+                  <td>H 3</td>
+                  <td>B</td>
+                  <td>B 1</td>
+                  <td>B 2</td>
+                </>
+              )}
               <td>C</td>
               <td>dy</td>
             </tr>
