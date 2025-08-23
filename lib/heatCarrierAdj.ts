@@ -11,7 +11,7 @@ const heatCarrierAdjForms: Record<string, Record<GrammaticalCase, string>> = {
     nom: "паровой",
     gen: "парового",
     plu: "паровые",
-    pluGen: "водяных",
+    pluGen: "паровых",
   },
 };
 
