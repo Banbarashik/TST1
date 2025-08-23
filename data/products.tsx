@@ -1198,7 +1198,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         airPower: 2800,
         heatPower: 50,
         price: 60542,
-        specsTableValues: ["АВО 3-55-01", 2800, 49, "840 х 575 х 790", 91],
+        specsTableValues: ["АВО 3-55-01", 2800, 50, "840 х 575 х 790", 91],
         componentsTableValues: [
           "АВО 3-55-01",
           "ВО-06-300-4 (0.25 кВт / 1500 об. мин.)",
