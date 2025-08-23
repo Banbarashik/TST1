@@ -14,7 +14,6 @@ export default function AVOPage({ product }) {
   const oppositeHeatCarrier =
     product.heatCarrier === "water" ? "steam" : "water";
   const oppositeHeatCarrierAdj = getHeatCarrierAdj(oppositeHeatCarrier);
-  const name = `Воздушно-отопительный агрегат ${product.shortName} ${heatCarrierAdj.nom} ТУ 4864-003-55613706-02`;
 
   const tableIndicators: Record<string, string> = {
     water:
@@ -52,7 +51,11 @@ export default function AVOPage({ product }) {
       </div>
       <div className="mb-5 flex gap-10">
         <div>
-          <ProductSubheader text={name} />
+          <h2 className="text-xl">
+            Воздушно-отопительный агрегат {product.shortName}{" "}
+            {heatCarrierAdj.nom}.
+          </h2>
+          <p className="mb-3 text-xl">ТУ 4864-003-55613706-02</p>
           <ProductParagraph>
             Теплоотдающие элементы {heatCarrierAdj.gen} калорифера{" "}
             {product.calorifier}:
