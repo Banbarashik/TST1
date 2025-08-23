@@ -49,7 +49,7 @@ export default function AVOPage({ product }) {
           );
         })}
       </div>
-      <div className="mb-5 flex gap-10">
+      <div className="mb-5 flex justify-between">
         <div>
           <h2 className="text-xl">
             Воздушно-отопительный агрегат {product.shortName}{" "}
@@ -60,7 +60,7 @@ export default function AVOPage({ product }) {
             Теплоотдающие элементы {heatCarrierAdj.gen} калорифера{" "}
             {product.calorifier}:
           </ProductParagraph>
-          <ul className="mb-4 text-lg">
+          <ul className="mb-4 text-[17px]">
             <li>
               - электросварные прямошовные трубки {product.tubeSize} мм по ГОСТ
               10704-91
