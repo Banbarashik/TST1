@@ -1271,7 +1271,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк3",
         rows: 3,
         tubeSize: "16х1.5",
-        heatPower: 333,
+        heatPower: 326,
         price: 168203,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_v.png",
@@ -1302,7 +1302,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
         calorifier: "КСк4",
         rows: 4,
         tubeSize: "16х1.5",
-        heatPower: 391,
+        heatPower: 385,
         price: 189000,
         img: {
           url: "/img/agregaty/std300/agregat_std-300_v.png",
