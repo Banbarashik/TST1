@@ -70,7 +70,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             {product.model}
             {product.climate && ` ${product.climate}`}.{" "}
             {isAgregat ? (
-              <p>ТУ 4863-002-55613706-02</p>
+              <p>ТУ 4864-003-55613706-02</p>
             ) : (
               "ТУ 4863-002-55613706-02"
             )}
