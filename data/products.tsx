@@ -1715,7 +1715,19 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calculator: "/legacy/calculator-kpsk-1489-1489.html",
     heatCarrier: "steam",
     specsTableValues: [
-      22000, 1417, 1465, 1489, 1554, 1305, 65, 51.7, 78.0, 103.5, 154, 207, 259,
+      22000,
+      1417,
+      1465,
+      1489,
+      1554,
+      1305,
+      65,
+      51.7,
+      "78.0",
+      103.5,
+      154,
+      207,
+      259,
     ],
     nextProduct: {
       slug: "kpps-1530x1530",
@@ -3380,7 +3392,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     calculator: "/legacy/calculator-kp-1208-1208.html",
     heatCarrier: "steam",
     specsTableValues: [
-      13000, 1136, 1184, 1208, 1273, 1025, 65, 26.4, 39.9, 52.9, 111, 149, 196,
+      13000, 1136, 1184, 1208, 1273, 1024, 65, 26.4, 39.9, 52.9, 111, 149, 196,
     ],
     nextProduct: {
       slug: "kppu-1254x1254",
