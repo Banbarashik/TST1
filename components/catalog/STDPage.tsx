@@ -148,7 +148,9 @@ export default function STDPage({ product }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
 
-      <ProductSubheader text={`Технические характеристики ${product.model}`} />
+      <ProductSubheader
+        text={`Технические характеристики агрегата ${product.model}`}
+      />
       <STDSpecsTable
         className="mb-6"
         rows={product.variants}

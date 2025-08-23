@@ -101,7 +101,7 @@ export default function AVOPage({ product }) {
       </ProductParagraph>
 
       <ProductSubheader
-        text={`Технические характеристики ${product.shortName} ${heatCarrierAdj.pluGen}`}
+        text={`Технические характеристики агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
       />
       <STDSpecsTable
         rows={product.variants}
