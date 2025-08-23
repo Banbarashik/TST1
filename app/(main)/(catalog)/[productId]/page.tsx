@@ -23,8 +23,8 @@ function getProductType(categories: string[]) {
   if (categories.includes("tvv") || categories.includes("kp")) return "tvv_kp";
   if (categories.includes("kfb")) return "kfb";
   if (categories.includes("ao2")) return "ao2";
-  if (categories.includes("std300") || categories.includes("std300-hl"))
-    return "std300";
+  if (categories.includes("std300")) return "std300";
+  if (categories.includes("std300-hl")) return "std300-hl";
   if (categories.includes("avo")) return "avo";
   if (categories.includes("sfo")) return "sfo";
   if (categories.includes("sfotc")) return "sfotc";
@@ -130,6 +130,16 @@ export async function generateMetadata({
     };
   }
 
+  if (productType === "std300" || productType === "std300-hl") {
+    const hl = productType === "std300-hl" ? "ХЛ" : "";
+
+    return {
+      title: `Агрегат СТД-300 ${hl} отопительный ${heatCarrierAdj.nom}`,
+      description: `Агрегат СТД 300 ${hl} воздушно-отопительный ${heatCarrierAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена ${heatCarrierAdj.gen} агрегата СТД 300 ${hl}`,
+      keywords: `стд 300 ${product.heatCarrier === "water" ? "в" : "п"} ${hl},агрегат стд 300 ${hl} ${heatCarrierAdj.nom},агрегат стд 300 ${product.calorifier}3,отопительный агрегат стд 300 ${product.calorifier}4 расчет и подбор,воздушно-отопительный агрегат ${product.model}3,агрегат ${product.model}4 технические характеристики,агрегат отопительный ${heatCarrierAdj.nom} стд 300 ${hl} мощность,воздушный агрегат стд 300 ${hl} ${product.heatCarrier === "water" ? "в" : "п"} производительность,отопительный агрегат стд 300 ${hl} ${product.heatCarrier === "water" ? "в" : "п"} купить,${heatCarrierAdj.nom} агрегат стд 300 ${hl} цена`,
+    };
+  }
+
   if (productType === "sfo") {
     return {
       title: `${product.name}. Производство`,
@@ -184,7 +194,8 @@ export default async function ProductPage({
     productType === "ao2"
   )
     return <KSKProductPage product={product} />;
-  if (productType === "std300") return <STDPage product={product} />;
+  if (productType === "std300" || productType === "std300-hl")
+    return <STDPage product={product} />;
   if (productType === "avo") return <AVOPage product={product} />;
   if (
     productType === "sfo" ||
