@@ -104,7 +104,7 @@ export async function generateMetadata({
       keys = `калорифер ${size} мощность,калорифер ${size} технические характеристики,калорифер ${size} производительность,${heatCarrierAdj.nom} калорифер для сушильной камеры ${product.airPower} м3/час,${heatCarrierAdj.nom} калорифер для сушки ${heatPower} кВт`;
 
     return {
-      title: product.name,
+      title: `Калорифер приточный ${product.shortName} ${heatCarrierAdj.nom}`,
       description: `${heatCarrierAdj.nom} приточный калорифер ${product.shortName} производительностью по воздуху ${product.airPower} м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора`,
       keywords: `${product.series} ${size},калорифер ${product.series} ${size},калорифер ${product.series} ${size} водяной,калорифер ${product.series} ${size} цена,калорифер ${product.series} ${size} купить,${keys}`,
     };
