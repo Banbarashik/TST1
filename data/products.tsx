@@ -8288,7 +8288,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/ksk/kalorifer_ksk_2-6_chertez.png",
     tableWithTabs: "/legacy/table-ksk-2-6.html",
-    specsTableValues: [2500.0, 38.0, 9.0, 27.0],
+    specsTableValues: [2500.0, 38.0, "9.0", 27.0],
     sizeTableValues: [
       530.0, 578.0, 602.0, 667.0, 500.0, 548.0, 572.0, 435.0, 32.0,
     ],
@@ -8820,7 +8820,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["kalorifer", "vodiany-kalorifery", "ksk", "ksk-4"],
     airPower: 6300,
     heatPower: 162,
-    price: 36765,
+    price: 35765,
     img: {
       url: "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
       alt: "Воздухонагреватель КСк 4-10",
@@ -8828,7 +8828,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/ksk/kalorifer_ksk_4-10_chertez.png",
     tableWithTabs: "/legacy/table-ksk-4-10.html",
-    specsTableValues: [6300.0, 162.0, 39.0, 79.0],
+    specsTableValues: [6300.0, 162.0, "39.0", 79.0],
     sizeTableValues: [
       1155.0, 1203.0, 1227.0, 1292.0, 500.0, 548.0, 572.0, 435.0, 32.0,
     ],
@@ -8936,7 +8936,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/ksk/kalorifer_ksk_4-6_chertez.png",
     tableWithTabs: "/legacy/table-ksk-4-6.html",
-    specsTableValues: [2500.0, 61.0, 18.0, 43.0],
+    specsTableValues: [2500.0, 61.0, "18.0", 43.0],
     sizeTableValues: [
       530.0, 578.0, 602.0, 667.0, 500.0, 548.0, 572.0, 435.0, 32.0,
     ],
@@ -9259,7 +9259,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kpsk/kalorifer_kpsk_2-6_chertez.png",
     tableWithTabs: "/legacy/table-kpsk-2-6.html",
-    specsTableValues: [2500.0, 43.0, 9.0, 27.0],
+    specsTableValues: [2500.0, 43.0, "9.0", 27.0],
     sizeTableValues: [
       530.0, 578.0, 602.0, 667.0, 500.0, 548.0, 572.0, 402.0, 50.0,
     ],
@@ -9791,7 +9791,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     categories: ["kalorifer", "parovy-kalorifery", "kpsk", "kpsk-4"],
     airPower: 6300,
     heatPower: 162,
-    price: 36765,
+    price: 35765,
     img: {
       url: "/img/kalorifery/kpsk/kalorifer_kpsk_4-6_4-10.png",
       alt: "Воздухонагреватель КПСк 4-10",
@@ -9799,7 +9799,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kpsk/kalorifer_kpsk_4-10_chertez.png",
     tableWithTabs: "/legacy/table-kpsk-4-10.html",
-    specsTableValues: [6300.0, 162.0, 39.0, 79.0],
+    specsTableValues: [6300.0, 162.0, "39.0", 79.0],
     sizeTableValues: [
       1155.0, 1203.0, 1227.0, 1292.0, 500.0, 548.0, 572.0, 402.0, 50.0,
     ],
@@ -9907,7 +9907,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     },
     drawing: "/img/kalorifery/kpsk/kalorifer_kpsk_4-6_chertez.png",
     tableWithTabs: "/legacy/table-kpsk-4-6.html",
-    specsTableValues: [2500.0, 69.0, 18.0, 43.0],
+    specsTableValues: [2500.0, 69.0, "18.0", 43.0],
     sizeTableValues: [
       530.0, 578.0, 602.0, 667.0, 500.0, 548.0, 572.0, 402.0, 50.0,
     ],
