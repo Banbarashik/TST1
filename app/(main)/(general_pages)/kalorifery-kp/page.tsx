@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КП",
@@ -49,7 +50,7 @@ export default function KaloriferyKPPage() {
           100000 – 400000 м3/час и тепловой мощности воздухонагреватели
           компонуются в блоки.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство калориферов КП осуществляется согласно ТУ
           4863-002-55613706-02 с проведением обязательных приемо-сдаточных
           испытаний и проверкой каждого парового воздухонагревателя на
@@ -58,15 +59,15 @@ export default function KaloriferyKPPage() {
         <div className="flex">
           <Image
             src="/img/general_pages/kalorifer_parovoi_kp_komplektatciia.png"
-            alt="Производство паровых калориферов КП"
-            title="Конструкция парового калорифера КП"
+            alt="Производство паровых калориферов"
+            title="Калорифер паровой"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_parovoi_kp.png"
-            alt="Паровой воздухонагреватель ВНП 113"
-            title="Калорифер КП паровой"
+            alt="Паровой калорифер для сушильных камер"
+            title="Конструкция парового калорифера"
             width={484}
             height={1}
           />
@@ -117,14 +118,14 @@ export default function KaloriferyKPPage() {
 
       <section>
         <Heading lvl={2} text="Технические характеристики калориферов КП" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы паровые серии КП изготавливаются в двух вариантах: КП 3 –
           трехрядная модель и КП 4 – четырехрядный теплообменник. Увеличение
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kp3} />
-        <ProductParagraph>
+        <ProductLinks products={kp3} className="mb-4" />
+        <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
           Калориферы одного номера КП3 и КП4 имеют одинаковые ширину и высоту, а
@@ -133,17 +134,22 @@ export default function KaloriferyKPPage() {
           модели и номера парового калорифера серии КП, варьируется от 2500 до
           25000 м3/час, от 70 до 720 кВт.
         </ProductParagraph>
-        <ProductLinks products={kp4} />
+        <ProductLinks products={kp4} className="mb-3" />
       </section>
 
-      <section>
-        <Heading lvl={2} text="Габаритные размеры калориферов КП" />
+      <section className="mb-4">
+        <Heading
+          lvl={2}
+          text="Габаритные размеры калориферов КП"
+          className="mb-3"
+        />
         <Image
-          src="/img/general_pages/kalorifery_ksk_gabaritnye_razmery.png"
+          src="/img/general_pages/kalorifery_kp_gabaritnye_razmery.png"
           alt="Габаритные размеры воздухонагревателей ВНП 113"
           title="Габаритные размеры паровых калориферов КП"
           width={968}
           height={1}
+          className="mb-3"
         />
         <iframe
           src="/legacy/table-kalorifery-kp.html"
@@ -158,6 +164,14 @@ export default function KaloriferyKPPage() {
           климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+        tableLinkText="Скачать каталог паровых калориферов"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист паровых калориферов"
+      />
     </>
   );
 }
