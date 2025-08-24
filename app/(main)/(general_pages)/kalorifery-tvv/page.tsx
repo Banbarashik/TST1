@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные ТВВ",
@@ -39,7 +40,7 @@ export default function KaloriferyTVVPage() {
           теплоносителя выступает горячая или перегретая вода с температурой до
           180°С и давлением до 1.2 МПа.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство калориферов ТВВ осуществляется согласно ТУ
           4863-002-55613706-02 с проведением обязательных приемо-сдаточных
           испытаний и проверкой каждого водяного воздухонагревателя на
@@ -47,16 +48,16 @@ export default function KaloriferyTVVPage() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/kalorifer_vodianoi_ tvv_komplektatciia.png"
+            src="/img/general_pages/kalorifer_vodianoi_tvv_komplektatciia.png"
             alt="Производство водяных калориферов ТВВ"
-            title="Конструкция водяного калорифера ТВВ"
+            title="Калорифер ТВВ водяной"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_vodianoi_tvv.png"
             alt="Водяной воздухонагреватель ВНВ 113"
-            title="Калорифер ТВВ водяной"
+            title="Калорифер ТВВ"
             width={484}
             height={1}
           />
@@ -107,14 +108,14 @@ export default function KaloriferyTVVPage() {
 
       <section>
         <Heading lvl={2} text="Технические характеристики калориферов ТВВ" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы водяные серии ТВВ изготавливаются в двух вариантах: ТВВ 3 –
           трехрядная модель и ТВВ 4 – четырехрядный теплообменник. Увеличение
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={tvv3} />
-        <ProductParagraph>
+        <ProductLinks products={tvv3} className="mb-8" />
+        <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
           Калориферы одного номера ТВВ3 и ТВВ4 имеют одинаковые длину и высоту,
@@ -123,31 +124,18 @@ export default function KaloriferyTVVPage() {
           модели и номера водяного калорифера серии ТВВ, варьируется от 2500 до
           25000 м3/час, от 55 до 725 кВт.
         </ProductParagraph>
-        <ProductLinks products={tvv4} />
-        <Image
-          src="/img/general_pages/kalorifery_vodianye_tvv.png"
-          alt="Калорифер для низких температурных режимов"
-          title="Калорифер для холодного климата ТВВ"
-          width={484}
-          height={1}
-        />
-        <Image
-          src="/img/general_pages/kalorifer_vodianoi_tvv_riady.png"
-          alt="Характеристики воздухонагревателей ВНВ 113 ХЛ"
-          title="Калориферы ТВВ3, ТВВ4"
-          width={484}
-          height={1}
-        />
+        <ProductLinks products={tvv4} className="mb-3" />
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Габаритные размеры калориферов ТВВ" />
         <Image
-          src="/img/general_pages/kalorifery_ksk_gabaritnye_razmery.png"
+          src="/img/general_pages/kalorifery_tvv_gabaritnye_razmery.png"
           alt="Габаритные размеры воздухонагревателей ВНВ 113"
           title="Габаритные размеры водяных калориферов ТВВ"
           width={968}
           height={1}
+          className="mb-3"
         />
         <iframe
           src="/legacy/table-kalorifery-tvv.html"
@@ -161,6 +149,14 @@ export default function KaloriferyTVVPage() {
           исполнение; ХЛ - климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+        tableLinkText="Скачать каталог водяных калориферов ТВВ"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист калориферов ТВВ"
+      />
     </>
   );
 }
