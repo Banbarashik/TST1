@@ -2,9 +2,14 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-export default function ProductLinks({ products }) {
+export default function ProductLinks({
+  products,
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <ul className="mb-6 grid grid-cols-5 gap-x-5 gap-y-6">
+    <ul className={className + " grid grid-cols-5 gap-x-5 gap-y-6"}>
       {products.map((p) => (
         <li key={p.id}>
           <ProductLink product={p} />

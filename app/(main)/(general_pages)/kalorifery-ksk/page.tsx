@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные КСк",
@@ -40,7 +41,7 @@ export default function KaloriferyKSKPage() {
           МПа. Передача теплоты от воды к воздуху происходит с помощью процесса
           теплопередачи.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство калориферов КСк осуществляется согласно ТУ
           4863-002-55613706-02 с проведением обязательных приемо-сдаточных
           испытаний и проверкой каждого водяного воздухонагревателя на
@@ -50,13 +51,13 @@ export default function KaloriferyKSKPage() {
           <Image
             src="/img/general_pages/kalorifer_vodianoi_ksk_komplektatciia.png"
             alt="Производство калориферов КСк"
-            title="Конструкция водяного калорифера КСк"
+            title="Калорифер КСк водяной"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_vodianoi_ksk.png"
-            alt="Калорифер водяной КСк"
+            alt="Конструкция водяного калорифера КСк"
             title="Калорифер КСк"
             width={484}
             height={1}
@@ -118,61 +119,52 @@ export default function KaloriferyKSKPage() {
           модели и номера водяного калорифера серии КСк, варьируется от 2000 до
           25000 м3/час, от 29 до 665 кВт.
         </ProductParagraph>
-        <Image
-          src="/img/general_pages/kalorifery_vodianye_ksk.png"
-          alt="Калорифер КСк – производительность и мощность"
-          title="Калорифер КСк водяной"
-          width={484}
-          height={1}
-        />
-        <Image
-          src="/img/general_pages/kalorifer_vodianoi_ksk_riady.png"
-          alt="Технические характеристики калориферов КСк"
-          title="Калориферы КСк2, КСк3, КСк4"
-          width={484}
-          height={1}
-        />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КСк 2" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КСк 2 водяные изготавливаются с двумя рядами теплоотдающих
           элементов. Применяются для нагрева воздуха на небольшую разницу
           температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk2} />
+        <ProductLinks products={ksk2} className="mb-3" />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КСк 3" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КСк 3 изготавливаются с тремя рядами теплоотдающих
           элементов. Наиболее экономичный вариант с хорошими теплотехническими
           характеристиками. Повышенное гидравлическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk3} />
+        <ProductLinks products={ksk3} className="mb-3" />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КСк 4" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КСк 4 изготавливаются с четырьмя рядами теплоотдающих
           элементов. Наибольшая тепловая мощность, качественный обогрев с
           высокой разницей температуры воздуха на входе и выходе из калорифера.
           Увеличенное аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk4} />
+        <ProductLinks products={ksk4} className="mb-3" />
       </section>
 
-      <section>
-        <Heading lvl={2} text="Габаритные размеры калориферов КСк" />
+      <section className="mb-4">
+        <Heading
+          lvl={2}
+          text="Габаритные размеры калориферов КСк"
+          className="mb-3"
+        />
         <Image
           src="/img/general_pages/kalorifery_ksk_gabaritnye_razmery.png"
-          alt="Габаритные размеры воздухонагревателей КСк"
+          alt="Технические характеристики калориферов КСк"
           title="Габаритные размеры калориферов КСк водяных"
           width={968}
           height={1}
+          className="mb-3"
         />
         <iframe
           src="/legacy/table-kalorifery-ksk.html"
@@ -186,6 +178,14 @@ export default function KaloriferyKSKPage() {
           исполнение; ХЛ - климатическое исполнение; 3 - категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
+        tableLinkText="Скачать каталог водяных калориферов КСк"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист калориферов КСк"
+      />
     </>
   );
 }

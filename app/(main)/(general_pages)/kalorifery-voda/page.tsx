@@ -103,6 +103,7 @@ export default function KaloriferyVodaPage() {
         <Heading lvl={3} text="Приточные калориферы КПВС" className="mb-4" />
         <ProductLinks
           products={kpvs.map((p) => ({ ...p, name: p.shortName }))}
+          className="mb-6"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВС
@@ -130,6 +131,7 @@ export default function KaloriferyVodaPage() {
         <Heading lvl={3} text="Приточные калориферы КПВУ" className="mb-4" />
         <ProductLinks
           products={kpvu.map((p) => ({ ...p, name: p.shortName }))}
+          className="mb-6"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВУ

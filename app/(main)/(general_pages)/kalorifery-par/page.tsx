@@ -104,6 +104,7 @@ export default function KaloriferyParPage() {
         <Heading lvl={3} text="Приточные калориферы КППС" className="mb-4" />
         <ProductLinks
           products={kpps.map((p) => ({ ...p, name: p.shortName }))}
+          className="mb-6"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения паровых приточных калориферов КППС
@@ -131,6 +132,7 @@ export default function KaloriferyParPage() {
         <Heading lvl={3} text="Приточные калориферы КППУ" className="mb-4" />
         <ProductLinks
           products={kppu.map((p) => ({ ...p, name: p.shortName }))}
+          className="mb-6"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения паровых приточных калориферов КППУ
