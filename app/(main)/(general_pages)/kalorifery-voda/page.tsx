@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы приточные водяные",
@@ -151,6 +152,14 @@ export default function KaloriferyVodaPage() {
           height={1}
         />
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+        tableLinkText="Скачать каталог приточных водяных калориферов"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист приточных водяных калориферов"
+      />
     </>
   );
 }
