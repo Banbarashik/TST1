@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КПСк",
@@ -46,7 +47,7 @@ export default function KaloriferyKPSKPage() {
           испытаний и проверкой каждого парового воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Наиболее оправдана и экономически целесообразна установка калориферов
           КПСк на предприятиях, где пар имеет производственное потребление и
           применяется в технологическом процессе. К преимуществам их
@@ -59,13 +60,13 @@ export default function KaloriferyKPSKPage() {
           <Image
             src="/img/general_pages/kalorifer_parovoi_kpsk_komplektatciia.png"
             alt="Производство калориферов КПСк"
-            title="Конструкция парового калорифера КПСк"
+            title="Калорифер КПСк паровой"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_parovoi_kpsk.png"
-            alt="Калорифер паровой КПСк"
+            alt="Конструкция парового калорифера КПСк"
             title="Калорифер КПСк"
             width={484}
             height={1}
@@ -128,61 +129,52 @@ export default function KaloriferyKPSKPage() {
           зависимости от модели и номера парового калорифера серии КПСк,
           варьируется от 2000 до 25000 м3/час, от 28 до 668 кВт.
         </ProductParagraph>
-        <Image
-          src="/img/genetal_pages/kalorifery_parovye_kpsk.png"
-          alt="Калорифер КПСк – производительность и мощность"
-          title="Калорифер КПСк паровой"
-          width={484}
-          height={1}
-        />
-        <Image
-          src="/img/genetal_pages/kalorifer_parovoi_kpsk_riady.png"
-          alt="Технические характеристики калориферов КПСк"
-          title="Калориферы КПСк2, КПСк3, КПСк4"
-          width={484}
-          height={1}
-        />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КПСк 2" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КПСк 2 паровые изготавливаются с двумя рядами
           теплопередающих элементов. Применяются для нагрева воздуха на
           небольшую разницу температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={kpsk2} />
+        <ProductLinks products={kpsk2} className="mb-3" />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КПСк 3" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КПСк 3 изготавливаются с тремя рядами теплопередающих
           элементов. Наиболее экономичный вариант с хорошими теплотехническими
           характеристиками.
         </ProductParagraph>
-        <ProductLinks products={kpsk3} />
+        <ProductLinks products={kpsk3} className="mb-3" />
       </section>
 
       <section>
         <Heading lvl={3} text="Технические характеристики калориферов КПСк 4" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы КПСк 4 изготавливаются с четырьмя рядами теплопередающих
           элементов. Наибольшая тепловая мощность, качественный обогрев с
           высокой разницей температур на входе и выходе из калорифера.
           Увеличенное аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={kpsk4} />
+        <ProductLinks products={kpsk4} className="mb-3" />
       </section>
 
-      <section>
-        <Heading lvl={2} text="Габаритные размеры калориферов КПСк" />
+      <section className="mb-4">
+        <Heading
+          lvl={2}
+          text="Габаритные размеры калориферов КПСк"
+          className="mb-3"
+        />
         <Image
           src="/img/general_pages/kalorifery_kpsk_gabaritnye_razmery.png"
-          alt="Габаритные размеры воздухонагревателей КПСк"
+          alt="Технические характеристики калориферов КПСк"
           title="Габаритные размеры калориферов КПСк паровых"
           width={968}
           height={1}
+          className="mb-3"
         />
         <iframe
           src="/legacy/table-kalorifery-kpsk.html"
@@ -198,6 +190,14 @@ export default function KaloriferyKPSKPage() {
           размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
+        tableLinkText="Скачать каталог паровых калориферов КПСк"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист калориферов КПСк"
+      />
     </>
   );
 }
