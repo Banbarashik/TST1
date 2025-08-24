@@ -45,7 +45,7 @@ export default function KaloriferyVodaPage() {
 
       <section>
         <Heading lvl={2} text="Характеристики приточных водяных калориферов" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Водяные калориферы для приточных систем серии КПВС и КПВУ имеют
           квадратную форму с внутренними размерами нагревательного модуля от
           500х500 мм до 1500х1500 мм. Производительность по воздуху варьируется
@@ -100,11 +100,11 @@ export default function KaloriferyVodaPage() {
       </section>
 
       <section>
-        <Heading lvl={3} text="Приточные калориферы КПВС" />
+        <Heading lvl={3} text="Приточные калориферы КПВС" className="mb-4" />
         <ProductLinks
           products={kpvs.map((p) => ({ ...p, name: p.shortName }))}
         />
-        <ProductParagraph className="mb-2">
+        <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВС
           производства ООО «Т.С.Т.». Калорифер КПВС 822х822_3: КПВС – калорифер
           приточный водяной стандартный; 822 – внешняя длина калорифера, мм; 822
@@ -115,7 +115,7 @@ export default function KaloriferyVodaPage() {
         <iframe
           src="/legacy/table-kalorifery-voda-kpvs.html"
           title="Калориферы КПВС"
-          className="h-82 w-full"
+          className="mb-2 h-82 w-full"
         />
         <Image
           src="/img/general_pages/kalorifery_pritochnye_vodianye_kpvs_chertez.png"
@@ -126,12 +126,12 @@ export default function KaloriferyVodaPage() {
         />
       </section>
 
-      <section>
-        <Heading lvl={3} text="Приточные калориферы КПВУ" />
+      <section className="mb-8">
+        <Heading lvl={3} text="Приточные калориферы КПВУ" className="mb-4" />
         <ProductLinks
           products={kpvu.map((p) => ({ ...p, name: p.shortName }))}
         />
-        <ProductParagraph className="mb-2">
+        <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВУ
           производства ООО «Т.С.Т.». Калорифер КПВУ 1390х1390_4: КПВУ –
           калорифер приточный водяной увеличенный; 1390 – внешняя длина
@@ -142,7 +142,7 @@ export default function KaloriferyVodaPage() {
         <iframe
           src="/legacy/table-kalorifery-voda-kpvu.html"
           title="Калориферы КПВУ"
-          className="h-76 w-full"
+          className="mb-2 h-76 w-full"
         />
         <Image
           src="/img/general_pages/kalorifery_pritochnye_vodianye_kpvu_chertez.png"

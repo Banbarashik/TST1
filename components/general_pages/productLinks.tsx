@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ProductLinks({ products }) {
   return (
-    <ul className="mb-2 flex flex-wrap gap-4">
+    <ul className="mb-6 grid grid-cols-5 gap-x-5 gap-y-6">
       {products.map((p) => (
         <li key={p.id}>
           <ProductLink product={p} />
@@ -25,10 +25,12 @@ function ProductLink({ product }) {
       asChild
     >
       <Link href={id}>
-        <span>{name}</span>
-        <span>
-          {airPower} м<sup>3</sup>/ч{heatPower ? `; ${heatPower} кВт` : ""}
-        </span>
+        <div className="flex flex-col items-center gap-0.5">
+          <span>{name}</span>
+          <span className="text-sm">
+            {airPower} м<sup>3</sup>/ч{heatPower ? `; ${heatPower} кВт` : ""}
+          </span>
+        </div>
       </Link>
     </Button>
   );
