@@ -8,9 +8,10 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
-  title: "Калориферы приточной установки паровые",
+  title: "Калориферы приточные паровые",
   description:
     "Приточные паровые калориферы – производитель ООО Т.С.Т. Производство, характеристики, размеры, расчет, подбор, цена паровых калориферов для приточной вентиляции",
   keywords:
@@ -27,7 +28,7 @@ export default function KaloriferyParPage() {
 
   return (
     <>
-      <Heading lvl={1} text="Калориферы приточные паровые" />
+      <Heading lvl={1} text="Калориферы приточные КППС и КППУ" />
 
       <section>
         <Heading lvl={2} text="Производство приточных паровых калориферов" />
@@ -46,7 +47,7 @@ export default function KaloriferyParPage() {
 
       <section>
         <Heading lvl={2} text="Характеристики приточных паровых калориферов" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Паровые калориферы для приточных систем серии КППС и КППУ имеют
           квадратную форму с внутренними размерами нагревательного модуля от
           500х500 мм до 1500х1500 мм. Производительность по воздуху варьируется
@@ -100,40 +101,40 @@ export default function KaloriferyParPage() {
       </section>
 
       <section>
-        <Heading lvl={3} text="Приточные калориферы КППС" />
+        <Heading lvl={3} text="Приточные калориферы КППС" className="mb-4" />
         <ProductLinks
           products={kpps.map((p) => ({ ...p, name: p.shortName }))}
         />
-        <ProductParagraph>
-          Структура условного обозначения паровых приточных калориферов КППУ
-          производства ООО «Т.С.Т.». Калорифер КППУ 981х981_3: КПВС – калорифер
-          приточный паровой увеличенный; 981 – внешняя ширина калорифера, мм;
-          981 – внешняя высота калорифера, мм; 3 - количество рядов
-          теплопередающих элементов, стальные трубки диаметром 22 мм с накатным
-          алюминиевым оребрением.
+        <ProductParagraph className="mb-3">
+          Структура условного обозначения паровых приточных калориферов КППС
+          производства ООО «Т.С.Т.». Калорифер КППС 1530х1530_2: КППС –
+          калорифер приточный паровой стандартный; 1530 – внешняя ширина
+          калорифера, мм; 1530 – внешняя высота калорифера, мм; 2 - количество
+          рядов теплопередающих элементов, стальные трубки диаметром 16 мм с
+          накатным алюминиевым оребрением.
         </ProductParagraph>
         <iframe
           src="/legacy/table-kalorifery-par-kpps.html"
           title="Калориферы КППС"
-          className="h-82 w-full"
+          className="mb-2 h-82 w-full"
         />
         <Image
           src="/img/general_pages/kalorifery_pritochnye_parovye_kpps_chertez.png"
-          alt="Паровые приточные калориферы характеристики"
-          title="Паровые приточные калориферы размеры"
+          alt="Паровые приточные калориферы габаритные размеры"
+          title="Паровые приточные калориферы КППС размеры"
           width={968}
           height={1}
         />
       </section>
 
-      <section>
-        <Heading lvl={3} text="Приточные калориферы КППУ" />
+      <section className="mb-8">
+        <Heading lvl={3} text="Приточные калориферы КППУ" className="mb-4" />
         <ProductLinks
           products={kppu.map((p) => ({ ...p, name: p.shortName }))}
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-3">
           Структура условного обозначения паровых приточных калориферов КППУ
-          производства ООО «Т.С.Т.». Калорифер КППУ 981х981_3: КПВС – калорифер
+          производства ООО «Т.С.Т.». Калорифер КППУ 981х981_3: КППУ – калорифер
           приточный паровой увеличенный; 981 – внешняя ширина калорифера, мм;
           981 – внешняя высота калорифера, мм; 3 - количество рядов
           теплопередающих элементов, стальные трубки диаметром 22 мм с накатным
@@ -142,16 +143,24 @@ export default function KaloriferyParPage() {
         <iframe
           src="/legacy/table-kalorifery-par-kppu.html"
           title="Калориферы КППУ"
-          className="h-76 w-full"
+          className="mb-2 h-76 w-full"
         />
         <Image
           src="/img/general_pages/kalorifery_pritochnye_parovye_kppu_chertez.png"
-          alt="Паровые приточные калориферы характеристики"
-          title="Паровые приточные калориферы размеры"
+          alt="Паровые приточные калориферы технические характеристики"
+          title="Паровые приточные калориферы КППУ размеры"
           width={968}
           height={1}
         />
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+        tableLinkText="Скачать каталог приточных паровых калориферов"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист приточных паровых калориферов"
+      />
     </>
   );
 }
