@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные КФБ-А М",
@@ -30,7 +31,7 @@ export default function KaloriferyKFBAPage() {
 
       <section>
         <Heading lvl={2} text="Производство калориферов КФБ-А М" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Калориферы водяные КФБ-А производства ООО Т.С.Т. – водовоздушные
           биметаллические многоходовые теплообменники, предназначенные для
           подогрева воздуха в холодный и переходный периоды года. В качестве
@@ -104,7 +105,7 @@ export default function KaloriferyKFBAPage() {
 
       <section>
         <Heading lvl={2} text="Назначение калориферов КФБ-А М" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Разработанные специально для эксплуатации в районах с тяжелыми
           климатическими условиями, водяные калориферы КФБ-А могут
           устанавливаться как отдельно, так и компоноваться в секции. Группы
@@ -123,8 +124,8 @@ export default function KaloriferyKFBAPage() {
           />
           <Image
             src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
-            title="Калориферная установка"
             alt="Шахтовые калориферы"
+            title="Калориферная установка"
             width={484}
             height={1}
           />
@@ -164,14 +165,14 @@ export default function KaloriferyKFBAPage() {
           lvl={2}
           text="Технические характеристики калориферов КФБ-А М"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы водяные серии КФБ-А изготавливаются в двух вариантах: КФБ А
           3 – трехрядная модель и КФБ А 4 – четырехрядный теплообменник.
           Увеличение количества рядов предполагает собой нагрев входящего
           воздуха на большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kfb3} />
-        <ProductParagraph>
+        <ProductLinks products={kfb3} className="mb-4" />
+        <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из тринадцати
           типоразмеров, каждому из которых присваивается свой порядковый номер.
           Калориферы одного номера КФБ-А3 и КФБ-А4 имеют одинаковые длину и
@@ -180,10 +181,10 @@ export default function KaloriferyKFBAPage() {
           от модели и номера водяного калорифера серии КФБ-А варьируется от 2000
           до 18000 м3/час, от 42 до 502 кВт.
         </ProductParagraph>
-        <ProductLinks products={kfb4} />
+        <ProductLinks products={kfb4} className="mb-3" />
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Габаритные размеры калориферов КФБ-А М" />
         <Image
           src="/img/general_pages/kalorifery_kfb_vodianye_gabaritnye_razmery.png"
@@ -207,6 +208,14 @@ export default function KaloriferyKFBAPage() {
           по ходу движению теплоносителя.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+        tableLinkText="Скачать каталог водяных калориферов КФБ"
+        catalogURL=""
+        catalogLinkText="Скачать прайс-лист калориферов КФБ водяных"
+      />
     </>
   );
 }

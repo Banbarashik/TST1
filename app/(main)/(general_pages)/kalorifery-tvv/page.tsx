@@ -114,7 +114,7 @@ export default function KaloriferyTVVPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={tvv3} className="mb-8" />
+        <ProductLinks products={tvv3} className="mb-4" />
         <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
