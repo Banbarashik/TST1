@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КФБ-А П",
@@ -44,7 +45,7 @@ export default function KaloriferyKFBPage() {
           испытаний и проверкой каждого парового воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           В практике применения калориферов этой модели можно отметить их
           размещение в конвективных сушильных камерах деревообрабатывающих
           предприятий, промышленного оборудования по охлаждению рабочих
@@ -59,15 +60,15 @@ export default function KaloriferyKFBPage() {
         <div className="flex">
           <Image
             src="/img/general_pages/kalorifer_parovoi_kfb_komplektatciia.png"
-            alt="Производство паровых калориферов КФБ"
-            title="Конструкция парового калорифера КФБ"
+            alt="Калорифер для охлаждения масла"
+            title="Калорифер КФБ паровой"
             width={484}
             height={1}
           />
           <Image
             src="/img/general_pages/kalorifer_parovoi_kfb.png"
             alt="Калорифер для сушильных установок"
-            title="Калорифер КФБ паровой"
+            title="Конструкция парового калорифера КФБ"
             width={484}
             height={1}
           />
@@ -130,14 +131,14 @@ export default function KaloriferyKFBPage() {
           lvl={2}
           text="Технические характеристики калориферов КФБ-А П"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Калориферы паровые серии КФБ-А изготавливаются в двух вариантах: КФБ А
           3 – трехрядная модель и КФБ А 4 – четырехрядный теплообменник.
           Увеличение количества рядов предполагает собой нагрев входящего
           воздуха на большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kfb3} />
-        <ProductParagraph>
+        <ProductLinks products={kfb3} className="mb-4" />
+        <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из тринадцати
           типоразмеров, каждому из которых присваивается свой порядковый номер.
           Калориферы одного номера КФБ-А3 и КФБ-А4 имеют одинаковые длину и
@@ -146,17 +147,22 @@ export default function KaloriferyKFBPage() {
           от модели и номера парового калорифера серии КФБ-А варьируется от 2000
           до 18000 м3/час, от 55 до 500 кВт.
         </ProductParagraph>
-        <ProductLinks products={kfb4} />
+        <ProductLinks products={kfb4} className="mb-4" />
       </section>
 
-      <section>
-        <Heading lvl={2} text="Габаритные размеры калориферов КФБ-А П" />
+      <section className="mb-4">
+        <Heading
+          lvl={2}
+          text="Габаритные размеры калориферов КФБ-А П"
+          className="mb-3"
+        />
         <Image
-          src="/img/general_pages/kalorifery_kfb_vodianye_gabaritnye_razmery.png"
+          src="/img/general_pages/kalorifery_kfb_parovye_gabaritnye_razmery.png"
           alt="Технические характеристики паровых калориферов КФБ"
           title="Габаритные размеры паровых калориферов КФБ-А"
           width={968}
           height={1}
+          className="mb-4"
         />
         <iframe
           src="/legacy/table-kalorifery-kfb.html"
@@ -173,6 +179,14 @@ export default function KaloriferyKFBPage() {
           теплоносителю.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+        tableLinkText="Скачать каталог паровых калориферов КФБ"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист калориферов КФБ паровых"
+      />
     </>
   );
 }
