@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ProductLinks({ products }) {
   return (
-    <ul className="flex flex-wrap gap-4">
+    <ul className="mb-2 flex flex-wrap gap-4">
       {products.map((p) => (
         <li key={p.id}>
           <ProductLink product={p} />

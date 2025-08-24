@@ -118,7 +118,7 @@ export default function KaloriferyParPage() {
           className="h-82 w-full"
         />
         <Image
-          src="/img/general_pages/kalorifery_pritochnye_parovye_chertez.png"
+          src="/img/general_pages/kalorifery_pritochnye_parovye_kpps_chertez.png"
           alt="Паровые приточные калориферы характеристики"
           title="Паровые приточные калориферы размеры"
           width={968}
@@ -143,6 +143,13 @@ export default function KaloriferyParPage() {
           src="/legacy/table-kalorifery-par-kppu.html"
           title="Калориферы КППУ"
           className="h-76 w-full"
+        />
+        <Image
+          src="/img/general_pages/kalorifery_pritochnye_parovye_kppu_chertez.png"
+          alt="Паровые приточные калориферы характеристики"
+          title="Паровые приточные калориферы размеры"
+          width={968}
+          height={1}
         />
       </section>
     </>
