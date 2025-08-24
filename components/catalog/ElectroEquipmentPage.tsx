@@ -23,6 +23,7 @@ const equipmentType = {
   },
   shuk: {
     nom: "шкаф ШУК",
+    gen: "шкафа управления",
     pluGen: "шкафов ШУК",
   },
 };
@@ -318,8 +319,8 @@ export default function ElectroEquipmentPage({ product }) {
             />
             <Image
               src={product.scheme}
-              alt={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
-              title={`${equipmentType[preciseCategory].nom} ${product.size} электрическая схема подключения`}
+              alt={`Шкаф ${product.size} электрическая схема подключения`}
+              title={`Шкаф ${product.size} электрическая схема подключения`}
               width={645}
               height={1}
             />
