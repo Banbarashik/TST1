@@ -13,10 +13,12 @@ import React from "react";
 const equipmentType = {
   sfo: {
     nom: "электрокалорифер",
+    gen: "электрокалорифера",
     pluGen: "электрокалориферов",
   },
   sfotc: {
     nom: "электрокалориферная установка",
+    gen: "установки",
     pluGen: "электрокалориферных установок",
   },
   shuk: {
@@ -183,8 +185,10 @@ export default function ElectroEquipmentPage({ product }) {
             </>
           ) : (
             <>
-              <ProductParagraph>Теплоотдающие элементы:</ProductParagraph>
-              <ul className="mb-4 text-lg">
+              <ProductParagraph>
+                Теплоотдающие элементы {isSFOTC && "калорифера СФО"}:
+              </ProductParagraph>
+              <ul className="mb-4 text-[17px]">
                 <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
                 <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
               </ul>
@@ -221,7 +225,7 @@ export default function ElectroEquipmentPage({ product }) {
         </div>
       </div>
       <ProductSubheader
-        text={`Технические характеристики ${product.shortName}`}
+        text={`Технические характеристики ${equipmentType[preciseCategory].gen} ${product.shortName}`}
       />
 
       <table className="mx-auto mb-6 w-176">
@@ -248,9 +252,12 @@ export default function ElectroEquipmentPage({ product }) {
           ))}
         </tbody>
       </table>
-      <ProductSubheader
-        text={`Чертеж и электрическая схема подключения ${product.shortName}`}
-      />
+
+      {(isSHUK || isSFO) && (
+        <ProductSubheader
+          text={`Чертеж и электрическая схема подключения ${equipmentType[preciseCategory].gen} ${product.shortName}`}
+        />
+      )}
       {isSFO && (
         <div className="mb-10 flex">
           <Image
@@ -270,20 +277,28 @@ export default function ElectroEquipmentPage({ product }) {
         </div>
       )}
       {isSFOTC && (
-        <div className="mx-auto mb-10 w-fit space-y-3">
+        <div className="mb-10 space-y-3">
+          <ProductSubheader
+            text={`Габаритные размеры установки ${product.shortName}`}
+          />
           <Image
             src={product.drawing}
             alt={`${product.name} габаритные размеры`}
             title={`${product.shortName} габаритные размеры`}
-            width={775}
+            width={776}
             height={1}
+            className="mx-auto"
+          />
+          <ProductSubheader
+            text={`Электрическая схема подключения установки ${product.shortName}`}
           />
           <Image
             src={product.scheme}
             alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
             title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
-            width={775}
+            width={678}
             height={1}
+            className="mx-auto"
           />
         </div>
       )}
