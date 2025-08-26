@@ -3,6 +3,7 @@ import Image from "next/image";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductCard from "@/components/catalog/productCard";
+import TableAndCatalogLinks from "./tableAndCatalogLinks";
 
 export default function TenyPage({ product }) {
   return (
@@ -63,6 +64,7 @@ export default function TenyPage({ product }) {
           title="Чертеж оребренного воздушного ТЭНа"
           width={968}
           height={1}
+          className="mb-2"
         />
         <ProductParagraph>
           Полость двухконцевого тэна между оболочкой и нагревательным элементом
@@ -92,7 +94,7 @@ export default function TenyPage({ product }) {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Принцип работы ТЭНов для нагрева воздуха" />
         <ProductParagraph>
           Принцип работы трубчатого оребренного нагревателя типа ТЭНР основан на
@@ -114,6 +116,14 @@ export default function TenyPage({ product }) {
           перегреву.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Electroten_TENY_katalog_2025.pdf"
+        tableLinkText="Скачать каталог оребренных воздушных ТЭНОВ"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист оребренных тэнов ТЭНР"
+      />
     </article>
   );
 }
