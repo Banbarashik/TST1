@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Шкафы управления калорифером ШУК. Производство",
@@ -28,7 +29,7 @@ export default function ShkafyUpravleniyaSHUK() {
 
       <section>
         <Heading lvl={2} text="Назначение шкафов управления калорифером ШУК" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Шкафы управления калорифером ШУК предназначены для запуска,
           синхронизации работы и защиты при аварийных ситуациях электрических
           воздухонагревательных установок типа СФОЦ, комплектуемых в их составе
@@ -109,7 +110,7 @@ export default function ShkafyUpravleniyaSHUK() {
 
       <section>
         <Heading lvl={2} text="Технические характеристики и размеры ШУК" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Шкафы управления калорифером ШУК подразделяются на семь конструктивных
           моделей, соответствующих определенной обслуживаемой
           воздухонагревательной установки серии СФОЦ, включающей в себя
@@ -121,21 +122,26 @@ export default function ShkafyUpravleniyaSHUK() {
             ...p,
             name: `Шкаф управления ${p.shortName}`,
           }))}
+          className="mb-8"
         />
 
         <table className="w-full">
           <thead>
             <tr>
-              <th colSpan={2} style={{ fontWeight: "bold" }}>
+              <th
+                colSpan={2}
+                style={{ fontSize: "11pt" }}
+                className="px-1 text-left uppercase"
+              >
                 Модель шкафа управления
               </th>
-              <th>ШУК-16</th>
-              <th>ШУК-25</th>
-              <th>ШУК-40</th>
-              <th>ШУК-60</th>
-              <th>ШУК-100</th>
-              <th>ШУК-160</th>
-              <th>ШУК-250</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-16</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-25</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-40</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-60</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-100</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-160</th>
+              <th style={{ fontSize: "11pt" }}>ШУК-250</th>
             </tr>
           </thead>
           <tbody>
@@ -408,7 +414,7 @@ export default function ShkafyUpravleniyaSHUK() {
         </table>
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Подключение и порядок работы ШУК" />
         <ProductParagraph>
           Установить на электрокалорифер температурное реле SK ТРМ 11-01.
@@ -458,6 +464,14 @@ export default function ShkafyUpravleniyaSHUK() {
           - климатическое исполнение и категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
+        tableLinkText="Скачать каталог шкафов управления калорифером ШУК"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист шкафов управления калорифером ШУК"
+      />
     </>
   );
 }
