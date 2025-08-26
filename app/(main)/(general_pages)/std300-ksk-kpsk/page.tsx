@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты водяные СТД-300",
@@ -50,7 +51,7 @@ export default function AgregatySTD300V() {
           можно отметить, применение агрегатов в технологических процессах
           охлаждения жидкостей, сушки различных материалов.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство водяных отопительных агрегатов серии СТД-300
           осуществляется согласно ТУ 4864-003-55613706-02 с проведением
           обязательных приемо-сдаточных испытаний и проверкой каждого
@@ -193,22 +194,71 @@ export default function AgregatySTD300V() {
           изготавливаются в двух вариантах – с трех и четырехрядным калорифером
           КСк или ТВВ.
         </ProductParagraph>
-        <ProductLinks products={products} />
       </section>
 
-      <section>
-        <iframe src="/legacy/table-std-300-ksk.html" className="h-105 w-full" />
-        <Image
-          src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
-          alt="Технические характеристики водяных агрегатов СТД-300"
-          title="Габаритные размеры водяных агрегатов СТД-300"
-          width={968}
-          height={1}
-        />
-        <iframe
-          src="/legacy/table-std-300-hl-tvv.html"
-          className="h-105 w-full"
-        />
+      <section className="mb-4">
+        <div className="mb-3 flex justify-between">
+          <Image
+            src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
+            alt="Технические характеристики водяных агрегатов СТД-300"
+            title="Габаритные размеры водяных агрегатов СТД-300"
+            width={726}
+            height={1}
+          />
+          <ProductLinks
+            products={products}
+            className="flex flex-col justify-center"
+          />
+        </div>
+
+        <table className="mb-2 w-full">
+          <thead>
+            <tr>
+              <th rowSpan={2}>Наименование агрегата</th>
+              <th colSpan={2}>Производительность</th>
+              <th colSpan={3}>Габаритные размеры, мм</th>
+              <th rowSpan={2} className="w-18">
+                Масса, кг
+              </th>
+            </tr>
+            <tr>
+              <th>по воздуху, м³/ч</th>
+              <th>по теплу, кВт</th>
+              <th>L</th>
+              <th>B</th>
+              <th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КСк3)</td>
+              <td rowSpan={4}>25000</td>
+              <td>326</td>
+              <td rowSpan={2}>1100</td>
+              <td rowSpan={4}>1520</td>
+              <td rowSpan={4}>1475</td>
+              <td>315</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КСк4)</td>
+              <td>385</td>
+              <td>360</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (ТВВ3)</td>
+              <td>345</td>
+              <td>1090</td>
+              <td>375</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (ТВВ4)</td>
+              <td>425</td>
+              <td>1130</td>
+              <td>445</td>
+            </tr>
+          </tbody>
+        </table>
+
         <ProductParagraph>
           Структура условного обозначения водяных агрегатов серии СТД-300 ХЛ
           производства ООО «Т.С.Т.». Агрегат СТД-300 ХЛ ТВВ4 (ТУ
@@ -217,6 +267,14 @@ export default function AgregatySTD300V() {
           рядность комплектуемого водяного воздухонагревателя.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
+        tableLinkText="Скачать каталог водяных отопительных агрегатов СТД-300"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист водяных воздушных агрегатов СТД-300"
+      />
     </>
   );
 }
