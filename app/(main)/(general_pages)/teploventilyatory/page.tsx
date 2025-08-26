@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Электрокалориферные установки СФОЦ. Производство",
@@ -28,7 +29,7 @@ export default function UstanovkiSFOTC() {
 
       <section>
         <Heading lvl={2} text="Назначение электрокалориферных установок СФОЦ" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Электрокалориферные установки СФОЦ выпускаются в качестве автономного
           оборудования, совмещающего в себе функции отопления и вентиляции и
           предназначены для теплоснабжения зданий промышленного,
@@ -109,7 +110,7 @@ export default function UstanovkiSFOTC() {
 
       <section>
         <Heading lvl={2} text="Технические характеристики установок СФОЦ" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Электрокалориферные установки СФОЦ подразделяются на семь
           типоразмеров. Номинальный диапазон производительности по воздуху
           установок варьируется от 1000 до 12000 м3/час, тепловая мощность - от
@@ -123,10 +124,10 @@ export default function UstanovkiSFOTC() {
         />
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Габаритные размеры установок СФОЦ" />
 
-        <table className="w-full">
+        <table className="mb-2 w-full">
           <colgroup>
             <col span={2} />
             <col />
@@ -141,18 +142,18 @@ export default function UstanovkiSFOTC() {
             <tr>
               <th
                 colSpan={2}
-                style={{ fontWeight: "bold" }}
-                className="first-two-cols"
+                style={{ fontSize: "11pt" }}
+                className="first-two-cols uppercase"
               >
-                Модель электронагревателя
+                Модель установки
               </th>
-              <th>СФОЦ-16</th>
-              <th>СФОЦ-25</th>
-              <th>СФОЦ-40</th>
-              <th>СФОЦ-60</th>
-              <th>СФОЦ-100</th>
-              <th>СФОЦ-160</th>
-              <th>СФОЦ-250</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-16</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-25</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-40</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-60</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-100</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-160</th>
+              <th style={{ fontSize: "11pt" }}>СФОЦ-250</th>
             </tr>
           </thead>
           <tbody>
@@ -206,6 +207,18 @@ export default function UstanovkiSFOTC() {
             </tr>
             <tr>
               <td colSpan={2} className="first-two-cols">
+                Рабочий интервал производительности, м³/ч
+              </td>
+              <td>400-1100</td>
+              <td>800-2100</td>
+              <td>1700-4400</td>
+              <td>2200-5700</td>
+              <td>3400-8800</td>
+              <td>4400-11500</td>
+              <td>6800-17800</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
                 Перепад t входящего / выходящего воздуха, °С
               </td>
               <td>30</td>
@@ -218,7 +231,7 @@ export default function UstanovkiSFOTC() {
             </tr>
             <tr>
               <td colSpan={2} className="first-two-cols">
-                Аэродинамическое сопротивление модуля, не более, Па
+                Аэродинамическое сопротивление, не более, Па
               </td>
               <td>150</td>
               <td>200</td>
@@ -356,7 +369,7 @@ export default function UstanovkiSFOTC() {
           title="Габаритные размеры установок СФОЦ"
           width={774}
           height={1}
-          className="mx-auto"
+          className="mx-auto mb-2"
         />
         <ProductParagraph>
           Структура условного обозначения электрокалориферных установок СФОЦ
@@ -367,6 +380,14 @@ export default function UstanovkiSFOTC() {
           и категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Electroustanovka_SFOTC_katalog_2025.pdf"
+        tableLinkText="Скачать каталог электрокалориферных установок СФОЦ"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист электрокалориферных установок СФОЦ"
+      />
     </>
   );
 }
