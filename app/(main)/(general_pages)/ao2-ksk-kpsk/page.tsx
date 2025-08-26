@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты водяные",
@@ -42,7 +43,7 @@ export default function AgregatyAO2V() {
           основного, дополнительного или резервного источника тепла во всех
           помещениях, где допускается местная рециркуляция нагретого воздуха.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство отопительных агрегатов серии АО2 осуществляется согласно
           ТУ 4864-003-55613706-02 с проведением обязательных приемо-сдаточных
           испытаний и проверкой каждого комплектуемого водяного
@@ -177,188 +178,191 @@ export default function AgregatyAO2V() {
           lvl={2}
           text="Технические характеристики водяных агрегатов АО2"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Воздушно-отопительные водяные агрегаты серии АО2 подразделяются на
           восемь типоразмеров, каждый из которых изготавливается в двух
           вариантах – с трех и четырехрядным многоходовым теплообменником.
         </ProductParagraph>
-        <ProductLinks products={ao2v3} />
+        <ProductLinks products={ao2v3} className="mb-8" />
         <ProductLinks products={ao2v4} />
       </section>
 
-      <section>
-        <Heading lvl={2} text="Габаритные размеры водяных агрегатов АО2" />
+      <section className="mb-4">
+        <Heading
+          lvl={2}
+          text="Габаритные размеры водяных агрегатов АО2"
+          className="mb-3"
+        />
         <Image
           src="/img/general_pages/agregat_otopitelnyi_vodianoy_ao2_gabaritnye_razmery.png"
           alt="Технические характеристики водяных агрегатов АО2"
           title="Габаритные размеры водяных агрегатов АО2"
           width={968}
           height={1}
+          className="mb-3"
         />
 
-        <div>
-          <table className="w-full">
-            <thead>
-              <tr>
-                <th rowSpan={2} className="w-32">
-                  Наименование агрегата
-                </th>
-                <th colSpan={2}>Производительность</th>
-                <th colSpan={3}>Габариты, мм</th>
-                <th rowSpan={2}>Масса, кг</th>
-                <th rowSpan={2} className="w-68">
-                  Площадь поверхности теплообмена, м²
-                </th>
-                <th rowSpan={2}>Ду, мм</th>
-              </tr>
-              <tr>
-                <th>по воздуху, м³/ч</th>
-                <th>по теплу, кВт</th>
-                <th>L</th>
-                <th>B</th>
-                <th>H</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="kalorifery-name">АО 2-3 (КСк3)</td>
-                <td rowSpan={2}>3000</td>
-                <td>35</td>
-                <td rowSpan={2}>800</td>
-                <td rowSpan={2}>710</td>
-                <td rowSpan={2}>620</td>
-                <td>77</td>
-                <td>12.9</td>
-                <td rowSpan={2}>32</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-3 (КСк4)</td>
-                <td>40</td>
-                <td>83</td>
-                <td>17.0</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-4 (КСк3)</td>
-                <td rowSpan={2}>4000</td>
-                <td>42</td>
-                <td rowSpan={2}>800</td>
-                <td rowSpan={2}>750</td>
-                <td rowSpan={2}>665</td>
-                <td>83</td>
-                <td>15.2</td>
-                <td rowSpan={2}>32</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-4 (КСк4)</td>
-                <td>49</td>
-                <td>90</td>
-                <td>20.0</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-5 (КСк3)</td>
-                <td rowSpan={2}>5000</td>
-                <td>63</td>
-                <td rowSpan={2}>825</td>
-                <td rowSpan={2}>835</td>
-                <td rowSpan={2}>750</td>
-                <td>98</td>
-                <td>20.3</td>
-                <td rowSpan={2}>32</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-5 (КСк4)</td>
-                <td>74</td>
-                <td>108</td>
-                <td>26.7</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-6.3 (КСк3)</td>
-                <td rowSpan={2}>6300</td>
-                <td>82</td>
-                <td rowSpan={2}>985</td>
-                <td rowSpan={2}>920</td>
-                <td rowSpan={2}>865</td>
-                <td>128</td>
-                <td>26.1</td>
-                <td rowSpan={2}>32</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-6.3 (КСк4)</td>
-                <td>97</td>
-                <td>142</td>
-                <td>34.4</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-10 (КСк3)</td>
-                <td rowSpan={2}>10000</td>
-                <td>115</td>
-                <td rowSpan={2}>985</td>
-                <td rowSpan={2}>960</td>
-                <td rowSpan={2}>905</td>
-                <td>139</td>
-                <td>29.3</td>
-                <td rowSpan={2}>32</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-10 (КСк4)</td>
-                <td>138</td>
-                <td>154</td>
-                <td>38.7</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-15 (КСк3)</td>
-                <td rowSpan={2}>15000</td>
-                <td>156</td>
-                <td rowSpan={2}>985</td>
-                <td rowSpan={2}>1085</td>
-                <td rowSpan={2}>1040</td>
-                <td>166</td>
-                <td>39.9</td>
-                <td rowSpan={2}>50</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-15 (КСк4)</td>
-                <td>186</td>
-                <td>186</td>
-                <td>52.8</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-20 (КСк3)</td>
-                <td rowSpan={2}>20000</td>
-                <td>225</td>
-                <td rowSpan={2}>1075</td>
-                <td rowSpan={2}>1210</td>
-                <td rowSpan={2}>1170</td>
-                <td>240</td>
-                <td>52.2</td>
-                <td rowSpan={2}>50</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-20 (КСк4)</td>
-                <td>271</td>
-                <td>268</td>
-                <td>69.2</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-25 (КСк3)</td>
-                <td rowSpan={2}>25000</td>
-                <td>281</td>
-                <td rowSpan={2}>1075</td>
-                <td rowSpan={2}>1335</td>
-                <td rowSpan={2}>1295</td>
-                <td>269</td>
-                <td>66.2</td>
-                <td rowSpan={2}>50</td>
-              </tr>
-              <tr>
-                <td className="kalorifery-name">АО 2-25 (КСк4)</td>
-                <td>336</td>
-                <td>303</td>
-                <td>87.7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table className="mb-2 w-full">
+          <thead>
+            <tr>
+              <th rowSpan={2} className="w-32">
+                Наименование агрегата
+              </th>
+              <th colSpan={2}>Производительность</th>
+              <th colSpan={3}>Габариты, мм</th>
+              <th rowSpan={2}>Масса, кг</th>
+              <th rowSpan={2} className="w-68">
+                Площадь поверхности теплообмена, м²
+              </th>
+              <th rowSpan={2}>Ду, мм</th>
+            </tr>
+            <tr>
+              <th>по воздуху, м³/ч</th>
+              <th>по теплу, кВт</th>
+              <th>L</th>
+              <th>B</th>
+              <th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-1 text-left">АО 2-3 (КСк3)</td>
+              <td rowSpan={2}>3000</td>
+              <td>35</td>
+              <td rowSpan={2}>800</td>
+              <td rowSpan={2}>710</td>
+              <td rowSpan={2}>620</td>
+              <td>77</td>
+              <td>12.9</td>
+              <td rowSpan={2}>32</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-3 (КСк4)</td>
+              <td>40</td>
+              <td>83</td>
+              <td>17.0</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-4 (КСк3)</td>
+              <td rowSpan={2}>4000</td>
+              <td>42</td>
+              <td rowSpan={2}>800</td>
+              <td rowSpan={2}>750</td>
+              <td rowSpan={2}>665</td>
+              <td>83</td>
+              <td>15.2</td>
+              <td rowSpan={2}>32</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-4 (КСк4)</td>
+              <td>49</td>
+              <td>90</td>
+              <td>20.0</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-5 (КСк3)</td>
+              <td rowSpan={2}>5000</td>
+              <td>63</td>
+              <td rowSpan={2}>825</td>
+              <td rowSpan={2}>835</td>
+              <td rowSpan={2}>750</td>
+              <td>98</td>
+              <td>20.3</td>
+              <td rowSpan={2}>32</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-5 (КСк4)</td>
+              <td>74</td>
+              <td>108</td>
+              <td>26.7</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-6.3 (КСк3)</td>
+              <td rowSpan={2}>6300</td>
+              <td>82</td>
+              <td rowSpan={2}>985</td>
+              <td rowSpan={2}>920</td>
+              <td rowSpan={2}>865</td>
+              <td>128</td>
+              <td>26.1</td>
+              <td rowSpan={2}>32</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-6.3 (КСк4)</td>
+              <td>97</td>
+              <td>142</td>
+              <td>34.4</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-10 (КСк3)</td>
+              <td rowSpan={2}>10000</td>
+              <td>115</td>
+              <td rowSpan={2}>985</td>
+              <td rowSpan={2}>960</td>
+              <td rowSpan={2}>905</td>
+              <td>139</td>
+              <td>29.3</td>
+              <td rowSpan={2}>32</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-10 (КСк4)</td>
+              <td>138</td>
+              <td>154</td>
+              <td>38.7</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-15 (КСк3)</td>
+              <td rowSpan={2}>15000</td>
+              <td>156</td>
+              <td rowSpan={2}>985</td>
+              <td rowSpan={2}>1085</td>
+              <td rowSpan={2}>1040</td>
+              <td>166</td>
+              <td>39.9</td>
+              <td rowSpan={2}>50</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-15 (КСк4)</td>
+              <td>186</td>
+              <td>186</td>
+              <td>52.8</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-20 (КСк3)</td>
+              <td rowSpan={2}>20000</td>
+              <td>225</td>
+              <td rowSpan={2}>1075</td>
+              <td rowSpan={2}>1210</td>
+              <td rowSpan={2}>1170</td>
+              <td>240</td>
+              <td>52.2</td>
+              <td rowSpan={2}>50</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-20 (КСк4)</td>
+              <td>271</td>
+              <td>268</td>
+              <td>69.2</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-25 (КСк3)</td>
+              <td rowSpan={2}>25000</td>
+              <td>281</td>
+              <td rowSpan={2}>1075</td>
+              <td rowSpan={2}>1335</td>
+              <td rowSpan={2}>1295</td>
+              <td>269</td>
+              <td>66.2</td>
+              <td rowSpan={2}>50</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">АО 2-25 (КСк4)</td>
+              <td>336</td>
+              <td>303</td>
+              <td>87.7</td>
+            </tr>
+          </tbody>
+        </table>
 
         <ProductParagraph>
           Структура условного обозначения водяных агрегатов серии АО2
@@ -368,6 +372,14 @@ export default function AgregatyAO2V() {
           модель и рядность комплектуемого водяного калорифера.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
+        tableLinkText="Скачать каталог водяных отопительных агрегатов АО2"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист водяных воздушных агрегатов АО2"
+      />
     </>
   );
 }
