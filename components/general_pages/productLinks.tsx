@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
+import { cn } from "@/lib/utils";
+
 export default function ProductLinks({
   products,
   className,
@@ -9,7 +11,7 @@ export default function ProductLinks({
   className?: string;
 }) {
   return (
-    <ul className={className + " grid grid-cols-5 gap-x-5 gap-y-6"}>
+    <ul className={cn("grid grid-cols-5 gap-x-5 gap-y-6", className)}>
       {products.map((p) => (
         <li key={p.id}>
           <ProductLink product={p} />
