@@ -125,10 +125,227 @@ export default function UstanovkiSFOTC() {
 
       <section>
         <Heading lvl={2} text="Габаритные размеры установок СФОЦ" />
-        <iframe
-          src="/legacy/table-teploventilyatory.html"
-          className="h-105 w-full"
-        />
+
+        <table className="w-full">
+          <colgroup>
+            <col span={2} />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colSpan={2} className="first-two-cols">
+                Модель электронагревателя
+              </th>
+              <th>СФОЦ-16</th>
+              <th>СФОЦ-25</th>
+              <th>СФОЦ-40</th>
+              <th>СФОЦ-60</th>
+              <th>СФОЦ-100</th>
+              <th>СФОЦ-160</th>
+              <th>СФОЦ-250</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan={2} className="first-two-cols w-80">
+                Установленная мощность, кВт
+              </td>
+              <td>15</td>
+              <td>22.5</td>
+              <td>45</td>
+              <td>67.5</td>
+              <td>90</td>
+              <td>157.5</td>
+              <td>247.5</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Число электрических секций
+              </td>
+              <td>2</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Мощность одной секции, кВт
+              </td>
+              <td>7.5</td>
+              <td>7.5</td>
+              <td>15</td>
+              <td>22.5</td>
+              <td>30</td>
+              <td>52.5</td>
+              <td>82.5</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Номинальная производительность по воздуху, м³/ч
+              </td>
+              <td>1000</td>
+              <td>2000</td>
+              <td>3000</td>
+              <td>4000</td>
+              <td>6000</td>
+              <td>8000</td>
+              <td>12000</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Перепад t входящего / выходящего воздуха, °С
+              </td>
+              <td>30</td>
+              <td>40</td>
+              <td>50</td>
+              <td>55</td>
+              <td>60</td>
+              <td>65</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Аэродинамическое сопротивление модуля, не более, Па
+              </td>
+              <td>150</td>
+              <td>200</td>
+              <td>200</td>
+              <td>250</td>
+              <td>250</td>
+              <td>250</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Давление, развиваемое вентилятором, Па
+              </td>
+              <td>190-100</td>
+              <td>300-160</td>
+              <td>510-270</td>
+              <td>350-190</td>
+              <td>830-450</td>
+              <td>570-310</td>
+              <td>1350-730</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Номер вентилятора ВЦ 4-75 (ВР 85-77)
+              </td>
+              <td>2.5</td>
+              <td>3.15</td>
+              <td>4</td>
+              <td>5</td>
+              <td>5</td>
+              <td>6.3</td>
+              <td>6.3</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Двигатель вентилятора, кВт
+              </td>
+              <td>0.25</td>
+              <td>0.25</td>
+              <td>0.75</td>
+              <td>0.75</td>
+              <td>2.2</td>
+              <td>2.2</td>
+              <td>7.5</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                об/мин
+              </td>
+              <td>1500</td>
+              <td>1500</td>
+              <td>1500</td>
+              <td>1000</td>
+              <td>1500</td>
+              <td>1000</td>
+              <td>1500</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Напряжение питающей сети, В
+              </td>
+              <td colSpan={7}>380</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Частота питающей сети, Гц
+              </td>
+              <td colSpan={7}>50</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Напряжение на нагревателе, В
+              </td>
+              <td colSpan={7}>220</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Схема соединений нагревателей в секции
+              </td>
+              <td colSpan={7}>Y</td>
+            </tr>
+            <tr>
+              <td colSpan={2} className="first-two-cols">
+                Масса агрегата в сборе, кг
+              </td>
+              <td>68</td>
+              <td>79</td>
+              <td>107</td>
+              <td>159</td>
+              <td>172</td>
+              <td>256</td>
+              <td>370</td>
+            </tr>
+            <tr>
+              <td rowSpan={3} width="299px">
+                Габаритные размеры, мм
+              </td>
+              <td className="first-two-cols" width="34px">
+                L
+              </td>
+              <td>1180</td>
+              <td>1240</td>
+              <td>1370</td>
+              <td>1505</td>
+              <td>1505</td>
+              <td>1730</td>
+              <td>2380</td>
+            </tr>
+            <tr>
+              <td className="first-two-cols">B</td>
+              <td>720</td>
+              <td>720</td>
+              <td>788</td>
+              <td>918</td>
+              <td>918</td>
+              <td>1150</td>
+              <td>1150</td>
+            </tr>
+            <tr>
+              <td className="first-two-cols">H</td>
+              <td>642</td>
+              <td>763</td>
+              <td>926</td>
+              <td>1135</td>
+              <td>1135</td>
+              <td>1430</td>
+              <td>1755</td>
+            </tr>
+          </tbody>
+        </table>
+
         <Image
           src="/img/general_pages/elektrokalorifernaia_ustanovka_sfotc_chertezh.png"
           alt="Характеристики электрокалориферных установок СФОЦ"

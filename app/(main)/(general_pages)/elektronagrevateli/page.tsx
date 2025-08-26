@@ -150,7 +150,7 @@ export default function KaloriferySFO() {
       <section>
         <Heading lvl={2} text="Габаритные размеры электрокалориферов СФО" />
 
-        <table>
+        <table className="w-full">
           <thead>
             <tr>
               <th colSpan={2} className="first-two-cols w-80 font-bold">
