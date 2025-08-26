@@ -153,16 +153,20 @@ export default function KaloriferySFO() {
         <table className="w-full">
           <thead>
             <tr>
-              <th colSpan={2} className="first-two-cols w-80 font-bold">
+              <th
+                colSpan={2}
+                style={{ fontWeight: "bold" }}
+                className="first-two-cols w-80"
+              >
                 Модель электронагревателя
               </th>
-              <th className="SFO-and-EKO-numbers">СФО-16 ЭКО-16</th>
-              <th className="SFO-and-EKO-numbers">СФО-25 ЭКО-25</th>
-              <th className="SFO-and-EKO-numbers">СФО-40 ЭКО-40</th>
-              <th className="SFO-and-EKO-numbers">СФО-60 ЭКО-60</th>
-              <th className="SFO-and-EKO-numbers">СФО-100 ЭКО-100</th>
-              <th className="SFO-and-EKO-numbers">СФО-160 ЭКО-160</th>
-              <th className="SFO-and-EKO-numbers">СФО-250 ЭКО-250</th>
+              <th>СФО-16 ЭКО-16</th>
+              <th>СФО-25 ЭКО-25</th>
+              <th>СФО-40 ЭКО-40</th>
+              <th>СФО-60 ЭКО-60</th>
+              <th>СФО-100 ЭКО-100</th>
+              <th>СФО-160 ЭКО-160</th>
+              <th>СФО-250 ЭКО-250</th>
             </tr>
           </thead>
           <tbody>

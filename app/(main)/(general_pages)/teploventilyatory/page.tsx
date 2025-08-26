@@ -139,7 +139,11 @@ export default function UstanovkiSFOTC() {
           </colgroup>
           <thead>
             <tr>
-              <th colSpan={2} className="first-two-cols">
+              <th
+                colSpan={2}
+                style={{ fontWeight: "bold" }}
+                className="first-two-cols"
+              >
                 Модель электронагревателя
               </th>
               <th>СФОЦ-16</th>
