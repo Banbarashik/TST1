@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты паровые СТД-300",
@@ -51,7 +52,7 @@ export default function AgregatySTD300P() {
           в технологических циклах, аэродинамического разогрева и сушки
           материалов.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Производство паровых отопительных агрегатов серии СТД-300
           осуществляется согласно ТУ 4864-003-55613706-02 с проведением
           обязательных приемо-сдаточных испытаний и проверкой каждого
@@ -183,35 +184,79 @@ export default function AgregatySTD300P() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading
           lvl={2}
           text="Технические характеристики паровых агрегатов СТД-300"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-2">
           Воздушно-отопительные паровые агрегаты серии СТД-300 и СТД-300 ХЛ
           изготавливаются в двух вариантах – с трех и четырехрядным калорифером
           КПСк или КП.
         </ProductParagraph>
-        <ProductLinks products={products} />
-      </section>
+        <div className="mb-5 flex justify-between">
+          <Image
+            src="/img/general_pages/agregat_otopitelnyi_parovoy_std-300_gabaritnye_razmery.png"
+            alt="Технические характеристики паровых агрегатов СТД-300"
+            title="Габаритные размеры паровых агрегатов СТД-300"
+            width={726}
+            height={1}
+          />
+          <ProductLinks
+            products={products}
+            className="flex flex-col justify-center"
+          />
+        </div>
 
-      <section>
-        <iframe
-          src="/legacy/table-std-300-kpsk.html"
-          className="h-105 w-full"
-        />
-        <Image
-          src="/img/general_pages/agregat_otopitelnyi_parovoy_std-300_gabaritnye_razmery.png"
-          alt="Технические характеристики паровых агрегатов СТД-300"
-          title="Габаритные размеры паровых агрегатов СТД-300"
-          width={968}
-          height={1}
-        />
-        <iframe
-          src="/legacy/table-std-300-hl-kp.html"
-          className="h-105 w-full"
-        />
+        <table className="mb-2 w-full">
+          <thead>
+            <tr>
+              <th rowSpan={2}>Наименование агрегата</th>
+              <th colSpan={2}>Производительность</th>
+              <th colSpan={3}>Габаритные размеры, мм</th>
+              <th rowSpan={2} className="w-18">
+                Масса, кг
+              </th>
+            </tr>
+            <tr>
+              <th>по воздуху, м³/ч</th>
+              <th>по теплу, кВт</th>
+              <th>L</th>
+              <th>B</th>
+              <th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КПСк3)</td>
+              <td rowSpan={4}>25000</td>
+              <td>317</td>
+              <td rowSpan={2}>1100</td>
+              <td rowSpan={2}>1375</td>
+              <td rowSpan={4}>1610</td>
+              <td>315</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КПСк4)</td>
+              <td>379</td>
+              <td>360</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КП3)</td>
+              <td>385</td>
+              <td>1090</td>
+              <td rowSpan={2}>1400</td>
+              <td>375</td>
+            </tr>
+            <tr>
+              <td className="px-1 text-left">СТД-300 (КП4)</td>
+              <td>424</td>
+              <td>1130</td>
+              <td>445</td>
+            </tr>
+          </tbody>
+        </table>
+
         <ProductParagraph>
           Структура условного обозначения паровых агрегатов серии СТД-300 ХЛ
           производства ООО «Т.С.Т.». Агрегат СТД-300 ХЛ КП3 (ТУ
@@ -220,6 +265,14 @@ export default function AgregatySTD300P() {
           рядность комплектуемого парового воздухонагревателя.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+        tableLinkText="Скачать каталог агрегатов СТД-300 ХЛ"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист агрегатов СТД-300 ХЛ"
+      />
     </>
   );
 }

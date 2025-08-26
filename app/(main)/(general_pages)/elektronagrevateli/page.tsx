@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Электрокалориферы СФО. Производство",
@@ -28,7 +29,7 @@ export default function KaloriferySFO() {
 
       <section>
         <Heading lvl={2} text="Назначение электрокалориферов СФО" />
-        <ProductParagraph>
+        <ProductParagraph className="mb-5">
           Электрокалориферы СФО предназначены для комплектации электрических
           воздухонагревательных установок типа СФОЦ, а также применяются в
           качестве самостоятельных отопительных модулей для нагрева воздуха в
@@ -134,7 +135,7 @@ export default function KaloriferySFO() {
           lvl={2}
           text="Технические характеристики электрокалориферов СФО"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Электрические калориферы СФО подразделяются на семь типоразмеров. Все
           модели имеют одинаковую ширину - 720 мм и глубину - 240 мм. Высота
           обогревателей варьируется от 230 до 1615 мм. Соответственно, растет
@@ -144,29 +145,34 @@ export default function KaloriferySFO() {
           производительность по воздуху электрокалориферов - от 1000 до 12000
           м3/час, производительность по теплу - от 16 до 250 кВт.
         </ProductParagraph>
-        <ProductLinks products={products} />
+        <ProductLinks
+          products={products.map((p) => ({
+            ...p,
+            name: `Калорифер ${p.shortName}`,
+          }))}
+        />
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading lvl={2} text="Габаритные размеры электрокалориферов СФО" />
 
-        <table className="w-full">
+        <table className="mb-3 w-full">
           <thead>
             <tr>
               <th
                 colSpan={2}
-                style={{ fontWeight: "bold" }}
-                className="first-two-cols w-80"
+                style={{ fontSize: "11pt" }}
+                className="first-two-cols w-80 uppercase"
               >
-                Модель электронагревателя
+                Модель электрокалорифера
               </th>
-              <th>СФО-16 ЭКО-16</th>
-              <th>СФО-25 ЭКО-25</th>
-              <th>СФО-40 ЭКО-40</th>
-              <th>СФО-60 ЭКО-60</th>
-              <th>СФО-100 ЭКО-100</th>
-              <th>СФО-160 ЭКО-160</th>
-              <th>СФО-250 ЭКО-250</th>
+              <th style={{ fontSize: "11pt" }}>СФО-16</th>
+              <th style={{ fontSize: "11pt" }}>СФО-25</th>
+              <th style={{ fontSize: "11pt" }}>СФО-40</th>
+              <th style={{ fontSize: "11pt" }}>СФО-60</th>
+              <th style={{ fontSize: "11pt" }}>СФО-100</th>
+              <th style={{ fontSize: "11pt" }}>СФО-160</th>
+              <th style={{ fontSize: "11pt" }}>СФО-250</th>
             </tr>
           </thead>
           <tbody>
@@ -330,7 +336,7 @@ export default function KaloriferySFO() {
           title="Габаритные размеры электрокалориферов СФО"
           width={774}
           height={1}
-          className="mx-auto"
+          className="mx-auto mb-2"
         />
         <ProductParagraph>
           Структура условного обозначения электрокалориферов СФО производства
@@ -341,6 +347,14 @@ export default function KaloriferySFO() {
           климатическое исполнение и категория размещения.
         </ProductParagraph>
       </section>
+
+      <TableAndCatalogLinks
+        target="_blank"
+        tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
+        tableLinkText="Скачать каталог электрокалориферов СФО"
+        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
+        catalogLinkText="Скачать прайс-лист электрокалориферов СФО"
+      />
     </>
   );
 }

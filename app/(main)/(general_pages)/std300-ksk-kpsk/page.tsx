@@ -184,7 +184,7 @@ export default function AgregatySTD300V() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-4">
         <Heading
           lvl={2}
           text="Технические характеристики водяных агрегатов СТД-300"
@@ -194,10 +194,7 @@ export default function AgregatySTD300V() {
           изготавливаются в двух вариантах – с трех и четырехрядным калорифером
           КСк или ТВВ.
         </ProductParagraph>
-      </section>
-
-      <section className="mb-4">
-        <div className="mb-3 flex justify-between">
+        <div className="mb-2 flex justify-between">
           <Image
             src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
             alt="Технические характеристики водяных агрегатов СТД-300"
@@ -270,10 +267,10 @@ export default function AgregatySTD300V() {
 
       <TableAndCatalogLinks
         target="_blank"
-        tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-        tableLinkText="Скачать каталог водяных отопительных агрегатов СТД-300"
+        tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
+        tableLinkText="Скачать каталог агрегатов СТД-300"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист водяных воздушных агрегатов СТД-300"
+        catalogLinkText="Скачать прайс-лист агрегатов СТД-300"
       />
     </>
   );
