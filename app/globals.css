@@ -171,12 +171,6 @@
   }
 }
 
-.single-table {
-  /* margin: 0 auto; */
-
-  background-color: rgb(204, 204, 204);
-}
-
 /* Стилизация непосредственно таблицы (начало) */
 table {
   border-collapse: collapse;
@@ -193,6 +187,10 @@ th {
   font-weight: normal;
   font-size: 9pt;
   line-height: 18px;
+}
+.first-two-cols {
+  padding-left: 5px;
+  text-align: left;
 }
 /* Стилизация непосредственно таблицы (конец) */
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-//
+
 const productCategories = [
   {
     name: "Водяные и паровые приточные калориферы. Онлайн калькулятор подбора",
