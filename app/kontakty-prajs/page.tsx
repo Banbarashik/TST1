@@ -34,8 +34,46 @@ export default function ContactsAndPricesPage() {
   const kfb3 = kfb.filter((p) => p.rows === 3);
   const kfb4 = kfb.filter((p) => p.rows === 4);
 
+  const std300 = sortedProducts.find((p) =>
+    p.categories.includes("std300-v"),
+  ).variants;
+  const std300hl = sortedProducts.find((p) =>
+    p.categories.includes("std300-hl"),
+  ).variants;
+
   return (
     <>
+      <table>
+        <thead>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          <tr>
+            {std300.map((p) => (
+              <>
+                <td>
+                  СТД 300 (КСК{p.rows} КПСК{p.rows})
+                </td>
+                <td>{p.price}</td>
+              </>
+            ))}
+          </tr>
+          <tr>
+            {std300hl.map((p) => (
+              <>
+                <td>
+                  СТД 300 (КСК{p.rows} КПСК{p.rows})
+                </td>
+                <td>{p.price}</td>
+              </>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <th>Наименование агрегата</th>
