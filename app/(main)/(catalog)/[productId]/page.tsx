@@ -58,7 +58,7 @@ export async function generateMetadata({
 
   if (productType === "tvv_kp") {
     const series = product.heatCarrier === "water" ? "ВНВ" : "ВНП";
-    const size = `${product.rows}${product.size.length > 1 ? product.size : "0" + product.size}`;
+    const size = `${product.rows}${product.size < 10 ? "0" + product.size : product.size}`;
     const altName = `воздухонагреватель ${series} 113 ${size}`;
     const shortAltName = `${series} ${size}`;
 
