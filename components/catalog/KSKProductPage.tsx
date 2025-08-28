@@ -12,12 +12,12 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
-const categoryLabels: Record<string, string> = {
+/* const categoryLabels: Record<string, string> = {
   ksk: "КСк",
   kpsk: "КПСк",
   kfb: "КФБ",
   ao2: "АО 2",
-};
+}; */
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
   steam: "пароконденсатного",
@@ -32,7 +32,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   const categories = ["ksk", "kpsk", "tvv", "kp", "kfb", "ao2"];
   const category = categories.find((cat) => product.categories.includes(cat));
-  const categoryLabel = categoryLabels[category];
+  // const categoryLabel = categoryLabels[category];
 
   const productsByCategory = productData
     .filter((p) => p.categories.includes(category))
