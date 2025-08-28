@@ -1,5 +1,6 @@
 import { productData } from "@/data/products";
 import { sortProducts } from "@/lib/utils";
+import React from "react";
 
 export default function ContactsAndPricesPage() {
   const sortedProducts = productData.sort((a, b) =>
@@ -53,22 +54,22 @@ export default function ContactsAndPricesPage() {
         <tbody>
           <tr>
             {std300.map((p) => (
-              <>
+              <React.Fragment key={p.id}>
                 <td>
                   СТД 300 (КСК{p.rows} КПСК{p.rows})
                 </td>
                 <td>{p.price}</td>
-              </>
+              </React.Fragment>
             ))}
           </tr>
           <tr>
             {std300hl.map((p) => (
-              <>
+              <React.Fragment key={p.id}>
                 <td>
                   СТД 300 (КСК{p.rows} КПСК{p.rows})
                 </td>
                 <td>{p.price}</td>
-              </>
+              </React.Fragment>
             ))}
           </tr>
         </tbody>
@@ -83,7 +84,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {kfb3.map((p, i) => (
-            <tr>
+            <tr key={p.id}>
               <td>{p.shortName}</td>
               <td>{p.price}</td>
               <td>{kfb4[i].shortName}</td>
@@ -102,7 +103,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {ao2v3.map((p, i) => (
-            <tr>
+            <tr key={p.id}>
               <td>{p.shortName} (КСК3 КПСК3)</td>
               <td>{p.price}</td>
               <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
@@ -126,10 +127,10 @@ export default function ContactsAndPricesPage() {
         <tbody>
           <tr>
             {avoTvvVariants.map((p) => (
-              <>
+              <React.Fragment key={p.id}>
                 <td>{p.shortName} (ТВВ4 КП4)</td>
                 <td>{p.price}</td>
-              </>
+              </React.Fragment>
             ))}
           </tr>
         </tbody>
@@ -144,7 +145,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {shuk.map((p) => (
-            <tr>
+            <tr key={p.id}>
               <td>{p.shortName}</td>
               <td>{p.price}</td>
             </tr>
@@ -161,7 +162,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {sfotc.map((p) => (
-            <tr>
+            <tr key={p.id}>
               <td>{p.shortName}</td>
               <td>{p.price}</td>
             </tr>
@@ -178,7 +179,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {sfo.map((p) => (
-            <tr>
+            <tr key={p.id}>
               <td>{p.shortName}</td>
               <td>{p.price}</td>
             </tr>
@@ -197,7 +198,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {tvv3.map((p, i) => (
-            <tr>
+            <tr key={p.id}>
               <td>ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}</td>
               <td>{p.price}</td>
               <td>ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}</td>
@@ -220,7 +221,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           {ksk2.map((p, i) => (
-            <tr>
+            <tr key={p.id}>
               <td>КСк КПСк 2-{p.size}</td>
               <td>{p.price}</td>
               <td>КСк КПСк 3-{ksk3[i].size}</td>
