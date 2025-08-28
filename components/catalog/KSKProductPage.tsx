@@ -299,7 +299,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         tableURL={"/" + URLs[0]}
         tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
         catalogURL={"/documents/" + URLs[1]}
-        catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? "-М" : "-П"}` : ""}`}
+        catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
       />
     </div>
   );
