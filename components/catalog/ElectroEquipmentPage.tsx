@@ -28,16 +28,26 @@ const equipmentType = {
   },
 };
 
-const tableLinkText = {
-  sfo: "Электрокалориферы СФО",
-  sfotc: "Электрокалориферные установки СФОЦ",
-  shuk: "Шкафы управления калорифером ШУК",
-};
-
+//TODO unite into one object
 const tableLinkUrl = {
   sfo: "elektronagrevateli",
   sfotc: "teploventilyatory",
   shuk: "shkafy-upravleniya",
+};
+const catalogLinkUrl = {
+  sfo: "Electrokalorifer_SFO_katalog_2025.pdf",
+  sfotc: "Electroustanovka_SFOTC_katalog_2025.pdf",
+  shuk: "Electroshkaf_SHUK_katalog_2025.pdf",
+};
+const tableLinkText = {
+  sfo: "Электрокалориферы СФО - технические характеристики",
+  sfotc: "Электрокалориферные установки СФОЦ - характеристики",
+  shuk: "Шкафы управления калорифером - характеристики",
+};
+const catalogLinkText = {
+  sfo: "Скачать каталог электрокалориферов СФО",
+  sfotc: "Скачать каталог электрических установок СФОЦ",
+  shuk: "Скачать каталог шкафов управления калорифером",
 };
 
 const tableLabels = {
@@ -328,9 +338,10 @@ export default function ElectroEquipmentPage({ product }) {
         </>
       )}
       <TableAndCatalogLinks
-        tableURL={tableLinkUrl[preciseCategory]}
+        tableURL={"/" + tableLinkUrl[preciseCategory]}
         tableLinkText={tableLinkText[preciseCategory]}
-        catalogURL="#"
+        catalogURL={"/documents/" + catalogLinkUrl[preciseCategory]}
+        catalogLinkText={catalogLinkText[preciseCategory]}
       />
     </div>
   );
