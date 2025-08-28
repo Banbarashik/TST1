@@ -24,12 +24,33 @@ export default function ContactsAndPricesPage() {
 
   const avo = sortedProducts.filter((p) => p.categories.includes("avo"));
   const avoTvv = avo.find((p) => p.categories.includes("avo-tvv"));
-  const avoKp = avo.find((p) => p.categories.includes("avo-kp"));
   const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
-  const avoKpVariants = avoKp.variants.map((p) => ({ ...p, id: avoKp.id }));
+
+  const ao2v = sortedProducts.filter((p) => p.categories.includes("ao2-v"));
+  const ao2v3 = ao2v.filter((p) => p.rows === 3);
+  const ao2v4 = ao2v.filter((p) => p.rows === 4);
 
   return (
     <>
+      <table>
+        <thead>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          {ao2v3.map((p, i) => (
+            <tr>
+              <td>{p.shortName} (КСК3 КПСК3)</td>
+              <td>{p.price}</td>
+              <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
+              <td>{ao2v4[i].price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <tr>
@@ -43,7 +64,7 @@ export default function ContactsAndPricesPage() {
         </thead>
         <tbody>
           <tr>
-            {avoTvvVariants.map((p, i) => (
+            {avoTvvVariants.map((p) => (
               <>
                 <td>{p.shortName} (ТВВ4 КП4)</td>
                 <td>{p.price}</td>
