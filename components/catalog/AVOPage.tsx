@@ -152,8 +152,9 @@ export default function AVOPage({ product }) {
 
       <TableAndCatalogLinks
         tableURL="/avo-tvv-kp"
-        tableLinkText={`Водяные и паровые агрегаты ${product.shortName}`}
-        catalogURL="#"
+        tableLinkText={`Агрегаты АВО ХЛ ${heatCarrierAdj.plu} – характеристики`}
+        catalogURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
+        catalogLinkText={`Скачать каталог ${heatCarrierAdj.pluGen} агрегатов АВО ХЛ`}
       />
     </div>
   );
