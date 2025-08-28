@@ -59,19 +59,24 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   const rowsNumberAdj = getRowsNumberAdj(product.rows);
 
-  let tableUrl = "/";
-  if (category === "ksk") tableUrl = "/kalorifery-ksk";
-  if (category === "kpsk") tableUrl = "/kalorifery-kpsk";
-  if (category === "tvv") tableUrl = "/kalorifery-tvv";
-  if (category === "kp") tableUrl = "/kalorifery-kp";
+  //TODO change to an object
+  let URLs: string[] = [];
+  if (category === "ksk")
+    URLs = ["kalorifery-ksk", "Kalorifer_KSK_katalog_2025.pdf"];
+  if (category === "kpsk")
+    URLs = ["kalorifery-kpsk", "Kalorifer_KPSK_katalog_2025.pdf"];
+  if (category === "tvv")
+    URLs = ["kalorifery-tvv", "Kalorifer_TVV_katalog_2025.pdf"];
+  if (category === "kp")
+    URLs = ["kalorifery-kp", "Kalorifer_KP_katalog_2025.pdf"];
   if (category === "kfb" && product.heatCarrier === "water")
-    tableUrl = "/kalorifery-kfb-a";
+    URLs = ["kalorifery-kfb-a", "Kalorifer_KFB_katalog_2025.pdf"];
   if (category === "kfb" && product.heatCarrier === "steam")
-    tableUrl = "/kalorifery-kfb";
+    URLs = ["kalorifery-kfb", "Kalorifer_KFB_katalog_2025.pdf"];
   if (category === "ao2" && product.heatCarrier === "water")
-    tableUrl = "/ao2-ksk-kpsk";
+    URLs = ["ao2-ksk-kpsk", "Agregat_AO2_katalog_2025.pdf"];
   if (category === "ao2" && product.heatCarrier === "steam")
-    tableUrl = "/ao2-kpsk-ksk";
+    URLs = ["ao2-kpsk-ksk", "Agregat_AO2_katalog_2025.pdf"];
 
   return (
     <div>
@@ -291,9 +296,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </table>
 
       <TableAndCatalogLinks
-        tableURL={tableUrl}
-        tableLinkText={`${heatCarrierAdj?.plu} ${isCalorifier ? "калориферы" : "агрегаты"} ${categoryLabel}`}
-        catalogURL="#"
+        tableURL={"/" + URLs[0]}
+        tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
+        catalogURL={"/documents/" + URLs[1]}
+        catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? "-М" : "-П"}` : ""}`}
       />
     </div>
   );
