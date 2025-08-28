@@ -201,11 +201,14 @@ export default function SupplyCalorifierPage({
         />
       )}
       <TableAndCatalogLinks
-        tableURL={
-          heatCarrier === "water" ? "/kalorifery-voda" : "/kalorifery-par"
+        tableURL={isWater ? "/kalorifery-voda" : "/kalorifery-par"}
+        tableLinkText={`Приточные ${heatCarrierAdj.plu} калориферы – характеристики`}
+        catalogURL={
+          isWater
+            ? "/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+            : "/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
         }
-        tableLinkText={`Приточные ${heatCarrierAdj?.plu} калориферы`}
-        catalogURL="#"
+        catalogLinkText={`Скачать каталог приточных калориферов ${product.series}`}
       />
       <Button
         size="xl"
