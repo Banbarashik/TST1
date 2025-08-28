@@ -22,8 +22,37 @@ export default function ContactsAndPricesPage() {
   const sfotc = elektro.filter((p) => p.categories.includes("sfotc"));
   const shuk = elektro.filter((p) => p.categories.includes("shuk"));
 
+  const avo = sortedProducts.filter((p) => p.categories.includes("avo"));
+  const avoTvv = avo.find((p) => p.categories.includes("avo-tvv"));
+  const avoKp = avo.find((p) => p.categories.includes("avo-kp"));
+  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
+  const avoKpVariants = avoKp.variants.map((p) => ({ ...p, id: avoKp.id }));
+
   return (
     <>
+      <table>
+        <thead>
+          <tr>
+            <td>Наименование агрегата</td>
+            <td>Цена с учетом НДС</td>
+            <td>Наименование агрегата</td>
+            <td>Цена с учетом НДС</td>
+            <td>Наименование агрегата</td>
+            <td>Цена с учетом НДС</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {avoTvvVariants.map((p, i) => (
+              <>
+                <td>{p.shortName} (ТВВ4 КП4)</td>
+                <td>{p.price}</td>
+              </>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <tr>

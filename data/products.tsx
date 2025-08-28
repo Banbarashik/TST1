@@ -1125,6 +1125,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       {
         id: "avo-tvv-3-55-01",
         name: "Агрегат АВО 3-55-01 ХЛ водяной",
+        shortName: "АВО 3-55-01",
         airPower: 2800,
         heatPower: 49,
         price: 60542,
@@ -1140,6 +1141,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       {
         id: "avo-tvv-4-95-01",
         name: "Агрегат АВО 4-95-01 ХЛ водяной",
+        shortName: "АВО 4-95-01",
         airPower: 5000,
         heatPower: 92,
         price: 82528,
@@ -1155,6 +1157,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
       {
         id: "avo-tvv-7-165-01",
         name: "Агрегат АВО 7-165-01 ХЛ водяной",
+        shortName: "АВО 7-165-01",
         airPower: 10500,
         heatPower: 170,
         price: 108623,
