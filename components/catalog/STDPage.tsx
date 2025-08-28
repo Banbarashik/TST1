@@ -26,6 +26,7 @@ export default function STDPage({ product }) {
   const oppositeHeatCarrier =
     product.heatCarrier === "water" ? "steam" : "water";
   const oppositeHeatCarrierAdj = getHeatCarrierAdj(oppositeHeatCarrier);
+  const isSTD300 = product.categories.includes("std300");
 
   return (
     <div>
@@ -33,7 +34,7 @@ export default function STDPage({ product }) {
       {product.variants.map(function (variant, i) {
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
 
-        const relatedProducts = product.categories.includes("std300")
+        const relatedProducts = isSTD300
           ? [
               {
                 caption: `Агрегаты СТД-300 ХЛ ${i === 0 ? heatCarrierAdj.plu : oppositeHeatCarrierAdj.plu}`,
@@ -207,8 +208,13 @@ export default function STDPage({ product }) {
             ? "/std300-ksk-kpsk"
             : "/std300-tvv-kp"
         }
-        tableLinkText={`Водяные и паровые агрегаты ${product.shortName}`}
-        catalogURL="#"
+        tableLinkText={`Агрегаты ${product.shortName} ${heatCarrierAdj.plu} – характеристики`}
+        catalogURL={
+          isSTD300
+            ? "/documents/Agregat_STD-300_katalog_2025.pdf"
+            : "/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+        }
+        catalogLinkText={`Скачать каталог ${heatCarrierAdj.pluGen} агрегатов ${product.shortName}`}
       />
     </div>
   );

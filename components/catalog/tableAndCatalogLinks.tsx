@@ -22,7 +22,7 @@ export default function TableAndCatalogLinks({
         </Link>
       </Button>
       <Button className="text-md h-full flex-1/2 bg-gray-300 font-semibold text-black">
-        <Link {...props} href={catalogURL}>
+        <Link {...props} href={catalogURL} target="_blank">
           {catalogLinkText}
         </Link>
       </Button>
