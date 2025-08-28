@@ -30,8 +30,31 @@ export default function ContactsAndPricesPage() {
   const ao2v3 = ao2v.filter((p) => p.rows === 3);
   const ao2v4 = ao2v.filter((p) => p.rows === 4);
 
+  const kfb = sortedProducts.filter((p) => p.categories.includes("kfb-a-m"));
+  const kfb3 = kfb.filter((p) => p.rows === 3);
+  const kfb4 = kfb.filter((p) => p.rows === 4);
+
   return (
     <>
+      <table>
+        <thead>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          {kfb3.map((p, i) => (
+            <tr>
+              <td>{p.shortName}</td>
+              <td>{p.price}</td>
+              <td>{kfb4[i].shortName}</td>
+              <td>{kfb4[i].price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <th>Наименование агрегата</th>
