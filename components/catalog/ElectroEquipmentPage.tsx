@@ -238,6 +238,13 @@ export default function ElectroEquipmentPage({ product }) {
       <ProductSubheader
         text={`Технические характеристики ${equipmentType[preciseCategory].gen} ${product.shortName}`}
       />
+      <ProductParagraph className="mb-3">
+        В таблице приведены основные технические характеристики и справочные
+        данные по комплектующим для запуска
+        {isSFO && "электрокалорифера"}
+        {isSFOTC && "электрокалориферной установки"}
+        {isSHUK && "шкафа управления калорифером"} {product.shortName} в работу.
+      </ProductParagraph>
 
       <table className="mx-auto mb-6 w-176">
         <tbody>
@@ -270,28 +277,39 @@ export default function ElectroEquipmentPage({ product }) {
         />
       )}
       {isSFO && (
-        <div className="mb-10 flex">
-          <Image
-            src={product.drawing}
-            alt={`${product.name} габаритные размеры`}
-            title={`${product.shortName} габаритные размеры`}
-            width={484}
-            height={1}
-          />
-          <Image
-            src={product.scheme}
-            alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
-            title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
-            width={484}
-            height={1}
-          />
-        </div>
+        <>
+          <ProductParagraph className="mb-2">
+            Ниже представлены чертеж с габаритными размерами и электрическая
+            схема подключения электрокалорифера {product.shortName}.
+          </ProductParagraph>
+          <div className="mb-10 flex">
+            <Image
+              src={product.drawing}
+              alt={`${product.name} габаритные размеры`}
+              title={`${product.shortName} габаритные размеры`}
+              width={484}
+              height={1}
+            />
+            <Image
+              src={product.scheme}
+              alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
+              title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+              width={484}
+              height={1}
+            />
+          </div>
+        </>
       )}
       {isSFOTC && (
         <div className="mb-10 space-y-3">
           <ProductSubheader
             text={`Габаритные размеры установки ${product.shortName}`}
           />
+          <ProductParagraph>
+            На чертеже представлены основные габаритные размеры
+            электрокалориферной установки {product.shortName}: длина, ширина и
+            высота воздухонагревателя по внешнему контуру.
+          </ProductParagraph>
           <Image
             src={product.drawing}
             alt={`${product.name} габаритные размеры`}
@@ -303,6 +321,10 @@ export default function ElectroEquipmentPage({ product }) {
           <ProductSubheader
             text={`Электрическая схема подключения установки ${product.shortName}`}
           />
+          <ProductParagraph>
+            Подключение электрокалориферной установки {product.shortName} к
+            питающей сети осуществляется согласно электрической схеме.
+          </ProductParagraph>
           <Image
             src={product.scheme}
             alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
