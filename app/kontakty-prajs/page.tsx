@@ -15,8 +15,66 @@ export default function ContactsAndPricesPage() {
   const ksk3 = ksk.filter((p) => p.rows === 3);
   const ksk4 = ksk.filter((p) => p.rows === 4);
 
+  const elektro = sortedProducts.filter((p) =>
+    p.categories.includes("energonagrevatelynoe-oborudovanie"),
+  );
+  const sfo = elektro.filter((p) => p.categories.includes("sfo"));
+  const sfotc = elektro.filter((p) => p.categories.includes("sfotc"));
+  const shuk = elektro.filter((p) => p.categories.includes("shuk"));
+
   return (
     <>
+      <table>
+        <thead>
+          <tr>
+            <th>Наименование шкафа управления</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
+        </thead>
+        <tbody>
+          {shuk.map((p) => (
+            <tr>
+              <td>{p.shortName}</td>
+              <td>{p.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Наименование установки</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sfotc.map((p) => (
+            <tr>
+              <td>{p.shortName}</td>
+              <td>{p.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Наименование электрокалорифера</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sfo.map((p) => (
+            <tr>
+              <td>{p.shortName}</td>
+              <td>{p.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <tr>
