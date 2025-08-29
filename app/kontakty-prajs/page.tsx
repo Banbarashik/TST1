@@ -60,276 +60,276 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="space-y-6">
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {kpps2.map((p, i) => (
+    <div className="max-w-8xl mx-auto w-full py-14">
+      <div className="flex flex-col items-center gap-10">
+        <table className="w-full">
+          <thead>
             <tr>
-              <td>
-                КПВС КППС {p.size}х{p.size}_{p.rows}
-              </td>
-              <td>{p.price}</td>
-              <td>
-                КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
-              </td>
-              <td>{kpps3[i].price}</td>
-              <td>
-                КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
-              </td>
-              <td>{kpps4[i].price}</td>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {kpvu2.map((p, i) => (
-            <tr>
-              <td>
-                КПВУ КППУ {p.size}х{p.size}_{p.rows}
-              </td>
-              <td>{p.price}</td>
-              <td>
-                КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
-              </td>
-              <td>{kpvu3[i].price}</td>
-              <td>
-                КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
-              </td>
-              <td>{kpvu4[i].price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование калорифера</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование калорифера</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование калорифера</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ksk2.map((p, i) => (
-            <tr key={p.id}>
-              <td>КСк КПСк 2-{p.size}</td>
-              <td>{p.price}</td>
-              <td>КСк КПСк 3-{ksk3[i].size}</td>
-              <td>{ksk3[i].price}</td>
-              <td>КСк КПСк 4-{ksk4[i].size}</td>
-              <td>{ksk4[i].price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование калорифера</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование калорифера</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tvv3.map((p, i) => (
-            <tr key={p.id}>
-              <td>ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}</td>
-              <td>{p.price}</td>
-              <td>ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}</td>
-              <td>{tvv4[i].price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {kfb3.map((p, i) => (
-            <tr key={p.id}>
-              <td>{p.shortName}</td>
-              <td>{p.price}</td>
-              <td>{kfb4[i].shortName}</td>
-              <td>{kfb4[i].price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ao2v3.map((p, i) => (
-            <tr key={p.id}>
-              <td>{p.shortName} (КСК3 КПСК3)</td>
-              <td>{p.price}</td>
-              <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
-              <td>{ao2v4[i].price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {avoTvvVariants.map((p) => (
-              <React.Fragment key={p.id}>
-                <td>{p.shortName} (ТВВ4 КП4)</td>
-                <td>{p.price}</td>
-              </React.Fragment>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-            <th>Наименование агрегата</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {std300.map((p) => (
-              <React.Fragment key={p.id}>
+          </thead>
+          <tbody>
+            {kpps2.map((p, i) => (
+              <tr>
                 <td>
-                  СТД 300 (КСК{p.rows} КПСК{p.rows})
+                  КПВС КППС {p.size}х{p.size}_{p.rows}
                 </td>
                 <td>{p.price}</td>
-              </React.Fragment>
-            ))}
-          </tr>
-          <tr>
-            {std300hl.map((p) => (
-              <React.Fragment key={p.id}>
                 <td>
-                  СТД 300 (КСК{p.rows} КПСК{p.rows})
+                  КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
+                </td>
+                <td>{kpps3[i].price}</td>
+                <td>
+                  КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
+                </td>
+                <td>{kpps4[i].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+            </tr>
+          </thead>
+          <tbody>
+            {kpvu2.map((p, i) => (
+              <tr>
+                <td>
+                  КПВУ КППУ {p.size}х{p.size}_{p.rows}
                 </td>
                 <td>{p.price}</td>
-              </React.Fragment>
+                <td>
+                  КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
+                </td>
+                <td>{kpvu3[i].price}</td>
+                <td>
+                  КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
+                </td>
+                <td>{kpvu4[i].price}</td>
+              </tr>
             ))}
-          </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование электрокалорифера</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sfo.map((p) => (
-            <tr key={p.id}>
-              <td>{p.shortName}</td>
-              <td>{p.price}</td>
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th>Наименование калорифера</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование калорифера</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование калорифера</th>
+              <th>Цена с учетом НДС</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {ksk2.map((p, i) => (
+              <tr key={p.id}>
+                <td>КСк КПСк 2-{p.size}</td>
+                <td>{p.price}</td>
+                <td>КСк КПСк 3-{ksk3[i].size}</td>
+                <td>{ksk3[i].price}</td>
+                <td>КСк КПСк 4-{ksk4[i].size}</td>
+                <td>{ksk4[i].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование установки</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sfotc.map((p) => (
-            <tr key={p.id}>
-              <td>{p.shortName}</td>
-              <td>{p.price}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование калорифера</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование калорифера</th>
+              <th>Цена с учетом НДС</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {tvv3.map((p, i) => (
+              <tr key={p.id}>
+                <td>ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}</td>
+                <td>{p.price}</td>
+                <td>ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}</td>
+                <td>{tvv4[i].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Наименование шкафа управления</th>
-            <th>Цена с учетом НДС</th>
-          </tr>
-        </thead>
-        <tbody>
-          {shuk.map((p) => (
-            <tr key={p.id}>
-              <td>{p.shortName}</td>
-              <td>{p.price}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {kfb3.map((p, i) => (
+              <tr key={p.id}>
+                <td>{p.shortName}</td>
+                <td>{p.price}</td>
+                <td>{kfb4[i].shortName}</td>
+                <td>{kfb4[i].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{teny.model}</td>
-            <td>{teny.price}</td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ao2v3.map((p, i) => (
+              <tr key={p.id}>
+                <td>{p.shortName} (КСК3 КПСК3)</td>
+                <td>{p.price}</td>
+                <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
+                <td>{ao2v4[i].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {avoTvvVariants.map((p) => (
+                <React.Fragment key={p.id}>
+                  <td>{p.shortName} (ТВВ4 КП4)</td>
+                  <td>{p.price}</td>
+                </React.Fragment>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {std300.map((p) => (
+                <React.Fragment key={p.id}>
+                  <td>
+                    СТД 300 (КСК{p.rows} КПСК{p.rows})
+                  </td>
+                  <td>{p.price}</td>
+                </React.Fragment>
+              ))}
+            </tr>
+            <tr>
+              {std300hl.map((p) => (
+                <React.Fragment key={p.id}>
+                  <td>
+                    СТД 300 (КСК{p.rows} КПСК{p.rows})
+                  </td>
+                  <td>{p.price}</td>
+                </React.Fragment>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+
+        <div className="flex items-start gap-6">
+          <table>
+            <thead>
+              <tr>
+                <th>Наименование электрокалорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sfo.map((p) => (
+                <tr key={p.id}>
+                  <td>{p.shortName}</td>
+                  <td>{p.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Наименование установки</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sfotc.map((p) => (
+                <tr key={p.id}>
+                  <td>{p.shortName}</td>
+                  <td>{p.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Наименование шкафа управления</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {shuk.map((p) => (
+                <tr key={p.id}>
+                  <td>{p.shortName}</td>
+                  <td>{p.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <th>Наименование агрегата</th>
+              <th>Цена с учетом НДС</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{teny.model}</td>
+                <td>{teny.price}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
