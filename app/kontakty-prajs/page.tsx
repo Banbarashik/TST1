@@ -50,8 +50,45 @@ export default function ContactsAndPricesPage() {
   const kpps3 = kppsVariants.filter((p) => p.rows === 3);
   const kpps4 = kppsVariants.filter((p) => p.rows === 4);
 
+  const kpvu = sortedProducts.filter((p) => p.categories.includes("kpvu"));
+  const kpvuVariants = kpvu
+    .map((p) => p.variants.map((variant) => ({ ...variant, size: p.size })))
+    .flat();
+  const kpvu2 = kpvuVariants.filter((p) => p.rows === 2);
+  const kpvu3 = kpvuVariants.filter((p) => p.rows === 3);
+  const kpvu4 = kpvuVariants.filter((p) => p.rows === 4);
+
   return (
     <>
+      <table>
+        <thead>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          {kpvu2.map((p, i) => (
+            <tr>
+              <td>
+                КПВУ КППУ {p.size}х{p.size}_{p.rows}
+              </td>
+              <td>{p.price}</td>
+              <td>
+                КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
+              </td>
+              <td>{kpvu3[i].price}</td>
+              <td>
+                КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
+              </td>
+              <td>{kpvu4[i].price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <th>Наименование агрегата</th>
