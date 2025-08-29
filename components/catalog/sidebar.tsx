@@ -35,10 +35,10 @@ function findOpenAccordions(
 
 // Define background colors for each level (add more if needed)
 const levelBgColors = [
-  "bg-green-900", // main categories
-  "bg-green-700", // subcategories
-  "bg-green-400", // subsubcategories
-  "bg-green-200", // etc.
+  "bg-yellow-400", // main categories
+  "bg-yellow-300", // subcategories
+  "bg-yellow-200", // subsubcategories
+  "bg-yellow-200", // etc.
 ];
 
 function RecursiveAccordion({
@@ -59,28 +59,29 @@ function RecursiveAccordion({
       {nodes.map((node) => {
         const isActive = node.slug === currentSlug;
         const hasChildren = !!node.children?.length;
-        const paddingLeft = `${level * 1}rem`;
+        const paddingLeft =
+          level === 0 ? "padding-left: 1rem" : `${level * 0.7 + 0.5}rem`;
 
         return hasChildren ? (
           <Accordion.Item
             value={node.slug}
             key={node.slug}
-            className="overflow-hidden"
+            className="mb-1 overflow-hidden"
           >
             <Accordion.Header>
               <Accordion.Trigger
                 className={`group relative w-full cursor-pointer text-left ${bgColor}`}
-                style={{ paddingLeft }}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
                   className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
+                  style={{ paddingLeft }}
                 >
                   {node.menuTitle}
                 </Link>
               </Accordion.Trigger>
             </Accordion.Header>
-            <Accordion.Content className="pl-2 data-[state=closed]:hidden">
+            <Accordion.Content className="data-[state=closed]:hidden">
               <RecursiveAccordion
                 nodes={node.children!}
                 currentSlug={currentSlug}
@@ -89,7 +90,7 @@ function RecursiveAccordion({
             </Accordion.Content>
           </Accordion.Item>
         ) : (
-          <div key={node.slug} className={bgColor}>
+          <div key={node.slug} className={`${bgColor} mb-1`}>
             <Link
               href={`/catalog/${node.slug}`}
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
