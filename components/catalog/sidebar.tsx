@@ -35,10 +35,9 @@ function findOpenAccordions(
 
 // Define background colors for each level (add more if needed)
 const levelBgColors = [
-  "bg-yellow-400", // main categories
-  "bg-yellow-300", // subcategories
-  "bg-yellow-200", // subsubcategories
-  "bg-yellow-200", // etc.
+  "bg-[#ffbf29]", // main categories
+  "bg-[#ffd166]", // subcategories
+  "bg-[#ffe3a3]", // subsubcategories
 ];
 
 function RecursiveAccordion({
@@ -75,7 +74,7 @@ function RecursiveAccordion({
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
+                  className={`${isActive ? "bg-[#ffb200] font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
