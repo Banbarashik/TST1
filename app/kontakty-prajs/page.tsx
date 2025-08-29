@@ -75,7 +75,7 @@ export default function ContactsAndPricesPage() {
           </thead>
           <tbody>
             {kpps2.map((p, i) => (
-              <tr>
+              <tr key={p.id}>
                 <td>
                   КПВС КППС {p.size}х{p.size}_{p.rows}
                 </td>
@@ -105,7 +105,7 @@ export default function ContactsAndPricesPage() {
           </thead>
           <tbody>
             {kpvu2.map((p, i) => (
-              <tr>
+              <tr key={p.id}>
                 <td>
                   КПВУ КППУ {p.size}х{p.size}_{p.rows}
                 </td>
