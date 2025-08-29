@@ -7,41 +7,6 @@ export default function ContactsAndPricesPage() {
     sortProducts(a.name, b.name),
   );
 
-  const tvv = sortedProducts.filter((p) => p.categories.includes("tvv"));
-  const tvv3 = tvv.filter((p) => p.rows === 3);
-  const tvv4 = tvv.filter((p) => p.rows === 4);
-
-  const ksk = sortedProducts.filter((p) => p.categories.includes("ksk"));
-  const ksk2 = ksk.filter((p) => p.rows === 2);
-  const ksk3 = ksk.filter((p) => p.rows === 3);
-  const ksk4 = ksk.filter((p) => p.rows === 4);
-
-  const elektro = sortedProducts.filter((p) =>
-    p.categories.includes("energonagrevatelynoe-oborudovanie"),
-  );
-  const sfo = elektro.filter((p) => p.categories.includes("sfo"));
-  const sfotc = elektro.filter((p) => p.categories.includes("sfotc"));
-  const shuk = elektro.filter((p) => p.categories.includes("shuk"));
-
-  const avo = sortedProducts.filter((p) => p.categories.includes("avo"));
-  const avoTvv = avo.find((p) => p.categories.includes("avo-tvv"));
-  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
-
-  const ao2v = sortedProducts.filter((p) => p.categories.includes("ao2-v"));
-  const ao2v3 = ao2v.filter((p) => p.rows === 3);
-  const ao2v4 = ao2v.filter((p) => p.rows === 4);
-
-  const kfb = sortedProducts.filter((p) => p.categories.includes("kfb-a-m"));
-  const kfb3 = kfb.filter((p) => p.rows === 3);
-  const kfb4 = kfb.filter((p) => p.rows === 4);
-
-  const std300 = sortedProducts.find((p) =>
-    p.categories.includes("std300-v"),
-  ).variants;
-  const std300hl = sortedProducts.find((p) =>
-    p.categories.includes("std300-hl"),
-  ).variants;
-
   const kpps = sortedProducts.filter((p) => p.categories.includes("kpps"));
   const kppsVariants = kpps
     .map((p) => p.variants.map((variant) => ({ ...variant, size: p.size })))
@@ -58,16 +23,67 @@ export default function ContactsAndPricesPage() {
   const kpvu3 = kpvuVariants.filter((p) => p.rows === 3);
   const kpvu4 = kpvuVariants.filter((p) => p.rows === 4);
 
+  const ksk = sortedProducts.filter((p) => p.categories.includes("ksk"));
+  const ksk2 = ksk.filter((p) => p.rows === 2);
+  const ksk3 = ksk.filter((p) => p.rows === 3);
+  const ksk4 = ksk.filter((p) => p.rows === 4);
+
+  const tvv = sortedProducts.filter((p) => p.categories.includes("tvv"));
+  const tvv3 = tvv.filter((p) => p.rows === 3);
+  const tvv4 = tvv.filter((p) => p.rows === 4);
+
+  const kfb = sortedProducts.filter((p) => p.categories.includes("kfb-a-m"));
+  const kfb3 = kfb.filter((p) => p.rows === 3);
+  const kfb4 = kfb.filter((p) => p.rows === 4);
+
+  const ao2v = sortedProducts.filter((p) => p.categories.includes("ao2-v"));
+  const ao2v3 = ao2v.filter((p) => p.rows === 3);
+  const ao2v4 = ao2v.filter((p) => p.rows === 4);
+
+  const avo = sortedProducts.filter((p) => p.categories.includes("avo"));
+  const avoTvv = avo.find((p) => p.categories.includes("avo-tvv"));
+  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
+
+  const std300 = sortedProducts.find((p) =>
+    p.categories.includes("std300-v"),
+  ).variants;
+  const std300hl = sortedProducts.find((p) =>
+    p.categories.includes("std300-hl"),
+  ).variants;
+
+  const elektro = sortedProducts.filter((p) =>
+    p.categories.includes("energonagrevatelynoe-oborudovanie"),
+  );
+  const sfo = elektro.filter((p) => p.categories.includes("sfo"));
+  const sfotc = elektro.filter((p) => p.categories.includes("sfotc"));
+  const shuk = elektro.filter((p) => p.categories.includes("shuk"));
+  const teny = elektro.find((p) => p.categories.includes("teny"));
+
   return (
-    <>
+    <div>
       <table>
         <thead>
           <th>Наименование агрегата</th>
           <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{teny.model}</td>
+            <td>{teny.price}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
         </thead>
         <tbody>
           {kpvu2.map((p, i) => (
@@ -91,12 +107,14 @@ export default function ContactsAndPricesPage() {
 
       <table>
         <thead>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
+          <tr>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
         </thead>
         <tbody>
           {kpps2.map((p, i) => (
@@ -120,10 +138,12 @@ export default function ContactsAndPricesPage() {
 
       <table>
         <thead>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
+          <tr>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -151,10 +171,12 @@ export default function ContactsAndPricesPage() {
 
       <table>
         <thead>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
+          <tr>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
         </thead>
         <tbody>
           {kfb3.map((p, i) => (
@@ -170,10 +192,12 @@ export default function ContactsAndPricesPage() {
 
       <table>
         <thead>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
-          <th>Наименование агрегата</th>
-          <th>Цена с учетом НДС</th>
+          <tr>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+          </tr>
         </thead>
         <tbody>
           {ao2v3.map((p, i) => (
@@ -190,12 +214,12 @@ export default function ContactsAndPricesPage() {
       <table>
         <thead>
           <tr>
-            <td>Наименование агрегата</td>
-            <td>Цена с учетом НДС</td>
-            <td>Наименование агрегата</td>
-            <td>Цена с учетом НДС</td>
-            <td>Наименование агрегата</td>
-            <td>Цена с учетом НДС</td>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
+            <th>Наименование агрегата</th>
+            <th>Цена с учетом НДС</th>
           </tr>
         </thead>
         <tbody>
@@ -306,6 +330,6 @@ export default function ContactsAndPricesPage() {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
