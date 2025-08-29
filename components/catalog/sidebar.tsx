@@ -33,6 +33,14 @@ function findOpenAccordions(
   return [];
 }
 
+// Define background colors for each level (add more if needed)
+const levelBgColors = [
+  "bg-green-900", // main categories
+  "bg-green-700", // subcategories
+  "bg-green-400", // subsubcategories
+  "bg-green-200", // etc.
+];
+
 function RecursiveAccordion({
   nodes,
   currentSlug,
@@ -42,6 +50,10 @@ function RecursiveAccordion({
   currentSlug: string;
   level?: number;
 }) {
+  // Pick color based on level, fallback to lightest if deeper
+  const bgColor =
+    levelBgColors[level] || levelBgColors[levelBgColors.length - 1];
+
   return (
     <>
       {nodes.map((node) => {
@@ -57,7 +69,7 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className="group relative w-full cursor-pointer text-left"
+                className={`group relative w-full cursor-pointer text-left ${bgColor}`}
                 style={{ paddingLeft }}
               >
                 <Link
@@ -77,7 +89,7 @@ function RecursiveAccordion({
             </Accordion.Content>
           </Accordion.Item>
         ) : (
-          <div key={node.slug}>
+          <div key={node.slug} className={bgColor}>
             <Link
               href={`/catalog/${node.slug}`}
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
