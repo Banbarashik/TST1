@@ -56,11 +56,12 @@ function RecursiveAccordion({
 
   return (
     <>
-      {nodes.map((node) => {
+      {nodes.map((node, idx) => {
         const isActive = node.slug === currentSlug;
         const hasChildren = !!node.children?.length;
         const paddingLeft =
           level === 0 ? "padding-left: 1rem" : `${level * 0.7 + 0.5}rem`;
+        const isLast = idx === nodes.length - 1;
 
         return hasChildren ? (
           <Accordion.Item
@@ -70,7 +71,7 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className={`group relative w-full cursor-pointer text-left ${bgColor}`}
+                className={`group relative w-full cursor-pointer rounded-sm text-left ${bgColor}`}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
@@ -81,7 +82,7 @@ function RecursiveAccordion({
                 </Link>
               </Accordion.Trigger>
             </Accordion.Header>
-            <Accordion.Content className="data-[state=closed]:hidden">
+            <Accordion.Content className="mt-1 data-[state=closed]:hidden">
               <RecursiveAccordion
                 nodes={node.children!}
                 currentSlug={currentSlug}
@@ -90,7 +91,10 @@ function RecursiveAccordion({
             </Accordion.Content>
           </Accordion.Item>
         ) : (
-          <div key={node.slug} className={`${bgColor} mb-1`}>
+          <div
+            key={node.slug}
+            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-sm`}
+          >
             <Link
               href={`/catalog/${node.slug}`}
               className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
