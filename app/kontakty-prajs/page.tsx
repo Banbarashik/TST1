@@ -42,8 +42,45 @@ export default function ContactsAndPricesPage() {
     p.categories.includes("std300-hl"),
   ).variants;
 
+  const kpps = sortedProducts.filter((p) => p.categories.includes("kpps"));
+  const kppsVariants = kpps
+    .map((p) => p.variants.map((variant) => ({ ...variant, size: p.size })))
+    .flat();
+  const kpps2 = kppsVariants.filter((p) => p.rows === 2);
+  const kpps3 = kppsVariants.filter((p) => p.rows === 3);
+  const kpps4 = kppsVariants.filter((p) => p.rows === 4);
+
   return (
     <>
+      <table>
+        <thead>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+          <th>Наименование агрегата</th>
+          <th>Цена с учетом НДС</th>
+        </thead>
+        <tbody>
+          {kpps2.map((p, i) => (
+            <tr>
+              <td>
+                КПВС КППС {p.size}х{p.size}_{p.rows}
+              </td>
+              <td>{p.price}</td>
+              <td>
+                КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
+              </td>
+              <td>{kpps3[i].price}</td>
+              <td>
+                КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
+              </td>
+              <td>{kpps4[i].price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <table>
         <thead>
           <th>Наименование агрегата</th>
