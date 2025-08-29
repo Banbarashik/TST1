@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <ProductSelectionProvider>
-      <html lang="en">
+      <html lang="ru">
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="flex h-22 items-center bg-gray-200 px-20">
             <Logo />
