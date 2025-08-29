@@ -70,11 +70,11 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className={`group relative w-full cursor-pointer rounded-sm text-left ${bgColor}`}
+                className={`group relative w-full cursor-pointer rounded-[3px] text-left ${bgColor}`}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-[#ffb200] font-bold" : "hover:text-primary"} block w-full rounded-sm p-3 text-lg`}
+                  className={`${isActive ? "bg-[#ffb200] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
@@ -92,11 +92,11 @@ function RecursiveAccordion({
         ) : (
           <div
             key={node.slug}
-            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-sm`}
+            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-[3px]`}
           >
             <Link
               href={`/catalog/${node.slug}`}
-              className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-sm p-3`}
+              className={`${isActive ? "bg-accent font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
               style={{ paddingLeft }}
             >
               {node.menuTitle}
