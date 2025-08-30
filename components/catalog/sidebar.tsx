@@ -35,9 +35,9 @@ function findOpenAccordions(
 
 // Define background colors for each level (add more if needed)
 const levelBgColors = [
-  "bg-[rgb(181,184,177)]", // main categories
-  "bg-[rgb(199,208,204)]", // subcategories
-  "bg-[rgb(220,220,200)]", // subsubcategories
+  "bg-[#dcdcdc]", // main categories
+  "bg-[#ecede8]", // subcategories
+  "bg-[#fffff0]", // subsubcategories
 ];
 
 function RecursiveAccordion({
@@ -70,11 +70,11 @@ function RecursiveAccordion({
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className={`group relative w-full cursor-pointer rounded-[3px] text-left ${bgColor}`}
+                className={`group relative w-full cursor-pointer rounded-[3px] text-left ${bgColor} border border-[#c3c3c3]`}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-[rgb(193,181,185)] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
+                  className={`${isActive ? "bg-[#cdcdcd] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
@@ -92,11 +92,11 @@ function RecursiveAccordion({
         ) : (
           <div
             key={node.slug}
-            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-[3px]`}
+            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-[3px] border border-[#c3c3c3]`}
           >
             <Link
               href={`/catalog/${node.slug}`}
-              className={`${isActive ? "bg-[rgb(193,181,185)] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
+              className={`${isActive ? "bg-[#cdcdcd] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
               style={{ paddingLeft }}
             >
               {node.menuTitle}
