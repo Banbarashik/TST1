@@ -13,7 +13,8 @@ export default function ProductLinks({
   return (
     <ul className={cn("grid grid-cols-5 gap-x-5 gap-y-6", className)}>
       {products.map((p) => (
-        <li key={p.id}>
+        //TODO temporary fix, think of how to use 'id' in case one of product variants has been passed
+        <li key={p.name}>
           <ProductLink product={p} />
         </li>
       ))}

@@ -24,6 +24,7 @@ export default function AgregatySTD300P() {
     .map((p) =>
       p.variants.map((v) => ({
         ...v,
+        id: p.id,
         name: `СТД-300 (${v.calorifier})`,
         airPower: p.airPower,
       })),
