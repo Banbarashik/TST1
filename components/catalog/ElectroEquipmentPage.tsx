@@ -240,8 +240,7 @@ export default function ElectroEquipmentPage({ product }) {
       />
       <ProductParagraph className="mb-3">
         В таблице приведены основные технические характеристики и справочные
-        данные по комплектующим для запуска
-        {isSFO && "электрокалорифера"}
+        данные по комплектующим для запуска {isSFO && "электрокалорифера"}
         {isSFOTC && "электрокалориферной установки"}
         {isSHUK && "шкафа управления калорифером"} {product.shortName} в работу.
       </ProductParagraph>
