@@ -13,20 +13,27 @@ const slides = [
     text: "",
     img: "/img/hero/IMG_20190319_130001.jpg",
     url: "",
+    class: "scale-110",
+    titleClass: "text-6xl",
   },
   {
     title: [""],
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/IMG_20190319_130001.jpg",
+    img: "/img/hero/slide3.JPG",
     url: "",
+    class: "object-[50%_53%] scale-102",
+    textClass: "text-xl",
   },
+
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
-    img: "/img/hero/IMG_20190319_130001.jpg",
+    img: "/img/hero/slide2.jpg",
     url: "",
+    class: "object-[50%_57%] brightness-[80%] scale-102",
+    titleClass: "text-5xl",
   },
 ];
 
@@ -54,7 +61,7 @@ export default function Hero() {
               src={slide.img}
               alt=""
               fill
-              className="h-full w-full scale-110 object-cover blur-sm"
+              className={`h-full w-full object-cover blur-sm ${slide.class}`}
               priority
               aria-hidden="true"
             />
@@ -67,14 +74,17 @@ export default function Hero() {
               } relative z-10 mx-auto px-4 text-center text-white`}
             >
               {slide.title.map((t) => (
-                <p key={t} className="text-6xl font-bold drop-shadow-lg">
+                <p
+                  key={t}
+                  className={`font-bold drop-shadow-lg text-shadow-sm/30 ${slide.titleClass}`}
+                >
                   {t}
                 </p>
               ))}
               {/* <h2 className="text-6xl font-bold drop-shadow-lg mb-10">
                 {slide.title}
               </h2> */}
-              <p className="mb-10 text-lg font-bold drop-shadow md:text-2xl">
+              <p className="mb-10 text-lg font-bold drop-shadow text-shadow-md/30 md:text-[1.6rem]">
                 {slide.text}
               </p>
               <Button size="xl" className="font-bold" asChild>
