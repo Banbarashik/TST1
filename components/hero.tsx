@@ -11,7 +11,7 @@ const slides = [
   {
     title: ["25 лет на рынке", "воздушно-отопительного оборудования"],
     text: "",
-    img: "/img/hero/IMG_20190319_130001.jpg",
+    img: "/img/hero/slide1.jpg",
     url: "",
     class: "scale-110",
     titleClass: "text-6xl",
@@ -21,7 +21,7 @@ const slides = [
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/slide3.JPG",
+    img: "/img/hero/slide2.jpg",
     url: "",
     class: "object-[50%_53%] scale-102",
     textClass: "text-xl",
@@ -30,7 +30,7 @@ const slides = [
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
-    img: "/img/hero/slide2.jpg",
+    img: "/img/hero/slide3.jpg",
     url: "",
     class: "object-[50%_57%] brightness-[80%] scale-102",
     titleClass: "text-5xl",
