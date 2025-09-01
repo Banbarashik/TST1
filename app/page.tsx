@@ -35,18 +35,18 @@ export default function Home() {
       </div>
 
       {/* CONTACT FORM SECTION START */}
-      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden pt-32 pb-32">
+      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden py-30">
         <Image
-          src="/img/hero/IMG_20200731_102425.jpg"
+          src="/img/hero/contact_form.png"
           alt="Contact background"
           fill
-          className="scale-102 object-cover object-[50%_60%] blur-sm"
+          className="scale-102 object-cover object-[50%_60%] blur-xs"
           priority
         />
         <div className="absolute inset-0 bg-white/40" /> {/* FOG */}
         <div className="z-10 flex w-full items-center justify-center gap-20 px-12">
-          <div className="relative max-w-xl text-center">
-            <span className="absolute inset-0 -z-10 rounded-md bg-white opacity-60 blur-3xl"></span>
+          <div className="relative w-full max-w-xl shrink-0 text-center">
+            <span className="absolute inset-0 -z-10 rounded-md bg-white opacity-30 blur-3xl"></span>
             <p className="mb-4 text-5xl font-bold">Есть вопросы?</p>
             <p className="mb-2 text-2xl">
               Оставьте заявку через форму, и мы свяжемся <br /> с вами в
