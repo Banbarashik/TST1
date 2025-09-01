@@ -35,21 +35,23 @@ export default function Home() {
       </div>
 
       {/* CONTACT FORM SECTION START */}
-      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden py-30">
+      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden py-25">
         <Image
-          src="/img/hero/contact_form.png"
+          src="/img/home/contact_form.png"
           alt="Contact background"
           fill
-          className="scale-102 object-cover object-[50%_60%] blur-xs"
+          className="scale-102 object-cover object-[30%_50%]"
           priority
         />
-        <div className="absolute inset-0 bg-white/40" /> {/* FOG */}
+        {<div className="absolute inset-0 bg-white/40" />} {/* FOG */}
         <div className="z-10 flex w-full items-center justify-center gap-20 px-12">
           <div className="relative w-full max-w-xl shrink-0 text-center">
-            <span className="absolute inset-0 -z-10 rounded-md bg-white opacity-30 blur-3xl"></span>
-            <p className="mb-4 text-5xl font-bold">Есть вопросы?</p>
-            <p className="mb-2 text-2xl">
-              Оставьте заявку через форму, и мы свяжемся <br /> с вами в
+            <span className="absolute inset-0 -z-10 rounded-md bg-[#a6a6a6] opacity-100 blur-[90px]"></span>
+            <p className="mb-4 text-5xl font-bold text-shadow-2xs text-shadow-[#b3b3b3]">
+              Есть вопросы?
+            </p>
+            <p className="mb-2 text-2xl text-shadow-[#b3b3b3] text-shadow-xs">
+              Оставьте заявку через форму, <br /> и мы свяжемся с вами в
               ближайшее время.
             </p>
             {/* <p className="text-2xl">
