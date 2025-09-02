@@ -9,11 +9,9 @@ export default function Logo() {
         width={68}
         height={0}
       />
-      <div className="text-primary-darker space-y-0.5 font-semibold">
+      <div className="text-primary-darker mt-3 space-y-0.5 font-semibold">
         <p>Предприятие ООО Т.С.Т.</p>
-        <p className="text-sm opacity-86">
-          Производство отопительного оборудования
-        </p>
+        <p>Отопительное оборудование</p>
       </div>
     </div>
   );
