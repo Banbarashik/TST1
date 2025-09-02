@@ -10,37 +10,37 @@ const productCategories = [
   {
     name: "Калориферы водяные",
     items: [
-      { name: "КСк", url: "", img: "img/nav_menu/ksk.jpg" },
-      { name: "ТВВ", url: "", img: "img/nav_menu/tvv.jpg" },
-      { name: "КФБ м", url: "", img: "img/nav_menu/kfb_m.jpg" },
-      { name: "АО+ вода", url: "", img: "img/nav_menu/ao+_voda.jpg" },
+      { name: "КСк", url: "", img: "/img/nav_menu/ksk.jpg" },
+      { name: "ТВВ", url: "", img: "/img/nav_menu/tvv.jpg" },
+      { name: "КФБ м", url: "", img: "/img/nav_menu/kfb_m.jpg" },
+      { name: "АО+ вода", url: "", img: "/img/nav_menu/ao+_voda.jpg" },
     ],
   },
   {
     name: "Калориферы паровые",
     items: [
-      { name: "КПСк", url: "", img: "img/nav_menu/kpsk.svg" },
-      { name: "КП", url: "", img: "#" },
-      { name: "КФБ п", url: "", img: "#" },
-      { name: "АО+ пар", url: "", img: "#" },
+      { name: "КПСк", url: "", img: "/img/nav_menu/kpsk.svg" },
+      { name: "КП", url: "", img: "/" },
+      { name: "КФБ п", url: "", img: "/" },
+      { name: "АО+ пар", url: "", img: "/" },
     ],
   },
   {
     name: "Электрические нагреватели",
     items: [
-      { name: "Электрокалориферы СФО", url: "", img: "#" },
-      { name: "Электрокалориферные установки СФОЦ", url: "", img: "#" },
-      { name: "Шкафы управления калориферами ШУК", url: "", img: "#" },
-      { name: "ТЭНы оребренные", url: "", img: "#" },
+      { name: "Электрокалориферы СФО", url: "", img: "/" },
+      { name: "Электрокалориферные установки СФОЦ", url: "", img: "/" },
+      { name: "Шкафы управления калориферами ШУК", url: "", img: "/" },
+      { name: "ТЭНы оребренные", url: "", img: "/" },
     ],
   },
   {
     name: "Отопительные агрегаты",
     items: [
-      { name: "АО2", url: "", img: "#" },
-      { name: "СТД 300", url: "", img: "#" },
-      { name: "АВО хл", url: "", img: "#" },
-      { name: "СТД 300 хл", url: "", img: "#" },
+      { name: "АО2", url: "", img: "/" },
+      { name: "СТД 300", url: "", img: "/" },
+      { name: "АВО хл", url: "", img: "/" },
+      { name: "СТД 300 хл", url: "", img: "/" },
     ],
   },
 ];
@@ -109,9 +109,11 @@ export default function NavigationMenu() {
                           ))}
                         </ul>
                         <Image
-                          src={activeProduct?.img || ""}
+                          src={activeProduct?.img || "/"}
                           alt="#"
-                          className="h-52 w-52 bg-gray-300"
+                          width={208}
+                          height={208}
+                          className="bg-gray-300"
                         />
                       </div>
                     </NavigationMenuPrimitive.Content>
@@ -123,14 +125,10 @@ export default function NavigationMenu() {
         </NavigationMenuPrimitive.Item>
         <NavigationMenuPrimitive.Item>
           <NavigationMenuPrimitive.Link asChild>
-            <Link href="#" className="hover:bg-accent rounded-md p-2">
-              Расчет-подбор
-            </Link>
-          </NavigationMenuPrimitive.Link>
-        </NavigationMenuPrimitive.Item>
-        <NavigationMenuPrimitive.Item>
-          <NavigationMenuPrimitive.Link asChild>
-            <Link href="#" className="hover:bg-accent rounded-md p-2">
+            <Link
+              href="/kontakty-prajs"
+              className="hover:bg-accent rounded-md p-2"
+            >
               Прайс-лист
             </Link>
           </NavigationMenuPrimitive.Link>
