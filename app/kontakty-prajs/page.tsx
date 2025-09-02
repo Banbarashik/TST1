@@ -1,6 +1,21 @@
 import { productData } from "@/data/products";
-import { sortProducts } from "@/lib/utils";
+
 import React from "react";
+import type { Metadata } from "next";
+
+import { sortProducts } from "@/lib/utils";
+
+import ProductParagraph from "@/components/catalog/productParagraph";
+import ProductSubheader from "@/components/catalog/productSubheader";
+import Heading from "@/components/general_pages/heading";
+
+export const metadata: Metadata = {
+  title: "Прайс-лист воздушно-отопительного оборудования",
+  description:
+    "Прайс-лист воздушно-отопительного оборудования. Предприятие-производитель Т.С.Т. Цена водяных, паровых, электрических калориферов, агрегатов воздухонагревательных установок",
+  keywords:
+    "калорифер прайс лист,калорифер купить,калорифер цена,калорифер водяной цена,калорифер водяной купить,калорифер паровой цена,калорифер паровой купить,калорифер электрический цена,отопительный агрегат цена,агрегат отопительный купить",
+};
 
 export default function ContactsAndPricesPage() {
   const sortedProducts = productData.sort((a, b) =>
@@ -60,93 +75,157 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="max-w-8xl mx-auto w-full py-14">
-      <div className="flex flex-col items-center gap-10">
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-            </tr>
-          </thead>
-          <tbody>
-            {kpps2.map((p, i) => (
-              <tr key={p.id}>
-                <td>
-                  КПВС КППС {p.size}х{p.size}_{p.rows}
-                </td>
-                <td>{p.price}</td>
-                <td>
-                  КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
-                </td>
-                <td>{kpps3[i].price}</td>
-                <td>
-                  КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
-                </td>
-                <td>{kpps4[i].price}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-            </tr>
-          </thead>
-          <tbody>
-            {kpvu2.map((p, i) => (
-              <tr key={p.id}>
-                <td>
-                  КПВУ КППУ {p.size}х{p.size}_{p.rows}
-                </td>
-                <td>{p.price}</td>
-                <td>
-                  КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
-                </td>
-                <td>{kpvu3[i].price}</td>
-                <td>
-                  КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
-                </td>
-                <td>{kpvu4[i].price}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div className="max-w-8xl mx-auto w-full px-12 py-14">
+      <section className="mb-4">
+        <ProductParagraph>
+          ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
+          выпуске воздушно-отопительного оборудования и работающее на рынке
+          климатической продукции с 2001 года. Основное направление деятельности
+          организации — изготовление водяных, паровых, электрических калориферов
+          и отопительных агрегатов, воздухонагревательных установок.
+        </ProductParagraph>
+        <ProductParagraph>
+          За годы производственной деятельности налажено деловое сотрудничество
+          и установлены прочные торгово-экономические связи с предприятиями
+          металлургической, горнодобывающей, химической,
+          топливно-энергетической, авиационной, машиностроительной
+          промышленности, фабриками и хозяйствами агропромышленного комплекса.
+        </ProductParagraph>
+        <ProductParagraph>
+          Широкий модельный ряд калориферов производства ЗАО «Т.С.Т.», только в
+          стандартном исполнении насчитывающий 440 типоразмеров, позволяет
+          решить вопрос с быстрым и качественным обогревом промышленных
+          комплексов любой площади, поспособствует выполнению задач, связанных с
+          созданием технологического тепла для производственных процессов.
+        </ProductParagraph>
+        <ProductParagraph>
+          Серийно изготавливаются воздухонагреватели с увеличенным диаметром
+          несущих трубок, а также воздушно-отопительные агрегаты на базе таких
+          теплообменников. Данное оборудование находит применение на рудных и
+          угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
+          эксплуатация происходит в условиях низких температурных режимов.
+        </ProductParagraph>
+        <ProductParagraph>
+          Технический отдел предприятия принимает заказы на изготовление
+          калориферов нестандартных габаритных размеров по опросному листу. С
+          помощью онлайн-калькулятора можно произвести быстрый подбор приточных
+          водяных и паровых моделей, получить данные для выбора сопутствующего
+          вентиляционного, насосно-смесительного оборудования и
+          пароконденсатного оборудования.
+        </ProductParagraph>
+      </section>
 
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th>Наименование калорифера</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование калорифера</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование калорифера</th>
-              <th>Цена с учетом НДС</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ksk2.map((p, i) => (
-              <tr key={p.id}>
-                <td>КСк КПСк 2-{p.size}</td>
-                <td>{p.price}</td>
-                <td>КСк КПСк 3-{ksk3[i].size}</td>
-                <td>{ksk3[i].price}</td>
-                <td>КСк КПСк 4-{ksk4[i].size}</td>
-                <td>{ksk4[i].price}</td>
+      <div className="flex flex-col items-center gap-4">
+        <h2 className="text-center text-2xl font-bold uppercase">
+          Цена/прайс-лист калориферов
+        </h2>
+        <div className="w-full max-w-6xl">
+          <Heading
+            lvl={2}
+            text="Приточные калориферы - водяные КПВС и паровые КППС"
+          />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {kpps2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {p.size}х{p.size}_{p.rows}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
+                  </td>
+                  <td>{kpps3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
+                  </td>
+                  <td>{kpps4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="w-full max-w-6xl">
+          <Heading
+            lvl={2}
+            text="Приточные калориферы - водяные КПВУ и паровые КППУ"
+          />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {kpvu2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {p.size}х{p.size}_{p.rows}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
+                  </td>
+                  <td>{kpvu3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
+                  </td>
+                  <td>{kpvu4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="w-full max-w-6xl">
+          <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
+          <table className="w-full">
+            <thead>
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="py-1.5">Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ksk2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 2-{p.size}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 3-{ksk3[i].size}
+                  </td>
+                  <td>{ksk3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 4-{ksk4[i].size}
+                  </td>
+                  <td>{ksk4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <table>
           <thead>
