@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import Heading from "@/components/general_pages/heading";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export const metadata: Metadata = {
   title: "Прайс-лист воздушно-отопительного оборудования",
@@ -115,7 +116,7 @@ export default function ContactsAndPricesPage() {
         </ProductParagraph>
       </section>
 
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-8">
         <h2 className="text-center text-2xl font-bold uppercase">
           Цена/прайс-лист калориферов
         </h2>
@@ -124,7 +125,7 @@ export default function ContactsAndPricesPage() {
             lvl={2}
             text="Приточные калориферы - водяные КПВС и паровые КППС"
           />
-          <table className="w-full">
+          <table className="mb-6 w-full">
             <thead className="uppercase">
               <tr>
                 <th className="py-1.5">Наименование калорифера</th>
@@ -154,6 +155,20 @@ export default function ContactsAndPricesPage() {
               ))}
             </tbody>
           </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/ksk"
+              tableLinkText="Калориферы КСк"
+              catalogURL=""
+              catalogLinkText="Калориферы КПСк"
+            />
+            <TableAndCatalogLinks
+              tableURL=""
+              tableLinkText="Скачать каталог КСк"
+              catalogURL=""
+              catalogLinkText="Скачать каталог КПСк"
+            />
+          </div>
         </div>
 
         <div className="w-full max-w-6xl">
@@ -161,7 +176,7 @@ export default function ContactsAndPricesPage() {
             lvl={2}
             text="Приточные калориферы - водяные КПВУ и паровые КППУ"
           />
-          <table className="w-full">
+          <table className="mb-6 w-full">
             <thead className="uppercase">
               <tr>
                 <th className="py-1.5">Наименование калорифера</th>
@@ -191,11 +206,25 @@ export default function ContactsAndPricesPage() {
               ))}
             </tbody>
           </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/ksk"
+              tableLinkText="Калориферы КСк"
+              catalogURL=""
+              catalogLinkText="Калориферы КПСк"
+            />
+            <TableAndCatalogLinks
+              tableURL=""
+              tableLinkText="Скачать каталог КСк"
+              catalogURL=""
+              catalogLinkText="Скачать каталог КПСк"
+            />
+          </div>
         </div>
 
         <div className="w-full max-w-6xl">
           <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
-          <table className="w-full">
+          <table className="mb-6 w-full">
             <thead>
               <tr className="uppercase">
                 <th className="py-1.5">Наименование калорифера</th>
@@ -225,6 +254,20 @@ export default function ContactsAndPricesPage() {
               ))}
             </tbody>
           </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/ksk"
+              tableLinkText="Калориферы КСк"
+              catalogURL=""
+              catalogLinkText="Калориферы КПСк"
+            />
+            <TableAndCatalogLinks
+              tableURL=""
+              tableLinkText="Скачать каталог КСк"
+              catalogURL=""
+              catalogLinkText="Скачать каталог КПСк"
+            />
+          </div>
         </div>
 
         <table>
