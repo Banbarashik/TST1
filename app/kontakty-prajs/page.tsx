@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { sortProducts } from "@/lib/utils";
 
 import ProductParagraph from "@/components/catalog/productParagraph";
-import ProductSubheader from "@/components/catalog/productSubheader";
 import Heading from "@/components/general_pages/heading";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
@@ -161,12 +160,14 @@ export default function ContactsAndPricesPage() {
               tableLinkText="Калориферы КСк"
               catalogURL=""
               catalogLinkText="Калориферы КПСк"
+              className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
               catalogURL=""
               catalogLinkText="Скачать каталог КПСк"
+              className="bg-gray-200"
             />
           </div>
         </div>
@@ -212,12 +213,14 @@ export default function ContactsAndPricesPage() {
               tableLinkText="Калориферы КСк"
               catalogURL=""
               catalogLinkText="Калориферы КПСк"
+              className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
               catalogURL=""
               catalogLinkText="Скачать каталог КПСк"
+              className="bg-gray-200"
             />
           </div>
         </div>
@@ -260,12 +263,14 @@ export default function ContactsAndPricesPage() {
               tableLinkText="Калориферы КСк"
               catalogURL=""
               catalogLinkText="Калориферы КПСк"
+              className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
               catalogURL=""
               catalogLinkText="Скачать каталог КПСк"
+              className="bg-gray-200"
             />
           </div>
         </div>
