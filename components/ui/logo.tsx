@@ -6,12 +6,14 @@ export default function Logo() {
       <Image
         src="/img/logo.png"
         alt="Логотип ООО 'ТСТ'"
-        width={70}
+        width={68}
         height={0}
       />
-      <div className="font-semibold text-[#5e2129]">
+      <div className="text-primary-darker space-y-0.5 font-semibold">
         <p>Предприятие ООО Т.С.Т.</p>
-        <p>Производство отопительного оборудования</p>
+        <p className="text-sm opacity-86">
+          Производство отопительного оборудования
+        </p>
       </div>
     </div>
   );
