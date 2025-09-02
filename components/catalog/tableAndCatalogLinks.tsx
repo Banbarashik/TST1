@@ -1,3 +1,5 @@
+// TODO rework the component
+
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -7,34 +9,43 @@ import { Button } from "@/components/ui/button";
 export default function TableAndCatalogLinks({
   tableURL,
   tableLinkText,
+  tableLinkOpenNewTab = false,
   catalogURL,
   catalogLinkText = "Скачать каталог PDF",
-  className,
+  catalogOpenNewTab = true,
+  buttonClassName,
 }: {
   tableURL: string;
   tableLinkText: string;
+  tableLinkOpenNewTab?: boolean;
   catalogURL?: string;
   catalogLinkText?: string;
-  className?: string;
-} & React.ComponentProps<"a">) {
+  catalogOpenNewTab?: boolean;
+  buttonClassName?: string;
+}) {
   return (
     <div className="flex h-12 w-full gap-6">
       <Button
         className={cn(
           "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
-          className,
+          buttonClassName,
         )}
       >
-        <Link href={tableURL}>{tableLinkText}</Link>
+        <Link href={tableURL} target={tableLinkOpenNewTab ? "_blank" : "_self"}>
+          {tableLinkText}
+        </Link>
       </Button>
       {catalogURL && (
         <Button
           className={cn(
             "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
-            className,
+            buttonClassName,
           )}
         >
-          <Link href={catalogURL} target="_blank">
+          <Link
+            href={catalogURL}
+            target={catalogOpenNewTab ? "_blank" : "_self"}
+          >
             {catalogLinkText}
           </Link>
         </Button>
