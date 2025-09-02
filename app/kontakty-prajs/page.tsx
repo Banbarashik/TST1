@@ -275,47 +275,54 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Наименование калорифера</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование калорифера</th>
-              <th>Цена с учетом НДС</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tvv3.map((p, i) => (
-              <tr key={p.id}>
-                <td>ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}</td>
-                <td>{p.price}</td>
-                <td>ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}</td>
-                <td>{tvv4[i].price}</td>
+        <div className="flex w-full max-w-6xl flex-col">
+          <table className="mb-2 max-w-4xl">
+            <thead>
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="px-1 py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="px-1 py-1.5">Цена с учетом НДС</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-              <th>Наименование агрегата</th>
-              <th>Цена с учетом НДС</th>
-            </tr>
-          </thead>
-          <tbody>
-            {kfb3.map((p, i) => (
-              <tr key={p.id}>
-                <td>{p.shortName}</td>
-                <td>{p.price}</td>
-                <td>{kfb4[i].shortName}</td>
-                <td>{kfb4[i].price}</td>
+            </thead>
+            <tbody>
+              {tvv3.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
+                  </td>
+                  <td>{tvv4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <table className="w-full max-w-4xl">
+            <thead>
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="px-1 py-1.5">Цена с учетом НДС</th>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th className="px-1 py-1.5">Цена с учетом НДС</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {kfb3.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    {kfb4[i].shortName}
+                  </td>
+                  <td>{kfb4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <table>
           <thead>
