@@ -13,7 +13,7 @@ export default function TableAndCatalogLinks({
 }: {
   tableURL: string;
   tableLinkText: string;
-  catalogURL: string;
+  catalogURL?: string;
   catalogLinkText?: string;
   className?: string;
 } & React.ComponentProps<"a">) {
@@ -27,16 +27,18 @@ export default function TableAndCatalogLinks({
       >
         <Link href={tableURL}>{tableLinkText}</Link>
       </Button>
-      <Button
-        className={cn(
-          "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
-          className,
-        )}
-      >
-        <Link href={catalogURL} target="_blank">
-          {catalogLinkText}
-        </Link>
-      </Button>
+      {catalogURL && (
+        <Button
+          className={cn(
+            "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
+            className,
+          )}
+        >
+          <Link href={catalogURL} target="_blank">
+            {catalogLinkText}
+          </Link>
+        </Button>
+      )}
     </div>
   );
 }

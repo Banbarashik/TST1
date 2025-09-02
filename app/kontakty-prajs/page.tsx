@@ -158,14 +158,14 @@ export default function ContactsAndPricesPage() {
             <TableAndCatalogLinks
               tableURL="/catalog/ksk"
               tableLinkText="Калориферы КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Калориферы КПСк"
               className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Скачать каталог КПСк"
               className="bg-gray-200"
             />
@@ -211,14 +211,14 @@ export default function ContactsAndPricesPage() {
             <TableAndCatalogLinks
               tableURL="/catalog/ksk"
               tableLinkText="Калориферы КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Калориферы КПСк"
               className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Скачать каталог КПСк"
               className="bg-gray-200"
             />
@@ -261,67 +261,106 @@ export default function ContactsAndPricesPage() {
             <TableAndCatalogLinks
               tableURL="/catalog/ksk"
               tableLinkText="Калориферы КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Калориферы КПСк"
               className="bg-gray-200"
             />
             <TableAndCatalogLinks
               tableURL=""
               tableLinkText="Скачать каталог КСк"
-              catalogURL=""
+              catalogURL="/"
               catalogLinkText="Скачать каталог КПСк"
               className="bg-gray-200"
             />
           </div>
         </div>
 
-        <div className="flex w-full max-w-6xl flex-col">
-          <table className="mb-2 max-w-4xl">
-            <thead>
-              <tr className="uppercase">
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="px-1 py-1.5">Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tvv3.map((p, i) => (
-                <tr key={p.id}>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
-                  </td>
-                  <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
-                  </td>
-                  <td>{tvv4[i].price}</td>
+        <div className="flex w-full max-w-6xl flex-col gap-6">
+          <div className="space-y-6">
+            <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
+            <table className="w-full max-w-3xl">
+              <thead>
+                <tr className="uppercase">
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <table className="w-full max-w-4xl">
-            <thead>
-              <tr className="uppercase">
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="px-1 py-1.5">Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              {kfb3.map((p, i) => (
-                <tr key={p.id}>
-                  <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
-                  <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    {kfb4[i].shortName}
-                  </td>
-                  <td>{kfb4[i].price}</td>
+              </thead>
+              <tbody>
+                {tvv3.map((p, i) => (
+                  <tr key={p.id}>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
+                    </td>
+                    <td>{p.price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
+                    </td>
+                    <td>{tvv4[i].price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="flex gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/ksk"
+                tableLinkText="Калориферы КСк"
+                catalogURL="/"
+                catalogLinkText="Калориферы КПСк"
+                className="bg-gray-200"
+              />
+              <TableAndCatalogLinks
+                tableURL=""
+                tableLinkText="Скачать каталог КСк"
+                catalogURL="/"
+                catalogLinkText="Скачать каталог КПСк"
+                className="bg-gray-200"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <Heading lvl={2} text="Калориферы водяные и паровые КФБ-А" />
+            <table className="w-full max-w-3xl">
+              <thead>
+                <tr className="uppercase">
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {kfb3.map((p, i) => (
+                  <tr key={p.id}>
+                    <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
+                    <td>{p.price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      {kfb4[i].shortName}
+                    </td>
+                    <td>{kfb4[i].price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="flex justify-start gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/ksk"
+                tableLinkText="Калориферы КСк"
+                catalogURL="/"
+                catalogLinkText="Калориферы КПСк"
+                className="bg-gray-200"
+              />
+              <div className="flex-1/2">
+                <TableAndCatalogLinks
+                  tableURL=""
+                  tableLinkText="Скачать каталог КСк"
+                  className="bg-gray-200"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <table>
