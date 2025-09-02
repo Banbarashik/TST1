@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Logo() {
   return (
-    <div className="flex items-center justify-start gap-3">
+    <Link href="/" className="flex items-center justify-start gap-3">
       <Image
         src="/img/logo.png"
         alt="Логотип ООО 'ТСТ'"
@@ -13,6 +14,6 @@ export default function Logo() {
         <p>Предприятие ООО Т.С.Т.</p>
         <p>Отопительное оборудование</p>
       </div>
-    </div>
+    </Link>
   );
 }
