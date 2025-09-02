@@ -75,8 +75,8 @@ export default function NavigationMenu() {
       onValueChange={handleMenuChange}
     >
       <NavigationMenuPrimitive.Viewport className="absolute top-full" />
-      <NavigationMenuPrimitive.List className="flex items-center gap-6 text-xl font-semibold">
-        <NavigationMenuPrimitive.Item>
+      <NavigationMenuPrimitive.List className="flex items-center gap-4 text-[17px] font-semibold">
+        {/* <NavigationMenuPrimitive.Item>
           <NavigationMenuPrimitive.Trigger className="hover:bg-accent rounded-md p-2">
             Продукция
           </NavigationMenuPrimitive.Trigger>
@@ -122,14 +122,35 @@ export default function NavigationMenu() {
               </NavigationMenuPrimitive.List>
             </NavigationMenuPrimitive.Sub>
           </NavigationMenuPrimitive.Content>
+        </NavigationMenuPrimitive.Item> */}
+        <NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Link asChild>
+            <Link
+              href="/kalorifery-voda"
+              className="hover:bg-accent flex flex-col items-center rounded-md p-2"
+            >
+              <span>Калькулятор подбора</span> <span>водяных калориферов</span>
+            </Link>
+          </NavigationMenuPrimitive.Link>
+        </NavigationMenuPrimitive.Item>
+        <NavigationMenuPrimitive.Item>
+          <NavigationMenuPrimitive.Link asChild>
+            <Link
+              href="/kalorifery-par"
+              className="hover:bg-accent flex flex-col items-center rounded-md p-2"
+            >
+              <span>Калькулятор подбора</span> <span>паровых калориферов</span>
+            </Link>
+          </NavigationMenuPrimitive.Link>
         </NavigationMenuPrimitive.Item>
         <NavigationMenuPrimitive.Item>
           <NavigationMenuPrimitive.Link asChild>
             <Link
               href="/kontakty-prajs"
-              className="hover:bg-accent rounded-md p-2"
+              className="hover:bg-accent flex flex-col items-center rounded-md p-2"
             >
-              Прайс-лист
+              <span>Контакты</span>
+              <span>Прайс-лист</span>
             </Link>
           </NavigationMenuPrimitive.Link>
         </NavigationMenuPrimitive.Item>
