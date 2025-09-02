@@ -156,18 +156,20 @@ export default function ContactsAndPricesPage() {
           </table>
           <div className="flex gap-16">
             <TableAndCatalogLinks
-              tableURL="/catalog/ksk"
-              tableLinkText="Калориферы КСк"
-              catalogURL="/"
-              catalogLinkText="Калориферы КПСк"
-              className="bg-gray-200"
+              tableURL="/catalog/kpvs"
+              tableLinkText="Калориферы КПВС"
+              catalogURL="/catalog/kpps"
+              catalogLinkText="Калориферы КППС"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
             />
             <TableAndCatalogLinks
-              tableURL=""
-              tableLinkText="Скачать каталог КСк"
-              catalogURL="/"
-              catalogLinkText="Скачать каталог КПСк"
-              className="bg-gray-200"
+              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+              tableLinkText="Скачать каталог КПВС"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КППС"
+              buttonClassName="bg-gray-200"
             />
           </div>
         </div>
@@ -209,18 +211,20 @@ export default function ContactsAndPricesPage() {
           </table>
           <div className="flex gap-16">
             <TableAndCatalogLinks
-              tableURL="/catalog/ksk"
-              tableLinkText="Калориферы КСк"
-              catalogURL="/"
-              catalogLinkText="Калориферы КПСк"
-              className="bg-gray-200"
+              tableURL="/catalog/kpvu"
+              tableLinkText="Калориферы КПВУ"
+              catalogURL="/catalog/kppu"
+              catalogLinkText="Калориферы КППУ"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
             />
             <TableAndCatalogLinks
-              tableURL=""
-              tableLinkText="Скачать каталог КСк"
-              catalogURL="/"
-              catalogLinkText="Скачать каталог КПСк"
-              className="bg-gray-200"
+              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+              tableLinkText="Скачать каталог КПВУ"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КППУ"
+              buttonClassName="bg-gray-200"
             />
           </div>
         </div>
@@ -261,16 +265,18 @@ export default function ContactsAndPricesPage() {
             <TableAndCatalogLinks
               tableURL="/catalog/ksk"
               tableLinkText="Калориферы КСк"
-              catalogURL="/"
+              catalogURL="/catalog/kpsk"
               catalogLinkText="Калориферы КПСк"
-              className="bg-gray-200"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
             />
             <TableAndCatalogLinks
-              tableURL=""
+              tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
               tableLinkText="Скачать каталог КСк"
-              catalogURL="/"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
               catalogLinkText="Скачать каталог КПСк"
-              className="bg-gray-200"
+              buttonClassName="bg-gray-200"
             />
           </div>
         </div>
@@ -304,18 +310,20 @@ export default function ContactsAndPricesPage() {
             </table>
             <div className="flex gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/ksk"
-                tableLinkText="Калориферы КСк"
-                catalogURL="/"
-                catalogLinkText="Калориферы КПСк"
-                className="bg-gray-200"
+                tableURL="/catalog/tvv"
+                tableLinkText="Калориферы ТВВ"
+                catalogURL="/catalog/kp"
+                catalogLinkText="Калориферы КП"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
               />
               <TableAndCatalogLinks
-                tableURL=""
-                tableLinkText="Скачать каталог КСк"
-                catalogURL="/"
-                catalogLinkText="Скачать каталог КПСк"
-                className="bg-gray-200"
+                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                tableLinkText="Скачать каталог ТВВ"
+                tableLinkOpenNewTab
+                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+                catalogLinkText="Скачать каталог КП"
+                buttonClassName="bg-gray-200"
               />
             </div>
           </div>
@@ -346,17 +354,19 @@ export default function ContactsAndPricesPage() {
             </table>
             <div className="flex justify-start gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/ksk"
-                tableLinkText="Калориферы КСк"
-                catalogURL="/"
-                catalogLinkText="Калориферы КПСк"
-                className="bg-gray-200"
+                tableURL="/catalog/kfb-a-m"
+                tableLinkText="Калориферы КФБ-А водяные"
+                catalogURL="/catalog/kfb-a-p"
+                catalogLinkText="Калориферы КФБ-А паровые"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
               />
               <div className="flex-1/2">
                 <TableAndCatalogLinks
-                  tableURL=""
-                  tableLinkText="Скачать каталог КСк"
-                  className="bg-gray-200"
+                  tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+                  tableLinkText="Скачать каталог калориферов КФБ-А"
+                  tableLinkOpenNewTab={true}
+                  buttonClassName="bg-gray-200"
                 />
               </div>
             </div>
