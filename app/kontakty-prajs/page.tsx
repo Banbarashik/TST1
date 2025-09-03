@@ -75,22 +75,27 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="max-w-8xl mx-auto w-full space-y-12 px-12 py-14">
-      <section className="mb-4">
+    <div className="max-w-8xl mx-auto w-full px-12 py-14">
+      <div className="space-y-5">
+        <Heading
+          lvl={1}
+          text="Цена/прайс-лист воздушно-отопительного оборудования"
+        />
         <ProductParagraph>
           ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
           выпуске воздушно-отопительного оборудования и работающее на рынке
           климатической продукции с 2001 года. Основное направление деятельности
           организации — изготовление водяных, паровых, электрических калориферов
-          и отопительных агрегатов, воздухонагревательных установок.
-        </ProductParagraph>
-        <ProductParagraph>
-          За годы производственной деятельности налажено деловое сотрудничество
-          и установлены прочные торгово-экономические связи с предприятиями
+          и отопительных агрегатов, воздухонагревательных установок. За годы
+          производственной деятельности налажено деловое сотрудничество и
+          установлены прочные торгово-экономические связи с предприятиями
           металлургической, горнодобывающей, химической,
           топливно-энергетической, авиационной, машиностроительной
           промышленности, фабриками и хозяйствами агропромышленного комплекса.
         </ProductParagraph>
+        <h2 className="text-center text-2xl font-bold uppercase">
+          Цена/прайс-лист калориферов
+        </h2>
         <ProductParagraph>
           Широкий модельный ряд калориферов производства ЗАО «Т.С.Т.», только в
           стандартном исполнении насчитывающий 440 типоразмеров, позволяет
@@ -98,190 +103,178 @@ export default function ContactsAndPricesPage() {
           комплексов любой площади, поспособствует выполнению задач, связанных с
           созданием технологического тепла для производственных процессов.
         </ProductParagraph>
-        <ProductParagraph>
-          Серийно изготавливаются воздухонагреватели с увеличенным диаметром
-          несущих трубок, а также воздушно-отопительные агрегаты на базе таких
-          теплообменников. Данное оборудование находит применение на рудных и
-          угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
-          эксплуатация происходит в условиях низких температурных режимов.
-        </ProductParagraph>
-        <ProductParagraph>
-          Технический отдел предприятия принимает заказы на изготовление
-          калориферов нестандартных габаритных размеров по опросному листу. С
-          помощью онлайн-калькулятора можно произвести быстрый подбор приточных
-          водяных и паровых моделей, получить данные для выбора сопутствующего
-          вентиляционного, насосно-смесительного оборудования и
-          пароконденсатного оборудования.
-        </ProductParagraph>
-      </section>
+      </div>
 
-      <div className="flex flex-col items-center gap-8">
-        <h2 className="text-center text-2xl font-bold uppercase">
-          Цена/прайс-лист калориферов
-        </h2>
-        <div className="w-full max-w-6xl">
-          <Heading
-            lvl={2}
-            text="Приточные калориферы - водяные КПВС и паровые КППС"
-          />
-          <table className="mb-6 w-full">
-            <thead className="uppercase">
-              <tr>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              {kpps2.map((p, i) => (
-                <tr key={p.id}>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВС КППС {p.size}х{p.size}_{p.rows}
-                  </td>
-                  <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
-                  </td>
-                  <td>{kpps3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
-                  </td>
-                  <td>{kpps4[i].price}</td>
+      <div className="mx-auto max-w-6xl space-y-8">
+        <div className="max-w-6xl space-y-10">
+          <div className="space-y-6">
+            <Heading
+              lvl={2}
+              text="Приточные калориферы - водяные КПВС и паровые КППС"
+            />
+            <table className="w-full">
+              <thead className="uppercase">
+                <tr>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="flex gap-16">
-            <TableAndCatalogLinks
-              tableURL="/catalog/kpvs"
-              tableLinkText="Калориферы КПВС"
-              catalogURL="/catalog/kpps"
-              catalogLinkText="Калориферы КППС"
-              catalogOpenNewTab={false}
-              buttonClassName="bg-gray-200"
-            />
-            <TableAndCatalogLinks
-              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-              tableLinkText="Скачать каталог КПВС"
-              tableLinkOpenNewTab
-              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
-              catalogLinkText="Скачать каталог КППС"
-              buttonClassName="bg-gray-200"
-            />
+              </thead>
+              <tbody>
+                {kpps2.map((p, i) => (
+                  <tr key={p.id}>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВС КППС {p.size}х{p.size}_{p.rows}
+                    </td>
+                    <td>{p.price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
+                    </td>
+                    <td>{kpps3[i].price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
+                    </td>
+                    <td>{kpps4[i].price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="flex gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/kpvs"
+                tableLinkText="Калориферы КПВС"
+                catalogURL="/catalog/kpps"
+                catalogLinkText="Калориферы КППС"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
+              />
+              <TableAndCatalogLinks
+                tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+                tableLinkText="Скачать каталог КПВС"
+                tableLinkOpenNewTab
+                catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+                catalogLinkText="Скачать каталог КППС"
+                buttonClassName="bg-gray-200"
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="w-full max-w-6xl">
-          <Heading
-            lvl={2}
-            text="Приточные калориферы - водяные КПВУ и паровые КППУ"
-          />
-          <table className="mb-6 w-full">
-            <thead className="uppercase">
-              <tr>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              {kpvu2.map((p, i) => (
-                <tr key={p.id}>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВУ КППУ {p.size}х{p.size}_{p.rows}
-                  </td>
-                  <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
-                  </td>
-                  <td>{kpvu3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
-                  </td>
-                  <td>{kpvu4[i].price}</td>
+          <div className="space-y-6">
+            <Heading
+              lvl={2}
+              text="Приточные калориферы - водяные КПВУ и паровые КППУ"
+            />
+            <table className="w-full">
+              <thead className="uppercase">
+                <tr>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="flex gap-16">
-            <TableAndCatalogLinks
-              tableURL="/catalog/kpvu"
-              tableLinkText="Калориферы КПВУ"
-              catalogURL="/catalog/kppu"
-              catalogLinkText="Калориферы КППУ"
-              catalogOpenNewTab={false}
-              buttonClassName="bg-gray-200"
-            />
-            <TableAndCatalogLinks
-              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-              tableLinkText="Скачать каталог КПВУ"
-              tableLinkOpenNewTab
-              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
-              catalogLinkText="Скачать каталог КППУ"
-              buttonClassName="bg-gray-200"
-            />
+              </thead>
+              <tbody>
+                {kpvu2.map((p, i) => (
+                  <tr key={p.id}>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВУ КППУ {p.size}х{p.size}_{p.rows}
+                    </td>
+                    <td>{p.price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
+                    </td>
+                    <td>{kpvu3[i].price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
+                    </td>
+                    <td>{kpvu4[i].price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="flex gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/kpvu"
+                tableLinkText="Калориферы КПВУ"
+                catalogURL="/catalog/kppu"
+                catalogLinkText="Калориферы КППУ"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
+              />
+              <TableAndCatalogLinks
+                tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+                tableLinkText="Скачать каталог КПВУ"
+                tableLinkOpenNewTab
+                catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+                catalogLinkText="Скачать каталог КППУ"
+                buttonClassName="bg-gray-200"
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="w-full max-w-6xl">
-          <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
-          <table className="mb-6 w-full">
-            <thead>
-              <tr className="uppercase">
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-                <th className="py-1.5">Наименование калорифера</th>
-                <th className="py-1.5">Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ksk2.map((p, i) => (
-                <tr key={p.id}>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КСк КПСк 2-{p.size}
-                  </td>
-                  <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КСк КПСк 3-{ksk3[i].size}
-                  </td>
-                  <td>{ksk3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    КСк КПСк 4-{ksk4[i].size}
-                  </td>
-                  <td>{ksk4[i].price}</td>
+          <div className="space-y-6">
+            <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
+            <table className="w-full">
+              <thead>
+                <tr className="uppercase">
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
+                  <th className="py-1.5">Наименование калорифера</th>
+                  <th className="py-1.5">Цена с учетом НДС</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="flex gap-16">
-            <TableAndCatalogLinks
-              tableURL="/catalog/ksk"
-              tableLinkText="Калориферы КСк"
-              catalogURL="/catalog/kpsk"
-              catalogLinkText="Калориферы КПСк"
-              catalogOpenNewTab={false}
-              buttonClassName="bg-gray-200"
-            />
-            <TableAndCatalogLinks
-              tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
-              tableLinkText="Скачать каталог КСк"
-              tableLinkOpenNewTab
-              catalogURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
-              catalogLinkText="Скачать каталог КПСк"
-              buttonClassName="bg-gray-200"
-            />
+              </thead>
+              <tbody>
+                {ksk2.map((p, i) => (
+                  <tr key={p.id}>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КСк КПСк 2-{p.size}
+                    </td>
+                    <td>{p.price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КСк КПСк 3-{ksk3[i].size}
+                    </td>
+                    <td>{ksk3[i].price}</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      КСк КПСк 4-{ksk4[i].size}
+                    </td>
+                    <td>{ksk4[i].price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="flex gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/ksk"
+                tableLinkText="Калориферы КСк"
+                catalogURL="/catalog/kpsk"
+                catalogLinkText="Калориферы КПСк"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
+              />
+              <TableAndCatalogLinks
+                tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
+                tableLinkText="Скачать каталог КСк"
+                tableLinkOpenNewTab
+                catalogURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
+                catalogLinkText="Скачать каталог КПСк"
+                buttonClassName="bg-gray-200"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="flex w-full max-w-6xl flex-col gap-6">
+          <ProductParagraph>
+            Серийно изготавливаются воздухонагреватели с увеличенным диаметром
+            несущих трубок, а также воздушно-отопительные агрегаты на базе таких
+            теплообменников. Данное оборудование находит применение на рудных и
+            угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
+            эксплуатация происходит в условиях низких температурных режимов.
+          </ProductParagraph>
+
           <div className="space-y-6">
             <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
             <table className="w-full max-w-3xl">
@@ -327,7 +320,6 @@ export default function ContactsAndPricesPage() {
               />
             </div>
           </div>
-
           <div className="space-y-6">
             <Heading lvl={2} text="Калориферы водяные и паровые КФБ-А" />
             <table className="w-full max-w-3xl">
@@ -377,7 +369,9 @@ export default function ContactsAndPricesPage() {
             электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на
             базе бесшовных цельнотянутых трубок уточняйте по запросу.
           </ProductParagraph>
+        </div>
 
+        <div className="w-full max-w-6xl space-y-6">
           <h2 className="text-center text-2xl font-bold uppercase">
             Цена/прайс-лист отопительных агрегатов
           </h2>
@@ -422,9 +416,7 @@ export default function ContactsAndPricesPage() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="w-full max-w-6xl space-y-6">
           <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
           <table className="w-full">
             <thead>
@@ -653,7 +645,100 @@ export default function ContactsAndPricesPage() {
         </div>
       </div>
 
-      <section>
+      <div>
+        <ProductParagraph>
+          Технический отдел предприятия принимает заказы на изготовление
+          калориферов нестандартных габаритных размеров по опросному листу. С
+          помощью онлайн-калькулятора можно произвести быстрый подбор приточных
+          водяных и паровых моделей, получить данные для выбора сопутствующего
+          вентиляционного, насосно-смесительного оборудования и
+          пароконденсатного оборудования.
+        </ProductParagraph>
+        <h2 className="text-2xl font-bold uppercase">Контакты</h2>
+
+        <table className="mx-auto w-full max-w-5xl">
+          <tr>
+            <th colSpan={4}>ПОЛНОЕ НАИМЕНОВАНИЕ</th>
+            <td colSpan={4}>
+              Общество с ограниченной ответственностью «Т.С.Т.»
+            </td>
+          </tr>
+          <tr>
+            <th colSpan={4}>СОКРАЩЕННОЕ НАИМЕНОВАНИЕ</th>
+            <td colSpan={4}>ООО «Т.С.Т.»</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ЮРИДИЧЕСКИЙ АДРЕС</th>
+            <td colSpan={4}>
+              630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
+            </td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ПОЧТОВЫЙ АДРЕС</th>
+            <td colSpan={4}>
+              652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
+            </td>
+          </tr>
+          <tr>
+            <th>ИНН</th>
+            <th>КПП</th>
+            <th>ОКПО</th>
+            <th>ОГРН</th>
+            <td>5404002676</td>
+            <td>540401001</td>
+            <td>55613706</td>
+            <td>1155476002483</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>БИК</th>
+            <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
+            <td colSpan={2}>
+              Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
+            </td>
+          </tr>
+          <tr>
+            <th colSpan={4}>РАСЧЕТНЫЙ СЧЕТ</th>
+            <td colSpan={2}>301 018 101 4525 00 004 11</td>
+            <td colSpan={2}>301 018 102 0000 00 006 12</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>БАНК</th>
+            <td colSpan={4}>
+              28.25 Производство промышленного и холодильного оборудования
+            </td>
+          </tr>
+          <tr>
+            <th colSpan={4}>КОРРЕСПОНДЕНТСКИЙ СЧЕТ</th>
+            <td colSpan={4}>8 (38 46) 68-23-24</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ОКВЭД</th>
+            <td colSpan={4}>zao_tst@mail.ru</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ТЕЛЕФОН/ФАКС</th>
+            <td colSpan={4}>https://zao-tst.ru</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>E-MAIL</th>
+            <td colSpan={4}>zao_tst@mail.ru</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ВЕБ-САЙТ</th>
+            <td colSpan={4}>https://zao-tst.ru</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ТЕХНИЧЕСКИЕ ВОПРОСЫ</th>
+            <td colSpan={2}>8-961-737-83-14</td>
+            <td colSpan={2}>Киляков Вадим Анатольевич</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>ОТДЕЛ ПРОДАЖ</th>
+            <td colSpan={2}>8-904-968-14-88</td>
+            <td colSpan={2}>Семенова Татьяна Владимировна</td>
+          </tr>
+        </table>
+
         <ProductParagraph>
           В 2015 году, в связи с внесением поправок в Гражданский Кодекс РФ,
           принято решение о реорганизации Закрытого акционерного общества
@@ -661,88 +746,7 @@ export default function ContactsAndPricesPage() {
           ответственностью «Т.С.Т.». ООО «Т.С.Т.» становится полным
           правопреемником по всем правам и обязанностям ЗАО «Т.С.Т.».
         </ProductParagraph>
-      </section>
-
-      <table className="mx-auto w-full max-w-5xl">
-        <tr>
-          <th colSpan={4}>ПОЛНОЕ НАИМЕНОВАНИЕ</th>
-          <td colSpan={4}>Общество с ограниченной ответственностью «Т.С.Т.»</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>СОКРАЩЕННОЕ НАИМЕНОВАНИЕ</th>
-          <td colSpan={4}>ООО «Т.С.Т.»</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ЮРИДИЧЕСКИЙ АДРЕС</th>
-          <td colSpan={4}>
-            630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
-          </td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ПОЧТОВЫЙ АДРЕС</th>
-          <td colSpan={4}>
-            652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
-          </td>
-        </tr>
-        <tr>
-          <th>ИНН</th>
-          <th>КПП</th>
-          <th>ОКПО</th>
-          <th>ОГРН</th>
-          <td>5404002676</td>
-          <td>540401001</td>
-          <td>55613706</td>
-          <td>1155476002483</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>БИК</th>
-          <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
-          <td colSpan={2}>
-            Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
-          </td>
-        </tr>
-        <tr>
-          <th colSpan={4}>РАСЧЕТНЫЙ СЧЕТ</th>
-          <td colSpan={2}>301 018 101 4525 00 004 11</td>
-          <td colSpan={2}>301 018 102 0000 00 006 12</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>БАНК</th>
-          <td colSpan={4}>
-            28.25 Производство промышленного и холодильного оборудования
-          </td>
-        </tr>
-        <tr>
-          <th colSpan={4}>КОРРЕСПОНДЕНТСКИЙ СЧЕТ</th>
-          <td colSpan={4}>8 (38 46) 68-23-24</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ОКВЭД</th>
-          <td colSpan={4}>zao_tst@mail.ru</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ТЕЛЕФОН/ФАКС</th>
-          <td colSpan={4}>https://zao-tst.ru</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>E-MAIL</th>
-          <td colSpan={4}>zao_tst@mail.ru</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ВЕБ-САЙТ</th>
-          <td colSpan={4}>https://zao-tst.ru</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ТЕХНИЧЕСКИЕ ВОПРОСЫ</th>
-          <td colSpan={2}>8-961-737-83-14</td>
-          <td colSpan={2}>Киляков Вадим Анатольевич</td>
-        </tr>
-        <tr>
-          <th colSpan={4}>ОТДЕЛ ПРОДАЖ</th>
-          <td colSpan={2}>8-904-968-14-88</td>
-          <td colSpan={2}>Семенова Татьяна Владимировна</td>
-        </tr>
-      </table>
+      </div>
     </div>
   );
 }
