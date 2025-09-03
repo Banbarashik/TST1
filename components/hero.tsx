@@ -11,7 +11,7 @@ const slides = [
   {
     title: ["25 лет на рынке", "воздушно-отопительного оборудования"],
     text: "",
-    img: "/img/hero/slide1.jpg",
+    img: "/img/hero/slide1_1.png",
     class: "scale-110",
     titleClass: "text-6xl",
   },
