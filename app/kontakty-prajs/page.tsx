@@ -367,16 +367,17 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
 
-        <ProductParagraph>
+        <ProductParagraph className="mx-auto max-w-6xl">
           В таблицах представлена цена на калориферы всех моделей с несущими
           электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
           бесшовных цельнотянутых трубок уточняйте по запросу.
         </ProductParagraph>
 
-        <div className="w-full max-w-6xl space-y-6">
-          <h2 className="text-center text-2xl font-bold uppercase">
-            Цена/прайс-лист отопительных агрегатов
-          </h2>
+        <h2 className="text-center text-2xl font-bold uppercase">
+          Цена/прайс-лист отопительных агрегатов
+        </h2>
+
+        <div className="mx-auto max-w-6xl space-y-10">
           <div className="space-y-6">
             <Heading lvl={2} text="Агрегаты АО2 водяные и паровые" />
             <table className="w-full max-w-3xl">
@@ -418,109 +419,109 @@ export default function ContactsAndPricesPage() {
               </div>
             </div>
           </div>
-
-          <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
-          <table className="w-full">
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>Цена с учетом НДС</th>
-                <th>Наименование агрегата</th>
-                <th>Цена с учетом НДС</th>
-                <th>Наименование агрегата</th>
-                <th>Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {avoTvvVariants.map((p) => (
-                  <React.Fragment key={p.id}>
-                    <td>{p.shortName} (ТВВ4 КП4)</td>
-                    <td>{p.price}</td>
-                  </React.Fragment>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-          <div className="flex justify-start gap-16">
-            <TableAndCatalogLinks
-              tableURL="/catalog/kfb-a-m"
-              tableLinkText="Агрегаты АВО ХЛ водяные"
-              catalogURL="/catalog/kfb-a-p"
-              catalogLinkText="Агрегаты АВО ХЛ паровые"
-              catalogOpenNewTab={false}
-              buttonClassName="bg-gray-200"
-            />
-            <div className="flex-1/2">
+          <div className="space-y-6">
+            <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <th>Наименование агрегата</th>
+                  <th>Цена с учетом НДС</th>
+                  <th>Наименование агрегата</th>
+                  <th>Цена с учетом НДС</th>
+                  <th>Наименование агрегата</th>
+                  <th>Цена с учетом НДС</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {avoTvvVariants.map((p) => (
+                    <React.Fragment key={p.id}>
+                      <td>{p.shortName} (ТВВ4 КП4)</td>
+                      <td>{p.price}</td>
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+            <div className="flex justify-start gap-16">
               <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
-                tableLinkText="Скачать каталог агрегатов АВО ХЛ"
-                tableLinkOpenNewTab={true}
+                tableURL="/catalog/kfb-a-m"
+                tableLinkText="Агрегаты АВО ХЛ водяные"
+                catalogURL="/catalog/kfb-a-p"
+                catalogLinkText="Агрегаты АВО ХЛ паровые"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
+              />
+              <div className="flex-1/2">
+                <TableAndCatalogLinks
+                  tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+                  tableLinkText="Скачать каталог агрегатов АВО ХЛ"
+                  tableLinkOpenNewTab={true}
+                  buttonClassName="bg-gray-200"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <Heading lvl={2} text="Агрегаты СТД-300 водяные и паровые" />
+            <table className="w-full max-w-3xl">
+              <thead>
+                <tr>
+                  <th>Наименование агрегата</th>
+                  <th>Цена с учетом НДС</th>
+                  <th>Наименование агрегата</th>
+                  <th>Цена с учетом НДС</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {std300.map((p) => (
+                    <React.Fragment key={p.id}>
+                      <td>
+                        СТД 300 (КСК{p.rows} КПСК{p.rows})
+                      </td>
+                      <td>{p.price}</td>
+                    </React.Fragment>
+                  ))}
+                </tr>
+                <tr>
+                  {std300hl.map((p) => (
+                    <React.Fragment key={p.id}>
+                      <td>
+                        СТД 300 (КСК{p.rows} КПСК{p.rows})
+                      </td>
+                      <td>{p.price}</td>
+                    </React.Fragment>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+            <div className="flex gap-16">
+              <TableAndCatalogLinks
+                tableURL="/catalog/tvv"
+                tableLinkText="Агрегаты СТД-300 в"
+                catalogURL="/catalog/kp"
+                catalogLinkText="Агрегаты СТД-300 п"
+                catalogOpenNewTab={false}
+                buttonClassName="bg-gray-200"
+              />
+              <TableAndCatalogLinks
+                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                tableLinkText="Скачать каталог СТД-300"
+                tableLinkOpenNewTab
+                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+                catalogLinkText="Скачать каталог СТД-300 ХЛ"
                 buttonClassName="bg-gray-200"
               />
             </div>
           </div>
         </div>
 
-        <div className="w-full max-w-6xl space-y-6">
-          <Heading lvl={2} text="Агрегаты СТД-300 водяные и паровые" />
-          <table className="w-full max-w-3xl">
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>Цена с учетом НДС</th>
-                <th>Наименование агрегата</th>
-                <th>Цена с учетом НДС</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {std300.map((p) => (
-                  <React.Fragment key={p.id}>
-                    <td>
-                      СТД 300 (КСК{p.rows} КПСК{p.rows})
-                    </td>
-                    <td>{p.price}</td>
-                  </React.Fragment>
-                ))}
-              </tr>
-              <tr>
-                {std300hl.map((p) => (
-                  <React.Fragment key={p.id}>
-                    <td>
-                      СТД 300 (КСК{p.rows} КПСК{p.rows})
-                    </td>
-                    <td>{p.price}</td>
-                  </React.Fragment>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-          <div className="flex gap-16">
-            <TableAndCatalogLinks
-              tableURL="/catalog/tvv"
-              tableLinkText="Агрегаты СТД-300 в"
-              catalogURL="/catalog/kp"
-              catalogLinkText="Агрегаты СТД-300 п"
-              catalogOpenNewTab={false}
-              buttonClassName="bg-gray-200"
-            />
-            <TableAndCatalogLinks
-              tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
-              tableLinkText="Скачать каталог СТД-300"
-              tableLinkOpenNewTab
-              catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
-              catalogLinkText="Скачать каталог СТД-300 ХЛ"
-              buttonClassName="bg-gray-200"
-            />
-          </div>
-
-          <ProductParagraph>
-            В таблицах представлена цена на калориферы всех моделей с несущими
-            электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на
-            базе бесшовных цельнотянутых трубок уточняйте по запросу.
-          </ProductParagraph>
-        </div>
+        <ProductParagraph className="mx-auto max-w-6xl">
+          В таблицах представлена цена на калориферы всех моделей с несущими
+          электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
+          бесшовных цельнотянутых трубок уточняйте по запросу.
+        </ProductParagraph>
 
         <h2 className="text-center text-2xl font-bold uppercase">
           Цена/Прайс-лист электронагревательного оборудования
