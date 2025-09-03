@@ -527,9 +527,9 @@ export default function ContactsAndPricesPage() {
           Цена/Прайс-лист электронагревательного оборудования
         </h2>
 
-        <div className="w-full max-w-6xl space-y-8">
-          <div>
-            <div className="flex gap-16 space-y-6">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <div className="space-y-6">
+            <div className="flex gap-16">
               <div className="w-full">
                 <Heading lvl={2} text="Электрокалориферы СФО" />
                 <table className="w-full">
@@ -588,9 +588,8 @@ export default function ContactsAndPricesPage() {
               />
             </div>
           </div>
-
-          <div>
-            <div className="flex gap-16 space-y-6">
+          <div className="space-y-6">
+            <div className="flex gap-16">
               <div className="w-full">
                 <Heading lvl={2} text="Шкафы управления калорифером ШУК" />
                 <table className="w-full">
