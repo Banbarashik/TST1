@@ -76,7 +76,7 @@ export default function ContactsAndPricesPage() {
 
   return (
     <div className="max-w-8xl mx-auto w-full px-12 py-14">
-      <div className="mb-8 space-y-5">
+      <div className="space-y-5">
         <Heading
           lvl={1}
           text="Цена/прайс-лист воздушно-отопительного оборудования"
@@ -105,8 +105,8 @@ export default function ContactsAndPricesPage() {
         </ProductParagraph>
       </div>
 
-      <div className="mx-auto max-w-6xl space-y-8">
-        <div className="space-y-10">
+      <div>
+        <div className="mx-auto max-w-6xl space-y-10">
           <div className="space-y-6">
             <Heading
               lvl={2}
@@ -276,7 +276,7 @@ export default function ContactsAndPricesPage() {
           эксплуатация происходит в условиях низких температурных режимов.
         </ProductParagraph>
 
-        <div className="space-y-10">
+        <div className="mx-auto max-w-6xl space-y-10">
           <div className="space-y-6">
             <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
             <table className="w-full max-w-3xl">
@@ -365,13 +365,13 @@ export default function ContactsAndPricesPage() {
               </div>
             </div>
           </div>
-
-          <ProductParagraph>
-            В таблицах представлена цена на калориферы всех моделей с несущими
-            электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на
-            базе бесшовных цельнотянутых трубок уточняйте по запросу.
-          </ProductParagraph>
         </div>
+
+        <ProductParagraph>
+          В таблицах представлена цена на калориферы всех моделей с несущими
+          электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
+          бесшовных цельнотянутых трубок уточняйте по запросу.
+        </ProductParagraph>
 
         <div className="w-full max-w-6xl space-y-6">
           <h2 className="text-center text-2xl font-bold uppercase">
