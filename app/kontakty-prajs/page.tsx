@@ -76,12 +76,12 @@ export default function ContactsAndPricesPage() {
 
   return (
     <div className="max-w-8xl mx-auto w-full px-12 py-14">
-      <div className="space-y-5">
+      <div className="mb-8 space-y-5">
         <Heading
           lvl={1}
           text="Цена/прайс-лист воздушно-отопительного оборудования"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-7">
           ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
           выпуске воздушно-отопительного оборудования и работающее на рынке
           климатической продукции с 2001 года. Основное направление деятельности
@@ -106,7 +106,7 @@ export default function ContactsAndPricesPage() {
       </div>
 
       <div className="mx-auto max-w-6xl space-y-8">
-        <div className="max-w-6xl space-y-10">
+        <div className="space-y-10">
           <div className="space-y-6">
             <Heading
               lvl={2}
@@ -266,15 +266,17 @@ export default function ContactsAndPricesPage() {
               />
             </div>
           </div>
+        </div>
 
-          <ProductParagraph>
-            Серийно изготавливаются воздухонагреватели с увеличенным диаметром
-            несущих трубок, а также воздушно-отопительные агрегаты на базе таких
-            теплообменников. Данное оборудование находит применение на рудных и
-            угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
-            эксплуатация происходит в условиях низких температурных режимов.
-          </ProductParagraph>
+        <ProductParagraph>
+          Серийно изготавливаются воздухонагреватели с увеличенным диаметром
+          несущих трубок, а также воздушно-отопительные агрегаты на базе таких
+          теплообменников. Данное оборудование находит применение на рудных и
+          угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
+          эксплуатация происходит в условиях низких температурных режимов.
+        </ProductParagraph>
 
+        <div className="space-y-10">
           <div className="space-y-6">
             <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
             <table className="w-full max-w-3xl">
