@@ -703,33 +703,35 @@ export default function ContactsAndPricesPage() {
           </tr>
           <tr>
             <th colSpan={4}>БИК</th>
+            <td colSpan={2}>044525411</td>
+            <td colSpan={2}>043207612</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>РАСЧЕТНЫЙ СЧЕТ</th>
+            <td colSpan={2}>407 028 105 1307 00 000 31</td>
+            <td colSpan={2}>407 028 100 2621 01 023 57</td>
+          </tr>
+          <tr>
+            <th colSpan={4}>БАНК</th>
             <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
             <td colSpan={2}>
               Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
             </td>
           </tr>
           <tr>
-            <th colSpan={4}>РАСЧЕТНЫЙ СЧЕТ</th>
+            <th colSpan={4}>КОРРЕСПОНДЕНТСКИЙ СЧЕТ</th>
             <td colSpan={2}>301 018 101 4525 00 004 11</td>
             <td colSpan={2}>301 018 102 0000 00 006 12</td>
           </tr>
           <tr>
-            <th colSpan={4}>БАНК</th>
+            <th colSpan={4}>ОКВЭД</th>
             <td colSpan={4}>
               28.25 Производство промышленного и холодильного оборудования
             </td>
           </tr>
           <tr>
-            <th colSpan={4}>КОРРЕСПОНДЕНТСКИЙ СЧЕТ</th>
-            <td colSpan={4}>8 (38 46) 68-23-24</td>
-          </tr>
-          <tr>
-            <th colSpan={4}>ОКВЭД</th>
-            <td colSpan={4}>zao_tst@mail.ru</td>
-          </tr>
-          <tr>
             <th colSpan={4}>ТЕЛЕФОН/ФАКС</th>
-            <td colSpan={4}>https://zao-tst.ru</td>
+            <td colSpan={4}>8 (38 46) 68-23-24</td>
           </tr>
           <tr>
             <th colSpan={4}>E-MAIL</th>
