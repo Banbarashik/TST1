@@ -364,11 +364,11 @@ export default function ContactsAndPricesPage() {
         </div>
       </div>
 
-      <ProductParagraph className="mx-auto max-w-6xl">
+      <p className="mx-auto max-w-6xl">
         В таблицах представлена цена на калориферы всех моделей с несущими
         электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
         бесшовных цельнотянутых трубок уточняйте по запросу.
-      </ProductParagraph>
+      </p>
 
       <h2 className="text-center text-2xl font-bold uppercase">
         Цена/прайс-лист отопительных агрегатов
@@ -520,11 +520,11 @@ export default function ContactsAndPricesPage() {
         </div>
       </div>
 
-      <ProductParagraph className="mx-auto max-w-6xl">
+      <p className="mx-auto max-w-6xl">
         В таблицах представлена цена на калориферы всех моделей с несущими
         электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
         бесшовных цельнотянутых трубок уточняйте по запросу.
-      </ProductParagraph>
+      </p>
 
       <h2 className="text-center text-2xl font-bold uppercase">
         Цена/Прайс-лист электронагревательного оборудования
@@ -657,7 +657,7 @@ export default function ContactsAndPricesPage() {
         </div>
       </div>
 
-      <div>
+      <div className="space-y-6">
         <ProductParagraph>
           Технический отдел предприятия принимает заказы на изготовление
           калориферов нестандартных габаритных размеров по опросному листу. С
@@ -753,13 +753,13 @@ export default function ContactsAndPricesPage() {
           </tr>
         </table>
 
-        <ProductParagraph>
+        <p>
           В 2015 году, в связи с внесением поправок в Гражданский Кодекс РФ,
           принято решение о реорганизации Закрытого акционерного общества
           «Т.С.Т.» в форме преобразования в Общество с ограниченной
           ответственностью «Т.С.Т.». ООО «Т.С.Т.» становится полным
           правопреемником по всем правам и обязанностям ЗАО «Т.С.Т.».
-        </ProductParagraph>
+        </p>
       </div>
     </div>
   );
