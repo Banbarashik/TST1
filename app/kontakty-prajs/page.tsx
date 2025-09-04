@@ -75,7 +75,7 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="max-w-8xl mx-auto w-full px-12 py-14">
+    <div className="max-w-8xl mx-auto w-full space-y-6 px-12 py-14">
       <div className="space-y-5">
         <Heading
           lvl={1}
@@ -105,544 +105,544 @@ export default function ContactsAndPricesPage() {
         </ProductParagraph>
       </div>
 
-      <div>
-        <div className="mx-auto max-w-6xl space-y-10">
-          <div className="space-y-6">
-            <Heading
-              lvl={2}
-              text="Приточные калориферы - водяные КПВС и паровые КППС"
+      <div className="mx-auto max-w-6xl space-y-10">
+        <div className="space-y-6">
+          <Heading
+            lvl={2}
+            text="Приточные калориферы - водяные КПВС и паровые КППС"
+          />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {kpps2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {p.size}х{p.size}_{p.rows}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
+                  </td>
+                  <td>{kpps3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
+                  </td>
+                  <td>{kpps4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/kpvs"
+              tableLinkText="Калориферы КПВС"
+              catalogURL="/catalog/kpps"
+              catalogLinkText="Калориферы КППС"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
             />
-            <table className="w-full">
-              <thead className="uppercase">
-                <tr>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                {kpps2.map((p, i) => (
-                  <tr key={p.id}>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВС КППС {p.size}х{p.size}_{p.rows}
-                    </td>
-                    <td>{p.price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
-                    </td>
-                    <td>{kpps3[i].price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
-                    </td>
-                    <td>{kpps4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/kpvs"
-                tableLinkText="Калориферы КПВС"
-                catalogURL="/catalog/kpps"
-                catalogLinkText="Калориферы КППС"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-                tableLinkText="Скачать каталог КПВС"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог КППС"
-                buttonClassName="bg-gray-200"
-              />
-            </div>
-          </div>
-          <div className="space-y-6">
-            <Heading
-              lvl={2}
-              text="Приточные калориферы - водяные КПВУ и паровые КППУ"
+            <TableAndCatalogLinks
+              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+              tableLinkText="Скачать каталог КПВС"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КППС"
+              buttonClassName="bg-gray-200"
             />
-            <table className="w-full">
-              <thead className="uppercase">
-                <tr>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                {kpvu2.map((p, i) => (
-                  <tr key={p.id}>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВУ КППУ {p.size}х{p.size}_{p.rows}
-                    </td>
-                    <td>{p.price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
-                    </td>
-                    <td>{kpvu3[i].price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
-                    </td>
-                    <td>{kpvu4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/kpvu"
-                tableLinkText="Калориферы КПВУ"
-                catalogURL="/catalog/kppu"
-                catalogLinkText="Калориферы КППУ"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-                tableLinkText="Скачать каталог КПВУ"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог КППУ"
-                buttonClassName="bg-gray-200"
-              />
-            </div>
           </div>
-          <div className="space-y-6">
-            <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
-            <table className="w-full">
-              <thead>
-                <tr className="uppercase">
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="py-1.5">Цена с учетом НДС</th>
+        </div>
+        <div className="space-y-6">
+          <Heading
+            lvl={2}
+            text="Приточные калориферы - водяные КПВУ и паровые КППУ"
+          />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {kpvu2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {p.size}х{p.size}_{p.rows}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
+                  </td>
+                  <td>{kpvu3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
+                  </td>
+                  <td>{kpvu4[i].price}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {ksk2.map((p, i) => (
-                  <tr key={p.id}>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КСк КПСк 2-{p.size}
-                    </td>
-                    <td>{p.price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КСк КПСк 3-{ksk3[i].size}
-                    </td>
-                    <td>{ksk3[i].price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      КСк КПСк 4-{ksk4[i].size}
-                    </td>
-                    <td>{ksk4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex gap-16">
+              ))}
+            </tbody>
+          </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/kpvu"
+              tableLinkText="Калориферы КПВУ"
+              catalogURL="/catalog/kppu"
+              catalogLinkText="Калориферы КППУ"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+              tableLinkText="Скачать каталог КПВУ"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КППУ"
+              buttonClassName="bg-gray-200"
+            />
+          </div>
+        </div>
+        <div className="space-y-6">
+          <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ksk2.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 2-{p.size}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 3-{ksk3[i].size}
+                  </td>
+                  <td>{ksk3[i].price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    КСк КПСк 4-{ksk4[i].size}
+                  </td>
+                  <td>{ksk4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/ksk"
+              tableLinkText="Калориферы КСк"
+              catalogURL="/catalog/kpsk"
+              catalogLinkText="Калориферы КПСк"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
+              tableLinkText="Скачать каталог КСк"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КПСк"
+              buttonClassName="bg-gray-200"
+            />
+          </div>
+        </div>
+      </div>
+
+      <ProductParagraph>
+        Серийно изготавливаются воздухонагреватели с увеличенным диаметром
+        несущих трубок, а также воздушно-отопительные агрегаты на базе таких
+        теплообменников. Данное оборудование находит применение на рудных и
+        угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
+        эксплуатация происходит в условиях низких температурных режимов.
+      </ProductParagraph>
+
+      <div className="mx-auto max-w-6xl space-y-10">
+        <div className="space-y-6">
+          <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
+          <table className="w-full max-w-3xl">
+            <thead className="uppercase">
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tvv3.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
+                  </td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
+                  </td>
+                  <td>{tvv4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/tvv"
+              tableLinkText="Калориферы ТВВ"
+              catalogURL="/catalog/kp"
+              catalogLinkText="Калориферы КП"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+              tableLinkText="Скачать каталог ТВВ"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог КП"
+              buttonClassName="bg-gray-200"
+            />
+          </div>
+        </div>
+        <div className="space-y-6">
+          <Heading lvl={2} text="Калориферы водяные и паровые КФБ-А" />
+          <table className="w-full max-w-3xl">
+            <thead className="uppercase">
+              <tr className="uppercase">
+                <th className="py-1.5">Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование калорифера</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {kfb3.map((p, i) => (
+                <tr key={p.id}>
+                  <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
+                  <td>{p.price}</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    {kfb4[i].shortName}
+                  </td>
+                  <td>{kfb4[i].price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex justify-start gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/kfb-a-m"
+              tableLinkText="Калориферы КФБ-А водяные"
+              catalogURL="/catalog/kfb-a-p"
+              catalogLinkText="Калориферы КФБ-А паровые"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <div className="flex-1/2">
               <TableAndCatalogLinks
-                tableURL="/catalog/ksk"
-                tableLinkText="Калориферы КСк"
-                catalogURL="/catalog/kpsk"
-                catalogLinkText="Калориферы КПСк"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
-                tableLinkText="Скачать каталог КСк"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог КПСк"
+                tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+                tableLinkText="Скачать каталог калориферов КФБ-А"
+                tableLinkOpenNewTab={true}
                 buttonClassName="bg-gray-200"
               />
             </div>
           </div>
         </div>
+      </div>
 
-        <ProductParagraph>
-          Серийно изготавливаются воздухонагреватели с увеличенным диаметром
-          несущих трубок, а также воздушно-отопительные агрегаты на базе таких
-          теплообменников. Данное оборудование находит применение на рудных и
-          угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
-          эксплуатация происходит в условиях низких температурных режимов.
-        </ProductParagraph>
+      <ProductParagraph className="mx-auto max-w-6xl">
+        В таблицах представлена цена на калориферы всех моделей с несущими
+        электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
+        бесшовных цельнотянутых трубок уточняйте по запросу.
+      </ProductParagraph>
 
-        <div className="mx-auto max-w-6xl space-y-10">
-          <div className="space-y-6">
-            <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
-            <table className="w-full max-w-3xl">
-              <thead>
-                <tr className="uppercase">
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tvv3.map((p, i) => (
-                  <tr key={p.id}>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
-                    </td>
-                    <td>{p.price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
-                    </td>
-                    <td>{tvv4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/tvv"
-                tableLinkText="Калориферы ТВВ"
-                catalogURL="/catalog/kp"
-                catalogLinkText="Калориферы КП"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
-                tableLinkText="Скачать каталог ТВВ"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог КП"
-                buttonClassName="bg-gray-200"
-              />
-            </div>
-          </div>
-          <div className="space-y-6">
-            <Heading lvl={2} text="Калориферы водяные и паровые КФБ-А" />
-            <table className="w-full max-w-3xl">
-              <thead>
-                <tr className="uppercase">
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                  <th className="py-1.5">Наименование калорифера</th>
-                  <th className="px-1 py-1.5">Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                {kfb3.map((p, i) => (
-                  <tr key={p.id}>
-                    <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
-                    <td>{p.price}</td>
-                    <td className="py-0.75 pl-1.5 text-left">
-                      {kfb4[i].shortName}
-                    </td>
-                    <td>{kfb4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex justify-start gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/kfb-a-m"
-                tableLinkText="Калориферы КФБ-А водяные"
-                catalogURL="/catalog/kfb-a-p"
-                catalogLinkText="Калориферы КФБ-А паровые"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <div className="flex-1/2">
-                <TableAndCatalogLinks
-                  tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
-                  tableLinkText="Скачать каталог калориферов КФБ-А"
-                  tableLinkOpenNewTab={true}
-                  buttonClassName="bg-gray-200"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <h2 className="text-center text-2xl font-bold uppercase">
+        Цена/прайс-лист отопительных агрегатов
+      </h2>
 
-        <ProductParagraph className="mx-auto max-w-6xl">
-          В таблицах представлена цена на калориферы всех моделей с несущими
-          электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
-          бесшовных цельнотянутых трубок уточняйте по запросу.
-        </ProductParagraph>
-
-        <h2 className="text-center text-2xl font-bold uppercase">
-          Цена/прайс-лист отопительных агрегатов
-        </h2>
-
-        <div className="mx-auto max-w-6xl space-y-10">
-          <div className="space-y-6">
-            <Heading lvl={2} text="Агрегаты АО2 водяные и паровые" />
-            <table className="w-full max-w-3xl">
-              <thead>
-                <tr>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
+      <div className="mx-auto max-w-6xl space-y-10">
+        <div className="space-y-6">
+          <Heading lvl={2} text="Агрегаты АО2 водяные и паровые" />
+          <table className="w-full max-w-3xl">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ao2v3.map((p, i) => (
+                <tr key={p.id}>
+                  <td>{p.shortName} (КСК3 КПСК3)</td>
+                  <td>{p.price}</td>
+                  <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
+                  <td>{ao2v4[i].price}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {ao2v3.map((p, i) => (
-                  <tr key={p.id}>
-                    <td>{p.shortName} (КСК3 КПСК3)</td>
-                    <td>{p.price}</td>
-                    <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
-                    <td>{ao2v4[i].price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="flex justify-start gap-16">
+              ))}
+            </tbody>
+          </table>
+          <div className="flex justify-start gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/ao2-v"
+              tableLinkText="Агрегаты АО2 водяные"
+              catalogURL="/catalog/ao2-p"
+              catalogLinkText="Агрегаты АО2 паровые"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <div className="flex-1/2">
               <TableAndCatalogLinks
-                tableURL="/catalog/ao2-v"
-                tableLinkText="Агрегаты АО2 водяные"
-                catalogURL="/catalog/ao2-p"
-                catalogLinkText="Агрегаты АО2 паровые"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <div className="flex-1/2">
-                <TableAndCatalogLinks
-                  tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
-                  tableLinkText="Скачать каталог агрегатов АО2"
-                  tableLinkOpenNewTab={true}
-                  buttonClassName="bg-gray-200"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
-            <table className="w-full">
-              <thead>
-                <tr>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  {avoTvvVariants.map((p) => (
-                    <React.Fragment key={p.id}>
-                      <td>{p.shortName} (ТВВ4 КП4)</td>
-                      <td>{p.price}</td>
-                    </React.Fragment>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
-            <div className="flex justify-start gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/avo-tvv"
-                tableLinkText="Агрегаты АВО ХЛ водяные"
-                catalogURL="/catalog/avo-kp"
-                catalogLinkText="Агрегаты АВО ХЛ паровые"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <div className="flex-1/2">
-                <TableAndCatalogLinks
-                  tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-                  tableLinkText="Скачать каталог агрегатов АВО ХЛ"
-                  tableLinkOpenNewTab
-                  buttonClassName="bg-gray-200"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <Heading lvl={2} text="Агрегаты СТД-300 водяные и паровые" />
-            <table className="w-full max-w-3xl">
-              <thead>
-                <tr>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                  <th>Наименование агрегата</th>
-                  <th>Цена с учетом НДС</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  {std300.map((p) => (
-                    <React.Fragment key={p.id}>
-                      <td>
-                        СТД 300 (КСК{p.rows} КПСК{p.rows})
-                      </td>
-                      <td>{p.price}</td>
-                    </React.Fragment>
-                  ))}
-                </tr>
-                <tr>
-                  {std300hl.map((p) => (
-                    <React.Fragment key={p.id}>
-                      <td>
-                        СТД 300 (КСК{p.rows} КПСК{p.rows})
-                      </td>
-                      <td>{p.price}</td>
-                    </React.Fragment>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
-            <div className="flex gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/std300-v"
-                tableLinkText="Агрегаты СТД-300 в"
-                catalogURL="/catalog/std300-p"
-                catalogLinkText="Агрегаты СТД-300 п"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
-                tableLinkText="Скачать каталог СТД-300"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог СТД-300 ХЛ"
+                tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
+                tableLinkText="Скачать каталог агрегатов АО2"
+                tableLinkOpenNewTab={true}
                 buttonClassName="bg-gray-200"
               />
             </div>
           </div>
         </div>
-
-        <ProductParagraph className="mx-auto max-w-6xl">
-          В таблицах представлена цена на калориферы всех моделей с несущими
-          электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
-          бесшовных цельнотянутых трубок уточняйте по запросу.
-        </ProductParagraph>
-
-        <h2 className="text-center text-2xl font-bold uppercase">
-          Цена/Прайс-лист электронагревательного оборудования
-        </h2>
-
-        <div className="mx-auto max-w-6xl space-y-10">
-          <div className="space-y-6">
-            <div className="flex gap-16">
-              <div className="w-full">
-                <Heading lvl={2} text="Электрокалориферы СФО" />
-                <table className="w-full">
-                  <thead>
-                    <tr>
-                      <th>Наименование электрокалорифера</th>
-                      <th>Цена с учетом НДС</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sfo.map((p) => (
-                      <tr key={p.id}>
-                        <td>{p.shortName}</td>
-                        <td>{p.price}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className="w-full">
-                <Heading lvl={2} text="Электрокалориферные установки СФОЦ" />
-                <table className="w-full">
-                  <thead>
-                    <tr>
-                      <th>Наименование установки</th>
-                      <th>Цена с учетом НДС</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sfotc.map((p) => (
-                      <tr key={p.id}>
-                        <td>{p.shortName}</td>
-                        <td>{p.price}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="flex gap-16">
+        <div className="space-y-6">
+          <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
+          <table className="w-full">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {avoTvvVariants.map((p) => (
+                  <React.Fragment key={p.id}>
+                    <td>{p.shortName} (ТВВ4 КП4)</td>
+                    <td>{p.price}</td>
+                  </React.Fragment>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+          <div className="flex justify-start gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/avo-tvv"
+              tableLinkText="Агрегаты АВО ХЛ водяные"
+              catalogURL="/catalog/avo-kp"
+              catalogLinkText="Агрегаты АВО ХЛ паровые"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <div className="flex-1/2">
               <TableAndCatalogLinks
-                tableURL="/catalog/sfo"
-                tableLinkText="Электрокалориферы СФО"
-                catalogURL="/catalog/sfotc"
-                catalogLinkText="Установки СФОЦ"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
-                tableLinkText="Скачать каталог СФО"
+                tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
+                tableLinkText="Скачать каталог агрегатов АВО ХЛ"
                 tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог СФОЦ"
                 buttonClassName="bg-gray-200"
               />
             </div>
           </div>
-          <div className="space-y-6">
-            <div className="flex gap-16">
-              <div className="w-full">
-                <Heading lvl={2} text="Шкафы управления калорифером ШУК" />
-                <table className="w-full">
-                  <thead>
-                    <tr>
-                      <th>Наименование шкафа управления</th>
-                      <th>Цена с учетом НДС</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {shuk.map((p) => (
-                      <tr key={p.id}>
-                        <td>{p.shortName}</td>
-                        <td>{p.price}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className="w-full">
-                <Heading lvl={2} text="Оребренные ТЭНы" />
-                <table className="w-full">
-                  <thead>
-                    <th>Наименование трубчатого электронагревателя</th>
+        </div>
+        <div className="space-y-6">
+          <Heading lvl={2} text="Агрегаты СТД-300 водяные и паровые" />
+          <table className="w-full max-w-3xl">
+            <thead className="uppercase">
+              <tr>
+                <th className="py-1.5">Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+                <th>Наименование агрегата</th>
+                <th>Цена с учетом НДС</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {std300.map((p) => (
+                  <React.Fragment key={p.id}>
+                    <td>
+                      СТД 300 (КСК{p.rows} КПСК{p.rows})
+                    </td>
+                    <td>{p.price}</td>
+                  </React.Fragment>
+                ))}
+              </tr>
+              <tr>
+                {std300hl.map((p) => (
+                  <React.Fragment key={p.id}>
+                    <td>
+                      СТД 300 (КСК{p.rows} КПСК{p.rows})
+                    </td>
+                    <td>{p.price}</td>
+                  </React.Fragment>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/std300-v"
+              tableLinkText="Агрегаты СТД-300 в"
+              catalogURL="/catalog/std300-p"
+              catalogLinkText="Агрегаты СТД-300 п"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
+              tableLinkText="Скачать каталог СТД-300"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог СТД-300 ХЛ"
+              buttonClassName="bg-gray-200"
+            />
+          </div>
+        </div>
+      </div>
+
+      <ProductParagraph className="mx-auto max-w-6xl">
+        В таблицах представлена цена на калориферы всех моделей с несущими
+        электросварными трубками 16х1.5 и 22х1.5 мм. Цены калориферов на базе
+        бесшовных цельнотянутых трубок уточняйте по запросу.
+      </ProductParagraph>
+
+      <h2 className="text-center text-2xl font-bold uppercase">
+        Цена/Прайс-лист электронагревательного оборудования
+      </h2>
+
+      <div className="mx-auto max-w-6xl space-y-10">
+        <div className="space-y-6">
+          <div className="flex gap-16">
+            <div className="w-full">
+              <Heading lvl={2} text="Электрокалориферы СФО" />
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="py-1.5">Наименование электрокалорифера</th>
                     <th>Цена с учетом НДС</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{teny.model}</td>
-                      <td>{teny.price}</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sfo.map((p) => (
+                    <tr key={p.id}>
+                      <td>{p.shortName}</td>
+                      <td>{p.price}</td>
                     </tr>
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div className="flex gap-16">
-              <TableAndCatalogLinks
-                tableURL="/catalog/shuk"
-                tableLinkText="Шкафы управления ШУК"
-                catalogURL="/catalog/teny"
-                catalogLinkText="Оребренные ТЭНы"
-                catalogOpenNewTab={false}
-                buttonClassName="bg-gray-200"
-              />
-              <TableAndCatalogLinks
-                tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
-                tableLinkText="Скачать каталог ШУК"
-                tableLinkOpenNewTab
-                catalogURL="/documents/Electroten_TENY_katalog_2025.pdf"
-                catalogLinkText="Скачать каталог ТЭНР"
-                buttonClassName="bg-gray-200"
-              />
+            <div className="w-full">
+              <Heading lvl={2} text="Электрокалориферные установки СФОЦ" />
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="py-1.5">Наименование установки</th>
+                    <th>Цена с учетом НДС</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sfotc.map((p) => (
+                    <tr key={p.id}>
+                      <td>{p.shortName}</td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
+          </div>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/sfo"
+              tableLinkText="Электрокалориферы СФО"
+              catalogURL="/catalog/sfotc"
+              catalogLinkText="Установки СФОЦ"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
+              tableLinkText="Скачать каталог СФО"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог СФОЦ"
+              buttonClassName="bg-gray-200"
+            />
+          </div>
+        </div>
+        <div className="space-y-6">
+          <div className="flex gap-16">
+            <div className="w-full">
+              <Heading lvl={2} text="Шкафы управления калорифером ШУК" />
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="py-1.5">Наименование шкафа управления</th>
+                    <th>Цена с учетом НДС</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {shuk.map((p) => (
+                    <tr key={p.id}>
+                      <td>{p.shortName}</td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="w-full">
+              <Heading lvl={2} text="Оребренные ТЭНы" />
+              <table className="w-full">
+                <thead className="uppercase">
+                  <th className="py-1.5">
+                    Наименование трубчатого электронагревателя
+                  </th>
+                  <th>Цена с учетом НДС</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{teny.model}</td>
+                    <td>{teny.price}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className="flex gap-16">
+            <TableAndCatalogLinks
+              tableURL="/catalog/shuk"
+              tableLinkText="Шкафы управления ШУК"
+              catalogURL="/catalog/teny"
+              catalogLinkText="Оребренные ТЭНы"
+              catalogOpenNewTab={false}
+              buttonClassName="bg-gray-200"
+            />
+            <TableAndCatalogLinks
+              tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
+              tableLinkText="Скачать каталог ШУК"
+              tableLinkOpenNewTab
+              catalogURL="/documents/Electroten_TENY_katalog_2025.pdf"
+              catalogLinkText="Скачать каталог ТЭНР"
+              buttonClassName="bg-gray-200"
+            />
           </div>
         </div>
       </div>
