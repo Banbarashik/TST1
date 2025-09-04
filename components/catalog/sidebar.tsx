@@ -74,7 +74,7 @@ function RecursiveAccordion({
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-[#cdcdcd] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
+                  className={`${isActive ? "bg-[#cdcdcd] text-[#75151E]" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
@@ -96,7 +96,7 @@ function RecursiveAccordion({
           >
             <Link
               href={`/catalog/${node.slug}`}
-              className={`${isActive ? "bg-[#cdcdcd] font-bold" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
+              className={`${isActive ? "bg-[#cdcdcd] text-[#75151E]" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
               style={{ paddingLeft }}
             >
               {node.menuTitle}

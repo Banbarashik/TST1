@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NavigationMenu() {
   return (
-    <div className="flex h-full items-center">
+    <div className="text-primary-darker flex h-full items-center">
       <div className="h-[82px]">
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
