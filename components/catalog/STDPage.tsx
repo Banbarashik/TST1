@@ -1,13 +1,16 @@
-import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
-import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
-import ProductCard from "./productCard";
-import ProductSubheader from "./productSubheader";
-import ProductParagraph from "./productParagraph";
-import SimilarProductLink from "./similarProductLink";
-import Image from "next/image";
-import STDSpecsTable from "./STDSpecsTable";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
 import { productData } from "@/data/products";
+
+import Image from "next/image";
+
+import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
+import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
+
+import ProductCard from "@/components/catalog/productCard";
+import ProductSubheader from "@/components/catalog/productSubheader";
+import ProductParagraph from "@/components/catalog/productParagraph";
+import SimilarProductLink from "@/components/catalog/similarProductLink";
+import STDSpecsTable from "@/components/catalog/STDSpecsTable";
+import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -82,6 +85,7 @@ export default function STDPage({ product }) {
         return (
           <div key={variant.id} className="mb-6 flex gap-4">
             <ProductCard
+              isLink={false}
               product={{
                 ...variant,
                 airPower: product.airPower,
