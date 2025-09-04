@@ -402,16 +402,16 @@ export default function ContactsAndPricesPage() {
             </table>
             <div className="flex justify-start gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/kfb-a-m"
+                tableURL="/catalog/ao2-v"
                 tableLinkText="Агрегаты АО2 водяные"
-                catalogURL="/catalog/kfb-a-p"
+                catalogURL="/catalog/ao2-p"
                 catalogLinkText="Агрегаты АО2 паровые"
                 catalogOpenNewTab={false}
                 buttonClassName="bg-gray-200"
               />
               <div className="flex-1/2">
                 <TableAndCatalogLinks
-                  tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+                  tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
                   tableLinkText="Скачать каталог агрегатов АО2"
                   tableLinkOpenNewTab={true}
                   buttonClassName="bg-gray-200"
@@ -445,18 +445,18 @@ export default function ContactsAndPricesPage() {
             </table>
             <div className="flex justify-start gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/kfb-a-m"
+                tableURL="/catalog/avo-tvv"
                 tableLinkText="Агрегаты АВО ХЛ водяные"
-                catalogURL="/catalog/kfb-a-p"
+                catalogURL="/catalog/avo-kp"
                 catalogLinkText="Агрегаты АВО ХЛ паровые"
                 catalogOpenNewTab={false}
                 buttonClassName="bg-gray-200"
               />
               <div className="flex-1/2">
                 <TableAndCatalogLinks
-                  tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
+                  tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
                   tableLinkText="Скачать каталог агрегатов АВО ХЛ"
-                  tableLinkOpenNewTab={true}
+                  tableLinkOpenNewTab
                   buttonClassName="bg-gray-200"
                 />
               </div>
@@ -498,18 +498,18 @@ export default function ContactsAndPricesPage() {
             </table>
             <div className="flex gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/tvv"
+                tableURL="/catalog/std300-v"
                 tableLinkText="Агрегаты СТД-300 в"
-                catalogURL="/catalog/kp"
+                catalogURL="/catalog/std300-p"
                 catalogLinkText="Агрегаты СТД-300 п"
                 catalogOpenNewTab={false}
                 buttonClassName="bg-gray-200"
               />
               <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
                 tableLinkText="Скачать каталог СТД-300"
                 tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+                catalogURL="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
                 catalogLinkText="Скачать каталог СТД-300 ХЛ"
                 buttonClassName="bg-gray-200"
               />
@@ -571,15 +571,15 @@ export default function ContactsAndPricesPage() {
             </div>
             <div className="flex gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/tvv"
+                tableURL="/catalog/sfo"
                 tableLinkText="Электрокалориферы СФО"
-                catalogURL="/catalog/kp"
+                catalogURL="/catalog/sfotc"
                 catalogLinkText="Установки СФОЦ"
                 catalogOpenNewTab={false}
                 buttonClassName="bg-gray-200"
               />
               <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
                 tableLinkText="Скачать каталог СФО"
                 tableLinkOpenNewTab
                 catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
@@ -627,18 +627,18 @@ export default function ContactsAndPricesPage() {
             </div>
             <div className="flex gap-16">
               <TableAndCatalogLinks
-                tableURL="/catalog/tvv"
+                tableURL="/catalog/shuk"
                 tableLinkText="Шкафы управления ШУК"
-                catalogURL="/catalog/kp"
+                catalogURL="/catalog/teny"
                 catalogLinkText="Оребренные ТЭНы"
                 catalogOpenNewTab={false}
                 buttonClassName="bg-gray-200"
               />
               <TableAndCatalogLinks
-                tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
                 tableLinkText="Скачать каталог ШУК"
                 tableLinkOpenNewTab
-                catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+                catalogURL="/documents/Electroten_TENY_katalog_2025.pdf"
                 catalogLinkText="Скачать каталог ТЭНР"
                 buttonClassName="bg-gray-200"
               />
