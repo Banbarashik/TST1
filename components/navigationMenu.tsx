@@ -9,7 +9,7 @@ export default function NavigationMenu() {
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
       </div>
-      <div className="btn btn-three w-50">
+      <Link href="/kalorifery-voda" className="btn btn-three w-50">
         <div className="flex flex-col">
           <span className="h-px bg-[#BDBDBD]"></span>
           <span className="h-px bg-[#F2F2F2]"></span>
@@ -22,7 +22,7 @@ export default function NavigationMenu() {
           <span className="h-px bg-[#F2F2F2]"></span>
           <span className="h-px bg-[#BDBDBD]"></span>
         </div>
-      </div>
+      </Link>
       {/*      <div className="h-[82px]">
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
@@ -32,7 +32,7 @@ export default function NavigationMenu() {
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
       </div>
-      <div className="btn btn-three w-51">
+      <Link href="/kalorifery-par" className="btn btn-three w-51">
         <div className="flex flex-col">
           <span className="h-px bg-[#BDBDBD]"></span>
           <span className="h-px bg-[#F2F2F2]"></span>
@@ -45,7 +45,7 @@ export default function NavigationMenu() {
           <span className="h-px bg-[#F2F2F2]"></span>
           <span className="h-px bg-[#BDBDBD]"></span>
         </div>
-      </div>
+      </Link>
       {/*  <div className="h-[82px]">
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
@@ -55,7 +55,7 @@ export default function NavigationMenu() {
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
       </div>
-      <div className="btn btn-three w-30">
+      <Link href="/kontakty-prajs" className="btn btn-three w-30">
         <div className="flex flex-col">
           <span className="h-px bg-[#BDBDBD]"></span>
           <span className="h-px bg-[#F2F2F2]"></span>
@@ -68,7 +68,7 @@ export default function NavigationMenu() {
           <span className="h-px bg-[#F2F2F2]"></span>
           <span className="h-px bg-[#BDBDBD]"></span>
         </div>
-      </div>
+      </Link>
       <div className="h-[82px]">
         <span className="inline-block h-full w-px bg-[#F2F2F2]"></span>
         <span className="inline-block h-full w-px bg-[#BDBDBD]"></span>
