@@ -389,9 +389,13 @@ export default function ContactsAndPricesPage() {
             <tbody>
               {ao2v3.map((p, i) => (
                 <tr key={p.id}>
-                  <td>{p.shortName} (КСК3 КПСК3)</td>
+                  <td className="py-0.75 pl-1.5 text-left">
+                    {p.shortName} (КСК3 КПСК3)
+                  </td>
                   <td>{p.price}</td>
-                  <td>{ao2v4[i].shortName} (КСК4 КПСК4)</td>
+                  <td className="pl-1.5 text-left">
+                    {ao2v4[i].shortName} (КСК4 КПСК4)
+                  </td>
                   <td>{ao2v4[i].price}</td>
                 </tr>
               ))}
@@ -433,7 +437,9 @@ export default function ContactsAndPricesPage() {
               <tr>
                 {avoTvvVariants.map((p) => (
                   <React.Fragment key={p.id}>
-                    <td>{p.shortName} (ТВВ4 КП4)</td>
+                    <td className="py-0.75 pl-1.5 text-left">
+                      {p.shortName} (ТВВ4 КП4)
+                    </td>
                     <td>{p.price}</td>
                   </React.Fragment>
                 ))}
@@ -474,7 +480,7 @@ export default function ContactsAndPricesPage() {
               <tr>
                 {std300.map((p) => (
                   <React.Fragment key={p.id}>
-                    <td>
+                    <td className="py-0.75 pl-1.5 text-left">
                       СТД 300 (КСК{p.rows} КПСК{p.rows})
                     </td>
                     <td>{p.price}</td>
@@ -484,7 +490,7 @@ export default function ContactsAndPricesPage() {
               <tr>
                 {std300hl.map((p) => (
                   <React.Fragment key={p.id}>
-                    <td>
+                    <td className="py-0.75 pl-1.5 text-left">
                       СТД 300 (КСК{p.rows} КПСК{p.rows})
                     </td>
                     <td>{p.price}</td>
@@ -539,7 +545,9 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {sfo.map((p) => (
                     <tr key={p.id}>
-                      <td>{p.shortName}</td>
+                      <td className="py-0.75 pl-1.5 text-left">
+                        {p.shortName}
+                      </td>
                       <td>{p.price}</td>
                     </tr>
                   ))}
@@ -558,7 +566,9 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {sfotc.map((p) => (
                     <tr key={p.id}>
-                      <td>{p.shortName}</td>
+                      <td className="py-0.75 pl-1.5 text-left">
+                        {p.shortName}
+                      </td>
                       <td>{p.price}</td>
                     </tr>
                   ))}
@@ -599,7 +609,9 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {shuk.map((p) => (
                     <tr key={p.id}>
-                      <td>{p.shortName}</td>
+                      <td className="py-0.75 pl-1.5 text-left">
+                        {p.shortName}
+                      </td>
                       <td>{p.price}</td>
                     </tr>
                   ))}
@@ -617,7 +629,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{teny.model}</td>
+                    <td className="py-0.75 pl-1.5 text-left">{teny.model}</td>
                     <td>{teny.price}</td>
                   </tr>
                 </tbody>
