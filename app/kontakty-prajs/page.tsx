@@ -491,7 +491,7 @@ export default function ContactsAndPricesPage() {
                 {std300hl.map((p) => (
                   <React.Fragment key={p.id}>
                     <td className="py-0.75 pl-1.5 text-left">
-                      СТД 300 (КСК{p.rows} КПСК{p.rows})
+                      СТД 300 (ТВВ{p.rows} КП{p.rows})
                     </td>
                     <td>{p.price}</td>
                   </React.Fragment>
@@ -666,32 +666,42 @@ export default function ContactsAndPricesPage() {
           вентиляционного, насосно-смесительного оборудования и
           пароконденсатного оборудования.
         </ProductParagraph>
-        <h2 className="text-2xl font-bold uppercase">Контакты</h2>
+        <h2 className="text-center text-2xl font-bold uppercase">
+          Контактные данные/реквизиты
+        </h2>
 
-        <table className="mx-auto w-full max-w-5xl">
-          <tr>
-            <th colSpan={4}>ПОЛНОЕ НАИМЕНОВАНИЕ</th>
+        <table className="mx-auto mb-4 w-full max-w-6xl">
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ПОЛНОЕ НАИМЕНОВАНИЕ
+            </th>
             <td colSpan={4}>
               Общество с ограниченной ответственностью «Т.С.Т.»
             </td>
           </tr>
-          <tr>
-            <th colSpan={4}>СОКРАЩЕННОЕ НАИМЕНОВАНИЕ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              СОКРАЩЕННОЕ НАИМЕНОВАНИЕ
+            </th>
             <td colSpan={4}>ООО «Т.С.Т.»</td>
           </tr>
-          <tr>
-            <th colSpan={4}>ЮРИДИЧЕСКИЙ АДРЕС</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ЮРИДИЧЕСКИЙ АДРЕС
+            </th>
             <td colSpan={4}>
               630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
             </td>
           </tr>
-          <tr>
-            <th colSpan={4}>ПОЧТОВЫЙ АДРЕС</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ПОЧТОВЫЙ АДРЕС
+            </th>
             <td colSpan={4}>
               652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
             </td>
           </tr>
-          <tr>
+          <tr className="text-sm">
             <th>ИНН</th>
             <th>КПП</th>
             <th>ОКПО</th>
@@ -701,59 +711,79 @@ export default function ContactsAndPricesPage() {
             <td>55613706</td>
             <td>1155476002483</td>
           </tr>
-          <tr>
-            <th colSpan={4}>БИК</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              БИК
+            </th>
             <td colSpan={2}>044525411</td>
             <td colSpan={2}>043207612</td>
           </tr>
-          <tr>
-            <th colSpan={4}>РАСЧЕТНЫЙ СЧЕТ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              РАСЧЕТНЫЙ СЧЕТ
+            </th>
             <td colSpan={2}>407 028 105 1307 00 000 31</td>
             <td colSpan={2}>407 028 100 2621 01 023 57</td>
           </tr>
-          <tr>
-            <th colSpan={4}>БАНК</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              БАНК
+            </th>
             <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
             <td colSpan={2}>
               Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
             </td>
           </tr>
-          <tr>
-            <th colSpan={4}>КОРРЕСПОНДЕНТСКИЙ СЧЕТ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              КОРРЕСПОНДЕНТСКИЙ СЧЕТ
+            </th>
             <td colSpan={2}>301 018 101 4525 00 004 11</td>
             <td colSpan={2}>301 018 102 0000 00 006 12</td>
           </tr>
-          <tr>
-            <th colSpan={4}>ОКВЭД</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ОКВЭД
+            </th>
             <td colSpan={4}>
               28.25 Производство промышленного и холодильного оборудования
             </td>
           </tr>
-          <tr>
-            <th colSpan={4}>ТЕЛЕФОН/ФАКС</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ТЕЛЕФОН/ФАКС
+            </th>
             <td colSpan={4}>8 (38 46) 68-23-24</td>
           </tr>
-          <tr>
-            <th colSpan={4}>E-MAIL</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              E-MAIL
+            </th>
             <td colSpan={4}>zao_tst@mail.ru</td>
           </tr>
-          <tr>
-            <th colSpan={4}>ВЕБ-САЙТ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ВЕБ-САЙТ
+            </th>
             <td colSpan={4}>https://zao-tst.ru</td>
           </tr>
-          <tr>
-            <th colSpan={4}>ТЕХНИЧЕСКИЕ ВОПРОСЫ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ТЕХНИЧЕСКИЕ ВОПРОСЫ
+            </th>
             <td colSpan={2}>8-961-737-83-14</td>
             <td colSpan={2}>Киляков Вадим Анатольевич</td>
           </tr>
-          <tr>
-            <th colSpan={4}>ОТДЕЛ ПРОДАЖ</th>
+          <tr className="text-sm">
+            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              ОТДЕЛ ПРОДАЖ
+            </th>
             <td colSpan={2}>8-904-968-14-88</td>
             <td colSpan={2}>Семенова Татьяна Владимировна</td>
           </tr>
         </table>
 
-        <p>
+        <p className="mx-auto max-w-6xl">
           В 2015 году, в связи с внесением поправок в Гражданский Кодекс РФ,
           принято решение о реорганизации Закрытого акционерного общества
           «Т.С.Т.» в форме преобразования в Общество с ограниченной
