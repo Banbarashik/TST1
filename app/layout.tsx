@@ -22,7 +22,7 @@ export default function RootLayout({
     <ProductSelectionProvider>
       <html lang="ru">
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="flex h-22 items-center bg-gray-200 px-20">
+          <nav className="flex h-21 items-center bg-[#E0E0E0] px-20">
             <Logo />
             <div className="ml-auto flex h-full items-center gap-8">
               <NavigationMenu />
