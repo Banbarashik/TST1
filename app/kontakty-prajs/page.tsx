@@ -129,11 +129,11 @@ export default function ContactsAndPricesPage() {
                     КПВС КППС {p.size}х{p.size}_{p.rows}
                   </td>
                   <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КПВС КППС {kpps3[i].size}х{kpps3[i].size}_{kpps3[i].rows}
                   </td>
                   <td>{kpps3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КПВС КППС {kpps4[i].size}х{kpps4[i].size}_{kpps4[i].rows}
                   </td>
                   <td>{kpps4[i].price}</td>
@@ -183,11 +183,11 @@ export default function ContactsAndPricesPage() {
                     КПВУ КППУ {p.size}х{p.size}_{p.rows}
                   </td>
                   <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КПВУ КППУ {kpvu3[i].size}х{kpvu3[i].size}_{kpvu3[i].rows}
                   </td>
                   <td>{kpvu3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КПВУ КППУ {kpvu4[i].size}х{kpvu4[i].size}_{kpvu4[i].rows}
                   </td>
                   <td>{kpvu4[i].price}</td>
@@ -234,11 +234,11 @@ export default function ContactsAndPricesPage() {
                     КСк КПСк 2-{p.size}
                   </td>
                   <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КСк КПСк 3-{ksk3[i].size}
                   </td>
                   <td>{ksk3[i].price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     КСк КПСк 4-{ksk4[i].size}
                   </td>
                   <td>{ksk4[i].price}</td>
@@ -294,7 +294,7 @@ export default function ContactsAndPricesPage() {
                     ТВВ КП 3{p.size < 10 ? "0" + p.size : p.size}
                   </td>
                   <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
+                  <td className="pl-1.5 text-left">
                     ТВВ КП 4{p.size < 10 ? "0" + p.size : p.size}
                   </td>
                   <td>{tvv4[i].price}</td>
@@ -337,9 +337,7 @@ export default function ContactsAndPricesPage() {
                 <tr key={p.id}>
                   <td className="py-0.75 pl-1.5 text-left">{p.shortName}</td>
                   <td>{p.price}</td>
-                  <td className="py-0.75 pl-1.5 text-left">
-                    {kfb4[i].shortName}
-                  </td>
+                  <td className="pl-1.5 text-left">{kfb4[i].shortName}</td>
                   <td>{kfb4[i].price}</td>
                 </tr>
               ))}
