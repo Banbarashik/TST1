@@ -349,7 +349,7 @@ export default function KaloriferySFO() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
         tableLinkText="Скачать каталог электрокалориферов СФО"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"

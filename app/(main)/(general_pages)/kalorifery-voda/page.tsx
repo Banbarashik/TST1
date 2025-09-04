@@ -156,7 +156,7 @@ export default function KaloriferyVodaPage() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
         tableLinkText="Скачать каталог приточных водяных калориферов"
         catalogURL=""

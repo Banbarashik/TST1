@@ -157,7 +157,7 @@ export default function KaloriferyParPage() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
         tableLinkText="Скачать каталог приточных паровых калориферов"
         catalogURL=""

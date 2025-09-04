@@ -375,9 +375,9 @@ export default function AgregatyAO2P() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
         tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
         tableLinkText="Скачать каталог паровых отопительных агрегатов АО2"
+        tableLinkOpenNewTab
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"
         catalogLinkText="Скачать прайс-лист паровых воздушных агрегатов АО2"
       />

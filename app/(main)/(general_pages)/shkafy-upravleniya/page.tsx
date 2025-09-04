@@ -466,7 +466,7 @@ export default function ShkafyUpravleniyaSHUK() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
         tableLinkText="Скачать каталог шкафов управления калорифером ШУК"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"

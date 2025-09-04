@@ -267,7 +267,7 @@ export default function AgregatySTD300V() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
         tableLinkText="Скачать каталог агрегатов СТД-300"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"

@@ -181,7 +181,7 @@ export default function KaloriferyKFBPage() {
       </section>
 
       <TableAndCatalogLinks
-        target="_blank"
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
         tableLinkText="Скачать каталог паровых калориферов КФБ"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"
