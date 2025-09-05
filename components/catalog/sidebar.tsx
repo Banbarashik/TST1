@@ -53,6 +53,47 @@ function RecursiveAccordion({
           openItems.includes(node.slug) && !isActive && hasChildren;
         const paddingLeft = level ? `${level * 0.7 + 0.4}rem` : "0.8rem";
 
+        // Check if this node is the closest parent of the active item
+        const isClosestParent =
+          hasChildren &&
+          node.children.some((child) => child.slug === currentSlug);
+
+        if (isClosestParent) {
+          return (
+            <div
+              key={node.slug}
+              className="mb-2 rounded-lg border-1"
+              style={{
+                marginLeft: paddingLeft,
+                padding: "0.2rem 0.9rem 0.2rem 0.2rem",
+              }}
+            >
+              <Accordion.Item value={node.slug} className="overflow-hidden">
+                <Accordion.Header>
+                  <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
+                    <Link
+                      href={`/catalog/${node.slug}`}
+                      className={`relative block w-full p-3 text-lg font-bold`}
+                    >
+                      {node.menuTitle}
+                    </Link>
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className="pl-2 data-[state=closed]:hidden">
+                  {/* Render children recursively so deeper levels work */}
+                  <RecursiveAccordion
+                    nodes={node.children!}
+                    currentSlug={currentSlug}
+                    openItems={openItems}
+                    level={level + 1}
+                  />
+                </Accordion.Content>
+              </Accordion.Item>
+            </div>
+          );
+        }
+
+        // Default rendering for other nodes
         return hasChildren ? (
           <Accordion.Item
             value={node.slug}
@@ -71,12 +112,8 @@ function RecursiveAccordion({
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
-                  {isParentActive && (
-                    <div className="bg-primary absolute top-0 left-0 h-1/2 w-[2px] translate-y-1/2" />
-                  )}
                 </Link>
               </Accordion.Trigger>
-              {/* Add border and margin below parent trigger if it's active */}
             </Accordion.Header>
             <Accordion.Content className="pl-2 data-[state=closed]:hidden">
               <RecursiveAccordion
@@ -133,7 +170,7 @@ export default function Sidebar() {
         type="multiple"
         value={open}
         onValueChange={setOpen}
-        className="fixed w-64"
+        className="fixed w-74"
       >
         <RecursiveAccordion
           nodes={categoryTree}
