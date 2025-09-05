@@ -33,70 +33,69 @@ function findOpenAccordions(
   return [];
 }
 
-// Define background colors for each level (add more if needed)
-const levelBgColors = [
-  "bg-[#dcdcdc]", // main categories
-  "bg-[#ecede8]", // subcategories
-  "bg-[#fffff0]", // subsubcategories
-];
-
 function RecursiveAccordion({
   nodes,
   currentSlug,
+  openItems,
   level = 0,
 }: {
   nodes;
   currentSlug: string;
+  openItems: string[];
   level?: number;
 }) {
-  // Pick color based on level, fallback to lightest if deeper
-  const bgColor =
-    levelBgColors[level] || levelBgColors[levelBgColors.length - 1];
-
   return (
     <>
-      {nodes.map((node, idx) => {
+      {nodes.map((node) => {
         const isActive = node.slug === currentSlug;
         const hasChildren = !!node.children?.length;
-        const paddingLeft =
-          level === 0 ? "padding-left: 1rem" : `${level * 0.7 + 0.5}rem`;
-        const isLast = idx === nodes.length - 1;
+        const isParentActive =
+          openItems.includes(node.slug) && !isActive && hasChildren;
+        const paddingLeft = `${level * 1}rem`;
 
         return hasChildren ? (
           <Accordion.Item
             value={node.slug}
             key={node.slug}
-            className="mb-1 overflow-hidden"
+            className="overflow-hidden"
           >
             <Accordion.Header>
               <Accordion.Trigger
-                className={`group relative w-full cursor-pointer rounded-[3px] text-left ${bgColor} border border-[#c3c3c3]`}
+                className="group relative w-full cursor-pointer text-left"
+                style={{ paddingLeft }}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`${isActive ? "bg-[#cdcdcd] text-[#75151E]" : "hover:text-primary"} block w-full rounded-[3px] p-3 text-lg`}
-                  style={{ paddingLeft }}
+                  className={`block w-full p-3 text-lg ${
+                    isActive
+                      ? "bg-accent rounded-sm font-bold"
+                      : "hover:text-primary"
+                  }`}
                 >
                   {node.menuTitle}
                 </Link>
               </Accordion.Trigger>
+              {/* Add border and margin below parent trigger if it's active */}
+              {isParentActive && (
+                <div className="mb-2 border-b-2 border-red-300" />
+              )}
             </Accordion.Header>
-            <Accordion.Content className="mt-1 data-[state=closed]:hidden">
+            <Accordion.Content className="pl-2 data-[state=closed]:hidden">
               <RecursiveAccordion
                 nodes={node.children!}
                 currentSlug={currentSlug}
+                openItems={openItems}
                 level={level + 1}
               />
             </Accordion.Content>
           </Accordion.Item>
         ) : (
-          <div
-            key={node.slug}
-            className={`${bgColor} ${isLast ? "mb-0" : "mb-1"} rounded-[3px] border border-[#c3c3c3]`}
-          >
+          <div key={node.slug}>
             <Link
               href={`/catalog/${node.slug}`}
-              className={`${isActive ? "bg-[#cdcdcd] text-[#75151E]" : "hover:text-primary"} block w-full rounded-[3px] p-3`}
+              className={`block w-full rounded-sm p-3 ${
+                isActive ? "bg-accent font-bold" : "hover:text-primary"
+              }`}
               style={{ paddingLeft }}
             >
               {node.menuTitle}
@@ -138,7 +137,11 @@ export default function Sidebar() {
         onValueChange={setOpen}
         className="fixed w-64"
       >
-        <RecursiveAccordion nodes={categoryTree} currentSlug={currentSlug} />
+        <RecursiveAccordion
+          nodes={categoryTree}
+          currentSlug={currentSlug}
+          openItems={openItems}
+        />
       </Accordion.Root>
     </aside>
   );
