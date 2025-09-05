@@ -76,7 +76,7 @@ function RecursiveAccordion({
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
                       href={`/catalog/${node.slug}`}
-                      className="bg-accent relative block w-full rounded-sm p-3 text-lg font-bold"
+                      className="relative block w-full rounded-sm bg-[#ffd77a] p-3 text-lg font-bold"
                     >
                       {node.menuTitle}
                     </Link>
@@ -137,7 +137,7 @@ function RecursiveAccordion({
                           href={`/catalog/${child.slug}`}
                           className={`block w-full rounded-sm p-3 text-lg ${
                             childIsActive
-                              ? "bg-accent font-bold"
+                              ? "bg-[#ffd77a] font-bold"
                               : "hover:text-primary"
                           }`}
                           style={{ paddingLeft: "1.2rem" }}
@@ -166,7 +166,7 @@ function RecursiveAccordion({
                   href={`/catalog/${node.slug}`}
                   className={`relative block w-full p-3 text-lg ${
                     isActive
-                      ? "bg-accent rounded-sm font-bold"
+                      ? "rounded-sm bg-[#ffd77a] font-bold"
                       : "hover:text-primary"
                   }`}
                   style={{ paddingLeft }}
@@ -192,7 +192,7 @@ function RecursiveAccordion({
             <Link
               href={`/catalog/${node.slug}`}
               className={`block w-full rounded-sm p-3 ${
-                isActive ? "bg-accent font-bold" : "hover:text-primary"
+                isActive ? "bg-[#ffd77a] font-bold" : "hover:text-primary"
               }`}
               style={{ paddingLeft }}
             >
