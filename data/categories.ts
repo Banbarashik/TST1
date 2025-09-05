@@ -219,7 +219,7 @@ export const categoryTree: Category[] = [
     children: [
       {
         title: "Электрокалориферы СФО",
-        menuTitle: "Электрокалориферы СФО",
+        menuTitle: "Калориферы СФО",
         slug: "sfo",
       },
       {
