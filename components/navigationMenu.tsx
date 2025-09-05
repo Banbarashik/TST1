@@ -16,7 +16,7 @@ export default function NavigationMenu() {
       </Link>
 
       <Link
-        href="/kalorifery-voda"
+        href="/kalorifery-par"
         className="btn-3 flex h-[93%] items-center px-5"
       >
         <div className="flex flex-col items-center">
@@ -26,7 +26,7 @@ export default function NavigationMenu() {
       </Link>
 
       <Link
-        href="/kalorifery-voda"
+        href="/kontakty-prajs"
         className="btn-3 flex h-[93%] items-center px-5"
       >
         <div className="flex flex-col items-center">
