@@ -45,11 +45,11 @@ function RecursiveAccordion({
   level?: number;
 }) {
   // Find if the active item is a leaf in this subtree
-  const activeLeafSlug = nodes.find(
+  /* const activeLeafSlug = nodes.find(
     (node) =>
       node.slug === currentSlug &&
       (!node.children || node.children.length === 0),
-  )?.slug;
+  )?.slug; */
 
   return (
     <>
