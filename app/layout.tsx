@@ -23,7 +23,7 @@ export default function RootLayout({
       <html lang="ru">
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="flex h-22 items-center bg-[#E0E0E0] px-20">
-            <Logo />
+            <Logo place="header" />
             <div className="ml-auto flex h-full items-center gap-8">
               <NavigationMenu />
               <ContactFormTrigger />

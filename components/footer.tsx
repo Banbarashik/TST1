@@ -2,10 +2,10 @@ import Logo from "@/components/ui/logo";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center h-42 bg-secondary text-secondary-foreground">
-      <div className="gap-16 flex justify-center w-full">
+    <footer className="bg-secondary text-secondary-foreground flex h-42 items-center">
+      <div className="flex w-full justify-center gap-16">
         <ul className="text-lg font-bold">
-          <li className="mb-2 text-accent">+7 (3846) 68-23-24</li>
+          <li className="text-accent mb-2">+7 (3846) 68-23-24</li>
           <li>
             8-961-737-83-14{" "}
             <span className="font-medium"> - технические вопросы</span>
@@ -18,8 +18,10 @@ export default function Footer() {
           <li>Юр. адрес: г. Новосибирск, ул. Широкая, дом 1 А, офис 207/1</li>
           <li>Почтовый адрес: 652710, г. Киселевск, ул. Юргинская, 1</li>
         </ul>
-        <p className="text-xl font-medium text-accent">zao_tst@mail.ru</p>
-        <Logo />
+        <div className="flex flex-col items-end gap-3">
+          <p className="text-accent text-xl font-medium">zao_tst@mail.ru</p>
+          <Logo place="footer" />
+        </div>
       </div>
     </footer>
   );
