@@ -44,28 +44,29 @@ function RecursiveAccordion({
   openItems: string[];
   level?: number;
 }) {
+  // Find if the active item is a leaf in this subtree
+  const activeLeafSlug = nodes.find(
+    (node) =>
+      node.slug === currentSlug &&
+      (!node.children || node.children.length === 0),
+  )?.slug;
+
   return (
     <>
       {nodes.map((node) => {
         const isActive = node.slug === currentSlug;
         const hasChildren = !!node.children?.length;
-        const isParentActive =
-          openItems.includes(node.slug) && !isActive && hasChildren;
         const paddingLeft = level ? `${level * 0.7 + 0.4}rem` : "0.8rem";
 
-        // Check if this node is the closest parent of the active item
-        const isClosestParent =
-          hasChildren &&
-          node.children.some((child) => child.slug === currentSlug);
-
-        if (isClosestParent) {
+        // Only wrap the active item and its children if it has children
+        if (isActive && hasChildren) {
           return (
             <div
               key={node.slug}
-              className="mb-2 rounded-lg border-1"
+              className="mb-2 rounded-lg border-2"
               style={{
                 marginLeft: paddingLeft,
-                padding: "0.2rem 0.9rem 0.2rem 0.2rem",
+                padding: "0.2rem 0.9rem 0.9rem 0.9rem",
               }}
             >
               <Accordion.Item value={node.slug} className="overflow-hidden">
@@ -73,20 +74,74 @@ function RecursiveAccordion({
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
                       href={`/catalog/${node.slug}`}
-                      className={`relative block w-full p-3 text-lg font-bold`}
+                      className="bg-accent relative block w-full rounded-sm p-3 text-lg font-bold"
                     >
                       {node.menuTitle}
                     </Link>
                   </Accordion.Trigger>
                 </Accordion.Header>
                 <Accordion.Content className="pl-2 data-[state=closed]:hidden">
-                  {/* Render children recursively so deeper levels work */}
                   <RecursiveAccordion
                     nodes={node.children!}
                     currentSlug={currentSlug}
                     openItems={openItems}
                     level={level + 1}
                   />
+                </Accordion.Content>
+              </Accordion.Item>
+            </div>
+          );
+        }
+
+        // If the active item is a leaf, wrap its parent and its children (not recursively)
+        const isParentOfActiveLeaf =
+          hasChildren &&
+          node.children.some(
+            (child) =>
+              child.slug === currentSlug &&
+              (!child.children || child.children.length === 0),
+          );
+
+        if (isParentOfActiveLeaf) {
+          return (
+            <div
+              key={node.slug}
+              className="mb-2 rounded-lg border-2"
+              style={{
+                marginLeft: paddingLeft,
+                padding: "0.2rem 0.9rem 0.9rem 0.9rem",
+              }}
+            >
+              <Accordion.Item value={node.slug} className="overflow-hidden">
+                <Accordion.Header>
+                  <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
+                    <Link
+                      href={`/catalog/${node.slug}`}
+                      className="relative block w-full p-3 text-lg font-bold"
+                    >
+                      {node.menuTitle}
+                    </Link>
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className="pl-2 data-[state=closed]:hidden">
+                  {node.children.map((child) => {
+                    const childIsActive = child.slug === currentSlug;
+                    return (
+                      <div key={child.slug}>
+                        <Link
+                          href={`/catalog/${child.slug}`}
+                          className={`block w-full rounded-sm p-3 text-lg ${
+                            childIsActive
+                              ? "bg-accent font-bold"
+                              : "hover:text-primary"
+                          }`}
+                          style={{ paddingLeft: "1.2rem" }}
+                        >
+                          {child.menuTitle}
+                        </Link>
+                      </div>
+                    );
+                  })}
                 </Accordion.Content>
               </Accordion.Item>
             </div>
@@ -165,12 +220,12 @@ export default function Sidebar() {
   }, [openItems]);
 
   return (
-    <aside className="w-68 shrink-0">
+    <aside className="w-74 shrink-0">
       <Accordion.Root
         type="multiple"
         value={open}
         onValueChange={setOpen}
-        className="fixed w-74"
+        className="fixed w-78"
       >
         <RecursiveAccordion
           nodes={categoryTree}
