@@ -51,7 +51,7 @@ function RecursiveAccordion({
         const hasChildren = !!node.children?.length;
         const isParentActive =
           openItems.includes(node.slug) && !isActive && hasChildren;
-        const paddingLeft = `${level * 1}rem`;
+        const paddingLeft = level ? `${level * 0.7 + 0.4}rem` : "0.8rem";
 
         return hasChildren ? (
           <Accordion.Item
@@ -59,11 +59,8 @@ function RecursiveAccordion({
             key={node.slug}
             className="overflow-hidden"
           >
-            <Accordion.Header className="relative">
-              <Accordion.Trigger
-                className="group relative w-full cursor-pointer text-left"
-                style={{ paddingLeft }}
-              >
+            <Accordion.Header>
+              <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                 <Link
                   href={`/catalog/${node.slug}`}
                   className={`relative block w-full p-3 text-lg ${
@@ -71,6 +68,7 @@ function RecursiveAccordion({
                       ? "bg-accent rounded-sm font-bold"
                       : "hover:text-primary"
                   }`}
+                  style={{ paddingLeft }}
                 >
                   {node.menuTitle}
                   {isParentActive && (
