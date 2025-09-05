@@ -59,26 +59,26 @@ function RecursiveAccordion({
             key={node.slug}
             className="overflow-hidden"
           >
-            <Accordion.Header>
+            <Accordion.Header className="relative">
               <Accordion.Trigger
                 className="group relative w-full cursor-pointer text-left"
                 style={{ paddingLeft }}
               >
                 <Link
                   href={`/catalog/${node.slug}`}
-                  className={`block w-full p-3 text-lg ${
+                  className={`relative block w-full p-3 text-lg ${
                     isActive
                       ? "bg-accent rounded-sm font-bold"
                       : "hover:text-primary"
                   }`}
                 >
                   {node.menuTitle}
+                  {isParentActive && (
+                    <div className="bg-primary absolute top-0 left-0 h-1/2 w-[2px] translate-y-1/2" />
+                  )}
                 </Link>
               </Accordion.Trigger>
               {/* Add border and margin below parent trigger if it's active */}
-              {isParentActive && (
-                <div className="mb-2 border-b-2 border-red-300" />
-              )}
             </Accordion.Header>
             <Accordion.Content className="pl-2 data-[state=closed]:hidden">
               <RecursiveAccordion
