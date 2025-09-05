@@ -68,7 +68,7 @@ function RecursiveAccordion({
               className="mb-2 rounded-lg border-2"
               style={{
                 marginLeft: paddingLeft,
-                padding: "0.2rem 0.9rem 0.9rem 0.9rem",
+                padding: "0.9rem 0.9rem 0.9rem 0.9rem",
               }}
             >
               <Accordion.Item value={node.slug} className="overflow-hidden">
@@ -111,7 +111,7 @@ function RecursiveAccordion({
               className="mb-2 rounded-lg border-2"
               style={{
                 marginLeft: paddingLeft,
-                padding: "0.2rem 0.9rem 0.9rem 0.9rem",
+                padding: "0.9rem 0.9rem 0.9rem 0.9rem",
               }}
             >
               <Accordion.Item value={node.slug} className="overflow-hidden">
@@ -228,12 +228,12 @@ export default function Sidebar() {
   }, [openItems]);
 
   return (
-    <aside className="w-74 shrink-0">
+    <aside className="w-78 shrink-0">
       <Accordion.Root
         type="multiple"
         value={open}
         onValueChange={setOpen}
-        className="fixed w-78"
+        className="fixed w-80"
       >
         <RecursiveAccordion
           nodes={categoryTree}
