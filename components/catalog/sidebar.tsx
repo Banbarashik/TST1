@@ -135,12 +135,12 @@ function RecursiveAccordion({
                       <div key={child.slug}>
                         <Link
                           href={`/catalog/${child.slug}`}
-                          className={`block w-full rounded-sm p-3 text-lg ${
+                          className={`block w-full rounded-sm p-3 ${
                             childIsActive
                               ? "bg-[#ffd77a] font-bold"
                               : "hover:text-primary"
                           }`}
-                          style={{ paddingLeft: "1.2rem" }}
+                          style={{ paddingLeft: "1.8rem" }}
                         >
                           {child.menuTitle}
                         </Link>
