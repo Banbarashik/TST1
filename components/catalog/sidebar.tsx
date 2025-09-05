@@ -56,6 +56,8 @@ function RecursiveAccordion({
       {nodes.map((node) => {
         const isActive = node.slug === currentSlug;
         const hasChildren = !!node.children?.length;
+        const isParentActive =
+          openItems.includes(node.slug) && !isActive && hasChildren;
         const paddingLeft = level ? `${level * 0.7 + 0.4}rem` : "0.8rem";
 
         // Only wrap the active item and its children if it has children
@@ -120,6 +122,9 @@ function RecursiveAccordion({
                       className="relative block w-full p-3 text-lg font-bold"
                     >
                       {node.menuTitle}
+                      {isParentActive && (
+                        <div className="bg-primary absolute top-0 left-0 h-1/2 w-[2px] translate-y-1/2" />
+                      )}
                     </Link>
                   </Accordion.Trigger>
                 </Accordion.Header>
@@ -167,6 +172,9 @@ function RecursiveAccordion({
                   style={{ paddingLeft }}
                 >
                   {node.menuTitle}
+                  {isParentActive && (
+                    <div className="bg-primary absolute top-0 left-0 h-1/2 w-[2px] translate-y-1/2" />
+                  )}
                 </Link>
               </Accordion.Trigger>
             </Accordion.Header>
