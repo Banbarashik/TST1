@@ -229,18 +229,30 @@ export default function Sidebar() {
 
   return (
     <aside className="w-78 shrink-0">
-      <Accordion.Root
-        type="multiple"
-        value={open}
-        onValueChange={setOpen}
-        className="fixed w-80"
-      >
-        <RecursiveAccordion
-          nodes={categoryTree}
-          currentSlug={currentSlug}
-          openItems={openItems}
-        />
-      </Accordion.Root>
+      {currentSlug === "" || currentSlug === "all" ? (
+        <div className="fixed w-80 rounded-xl border-2 p-2">
+          <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
+            <RecursiveAccordion
+              nodes={categoryTree}
+              currentSlug={currentSlug}
+              openItems={openItems}
+            />
+          </Accordion.Root>
+        </div>
+      ) : (
+        <Accordion.Root
+          type="multiple"
+          value={open}
+          onValueChange={setOpen}
+          className="fixed w-80"
+        >
+          <RecursiveAccordion
+            nodes={categoryTree}
+            currentSlug={currentSlug}
+            openItems={openItems}
+          />
+        </Accordion.Root>
+      )}
     </aside>
   );
 }
