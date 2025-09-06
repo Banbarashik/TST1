@@ -78,8 +78,8 @@ export default function ProductCard({
         )}
       </div>
       {hasVariants ? (
-        <div className="mt-2 flex items-center justify-between">
-          <Button asChild className="ml-auto bg-[#6c51a2] hover:bg-[#8b68d2]">
+        <div className="mt-auto">
+          <Button asChild className="bg-[#6c51a2] hover:bg-[#8b68d2]">
             <Link href={`/${product.id}`}>Подобрать</Link>
           </Button>
         </div>
