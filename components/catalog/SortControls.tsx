@@ -1,6 +1,9 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+
+import { MoveUp, ArrowUp, ArrowDown } from "lucide-react";
+
 import {
   Select,
   SelectContent,
@@ -8,7 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
 
 export default function SortControls() {
   const router = useRouter();
@@ -35,8 +37,16 @@ export default function SortControls() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="default">По умолчанию</SelectItem>
-          <SelectItem value="airPower_asc">Производительность ↑</SelectItem>
-          <SelectItem value="airPower_desc">Производительность ↓</SelectItem>
+          <SelectItem value="airPower_asc">
+            <div className="flex items-center gap-1.5">
+              Производительность <ArrowUp color="black" size={24} />
+            </div>
+          </SelectItem>
+          <SelectItem value="airPower_desc">
+            <div className="flex items-center gap-1.5">
+              Производительность <ArrowDown color="black" size={24} />
+            </div>
+          </SelectItem>
         </SelectContent>
       </Select>
     </div>
