@@ -5164,7 +5164,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   // КППС
   {
     id: "kpps-1572x1572",
-    name: "Калорифер КППС-1572×1572 паровой",
+    name: "Калорифер КППС-1572×1572",
     shortName: "КППС 1572x1572",
     series: "КППС",
     size: 1572,
@@ -5224,7 +5224,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1530x1530",
-    name: "Калорифер КППС-1530×1530 паровой",
+    name: "Калорифер КППС-1530×1530",
     shortName: "КППС 1530x1530",
     variants: [
       {
@@ -5276,7 +5276,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1489x1489",
-    name: "Калорифер КППС-1489×1489 паровой",
+    name: "Калорифер КППС-1489×1489",
     shortName: "КППС 1489x1489",
     variants: [
       {
@@ -5340,7 +5340,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1447x1447",
-    name: "Калорифер КППС-1447×1447 паровой",
+    name: "Калорифер КППС-1447×1447",
     shortName: "КППС 1447x1447",
     variants: [
       {
@@ -5392,7 +5392,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1405x1405",
-    name: "Калорифер КППС-1405×1405 паровой",
+    name: "Калорифер КППС-1405×1405",
     shortName: "КППС 1405x1405",
     variants: [
       {
@@ -5456,7 +5456,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1364x1364",
-    name: "Калорифер КППС-1364×1364 паровой",
+    name: "Калорифер КППС-1364×1364",
     shortName: "КППС 1364x1364",
     variants: [
       {
@@ -5520,7 +5520,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1322x1322",
-    name: "Калорифер КППС-1322×1322 паровой",
+    name: "Калорифер КППС-1322×1322",
     shortName: "КППС 1322x1322",
     variants: [
       {
@@ -5572,7 +5572,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1280x1280",
-    name: "Калорифер КППС-1280×1280 паровой",
+    name: "Калорифер КППС-1280×1280",
     shortName: "КППС 1280x1280",
     variants: [
       {
@@ -5624,7 +5624,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1239x1239",
-    name: "Калорифер КППС-1239×1239 паровой",
+    name: "Калорифер КППС-1239×1239",
     shortName: "КППС 1239x1239",
     variants: [
       {
@@ -5688,7 +5688,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1197x1197",
-    name: "Калорифер КППС-1197×1197 паровой",
+    name: "Калорифер КППС-1197×1197",
     shortName: "КППС 1197x1197",
     variants: [
       {
@@ -5752,7 +5752,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1155x1155",
-    name: "Калорифер КППС-1155×1155 паровой",
+    name: "Калорифер КППС-1155×1155",
     shortName: "КППС 1155x1155",
     variants: [
       {
@@ -5804,7 +5804,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1114x1114",
-    name: "Калорифер КППС-1114×1114 паровой",
+    name: "Калорифер КППС-1114×1114",
     shortName: "КППС 1114x1114",
     variants: [
       {
@@ -5856,7 +5856,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1072x1072",
-    name: "Калорифер КППС-1072×1072 паровой",
+    name: "Калорифер КППС-1072×1072",
     shortName: "КППС 1072x1072",
     variants: [
       {
@@ -5908,7 +5908,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-1030x1030",
-    name: "Калорифер КППС-1030×1030 паровой",
+    name: "Калорифер КППС-1030×1030",
     shortName: "КППС 1030x1030",
     variants: [
       {
@@ -5960,7 +5960,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-989x989",
-    name: "Калорифер КППС-989×989 паровой",
+    name: "Калорифер КППС-989×989",
     shortName: "КППС 989x989",
     variants: [
       {
@@ -6012,7 +6012,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-947x947",
-    name: "Калорифер КППС-947×947 паровой",
+    name: "Калорифер КППС-947×947",
     shortName: "КППС 947x947",
     variants: [
       {
@@ -6064,7 +6064,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-905x905",
-    name: "Калорифер КППС-905×905 паровой",
+    name: "Калорифер КППС-905×905",
     shortName: "КППС 905x905",
     variants: [
       {
@@ -6116,7 +6116,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-864x864",
-    name: "Калорифер КППС-864×864 паровой",
+    name: "Калорифер КППС-864×864",
     shortName: "КППС 864x864",
     variants: [
       {
@@ -6180,7 +6180,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-822x822",
-    name: "Калорифер КППС-822×822 паровой",
+    name: "Калорифер КППС-822×822",
     shortName: "КППС 822x822",
     variants: [
       {
@@ -6232,7 +6232,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-780x780",
-    name: "Калорифер КППС-780×780 паровой",
+    name: "Калорифер КППС-780×780",
     shortName: "КППС 780x780",
     variants: [
       {
@@ -6284,7 +6284,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-739x739",
-    name: "Калорифер КППС-739×739 паровой",
+    name: "Калорифер КППС-739×739",
     shortName: "КППС 739x739",
     variants: [
       {
@@ -6336,7 +6336,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-697x697",
-    name: "Калорифер КППС-697×697 паровой",
+    name: "Калорифер КППС-697×697",
     shortName: "КППС 697x697",
     variants: [
       {
@@ -6388,7 +6388,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-655x655",
-    name: "Калорифер КППС-655×655 паровой",
+    name: "Калорифер КППС-655×655",
     shortName: "КППС 655x655",
     variants: [
       {
@@ -6440,7 +6440,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-614x614",
-    name: "Калорифер КППС-614×614 паровой",
+    name: "Калорифер КППС-614×614",
     shortName: "КППС 614x614",
     variants: [
       {
@@ -6492,7 +6492,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kpps-572x572",
-    name: "Калорифер КППС-572×572 паровой",
+    name: "Калорифер КППС-572×572",
     shortName: "КППС 572x572",
     variants: [
       {
@@ -6541,7 +6541,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   // КППУ
   {
     id: "kppu-1572x1572",
-    name: "Калорифер КППУ-1572×1572 паровой",
+    name: "Калорифер КППУ-1572×1572",
     shortName: "КППУ 1572x1572",
     series: "КППУ",
     heatCarrier: "steam",
@@ -6589,7 +6589,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1526x1526",
-    name: "Калорифер КППУ-1526×1526 паровой",
+    name: "Калорифер КППУ-1526×1526",
     shortName: "КППУ 1526x1526",
     variants: [
       {
@@ -6641,7 +6641,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1481x1481",
-    name: "Калорифер КППУ-1481×1481 паровой",
+    name: "Калорифер КППУ-1481×1481",
     shortName: "КППУ 1481x1481",
     variants: [
       {
@@ -6693,7 +6693,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1435x1435",
-    name: "Калорифер КППУ-1435×1435 паровой",
+    name: "Калорифер КППУ-1435×1435",
     shortName: "КППУ 1435x1435",
     variants: [
       {
@@ -6745,7 +6745,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1390x1390",
-    name: "Калорифер КППУ-1390×1390 паровой",
+    name: "Калорифер КППУ-1390×1390",
     shortName: "КППУ 1390x1390",
     variants: [
       {
@@ -6797,7 +6797,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1345x1345",
-    name: "Калорифер КППУ-1345×1345 паровой",
+    name: "Калорифер КППУ-1345×1345",
     shortName: "КППУ 1345x1345",
     variants: [
       {
@@ -6849,7 +6849,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1299x1299",
-    name: "Калорифер КППУ-1299×1299 паровой",
+    name: "Калорифер КППУ-1299×1299",
     shortName: "КППУ 1299x1299",
     variants: [
       {
@@ -6901,7 +6901,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1254x1254",
-    name: "Калорифер КППУ-1254×1254 паровой",
+    name: "Калорифер КППУ-1254×1254",
     shortName: "КППУ 1254x1254",
     variants: [
       {
@@ -6953,7 +6953,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1208x1208",
-    name: "Калорифер КППУ-1208×1208 паровой",
+    name: "Калорифер КППУ-1208×1208",
     shortName: "КППУ 1208x1208",
     variants: [
       {
@@ -7005,7 +7005,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1163x1163",
-    name: "Калорифер КППУ-1163×1163 паровой",
+    name: "Калорифер КППУ-1163×1163",
     shortName: "КППУ 1163x1163",
     variants: [
       {
@@ -7057,7 +7057,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1117x1117",
-    name: "Калорифер КППУ-1117×1117 паровой",
+    name: "Калорифер КППУ-1117×1117",
     shortName: "КППУ 1117x1117",
     variants: [
       {
@@ -7109,7 +7109,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1072x1072",
-    name: "Калорифер КППУ-1072×1072 паровой",
+    name: "Калорифер КППУ-1072×1072",
     shortName: "КППУ 1072x1072",
     variants: [
       {
@@ -7161,7 +7161,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-1026x1026",
-    name: "Калорифер КППУ-1026×1026 паровой",
+    name: "Калорифер КППУ-1026×1026",
     shortName: "КППУ 1026x1026",
     variants: [
       {
@@ -7213,7 +7213,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-981x981",
-    name: "Калорифер КППУ-981×981 паровой",
+    name: "Калорифер КППУ-981×981",
     shortName: "КППУ 981x981",
     variants: [
       {
@@ -7265,7 +7265,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-935x935",
-    name: "Калорифер КППУ-935×935 паровой",
+    name: "Калорифер КППУ-935×935",
     shortName: "КППУ 935x935",
     variants: [
       {
@@ -7329,7 +7329,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-890x890",
-    name: "Калорифер КППУ-890×890 паровой",
+    name: "Калорифер КППУ-890×890",
     shortName: "КППУ 890x890",
     variants: [
       {
@@ -7381,7 +7381,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-845x845",
-    name: "Калорифер КППУ-845×845 паровой",
+    name: "Калорифер КППУ-845×845",
     shortName: "КППУ 845x845",
     variants: [
       {
@@ -7433,7 +7433,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-799x799",
-    name: "Калорифер КППУ-799×799 паровой",
+    name: "Калорифер КППУ-799×799",
     shortName: "КППУ 799x799",
     variants: [
       {
@@ -7485,7 +7485,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-754x754",
-    name: "Калорифер КППУ-754×754 паровой",
+    name: "Калорифер КППУ-754×754",
     shortName: "КППУ 754x754",
     variants: [
       {
@@ -7537,7 +7537,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-708x708",
-    name: "Калорифер КППУ-708×708 паровой",
+    name: "Калорифер КППУ-708×708",
     shortName: "КППУ 708x708",
     variants: [
       {
@@ -7589,7 +7589,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-663x663",
-    name: "Калорифер КППУ-663×663 паровой",
+    name: "Калорифер КППУ-663×663",
     shortName: "КППУ 663x663",
     variants: [
       {
@@ -7653,7 +7653,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-617x617",
-    name: "Калорифер КППУ-617×617 паровой",
+    name: "Калорифер КППУ-617×617",
     shortName: "КППУ 617x617",
     variants: [
       {
@@ -7717,7 +7717,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
   },
   {
     id: "kppu-572x572",
-    name: "Калорифер КППУ-572×572 паровой",
+    name: "Калорифер КППУ-572×572",
     shortName: "КППУ 572x572",
     variants: [
       {
