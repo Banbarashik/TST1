@@ -10512,6 +10512,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "water",
     calorifier: "ТВВ4",
     categories: ["agregaty", "vodiany-agregaty", "avo", "avo-tvv"],
+    airPower: 10500,
     img: {
       url: "/img/agregaty/avo/agregat_avo_hl_v.png",
       alt: "Водяные воздушно-отопительные агрегаты АВО ХЛ",
@@ -11266,6 +11267,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     heatCarrier: "steam",
     calorifier: "КП4",
     categories: ["agregaty", "parovy-agregaty", "avo", "avo-kp"],
+    airPower: 10500,
     img: {
       url: "/img/agregaty/avo/agregat_avo_hl_p.png",
       alt: "Водяные воздушно-отопительные агрегаты АВО ХЛ",
