@@ -26,10 +26,28 @@ export default async function Catalog({
   const { category: slug } = await params;
   const { title } = findCategoryBySlug(slug, categoryTree) ?? defaultCategory;
 
-  const filteredProducts =
+  let filteredProducts =
     slug === "all"
       ? productData
       : productData.filter((product) => product.categories?.includes(slug));
+
+  if (slug === "all") {
+    // 1. Group by series
+    const seriesGroups: Record<string, typeof productData> = {};
+    for (const product of productData) {
+      const key = product.series ?? "unknown";
+      if (!seriesGroups[key]) seriesGroups[key] = [];
+      seriesGroups[key].push(product);
+    }
+
+    // 2. Sort each group by airPower
+    const sortedGroups = Object.values(seriesGroups).map((group) =>
+      group.sort((a, b) => (a.airPower ?? 0) - (b.airPower ?? 0)),
+    );
+
+    // 3. Flatten the 2D array
+    filteredProducts = sortedGroups.flat();
+  }
 
   const page = Number(query?.page) || 1;
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);

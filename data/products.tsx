@@ -12570,6 +12570,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     id: "teny-orebrenny'e",
     name: "ТЭНы оребренные",
     model: "ТЭН ОР. Р-54А-13/2.5О220",
+    series: "ТЭН",
     heatPower: 2.5,
     voltage: 220,
     price: 759,
