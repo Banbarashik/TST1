@@ -51,10 +51,10 @@ export default function ProductCard({
           </p>
         )}
         {product.airPower && (
-          <p>
+          <div>
             Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
-            {product.heatPower && product.heatPower + " кВт"}
-          </p>
+            <p>{product.heatPower && product.heatPower + " кВт"}</p>
+          </div>
         )}
         {!product.airPower && hasVariants && (
           <div>
@@ -71,11 +71,6 @@ export default function ProductCard({
             кВт
           </p>
         )}
-        {product.price && (
-          <p className="text-gray-600">
-            {product.price.toLocaleString("ru-RU")} руб. с НДС
-          </p>
-        )}
       </div>
       {hasVariants ? (
         <div className="mt-2 flex items-center justify-between">
@@ -84,7 +79,14 @@ export default function ProductCard({
           </Button>
         </div>
       ) : (
-        <ProductRequestControls product={product} className="mt-auto" />
+        <div className="mt-auto flex items-end justify-between">
+          <ProductRequestControls product={product} className="mt-auto" />
+          {product.price && (
+            <p className="text-gray-600">
+              {product.price.toLocaleString("ru-RU")} руб. с НДС
+            </p>
+          )}
+        </div>
       )}
     </div>
   );
