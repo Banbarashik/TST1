@@ -8,6 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import Heading from "@/components/general_pages/heading";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Прайс-лист воздушно-отопительного оборудования",
@@ -81,7 +82,8 @@ export default function ContactsAndPricesPage() {
           lvl={1}
           text="Цена/прайс-лист воздушно-отопительного оборудования"
         />
-        <ProductParagraph className="mb-7">
+
+        <ProductParagraph className="mb-2">
           ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
           выпуске воздушно-отопительного оборудования и работающее на рынке
           климатической продукции с 2001 года. Основное направление деятельности
@@ -93,9 +95,22 @@ export default function ContactsAndPricesPage() {
           топливно-энергетической, авиационной, машиностроительной
           промышленности, фабриками и хозяйствами агропромышленного комплекса.
         </ProductParagraph>
-        <h2 className="text-center text-2xl font-bold uppercase">
-          Цена/прайс-лист калориферов
-        </h2>
+
+        <div className="flex flex-col">
+          <Link
+            href="/documents/Price_list_zao_tst_2025.pdf"
+            className="button self-end"
+            id="button-7"
+            target="_blank"
+          >
+            <div id="dub-arrow">Скачать</div>
+            <span>Прайс-лист</span>
+          </Link>
+          <h2 className="self-center text-2xl font-bold uppercase">
+            Цена/прайс-лист калориферов
+          </h2>
+        </div>
+
         <ProductParagraph>
           Широкий модельный ряд калориферов производства ЗАО «Т.С.Т.», только в
           стандартном исполнении насчитывающий 440 типоразмеров, позволяет

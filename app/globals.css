@@ -231,23 +231,7 @@ th {
 }
 /* Таблицы для АО+ вода и АО+ пар (конец) */
 
-.btn {
-  background: #e3e3e3; /* lighten(#e0e0e0, 3%) */
-  border: 1px solid #cccccc; /* darken(#e0e0e0, 4%) */
-  box-shadow:
-    0px 2px 0 #bdbdbd,
-    /* darken(#e0e0e0, 5%) */ 2px 4px 6px #dbdbdb; /* darken(#e0e0e0, 2%) */
-  transition: all 150ms linear;
-}
-
-.btn:hover {
-  background: #d1d1d1; /* darken(#e0e0e0, 1.5%) */
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
-  color: #8f6063; /* lighten(#e0e0e0, 18%) */
-  text-shadow: -1px -1px 0 #b3b3b3; /* darken(#e0e0e0, 9.5%) */
-  transition: all 250ms linear;
-}
+/* NAV MENU BUTTONS */
 
 .btn-3 {
   background: #e3e3e3;
@@ -266,4 +250,57 @@ th {
   color: #8f6063;
   text-shadow: -1px -1px 0 #b3b3b3;
   transition: all 250ms linear;
+}
+
+/* KONTAKTY-PRAJS BUTTON */
+
+.button {
+  display: inline-flex;
+  padding: 12px 20px;
+  border: 1.5px solid var(--primary-darker);
+  color: var(--primary-darker);
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#button-7 {
+  position: relative;
+  cursor: pointer;
+}
+
+#button-7 span {
+  position: relative;
+  left: 0;
+  transition: all 0.35s ease-Out;
+}
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  left: -200px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}
+
+#button-7 img {
+  width: 20px;
+  height: auto;
+}
+
+#button-7:hover #dub-arrow {
+  left: 0;
+}
+
+#button-7:hover span {
+  left: 150px;
 }
