@@ -3,7 +3,6 @@ import { categoryTree } from "@/data/categories";
 
 import Link from "next/link";
 
-import { sortProducts } from "@/lib/utils";
 import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
 import { Button } from "@/components/ui/button";
@@ -32,19 +31,15 @@ export default async function Catalog({
       ? productData
       : productData.filter((product) => product.categories?.includes(slug));
 
-  const sortedProducts = filteredProducts.sort((a, b) =>
-    sortProducts(a.name, b.name),
-  );
-
   const page = Number(query?.page) || 1;
-  const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   const startIdx = (page - 1) * PRODUCTS_PER_PAGE;
-  const paginatedProducts = sortedProducts.slice(
+  const paginatedProducts = filteredProducts.slice(
     startIdx,
     startIdx + PRODUCTS_PER_PAGE,
   );
 
-  if (sortedProducts.length === 0)
+  if (filteredProducts.length === 0)
     return (
       <div className="flex w-full items-center justify-center text-xl">
         Нет товаров в данной категории.
