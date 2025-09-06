@@ -494,16 +494,20 @@ export default function ContactForm({
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel className="font-normal">
-                      Я согласен на{" "}
-                      <Link
-                        href="/privacy-policy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline underline-offset-4"
-                      >
-                        обработку персональных данных
-                      </Link>
+                    <FormLabel
+                      className="mb-2 font-normal"
+                      style={{ color: "black" }}
+                    >
+                      <div>
+                        Нажимая на кнопку Вы соглашаетесь с{" "}
+                        <Link
+                          href="/personal-data"
+                          target="_blank"
+                          className="text-blue-700"
+                        >
+                          политикой обработки персональных данных
+                        </Link>
+                      </div>
                     </FormLabel>
                     <FormMessage />
                   </div>
