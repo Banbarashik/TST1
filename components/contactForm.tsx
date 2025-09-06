@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
+import Link from "next/link";
 
 // Allowed file types/extensions
 const ALLOWED_TYPES = [
@@ -76,9 +77,12 @@ const formSchema = z.object({
   // .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
   files: z.any().optional(),
-  consent: z.boolean().refine((val) => val === true, {
-    message: "Вы должны принять условия обработки данных",
-  }),
+  consent: z
+    .boolean()
+    .default(false)
+    .refine((val) => val === true, {
+      message: "Вы должны принять условия обработки данных",
+    }),
 });
 
 function findProductOrVariantById(products, id: string) {
@@ -474,6 +478,35 @@ export default function ContactForm({
                     </div>
                   </FormControl>
                   <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="consent"
+              render={({ field }) => (
+                <FormItem className="flex items-start gap-3">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value ?? false}
+                      onCheckedChange={(val) => field.onChange(!!val)}
+                      aria-required
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="font-normal">
+                      Я согласен на{" "}
+                      <Link
+                        href="/privacy-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4"
+                      >
+                        обработку персональных данных
+                      </Link>
+                    </FormLabel>
+                    <FormMessage />
+                  </div>
                 </FormItem>
               )}
             />
