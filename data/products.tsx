@@ -2947,7 +2947,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     series: "КПВУ",
     size: 572,
   },
-  // КСк
+  // КСк 2-1_2-12
   {
     id: "kalorifer-ksk-2-12",
     name: "Калорифер КСк 2-12",
@@ -3271,6 +3271,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "ХЛ3",
     tubeSize: "16x1.5",
   },
+  // КСк 3-1_3-12
   {
     id: "kalorifer-ksk-3-12",
     name: "Калорифер КСк 3-12",
@@ -3595,6 +3596,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "ХЛ3",
     tubeSize: "16x1.5",
   },
+  // КСк 4-1_4-12
   {
     id: "kalorifer-ksk-4-12",
     name: "Калорифер КСк 4-12",
@@ -3919,7 +3921,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "ХЛ3",
     tubeSize: "16x1.5",
   },
-  // ТВВ
+  // ТВВ 306_312
   {
     id: "kalorifer-tvv-312",
     name: "Калорифер ТВВ 312",
@@ -4109,6 +4111,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "ХЛ3",
     tubeSize: "22x1.5",
   },
+  // ТВВ 406_412
   {
     id: "kalorifer-tvv-412",
     name: "Калорифер ТВВ 412",
@@ -4298,7 +4301,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "ХЛ3",
     tubeSize: "22x1.5",
   },
-  // КФБ М
+  // КФБ М А3 2_14
   {
     id: "kalorifer-kfb-14-a3",
     name: "Калорифер КФБ-14 А3 М",
@@ -4728,6 +4731,7 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     climate: "УХЛ3",
     tubeSize: "22x1.5",
   },
+  // КФБ М А4 2_14
   {
     id: "kalorifer-kfb-14-a4",
     name: "Калорифер КФБ-14 А4 М",
