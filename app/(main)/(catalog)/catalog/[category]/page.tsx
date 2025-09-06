@@ -32,18 +32,16 @@ export default async function Catalog({
       ? productData
       : productData.filter((product) => product.categories?.includes(slug));
 
-  if (slug === "all") {
-    // 1. Group by last category in categories array
-    const categoryGroups: Record<string, typeof productData> = {};
-    for (const product of productData) {
-      const categoriesArr = product.categories ?? ["unknown"];
-      const key =
-        categoriesArr.length > 0
-          ? categoriesArr[categoriesArr.length - 1]
-          : "unknown";
-      if (!categoryGroups[key]) categoryGroups[key] = [];
-      categoryGroups[key].push(product);
-    }
+  // 1. Group by last category in categories array
+  const categoryGroups: Record<string, typeof productData> = {};
+  for (const product of filteredProducts) {
+    const categoriesArr = product.categories ?? ["unknown"];
+    const key =
+      categoriesArr.length > 0
+        ? categoriesArr[categoriesArr.length - 1]
+        : "unknown";
+    if (!categoryGroups[key]) categoryGroups[key] = [];
+    categoryGroups[key].push(product);
 
     // 2. Sort each group by airPower
     const sortedGroups = Object.values(categoryGroups).map((group) =>
