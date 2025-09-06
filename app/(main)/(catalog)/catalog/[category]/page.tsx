@@ -1,6 +1,6 @@
+// app/(...)/[category]/page.tsx  (твой файл)
 import { productData } from "@/data/products";
 import { categoryTree } from "@/data/categories";
-
 import Link from "next/link";
 
 import { sortProducts } from "@/lib/utils";
@@ -8,12 +8,10 @@ import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
+import SortControls from "@/components/catalog/SortControls"; // ⟵ новое
+import { comparatorFor, parseSortParam } from "@/lib/sort"; // ⟵ новое
 
-const defaultCategory = {
-  title: "Вся продукция",
-  slug: "all",
-};
-
+const defaultCategory = { title: "Вся продукция", slug: "all" };
 const PRODUCTS_PER_PAGE = 21;
 
 export default async function Catalog({
@@ -21,18 +19,20 @@ export default async function Catalog({
   searchParams,
 }: {
   params: { category: string };
-  searchParams?: { page?: string };
+  searchParams?: { page?: string; sort?: string };
 }) {
   const query = await searchParams;
   const { category: slug } = await params;
   const { title } = findCategoryBySlug(slug, categoryTree) ?? defaultCategory;
 
+  // 1) фильтруем по категории
   let filteredProducts =
     slug === "all"
       ? productData
-      : productData.filter((product) => product.categories?.includes(slug));
+      : productData.filter((p) => p.categories?.includes(slug));
 
-  // 1. Group by last category in categories array
+  // 2) "дефолтный" порядок: группировка по последней категории + сортировка внутри по имени
+  // (оставляем, как у тебя сейчас)
   const categoryGroups: Record<string, typeof productData> = {};
   for (const product of filteredProducts) {
     const categoriesArr = product.categories ?? ["unknown"];
@@ -42,39 +42,58 @@ export default async function Catalog({
         : "unknown";
     if (!categoryGroups[key]) categoryGroups[key] = [];
     categoryGroups[key].push(product);
+  }
+  const sortedGroups = Object.values(categoryGroups).map((group) =>
+    group.sort((a, b) => sortProducts(a.name, b.name)),
+  );
+  let ordered = sortedGroups.flat();
 
-    // 2. Sort each group by airPower
-    const sortedGroups = Object.values(categoryGroups).map((group) =>
-      group.sort((a, b) => sortProducts(a.name, b.name)),
-    );
-
-    // 3. Flatten the 2D array
-    filteredProducts = sortedGroups.flat();
+  // 3) Если в query выбран sort ≠ default — применяем глобальную сортировку
+  const sortParam = parseSortParam(query?.sort);
+  const cmp = comparatorFor(sortParam);
+  if (cmp) {
+    ordered = [...ordered].sort(cmp);
   }
 
+  // 4) пагинация
   const page = Number(query?.page) || 1;
-  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const totalPages = Math.ceil(ordered.length / PRODUCTS_PER_PAGE);
   const startIdx = (page - 1) * PRODUCTS_PER_PAGE;
-  const paginatedProducts = filteredProducts.slice(
+  const paginatedProducts = ordered.slice(
     startIdx,
     startIdx + PRODUCTS_PER_PAGE,
   );
 
-  if (filteredProducts.length === 0)
+  if (ordered.length === 0)
     return (
       <div className="flex w-full items-center justify-center text-xl">
         Нет товаров в данной категории.
       </div>
     );
 
+  // helper чтобы сохранять sort в ссылках пагинации
+  const makePageHref = (i: number) => {
+    const params = new URLSearchParams();
+    params.set("page", String(i));
+    if (sortParam !== "default") params.set("sort", sortParam);
+    return `?${params.toString()}`;
+  };
+
   return (
     <div>
       <h1 className="mb-6 text-2xl font-bold uppercase">{title}</h1>
+
+      {/* Контрол сортировки */}
+      <SortControls />
+
+      {/* Сетка товаров */}
       <div className="mb-20 grid grid-cols-3 gap-5">
         {paginatedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
+      {/* Пагинация — сохраняем sort в href */}
       <div className="mb-10 flex justify-center gap-2">
         {Array.from({ length: totalPages }, (_, i) => (
           <Button
@@ -88,7 +107,7 @@ export default async function Catalog({
                 : "bg-white"
             }
           >
-            <Link href={`?page=${i + 1}`}>{i + 1}</Link>
+            <Link href={makePageHref(i + 1)}>{i + 1}</Link>
           </Button>
         ))}
       </div>
