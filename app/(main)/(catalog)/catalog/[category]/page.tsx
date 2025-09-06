@@ -3,6 +3,7 @@ import { categoryTree } from "@/data/categories";
 
 import Link from "next/link";
 
+import { sortProducts } from "@/lib/utils";
 import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
 import { Button } from "@/components/ui/button";
@@ -42,7 +43,7 @@ export default async function Catalog({
 
     // 2. Sort each group by airPower
     const sortedGroups = Object.values(seriesGroups).map((group) =>
-      group.sort((a, b) => (a.airPower ?? 0) - (b.airPower ?? 0)),
+      group.sort((a, b) => sortProducts(a.name, b.name)),
     );
 
     // 3. Flatten the 2D array
