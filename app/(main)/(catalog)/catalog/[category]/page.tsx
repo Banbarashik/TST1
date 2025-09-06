@@ -85,10 +85,12 @@ export default async function Catalog({
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold uppercase">{title}</h1>
+      <div className="flex justify-between">
+        <h1 className="mb-6 text-2xl font-bold uppercase">{title}</h1>
+        <SortControls />
+      </div>
 
       {/* Контрол сортировки */}
-      <SortControls />
 
       {/* Сетка товаров */}
       <div className="mb-20 grid grid-cols-3 gap-5">

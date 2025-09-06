@@ -39,12 +39,6 @@ export default function SortControls() {
           <SelectItem value="airPower_desc">Производительность ↓</SelectItem>
         </SelectContent>
       </Select>
-
-      {current !== "default" && (
-        <Button variant="ghost" onClick={() => setSort("default")}>
-          Сбросить
-        </Button>
-      )}
     </div>
   );
 }
