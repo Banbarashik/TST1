@@ -15,6 +15,7 @@ import { getTotalPrice } from "@/lib/totalPrice";
 import { loadFormData, removeFormData, saveFormData } from "@/lib/localStorage";
 import { sendEmail } from "@/lib/sendEmail";
 
+import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -75,6 +76,9 @@ const formSchema = z.object({
   // .min(1, "Выберите хотя бы один товар"), // Интересующие продукты
   message: z.string().min(1, "Обязательное поле").max(4000), // Сообщение
   files: z.any().optional(),
+  consent: z.boolean().refine((val) => val === true, {
+    message: "Вы должны принять условия обработки данных",
+  }),
 });
 
 function findProductOrVariantById(products, id: string) {
@@ -152,6 +156,7 @@ export default function ContactForm({
       region: "",
       products: selectedProducts,
       message: "",
+      consent: false,
     },
   });
 
