@@ -25,33 +25,37 @@ export default async function Catalog({
   const { category: slug } = await params;
   const { title } = findCategoryBySlug(slug, categoryTree) ?? defaultCategory;
 
-  // 1) фильтруем по категории
-  let filteredProducts =
-    slug === "all"
+  const sortParam = parseSortParam(query?.sort); // ⟵ сначала определяем сортировку
+
+  // 1) фильтрация по категории
+  const filteredProducts =
+    params.category === "all"
       ? productData
-      : productData.filter((p) => p.categories?.includes(slug));
+      : productData.filter((p) => p.categories?.includes(params.category));
 
-  // 2) "дефолтный" порядок: группировка по последней категории + сортировка внутри по имени
-  // (оставляем, как у тебя сейчас)
-  const categoryGroups: Record<string, typeof productData> = {};
-  for (const product of filteredProducts) {
-    const categoriesArr = product.categories ?? ["unknown"];
-    const key =
-      categoriesArr.length > 0
-        ? categoriesArr[categoriesArr.length - 1]
-        : "unknown";
-    if (!categoryGroups[key]) categoryGroups[key] = [];
-    categoryGroups[key].push(product);
+  let ordered: typeof filteredProducts;
+
+  if (sortParam === "default") {
+    // 2A) ТОЛЬКО для "По умолчанию" — группируем по последней категории
+    const groups: Record<string, typeof filteredProducts> = {};
+    for (const product of filteredProducts) {
+      const cats = product.categories ?? ["unknown"];
+      const key = cats.length ? cats[cats.length - 1] : "unknown";
+      (groups[key] ??= []).push(product);
+    }
+    const sortedGroups = Object.values(groups).map((g) =>
+      g.sort((a, b) => sortProducts(a.name, b.name)),
+    );
+    ordered = sortedGroups.flat();
+  } else {
+    // 2B) Для ЛЮБОЙ другой сортировки — БЕЗ группировки
+    ordered = [...filteredProducts];
   }
-  const sortedGroups = Object.values(categoryGroups).map((group) =>
-    group.sort((a, b) => sortProducts(a.name, b.name)),
-  );
-  let ordered = sortedGroups.flat();
 
-  // 3) Если в query выбран sort ≠ default — применяем глобальную сортировку
-  const sortParam = parseSortParam(query?.sort);
+  // после блока, где получаешь ordered (с группировкой только для default)
   const cmp = comparatorFor(sortParam);
   if (cmp) {
+    // важно: не мутировать исходный массив, особенно если productData используется ещё где-то
     ordered = [...ordered].sort(cmp);
   }
 

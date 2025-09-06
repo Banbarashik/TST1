@@ -35,10 +35,8 @@ export default function SortControls() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="default">По умолчанию</SelectItem>
-          <SelectItem value="name_asc">Название A→Я</SelectItem>
-          <SelectItem value="name_desc">Название Я→A</SelectItem>
-          <SelectItem value="price_asc">Цена ↑</SelectItem>
-          <SelectItem value="price_desc">Цена ↓</SelectItem>
+          <SelectItem value="airPower_asc">Производительность ↑</SelectItem>
+          <SelectItem value="airPower_desc">Производительность ↓</SelectItem>
         </SelectContent>
       </Select>
 
