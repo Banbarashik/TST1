@@ -26,6 +26,7 @@ export default function TableAndCatalogLinks({
   return (
     <div className="flex h-12 w-full gap-6">
       <Button
+        asChild
         className={cn(
           "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
           buttonClassName,
@@ -37,6 +38,7 @@ export default function TableAndCatalogLinks({
       </Button>
       {catalogURL && (
         <Button
+          asChild
           className={cn(
             "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
             buttonClassName,
