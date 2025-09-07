@@ -58,7 +58,7 @@ export default function ContactsAndPricesPage() {
 
   const avo = sortedProducts.filter((p) => p.categories.includes("avo"));
   const avoTvv = avo.find((p) => p.categories.includes("avo-tvv"));
-  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
+  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: p.id }));
 
   const std300 = sortedProducts.find((p) =>
     p.categories.includes("std300-v"),
@@ -638,10 +638,12 @@ export default function ContactsAndPricesPage() {
               <Heading lvl={2} text="Оребренные ТЭНы" />
               <table className="w-full">
                 <thead className="uppercase">
-                  <th className="py-1.5">
-                    Наименование трубчатого электронагревателя
-                  </th>
-                  <th>Цена с учетом НДС</th>
+                  <tr>
+                    <th className="py-1.5">
+                      Наименование трубчатого электронагревателя
+                    </th>
+                    <th>Цена с учетом НДС</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -687,116 +689,118 @@ export default function ContactsAndPricesPage() {
         </h2>
 
         <table className="mx-auto mb-4 w-full max-w-6xl">
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ПОЛНОЕ НАИМЕНОВАНИЕ
-            </th>
-            <td colSpan={4}>
-              Общество с ограниченной ответственностью «Т.С.Т.»
-            </td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              СОКРАЩЕННОЕ НАИМЕНОВАНИЕ
-            </th>
-            <td colSpan={4}>ООО «Т.С.Т.»</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ЮРИДИЧЕСКИЙ АДРЕС
-            </th>
-            <td colSpan={4}>
-              630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
-            </td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ПОЧТОВЫЙ АДРЕС
-            </th>
-            <td colSpan={4}>
-              652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
-            </td>
-          </tr>
-          <tr className="text-sm">
-            <th>ИНН</th>
-            <th>КПП</th>
-            <th>ОКПО</th>
-            <th>ОГРН</th>
-            <td>5404002676</td>
-            <td>540401001</td>
-            <td>55613706</td>
-            <td>1155476002483</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              БИК
-            </th>
-            <td colSpan={2}>044525411</td>
-            <td colSpan={2}>043207612</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              РАСЧЕТНЫЙ СЧЕТ
-            </th>
-            <td colSpan={2}>407 028 105 1307 00 000 31</td>
-            <td colSpan={2}>407 028 100 2621 01 023 57</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              БАНК
-            </th>
-            <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
-            <td colSpan={2}>
-              Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
-            </td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              КОРРЕСПОНДЕНТСКИЙ СЧЕТ
-            </th>
-            <td colSpan={2}>301 018 101 4525 00 004 11</td>
-            <td colSpan={2}>301 018 102 0000 00 006 12</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ОКВЭД
-            </th>
-            <td colSpan={4}>
-              28.25 Производство промышленного и холодильного оборудования
-            </td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ТЕЛЕФОН/ФАКС
-            </th>
-            <td colSpan={4}>8 (38 46) 68-23-24</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              E-MAIL
-            </th>
-            <td colSpan={4}>zao_tst@mail.ru</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ВЕБ-САЙТ
-            </th>
-            <td colSpan={4}>https://zao-tst.ru</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ТЕХНИЧЕСКИЕ ВОПРОСЫ
-            </th>
-            <td colSpan={2}>8-961-737-83-14</td>
-            <td colSpan={2}>Киляков Вадим Анатольевич</td>
-          </tr>
-          <tr className="text-sm">
-            <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
-              ОТДЕЛ ПРОДАЖ
-            </th>
-            <td colSpan={2}>8-904-968-14-88</td>
-            <td colSpan={2}>Семенова Татьяна Владимировна</td>
-          </tr>
+          <tbody>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ПОЛНОЕ НАИМЕНОВАНИЕ
+              </th>
+              <td colSpan={4}>
+                Общество с ограниченной ответственностью «Т.С.Т.»
+              </td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                СОКРАЩЕННОЕ НАИМЕНОВАНИЕ
+              </th>
+              <td colSpan={4}>ООО «Т.С.Т.»</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ЮРИДИЧЕСКИЙ АДРЕС
+              </th>
+              <td colSpan={4}>
+                630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
+              </td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ПОЧТОВЫЙ АДРЕС
+              </th>
+              <td colSpan={4}>
+                652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
+              </td>
+            </tr>
+            <tr className="text-sm">
+              <th>ИНН</th>
+              <th>КПП</th>
+              <th>ОКПО</th>
+              <th>ОГРН</th>
+              <td>5404002676</td>
+              <td>540401001</td>
+              <td>55613706</td>
+              <td>1155476002483</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                БИК
+              </th>
+              <td colSpan={2}>044525411</td>
+              <td colSpan={2}>043207612</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                РАСЧЕТНЫЙ СЧЕТ
+              </th>
+              <td colSpan={2}>407 028 105 1307 00 000 31</td>
+              <td colSpan={2}>407 028 100 2621 01 023 57</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                БАНК
+              </th>
+              <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
+              <td colSpan={2}>
+                Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
+              </td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                КОРРЕСПОНДЕНТСКИЙ СЧЕТ
+              </th>
+              <td colSpan={2}>301 018 101 4525 00 004 11</td>
+              <td colSpan={2}>301 018 102 0000 00 006 12</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ОКВЭД
+              </th>
+              <td colSpan={4}>
+                28.25 Производство промышленного и холодильного оборудования
+              </td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ТЕЛЕФОН/ФАКС
+              </th>
+              <td colSpan={4}>8 (38 46) 68-23-24</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                E-MAIL
+              </th>
+              <td colSpan={4}>zao_tst@mail.ru</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ВЕБ-САЙТ
+              </th>
+              <td colSpan={4}>https://zao-tst.ru</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ТЕХНИЧЕСКИЕ ВОПРОСЫ
+              </th>
+              <td colSpan={2}>8-961-737-83-14</td>
+              <td colSpan={2}>Киляков Вадим Анатольевич</td>
+            </tr>
+            <tr className="text-sm">
+              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+                ОТДЕЛ ПРОДАЖ
+              </th>
+              <td colSpan={2}>8-904-968-14-88</td>
+              <td colSpan={2}>Семенова Татьяна Владимировна</td>
+            </tr>
+          </tbody>
         </table>
 
         <p className="mx-auto max-w-6xl">
