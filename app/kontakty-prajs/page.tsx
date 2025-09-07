@@ -605,7 +605,7 @@ export default function ContactsAndPricesPage() {
               tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
               tableLinkText="Скачать каталог СФО"
               tableLinkOpenNewTab
-              catalogURL="/documents/Kalorifer_KP_katalog_2025.pdf"
+              catalogURL="/documents/Electroustanovka_SFOTC_katalog_2025.pdf"
               catalogLinkText="Скачать каталог СФОЦ"
               buttonClassName="bg-gray-200"
             />
