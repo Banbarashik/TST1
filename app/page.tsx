@@ -54,12 +54,6 @@ export default function Home() {
               Оставьте заявку через форму, <br /> и мы свяжемся с вами в
               ближайшее время.
             </p>
-            {/* <p className="text-2xl">
-              <span>Или воспользуйтесь </span>
-              <Link href="" className="text-primary">
-                онлайн-инструментами расчета-подбора калориферов.
-              </Link>
-            </p> */}
           </div>
           <ContactForm outOfContext />
         </div>

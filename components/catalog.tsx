@@ -9,12 +9,12 @@ const productCategories = [
     items: [
       {
         name: "Водяные калориферы КПВС и КПВУ",
-        url: "",
+        url: "/catalog/pritochny-vodiany-kalorifery",
         img: "/img/home/zao_tst_kalorifery_kpvs-kpvu.png",
       },
       {
         name: "Паровые калориферы КППС и КППУ",
-        url: "",
+        url: "/catalog/pritochny-parovy-kalorifery",
         img: "/img/home/zao_tst_kalorifery_kpps-kppu.png",
       },
     ],
@@ -26,22 +26,22 @@ const productCategories = [
     items: [
       {
         name: "Калориферы КСК",
-        url: "",
+        url: "/catalog/ksk",
         img: "/img/home/zao_tst_kalorifery_ksk.png",
       },
       {
         name: "Калориферы КПСК",
-        url: "",
+        url: "/catalog/kpsk",
         img: "/img/home/zao_tst_kalorifery_kpsk.png",
       },
       {
         name: "Агрегаты АО2",
-        url: "",
+        url: "/catalog/",
         img: "/img/home/zao_tst_agregaty_ao2.png",
       },
       {
         name: "Агрегаты СТД-300",
-        url: "",
+        url: "/catalog/",
         img: "/img/home/zao_tst_agregaty_std-300.png",
       },
     ],
@@ -53,22 +53,22 @@ const productCategories = [
     items: [
       {
         name: "Калориферы ТВВ",
-        url: "",
+        url: "/catalog/tvv",
         img: "/img/home/zao_tst_kalorifery_tvv.png",
       },
       {
         name: "Калориферы КП",
-        url: "",
+        url: "/catalog/kp",
         img: "/img/home/zao_tst_kalorifery_kp.png",
       },
       {
         name: "Агрегаты АВО ХЛ",
-        url: "",
+        url: "/catalog/",
         img: "/img/home/zao_tst_agregaty_avo.png",
       },
       {
         name: "Агрегаты СТД-300 ХЛ",
-        url: "",
+        url: "/catalog/",
         img: "/img/home/zao_tst_agregaty_std-300-hl.png",
       },
     ],
@@ -80,12 +80,12 @@ const productCategories = [
     items: [
       {
         name: "Калориферы КФБ-А ХЛ водяные",
-        url: "",
+        url: "/catalog/kfb-a-m",
         img: "/img/home/zao_tst_kalorifery_kfb-m.png",
       },
       {
         name: "Калориферы КФБ-А ХЛ паровые",
-        url: "",
+        url: "/catalog/kfb-a-p",
         img: "/img/home/zao_tst_kalorifery_kfb-p.png",
       },
     ],
@@ -97,22 +97,22 @@ const productCategories = [
     items: [
       {
         name: "Установки СФОЦ",
-        url: "",
+        url: "/catalog/sfotc",
         img: "/img/home/zao_tst_ustanovki_sfotc.png",
       },
       {
         name: "Калориферы СФО",
-        url: "",
+        url: "/catalog/sfo",
         img: "/img/home/zao_tst_elektrokalorifery_sfo.png",
       },
       {
         name: "Шкафы управления",
-        url: "",
+        url: "/catalog/shuk",
         img: "/img/home/zao_tst_shkafy_shuk.png",
       },
       {
         name: "ТЭНы оребренные",
-        url: "",
+        url: "/catalog/teny",
         img: "/img/home/zao_tst_teny.png",
       },
     ],
