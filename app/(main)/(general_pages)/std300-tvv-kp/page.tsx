@@ -61,14 +61,14 @@ export default function AgregatySTD300P() {
         </ProductParagraph>
         <div className="flex">
           <Image
-            src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_komplektatciia.png"
+            src="/img/general_pages/agregat_otopitelnyi_parovoy_std-300_komplektatciia.png"
             alt="Паровой отопительный агрегат СТД-300 ХЛ"
             title="Воздушно-отопительный агрегат СТД-300 паровой"
             width={484}
             height={1}
           />
           <Image
-            src="/img/general_pages/agregat_vozdushno-otopitelnyi_vodianoy_std-300.png"
+            src="/img/general_pages/agregat_vozdushno-otopitelnyi_parovoy_std-300.png"
             alt="Производство паровых отопительных агрегатов СТД"
             title="Конструкция парового отопительного агрегата СТД-300"
             width={484}
@@ -192,8 +192,8 @@ export default function AgregatySTD300P() {
         />
         <ProductParagraph className="mb-2">
           Воздушно-отопительные паровые агрегаты серии СТД-300 и СТД-300 ХЛ
-          изготавливаются в двух вариантах – с трехрядным и четырехрядным калорифером
-          КПСк или КП.
+          изготавливаются в двух вариантах – с трехрядным и четырехрядным
+          калорифером КПСк или КП.
         </ProductParagraph>
         <div className="mb-5 flex justify-between">
           <Image
