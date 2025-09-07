@@ -15,7 +15,9 @@ export default function Footer() {
           </li>
         </ul>
         <ul className="font-medium">
-          <li>Юр. адрес: г. Новосибирск, ул. Широкая, дом 1 А, офис 207/1</li>
+          <li>
+            Юр. адрес: г. Новосибирск, ул. Широкая, здание 1 А, офис 207/1
+          </li>
           <li>Почтовый адрес: 652710, г. Киселевск, ул. Юргинская, 1</li>
         </ul>
         <div className="flex flex-col items-end gap-3">
