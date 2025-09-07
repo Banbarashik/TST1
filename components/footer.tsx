@@ -2,7 +2,10 @@ import Logo from "@/components/ui/logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground flex h-42 items-center">
+    <footer
+      id="footer"
+      className="bg-secondary text-secondary-foreground flex h-42 items-center"
+    >
       <div className="flex w-full justify-center gap-16">
         <ul className="text-lg font-bold">
           <li className="text-accent mb-2">+7 (3846) 68-23-24</li>

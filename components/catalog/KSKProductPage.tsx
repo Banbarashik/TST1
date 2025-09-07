@@ -11,6 +11,7 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import QuestionButton from "../questionButton";
 
 /* const categoryLabels: Record<string, string> = {
   ksk: "КСк",
@@ -141,7 +142,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
-
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
       />
@@ -175,7 +175,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         {isCalorifier && " вентиляционного и"}{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
-
       <ProductSubheader
         text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
       />
@@ -294,13 +293,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </tr>
         </tbody>
       </table>
-
       <TableAndCatalogLinks
         tableURL={"/" + URLs[0]}
         tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
         catalogURL={"/documents/" + URLs[1]}
         catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
       />
+
+      <QuestionButton />
     </div>
   );
 }

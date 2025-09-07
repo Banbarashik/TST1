@@ -210,12 +210,6 @@ export default function SupplyCalorifierPage({
         }
         catalogLinkText={`Скачать каталог приточных калориферов ${product.series}`}
       />
-      <Button
-        size="xl"
-        className="fixed bottom-[200px] left-[100px] cursor-pointer bg-[#574184] hover:bg-[#7e5ebd]"
-      >
-        Задать вопрос
-      </Button>
     </div>
   );
 }

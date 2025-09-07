@@ -30,6 +30,7 @@ export default function RootLayout({
             </div>
           </nav>
           {children}
+          {/* Маячок перед футером */}
           <Footer />
         </body>
       </html>
