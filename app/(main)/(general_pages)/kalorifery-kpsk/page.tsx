@@ -192,6 +192,7 @@ export default function KaloriferyKPSKPage() {
       </section>
 
       <TableAndCatalogLinks
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
         tableLinkText="Скачать каталог паровых калориферов КПСк"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"

@@ -210,6 +210,7 @@ export default function KaloriferyKFBAPage() {
       </section>
 
       <TableAndCatalogLinks
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
         tableLinkText="Скачать каталог водяных калориферов КФБ"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"

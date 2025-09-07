@@ -151,6 +151,7 @@ export default function KaloriferyTVVPage() {
       </section>
 
       <TableAndCatalogLinks
+        tableLinkOpenNewTab
         tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
         tableLinkText="Скачать каталог водяных калориферов ТВВ"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"
