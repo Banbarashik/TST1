@@ -11,14 +11,7 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
-import QuestionButton from "../questionButton";
 
-/* const categoryLabels: Record<string, string> = {
-  ksk: "КСк",
-  kpsk: "КПСк",
-  kfb: "КФБ",
-  ao2: "АО 2",
-}; */
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
   steam: "пароконденсатного",
@@ -33,7 +26,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
 
   const categories = ["ksk", "kpsk", "tvv", "kp", "kfb", "ao2"];
   const category = categories.find((cat) => product.categories.includes(cat));
-  // const categoryLabel = categoryLabels[category];
 
   const productsByCategory = productData
     .filter((p) => p.categories.includes(category))
@@ -299,8 +291,6 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         catalogURL={"/documents/" + URLs[1]}
         catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
       />
-
-      <QuestionButton />
     </div>
   );
 }

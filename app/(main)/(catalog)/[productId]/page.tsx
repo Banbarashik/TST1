@@ -11,6 +11,7 @@ import AVOPage from "@/components/catalog/AVOPage";
 import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 import ElectroEquipmentPage from "@/components/catalog/ElectroEquipmentPage";
 import TenyPage from "@/components/catalog/TenyPage";
+import QuestionButton from "@/components/questionButton";
 
 function getProductType(categories: string[]) {
   if (
@@ -186,22 +187,48 @@ export default async function ProductPage({
   const productType = getProductType(product.categories);
 
   if (productType === "supplyCalorifier")
-    return <SupplyCalorifierPage product={product} />;
+    return (
+      <>
+        <SupplyCalorifierPage product={product} />
+        <QuestionButton />
+      </>
+    );
+
   if (
     productType === "ksk_kpsk" ||
     productType === "tvv_kp" ||
     productType === "kfb" ||
     productType === "ao2"
   )
-    return <KSKProductPage product={product} />;
+    return (
+      <>
+        <KSKProductPage product={product} />
+        <QuestionButton />
+      </>
+    );
+
   if (productType === "std300" || productType === "std300-hl")
-    return <STDPage product={product} />;
-  if (productType === "avo") return <AVOPage product={product} />;
+    return (
+      <>
+        <STDPage product={product} />
+        <QuestionButton />
+      </>
+    );
+
+  if (productType === "avo")
+    return (
+      <>
+        <AVOPage product={product} />
+        <QuestionButton />
+      </>
+    );
+
   if (
     productType === "sfo" ||
     productType === "sfotc" ||
     productType === "shuk"
   )
     return <ElectroEquipmentPage product={product} />;
+
   if (productType === "teny") return <TenyPage product={product} />;
 }
