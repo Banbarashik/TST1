@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PersonalDataPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-12 py-14">
+    <div className="mx-auto w-full max-w-6xl space-y-3 px-12 py-14">
       <Heading
         lvl={1}
         text="Соглашение на обработку персональных данных"
