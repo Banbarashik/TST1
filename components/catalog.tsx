@@ -36,12 +36,12 @@ const productCategories = [
       },
       {
         name: "Агрегаты АО2",
-        url: "/catalog/",
+        url: "/catalog/agregaty",
         img: "/img/home/zao_tst_agregaty_ao2.png",
       },
       {
         name: "Агрегаты СТД-300",
-        url: "/catalog/",
+        url: "/catalog/vodiany-agregaty",
         img: "/img/home/zao_tst_agregaty_std-300.png",
       },
     ],
@@ -63,12 +63,12 @@ const productCategories = [
       },
       {
         name: "Агрегаты АВО ХЛ",
-        url: "/catalog/",
+        url: "/catalog/avo-tvv",
         img: "/img/home/zao_tst_agregaty_avo.png",
       },
       {
         name: "Агрегаты СТД-300 ХЛ",
-        url: "/catalog/",
+        url: "/catalog/parovy-agregaty",
         img: "/img/home/zao_tst_agregaty_std-300-hl.png",
       },
     ],
@@ -96,14 +96,14 @@ const productCategories = [
       "Электрическое воздушное отопление целесообразно в помещениях, где нет подведенной тепловой сети и ее монтаж не представляется возможным. Электровоздушные установки и калориферы достаточно автономны в работе и для их подключения не требуется развернутых коммуникаций.",
     items: [
       {
-        name: "Установки СФОЦ",
-        url: "/catalog/sfotc",
-        img: "/img/home/zao_tst_ustanovki_sfotc.png",
-      },
-      {
         name: "Калориферы СФО",
         url: "/catalog/sfo",
         img: "/img/home/zao_tst_elektrokalorifery_sfo.png",
+      },
+      {
+        name: "Установки СФОЦ",
+        url: "/catalog/sfotc",
+        img: "/img/home/zao_tst_ustanovki_sfotc.png",
       },
       {
         name: "Шкафы управления",
