@@ -71,9 +71,10 @@ export default function BackToTop({
 
   return (
     <Button
+      size="unset"
       aria-label={ariaLabel}
       onClick={onClick}
-      className={`${className} fixed z-50 transition-opacity duration-300 ${
+      className={`${className} fixed z-50 p-2 transition-opacity duration-300 ${
         visible
           ? "pointer-events-auto opacity-100"
           : "pointer-events-none opacity-0"
@@ -84,7 +85,7 @@ export default function BackToTop({
         right: position === "right" ? offset : "unset",
       }}
     >
-      <ArrowBigUpDash size={64} />
+      <ArrowBigUpDash size={40} className="size-10" />
     </Button>
   );
 }

@@ -33,7 +33,6 @@ export default function RootLayout({
             </div>
           </nav>
           {children}
-          {/* Маячок перед футером */}
           <Footer />
           <BackToTop threshold={0.3} position="right" />
         </body>
