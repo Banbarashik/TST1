@@ -9,7 +9,7 @@ import Logo from "@/components/ui/logo";
 import Footer from "@/components/footer";
 import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
-import BackToTop from "@/components/backToTop";
+import BackToTop from "@/components/backToTopButton";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,7 +34,7 @@ export default function RootLayout({
           </nav>
           {children}
           <Footer />
-          <BackToTop threshold={0.3} position="right" />
+          <BackToTop threshold={0.3} />
         </body>
       </html>
     </ProductSelectionProvider>
