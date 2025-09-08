@@ -156,7 +156,7 @@ th {
 .ksk-table tr:nth-child(3) td:nth-child(n + 2),
 .kpsk-table tr:nth-child(4) td:nth-child(n + 2),
 .avo-hl-kp tr:nth-child(5) td:nth-child(n + 2) {
-  width: 43px;
+  width: 42px;
 }
 
 .table-wrap td:first-child {
