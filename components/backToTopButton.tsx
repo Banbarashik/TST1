@@ -59,7 +59,7 @@ export default function BackToTop({
       <Button
         size="unset"
         onClick={onClick}
-        className={`p-2 transition-opacity duration-300 ${
+        className={`cursor-pointer p-2 transition-opacity duration-300 ${
           visible
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
