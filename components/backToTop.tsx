@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { ArrowBigUpDash } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
 type Mode = "px" | "percent";
 
 interface BackToTopProps {
@@ -66,26 +70,21 @@ export default function BackToTop({
   };
 
   return (
-    <button
-      type="button"
+    <Button
       aria-label={ariaLabel}
       onClick={onClick}
-      className={[
-        "fixed z-50 rounded-xl bg-blue-600 px-4 py-2 text-white shadow-lg",
-        "focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none",
-        "transition-opacity duration-300", // fade-in/fade-out
+      className={`${className} fixed z-50 transition-opacity duration-300 ${
         visible
           ? "pointer-events-auto opacity-100"
-          : "pointer-events-none opacity-0",
-        className,
-      ].join(" ")}
+          : "pointer-events-none opacity-0"
+      }`}
       style={{
         bottom: offset,
         left: position === "left" ? offset : "unset",
         right: position === "right" ? offset : "unset",
       }}
     >
-      Наверх
-    </button>
+      <ArrowBigUpDash size={64} />
+    </Button>
   );
 }
