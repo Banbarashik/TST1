@@ -29,9 +29,9 @@ export default async function Catalog({
 
   // 1) фильтрация по категории
   const filteredProducts =
-    params.category === "all"
+    slug === "all"
       ? productData
-      : productData.filter((p) => p.categories?.includes(params.category));
+      : productData.filter((p) => p.categories?.includes(slug));
 
   let ordered: typeof filteredProducts;
 
