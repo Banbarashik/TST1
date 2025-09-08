@@ -43,7 +43,7 @@ export default function ContactFormTrigger() {
           <VisuallyHidden>
             <Dialog.Title>Заявка</Dialog.Title>
           </VisuallyHidden>
-          <ContactForm preselectedProducts={selected} />
+          <ContactForm />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
