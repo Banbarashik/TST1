@@ -5,7 +5,6 @@ import type { SupplyCalorifier } from "@/types";
 
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 
-import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";

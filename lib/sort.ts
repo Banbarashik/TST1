@@ -3,7 +3,6 @@ type Product = {
   name: string;
   price?: number;
   airPower: number;
-  [k: string]: any;
 };
 
 export type SortParam = "default" | "airPower_asc" | "airPower_desc";
