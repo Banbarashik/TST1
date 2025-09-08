@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import "keen-slider/keen-slider.min.css";
-import Footer from "@/components/footer";
-import NavigationMenu from "@/components/navigationMenu";
-import Logo from "@/components/ui/logo";
 
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
+
+import "@/app/globals.css";
+import "keen-slider/keen-slider.min.css";
+
+import Logo from "@/components/ui/logo";
+import Footer from "@/components/footer";
+import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
+import BackToTop from "@/components/backToTop";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,6 +35,7 @@ export default function RootLayout({
           {children}
           {/* Маячок перед футером */}
           <Footer />
+          <BackToTop threshold={0.3} position="right" />
         </body>
       </html>
     </ProductSelectionProvider>
