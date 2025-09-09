@@ -30,6 +30,7 @@ import {
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
 import Link from "next/link";
+import { ScrollArea } from "./ui/scroll-area";
 
 // Allowed file types/extensions
 const ALLOWED_TYPES = [
@@ -340,200 +341,202 @@ export default function ContactForm({
 
   // 8. Render the form
   return (
-    <Card className="max-h-screen w-full max-w-xl overflow-y-scroll">
-      <CardContent>
-        <Form {...form}>
-          <form
-            id={formId}
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-6"
-          >
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Ваше имя</FormLabel>
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="company"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Название организации</FormLabel>
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input type="email" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="region"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Регион, город</FormLabel>
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="products"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Интересующие товары</FormLabel>
-                  <FormControl>
-                    <ProductMultiSelect
-                      selectedProducts={selectedProducts}
-                      setSelectedProducts={setSelectedProducts} // update context directly
-                      setProductAmount={setProductAmount}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Сообщение</FormLabel>
-                  <FormControl>
-                    <Textarea {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="files"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Вложения</FormLabel>
-                  <FormControl>
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-center gap-2">
-                        <Input
-                          type="file"
-                          multiple
-                          accept={ALLOWED_EXTENSIONS.join(",")}
-                          onChange={handleFileChange}
-                          ref={fileInputRef}
-                        />
-                        <Button
-                          type="button"
-                          variant="outline"
-                          onClick={handleClearFiles}
-                        >
-                          Очистить
-                        </Button>
-                      </div>
-                      {/* Show list of selected files */}
-                      {selectedFiles.length > 0 && (
-                        <ul className="mt-2 space-y-1">
-                          {selectedFiles.map((file, idx) => (
-                            <li
-                              key={file.name + file.size + file.lastModified}
-                              className="flex items-center gap-2"
-                            >
-                              <span className="truncate">{file.name}</span>
-                              <Button
-                                type="button"
-                                size="sm"
-                                variant="ghost"
-                                onClick={() => handleRemoveFile(idx)}
-                              >
-                                ✕
-                              </Button>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="consent"
-              render={({ field }) => (
-                <FormItem className="flex items-start gap-3">
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value ?? false}
-                      onCheckedChange={(val) => field.onChange(!!val)}
-                      aria-required
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <FormLabel
-                      className="mb-2 font-normal"
-                      style={{ color: "black" }}
-                    >
-                      <div>
-                        Нажимая на кнопку Вы соглашаетесь с{" "}
-                        <Link
-                          href="/personal-data"
-                          target="_blank"
-                          className="text-blue-700"
-                        >
-                          политикой обработки персональных данных
-                        </Link>
-                      </div>
-                    </FormLabel>
+    <ScrollArea className="h-187 max-w-xl rounded-md">
+      <Card>
+        <CardContent>
+          <Form {...form}>
+            <form
+              id={formId}
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-6"
+            >
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Ваше имя</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
                     <FormMessage />
-                  </div>
-                </FormItem>
-              )}
-            />
-          </form>
-        </Form>
-        {sent && (
-          <div className="font-bold text-green-600">
-            Заявка успешно отправлена!
-          </div>
-        )}
-        {error && <div className="font-bold text-red-600">{error}</div>}
-      </CardContent>
-      <CardFooter className="flex">
-        <Button type="submit" form={formId} disabled={loading}>
-          {loading ? "Отправка..." : "Оставить заявку"}
-        </Button>
-        {selectedProducts.length > 0 && (
-          <p className="ml-auto">
-            Итоговая стоимость:{" "}
-            {getTotalPrice(selectedProducts).toLocaleString("ru-RU")} руб.
-          </p>
-        )}
-      </CardFooter>
-    </Card>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="company"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Название организации</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input type="email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="region"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Регион, город</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="products"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Интересующие товары</FormLabel>
+                    <FormControl>
+                      <ProductMultiSelect
+                        selectedProducts={selectedProducts}
+                        setSelectedProducts={setSelectedProducts} // update context directly
+                        setProductAmount={setProductAmount}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Сообщение</FormLabel>
+                    <FormControl>
+                      <Textarea {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="files"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Вложения</FormLabel>
+                    <FormControl>
+                      <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-2">
+                          <Input
+                            type="file"
+                            multiple
+                            accept={ALLOWED_EXTENSIONS.join(",")}
+                            onChange={handleFileChange}
+                            ref={fileInputRef}
+                          />
+                          <Button
+                            type="button"
+                            variant="outline"
+                            onClick={handleClearFiles}
+                          >
+                            Очистить
+                          </Button>
+                        </div>
+                        {/* Show list of selected files */}
+                        {selectedFiles.length > 0 && (
+                          <ul className="mt-2 space-y-1">
+                            {selectedFiles.map((file, idx) => (
+                              <li
+                                key={file.name + file.size + file.lastModified}
+                                className="flex items-center gap-2"
+                              >
+                                <span className="truncate">{file.name}</span>
+                                <Button
+                                  type="button"
+                                  size="sm"
+                                  variant="ghost"
+                                  onClick={() => handleRemoveFile(idx)}
+                                >
+                                  ✕
+                                </Button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="consent"
+                render={({ field }) => (
+                  <FormItem className="flex items-start gap-3">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value ?? false}
+                        onCheckedChange={(val) => field.onChange(!!val)}
+                        aria-required
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel
+                        className="mb-2 font-normal"
+                        style={{ color: "black" }}
+                      >
+                        <div>
+                          Нажимая на кнопку Вы соглашаетесь с{" "}
+                          <Link
+                            href="/personal-data"
+                            target="_blank"
+                            className="text-blue-700"
+                          >
+                            политикой обработки персональных данных
+                          </Link>
+                        </div>
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
+                  </FormItem>
+                )}
+              />
+            </form>
+          </Form>
+          {sent && (
+            <div className="font-bold text-green-600">
+              Заявка успешно отправлена!
+            </div>
+          )}
+          {error && <div className="font-bold text-red-600">{error}</div>}
+        </CardContent>
+        <CardFooter className="flex">
+          <Button type="submit" form={formId} disabled={loading}>
+            {loading ? "Отправка..." : "Оставить заявку"}
+          </Button>
+          {selectedProducts.length > 0 && (
+            <p className="ml-auto">
+              Итоговая стоимость:{" "}
+              {getTotalPrice(selectedProducts).toLocaleString("ru-RU")} руб.
+            </p>
+          )}
+        </CardFooter>
+      </Card>
+    </ScrollArea>
   );
 }
