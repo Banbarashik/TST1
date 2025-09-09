@@ -11,8 +11,8 @@ const slides = [
   {
     title: ["25 лет на рынке", "воздушно-отопительного оборудования"],
     text: "",
-    img: "/img/hero/slide1_1.png",
-    class: "scale-110",
+    img: "/img/hero/slide-12.png",
+    class: "scale-100",
     titleClass: "text-6xl",
   },
   {
@@ -58,26 +58,30 @@ export default function Hero() {
               src={slide.img}
               alt=""
               fill
-              className={`h-full w-full object-cover blur-sm ${slide.class}`}
+              className={`object-fill blur-[1px] ${slide.class}`}
               priority
               aria-hidden="true"
             />
             {/* Overlay for darkening */}
-            <div className="absolute inset-0 bg-black/30" />
+            {<div className="absolute inset-0 bg-black/30" />}
+            {/* {<div className="absolute inset-0 bg-white/10" />} */}
             {/* Centered Text */}
             <div
               className={`${
                 idx === 2 ? "max-w-6xl" : "max-w-5xl"
               } relative z-10 mx-auto px-4 text-center text-white`}
             >
-              {slide.title.map((t) => (
-                <p
-                  key={t}
-                  className={`font-bold drop-shadow-lg text-shadow-sm/30 ${slide.titleClass}`}
-                >
-                  {t}
-                </p>
-              ))}
+              <div className="relative">
+                <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-40 blur-[60px]"></span>
+                {slide.title.map((t) => (
+                  <p
+                    key={t}
+                    className={`font-bold drop-shadow-lg text-shadow-sm/30 ${slide.titleClass}`}
+                  >
+                    {t}
+                  </p>
+                ))}
+              </div>
               {/* <h2 className="text-6xl font-bold drop-shadow-lg mb-10">
                 {slide.title}
               </h2> */}
