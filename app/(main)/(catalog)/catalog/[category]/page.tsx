@@ -12,11 +12,20 @@ import ProductCard from "@/components/catalog/productCard";
 import SortControls from "@/components/catalog/SortControls";
 import { comparatorFor, parseSortParam } from "@/lib/sort";
 
-const defaultCategory = { title: "Вся продукция", slug: "all" };
 const PRODUCTS_PER_PAGE = 21;
 
-// get current category, return its 'metadata' prop
-// return default category if slug is 'all'
+const defaultCategory = {
+  title: "Воздушно-отопительное оборудование",
+  slug: "all",
+  metadata: {
+    title: "Каталог воздушно-отопительного оборудования",
+    description:
+      "Каталог воздушно-отопительного оборудования производства ООО Т.С.Т. Цена водяных и паровых калориферов, отопительных агрегатов, электронагревательных установок",
+    keywords:
+      "каталог воздушно-отопительного оборудования,каталог оборудования для воздушного отопления,водяное оборудование для воздушного отопления,паровое оборудование для воздушного отопления,электрическое оборудование для воздушного отопления",
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -26,6 +35,9 @@ export async function generateMetadata({
   if (slug === "all") return defaultCategory.metadata;
 
   const category = findCategoryBySlug(slug, categoryTree);
+  if (!category) return { title: "Товары отсутствуют" };
+
+  return category.metadata;
 }
 
 export default async function Catalog({
@@ -84,8 +96,8 @@ export default async function Catalog({
 
   if (ordered.length === 0)
     return (
-      <div className="flex w-full items-center justify-center text-xl">
-        Нет товаров в данной категории.
+      <div className="flex w-full items-center justify-center text-3xl">
+        Нет товаров в данной категории
       </div>
     );
 
