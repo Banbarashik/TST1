@@ -30,7 +30,7 @@ import {
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
 import Link from "next/link";
-import { ScrollArea } from "./ui/scroll-area";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 // Allowed file types/extensions
 const ALLOWED_TYPES = [
@@ -341,7 +341,7 @@ export default function ContactForm({
 
   // 8. Render the form
   return (
-    <ScrollArea className="h-187 max-w-xl rounded-md">
+    <ScrollArea className="h-189 max-w-2xl rounded-md">
       <Card>
         <CardContent>
           <Form {...form}>
@@ -537,6 +537,7 @@ export default function ContactForm({
           )}
         </CardFooter>
       </Card>
+      <ScrollBar orientation="horizontal" />
     </ScrollArea>
   );
 }

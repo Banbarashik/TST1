@@ -54,7 +54,9 @@ export default function Home() {
               ближайшее время.
             </p>
           </div>
-          <ContactForm outOfContext />
+          <div className="max-w-xl">
+            <ContactForm outOfContext />
+          </div>
         </div>
       </div>
       {/* CONTACT FORM SECTION END */}

@@ -115,14 +115,14 @@ export function ProductMultiSelect({
           >
             {selectedProductData.length === 0
               ? "Выберите товары"
-              : selectedProductData.length <= 3
+              : selectedProductData.length <= 2
                 ? selectedProductData
                     .map((selProdData) => selProdData.name)
                     .join(", ")
                 : `${selectedProductData
-                    .slice(0, 3)
+                    .slice(0, 2)
                     .map((selProdData) => selProdData.name)
-                    .join(", ")} и ещё ${selectedProductData.length - 3}`}
+                    .join(", ")} и ещё ${selectedProductData.length - 2}`}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0">
