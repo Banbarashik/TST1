@@ -26,7 +26,6 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
-import { ScrollArea } from "./ui/scroll-area";
 
 function flattenProducts(products: Product[]): Product[] {
   return products.flatMap((product) => {
@@ -164,20 +163,19 @@ export function ProductMultiSelect({
         </PopoverContent>
       </Popover>
       {/* Chips for selected products */}
-      <ScrollArea className="h-full max-h-42">
-        {selectedProductData.map((selProdData, i, arr) => {
+      <div className="mt-2 flex flex-col gap-2">
+        {selectedProductData.map((selProdData) => {
           // map data products to selected product
           const selectedProduct = selectedProducts.find(
             (selProd) => selProd.id === selProdData.id,
           );
+
           const price = selProdData.price;
           const amount = selectedProduct?.amount ?? 1;
           const total = price * amount;
+
           return (
-            <div
-              key={selProdData.id}
-              className={`flex items-center gap-4 ${i < arr.length - 1 ? "mb-2" : ""}`}
-            >
+            <div key={selProdData.id} className="flex items-center gap-4">
               <div className="bg-accent flex max-w-fit items-center gap-5 rounded px-3 py-1.5 text-sm">
                 {selProdData.name}
                 <NumberInput
@@ -215,11 +213,12 @@ export function ProductMultiSelect({
                   <X className="size-4" />
                 </button>
               </div>
+
               <p>{total.toLocaleString("ru-RU")} руб.</p>
             </div>
           );
         })}
-      </ScrollArea>
+      </div>
     </div>
   );
 }
