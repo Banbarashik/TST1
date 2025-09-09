@@ -25,7 +25,7 @@ export default function KaloriferySFO() {
 
   return (
     <>
-      <Heading lvl={1} text="Электрокалориферы СФО" />
+      <Heading lvl={1} text="Электрические калориферы СФО" />
 
       <section>
         <Heading lvl={2} text="Назначение электрокалориферов СФО" />

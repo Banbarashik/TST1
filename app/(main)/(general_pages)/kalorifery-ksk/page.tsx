@@ -28,7 +28,7 @@ export default function KaloriferyKSKPage() {
 
   return (
     <>
-      <Heading lvl={1} text="Калориферы КСк" />
+      <Heading lvl={1} text="Калориферы КСк водяные" />
 
       <section>
         <Heading lvl={2} text="Производство и назначение калориферов КСк" />

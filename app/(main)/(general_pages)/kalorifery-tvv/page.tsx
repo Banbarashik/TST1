@@ -27,7 +27,7 @@ export default function KaloriferyTVVPage() {
 
   return (
     <>
-      <Heading lvl={1} text="Калориферы ТВВ" />
+      <Heading lvl={1} text="Калориферы ТВВ водяные" />
 
       <section>
         <Heading lvl={2} text="Производство и назначение калориферов ТВВ" />

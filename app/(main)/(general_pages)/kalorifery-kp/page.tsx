@@ -27,7 +27,7 @@ export default function KaloriferyKPPage() {
 
   return (
     <>
-      <Heading lvl={1} text="Калориферы КП" />
+      <Heading lvl={1} text="Калориферы КП паровые" />
 
       <section>
         <Heading lvl={2} text="Производство и назначение калориферов КП" />

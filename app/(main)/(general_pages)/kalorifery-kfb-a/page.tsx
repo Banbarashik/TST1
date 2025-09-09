@@ -27,7 +27,7 @@ export default function KaloriferyKFBAPage() {
 
   return (
     <>
-      <Heading lvl={1} text="Калориферы КФБ-А М" />
+      <Heading lvl={1} text="Калориферы КФБ-А М водяные" />
 
       <section>
         <Heading lvl={2} text="Производство калориферов КФБ-А М" />
