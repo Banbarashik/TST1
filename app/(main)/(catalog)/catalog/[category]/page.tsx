@@ -1,18 +1,32 @@
-// app/(...)/[category]/page.tsx  (твой файл)
 import { productData } from "@/data/products";
 import { categoryTree } from "@/data/categories";
+
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import { sortProducts } from "@/lib/utils";
 import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
-import SortControls from "@/components/catalog/SortControls"; // ⟵ новое
-import { comparatorFor, parseSortParam } from "@/lib/sort"; // ⟵ новое
+import SortControls from "@/components/catalog/SortControls";
+import { comparatorFor, parseSortParam } from "@/lib/sort";
 
 const defaultCategory = { title: "Вся продукция", slug: "all" };
 const PRODUCTS_PER_PAGE = 21;
+
+// get current category, return its 'metadata' prop
+// return default category if slug is 'all'
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category: slug } = await params;
+  if (slug === "all") return defaultCategory.metadata;
+
+  const category = findCategoryBySlug(slug, categoryTree);
+}
 
 export default async function Catalog({
   params,

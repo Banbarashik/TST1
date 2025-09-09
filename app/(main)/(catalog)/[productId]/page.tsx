@@ -3,15 +3,15 @@ import { productData } from "@/data/products";
 import type { Metadata } from "next";
 
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
+import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 
-import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
-import KSKProductPage from "@/components/catalog/KSKProductPage";
 import STDPage from "@/components/catalog/STDPage";
 import AVOPage from "@/components/catalog/AVOPage";
-import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
-import ElectroEquipmentPage from "@/components/catalog/ElectroEquipmentPage";
 import TenyPage from "@/components/catalog/TenyPage";
 import QuestionButton from "@/components/questionButton";
+import KSKProductPage from "@/components/catalog/KSKProductPage";
+import SupplyCalorifierPage from "@/components/catalog/supplyCalorifierPage";
+import ElectroEquipmentPage from "@/components/catalog/ElectroEquipmentPage";
 
 function getProductType(categories: string[]) {
   if (
@@ -41,7 +41,7 @@ export async function generateMetadata({
   const { productId } = await params;
   const product = productData.find((p) => p.id === productId);
 
-  if (!product) return {};
+  if (!product) return { title: "Товар не найден" };
 
   const productType = getProductType(product.categories);
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -182,7 +182,12 @@ export default async function ProductPage({
   const { productId } = await params;
   const product = productData.find((p) => p.id === productId);
 
-  if (!product) return <div>Товар не найден</div>;
+  if (!product)
+    return (
+      <div className="flex w-full items-center justify-center text-3xl">
+        Товар не найден
+      </div>
+    );
 
   const productType = getProductType(product.categories);
 
