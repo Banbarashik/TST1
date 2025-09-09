@@ -231,10 +231,10 @@ export const categoryTree: Category[] = [
       },
       {
         slug: "kpsk",
-        title: "Каталог паровых калориферов КПСК",
+        title: "Калориферы КПСк",
         menuTitle: "Калориферы КПСк",
         metadata: {
-          title: "Каталог паровых калориферов КПСК",
+          title: "Каталог паровых калориферов КПСк",
           description:
             "Каталог паровых калориферов КПСк производства ООО Т.С.Т. Характеристики, производительность по воздуху, тепловая мощность, цена калориферов КПСк",
           keywords:
@@ -331,7 +331,7 @@ export const categoryTree: Category[] = [
         children: [
           {
             slug: "kfb-a3-p",
-            title: "Трехрядные калориферы КФБ-А",
+            title: "Трехрядные калориферы КФБ-А П",
             menuTitle: "Трехрядные КФБ-А3",
             metadata: {
               title: "Каталог паровых калориферов КФБ-А3 П",
@@ -343,7 +343,7 @@ export const categoryTree: Category[] = [
           },
           {
             slug: "kfb-a4-p",
-            title: "Четырехрядные калориферы КФБ-А",
+            title: "Четырехрядные калориферы КФБ-А П",
             menuTitle: "Четырехрядные КФБ-А4",
             metadata: {
               title: "Каталог паровых калориферов КФБ-А4 П",
@@ -383,7 +383,7 @@ export const categoryTree: Category[] = [
         children: [
           {
             slug: "ao2-v",
-            title: "Агрегаты отопительные АО2",
+            title: "Агрегаты отопительные АО2 В",
             menuTitle: "Агрегаты АО2",
             metadata: {
               title: "Каталог агрегатов АО 2 водяных",
@@ -395,7 +395,7 @@ export const categoryTree: Category[] = [
           },
           {
             slug: "avo-tvv",
-            title: "Агрегаты отопительные АВО ХЛ",
+            title: "Агрегаты отопительные АВО ХЛ В",
             menuTitle: "Агрегаты АВО ХЛ",
             metadata: {
               title: "Каталог агрегатов АВО ХЛ водяных",
@@ -407,7 +407,7 @@ export const categoryTree: Category[] = [
           },
           {
             slug: "std300-v",
-            title: "Агрегаты отопительные СТД-300 ХЛ",
+            title: "Агрегаты отопительные СТД-300 ХЛ В",
             menuTitle: "Агрегаты СТД-300 ХЛ",
             metadata: {
               title: "Каталог агрегатов СТД-300 водяных",
@@ -433,7 +433,7 @@ export const categoryTree: Category[] = [
         children: [
           {
             slug: "ao2-p",
-            title: "Агрегаты отопительные АО2",
+            title: "Агрегаты отопительные АО2 П",
             menuTitle: "Агрегаты АО2",
             metadata: {
               title: "Каталог агрегатов АО 2 паровых",
@@ -445,7 +445,7 @@ export const categoryTree: Category[] = [
           },
           {
             slug: "avo-kp",
-            title: "Агрегаты отопительные АВО ХЛ",
+            title: "Агрегаты отопительные АВО ХЛ П",
             menuTitle: "Агрегаты АВО ХЛ",
             metadata: {
               title: "Каталог агрегатов АВО ХЛ паровых",
@@ -457,7 +457,7 @@ export const categoryTree: Category[] = [
           },
           {
             slug: "std300-p",
-            title: "Агрегаты отопительные СТД-300 ХЛ",
+            title: "Агрегаты отопительные СТД-300 ХЛ П",
             menuTitle: "Агрегаты СТД-300 ХЛ",
             metadata: {
               title: "Каталог агрегатов СТД-300 паровых",
