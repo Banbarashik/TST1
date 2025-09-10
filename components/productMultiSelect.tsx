@@ -137,6 +137,7 @@ export function ProductMultiSelect({
                     {productDataByMainCategory[category.slug].map(
                       (prodData) => (
                         <CommandItem
+                          className="cursor-pointer"
                           key={prodData.id}
                           onSelect={() => handleSelectProduct(prodData.id)}
                           data-selected={selectedProducts.some(
