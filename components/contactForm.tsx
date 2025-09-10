@@ -33,6 +33,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
 import Link from "next/link";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
+import { X } from "lucide-react";
 
 // Allowed file types/extensions
 const ALLOWED_TYPES = [
@@ -484,7 +485,7 @@ export default function ContactForm({
                                   variant="ghost"
                                   onClick={() => handleRemoveFile(idx)}
                                 >
-                                  ✕
+                                  <X className="size-4" />
                                 </Button>
                               </li>
                             ))}
@@ -506,13 +507,11 @@ export default function ContactForm({
                         checked={field.value ?? false}
                         onCheckedChange={(val) => field.onChange(!!val)}
                         aria-required
+                        className="cursor-pointer"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel
-                        className="mb-2 font-normal"
-                        style={{ color: "black" }}
-                      >
+                      <FormLabel style={{ color: "black" }}>
                         <div>
                           Нажимая на кнопку Вы соглашаетесь с{" "}
                           <Link
@@ -531,14 +530,8 @@ export default function ContactForm({
               />
             </form>
           </Form>
-          {sent && (
-            <div className="font-bold text-green-600">
-              Заявка успешно отправлена!
-            </div>
-          )}
-          {error && <div className="font-bold text-red-600">{error}</div>}
         </CardContent>
-        <CardFooter className="flex">
+        <CardFooter className="flex justify-between">
           <Button
             type="submit"
             form={formId}
@@ -548,11 +541,17 @@ export default function ContactForm({
             {loading ? "Отправка..." : "Оставить заявку"}
           </Button>
           {selectedProducts.length > 0 && (
-            <p className="ml-auto">
+            <p>
               Итоговая стоимость:{" "}
               {getTotalPrice(selectedProducts).toLocaleString("ru-RU")} руб.
             </p>
           )}
+          {sent && (
+            <p className="font-bold text-green-600">
+              Заявка успешно отправлена!
+            </p>
+          )}
+          {error && <p className="font-bold text-red-600">{error}</p>}
         </CardFooter>
       </Card>
       <ScrollBar orientation="horizontal" />

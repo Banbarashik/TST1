@@ -173,7 +173,7 @@ export function ProductMultiSelect({
 
           return (
             <div key={selProdData.id} className="flex items-center gap-4">
-              <div className="bg-accent flex w-2/3 items-center gap-5 rounded px-3 py-1.5 text-sm">
+              <div className="bg-accent flex w-3/4 items-center gap-5 rounded px-3 py-1.5 text-sm">
                 {selProdData.name}
                 <NumberInput
                   className={{
@@ -202,13 +202,16 @@ export function ProductMultiSelect({
                     );
                   }}
                 />
-                <button
+                <Button
+                  className="hover:bg-primary hover:text-primary-foreground px-1"
+                  variant="unstyled"
+                  size="content"
                   type="button"
                   onClick={() => handleRemoveSelectedProduct(selProdData.id)}
                   aria-label="Удалить"
                 >
-                  <X className="size-4" />
-                </button>
+                  <X className="size-5" />
+                </Button>
               </div>
 
               <p>{total.toLocaleString("ru-RU")} руб.</p>
