@@ -372,11 +372,13 @@ export default function ContactForm({
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <div className="flex justify-between">
+                      <FormLabel>Email</FormLabel>
+                      <FormMessage className="leading-none" />
+                    </div>
                     <FormControl>
                       <Input type="email" {...field} />
                     </FormControl>
-                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -415,11 +417,13 @@ export default function ContactForm({
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Сообщение</FormLabel>
+                    <div className="flex justify-between">
+                      <FormLabel>Сообщение</FormLabel>
+                      <FormMessage className="leading-none" />
+                    </div>
                     <FormControl>
                       <Textarea {...field} />
                     </FormControl>
-                    <FormMessage />
                   </FormItem>
                 )}
               />
