@@ -111,18 +111,15 @@ export function ProductMultiSelect({
           <Button
             variant="unstyled"
             type="button"
-            className="hover:border-ring hover:ring-ring/50 w-full max-w-full justify-start overflow-hidden border text-ellipsis whitespace-nowrap hover:ring-[3px]"
+            className="hover:border-ring hover:ring-ring/50 flex w-full max-w-131 justify-start border hover:ring-[3px]"
           >
-            {selectedProductData.length === 0
-              ? "Выберите товары"
-              : selectedProductData.length <= 2
-                ? selectedProductData
+            <span className="truncate">
+              {selectedProductData.length === 0
+                ? "Выберите товары"
+                : selectedProductData
                     .map((selProdData) => selProdData.name)
-                    .join(", ")
-                : `${selectedProductData
-                    .slice(0, 2)
-                    .map((selProdData) => selProdData.name)
-                    .join(", ")} и ещё ${selectedProductData.length - 2}`}
+                    .join(", ")}
+            </span>
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0">
