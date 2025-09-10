@@ -4,7 +4,7 @@ import { Product, ProductVariant, SupplyCalorifier, KSKProduct } from "@/types";
 
 export function findProductOrVariantById(
   id: string,
-  products?:
+  products:
     | Product
     | ProductVariant
     | SupplyCalorifier
