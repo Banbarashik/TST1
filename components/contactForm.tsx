@@ -19,6 +19,7 @@ import { sendEmail } from "@/lib/sendEmail";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
@@ -431,13 +432,25 @@ export default function ContactForm({
                     <FormControl>
                       <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
+                          {/* Hidden native input */}
                           <Input
                             type="file"
                             multiple
                             accept={ALLOWED_EXTENSIONS.join(",")}
                             onChange={handleFileChange}
                             ref={fileInputRef}
+                            style={{ display: "none" }}
                           />
+                          {/* Custom button triggers input click */}
+                          <Button
+                            type="button"
+                            variant="outline"
+                            onClick={() => fileInputRef.current?.click()}
+                          >
+                            {selectedFiles.length === 0
+                              ? "Выбрать файлы"
+                              : "Добавить ещё"}
+                          </Button>
                           <Button
                             type="button"
                             variant="outline"
@@ -445,6 +458,12 @@ export default function ContactForm({
                           >
                             Очистить
                           </Button>
+                          {/* Custom file summary */}
+                          <div className="text-sm text-gray-500">
+                            {selectedFiles.length === 0
+                              ? "Файл не выбран"
+                              : `Выбрано файлов: ${selectedFiles.length}`}
+                          </div>
                         </div>
                         {/* Show list of selected files */}
                         {selectedFiles.length > 0 && (
