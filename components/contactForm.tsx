@@ -539,7 +539,12 @@ export default function ContactForm({
           {error && <div className="font-bold text-red-600">{error}</div>}
         </CardContent>
         <CardFooter className="flex">
-          <Button type="submit" form={formId} disabled={loading}>
+          <Button
+            type="submit"
+            form={formId}
+            disabled={loading}
+            className="cursor-pointer"
+          >
             {loading ? "Отправка..." : "Оставить заявку"}
           </Button>
           {selectedProducts.length > 0 && (
