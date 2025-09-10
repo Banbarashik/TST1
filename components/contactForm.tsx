@@ -11,6 +11,7 @@ import { SelectedProduct } from "@/types";
 
 import { useProductSelection } from "@/context/ProductSelectionContext";
 
+import { findProductOrVariantById } from "@/lib/findProductOrVariantById";
 import { getTotalPrice } from "@/lib/totalPrice";
 import { loadFormData, removeFormData, saveFormData } from "@/lib/localStorage";
 import { sendEmail } from "@/lib/sendEmail";
@@ -85,17 +86,6 @@ const formSchema = z.object({
       message: "Вы должны принять условия обработки данных",
     }),
 });
-
-function findProductOrVariantById(products, id: string) {
-  for (const product of products) {
-    if (product.id === id) return product;
-    if (product.variants) {
-      const variant = product.variants.find((v) => v.id === id);
-      if (variant) return variant;
-    }
-  }
-  return null;
-}
 
 export default function ContactForm({
   outOfContext = false /* whether use local state or context */,
@@ -208,7 +198,7 @@ export default function ContactForm({
     // Convert products to human-readable form
     const readableProducts = values.products
       .map((p) => {
-        const product = findProductOrVariantById(productData, p.id);
+        const product = findProductOrVariantById(p.id);
         return `${product.name}, количество: ${p.amount}`;
       })
       .join("; ");
