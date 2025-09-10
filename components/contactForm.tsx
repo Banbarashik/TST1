@@ -1,8 +1,8 @@
 "use client";
 
-import { productData } from "@/data/products";
-
+import Link from "next/link";
 import React, { useId } from "react";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod/v4";
@@ -16,10 +16,11 @@ import { getTotalPrice } from "@/lib/totalPrice";
 import { loadFormData, removeFormData, saveFormData } from "@/lib/localStorage";
 import { sendEmail } from "@/lib/sendEmail";
 
+import { X } from "lucide-react";
+
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
@@ -31,9 +32,7 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ProductMultiSelect } from "@/components/productMultiSelect";
-import Link from "next/link";
-import { ScrollArea, ScrollBar } from "./ui/scroll-area";
-import { X } from "lucide-react";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 // Allowed file types/extensions
 const ALLOWED_TYPES = [
@@ -258,6 +257,15 @@ export default function ContactForm({
       setLoading(false);
     }
   }
+
+  // Reset "sent" when user starts typing after successful submit
+  React.useEffect(() => {
+    if (!sent) return;
+    const subscription = form.watch(() => {
+      setSent(false);
+    });
+    return () => subscription.unsubscribe();
+  }, [sent, form]);
 
   // Handler for file input change with validation and file count limit
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
