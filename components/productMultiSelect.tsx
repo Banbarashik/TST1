@@ -128,7 +128,7 @@ export function ProductMultiSelect({
         <PopoverContent className="p-0">
           <Command>
             <CommandInput placeholder="Поиск товара..." />
-            <CommandList>
+            <CommandList onWheel={(e) => e.stopPropagation()}>
               <CommandEmpty>Товар не найден</CommandEmpty>
               {mainCategories.map((category) =>
                 productDataByMainCategory[category.slug].length > 0 ? (
