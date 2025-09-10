@@ -13,21 +13,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1572x1572-2",
-        name: "Приточный калорифер КПВС 1572x1572_2",
+        name: "Калорифер КПВС 1572x1572_2",
         rows: 2,
         heatPower: 301,
         price: 65202,
       },
       {
         id: "kpvs-1572x1572-3",
-        name: "Приточный калорифер КПВС 1572x1572_3",
+        name: "Калорифер КПВС 1572x1572_3",
         rows: 3,
         heatPower: 388,
         price: 93469,
       },
       {
         id: "kpvs-1572x1572-4",
-        name: "Приточный калорифер КПВС 1572x1572_4",
+        name: "Калорифер КПВС 1572x1572_4",
         rows: 4,
         heatPower: 450,
         price: 120951,
@@ -58,21 +58,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1530x1530-2",
-        name: "Приточный калорифер КПВС 1530x1530_2",
+        name: "Калорифер КПВС 1530x1530_2",
         heatPower: 278,
         price: 63035,
         rows: 2,
       },
       {
         id: "kpvs-1530x1530-3",
-        name: "Приточный калорифер КПВС 1530x1530_3",
+        name: "Калорифер КПВС 1530x1530_3",
         heatPower: 359,
         price: 90220,
         rows: 3,
       },
       {
         id: "kpvs-1530x1530-4",
-        name: "Приточный калорифер КПВС 1530x1530_4",
+        name: "Калорифер КПВС 1530x1530_4",
         heatPower: 416,
         price: 116630,
         rows: 4,
@@ -111,21 +111,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1489x1489-2",
-        name: "Приточный калорифер КПВС 1489x1489_2",
+        name: "Калорифер КПВС 1489x1489_2",
         heatPower: 263,
         price: 60694,
         rows: 2,
       },
       {
         id: "kpvs-1489x1489-3",
-        name: "Приточный калорифер КПВС 1489x1489_3",
+        name: "Калорифер КПВС 1489x1489_3",
         heatPower: 340,
         price: 86807,
         rows: 3,
       },
       {
         id: "kpvs-1489x1489-4",
-        name: "Приточный калорифер КПВС 1489x1489_4",
+        name: "Калорифер КПВС 1489x1489_4",
         heatPower: 394,
         price: 112153,
         rows: 4,
@@ -164,21 +164,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1447x1447-2",
-        name: "Приточный калорифер КПВС 1447x1447_2",
+        name: "Калорифер КПВС 1447x1447_2",
         heatPower: 249,
         price: 58478,
         rows: 2,
       },
       {
         id: "kpvs-1447x1447-3",
-        name: "Приточный калорифер КПВС 1447x1447_3",
+        name: "Калорифер КПВС 1447x1447_3",
         heatPower: 322,
         price: 83493,
         rows: 3,
       },
       {
         id: "kpvs-1447x1447-4",
-        name: "Приточный калорифер КПВС 1447x1447_4",
+        name: "Калорифер КПВС 1447x1447_4",
         heatPower: 373,
         price: 107751,
         rows: 4,
@@ -217,21 +217,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1405x1405-2",
-        name: "Приточный калорифер КПВС 1405x1405_2",
+        name: "Калорифер КПВС 1405x1405_2",
         heatPower: 235,
         price: 56055,
         rows: 2,
       },
       {
         id: "kpvs-1405x1405-3",
-        name: "Приточный калорифер КПВС 1405x1405_3",
+        name: "Калорифер КПВС 1405x1405_3",
         heatPower: 304,
         price: 79968,
         rows: 3,
       },
       {
         id: "kpvs-1405x1405-4",
-        name: "Приточный калорифер КПВС 1405x1405_4",
+        name: "Калорифер КПВС 1405x1405_4",
         heatPower: 353,
         price: 103133,
         rows: 4,
@@ -270,21 +270,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1364x1364-2",
-        name: "Приточный калорифер КПВС 1364x1364_2",
+        name: "Калорифер КПВС 1364x1364_2",
         heatPower: 220,
         price: 53845,
         rows: 2,
       },
       {
         id: "kpvs-1364x1364-3",
-        name: "Приточный калорифер КПВС 1364x1364_3",
+        name: "Калорифер КПВС 1364x1364_3",
         heatPower: 287,
         price: 76669,
         rows: 3,
       },
       {
         id: "kpvs-1364x1364-4",
-        name: "Приточный калорифер КПВС 1364x1364_4",
+        name: "Калорифер КПВС 1364x1364_4",
         heatPower: 332,
         price: 98757,
         rows: 4,
@@ -335,21 +335,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1322x1322-2",
-        name: "Приточный калорифер КПВС 1322x1322_2",
+        name: "Калорифер КПВС 1322x1322_2",
         heatPower: 206,
         price: 51395,
         rows: 2,
       },
       {
         id: "kpvs-1322x1322-3",
-        name: "Приточный калорифер КПВС 1322x1322_3",
+        name: "Калорифер КПВС 1322x1322_3",
         heatPower: 269,
         price: 73113,
         rows: 3,
       },
       {
         id: "kpvs-1322x1322-4",
-        name: "Приточный калорифер КПВС 1322x1322_4",
+        name: "Калорифер КПВС 1322x1322_4",
         heatPower: 314,
         price: 94108,
         rows: 4,
@@ -388,21 +388,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1280x1280-2",
-        name: "Приточный калорифер КПВС 1280x1280_2",
+        name: "Калорифер КПВС 1280x1280_2",
         heatPower: 193,
         price: 49139,
         rows: 2,
       },
       {
         id: "kpvs-1280x1280-3",
-        name: "Приточный калорифер КПВС 1280x1280_3",
+        name: "Калорифер КПВС 1280x1280_3",
         heatPower: 252,
         price: 69753,
         rows: 3,
       },
       {
         id: "kpvs-1280x1280-4",
-        name: "Приточный калорифер КПВС 1280x1280_4",
+        name: "Калорифер КПВС 1280x1280_4",
         heatPower: 293,
         price: 89656,
         rows: 4,
@@ -441,21 +441,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1239x1239-2",
-        name: "Приточный калорифер КПВС 1239x1239_2",
+        name: "Калорифер КПВС 1239x1239_2",
         heatPower: 180,
         price: 46714,
         rows: 2,
       },
       {
         id: "kpvs-1239x1239-3",
-        name: "Приточный калорифер КПВС 1239x1239_3",
+        name: "Калорифер КПВС 1239x1239_3",
         heatPower: 235,
         price: 66245,
         rows: 3,
       },
       {
         id: "kpvs-1239x1239-4",
-        name: "Приточный калорифер КПВС 1239x1239_4",
+        name: "Калорифер КПВС 1239x1239_4",
         heatPower: 273,
         price: 85079,
         rows: 4,
@@ -506,21 +506,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1197x1197-2",
-        name: "Приточный калорифер КПВС 1197x1197_2",
+        name: "Калорифер КПВС 1197x1197_2",
         heatPower: 167,
         price: 44465,
         rows: 2,
       },
       {
         id: "kpvs-1197x1197-3",
-        name: "Приточный калорифер КПВС 1197x1197_3",
+        name: "Калорифер КПВС 1197x1197_3",
         heatPower: 218,
         price: 62903,
         rows: 3,
       },
       {
         id: "kpvs-1197x1197-4",
-        name: "Приточный калорифер КПВС 1197x1197_4",
+        name: "Калорифер КПВС 1197x1197_4",
         heatPower: 255,
         price: 80657,
         rows: 4,
@@ -571,21 +571,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1155x1155-2",
-        name: "Приточный калорифер КПВС 1155x1155_2",
+        name: "Калорифер КПВС 1155x1155_2",
         heatPower: 154,
         price: 42018,
         rows: 2,
       },
       {
         id: "kpvs-1155x1155-3",
-        name: "Приточный калорифер КПВС 1155x1155_3",
+        name: "Калорифер КПВС 1155x1155_3",
         heatPower: 202,
         price: 59371,
         rows: 3,
       },
       {
         id: "kpvs-1155x1155-4",
-        name: "Приточный калорифер КПВС 1155x1155_4",
+        name: "Калорифер КПВС 1155x1155_4",
         heatPower: 236,
         price: 76057,
         rows: 4,
@@ -623,21 +623,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1114x1114-2",
-        name: "Приточный калорифер КПВС 1114x1114_2",
+        name: "Калорифер КПВС 1114x1114_2",
         heatPower: 142,
         price: 39826,
         rows: 2,
       },
       {
         id: "kpvs-1114x1114-3",
-        name: "Приточный калорифер КПВС 1114x1114_3",
+        name: "Калорифер КПВС 1114x1114_3",
         heatPower: 187,
         price: 56122,
         rows: 3,
       },
       {
         id: "kpvs-1114x1114-4",
-        name: "Приточный калорифер КПВС 1114x1114_4",
+        name: "Калорифер КПВС 1114x1114_4",
         heatPower: 218,
         price: 71766,
         rows: 4,
@@ -675,21 +675,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1072x1072-2",
-        name: "Приточный калорифер КПВС 1072x1072_2",
+        name: "Калорифер КПВС 1072x1072_2",
         heatPower: 130,
         price: 37408,
         rows: 2,
       },
       {
         id: "kpvs-1072x1072-3",
-        name: "Приточный калорифер КПВС 1072x1072_3",
+        name: "Калорифер КПВС 1072x1072_3",
         heatPower: 171,
         price: 52644,
         rows: 3,
       },
       {
         id: "kpvs-1072x1072-4",
-        name: "Приточный калорифер КПВС 1072x1072_4",
+        name: "Калорифер КПВС 1072x1072_4",
         heatPower: 200,
         price: 67246,
         rows: 4,
@@ -727,21 +727,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-1030x1030-2",
-        name: "Приточный калорифер КПВС 1030x1030_2",
+        name: "Калорифер КПВС 1030x1030_2",
         heatPower: 118,
         price: 35230,
         rows: 2,
       },
       {
         id: "kpvs-1030x1030-3",
-        name: "Приточный калорифер КПВС 1030x1030_3",
+        name: "Калорифер КПВС 1030x1030_3",
         heatPower: 155,
         price: 49423,
         rows: 3,
       },
       {
         id: "kpvs-1030x1030-4",
-        name: "Приточный калорифер КПВС 1030x1030_4",
+        name: "Калорифер КПВС 1030x1030_4",
         heatPower: 182,
         price: 62998,
         rows: 4,
@@ -792,21 +792,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-989x989-2",
-        name: "Приточный калорифер КПВС 989x989_2",
+        name: "Калорифер КПВС 989x989_2",
         heatPower: 107,
         price: 32889,
         rows: 2,
       },
       {
         id: "kpvs-989x989-3",
-        name: "Приточный калорифер КПВС 989x989_3",
+        name: "Калорифер КПВС 989x989_3",
         heatPower: 141,
         price: 46070,
         rows: 3,
       },
       {
         id: "kpvs-989x989-4",
-        name: "Приточный калорифер КПВС 989x989_4",
+        name: "Калорифер КПВС 989x989_4",
         heatPower: 165,
         price: 58653,
         rows: 4,
@@ -857,21 +857,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-947x947-2",
-        name: "Приточный калорифер КПВС 947x947_2",
+        name: "Калорифер КПВС 947x947_2",
         heatPower: 96,
         price: 30774,
         rows: 2,
       },
       {
         id: "kpvs-947x947-3",
-        name: "Приточный калорифер КПВС 947x947_3",
+        name: "Калорифер КПВС 947x947_3",
         heatPower: 127,
         price: 42950,
         rows: 3,
       },
       {
         id: "kpvs-947x947-4",
-        name: "Приточный калорифер КПВС 947x947_4",
+        name: "Калорифер КПВС 947x947_4",
         heatPower: 148,
         price: 54547,
         rows: 4,
@@ -922,21 +922,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-905x905-2",
-        name: "Приточный калорифер КПВС 905x905_2",
+        name: "Калорифер КПВС 905x905_2",
         heatPower: 85,
         price: 28470,
         rows: 2,
       },
       {
         id: "kpvs-905x905-3",
-        name: "Приточный калорифер КПВС 905x905_3",
+        name: "Калорифер КПВС 905x905_3",
         heatPower: 113,
         price: 39665,
         rows: 3,
       },
       {
         id: "kpvs-905x905-4",
-        name: "Приточный калорифер КПВС 905x905_4",
+        name: "Калорифер КПВС 905x905_4",
         heatPower: 132,
         price: 50300,
         rows: 4,
@@ -987,21 +987,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-864x864-2",
-        name: "Приточный калорифер КПВС 864x864_2",
+        name: "Калорифер КПВС 864x864_2",
         heatPower: 75,
         price: 26463,
         rows: 2,
       },
       {
         id: "kpvs-864x864-3",
-        name: "Приточный калорифер КПВС 864x864_3",
+        name: "Калорифер КПВС 864x864_3",
         heatPower: 99,
         price: 36714,
         rows: 3,
       },
       {
         id: "kpvs-864x864-4",
-        name: "Приточный калорифер КПВС 864x864_4",
+        name: "Калорифер КПВС 864x864_4",
         heatPower: 115,
         price: 46426,
         rows: 4,
@@ -1052,21 +1052,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-822x822-2",
-        name: "Приточный калорифер КПВС 822x822_2",
+        name: "Калорифер КПВС 822x822_2",
         heatPower: 65,
         price: 24244,
         rows: 2,
       },
       {
         id: "kpvs-822x822-3",
-        name: "Приточный калорифер КПВС 822x822_3",
+        name: "Калорифер КПВС 822x822_3",
         heatPower: 85,
         price: 33566,
         rows: 3,
       },
       {
         id: "kpvs-822x822-4",
-        name: "Приточный калорифер КПВС 822x822_4",
+        name: "Калорифер КПВС 822x822_4",
         heatPower: 99,
         price: 42370,
         rows: 4,
@@ -1117,21 +1117,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-780x780-2",
-        name: "Приточный калорифер КПВС 780x780_2",
+        name: "Калорифер КПВС 780x780_2",
         heatPower: 55,
         price: 22312,
         rows: 2,
       },
       {
         id: "kpvs-780x780-3",
-        name: "Приточный калорифер КПВС 780x780_3",
+        name: "Калорифер КПВС 780x780_3",
         heatPower: 72,
         price: 30734,
         rows: 3,
       },
       {
         id: "kpvs-780x780-4",
-        name: "Приточный калорифер КПВС 780x780_4",
+        name: "Калорифер КПВС 780x780_4",
         heatPower: 84,
         price: 38662,
         rows: 4,
@@ -1182,21 +1182,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-739x739-2",
-        name: "Приточный калорифер КПВС 739x739_2",
+        name: "Калорифер КПВС 739x739_2",
         heatPower: 49,
         price: 20219,
         rows: 2,
       },
       {
         id: "kpvs-739x739-3",
-        name: "Приточный калорифер КПВС 739x739_3",
+        name: "Калорифер КПВС 739x739_3",
         heatPower: 64,
         price: 27786,
         rows: 3,
       },
       {
         id: "kpvs-739x739-4",
-        name: "Приточный калорифер КПВС 739x739_4",
+        name: "Калорифер КПВС 739x739_4",
         heatPower: 74,
         price: 34881,
         rows: 4,
@@ -1247,21 +1247,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-697x697-2",
-        name: "Приточный калорифер КПВС 697x697_2",
+        name: "Калорифер КПВС 697x697_2",
         heatPower: 43,
         price: 18406,
         rows: 2,
       },
       {
         id: "kpvs-697x697-3",
-        name: "Приточный калорифер КПВС 697x697_3",
+        name: "Калорифер КПВС 697x697_3",
         heatPower: 56,
         price: 25140,
         rows: 3,
       },
       {
         id: "kpvs-697x697-4",
-        name: "Приточный калорифер КПВС 697x697_4",
+        name: "Калорифер КПВС 697x697_4",
         heatPower: 65,
         price: 31426,
         rows: 4,
@@ -1312,21 +1312,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-655x655-2",
-        name: "Приточный калорифер КПВС 655x655_2",
+        name: "Калорифер КПВС 655x655_2",
         heatPower: 37,
         price: 16661,
         rows: 2,
       },
       {
         id: "kpvs-655x655-3",
-        name: "Приточный калорифер КПВС 655x655_3",
+        name: "Калорифер КПВС 655x655_3",
         heatPower: 48,
         price: 22600,
         rows: 3,
       },
       {
         id: "kpvs-655x655-4",
-        name: "Приточный калорифер КПВС 655x655_4",
+        name: "Калорифер КПВС 655x655_4",
         heatPower: 56,
         price: 28115,
         rows: 4,
@@ -1377,21 +1377,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-614x614-2",
-        name: "Приточный калорифер КПВС 614x614_2",
+        name: "Калорифер КПВС 614x614_2",
         heatPower: 31,
         price: 14756,
         rows: 2,
       },
       {
         id: "kpvs-614x614-3",
-        name: "Приточный калорифер КПВС 614x614_3",
+        name: "Калорифер КПВС 614x614_3",
         heatPower: 41,
         price: 19949,
         rows: 3,
       },
       {
         id: "kpvs-614x614-4",
-        name: "Приточный калорифер КПВС 614x614_4",
+        name: "Калорифер КПВС 614x614_4",
         heatPower: 48,
         price: 24742,
         rows: 4,
@@ -1442,21 +1442,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvs-572x572-2",
-        name: "Приточный калорифер КПВС 572x572_2",
+        name: "Калорифер КПВС 572x572_2",
         heatPower: 26,
         price: 13093,
         rows: 2,
       },
       {
         id: "kpvs-572x572-3",
-        name: "Приточный калорифер КПВС 572x572_3",
+        name: "Калорифер КПВС 572x572_3",
         heatPower: 34,
         price: 17548,
         rows: 3,
       },
       {
         id: "kpvs-572x572-4",
-        name: "Приточный калорифер КПВС 572x572_4",
+        name: "Калорифер КПВС 572x572_4",
         heatPower: 40,
         price: 21632,
         rows: 4,
@@ -1508,21 +1508,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1572x1572-2",
-        name: "Приточный калорифер КПВУ 1572x1572_2",
+        name: "Калорифер КПВУ 1572x1572_2",
         rows: 2,
         heatPower: 293,
         price: 68195,
       },
       {
         id: "kpvu-1572x1572-3",
-        name: "Приточный калорифер КПВУ 1572x1572_3",
+        name: "Калорифер КПВУ 1572x1572_3",
         rows: 3,
         heatPower: 395,
         price: 97847,
       },
       {
         id: "kpvu-1572x1572-4",
-        name: "Приточный калорифер КПВУ 1572x1572_4",
+        name: "Калорифер КПВУ 1572x1572_4",
         rows: 4,
         heatPower: 472,
         price: 128263,
@@ -1565,21 +1565,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1526x1526-2",
-        name: "Приточный калорифер КПВУ 1526x1526_2",
+        name: "Калорифер КПВУ 1526x1526_2",
         heatPower: 270,
         price: 65393,
         rows: 2,
       },
       {
         id: "kpvu-1526x1526-3",
-        name: "Приточный калорифер КПВУ 1526x1526_3",
+        name: "Калорифер КПВУ 1526x1526_3",
         heatPower: 364,
         price: 93742,
         rows: 3,
       },
       {
         id: "kpvu-1526x1526-4",
-        name: "Приточный калорифер КПВУ 1526x1526_4",
+        name: "Калорифер КПВУ 1526x1526_4",
         heatPower: 434,
         price: 123084,
         rows: 4,
@@ -1630,21 +1630,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1481x1481-2",
-        name: "Приточный калорифер КПВУ 1481x1481_2",
+        name: "Калорифер КПВУ 1481x1481_2",
         heatPower: 248,
         price: 62610,
         rows: 2,
       },
       {
         id: "kpvu-1481x1481-3",
-        name: "Приточный калорифер КПВУ 1481x1481_3",
+        name: "Калорифер КПВУ 1481x1481_3",
         heatPower: 335,
         price: 89671,
         rows: 3,
       },
       {
         id: "kpvu-1481x1481-4",
-        name: "Приточный калорифер КПВУ 1481x1481_4",
+        name: "Калорифер КПВУ 1481x1481_4",
         heatPower: 399,
         price: 117961,
         rows: 4,
@@ -1695,21 +1695,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1435x1435-2",
-        name: "Приточный калорифер КПВУ 1435x1435_2",
+        name: "Калорифер КПВУ 1435x1435_2",
         heatPower: 225,
         price: 59774,
         rows: 2,
       },
       {
         id: "kpvu-1435x1435-3",
-        name: "Приточный калорифер КПВУ 1435x1435_3",
+        name: "Калорифер КПВУ 1435x1435_3",
         heatPower: 303,
         price: 85527,
         rows: 3,
       },
       {
         id: "kpvu-1435x1435-4",
-        name: "Приточный калорифер КПВУ 1435x1435_4",
+        name: "Калорифер КПВУ 1435x1435_4",
         heatPower: 362,
         price: 112751,
         rows: 4,
@@ -1760,21 +1760,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1390x1390-2",
-        name: "Приточный калорифер КПВУ 1390x1390_2",
+        name: "Калорифер КПВУ 1390x1390_2",
         heatPower: 211,
         price: 56966,
         rows: 2,
       },
       {
         id: "kpvu-1390x1390-3",
-        name: "Приточный калорифер КПВУ 1390x1390_3",
+        name: "Калорифер КПВУ 1390x1390_3",
         heatPower: 284,
         price: 81431,
         rows: 3,
       },
       {
         id: "kpvu-1390x1390-4",
-        name: "Приточный калорифер КПВУ 1390x1390_4",
+        name: "Калорифер КПВУ 1390x1390_4",
         heatPower: 341,
         price: 107420,
         rows: 4,
@@ -1825,21 +1825,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1345x1345-2",
-        name: "Приточный калорифер КПВУ 1345x1345_2",
+        name: "Калорифер КПВУ 1345x1345_2",
         heatPower: 196,
         price: 54154,
         rows: 2,
       },
       {
         id: "kpvu-1345x1345-3",
-        name: "Приточный калорифер КПВУ 1345x1345_3",
+        name: "Калорифер КПВУ 1345x1345_3",
         heatPower: 267,
         price: 77334,
         rows: 3,
       },
       {
         id: "kpvu-1345x1345-4",
-        name: "Приточный калорифер КПВУ 1345x1345_4",
+        name: "Калорифер КПВУ 1345x1345_4",
         heatPower: 319,
         price: 102093,
         rows: 4,
@@ -1890,21 +1890,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1299x1299-2",
-        name: "Приточный калорифер КПВУ 1299x1299_2",
+        name: "Калорифер КПВУ 1299x1299_2",
         heatPower: 183,
         price: 51309,
         rows: 2,
       },
       {
         id: "kpvu-1299x1299-3",
-        name: "Приточный калорифер КПВУ 1299x1299_3",
+        name: "Калорифер КПВУ 1299x1299_3",
         heatPower: 248,
         price: 73193,
         rows: 3,
       },
       {
         id: "kpvu-1299x1299-4",
-        name: "Приточный калорифер КПВУ 1299x1299_4",
+        name: "Калорифер КПВУ 1299x1299_4",
         heatPower: 297,
         price: 96711,
         rows: 4,
@@ -1955,21 +1955,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1254x1254-2",
-        name: "Приточный калорифер КПВУ 1254x1254_2",
+        name: "Калорифер КПВУ 1254x1254_2",
         heatPower: 170,
         price: 48713,
         rows: 2,
       },
       {
         id: "kpvu-1254x1254-3",
-        name: "Приточный калорифер КПВУ 1254x1254_3",
+        name: "Калорифер КПВУ 1254x1254_3",
         heatPower: 230,
         price: 69329,
         rows: 3,
       },
       {
         id: "kpvu-1254x1254-4",
-        name: "Приточный калорифер КПВУ 1254x1254_4",
+        name: "Калорифер КПВУ 1254x1254_4",
         heatPower: 276,
         price: 91427,
         rows: 4,
@@ -2008,21 +2008,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1208x1208-2",
-        name: "Приточный калорифер КПВУ 1208x1208_2",
+        name: "Калорифер КПВУ 1208x1208_2",
         heatPower: 156,
         price: 45892,
         rows: 2,
       },
       {
         id: "kpvu-1208x1208-3",
-        name: "Приточный калорифер КПВУ 1208x1208_3",
+        name: "Калорифер КПВУ 1208x1208_3",
         heatPower: 213,
         price: 65235,
         rows: 3,
       },
       {
         id: "kpvu-1208x1208-4",
-        name: "Приточный калорифер КПВУ 1208x1208_4",
+        name: "Калорифер КПВУ 1208x1208_4",
         heatPower: 256,
         price: 86115,
         rows: 4,
@@ -2061,21 +2061,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1163x1163-2",
-        name: "Приточный калорифер КПВУ 1163x1163_2",
+        name: "Калорифер КПВУ 1163x1163_2",
         heatPower: 143,
         price: 43337,
         rows: 2,
       },
       {
         id: "kpvu-1163x1163-3",
-        name: "Приточный калорифер КПВУ 1163x1163_3",
+        name: "Калорифер КПВУ 1163x1163_3",
         heatPower: 196,
         price: 61440,
         rows: 3,
       },
       {
         id: "kpvu-1163x1163-4",
-        name: "Приточный калорифер КПВУ 1163x1163_4",
+        name: "Калорифер КПВУ 1163x1163_4",
         heatPower: 236,
         price: 80919,
         rows: 4,
@@ -2126,21 +2126,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1117x1117-2",
-        name: "Приточный калорифер КПВУ 1117x1117_2",
+        name: "Калорифер КПВУ 1117x1117_2",
         heatPower: 131,
         price: 40564,
         rows: 2,
       },
       {
         id: "kpvu-1117x1117-3",
-        name: "Приточный калорифер КПВУ 1117x1117_3",
+        name: "Калорифер КПВУ 1117x1117_3",
         heatPower: 179,
         price: 57428,
         rows: 3,
       },
       {
         id: "kpvu-1117x1117-4",
-        name: "Приточный калорифер КПВУ 1117x1117_4",
+        name: "Калорифер КПВУ 1117x1117_4",
         heatPower: 216,
         price: 75721,
         rows: 4,
@@ -2178,21 +2178,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1072x1072-2",
-        name: "Приточный калорифер КПВУ 1072x1072_2",
+        name: "Калорифер КПВУ 1072x1072_2",
         heatPower: 118,
         price: 38073,
         rows: 2,
       },
       {
         id: "kpvu-1072x1072-3",
-        name: "Приточный калорифер КПВУ 1072x1072_3",
+        name: "Калорифер КПВУ 1072x1072_3",
         heatPower: 163,
         price: 53734,
         rows: 3,
       },
       {
         id: "kpvu-1072x1072-4",
-        name: "Приточный калорифер КПВУ 1072x1072_4",
+        name: "Калорифер КПВУ 1072x1072_4",
         heatPower: 196,
         price: 70658,
         rows: 4,
@@ -2243,21 +2243,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-1026x1026-2",
-        name: "Приточный калорифер КПВУ 1026x1026_2",
+        name: "Калорифер КПВУ 1026x1026_2",
         heatPower: 106,
         price: 35370,
         rows: 2,
       },
       {
         id: "kpvu-1026x1026-3",
-        name: "Приточный калорифер КПВУ 1026x1026_3",
+        name: "Калорифер КПВУ 1026x1026_3",
         heatPower: 147,
         price: 49837,
         rows: 3,
       },
       {
         id: "kpvu-1026x1026-4",
-        name: "Приточный калорифер КПВУ 1026x1026_4",
+        name: "Калорифер КПВУ 1026x1026_4",
         heatPower: 176,
         price: 65619,
         rows: 4,
@@ -2308,21 +2308,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-981x981-2",
-        name: "Приточный калорифер КПВУ 981x981_2",
+        name: "Калорифер КПВУ 981x981_2",
         heatPower: 95,
         price: 32964,
         rows: 2,
       },
       {
         id: "kpvu-981x981-3",
-        name: "Приточный калорифер КПВУ 981x981_3",
+        name: "Калорифер КПВУ 981x981_3",
         heatPower: 131,
         price: 46278,
         rows: 3,
       },
       {
         id: "kpvu-981x981-4",
-        name: "Приточный калорифер КПВУ 981x981_4",
+        name: "Калорифер КПВУ 981x981_4",
         heatPower: 158,
         price: 60734,
         rows: 4,
@@ -2373,21 +2373,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-935x935-2",
-        name: "Приточный калорифер КПВУ 935x935_2",
+        name: "Калорифер КПВУ 935x935_2",
         heatPower: 83,
         price: 30353,
         rows: 2,
       },
       {
         id: "kpvu-935x935-3",
-        name: "Приточный калорифер КПВУ 935x935_3",
+        name: "Калорифер КПВУ 935x935_3",
         heatPower: 115,
         price: 42530,
         rows: 3,
       },
       {
         id: "kpvu-935x935-4",
-        name: "Приточный калорифер КПВУ 935x935_4",
+        name: "Калорифер КПВУ 935x935_4",
         heatPower: 138,
         price: 55898,
         rows: 4,
@@ -2438,21 +2438,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-890x890-2",
-        name: "Приточный калорифер КПВУ 890x890_2",
+        name: "Калорифер КПВУ 890x890_2",
         heatPower: 72,
         price: 28055,
         rows: 2,
       },
       {
         id: "kpvu-890x890-3",
-        name: "Приточный калорифер КПВУ 890x890_3",
+        name: "Калорифер КПВУ 890x890_3",
         heatPower: 99,
         price: 39141,
         rows: 3,
       },
       {
         id: "kpvu-890x890-4",
-        name: "Приточный калорифер КПВУ 890x890_4",
+        name: "Калорифер КПВУ 890x890_4",
         heatPower: 120,
         price: 51236,
         rows: 4,
@@ -2503,21 +2503,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-845x845-2",
-        name: "Приточный калорифер КПВУ 845x845_2",
+        name: "Калорифер КПВУ 845x845_2",
         heatPower: 61,
         price: 25585,
         rows: 2,
       },
       {
         id: "kpvu-845x845-3",
-        name: "Приточный калорифер КПВУ 845x845_3",
+        name: "Калорифер КПВУ 845x845_3",
         heatPower: 84,
         price: 35614,
         rows: 3,
       },
       {
         id: "kpvu-845x845-4",
-        name: "Приточный калорифер КПВУ 845x845_4",
+        name: "Калорифер КПВУ 845x845_4",
         heatPower: 102,
         price: 46699,
         rows: 4,
@@ -2568,21 +2568,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-799x799-2",
-        name: "Приточный калорифер КПВУ 799x799_2",
+        name: "Калорифер КПВУ 799x799_2",
         heatPower: 54,
         price: 23392,
         rows: 2,
       },
       {
         id: "kpvu-799x799-3",
-        name: "Приточный калорифер КПВУ 799x799_3",
+        name: "Калорифер КПВУ 799x799_3",
         heatPower: 75,
         price: 32388,
         rows: 3,
       },
       {
         id: "kpvu-799x799-4",
-        name: "Приточный калорифер КПВУ 799x799_4",
+        name: "Калорифер КПВУ 799x799_4",
         heatPower: 90,
         price: 42253,
         rows: 4,
@@ -2633,21 +2633,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-754x754-2",
-        name: "Приточный калорифер КПВУ 754x754_2",
+        name: "Калорифер КПВУ 754x754_2",
         heatPower: 47,
         price: 21057,
         rows: 2,
       },
       {
         id: "kpvu-754x754-3",
-        name: "Приточный калорифер КПВУ 754x754_3",
+        name: "Калорифер КПВУ 754x754_3",
         heatPower: 66,
         price: 29074,
         rows: 3,
       },
       {
         id: "kpvu-754x754-4",
-        name: "Приточный калорифер КПВУ 754x754_4",
+        name: "Калорифер КПВУ 754x754_4",
         heatPower: 80,
         price: 38006,
         rows: 4,
@@ -2698,21 +2698,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-708x708-2",
-        name: "Приточный калорифер КПВУ 708x708_2",
+        name: "Калорифер КПВУ 708x708_2",
         heatPower: 41,
         price: 19018,
         rows: 2,
       },
       {
         id: "kpvu-708x708-3",
-        name: "Приточный калорифер КПВУ 708x708_3",
+        name: "Калорифер КПВУ 708x708_3",
         heatPower: 57,
         price: 26088,
         rows: 3,
       },
       {
         id: "kpvu-708x708-4",
-        name: "Приточный калорифер КПВУ 708x708_4",
+        name: "Калорифер КПВУ 708x708_4",
         heatPower: 70,
         price: 33876,
         rows: 4,
@@ -2763,21 +2763,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-663x663-2",
-        name: "Приточный калорифер КПВУ 663x663_2",
+        name: "Калорифер КПВУ 663x663_2",
         heatPower: 35,
         price: 17089,
         rows: 2,
       },
       {
         id: "kpvu-663x663-3",
-        name: "Приточный калорифер КПВУ 663x663_3",
+        name: "Калорифер КПВУ 663x663_3",
         heatPower: 49,
         price: 23267,
         rows: 3,
       },
       {
         id: "kpvu-663x663-4",
-        name: "Приточный калорифер КПВУ 663x663_4",
+        name: "Калорифер КПВУ 663x663_4",
         heatPower: 59,
         price: 29962,
         rows: 4,
@@ -2828,21 +2828,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-617x617-2",
-        name: "Приточный калорифер КПВУ 617x617_2",
+        name: "Калорифер КПВУ 617x617_2",
         heatPower: 29,
         price: 14980,
         rows: 2,
       },
       {
         id: "kpvu-617x617-3",
-        name: "Приточный калорифер КПВУ 617x617_3",
+        name: "Калорифер КПВУ 617x617_3",
         heatPower: 41,
         price: 20306,
         rows: 3,
       },
       {
         id: "kpvu-617x617-4",
-        name: "Приточный калорифер КПВУ 617x617_4",
+        name: "Калорифер КПВУ 617x617_4",
         heatPower: 50,
         price: 26194,
         rows: 4,
@@ -2893,21 +2893,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpvu-572x572-2",
-        name: "Приточный калорифер КПВУ 572x572_2",
+        name: "Калорифер КПВУ 572x572_2",
         heatPower: 23,
         price: 13170,
         rows: 2,
       },
       {
         id: "kpvu-572x572-3",
-        name: "Приточный калорифер КПВУ 572x572_3",
+        name: "Калорифер КПВУ 572x572_3",
         heatPower: 33,
         price: 17684,
         rows: 3,
       },
       {
         id: "kpvu-572x572-4",
-        name: "Приточный калорифер КПВУ 572x572_4",
+        name: "Калорифер КПВУ 572x572_4",
         heatPower: 40,
         price: 22546,
         rows: 4,
@@ -5172,21 +5172,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1572x1572-2",
-        name: "Приточный калорифер КППС 1572x1572_2",
+        name: "Калорифер КППС 1572x1572_2",
         rows: 2,
         heatPower: 321,
         price: 65202,
       },
       {
         id: "kpps-1572x1572-3",
-        name: "Приточный калорифер КППС 1572x1572_3",
+        name: "Калорифер КППС 1572x1572_3",
         rows: 3,
         heatPower: 423,
         price: 93469,
       },
       {
         id: "kpps-1572x1572-4",
-        name: "Приточный калорифер КППС 1572x1572_4",
+        name: "Калорифер КППС 1572x1572_4",
         rows: 4,
         heatPower: 500,
         price: 120951,
@@ -5229,21 +5229,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1530x1530-2",
-        name: "Приточный калорифер КППС 1530x1530_2",
+        name: "Калорифер КППС 1530x1530_2",
         heatPower: 301,
         price: 63035,
         rows: 2,
       },
       {
         id: "kpps-1530x1530-3",
-        name: "Приточный калорифер КППС 1530x1530_3",
+        name: "Калорифер КППС 1530x1530_3",
         heatPower: 393,
         price: 90220,
         rows: 3,
       },
       {
         id: "kpps-1530x1530-4",
-        name: "Приточный калорифер КППС 1530x1530_4",
+        name: "Калорифер КППС 1530x1530_4",
         heatPower: 467,
         price: 116630,
         rows: 4,
@@ -5281,21 +5281,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1489x1489-2",
-        name: "Приточный калорифер КППС 1489x1489_2",
+        name: "Калорифер КППС 1489x1489_2",
         heatPower: 286,
         price: 60694,
         rows: 2,
       },
       {
         id: "kpps-1489x1489-3",
-        name: "Приточный калорифер КППС 1489x1489_3",
+        name: "Калорифер КППС 1489x1489_3",
         heatPower: 377,
         price: 86807,
         rows: 3,
       },
       {
         id: "kpps-1489x1489-4",
-        name: "Приточный калорифер КППС 1489x1489_4",
+        name: "Калорифер КППС 1489x1489_4",
         heatPower: 444,
         price: 112153,
         rows: 4,
@@ -5345,21 +5345,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1447x1447-2",
-        name: "Приточный калорифер КППС 1447x1447_2",
+        name: "Калорифер КППС 1447x1447_2",
         heatPower: 272,
         price: 58478,
         rows: 2,
       },
       {
         id: "kpps-1447x1447-3",
-        name: "Приточный калорифер КППС 1447x1447_3",
+        name: "Калорифер КППС 1447x1447_3",
         heatPower: 357,
         price: 83493,
         rows: 3,
       },
       {
         id: "kpps-1447x1447-4",
-        name: "Приточный калорифер КППС 1447x1447_4",
+        name: "Калорифер КППС 1447x1447_4",
         heatPower: 421,
         price: 107751,
         rows: 4,
@@ -5397,21 +5397,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1405x1405-2",
-        name: "Приточный калорифер КППС 1405x1405_2",
+        name: "Калорифер КППС 1405x1405_2",
         heatPower: 257,
         price: 56055,
         rows: 2,
       },
       {
         id: "kpps-1405x1405-3",
-        name: "Приточный калорифер КППС 1405x1405_3",
+        name: "Калорифер КППС 1405x1405_3",
         heatPower: 338,
         price: 79968,
         rows: 3,
       },
       {
         id: "kpps-1405x1405-4",
-        name: "Приточный калорифер КППС 1405x1405_4",
+        name: "Калорифер КППС 1405x1405_4",
         heatPower: 399,
         price: 103133,
         rows: 4,
@@ -5461,21 +5461,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1364x1364-2",
-        name: "Приточный калорифер КППС 1364x1364_2",
+        name: "Калорифер КППС 1364x1364_2",
         heatPower: 243,
         price: 53845,
         rows: 2,
       },
       {
         id: "kpps-1364x1364-3",
-        name: "Приточный калорифер КППС 1364x1364_3",
+        name: "Калорифер КППС 1364x1364_3",
         heatPower: 320,
         price: 76669,
         rows: 3,
       },
       {
         id: "kpps-1364x1364-4",
-        name: "Приточный калорифер КППС 1364x1364_4",
+        name: "Калорифер КППС 1364x1364_4",
         heatPower: 380,
         price: 98757,
         rows: 4,
@@ -5525,21 +5525,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1322x1322-2",
-        name: "Приточный калорифер КППС 1322x1322_2",
+        name: "Калорифер КППС 1322x1322_2",
         heatPower: 230,
         price: 51395,
         rows: 2,
       },
       {
         id: "kpps-1322x1322-3",
-        name: "Приточный калорифер КППС 1322x1322_3",
+        name: "Калорифер КППС 1322x1322_3",
         heatPower: 301,
         price: 73113,
         rows: 3,
       },
       {
         id: "kpps-1322x1322-4",
-        name: "Приточный калорифер КППС 1322x1322_4",
+        name: "Калорифер КППС 1322x1322_4",
         heatPower: 358,
         price: 94108,
         rows: 4,
@@ -5577,21 +5577,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1280x1280-2",
-        name: "Приточный калорифер КППС 1280x1280_2",
+        name: "Калорифер КППС 1280x1280_2",
         heatPower: 216,
         price: 49139,
         rows: 2,
       },
       {
         id: "kpps-1280x1280-3",
-        name: "Приточный калорифер КППС 1280x1280_3",
+        name: "Калорифер КППС 1280x1280_3",
         heatPower: 286,
         price: 69753,
         rows: 3,
       },
       {
         id: "kpps-1280x1280-4",
-        name: "Приточный калорифер КППС 1280x1280_4",
+        name: "Калорифер КППС 1280x1280_4",
         heatPower: 337,
         price: 89656,
         rows: 4,
@@ -5629,21 +5629,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1239x1239-2",
-        name: "Приточный калорифер КППС 1239x1239_2",
+        name: "Калорифер КППС 1239x1239_2",
         heatPower: 203,
         price: 46714,
         rows: 2,
       },
       {
         id: "kpps-1239x1239-3",
-        name: "Приточный калорифер КППС 1239x1239_3",
+        name: "Калорифер КППС 1239x1239_3",
         heatPower: 268,
         price: 66245,
         rows: 3,
       },
       {
         id: "kpps-1239x1239-4",
-        name: "Приточный калорифер КППС 1239x1239_4",
+        name: "Калорифер КППС 1239x1239_4",
         heatPower: 315,
         price: 85079,
         rows: 4,
@@ -5693,21 +5693,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1197x1197-2",
-        name: "Приточный калорифер КППС 1197x1197_2",
+        name: "Калорифер КППС 1197x1197_2",
         heatPower: 189,
         price: 44465,
         rows: 2,
       },
       {
         id: "kpps-1197x1197-3",
-        name: "Приточный калорифер КППС 1197x1197_3",
+        name: "Калорифер КППС 1197x1197_3",
         heatPower: 250,
         price: 62903,
         rows: 3,
       },
       {
         id: "kpps-1197x1197-4",
-        name: "Приточный калорифер КППС 1197x1197_4",
+        name: "Калорифер КППС 1197x1197_4",
         heatPower: 294,
         price: 80657,
         rows: 4,
@@ -5757,21 +5757,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1155x1155-2",
-        name: "Приточный калорифер КППС 1155x1155_2",
+        name: "Калорифер КППС 1155x1155_2",
         heatPower: 176,
         price: 42018,
         rows: 2,
       },
       {
         id: "kpps-1155x1155-3",
-        name: "Приточный калорифер КППС 1155x1155_3",
+        name: "Калорифер КППС 1155x1155_3",
         heatPower: 233,
         price: 59371,
         rows: 3,
       },
       {
         id: "kpps-1155x1155-4",
-        name: "Приточный калорифер КППС 1155x1155_4",
+        name: "Калорифер КППС 1155x1155_4",
         heatPower: 277,
         price: 76057,
         rows: 4,
@@ -5809,21 +5809,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1114x1114-2",
-        name: "Приточный калорифер КППС 1114x1114_2",
+        name: "Калорифер КППС 1114x1114_2",
         heatPower: 164,
         price: 39826,
         rows: 2,
       },
       {
         id: "kpps-1114x1114-3",
-        name: "Приточный калорифер КППС 1114x1114_3",
+        name: "Калорифер КППС 1114x1114_3",
         heatPower: 216,
         price: 56122,
         rows: 3,
       },
       {
         id: "kpps-1114x1114-4",
-        name: "Приточный калорифер КППС 1114x1114_4",
+        name: "Калорифер КППС 1114x1114_4",
         heatPower: 256,
         price: 71766,
         rows: 4,
@@ -5861,21 +5861,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1072x1072-2",
-        name: "Приточный калорифер КППС 1072x1072_2",
+        name: "Калорифер КППС 1072x1072_2",
         heatPower: 151,
         price: 37408,
         rows: 2,
       },
       {
         id: "kpps-1072x1072-3",
-        name: "Приточный калорифер КППС 1072x1072_3",
+        name: "Калорифер КППС 1072x1072_3",
         heatPower: 200,
         price: 52644,
         rows: 3,
       },
       {
         id: "kpps-1072x1072-4",
-        name: "Приточный калорифер КППС 1072x1072_4",
+        name: "Калорифер КППС 1072x1072_4",
         heatPower: 237,
         price: 67246,
         rows: 4,
@@ -5913,21 +5913,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-1030x1030-2",
-        name: "Приточный калорифер КППС 1030x1030_2",
+        name: "Калорифер КППС 1030x1030_2",
         heatPower: 139,
         price: 35230,
         rows: 2,
       },
       {
         id: "kpps-1030x1030-3",
-        name: "Приточный калорифер КППС 1030x1030_3",
+        name: "Калорифер КППС 1030x1030_3",
         heatPower: 184,
         price: 49423,
         rows: 3,
       },
       {
         id: "kpps-1030x1030-4",
-        name: "Приточный калорифер КППС 1030x1030_4",
+        name: "Калорифер КППС 1030x1030_4",
         heatPower: 217,
         price: 62998,
         rows: 4,
@@ -5965,21 +5965,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-989x989-2",
-        name: "Приточный калорифер КППС 989x989_2",
+        name: "Калорифер КППС 989x989_2",
         heatPower: 127,
         price: 32889,
         rows: 2,
       },
       {
         id: "kpps-989x989-3",
-        name: "Приточный калорифер КППС 989x989_3",
+        name: "Калорифер КППС 989x989_3",
         heatPower: 167,
         price: 46070,
         rows: 3,
       },
       {
         id: "kpps-989x989-4",
-        name: "Приточный калорифер КППС 989x989_4",
+        name: "Калорифер КППС 989x989_4",
         heatPower: 197,
         price: 58653,
         rows: 4,
@@ -6017,21 +6017,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-947x947-2",
-        name: "Приточный калорифер КППС 947x947_2",
+        name: "Калорифер КППС 947x947_2",
         heatPower: 115,
         price: 30774,
         rows: 2,
       },
       {
         id: "kpps-947x947-3",
-        name: "Приточный калорифер КППС 947x947_3",
+        name: "Калорифер КППС 947x947_3",
         heatPower: 152,
         price: 42950,
         rows: 3,
       },
       {
         id: "kpps-947x947-4",
-        name: "Приточный калорифер КППС 947x947_4",
+        name: "Калорифер КППС 947x947_4",
         heatPower: 178,
         price: 54547,
         rows: 4,
@@ -6069,21 +6069,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-905x905-2",
-        name: "Приточный калорифер КППС 905x905_2",
+        name: "Калорифер КППС 905x905_2",
         heatPower: 104,
         price: 28470,
         rows: 2,
       },
       {
         id: "kpps-905x905-3",
-        name: "Приточный калорифер КППС 905x905_3",
+        name: "Калорифер КППС 905x905_3",
         heatPower: 137,
         price: 39665,
         rows: 3,
       },
       {
         id: "kpps-905x905-4",
-        name: "Приточный калорифер КППС 905x905_4",
+        name: "Калорифер КППС 905x905_4",
         heatPower: 161,
         price: 50300,
         rows: 4,
@@ -6121,21 +6121,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-864x864-2",
-        name: "Приточный калорифер КППС 864x864_2",
+        name: "Калорифер КППС 864x864_2",
         heatPower: 92,
         price: 26463,
         rows: 2,
       },
       {
         id: "kpps-864x864-3",
-        name: "Приточный калорифер КППС 864x864_3",
+        name: "Калорифер КППС 864x864_3",
         heatPower: 122,
         price: 36714,
         rows: 3,
       },
       {
         id: "kpps-864x864-4",
-        name: "Приточный калорифер КППС 864x864_4",
+        name: "Калорифер КППС 864x864_4",
         heatPower: 142,
         price: 46426,
         rows: 4,
@@ -6185,21 +6185,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-822x822-2",
-        name: "Приточный калорифер КППС 822x822_2",
+        name: "Калорифер КППС 822x822_2",
         heatPower: 81,
         price: 24244,
         rows: 2,
       },
       {
         id: "kpps-822x822-3",
-        name: "Приточный калорифер КППС 822x822_3",
+        name: "Калорифер КППС 822x822_3",
         heatPower: 107,
         price: 33566,
         rows: 3,
       },
       {
         id: "kpps-822x822-4",
-        name: "Приточный калорифер КППС 822x822_4",
+        name: "Калорифер КППС 822x822_4",
         heatPower: 124,
         price: 42370,
         rows: 4,
@@ -6237,21 +6237,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-780x780-2",
-        name: "Приточный калорифер КППС 780x780_2",
+        name: "Калорифер КППС 780x780_2",
         heatPower: 71,
         price: 22312,
         rows: 2,
       },
       {
         id: "kpps-780x780-3",
-        name: "Приточный калорифер КППС 780x780_3",
+        name: "Калорифер КППС 780x780_3",
         heatPower: 92,
         price: 30734,
         rows: 3,
       },
       {
         id: "kpps-780x780-4",
-        name: "Приточный калорифер КППС 780x780_4",
+        name: "Калорифер КППС 780x780_4",
         heatPower: 105,
         price: 38662,
         rows: 4,
@@ -6289,21 +6289,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-739x739-2",
-        name: "Приточный калорифер КППС 739x739_2",
+        name: "Калорифер КППС 739x739_2",
         heatPower: 63,
         price: 20219,
         rows: 2,
       },
       {
         id: "kpps-739x739-3",
-        name: "Приточный калорифер КППС 739x739_3",
+        name: "Калорифер КППС 739x739_3",
         heatPower: 82,
         price: 27786,
         rows: 3,
       },
       {
         id: "kpps-739x739-4",
-        name: "Приточный калорифер КППС 739x739_4",
+        name: "Калорифер КППС 739x739_4",
         heatPower: 95,
         price: 34881,
         rows: 4,
@@ -6341,21 +6341,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-697x697-2",
-        name: "Приточный калорифер КППС 697x697_2",
+        name: "Калорифер КППС 697x697_2",
         heatPower: 56,
         price: 18406,
         rows: 2,
       },
       {
         id: "kpps-697x697-3",
-        name: "Приточный калорифер КППС 697x697_3",
+        name: "Калорифер КППС 697x697_3",
         heatPower: 73,
         price: 25140,
         rows: 3,
       },
       {
         id: "kpps-697x697-4",
-        name: "Приточный калорифер КППС 697x697_4",
+        name: "Калорифер КППС 697x697_4",
         heatPower: 84,
         price: 31426,
         rows: 4,
@@ -6393,21 +6393,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-655x655-2",
-        name: "Приточный калорифер КППС 655x655_2",
+        name: "Калорифер КППС 655x655_2",
         heatPower: 49,
         price: 16661,
         rows: 2,
       },
       {
         id: "kpps-655x655-3",
-        name: "Приточный калорифер КППС 655x655_3",
+        name: "Калорифер КППС 655x655_3",
         heatPower: 64,
         price: 22600,
         rows: 3,
       },
       {
         id: "kpps-655x655-4",
-        name: "Приточный калорифер КППС 655x655_4",
+        name: "Калорифер КППС 655x655_4",
         heatPower: 73,
         price: 28115,
         rows: 4,
@@ -6445,21 +6445,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-614x614-2",
-        name: "Приточный калорифер КППС 614x614_2",
+        name: "Калорифер КППС 614x614_2",
         heatPower: 42,
         price: 14756,
         rows: 2,
       },
       {
         id: "kpps-614x614-3",
-        name: "Приточный калорифер КППС 614x614_3",
+        name: "Калорифер КППС 614x614_3",
         heatPower: 55,
         price: 19949,
         rows: 3,
       },
       {
         id: "kpps-614x614-4",
-        name: "Приточный калорифер КППС 614x614_4",
+        name: "Калорифер КППС 614x614_4",
         heatPower: 63,
         price: 24742,
         rows: 4,
@@ -6497,21 +6497,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kpps-572x572-2",
-        name: "Приточный калорифер КППС 572x572_2",
+        name: "Калорифер КППС 572x572_2",
         heatPower: 35,
         price: 13093,
         rows: 2,
       },
       {
         id: "kpps-572x572-3",
-        name: "Приточный калорифер КППС 572x572_3",
+        name: "Калорифер КППС 572x572_3",
         heatPower: 46,
         price: 17548,
         rows: 3,
       },
       {
         id: "kpps-572x572-4",
-        name: "Приточный калорифер КППС 572x572_4",
+        name: "Калорифер КППС 572x572_4",
         heatPower: 53,
         price: 21632,
         rows: 4,
@@ -6550,21 +6550,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1572x1572-2",
-        name: "Приточный калорифер КППУ 1572x1572_2",
+        name: "Калорифер КППУ 1572x1572_2",
         rows: 2,
         heatPower: 410,
         price: 68195,
       },
       {
         id: "kppu-1572x1572-3",
-        name: "Приточный калорифер КППУ 1572x1572_3",
+        name: "Калорифер КППУ 1572x1572_3",
         rows: 3,
         heatPower: 514,
         price: 97847,
       },
       {
         id: "kppu-1572x1572-4",
-        name: "Приточный калорифер КППУ 1572x1572_4",
+        name: "Калорифер КППУ 1572x1572_4",
         rows: 4,
         heatPower: 568,
         price: 128263,
@@ -6594,21 +6594,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1526x1526-2",
-        name: "Приточный калорифер КППУ 1526x1526_2",
+        name: "Калорифер КППУ 1526x1526_2",
         heatPower: 380,
         price: 65393,
         rows: 2,
       },
       {
         id: "kppu-1526x1526-3",
-        name: "Приточный калорифер КППУ 1526x1526_3",
+        name: "Калорифер КППУ 1526x1526_3",
         heatPower: 476,
         price: 93742,
         rows: 3,
       },
       {
         id: "kppu-1526x1526-4",
-        name: "Приточный калорифер КППУ 1526x1526_4",
+        name: "Калорифер КППУ 1526x1526_4",
         heatPower: 528,
         price: 123084,
         rows: 4,
@@ -6646,21 +6646,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1481x1481-2",
-        name: "Приточный калорифер КППУ 1481x1481_2",
+        name: "Калорифер КППУ 1481x1481_2",
         heatPower: 351,
         price: 62610,
         rows: 2,
       },
       {
         id: "kppu-1481x1481-3",
-        name: "Приточный калорифер КППУ 1481x1481_3",
+        name: "Калорифер КППУ 1481x1481_3",
         heatPower: 439,
         price: 89671,
         rows: 3,
       },
       {
         id: "kppu-1481x1481-4",
-        name: "Приточный калорифер КППУ 1481x1481_4",
+        name: "Калорифер КППУ 1481x1481_4",
         heatPower: 486,
         price: 117961,
         rows: 4,
@@ -6698,21 +6698,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1435x1435-2",
-        name: "Приточный калорифер КППУ 1435x1435_2",
+        name: "Калорифер КППУ 1435x1435_2",
         heatPower: 331,
         price: 59774,
         rows: 2,
       },
       {
         id: "kppu-1435x1435-3",
-        name: "Приточный калорифер КППУ 1435x1435_3",
+        name: "Калорифер КППУ 1435x1435_3",
         heatPower: 414,
         price: 85527,
         rows: 3,
       },
       {
         id: "kppu-1435x1435-4",
-        name: "Приточный калорифер КППУ 1435x1435_4",
+        name: "Калорифер КППУ 1435x1435_4",
         heatPower: 459,
         price: 112751,
         rows: 4,
@@ -6750,21 +6750,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1390x1390-2",
-        name: "Приточный калорифер КППУ 1390x1390_2",
+        name: "Калорифер КППУ 1390x1390_2",
         heatPower: 314,
         price: 56966,
         rows: 2,
       },
       {
         id: "kppu-1390x1390-3",
-        name: "Приточный калорифер КППУ 1390x1390_3",
+        name: "Калорифер КППУ 1390x1390_3",
         heatPower: 390,
         price: 81431,
         rows: 3,
       },
       {
         id: "kppu-1390x1390-4",
-        name: "Приточный калорифер КППУ 1390x1390_4",
+        name: "Калорифер КППУ 1390x1390_4",
         heatPower: 432,
         price: 107420,
         rows: 4,
@@ -6802,21 +6802,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1345x1345-2",
-        name: "Приточный калорифер КППУ 1345x1345_2",
+        name: "Калорифер КППУ 1345x1345_2",
         heatPower: 294,
         price: 54154,
         rows: 2,
       },
       {
         id: "kppu-1345x1345-3",
-        name: "Приточный калорифер КППУ 1345x1345_3",
+        name: "Калорифер КППУ 1345x1345_3",
         heatPower: 369,
         price: 77334,
         rows: 3,
       },
       {
         id: "kppu-1345x1345-4",
-        name: "Приточный калорифер КППУ 1345x1345_4",
+        name: "Калорифер КППУ 1345x1345_4",
         heatPower: 406,
         price: 102093,
         rows: 4,
@@ -6854,21 +6854,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1299x1299-2",
-        name: "Приточный калорифер КППУ 1299x1299_2",
+        name: "Калорифер КППУ 1299x1299_2",
         heatPower: 276,
         price: 51309,
         rows: 2,
       },
       {
         id: "kppu-1299x1299-3",
-        name: "Приточный калорифер КППУ 1299x1299_3",
+        name: "Калорифер КППУ 1299x1299_3",
         heatPower: 345,
         price: 73193,
         rows: 3,
       },
       {
         id: "kppu-1299x1299-4",
-        name: "Приточный калорифер КППУ 1299x1299_4",
+        name: "Калорифер КППУ 1299x1299_4",
         heatPower: 383,
         price: 96711,
         rows: 4,
@@ -6906,21 +6906,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1254x1254-2",
-        name: "Приточный калорифер КППУ 1254x1254_2",
+        name: "Калорифер КППУ 1254x1254_2",
         heatPower: 258,
         price: 48713,
         rows: 2,
       },
       {
         id: "kppu-1254x1254-3",
-        name: "Приточный калорифер КППУ 1254x1254_3",
+        name: "Калорифер КППУ 1254x1254_3",
         heatPower: 323,
         price: 69329,
         rows: 3,
       },
       {
         id: "kppu-1254x1254-4",
-        name: "Приточный калорифер КППУ 1254x1254_4",
+        name: "Калорифер КППУ 1254x1254_4",
         heatPower: 358,
         price: 91427,
         rows: 4,
@@ -6958,21 +6958,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1208x1208-2",
-        name: "Приточный калорифер КППУ 1208x1208_2",
+        name: "Калорифер КППУ 1208x1208_2",
         heatPower: 239,
         price: 45892,
         rows: 2,
       },
       {
         id: "kppu-1208x1208-3",
-        name: "Приточный калорифер КППУ 1208x1208_3",
+        name: "Калорифер КППУ 1208x1208_3",
         heatPower: 300,
         price: 65235,
         rows: 3,
       },
       {
         id: "kppu-1208x1208-4",
-        name: "Приточный калорифер КППУ 1208x1208_4",
+        name: "Калорифер КППУ 1208x1208_4",
         heatPower: 333,
         price: 86115,
         rows: 4,
@@ -7010,21 +7010,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1163x1163-2",
-        name: "Приточный калорифер КППУ 1163x1163_2",
+        name: "Калорифер КППУ 1163x1163_2",
         heatPower: 222,
         price: 43337,
         rows: 2,
       },
       {
         id: "kppu-1163x1163-3",
-        name: "Приточный калорифер КППУ 1163x1163_3",
+        name: "Калорифер КППУ 1163x1163_3",
         heatPower: 279,
         price: 61440,
         rows: 3,
       },
       {
         id: "kppu-1163x1163-4",
-        name: "Приточный калорифер КППУ 1163x1163_4",
+        name: "Калорифер КППУ 1163x1163_4",
         heatPower: 308,
         price: 80919,
         rows: 4,
@@ -7062,21 +7062,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1117x1117-2",
-        name: "Приточный калорифер КППУ 1117x1117_2",
+        name: "Калорифер КППУ 1117x1117_2",
         heatPower: 205,
         price: 40564,
         rows: 2,
       },
       {
         id: "kppu-1117x1117-3",
-        name: "Приточный калорифер КППУ 1117x1117_3",
+        name: "Калорифер КППУ 1117x1117_3",
         heatPower: 257,
         price: 57428,
         rows: 3,
       },
       {
         id: "kppu-1117x1117-4",
-        name: "Приточный калорифер КППУ 1117x1117_4",
+        name: "Калорифер КППУ 1117x1117_4",
         heatPower: 285,
         price: 75721,
         rows: 4,
@@ -7114,21 +7114,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1072x1072-2",
-        name: "Приточный калорифер КППУ 1072x1072_2",
+        name: "Калорифер КППУ 1072x1072_2",
         heatPower: 188,
         price: 38073,
         rows: 2,
       },
       {
         id: "kppu-1072x1072-3",
-        name: "Приточный калорифер КППУ 1072x1072_3",
+        name: "Калорифер КППУ 1072x1072_3",
         heatPower: 236,
         price: 53734,
         rows: 3,
       },
       {
         id: "kppu-1072x1072-4",
-        name: "Приточный калорифер КППУ 1072x1072_4",
+        name: "Калорифер КППУ 1072x1072_4",
         heatPower: 261,
         price: 70658,
         rows: 4,
@@ -7166,21 +7166,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-1026x1026-2",
-        name: "Приточный калорифер КППУ 1026x1026_2",
+        name: "Калорифер КППУ 1026x1026_2",
         heatPower: 172,
         price: 35370,
         rows: 2,
       },
       {
         id: "kppu-1026x1026-3",
-        name: "Приточный калорифер КППУ 1026x1026_3",
+        name: "Калорифер КППУ 1026x1026_3",
         heatPower: 216,
         price: 49837,
         rows: 3,
       },
       {
         id: "kppu-1026x1026-4",
-        name: "Приточный калорифер КППУ 1026x1026_4",
+        name: "Калорифер КППУ 1026x1026_4",
         heatPower: 238,
         price: 65619,
         rows: 4,
@@ -7218,21 +7218,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-981x981-2",
-        name: "Приточный калорифер КППУ 981x981_2",
+        name: "Калорифер КППУ 981x981_2",
         heatPower: 156,
         price: 32964,
         rows: 2,
       },
       {
         id: "kppu-981x981-3",
-        name: "Приточный калорифер КППУ 981x981_3",
+        name: "Калорифер КППУ 981x981_3",
         heatPower: 196,
         price: 46278,
         rows: 3,
       },
       {
         id: "kppu-981x981-4",
-        name: "Приточный калорифер КППУ 981x981_4",
+        name: "Калорифер КППУ 981x981_4",
         heatPower: 216,
         price: 60734,
         rows: 4,
@@ -7270,21 +7270,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-935x935-2",
-        name: "Приточный калорифер КППУ 935x935_2",
+        name: "Калорифер КППУ 935x935_2",
         heatPower: 139,
         price: 30353,
         rows: 2,
       },
       {
         id: "kppu-935x935-3",
-        name: "Приточный калорифер КППУ 935x935_3",
+        name: "Калорифер КППУ 935x935_3",
         heatPower: 174,
         price: 42530,
         rows: 3,
       },
       {
         id: "kppu-935x935-4",
-        name: "Приточный калорифер КППУ 935x935_4",
+        name: "Калорифер КППУ 935x935_4",
         heatPower: 192,
         price: 55898,
         rows: 4,
@@ -7334,21 +7334,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-890x890-2",
-        name: "Приточный калорифер КППУ 890x890_2",
+        name: "Калорифер КППУ 890x890_2",
         heatPower: 124,
         price: 28055,
         rows: 2,
       },
       {
         id: "kppu-890x890-3",
-        name: "Приточный калорифер КППУ 890x890_3",
+        name: "Калорифер КППУ 890x890_3",
         heatPower: 154,
         price: 39141,
         rows: 3,
       },
       {
         id: "kppu-890x890-4",
-        name: "Приточный калорифер КППУ 890x890_4",
+        name: "Калорифер КППУ 890x890_4",
         heatPower: 170,
         price: 51236,
         rows: 4,
@@ -7386,21 +7386,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-845x845-2",
-        name: "Приточный калорифер КППУ 845x845_2",
+        name: "Калорифер КППУ 845x845_2",
         heatPower: 109,
         price: 25585,
         rows: 2,
       },
       {
         id: "kppu-845x845-3",
-        name: "Приточный калорифер КППУ 845x845_3",
+        name: "Калорифер КППУ 845x845_3",
         heatPower: 135,
         price: 35614,
         rows: 3,
       },
       {
         id: "kppu-845x845-4",
-        name: "Приточный калорифер КППУ 845x845_4",
+        name: "Калорифер КППУ 845x845_4",
         heatPower: 148,
         price: 46699,
         rows: 4,
@@ -7438,21 +7438,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-799x799-2",
-        name: "Приточный калорифер КППУ 799x799_2",
+        name: "Калорифер КППУ 799x799_2",
         heatPower: 93,
         price: 23392,
         rows: 2,
       },
       {
         id: "kppu-799x799-3",
-        name: "Приточный калорифер КППУ 799x799_3",
+        name: "Калорифер КППУ 799x799_3",
         heatPower: 115,
         price: 32388,
         rows: 3,
       },
       {
         id: "kppu-799x799-4",
-        name: "Приточный калорифер КППУ 799x799_4",
+        name: "Калорифер КППУ 799x799_4",
         heatPower: 126,
         price: 42253,
         rows: 4,
@@ -7490,21 +7490,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-754x754-2",
-        name: "Приточный калорифер КППУ 754x754_2",
+        name: "Калорифер КППУ 754x754_2",
         heatPower: 83,
         price: 21057,
         rows: 2,
       },
       {
         id: "kppu-754x754-3",
-        name: "Приточный калорифер КППУ 754x754_3",
+        name: "Калорифер КППУ 754x754_3",
         heatPower: 103,
         price: 29074,
         rows: 3,
       },
       {
         id: "kppu-754x754-4",
-        name: "Приточный калорифер КППУ 754x754_4",
+        name: "Калорифер КППУ 754x754_4",
         heatPower: 113,
         price: 38006,
         rows: 4,
@@ -7542,21 +7542,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-708x708-2",
-        name: "Приточный калорифер КППУ 708x708_2",
+        name: "Калорифер КППУ 708x708_2",
         heatPower: 73,
         price: 19018,
         rows: 2,
       },
       {
         id: "kppu-708x708-3",
-        name: "Приточный калорифер КППУ 708x708_3",
+        name: "Калорифер КППУ 708x708_3",
         heatPower: 91,
         price: 26088,
         rows: 3,
       },
       {
         id: "kppu-708x708-4",
-        name: "Приточный калорифер КППУ 708x708_4",
+        name: "Калорифер КППУ 708x708_4",
         heatPower: 99,
         price: 33876,
         rows: 4,
@@ -7594,21 +7594,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-663x663-2",
-        name: "Приточный калорифер КППУ 663x663_2",
+        name: "Калорифер КППУ 663x663_2",
         heatPower: 64,
         price: 17089,
         rows: 2,
       },
       {
         id: "kppu-663x663-3",
-        name: "Приточный калорифер КППУ 663x663_3",
+        name: "Калорифер КППУ 663x663_3",
         heatPower: 79,
         price: 23267,
         rows: 3,
       },
       {
         id: "kppu-663x663-4",
-        name: "Приточный калорифер КППУ 663x663_4",
+        name: "Калорифер КППУ 663x663_4",
         heatPower: 87,
         price: 29962,
         rows: 4,
@@ -7658,21 +7658,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-617x617-2",
-        name: "Приточный калорифер КППУ 617x617_2",
+        name: "Калорифер КППУ 617x617_2",
         heatPower: 55,
         price: 14980,
         rows: 2,
       },
       {
         id: "kppu-617x617-3",
-        name: "Приточный калорифер КППУ 617x617_3",
+        name: "Калорифер КППУ 617x617_3",
         heatPower: 68,
         price: 20306,
         rows: 3,
       },
       {
         id: "kppu-617x617-4",
-        name: "Приточный калорифер КППУ 617x617_4",
+        name: "Калорифер КППУ 617x617_4",
         heatPower: 75,
         price: 26194,
         rows: 4,
@@ -7722,21 +7722,21 @@ export const productData: (Product | SupplyCalorifier | KSKProduct)[] = [
     variants: [
       {
         id: "kppu-572x572-2",
-        name: "Приточный калорифер КППУ 572x572_2",
+        name: "Калорифер КППУ 572x572_2",
         heatPower: 46,
         price: 13170,
         rows: 2,
       },
       {
         id: "kppu-572x572-3",
-        name: "Приточный калорифер КППУ 572x572_3",
+        name: "Калорифер КППУ 572x572_3",
         heatPower: 58,
         price: 17684,
         rows: 3,
       },
       {
         id: "kppu-572x572-4",
-        name: "Приточный калорифер КППУ 572x572_4",
+        name: "Калорифер КППУ 572x572_4",
         heatPower: 62,
         price: 22546,
         rows: 4,
