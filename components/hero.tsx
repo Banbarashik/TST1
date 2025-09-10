@@ -11,7 +11,7 @@ const slides = [
   {
     title: ["25 лет на рынке", "воздушно-отопительного оборудования"],
     text: "",
-    img: "/img/hero/slide-12.png",
+    img: "/img/hero/slide1.png",
     class: "scale-100",
     titleClass: "text-6xl",
   },
@@ -20,8 +20,8 @@ const slides = [
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/slide2.jpg",
-    class: "object-[50%_53%] scale-102",
+    img: "/img/hero/slide2.png",
+    class: "object-cover",
     textClass: "text-xl",
   },
 
@@ -58,12 +58,12 @@ export default function Hero() {
               src={slide.img}
               alt=""
               fill
-              className={`object-fill blur-[1px] ${slide.class}`}
+              className={`${slide.class}`}
               priority
               aria-hidden="true"
             />
             {/* Overlay for darkening */}
-            {<div className="absolute inset-0 bg-black/30" />}
+            {/* {<div className="absolute inset-0 bg-black/30" />} */}
             {/* {<div className="absolute inset-0 bg-white/10" />} */}
             {/* Centered Text */}
             <div
