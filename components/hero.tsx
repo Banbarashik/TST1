@@ -47,12 +47,12 @@ export default function Hero() {
   );
 
   return (
-    <header className="relative w-screen">
+    <header className="relative">
       <div ref={sliderRef} className="keen-slider">
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className="keen-slider__slide relative flex h-126 w-screen cursor-grab items-center justify-center overflow-hidden"
+            className="keen-slider__slide relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
           >
             <Image
               src={slide.img}
