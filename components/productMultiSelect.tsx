@@ -132,7 +132,7 @@ export function ProductMultiSelect({
                   <CommandGroup
                     key={category.slug}
                     heading={category.title}
-                    className="[&_[cmdk-group-heading]]:text-foreground"
+                    className="[&_[cmdk-group-heading]]:text-foreground cursor-default"
                   >
                     {productDataByMainCategory[category.slug].map(
                       (prodData) => (

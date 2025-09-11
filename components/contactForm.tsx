@@ -472,7 +472,7 @@ export default function ContactForm({
                             Очистить
                           </Button>
                           {/* Custom file summary */}
-                          <div className="text-sm text-gray-500">
+                          <div className="cursor-default text-sm text-gray-500">
                             {selectedFiles.length === 0
                               ? "Файл не выбран"
                               : `Выбрано файлов: ${selectedFiles.length}`}
