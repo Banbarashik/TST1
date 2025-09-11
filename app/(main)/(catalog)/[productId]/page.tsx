@@ -107,7 +107,7 @@ export async function generateMetadata({
 
     return {
       title: `Калорифер ${heatCarrierAdj.nom} ${product.model}`,
-      description: `Калорифер ${product.series}-${product.size} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, технические характеристики, размеры, расчет, подбор, цена ${heatCarrierAdj.gen} калорифера ${product.shortName}`,
+      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, технические характеристики, размеры, расчет, подбор, цена ${heatCarrierAdj.gen} калорифера ${product.shortName}`,
       keywords: `калорифер ${product.model},калорифер ${product.shortName} ${heatCarrierAdj.nom},калорифер ${product.shortName} ${heatCarrierAdj.nom} технические характеристики,калорифер ${product.shortName} ${heatCarrierAdj.nom} габаритные размеры,калорифер ${product.model} расчет и подбор,цена калорифера ${product.shortName} ${heatCarrierAdj.gen},купить калорифер ${product.shortName} ${heatCarrierAdj.nom},калорифер для шахт ${product.shortName} ${heatCarrierAdj.nom},калорифер ${product.shortName} ${amountOfWays},${product.heatCarrier === "water" ? "калориферная секция водяная" : "калорифер для сушилок паровой"} ${product.shortName}`,
     };
   }
