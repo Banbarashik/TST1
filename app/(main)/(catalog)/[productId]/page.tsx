@@ -96,7 +96,7 @@ export async function generateMetadata({
 
     return {
       title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
-      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, характеристики, расчет, цена водяного воздухонагревателя холодного климата ${series} 113 ${size} 22 ХЛ`,
+      description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} – производитель ООО Т.С.Т. Производство, характеристики, расчет, цена ${heatCarrierAdj.gen} воздухонагревателя холодного климата ${series} 113 ${size} 22 ХЛ`,
       keywords: `калорифер ${product.shortName},калорифер ${product.shortName} цена,калорифер ${product.shortName} технические характеристики,калорифер ${product.shortName} габаритные размеры,калорифер ${product.shortName} подбор,калорифер ${shortAltName},калорифер ${shortAltName} ${heatCarrierAdj.nom},${altName},${altName} 22 хл,${altName} купить`,
     };
   }
