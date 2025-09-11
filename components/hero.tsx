@@ -20,15 +20,15 @@ const slides = [
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/slide-29.png",
-    class: "object-cover",
+    img: "/img/hero/slide-36.png",
+    class: "",
     textClass: "text-xl",
   },
 
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
-    img: "/img/hero/slide2.png",
+    img: "/img/hero/slide-30.png",
     class: "object-cover",
     titleClass: "text-5xl",
   },
@@ -69,22 +69,19 @@ export default function Hero() {
             <div
               className={`${
                 idx === 2 ? "max-w-6xl" : "max-w-5xl"
-              } relative z-10 mx-auto px-4 text-center text-white`}
+              } text-background relative z-10 mx-auto px-4 text-center`}
             >
               <div className="relative">
-                <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-40 blur-[60px]"></span>
+                <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-30 blur-[60px]"></span>
                 {slide.title.map((t) => (
                   <p
                     key={t}
-                    className={`font-bold drop-shadow-lg text-shadow-sm/30 ${slide.titleClass}`}
+                    className={`font-bold text-shadow-lg/50 ${slide.titleClass}`}
                   >
                     {t}
                   </p>
                 ))}
               </div>
-              {/* <h2 className="text-6xl font-bold drop-shadow-lg mb-10">
-                {slide.title}
-              </h2> */}
               <p className="mb-10 text-lg font-bold drop-shadow text-shadow-md/30 md:text-[1.6rem]">
                 {slide.text}
               </p>
