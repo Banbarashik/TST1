@@ -119,7 +119,7 @@ export async function generateMetadata({
 
     return {
       title: `Агрегат ${product.shortName} отопительный ${heatCarrierAdj.nom} ${rowsNumberAdj.nom}`,
-      description: `Агрегат ${shortNameWithoutHyphen} воздушно отопительный ${heatCarrierAdj.nom} ${rowsNumberAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена водяного агрегата ${product.model}`,
+      description: `Агрегат ${shortNameWithoutHyphen} воздушно отопительный ${heatCarrierAdj.nom} ${rowsNumberAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена ${heatCarrierAdj.gen} агрегата ${product.model}`,
       keywords: `${modelWithoutHyphen},агрегат ${modelWithoutHyphen} ${heatCarrierAdj.nom},агрегат ${shortNameWithoutHyphen} ${product.calorifier},отопительный агрегат ${modelWithoutHyphen} расчет и подбор,воздушно-отопительный агрегат ${modelWithoutHyphen},агрегат ${modelWithoutHyphen} технические характеристики,агрегат отопительный ${modelWithoutHyphen} мощность,воздушный агрегат ${modelWithoutHyphen} производительность,отопительный агрегат ${modelWithoutHyphen} купить,${heatCarrierAdj.nom} агрегат ${modelWithoutHyphen} цена`,
     };
   }
