@@ -5,6 +5,8 @@ import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 import "@/app/globals.css";
 import "keen-slider/keen-slider.min.css";
 
+import { Phone, Smartphone } from "lucide-react";
+
 import Logo from "@/components/ui/logo";
 import Footer from "@/components/footer";
 import NavigationMenu from "@/components/navigationMenu";
@@ -27,6 +29,21 @@ export default function RootLayout({
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="flex h-22 items-center bg-[#E0E0E0] px-20">
             <Logo place="header" />
+            <ul className="text-primary-darker ml-12 space-y-2">
+              <li className="flex items-center gap-2.5">
+                <Phone size={20} />
+                +7 (3846) 68-23-24
+              </li>
+              <li>
+                <a
+                  href="tel:89617378314"
+                  className="flex items-center gap-2.5 hover:font-semibold hover:text-[#604890]"
+                >
+                  <Smartphone size={20} />
+                  8-961-737-83-14
+                </a>
+              </li>
+            </ul>
             <div className="ml-auto flex h-full items-center gap-8">
               <NavigationMenu />
               <ContactFormTrigger />
