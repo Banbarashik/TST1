@@ -45,15 +45,14 @@ export default function ProductCard({
         </>
       )}
       <div className="mb-4">
-        {product.heatPower && product.voltage && !product.airPower && (
-          <p>
-            Характеристики: {`${product.voltage} В; ${product.heatPower} кВт`}
-          </p>
-        )}
         {product.airPower && (
           <div>
             Характеристики: {product.airPower} м<sup>3</sup>/ч;{" "}
-            <p>{product.heatPower && product.heatPower + " кВт"}</p>
+            <p>
+              {/* TODO change so that voltage doesn't always has ";" after its unit */}
+              {product.voltage && product.voltage + " В;"}{" "}
+              {product.heatPower && product.heatPower + " кВт"}
+            </p>
           </div>
         )}
         {!product.airPower && hasVariants && (
