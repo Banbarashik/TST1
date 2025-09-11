@@ -43,7 +43,7 @@ function NumberInput({
 }: NumberInputProps) {
   return (
     <div
-      className={`${className?.root} flex w-fit items-center rounded border`}
+      className={`${className?.root} flex w-fit items-center rounded outline outline-[#e5e7eb]`}
     >
       <Button
         disabled={disabled}
