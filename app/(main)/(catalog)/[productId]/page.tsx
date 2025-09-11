@@ -2,6 +2,7 @@ import { productData } from "@/data/products";
 
 import type { Metadata } from "next";
 
+import { capitalizeFirst } from "@/lib/utils";
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 
@@ -46,6 +47,37 @@ export async function generateMetadata({
   const productType = getProductType(product.categories);
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
+  if (productType === "supplyCalorifier") {
+    const isKPVS = product.categories.includes("kpvs");
+    const isKPVU = product.categories.includes("kpvu");
+    const isKPPS = product.categories.includes("kpps");
+    const isKPPU = product.categories.includes("kppu");
+
+    const size = `${product.size} ${product.size}`;
+
+    let heatPower = 0;
+    if (isKPVS || isKPPS)
+      heatPower = product.variants.find((p) => p.rows === 2).heatPower;
+    if (isKPVU || isKPPU)
+      heatPower = product.variants.find((p) => p.rows === 4).heatPower;
+
+    let keys = "";
+    if (isKPVS)
+      keys = `калорифер ${size},калорифер ${size} приточный,калорифер ${size} производитель,калорифер производительность ${product.airPower} м3/час,калорифер тепловая мощность ${heatPower} кВт`;
+    if (isKPVU)
+      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный ${heatCarrierAdj.nom},калорифер ${size} расчет,калорифер объем нагреваемого воздуха ${product.airPower} м3/час,калорифер производительность по теплу ${heatPower} кВт`;
+    if (isKPPS)
+      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный,калорифер ${size} ${heatCarrierAdj.nom} производитель,${heatCarrierAdj.nom} калорифер для нагрева воздуха ${product.airPower} м3/час,мощность ${heatCarrierAdj.gen} калорифера ${heatPower} кВт`;
+    if (isKPPU)
+      keys = `калорифер ${size} мощность,калорифер ${size} технические характеристики,калорифер ${size} производительность,${heatCarrierAdj.nom} калорифер для сушильной камеры ${product.airPower} м3/час,${heatCarrierAdj.nom} калорифер для сушки ${heatPower} кВт`;
+
+    return {
+      title: `Калорифер приточный ${product.shortName} ${heatCarrierAdj.nom}`,
+      description: `${capitalizeFirst(heatCarrierAdj.nom)} приточный калорифер ${product.shortName} производительностью по воздуху ${product.airPower} м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора`,
+      keywords: `${product.series} ${size},калорифер ${product.series} ${size},калорифер ${product.series} ${size} ${heatCarrierAdj.nom},калорифер ${product.series} ${size} цена,калорифер ${product.series} ${size} купить,${keys}`,
+    };
+  }
+
   if (productType === "kfb") {
     const amountOfWays =
       product.heatCarrier === "water" ? "многоходовой" : "одноходовой";
@@ -77,37 +109,6 @@ export async function generateMetadata({
       title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
       description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${name}`,
       keywords: `${name},калорифер ${name},калорифер ${name} водяной,калорифер ${name} технические характеристики,калорифер ${name} габаритные размеры,купить калорифер ${product.shortName},калорифер ${name} цена,калорифер ${name} расчет,калорифер ${name} подбор,калорифер ${name} мощность`,
-    };
-  }
-
-  if (productType === "supplyCalorifier") {
-    const isKPVS = product.categories.includes("kpvs");
-    const isKPVU = product.categories.includes("kpvu");
-    const isKPPS = product.categories.includes("kpps");
-    const isKPPU = product.categories.includes("kppu");
-
-    const size = `${product.size} ${product.size}`;
-
-    let heatPower = 0;
-    if (isKPVS || isKPPS)
-      heatPower = product.variants.find((p) => p.rows === 2).heatPower;
-    if (isKPVU || isKPPU)
-      heatPower = product.variants.find((p) => p.rows === 4).heatPower;
-
-    let keys = "";
-    if (isKPVS)
-      keys = `калорифер ${size},калорифер ${size} приточный,калорифер ${size} производитель,калорифер производительность ${product.airPower} м3/час,калорифер тепловая мощность ${heatPower} кВт`;
-    if (isKPVU)
-      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный ${heatCarrierAdj.nom},калорифер ${size} расчет,калорифер объем нагреваемого воздуха ${product.airPower} м3/час,калорифер производительность по теплу ${heatPower} кВт`;
-    if (isKPPS)
-      keys = `калорифер ${size} ${heatCarrierAdj.nom},калорифер ${size} приточный,калорифер ${size} ${heatCarrierAdj.nom} производитель,${heatCarrierAdj.nom} калорифер для нагрева воздуха ${product.airPower} м3/час,мощность ${heatCarrierAdj.gen} калорифера ${heatPower} кВт`;
-    if (isKPPU)
-      keys = `калорифер ${size} мощность,калорифер ${size} технические характеристики,калорифер ${size} производительность,${heatCarrierAdj.nom} калорифер для сушильной камеры ${product.airPower} м3/час,${heatCarrierAdj.nom} калорифер для сушки ${heatPower} кВт`;
-
-    return {
-      title: `Калорифер приточный ${product.shortName} ${heatCarrierAdj.nom}`,
-      description: `${heatCarrierAdj.nom} приточный калорифер ${product.shortName} производительностью по воздуху ${product.airPower} м3/час производства ООО Т.С.Т. Технические характеристики, калькулятор подбора`,
-      keywords: `${product.series} ${size},калорифер ${product.series} ${size},калорифер ${product.series} ${size} водяной,калорифер ${product.series} ${size} цена,калорифер ${product.series} ${size} купить,${keys}`,
     };
   }
 
