@@ -127,7 +127,7 @@ export async function generateMetadata({
   if (productType === "avo") {
     return {
       title: `Агрегаты воздушного отопления АВО ХЛ ${heatCarrierAdj.plu}`,
-      description: `Агрегат АВО ХЛ воздушно-отопительный ${heatCarrierAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена водяного агрегата для холодного климата АВО ${product.calorifier}`,
+      description: `Агрегат АВО ХЛ воздушно-отопительный ${heatCarrierAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена ${heatCarrierAdj.gen} агрегата для холодного климата АВО ${product.calorifier}`,
       keywords: `агрегат аво 3-55-01 ${heatCarrierAdj.nom},агрегат аво 4-95-01 ${heatCarrierAdj.nom},агрегат аво 7-165-01 ${heatCarrierAdj.nom},отопительный агрегат аво 3-55-01 ${heatCarrierAdj.nom} расчет,агрегат отопительный аво 4-95-01 ${heatCarrierAdj.nom} подбор,воздушный ${heatCarrierAdj.nom} агрегат аво 7-165-01 мощность,${heatCarrierAdj.nom} агрегат аво 7-165-01 производительность,агрегат аво хл ${heatCarrierAdj.nom} производитель,агрегат аво хл ${heatCarrierAdj.nom} купить,агрегат аво хл ${heatCarrierAdj.nom} цена`,
     };
   }
