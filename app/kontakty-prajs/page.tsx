@@ -1,14 +1,14 @@
 import { productData } from "@/data/products";
 
 import React from "react";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { sortProducts } from "@/lib/utils";
 
-import ProductParagraph from "@/components/catalog/productParagraph";
 import Heading from "@/components/general_pages/heading";
+import ProductParagraph from "@/components/catalog/productParagraph";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Прайс-лист воздушно-отопительного оборудования",
@@ -122,10 +122,9 @@ export default function ContactsAndPricesPage() {
 
       <div className="mx-auto max-w-6xl space-y-10">
         <div className="space-y-6">
-          <Heading
-            lvl={2}
-            text="Приточные калориферы - водяные КПВС и паровые КППС"
-          />
+          <h3 className="mb-2 text-xl uppercase">
+            Приточные калориферы - водяные КПВС и паровые КППС
+          </h3>
           <table className="w-full">
             <thead className="uppercase">
               <tr>
@@ -176,10 +175,9 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <Heading
-            lvl={2}
-            text="Приточные калориферы - водяные КПВУ и паровые КППУ"
-          />
+          <h3 className="mb-2 text-xl uppercase">
+            Приточные калориферы - водяные КПВУ и паровые КППУ
+          </h3>
           <table className="w-full">
             <thead className="uppercase">
               <tr>
@@ -230,7 +228,9 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <Heading lvl={2} text="Калориферы водяные КСк и паровые КПСк" />
+          <h3 className="mb-2 text-xl uppercase">
+            Калориферы водяные КСк и паровые КПСк
+          </h3>
           <table className="w-full">
             <thead className="uppercase">
               <tr className="uppercase">
@@ -292,7 +292,9 @@ export default function ContactsAndPricesPage() {
 
       <div className="mx-auto max-w-6xl space-y-10">
         <div className="space-y-6">
-          <Heading lvl={2} text="Калориферы водяные ТВВ и паровые КП" />
+          <h3 className="mb-2 text-xl uppercase">
+            Калориферы водяные ТВВ и паровые КП
+          </h3>
           <table className="w-full max-w-3xl">
             <thead className="uppercase">
               <tr className="uppercase">
@@ -337,7 +339,9 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <Heading lvl={2} text="Калориферы водяные и паровые КФБ-А" />
+          <h3 className="mb-2 text-xl uppercase">
+            Калориферы водяные и паровые КФБ-А
+          </h3>
           <table className="w-full max-w-3xl">
             <thead className="uppercase">
               <tr className="uppercase">
@@ -391,7 +395,9 @@ export default function ContactsAndPricesPage() {
 
       <div className="mx-auto max-w-6xl space-y-10">
         <div className="space-y-6">
-          <Heading lvl={2} text="Агрегаты АО2 водяные и паровые" />
+          <h3 className="mb-2 text-xl uppercase">
+            Агрегаты АО2 водяные и паровые
+          </h3>
           <table className="w-full max-w-3xl">
             <thead className="uppercase">
               <tr>
@@ -436,7 +442,9 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <Heading lvl={2} text="Агрегаты АВО ХЛ водяные и паровые" />
+          <h3 className="mb-2 text-xl uppercase">
+            Агрегаты АВО ХЛ водяные и паровые
+          </h3>
           <table className="w-full">
             <thead className="uppercase">
               <tr>
@@ -481,7 +489,9 @@ export default function ContactsAndPricesPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <Heading lvl={2} text="Агрегаты СТД-300 водяные и паровые" />
+          <h3 className="mb-2 text-xl uppercase">
+            Агрегаты СТД-300 водяные и паровые
+          </h3>
           <table className="w-full max-w-3xl">
             <thead className="uppercase">
               <tr>
@@ -550,7 +560,7 @@ export default function ContactsAndPricesPage() {
         <div className="space-y-6">
           <div className="flex gap-16">
             <div className="w-full">
-              <Heading lvl={2} text="Электрокалориферы СФО" />
+              <h3 className="mb-2 text-xl uppercase">Электрокалориферы СФО</h3>
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
@@ -571,7 +581,9 @@ export default function ContactsAndPricesPage() {
               </table>
             </div>
             <div className="w-full">
-              <Heading lvl={2} text="Электрокалориферные установки СФОЦ" />
+              <h3 className="mb-2 text-xl uppercase">
+                Электрокалориферные установки СФОЦ
+              </h3>
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
@@ -614,7 +626,9 @@ export default function ContactsAndPricesPage() {
         <div className="space-y-6">
           <div className="flex gap-16">
             <div className="w-full">
-              <Heading lvl={2} text="Шкафы управления калорифером ШУК" />
+              <h3 className="mb-2 text-xl uppercase">
+                Шкафы управления калорифером ШУК
+              </h3>
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
@@ -635,7 +649,7 @@ export default function ContactsAndPricesPage() {
               </table>
             </div>
             <div className="w-full">
-              <Heading lvl={2} text="Оребренные ТЭНы" />
+              <h3 className="mb-2 text-xl uppercase">Оребренные ТЭНы</h3>
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
