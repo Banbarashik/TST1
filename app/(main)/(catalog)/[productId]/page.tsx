@@ -133,12 +133,12 @@ export async function generateMetadata({
   }
 
   if (productType === "std300" || productType === "std300-hl") {
-    const hl = productType === "std300-hl" ? "ХЛ" : "";
+    const hl = productType === "std300-hl" ? " ХЛ" : "";
 
     return {
-      title: `Агрегат СТД-300 ${hl} отопительный ${heatCarrierAdj.nom}`,
-      description: `Агрегат СТД 300 ${hl} воздушно-отопительный ${heatCarrierAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена ${heatCarrierAdj.gen} агрегата СТД 300 ${hl}`,
-      keywords: `стд 300 ${product.heatCarrier === "water" ? "в" : "п"} ${hl},агрегат стд 300 ${hl} ${heatCarrierAdj.nom},агрегат стд 300 ${product.calorifier}3,отопительный агрегат стд 300 ${product.calorifier}4 расчет и подбор,воздушно-отопительный агрегат ${product.model}3,агрегат ${product.model}4 технические характеристики,агрегат отопительный ${heatCarrierAdj.nom} стд 300 ${hl} мощность,воздушный агрегат стд 300 ${hl} ${product.heatCarrier === "water" ? "в" : "п"} производительность,отопительный агрегат стд 300 ${hl} ${product.heatCarrier === "water" ? "в" : "п"} купить,${heatCarrierAdj.nom} агрегат стд 300 ${hl} цена`,
+      title: `Агрегат СТД-300${hl} отопительный ${heatCarrierAdj.nom}`,
+      description: `Агрегат СТД 300${hl} воздушно-отопительный ${heatCarrierAdj.nom} – производство ООО Т.С.Т. Характеристики, расчет, подбор, цена ${heatCarrierAdj.gen} агрегата СТД 300${hl}`,
+      keywords: `стд 300 ${product.heatCarrier === "water" ? "в" : "п"}${hl},агрегат стд 300${hl} ${heatCarrierAdj.nom},агрегат стд 300 ${product.calorifier}3,отопительный агрегат стд 300 ${product.calorifier}4 расчет и подбор,воздушно-отопительный агрегат ${product.model}3,агрегат ${product.model}4 технические характеристики,агрегат отопительный ${heatCarrierAdj.nom} стд 300${hl} мощность,воздушный агрегат стд 300${hl} ${product.heatCarrier === "water" ? "в" : "п"} производительность,отопительный агрегат стд 300${hl} ${product.heatCarrier === "water" ? "в" : "п"} купить,${heatCarrierAdj.nom} агрегат стд 300${hl} цена`,
     };
   }
 
