@@ -126,23 +126,25 @@ export default async function Catalog({
       </div>
 
       {/* Пагинация — сохраняем sort в href */}
-      <div className="mb-10 flex justify-center gap-2">
-        {Array.from({ length: totalPages }, (_, i) => (
-          <Button
-            asChild
-            key={i + 1}
-            variant="outline"
-            size="icon"
-            className={
-              page === i + 1
-                ? "bg-primary text-white hover:text-white"
-                : "bg-white"
-            }
-          >
-            <Link href={makePageHref(i + 1)}>{i + 1}</Link>
-          </Button>
-        ))}
-      </div>
+      {totalPages > 1 && (
+        <div className="mb-10 flex justify-center gap-2">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <Button
+              asChild
+              key={i + 1}
+              variant="outline"
+              size="icon"
+              className={
+                page === i + 1
+                  ? "bg-primary text-white hover:text-white"
+                  : "bg-white"
+              }
+            >
+              <Link href={makePageHref(i + 1)}>{i + 1}</Link>
+            </Button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
