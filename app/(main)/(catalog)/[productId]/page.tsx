@@ -84,7 +84,7 @@ export async function generateMetadata({
     return {
       title: `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`,
       description: `Калорифер ${product.shortName} ${heatCarrierAdj.nom} - производитель предприятие ООО Т.С.Т. Производство, характеристики, размеры, мощность, расчет, подбор, цена калорифера ${name}`,
-      keywords: `${name},калорифер ${name},калорифер ${name} водяной,калорифер ${name} технические характеристики,калорифер ${name} габаритные размеры,купить калорифер ${product.shortName},калорифер ${name} цена,калорифер ${name} расчет,калорифер ${name} подбор,калорифер ${name} мощность`,
+      keywords: `${name},калорифер ${name},калорифер ${name} ${heatCarrierAdj.nom},калорифер ${name} технические характеристики,калорифер ${name} габаритные размеры,купить калорифер ${product.shortName},калорифер ${name} цена,калорифер ${name} расчет,калорифер ${name} подбор,калорифер ${name} мощность`,
     };
   }
 
