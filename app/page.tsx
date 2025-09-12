@@ -37,10 +37,9 @@ export default function Home() {
       <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden py-25">
         <Image
           src="/img/home/contact_form.png"
-          alt="Contact background"
+          alt="Промышленное воздушное отопление"
           fill
           className="scale-102 object-cover object-[30%_50%]"
-          priority
         />
         {<div className="absolute inset-0 bg-white/40" />} {/* FOG */}
         <div className="z-10 flex w-full items-center justify-center gap-20 px-12">
