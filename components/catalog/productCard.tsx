@@ -23,9 +23,8 @@ export default function ProductCard({
       {isLink ? (
         <Link href={`/${product.id}`}>
           <Image
-            //* temporary check, until 'img' prop is obj on all products
-            src={product.img?.url ? product.img.url : product.img}
-            alt={product.img?.alt ? product.img.alt : product.name}
+            src={product.img.url}
+            alt={product.img.alt}
             width={300}
             height={300}
             className="mx-auto"
@@ -35,9 +34,8 @@ export default function ProductCard({
       ) : (
         <>
           <Image
-            //* temporary check, until 'img' prop is obj on all products
-            src={product.img?.url ? product.img.url : product.img}
-            alt={product.img?.alt ? product.img.alt : product.name}
+            src={product.img.url}
+            alt={product.img.alt}
             width={300}
             height={300}
           />
