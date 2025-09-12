@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://zao-tst.ru/sitemap.xml
