@@ -5,10 +5,14 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData) {
+  if (!process.env.CONTACT_FORM_SEND_TO_EMAIL) {
+    throw new Error("Missing environment variable: CONTACT_FORM_SEND_TO_EMAIL");
+  }
+
   try {
     const { error } = await resend.emails.send({
       from: "site@zao-tst.ru",
-      to: "odinokiyskitalec@gmail.com",
+      to: process.env.CONTACT_FORM_SEND_TO_EMAIL,
       subject: "Заявка",
       html: `
       <p>Имя: ${formData.username}</p>
