@@ -3,7 +3,7 @@ import { productData } from "@/data/products";
 
 import type { MetadataRoute } from "next";
 
-import { Category } from "@/types";
+import { Category, Product } from "@/types";
 
 function traverseCategories(
   nodes: Category[],
@@ -42,11 +42,33 @@ function traverseCategories(
   return out;
 }
 
+function traverseProducts(nodes: Product[]): MetadataRoute.Sitemap {
+  return nodes.map(function (node) {
+    let priority = 0.8;
+
+    if (
+      node.categories.includes("pritochny-vodiany-kalorifery") ||
+      node.categories.includes("pritochny-parovy-kalorifery")
+    ) {
+      priority = 0.9;
+    }
+
+    return {
+      url: `${process.env.SITE_URL}/${node.id}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority,
+    };
+  });
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const categoriesMap = traverseCategories(categoryTree);
+  const productsMap = traverseProducts(productData);
 
   return [
     ...categoriesMap,
+    ...productsMap,
     {
       url: `${process.env.SITE_URL}`,
       lastModified: new Date(),
