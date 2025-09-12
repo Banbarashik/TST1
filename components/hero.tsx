@@ -13,9 +13,9 @@ const slides = [
     text: "",
     img: {
       url: "/img/hero/slide1.png",
-      alt: "Воздушное отопление производственного помещения",
+      alt: "Агрегаты воздушного отопления",
     },
-    imgClass: "",
+    imgClass: "object-cover",
     titleClass: "text-6xl",
   },
   {
@@ -30,15 +30,14 @@ const slides = [
     imgClass: "",
     textClass: "text-xl",
   },
-
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
     img: {
       url: "/img/hero/slide3.png",
-      alt: "Агрегаты воздушного отопления",
+      alt: "Воздушное отопление производственного помещения",
     },
-    imgClass: "object-cover",
+    imgClass: "",
     titleClass: "text-5xl",
   },
 ];
