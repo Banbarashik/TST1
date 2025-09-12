@@ -3,8 +3,50 @@ import { productData } from "@/data/products";
 
 import type { MetadataRoute } from "next";
 
+import { Category } from "@/types";
+
+function traverseCategories(
+  nodes: Category[],
+  depth = 0,
+  basePriority = 1.0,
+  step = 0.1,
+  minPriority = 0.8,
+): MetadataRoute.Sitemap {
+  const priority = Math.max(
+    minPriority,
+    +(basePriority - depth * step).toFixed(1),
+  );
+  const out: MetadataRoute.Sitemap = [];
+
+  for (const node of nodes) {
+    out.push({
+      url: `${process.env.SITE_URL}/category/${node.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority,
+    });
+
+    if (node.children?.length) {
+      out.push(
+        ...traverseCategories(
+          node.children,
+          depth + 1,
+          basePriority,
+          step,
+          minPriority,
+        ),
+      );
+    }
+  }
+
+  return out;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const categoriesMap = traverseCategories(categoryTree);
+
   return [
+    ...categoriesMap,
     {
       url: `${process.env.SITE_URL}`,
       lastModified: new Date(),

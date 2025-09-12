@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export type Category = {
   slug: string;
-  title?: string;
+  title: string;
   menuTitle: string;
   metadata: Metadata;
   children?: Category[];
