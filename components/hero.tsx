@@ -11,8 +11,11 @@ const slides = [
   {
     title: ["25 лет на рынке", "воздушно-отопительного оборудования"],
     text: "",
-    img: "/img/hero/slide1.png",
-    class: "",
+    img: {
+      url: "/img/hero/slide1.png",
+      alt: "Воздушное отопление производственного помещения",
+    },
+    imgClass: "",
     titleClass: "text-6xl",
   },
   {
@@ -20,16 +23,22 @@ const slides = [
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/slide2.png",
-    class: "",
+    img: {
+      url: "/img/hero/slide2.png",
+      alt: "Калориферы воздушного отопления",
+    },
+    imgClass: "",
     textClass: "text-xl",
   },
 
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
-    img: "/img/hero/slide3.png",
-    class: "object-cover",
+    img: {
+      url: "/img/hero/slide3.png",
+      alt: "Агрегаты воздушного отопления",
+    },
+    imgClass: "object-cover",
     titleClass: "text-5xl",
   },
 ];
@@ -55,17 +64,16 @@ export default function Hero() {
             className="keen-slider__slide relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
           >
             <Image
-              src={slide.img}
-              alt=""
+              src={slide.img.url}
+              alt={slide.img.alt}
               fill
-              className={`${slide.class}`}
+              className={`${slide.imgClass}`}
               priority
               aria-hidden="true"
             />
             {/* Overlay for darkening */}
             <div className="absolute inset-0 bg-black/10" />
-            {/* {<div className="absolute inset-0 bg-white/10" />} */}
-            {/* Centered Text */}
+            {/* Text */}
             <div
               className={`${
                 idx === 2 ? "max-w-6xl" : "max-w-5xl"
