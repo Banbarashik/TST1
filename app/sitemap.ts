@@ -7,6 +7,13 @@ import { Category, Product } from "@/types";
 
 const SITE_URL = process.env.SITE_URL;
 
+const pathToImgFolder = `${SITE_URL}/img`;
+const pathToImgFolders = {
+  hero: `${pathToImgFolder}/hero`,
+  home: `${pathToImgFolder}/home`,
+  generalPages: `${pathToImgFolder}/general_pages`,
+};
+
 function traverseCategories(
   nodes: Category[],
   depth = 0,
@@ -76,7 +83,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
-      images: [],
+      images: [
+        `${pathToImgFolders.hero}/slide1.png`,
+        `${pathToImgFolders.hero}/slide2.png`,
+        `${pathToImgFolders.hero}/slide3.png`,
+        `${pathToImgFolders.home}/contact_form.png`,
+        `${pathToImgFolders.home}/zao_tst_agregaty_ao2.png`,
+        `${pathToImgFolders.home}/zao_tst_agregaty_avo.png`,
+        `${pathToImgFolders.home}/zao_tst_agregaty_std-300-hl.png`,
+        `${pathToImgFolders.home}/zao_tst_agregaty_std-300.png`,
+        `${pathToImgFolders.home}/zao_tst_elektrokalorifery_sfo.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kfb-m.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kfb-p.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kp.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kpps-kppu.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kpsk.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_kpvs-kpvu.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_ksk.png`,
+        `${pathToImgFolders.home}/zao_tst_kalorifery_tvv.png`,
+        `${pathToImgFolders.home}/zao_tst_shkafy_shuk.png`,
+        `${pathToImgFolders.home}/zao_tst_teny.png`,
+        `${pathToImgFolders.home}/zao_tst_ustanovki_sfotc.png`,
+      ],
     },
     {
       url: `${SITE_URL}/kontakty-prajs`,
