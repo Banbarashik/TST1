@@ -5,6 +5,8 @@ import type { MetadataRoute } from "next";
 
 import { Category, Product } from "@/types";
 
+const SITE_URL = process.env.SITE_URL;
+
 function traverseCategories(
   nodes: Category[],
   depth = 0,
@@ -20,7 +22,7 @@ function traverseCategories(
 
   for (const node of nodes) {
     out.push({
-      url: `${process.env.SITE_URL}/category/${node.slug}`,
+      url: `${SITE_URL}/category/${node.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority,
@@ -54,7 +56,7 @@ function traverseProducts(nodes: Product[]): MetadataRoute.Sitemap {
     }
 
     return {
-      url: `${process.env.SITE_URL}/${node.id}`,
+      url: `${SITE_URL}/${node.id}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority,
@@ -70,115 +72,116 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...categoriesMap,
     ...productsMap,
     {
-      url: `${process.env.SITE_URL}`,
+      url: `${SITE_URL}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
+      images: [],
     },
     {
-      url: `${process.env.SITE_URL}/kontakty-prajs`,
+      url: `${SITE_URL}/kontakty-prajs`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: `${process.env.SITE_URL}/personal-data`,
+      url: `${SITE_URL}/personal-data`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.0,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-voda`,
+      url: `${SITE_URL}/kalorifery-voda`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-par`,
+      url: `${SITE_URL}/kalorifery-par`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-ksk`,
+      url: `${SITE_URL}/kalorifery-ksk`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-kpsk`,
+      url: `${SITE_URL}/kalorifery-kpsk`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-tvv`,
+      url: `${SITE_URL}/kalorifery-tvv`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-kp`,
+      url: `${SITE_URL}/kalorifery-kp`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-kfb-a`,
+      url: `${SITE_URL}/kalorifery-kfb-a`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${process.env.SITE_URL}/kalorifery-kfb`,
+      url: `${SITE_URL}/kalorifery-kfb`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${process.env.SITE_URL}/ao2-ksk-kpsk`,
+      url: `${SITE_URL}/ao2-ksk-kpsk`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/ao2-kpsk-ksk`,
+      url: `${SITE_URL}/ao2-kpsk-ksk`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/avo-tvv-kp`,
+      url: `${SITE_URL}/avo-tvv-kp`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${process.env.SITE_URL}/std300-ksk-kpsk`,
+      url: `${SITE_URL}/std300-ksk-kpsk`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${process.env.SITE_URL}/std300-tvv-kp`,
+      url: `${SITE_URL}/std300-tvv-kp`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${process.env.SITE_URL}/elektronagrevateli`,
+      url: `${SITE_URL}/elektronagrevateli`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.SITE_URL}/teploventilyatory`,
+      url: `${SITE_URL}/teploventilyatory`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${process.env.SITE_URL}/shkafy-upravleniya`,
+      url: `${SITE_URL}/shkafy-upravleniya`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
