@@ -20,7 +20,7 @@ const slides = [
     text: `Производим безопасное и простое в обслуживании нагревательное оборудование,
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
-    img: "/img/hero/slide-36.png",
+    img: "/img/hero/slide2.png",
     class: "",
     textClass: "text-xl",
   },
@@ -28,7 +28,7 @@ const slides = [
   {
     title: ["Тепло там, где есть наша продукция"],
     text: "",
-    img: "/img/hero/slide-30.png",
+    img: "/img/hero/slide3.png",
     class: "object-cover",
     titleClass: "text-5xl",
   },
