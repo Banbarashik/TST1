@@ -62,11 +62,18 @@ function traverseProducts(nodes: Product[]): MetadataRoute.Sitemap {
       priority = 0.9;
     }
 
+    const images = [];
+
+    if (node.img.url) images.push(`${SITE_URL}${node.img.url}`);
+    if (node.drawing) images.push(`${SITE_URL}${node.drawing}`);
+    if (node.scheme) images.push(`${SITE_URL}${node.scheme}`);
+
     return {
       url: `${SITE_URL}/${node.id}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority,
+      images,
     };
   });
 }
