@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
@@ -7,7 +7,7 @@ import "keen-slider/keen-slider.min.css";
 
 import { Phone, Smartphone } from "lucide-react";
 
-import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
+// import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
 import Logo from "@/components/ui/logo";
 import Footer from "@/components/footer";
@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <ProductSelectionProvider>
       <html lang="ru">
-        <head>
+        {/* <head>
           <Suspense>
             <YandexMetrikaContainer enabled />
           </Suspense>
-        </head>
+        </head> */}
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
             <Logo place="header" />
