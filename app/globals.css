@@ -5,6 +5,7 @@
 
 @theme {
   --breakpoint-2xl: 87.5rem;
+  --breakpoint-3xl: 96rem;
   --container-8xl: 90rem; /* 90rem = 1440px */
   --font-arial: Arial;
   --font-inter: Inter;

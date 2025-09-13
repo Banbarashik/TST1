@@ -25,9 +25,9 @@ export default function RootLayout({
           <YandexMetrikaContainer enabled />
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="flex h-22 items-center bg-[#E0E0E0] xl:px-8 2xl:px-20">
+          <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
             <Logo place="header" />
-            <ul className="text-primary-darker space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
+            <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
               <li className="flex items-center gap-2.5">
                 <Phone size={20} />
                 +7 (3846) 68-23-24
