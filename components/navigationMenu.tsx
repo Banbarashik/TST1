@@ -4,7 +4,15 @@ import Link from "next/link";
 
 export default function NavigationMenu() {
   return (
-    <div className="text-primary-darker 3xl:text-[15px] flex h-full items-center gap-1.5 pb-1.5 lg:text-[13px]">
+    <div className="flex">
+      <a
+        href="#"
+        className="btn-flip"
+        data-back="Паровые калориферы"
+        data-front="Калькулятор подбора"
+      ></a>
+    </div>
+    /*     <div className="text-primary-darker 3xl:text-[15px] flex h-full items-center gap-1.5 pb-1.5 lg:text-[13px]">
       <Link
         href="/kalorifery-voda"
         className="btn-3 flex h-[93%] items-center px-5"
@@ -34,6 +42,6 @@ export default function NavigationMenu() {
           <span>Прайс-лист</span>
         </div>
       </Link>
-    </div>
+    </div> */
   );
 }
