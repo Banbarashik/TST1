@@ -5,7 +5,7 @@ import "keen-slider/keen-slider.min.css";
 
 import { Phone, Smartphone } from "lucide-react";
 
-import YandexMetrikaInitializer from "@/components/YandexMetrikaInitializer";
+import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
 import Logo from "@/components/ui/logo";
 import Footer from "@/components/footer";
@@ -22,9 +22,7 @@ export default function RootLayout({
     <ProductSelectionProvider>
       <html lang="ru">
         <head>
-          <YandexMetrikaInitializer
-            initParameters={{ webvisor: true, defer: true }}
-          />
+          <YandexMetrikaContainer enabled />
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="flex h-22 items-center bg-[#E0E0E0] xl:px-8 2xl:px-20">
