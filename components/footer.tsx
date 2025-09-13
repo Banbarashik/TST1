@@ -11,7 +11,7 @@ export default function Footer() {
       id="footer"
       className="bg-secondary text-secondary-foreground flex h-42 items-center"
     >
-      <div className="max-w-screen-3xl mx-auto flex w-full justify-between gap-8">
+      <div className="max-w-screen-3xl mx-auto flex w-full items-center justify-between gap-8 px-8">
         <div className="space-y-1 text-[15px]">
           <p className="mb-2">Разработка сайта:</p>
           <Link
@@ -27,7 +27,7 @@ export default function Footer() {
             odinokiyskitalec@gmail.com
           </a>
         </div>
-        <ul className="font-medium">
+        <ul className="font-medium xl:text-sm 2xl:text-base">
           <li>
             Юр. адрес: г. Новосибирск, ул. Широкая, здание 1 А, офис 207/1
           </li>
