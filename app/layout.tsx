@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
 import "@/app/globals.css";
@@ -22,7 +24,9 @@ export default function RootLayout({
     <ProductSelectionProvider>
       <html lang="ru">
         <head>
-          <YandexMetrikaContainer enabled />
+          <Suspense>
+            <YandexMetrikaContainer enabled />
+          </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
