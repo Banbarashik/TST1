@@ -235,6 +235,16 @@ th {
 
 /* NAV MENU BUTTONS */
 
+#btn0::after {
+  /* height: max-content; */
+  padding: 12px;
+}
+#btn0::before {
+  /* height: max-content; */
+  padding: 12px;
+  width: 126px;
+}
+
 .btn-flip {
   opacity: 1;
   outline: 0;
