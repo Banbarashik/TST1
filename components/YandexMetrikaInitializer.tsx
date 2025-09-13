@@ -8,15 +8,14 @@ import { YANDEX_METRIKA_ID } from "@/constants";
 import { YandexMetrikaInitParameters } from "@/types";
 
 type Props = {
-  id: number;
   initParameters: YandexMetrikaInitParameters;
 };
 
-const YandexMetrikaInitializer: React.FC<Props> = ({ id, initParameters }) => {
+const YandexMetrikaInitializer: React.FC<Props> = ({ initParameters }) => {
   /* eslint-disable @next/next/no-img-element */
   return (
     <>
-      <Script type="text/javascript" id={`ym_${id}`}>
+      <Script type="text/javascript" id={`ym_${YANDEX_METRIKA_ID}`}>
         {`(function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
