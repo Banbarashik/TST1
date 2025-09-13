@@ -4,10 +4,16 @@ import Link from "next/link";
 
 export default function NavigationMenu() {
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <a
         href="#"
-        className="btn-flip"
+        className="btn-flip w-min"
+        data-back="Паровые калориферы"
+        data-front="Калькулятор подбора"
+      ></a>
+      <a
+        href="#"
+        className="btn-flip w-min"
         data-back="Паровые калориферы"
         data-front="Калькулятор подбора"
       ></a>

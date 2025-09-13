@@ -24,10 +24,10 @@ const slides = [
 		устойчивое к плохим условиям эксплуатации, надежное и способное исправно работать
 		в течение многих лет`,
     img: {
-      url: "/img/hero/slide2.png",
+      url: "/img/hero/slide-52.png",
       alt: "Калориферы воздушного отопления",
     },
-    imgClass: "",
+    imgClass: "object-cover",
     textClass: "text-xl",
   },
   {
