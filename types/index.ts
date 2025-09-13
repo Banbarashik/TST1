@@ -110,3 +110,16 @@ export type YandexMetrikaInitParameters = {
   triggerEvent?: boolean;
   sendTitle?: boolean;
 };
+
+export type YandexMetrikaHitOptions = {
+  callback: () => void;
+  ctx: unknown;
+  params: YandexMetrikaHitParams;
+  referer: string;
+  title: string;
+};
+
+export type YandexMetrikaHitParams = {
+  order_price: number;
+  currency: string;
+};
