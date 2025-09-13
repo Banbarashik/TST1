@@ -33,7 +33,7 @@ export default function Footer() {
           </li>
           <li>Почтовый адрес: 652710, г. Киселевск, ул. Юргинская, 1</li>
         </ul>
-        <ul>
+        <ul className="xl:text-sm 2xl:text-base">
           <li>
             <span className="font-semibold">8-961-737-83-14</span> - технические
             вопросы
@@ -43,9 +43,9 @@ export default function Footer() {
             продаж
           </li>
         </ul>
-        <div className="flex gap-6">
+        <div className="flex items-center sm:gap-3 2xl:gap-6">
           <Logo place="footer" />
-          <div className="3xl:text-lg xl:text-base">
+          <div className="sm:text-sm 2xl:text-lg">
             <p className="text-accent">+7 (3846) 68-23-24</p>
             <p className="text-accent">zao_tst@mail.ru</p>
           </div>
