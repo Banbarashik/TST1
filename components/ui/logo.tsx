@@ -5,7 +5,10 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
   return (
     <>
       {place === "header" && (
-        <Link href="/" className="flex items-center justify-start gap-3">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center justify-start gap-3"
+        >
           <Image
             src="/img/logo_header.png"
             alt="Логотип ООО 'ТСТ'"
@@ -21,7 +24,7 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
       {place === "footer" && (
         <Link
           href="/"
-          className="flex items-center justify-start gap-3 opacity-90"
+          className="flex shrink-0 items-center justify-start gap-3 opacity-90"
         >
           <Image
             src="/img/logo_footer.png"
