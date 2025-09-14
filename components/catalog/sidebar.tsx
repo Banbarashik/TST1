@@ -230,7 +230,7 @@ export default function Sidebar() {
   return (
     <aside className="w-78 shrink-0">
       {currentSlug === "" || currentSlug === "all" ? (
-        <div className="fixed w-80 rounded-xl border-2 p-2">
+        <div className="w-80 rounded-xl border-2 p-2 [@media(min-height:920px)]:fixed">
           <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
             <RecursiveAccordion
               nodes={categoryTree}
