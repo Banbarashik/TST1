@@ -286,6 +286,20 @@ function RecursiveAccordion({
   );
 }
 
+function useMediaQuery(query: string): boolean {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) setMatches(media.matches);
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [matches, query]);
+
+  return matches;
+}
+
 export default function Sidebar() {
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
@@ -293,6 +307,9 @@ export default function Sidebar() {
     pathParts[0] === "catalog" && pathParts.length > 1
       ? pathParts[pathParts.length - 1]
       : "";
+
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const treeToRender = isMobile ? mobileCategoryTree : categoryTree;
 
   // Compute open items for the current slug
   const openItems = useMemo(
@@ -314,7 +331,7 @@ export default function Sidebar() {
         <div className="w-full rounded-xl border-2 p-2 sm:w-80 lg:fixed [@media(min-height:920px)]:fixed">
           <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
             <RecursiveAccordion
-              nodes={categoryTree}
+              nodes={treeToRender}
               currentSlug={currentSlug}
               openItems={openItems}
             />
@@ -328,7 +345,7 @@ export default function Sidebar() {
           className="w-full sm:w-80 lg:fixed [@media(min-height:920px)]:fixed"
         >
           <RecursiveAccordion
-            nodes={categoryTree}
+            nodes={treeToRender}
             currentSlug={currentSlug}
             openItems={openItems}
           />
