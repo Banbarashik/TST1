@@ -75,6 +75,7 @@ function RecursiveAccordion({
                 <Accordion.Header>
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
+                      scroll={false}
                       href={`/catalog/${node.slug}`}
                       className="relative block w-full rounded-sm bg-[#ffd77a] p-3 text-lg font-bold"
                     >
@@ -118,6 +119,7 @@ function RecursiveAccordion({
                 <Accordion.Header>
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
+                      scroll={false}
                       href={`/catalog/${node.slug}`}
                       className="relative block w-full p-3 text-lg font-bold"
                     >
@@ -134,6 +136,7 @@ function RecursiveAccordion({
                     return (
                       <div key={child.slug}>
                         <Link
+                          scroll={false}
                           href={`/catalog/${child.slug}`}
                           className={`block w-full rounded-sm p-3 ${
                             childIsActive
@@ -163,6 +166,7 @@ function RecursiveAccordion({
             <Accordion.Header>
               <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                 <Link
+                  scroll={false}
                   href={`/catalog/${node.slug}`}
                   className={`relative block w-full p-3 text-lg ${
                     isActive
@@ -190,6 +194,7 @@ function RecursiveAccordion({
         ) : (
           <div key={node.slug}>
             <Link
+              scroll={false}
               href={`/catalog/${node.slug}`}
               className={`block w-full rounded-sm p-3 ${
                 isActive ? "bg-[#ffd77a] font-bold" : "hover:text-primary"
@@ -228,9 +233,9 @@ export default function Sidebar() {
   }, [openItems]);
 
   return (
-    <aside className="w-78 shrink-0">
+    <aside className="w-full shrink-0 sm:w-78">
       {currentSlug === "" || currentSlug === "all" ? (
-        <div className="w-80 rounded-xl border-2 p-2 [@media(min-height:920px)]:fixed">
+        <div className="w-full rounded-xl border-2 p-2 sm:w-80 lg:fixed [@media(min-height:920px)]:fixed">
           <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
             <RecursiveAccordion
               nodes={categoryTree}
@@ -244,7 +249,7 @@ export default function Sidebar() {
           type="multiple"
           value={open}
           onValueChange={setOpen}
-          className="w-80 [@media(min-height:920px)]:fixed"
+          className="w-full sm:w-80 lg:fixed [@media(min-height:920px)]:fixed"
         >
           <RecursiveAccordion
             nodes={categoryTree}

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-secondary text-secondary-foreground flex h-42 items-center"
+      className="bg-secondary text-secondary-foreground flex h-42 items-center overflow-x-clip" //* temporary 'overflow-x-clip'
     >
       <div className="max-w-screen-3xl mx-auto flex w-full items-center justify-between gap-8 px-8">
         <div className="space-y-1 text-[15px]">

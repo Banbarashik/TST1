@@ -29,7 +29,9 @@ export default function RootLayout({
           </Suspense>
         </head> */}
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
+          <nav
+            className="3xl:px-20 flex h-22 items-center overflow-x-clip bg-[#E0E0E0] xl:px-8" //* temporary 'overflow-x-clip'
+          >
             <Logo place="header" />
             <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
               <li className="flex items-center gap-2.5">

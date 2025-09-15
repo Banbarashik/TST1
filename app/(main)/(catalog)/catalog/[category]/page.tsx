@@ -119,7 +119,7 @@ export default async function Catalog({
       {/* Контрол сортировки */}
 
       {/* Сетка товаров */}
-      <div className="mb-20 grid grid-cols-3 gap-5">
+      <div className="mb-20 grid gap-5 sm:grid-cols-3">
         {paginatedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
