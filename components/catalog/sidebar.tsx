@@ -2,6 +2,8 @@
 
 import { categoryTree } from "@/data/categories";
 
+import { Category } from "@/types";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -32,6 +34,80 @@ function findOpenAccordions(
   }
   return [];
 }
+
+const waterKalorifery: Category[] = [];
+const steamKalorifery: Category[] = [];
+const agregaty: Category[] = [];
+function findCategory(nodes: Category[]) {
+  for (const node of nodes) {
+    if (
+      node.slug === "kpvs" ||
+      node.slug === "kpvu" ||
+      node.slug === "ksk" ||
+      node.slug === "tvv" ||
+      node.slug === "kfb-a-m"
+    )
+      waterKalorifery.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+    if (
+      node.slug === "kpps" ||
+      node.slug === "kppu" ||
+      node.slug === "kpsk" ||
+      node.slug === "kp" ||
+      node.slug === "kfb-a-p"
+    )
+      steamKalorifery.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+    if (node.slug === "vodiany-agregaty" || node.slug === "parovy-agregaty")
+      agregaty.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+
+    if (node.children) findCategory(node.children);
+  }
+}
+
+const waterKaloriferyCategory = categoryTree.find(
+  (cat) => cat.slug === "vodiany-kalorifery",
+);
+const steamKaloriferyCategory = categoryTree.find(
+  (cat) => cat.slug === "parovy-kalorifery",
+);
+const agregatyCategory = categoryTree.find((cat) => cat.slug === "agregaty");
+const electroCategory = categoryTree.find(
+  (cat) => cat.slug === "energonagrevatelynoe-oborudovanie",
+);
+
+findCategory(categoryTree);
+
+const mobileCategoryTree = [
+  {
+    ...waterKaloriferyCategory,
+    children: waterKalorifery,
+  },
+  {
+    ...steamKaloriferyCategory,
+    children: steamKalorifery,
+  },
+  {
+    ...agregatyCategory,
+    children: agregaty,
+  },
+  electroCategory,
+];
+
+console.log(mobileCategoryTree);
 
 function RecursiveAccordion({
   nodes,
