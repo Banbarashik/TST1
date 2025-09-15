@@ -244,7 +244,7 @@ export default function Sidebar() {
           type="multiple"
           value={open}
           onValueChange={setOpen}
-          className="fixed w-80"
+          className="w-80 [@media(min-height:920px)]:fixed"
         >
           <RecursiveAccordion
             nodes={categoryTree}

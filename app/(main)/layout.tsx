@@ -6,7 +6,7 @@ export default function CatalogLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="mx-auto flex w-full max-w-[1300px] flex-1 gap-10 py-14">
+    <main className="3xl:pb-14 mx-auto flex w-full max-w-[1300px] flex-1 gap-10 pt-14 lg:pb-20">
       <Sidebar />
       {children}
     </main>
