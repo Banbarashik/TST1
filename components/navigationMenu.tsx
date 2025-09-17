@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -15,10 +15,23 @@ export default function NavigationMenu({
   variant?: "desktop" | "mobile";
 }) {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu on outside click
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
 
   if (variant === "mobile") {
     return (
-      <div className="w-full">
+      <div className="w-full" ref={menuRef}>
         <button
           className="w-full bg-[#f8f8f8] px-4 py-3 text-lg font-semibold"
           onClick={() => setOpen((o) => !o)}
