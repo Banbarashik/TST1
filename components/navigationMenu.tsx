@@ -7,6 +7,12 @@ export default function NavigationMenu() {
     <div className="flex">
       <Link
         href="/kalorifery-voda"
+        className="btn-flip btn-flip-p w-min"
+        data-back="Сертификаты"
+        data-front="Продукция"
+      />
+      <Link
+        href="/kalorifery-voda"
         className="btn-flip w-min"
         data-back="Водяные калориферы"
         data-front="Калькулятор подбора"
@@ -19,8 +25,7 @@ export default function NavigationMenu() {
       />
       <Link
         href="/kontakty-prajs"
-        id="btn0"
-        className="btn-flip w-min"
+        className="btn-flip btn-flip-p w-min"
         data-back="Прайс лист"
         data-front="Контакты"
       />
