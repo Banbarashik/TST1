@@ -29,9 +29,7 @@ export default function RootLayout({
           </Suspense>
         </head> */}
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav
-            className="3xl:px-20 flex h-22 items-center overflow-x-clip bg-[#E0E0E0] xl:px-8" //* temporary 'overflow-x-clip'
-          >
+          <nav className="3xl:px-20 flex h-22 items-center overflow-x-clip bg-[#E0E0E0] xl:px-8">
             <Logo place="header" />
             <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
               <li className="flex items-center gap-2.5">
@@ -49,10 +47,17 @@ export default function RootLayout({
               </li>
             </ul>
             <div className="ml-auto flex h-full items-center gap-8">
-              <NavigationMenu />
+              {/* Desktop menu only */}
+              <div className="hidden md:block">
+                <NavigationMenu variant="desktop" />
+              </div>
               <ContactFormTrigger />
             </div>
           </nav>
+          {/* Mobile menu trigger button */}
+          <div className="sticky top-0 z-50 bg-white md:hidden">
+            <NavigationMenu variant="mobile" />
+          </div>
           {children}
           <Footer />
           <BackToTop threshold={0.3} />
