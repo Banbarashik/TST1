@@ -15,7 +15,7 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
             width={68}
             height={68}
           />
-          <div className="text-primary-darker mt-3 space-y-0.5 font-semibold">
+          <div className="text-primary-darker 3xl:block mt-3 hidden space-y-0.5 font-semibold">
             <p>Предприятие ООО Т.С.Т.</p>
             <p>Отопительное оборудование</p>
           </div>
