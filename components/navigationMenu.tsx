@@ -180,9 +180,17 @@ export default function NavigationMenu({
                 </AccordionItem>
               </div>
 
-              <Link href="#" className="block py-4 text-center text-sm">
-                Прайс-лист Контакты
-              </Link>
+              <div className="flex">
+                <Link href="#" className="flex-1/2 py-4 text-center text-sm">
+                  Прайс-лист Контакты
+                </Link>
+                <Link
+                  href="#"
+                  className="text-primary flex-1/2 py-4 text-center text-sm"
+                >
+                  Подать заявку
+                </Link>
+              </div>
             </Accordion>
           </div>
         )}
