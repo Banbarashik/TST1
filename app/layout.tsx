@@ -31,10 +31,10 @@ export default function RootLayout({
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-8">
             <Logo place="header" />
-            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-sm xl:flex-row xl:text-base">
+            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-row items-start gap-y-1.5 text-lg md:text-base lg:flex-col lg:text-sm xl:flex-row xl:text-base">
               <a
                 href="mailto:zao_tst@mail.ru"
-                className="text-primary-darker flex items-center gap-2 xl:hidden"
+                className="text-primary-darker hidden items-center gap-2 lg:flex xl:hidden"
               >
                 <Mail className="size-4" />
                 zao_tst@mail.ru
@@ -56,7 +56,7 @@ export default function RootLayout({
               </ul>
               <a
                 href="mailto:zao_tst@mail.ru"
-                className="text-primary-darker hidden items-center gap-2 xl:flex"
+                className="text-primary-darker hidden items-center gap-2 sm:flex lg:hidden xl:flex"
               >
                 <Mail className="size-4 xl:size-5" />
                 zao_tst@mail.ru
