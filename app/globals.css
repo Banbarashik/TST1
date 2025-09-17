@@ -240,10 +240,10 @@ th {
   padding-bottom: 12px;
 }
 #btn0::before {
-  padding-left: 30px;
-  padding-right: 30px;
-  /* padding-top: 12px; */
-  /* padding-bottom: 12px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .btn-flip {
