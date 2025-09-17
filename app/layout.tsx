@@ -29,12 +29,19 @@ export default function RootLayout({
           </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
+          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-8">
             <Logo place="header" />
-            <div className="flex">
-              <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
+            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-sm xl:flex-row xl:text-base">
+              <a
+                href="mailto:zao_tst@mail.ru"
+                className="text-primary-darker flex items-center gap-2 xl:hidden"
+              >
+                <Mail className="size-4" />
+                zao_tst@mail.ru
+              </a>
+              <ul className="text-primary-darker mr-5 space-y-2">
                 <li className="flex items-center gap-2.5">
-                  <Phone size={20} />
+                  <Phone className="size-4 xl:size-5" />
                   +7 (3846) 68-23-24
                 </li>
                 <li>
@@ -42,16 +49,16 @@ export default function RootLayout({
                     href="tel:89617378314"
                     className="flex items-center gap-2.5 hover:font-semibold hover:text-[#604890]"
                   >
-                    <Smartphone size={20} />
+                    <Smartphone className="size-4 xl:size-5" />
                     8-961-737-83-14
                   </a>
                 </li>
               </ul>
               <a
                 href="mailto:zao_tst@mail.ru"
-                className="text-primary-darker flex gap-2"
+                className="text-primary-darker hidden items-center gap-2 xl:flex"
               >
-                <Mail />
+                <Mail className="size-4 xl:size-5" />
                 zao_tst@mail.ru
               </a>
             </div>
