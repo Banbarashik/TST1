@@ -2,11 +2,13 @@
 
 import { categoryTree } from "@/data/categories";
 
-import { Category } from "@/types";
-
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+import { Category } from "@/types";
 
 import * as Accordion from "@radix-ui/react-accordion";
 
@@ -284,20 +286,6 @@ function RecursiveAccordion({
       })}
     </>
   );
-}
-
-function useMediaQuery(query: string): boolean {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) setMatches(media.matches);
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [matches, query]);
-
-  return matches;
 }
 
 export default function Sidebar() {
