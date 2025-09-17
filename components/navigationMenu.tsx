@@ -50,10 +50,7 @@ export default function NavigationMenu({
                     <Link href="/kalorifery-voda" className="block px-4 py-3">
                       Калькулятор подбора
                     </Link>
-                    <Link
-                      href="/kalorifery-voda/info"
-                      className="block px-4 py-3"
-                    >
+                    <Link href="/catalog/kpvs" className="block px-4 py-3">
                       КПВС
                     </Link>
                     <Link
