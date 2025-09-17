@@ -41,57 +41,148 @@ export default function NavigationMenu({
         {open && (
           <div className="bg-background flex flex-col border-t shadow-lg">
             <Accordion type="single" collapsible>
-              <AccordionItem value="water">
-                <AccordionTrigger>Водяные калориферы</AccordionTrigger>
-                <AccordionContent>
-                  <Link
-                    href="/kalorifery-voda"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Калькулятор подбора
-                  </Link>
-                  <Link
-                    href="/kalorifery-voda/info"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Информация
-                  </Link>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="steam">
-                <AccordionTrigger>Паровые калориферы</AccordionTrigger>
-                <AccordionContent>
-                  <Link
-                    href="/kalorifery-par"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Калькулятор подбора
-                  </Link>
-                  <Link
-                    href="/kalorifery-par/info"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Информация
-                  </Link>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="contacts">
-                <AccordionTrigger>Контакты / Прайс</AccordionTrigger>
-                <AccordionContent>
-                  <Link
-                    href="/kontakty-prajs"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Контакты
-                  </Link>
-                  <Link
-                    href="/kontakty-prajs/price"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Прайс
-                  </Link>
-                </AccordionContent>
-              </AccordionItem>
+              <div className="flex border-b">
+                <AccordionItem value="water" className="flex-1/2 border-0">
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Водяные калориферы
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Link href="/kalorifery-voda" className="block px-4 py-2">
+                      Калькулятор подбора
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КПВС
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КПВУ
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КСк
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      ТВВ
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КФБ-А М
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="steam" className="flex-1/2 border-0">
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Паровые калориферы
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Link
+                      href="/kalorifery-par"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Калькулятор подбора
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КППС
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КППУ
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КПСк
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КП
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      КФБ-А П
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+              </div>
+
+              <div className="flex border-b">
+                <AccordionItem value="agregaty" className="flex-1/2 border-0">
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Отопительные агрегаты
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      Водяные АО АВО СТД
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      Паровые АО АВО СТД
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="electro" className="flex-1/2 border-0">
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Электронагреватели
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      СФО
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      СФОЦ
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      ШУК
+                    </Link>
+                    <Link
+                      href="/kalorifery-voda/info"
+                      className="block px-4 py-2"
+                    >
+                      ТЭНР
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+              </div>
+
+              <Link href="#" className="block py-4 text-center">
+                Прайс-лист Контакты
+              </Link>
             </Accordion>
           </div>
         )}
