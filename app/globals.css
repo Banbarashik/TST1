@@ -236,20 +236,20 @@ th {
 /* NAV MENU BUTTONS */
 
 #btn0::after {
-  /* height: max-content; */
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 #btn0::before {
-  /* height: max-content; */
-  padding: 12px;
-  width: 126px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* padding-top: 12px; */
+  /* padding-bottom: 12px; */
 }
 
 .btn-flip {
   opacity: 1;
   outline: 0;
   color: #fff;
-  /* line-height: 40px; */
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -284,8 +284,7 @@ th {
   opacity: 1;
   color: var(--primary-darker);
   display: block;
-  padding: 0 30px;
-  /* line-height: 40px; */
+  padding: 0 10px;
   transition: 0.5s;
   position: relative;
   background: #e3e3e3;

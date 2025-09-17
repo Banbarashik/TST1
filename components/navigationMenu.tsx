@@ -20,9 +20,9 @@ export default function NavigationMenu() {
       <Link
         href="/kontakty-prajs"
         id="btn0"
-        className="btn-flip w-max"
+        className="btn-flip w-min"
         data-back="Контакты"
-        data-front="Прайс"
+        data-front="Прайс лист"
       />
     </div>
   );
