@@ -23,11 +23,7 @@ export default function RootLayout({
   return (
     <ProductSelectionProvider>
       <html lang="ru">
-        <body className="font-arial min-h-screen antialiased">
-          {/* Sticky trigger outside flex context */}
-          <div className="sticky top-0 z-50 bg-white md:hidden">
-            <NavigationMenu variant="mobile" />
-          </div>
+        <body className="font-arial antialiased">
           <nav className="3xl:px-20 flex h-22 items-center overflow-x-clip bg-[#E0E0E0] xl:px-8">
             <Logo place="header" />
             <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
@@ -53,6 +49,10 @@ export default function RootLayout({
               <ContactFormTrigger />
             </div>
           </nav>
+          {/* Sticky trigger outside flex context */}
+          <div className="sticky top-0 z-50 bg-white md:hidden">
+            <NavigationMenu variant="mobile" />
+          </div>
           {/* Main content */}
           {children}
           <Footer />

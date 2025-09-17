@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function NavigationMenu({
   variant = "desktop",
@@ -21,24 +27,59 @@ export default function NavigationMenu({
         </button>
         {open && (
           <div className="bg-background flex flex-col border-t shadow-lg">
-            <Link
-              href="/kalorifery-voda"
-              className="border-b px-4 py-3 hover:bg-gray-100"
-            >
-              Водяные калориферы
-            </Link>
-            <Link
-              href="/kalorifery-par"
-              className="border-b px-4 py-3 hover:bg-gray-100"
-            >
-              Паровые калориферы
-            </Link>
-            <Link
-              href="/kontakty-prajs"
-              className="px-4 py-3 hover:bg-gray-100"
-            >
-              Контакты / Прайс
-            </Link>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="water">
+                <AccordionTrigger>Водяные калориферы</AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/kalorifery-voda"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Калькулятор подбора
+                  </Link>
+                  <Link
+                    href="/kalorifery-voda/info"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Информация
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="steam">
+                <AccordionTrigger>Паровые калориферы</AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/kalorifery-par"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Калькулятор подбора
+                  </Link>
+                  <Link
+                    href="/kalorifery-par/info"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Информация
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="contacts">
+                <AccordionTrigger>Контакты / Прайс</AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/kontakty-prajs"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Контакты
+                  </Link>
+                  <Link
+                    href="/kontakty-prajs/price"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Прайс
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         )}
       </div>
