@@ -47,7 +47,9 @@ export default function Footer() {
           <Logo place="footer" />
           <div className="sm:text-sm 2xl:text-lg">
             <p className="text-accent">+7 (3846) 68-23-24</p>
-            <p className="text-accent">zao_tst@mail.ru</p>
+            <a href="mailto:zao_tst@mail.ru" className="text-accent">
+              zao_tst@mail.ru
+            </a>
           </div>
         </div>
       </div>
