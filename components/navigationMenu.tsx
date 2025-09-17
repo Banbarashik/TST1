@@ -47,36 +47,36 @@ export default function NavigationMenu({
                     Водяные калориферы
                   </AccordionTrigger>
                   <AccordionContent>
-                    <Link href="/kalorifery-voda" className="block px-4 py-2">
+                    <Link href="/kalorifery-voda" className="block px-4 py-3">
                       Калькулятор подбора
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КПВС
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КПВУ
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КСк
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       ТВВ
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КФБ-А М
                     </Link>
@@ -89,37 +89,37 @@ export default function NavigationMenu({
                   <AccordionContent>
                     <Link
                       href="/kalorifery-par"
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-3 hover:bg-gray-100"
                     >
                       Калькулятор подбора
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КППС
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КППУ
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КПСк
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КП
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       КФБ-А П
                     </Link>
@@ -135,13 +135,13 @@ export default function NavigationMenu({
                   <AccordionContent>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       Водяные АО АВО СТД
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       Паровые АО АВО СТД
                     </Link>
@@ -154,25 +154,25 @@ export default function NavigationMenu({
                   <AccordionContent>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       СФО
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       СФОЦ
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       ШУК
                     </Link>
                     <Link
                       href="/kalorifery-voda/info"
-                      className="block px-4 py-2"
+                      className="block px-4 py-3"
                     >
                       ТЭНР
                     </Link>
