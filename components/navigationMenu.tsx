@@ -12,6 +12,12 @@ export default function NavigationMenu() {
         data-front="Продукция"
       />
       <Link
+        href="/kontakty-prajs"
+        className="btn-flip btn-flip-p w-min"
+        data-back="Прайс лист"
+        data-front="Контакты"
+      />
+      <Link
         href="/kalorifery-voda"
         className="btn-flip w-min"
         data-back="Водяные калориферы"
@@ -22,12 +28,6 @@ export default function NavigationMenu() {
         className="btn-flip w-min"
         data-back="Паровые калориферы"
         data-front="Калькулятор подбора"
-      />
-      <Link
-        href="/kontakty-prajs"
-        className="btn-flip btn-flip-p w-min"
-        data-back="Прайс лист"
-        data-front="Контакты"
       />
     </div>
   );
