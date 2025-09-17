@@ -23,12 +23,11 @@ export default function RootLayout({
   return (
     <ProductSelectionProvider>
       <html lang="ru">
-        {/* <head>
-          <Suspense>
-            <YandexMetrikaContainer enabled />
-          </Suspense>
-        </head> */}
-        <body className="font-arial flex min-h-screen flex-col antialiased">
+        <body className="font-arial min-h-screen antialiased">
+          {/* Sticky trigger outside flex context */}
+          <div className="sticky top-0 z-50 bg-white md:hidden">
+            <NavigationMenu variant="mobile" />
+          </div>
           <nav className="3xl:px-20 flex h-22 items-center overflow-x-clip bg-[#E0E0E0] xl:px-8">
             <Logo place="header" />
             <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
@@ -54,10 +53,7 @@ export default function RootLayout({
               <ContactFormTrigger />
             </div>
           </nav>
-          {/* Mobile menu trigger button */}
-          <div className="sticky top-0 z-50 bg-white md:hidden">
-            <NavigationMenu variant="mobile" />
-          </div>
+          {/* Main content */}
           {children}
           <Footer />
           <BackToTop threshold={0.3} />

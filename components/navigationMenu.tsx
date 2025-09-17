@@ -14,13 +14,13 @@ export default function NavigationMenu({
     return (
       <div className="w-full">
         <button
-          className="w-full bg-[#E0E0E0] px-4 py-3 text-lg font-semibold"
+          className="w-full bg-[#f8f8f8] px-4 py-3 text-lg font-semibold"
           onClick={() => setOpen((o) => !o)}
         >
           Меню
         </button>
         {open && (
-          <div className="flex flex-col border-t bg-white shadow-lg">
+          <div className="bg-background flex flex-col border-t shadow-lg">
             <Link
               href="/kalorifery-voda"
               className="border-b px-4 py-3 hover:bg-gray-100"
