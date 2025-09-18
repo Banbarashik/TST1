@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-secondary text-secondary-foreground relative py-4 pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-62 lg:items-center lg:gap-16"
+      className="bg-secondary text-secondary-foreground relative py-4 pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-62 lg:items-center lg:gap-16 xl:h-auto xl:p-10"
     >
-      <div className="lg:ml-auto lg:flex lg:items-center lg:gap-16">
+      <div className="lg:ml-auto lg:flex lg:items-center lg:gap-16 xl:ml-0 xl:w-full xl:justify-between">
         <div className="mb-6 flex items-center justify-center gap-4 sm:justify-start lg:order-last lg:m-0">
           <Logo place="footer" />
           <div className="text-lg">
@@ -62,8 +62,23 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        <div className="order-first hidden xl:block">
+          <p>Разработка сайта:</p>
+          <Link
+            href="https://github.com/Banbarashik"
+            target="_blank"
+            className="text-accent flex items-center gap-2"
+          >
+            <GithubIcon />
+            Banbarashik
+          </Link>
+          <a href="" className="text-accent flex items-center gap-2">
+            <Mail size={20} />
+            odinokiyskitalec@gmail.com
+          </a>
+        </div>
       </div>
-      <div className="absolute bottom-25 -left-15 -rotate-90 space-y-1 text-[15px] lg:bottom-22">
+      <div className="absolute bottom-25 -left-15 -rotate-90 space-y-1 text-[15px] lg:bottom-22 xl:hidden">
         <p>Разработка сайта:</p>
         <Link
           href="https://github.com/Banbarashik"
