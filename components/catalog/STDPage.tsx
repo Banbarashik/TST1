@@ -1,4 +1,4 @@
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 
 import Image from "next/image";
 

@@ -1,4 +1,4 @@
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 import { categoryTree } from "@/data/categories";
 
 import Link from "next/link";

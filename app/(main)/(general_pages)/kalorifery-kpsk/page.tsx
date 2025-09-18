@@ -1,4 +1,4 @@
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 
 import type { Metadata } from "next";
 import Image from "next/image";

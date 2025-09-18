@@ -1,4 +1,4 @@
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -192,8 +192,8 @@ export default function AgregatySTD300V() {
         />
         <ProductParagraph>
           Воздушно-отопительные водяные агрегаты серии СТД-300 и СТД-300 ХЛ
-          изготавливаются в двух вариантах – с трехрядным и четырехрядным калорифером
-          КСк или ТВВ.
+          изготавливаются в двух вариантах – с трехрядным и четырехрядным
+          калорифером КСк или ТВВ.
         </ProductParagraph>
         <div className="mb-2 flex justify-between">
           <Image

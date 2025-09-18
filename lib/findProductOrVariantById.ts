@@ -1,4 +1,4 @@
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 
 import { Product, ProductVariant, SupplyCalorifier, KSKProduct } from "@/types";
 

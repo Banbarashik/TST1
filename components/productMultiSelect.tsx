@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { Product, SelectedProduct } from "@/types";
 
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 import { categoryTree } from "@/data/categories";
 
 import { sortProducts } from "@/lib/utils";

@@ -1,5 +1,5 @@
 import { categoryTree } from "@/data/categories";
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 
 import type { MetadataRoute } from "next";
 

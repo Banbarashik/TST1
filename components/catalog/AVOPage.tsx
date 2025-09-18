@@ -6,7 +6,7 @@ import SimilarProductLink from "./similarProductLink";
 import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
 import TableAndCatalogLinks from "./tableAndCatalogLinks";
-import { productData } from "@/data/products";
+import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
 
 export default function AVOPage({ product }) {
