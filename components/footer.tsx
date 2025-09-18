@@ -21,7 +21,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="space-y-3 text-end sm:text-start">
+        <div className="3xl:hidden space-y-3 text-end sm:text-start">
           <ul>
             <li className="flex flex-col sm:flex-row sm:gap-2">
               <div>
@@ -62,6 +62,22 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        <ul className="3xl:block hidden font-medium xl:text-sm 2xl:text-base">
+          <li>
+            Юр. адрес: г. Новосибирск, ул. Широкая, здание 1 А, офис 207/1
+          </li>
+          <li>Почтовый адрес: 652710, г. Киселевск, ул. Юргинская, дом 1</li>
+        </ul>
+        <ul className="3xl:block hidden xl:text-sm 2xl:text-base">
+          <li>
+            <span className="font-semibold">8-961-737-83-14</span> - технические
+            вопросы
+          </li>
+          <li>
+            <span className="font-semibold">8-904-968-14-88</span> - отдел
+            продаж
+          </li>
+        </ul>
         <div className="order-first hidden xl:block">
           <p>Разработка сайта:</p>
           <Link
