@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-secondary text-secondary-foreground relative py-4 pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-60 lg:justify-end lg:gap-16"
+      className="bg-secondary text-secondary-foreground relative py-4 pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-62 lg:items-center lg:gap-16"
     >
-      <div>
+      <div className="lg:ml-auto lg:flex lg:items-center lg:gap-16">
         <div className="mb-6 flex items-center justify-center gap-4 sm:justify-start lg:order-last lg:m-0">
           <Logo place="footer" />
           <div className="text-lg">
@@ -63,7 +63,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="absolute bottom-25 -left-15 -rotate-90 space-y-1 text-[15px]">
+      <div className="absolute bottom-25 -left-15 -rotate-90 space-y-1 text-[15px] lg:bottom-22">
         <p>Разработка сайта:</p>
         <Link
           href="https://github.com/Banbarashik"
