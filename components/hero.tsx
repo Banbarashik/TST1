@@ -113,7 +113,7 @@ export default function Hero() {
           <button
             key={idx}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`h-4 w-4 rounded-full border-2 border-white transition ${currentSlide === idx ? "bg-white" : "bg-white/40"} focus:outline-none`}
+            className={`size-5 cursor-pointer rounded-full border-2 border-white transition ${currentSlide === idx ? "bg-white" : "bg-white/40"} focus:outline-none`}
             onClick={() => instanceRef.current?.moveToIdx(idx)}
             type="button"
           />
