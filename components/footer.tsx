@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-secondary text-secondary-foreground relative py-4 pr-4"
+      className="bg-secondary text-secondary-foreground relative py-4 pr-4 sm:pb-10 sm:pl-26"
     >
-      <div className="mb-6 flex items-center justify-center gap-4">
+      <div className="mb-6 flex items-center justify-center gap-4 sm:justify-start">
         <Logo place="footer" />
         <div className="text-lg">
           <p className="text-accent">+7 (3846) 68-23-24</p>
@@ -20,25 +20,43 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="space-y-3 text-end">
+      <div className="space-y-3 text-end sm:text-start">
         <ul>
-          <li>
-            <div>Технические вопросы</div>
+          <li className="flex flex-col sm:flex-row sm:gap-2">
+            <div>
+              Технические вопросы<span className="hidden sm:inline">:</span>
+            </div>
             <div className="font-semibold">8-961-737-83-14</div>
           </li>
-          <li>
-            <div>Отдел продаж</div>
+          <li className="flex flex-col sm:flex-row sm:gap-2">
+            <div>
+              Отдел продаж<span className="hidden sm:inline">:</span>
+            </div>
             <div className="font-semibold">8-904-968-14-88</div>
           </li>
         </ul>
         <ul className="space-y-2 font-medium">
-          <li>
-            <div>Юридический адрес</div>
-            <div>г. Новосибирск, ул. Широкая,</div>
-            <div>здание 1 А, офис 207/1</div>
+          <li className="flex flex-col sm:flex-row sm:flex-wrap sm:gap-x-2">
+            <div>
+              Юридический адрес<span className="hidden sm:inline">:</span>
+            </div>
+            {/* 0-639 */}
+            <div className="sm:hidden">г. Новосибирск, ул. Широкая,</div>
+            <div className="sm:hidden">здание 1 А, офис 207/1</div>
+            {/* 640-767 */}
+            <div className="hidden sm:block">
+              г. Новосибирск, ул. Широкая, здание 1 А,
+            </div>
+            <div className="hidden sm:block">офис 207/1</div>
           </li>
-          <li>
-            <div>Почтовый адрес</div> <div>г. Киселевск, ул. Юргинская, 1</div>
+          <li className="flex flex-col sm:flex-row sm:gap-2">
+            <div>
+              Почтовый адрес<span className="hidden sm:inline">:</span>
+            </div>
+            <div>
+              г. Киселевск, ул. Юргинская<span className="sm:hidden">, 1</span>
+              <span className="hidden sm:inline">, дом 1</span>
+            </div>
           </li>
         </ul>
       </div>
