@@ -24,14 +24,9 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
       {place === "footer" && (
         <Link
           href="/"
-          className="flex shrink-0 items-center justify-start gap-3 opacity-90 sm:size-12 2xl:size-15"
+          className="relative flex size-16 shrink-0 items-center justify-start gap-3 opacity-90"
         >
-          <Image
-            src="/img/logo_footer.png"
-            alt="Логотип ООО 'ТСТ'"
-            width={58}
-            height={58}
-          />
+          <Image src="/img/logo_footer.png" alt="Логотип ООО 'ТСТ'" fill />
         </Link>
       )}
     </>
