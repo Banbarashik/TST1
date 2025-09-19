@@ -125,14 +125,16 @@ export default function Catalog() {
       {productCategories.map(function (category) {
         return (
           <li key={category.name} className="flex w-full flex-col">
-            <h2 className="text-2xl font-bold uppercase">{category.name}</h2>
-            <ul className="mt-6 mb-6 flex gap-12">
+            <h2 className="font-bold uppercase lg:text-[22px] xl:text-2xl">
+              {category.name}
+            </h2>
+            <ul className="mt-6 mb-6 flex lg:gap-10 xl:gap-12">
               {category.items.map(function (product) {
                 return (
                   <li key={product.name} className="w-full">
                     <Link
                       href={product.url}
-                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border px-10 pt-5 pb-5 shadow-sm"
+                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm lg:px-4 lg:text-sm xl:px-10 xl:text-base"
                     >
                       <Image
                         src={product.img}

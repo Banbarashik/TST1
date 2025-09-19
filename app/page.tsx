@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Hero />
       <div className="max-w-8xl mx-auto px-12 pt-16 pb-24">
-        <h1 className="mb-6 text-[28px] font-bold uppercase">
+        <h1 className="font-bold uppercase lg:mb-4 lg:text-[26px] xl:mb-6 xl:text-[28px]">
           Производство воздушно-отопительного оборудования
         </h1>
         <p className="mb-10">
@@ -42,8 +42,8 @@ export default function Home() {
           className="scale-102 object-cover object-[30%_50%]"
         />
         {<div className="absolute inset-0 bg-white/40" />} {/* FOG */}
-        <div className="z-10 flex w-full items-center lg:gap-4 lg:px-6 xl:justify-center xl:gap-20 xl:px-12">
-          <div className="relative text-center lg:w-min xl:w-full xl:max-w-xl xl:shrink-0">
+        <div className="z-10 flex w-full items-center lg:justify-evenly lg:gap-4 lg:px-6 xl:justify-center xl:gap-20 xl:px-12">
+          <div className="relative text-center lg:w-max xl:w-full xl:max-w-xl xl:shrink-0">
             <span className="absolute inset-0 -z-10 rounded-md bg-[#a6a6a6] opacity-100 blur-[90px]"></span>
             <p className="mb-4 font-bold text-shadow-2xs text-shadow-[#b3b3b3] lg:text-4xl xl:text-5xl">
               Есть вопросы?
