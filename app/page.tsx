@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="max-w-8xl mx-auto px-12 pt-16 pb-24">
-        <h1 className="font-bold uppercase lg:mb-4 lg:text-[26px] xl:mb-6 xl:text-[28px]">
+      <div className="max-w-8xl mx-auto px-12 pb-24 md:pt-11 lg:pt-16">
+        <h1 className="font-bold uppercase md:mb-4 md:text-2xl lg:text-[26px] xl:text-[28px]">
           Производство воздушно-отопительного оборудования
         </h1>
         <p className="mb-10">
