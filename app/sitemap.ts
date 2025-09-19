@@ -3,9 +3,9 @@ import productData from "@/data/products.json";
 
 import type { MetadataRoute } from "next";
 
-import { Category, Product } from "@/types";
+import { SITE_URL } from "@/constants";
 
-const SITE_URL = process.env.SITE_URL;
+import { Category, Product } from "@/types";
 
 const pathToImgFolder = `${SITE_URL}/img`;
 const pathToImgFolders = {
@@ -29,7 +29,7 @@ function traverseCategories(
 
   for (const node of nodes) {
     out.push({
-      url: `${SITE_URL}/category/${node.slug}`,
+      url: `${SITE_URL}/catalog/${node.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority,
