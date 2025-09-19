@@ -101,6 +101,87 @@ const nextConfig: NextConfig = {
         destination: "/kalorifery-kfb-a",
         permanent: false,
       },
+      {
+        source: "/files/Agregaty_otopitelnye_AO2_katalog_2020.pdf",
+        destination: "/documents/Agregat_AO2_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Agregaty_otopitelnye_AVO_katalog_2020.pdf",
+        destination: "/documents/Agregat_AVO-HL_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Agregaty_otopitelnye_STD-300_katalog_2020.pdf",
+        destination: "/documents/Agregat_STD-300_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Agregaty_otopitelnye_STD-300-HL_katalog_2020.pdf",
+        destination: "/documents/Agregat_STD-300-HL_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Elektrokalorifernye_ustanovki_SFOTC_katalog_2019.pdf",
+        destination: "/documents/Electroustanovka_SFOTC_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Elektrokalorifery_SFO_katalog_2019.pdf",
+        destination: "/documents/Electrokalorifer_SFO_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_KFB-a_katalog_2020.pdf",
+        destination: "/documents/Kalorifer_KFB_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_parovye_KP_katalog_2020.pdf",
+        destination: "/documents/Kalorifer_KP_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_parovye_KPSk_katalog_2020.pdf",
+        destination: "/documents/Kalorifer_KPSK_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_pritochnye_parovye_katalog_2021.pdf",
+        destination: "/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_pritochnye_vodianye_katalog_2021.pdf",
+        destination: "/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_vodianye_KSk_katalog_2020.pdf",
+        destination: "/documents/Kalorifer_KSK_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Kalorifery_vodianye_TVV_katalog_2020.pdf",
+        destination: "/documents/Kalorifer_TVV_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Shkafy_upravleniia_kaloriferom_SHUK_katalog_2019.pdf",
+        destination: "/documents/Electroshkaf_SHUK_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source: "/files/Teny_orebrennye_TENR_katalog_2019.pdf",
+        destination: "/documents/Electroten_TENR_katalog_2025.pdf",
+        permanent: true,
+      },
+      {
+        source:
+          "/files/Vozdushno_otopitel-noe_oborudovanie_zao-ooo-tst_prais-list_2020.pdf",
+        destination: "/documents/Price_list_zao_tst_2025.pdf",
+        permanent: true,
+      },
     ];
   },
 };
