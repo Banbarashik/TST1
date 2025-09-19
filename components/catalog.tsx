@@ -35,7 +35,7 @@ const productCategories = [
         img: "/img/home/zao_tst_kalorifery_kpsk.png",
       },
       {
-        name: "Агрегаты АО2",
+        name: "Агрегаты АО 2",
         url: "/catalog/agregaty",
         img: "/img/home/zao_tst_agregaty_ao2.png",
       },
@@ -128,13 +128,13 @@ export default function Catalog() {
             <h2 className="font-bold uppercase md:text-xl lg:text-[22px] xl:text-2xl">
               {category.name}
             </h2>
-            <ul className="mt-6 mb-6 flex lg:gap-10 xl:gap-12">
+            <ul className="mt-6 mb-6 flex md:gap-4 lg:gap-10 xl:gap-12">
               {category.items.map(function (product) {
                 return (
                   <li key={product.name} className="w-full">
                     <Link
                       href={product.url}
-                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm lg:px-4 lg:text-sm xl:px-10 2xl:text-base"
+                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm md:px-4 md:text-center md:text-[13px] lg:px-4 lg:text-sm xl:px-10 2xl:text-base"
                     >
                       <Image
                         src={product.img}
