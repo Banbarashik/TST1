@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       {/* CONTACT FORM SECTION START */}
-      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden py-25">
+      <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden md:py-14 lg:py-25">
         <Image
           src="/img/home/contact_form.png"
           alt="Промышленное воздушное отопление"
@@ -42,13 +42,13 @@ export default function Home() {
           className="scale-102 object-cover object-[30%_50%]"
         />
         {<div className="absolute inset-0 bg-white/40" />} {/* FOG */}
-        <div className="z-10 flex w-full items-center lg:justify-evenly lg:gap-4 lg:px-6 xl:justify-center xl:gap-20 xl:px-12">
+        <div className="z-10 flex w-full items-center md:flex-col lg:flex-row lg:justify-evenly lg:gap-4 lg:px-6 xl:justify-center xl:gap-20 xl:px-12">
           <div className="relative text-center lg:w-max xl:w-full xl:max-w-xl xl:shrink-0">
             <span className="absolute inset-0 -z-10 rounded-md bg-[#a6a6a6] opacity-100 blur-[90px]"></span>
-            <p className="mb-4 font-bold text-shadow-2xs text-shadow-[#b3b3b3] lg:text-4xl xl:text-5xl">
+            <p className="font-bold text-shadow-2xs text-shadow-[#b3b3b3] md:mb-2 md:text-5xl lg:mb-4 lg:text-4xl xl:text-5xl">
               Есть вопросы?
             </p>
-            <p className="mb-2 text-shadow-[#b3b3b3] text-shadow-xs lg:text-xl xl:text-2xl">
+            <p className="text-shadow-[#b3b3b3] text-shadow-xs md:mb-6 md:text-2xl lg:mb-2 lg:text-xl xl:text-2xl">
               Оставьте заявку через форму, <br /> и мы свяжемся с вами в
               ближайшее время.
             </p>
