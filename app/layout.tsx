@@ -29,19 +29,19 @@ export default function RootLayout({
           </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-8">
+          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-6">
             <Logo place="header" />
-            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-lg sm:flex-row md:text-base lg:flex-col lg:text-sm xl:flex-row xl:text-base">
+            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-lg sm:flex-row md:text-base lg:flex-col xl:flex-row">
               <a
                 href="mailto:zao_tst@mail.ru"
-                className="text-primary-darker hidden items-center gap-2 lg:flex xl:hidden"
+                className="text-primary-darker hidden items-center gap-2 lg:hidden"
               >
                 <Mail className="size-4" />
                 zao_tst@mail.ru
               </a>
               <ul className="text-primary-darker mr-5 space-y-2">
-                <li className="hidden items-center gap-2.5 sm:flex">
-                  <Phone className="size-4 xl:size-5" />
+                <li className="hidden items-center gap-2.5 sm:flex lg:hidden xl:flex">
+                  <Phone className="size-4 lg:size-5" />
                   +7 (3846) 68-23-24
                 </li>
                 <li>
@@ -49,20 +49,20 @@ export default function RootLayout({
                     href="tel:89617378314"
                     className="flex items-center gap-2.5 hover:font-semibold hover:text-[#604890]"
                   >
-                    <Smartphone className="size-4 xl:size-5" />
+                    <Smartphone className="size-4 lg:size-5" />
                     8-961-737-83-14
                   </a>
                 </li>
               </ul>
               <a
                 href="mailto:zao_tst@mail.ru"
-                className="text-primary-darker flex items-center gap-2 lg:hidden xl:flex"
+                className="text-primary-darker flex items-center gap-2 lg:order-first lg:flex xl:order-none"
               >
                 <Mail className="size-4 xl:size-5" />
                 zao_tst@mail.ru
               </a>
             </div>
-            <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6 xl:gap-8">
+            <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6">
               <NavigationMenu />
               <ContactFormTrigger />
             </div>

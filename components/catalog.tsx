@@ -134,7 +134,7 @@ export default function Catalog() {
                   <li key={product.name} className="w-full">
                     <Link
                       href={product.url}
-                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm lg:px-4 lg:text-sm xl:px-10 xl:text-base"
+                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm lg:px-4 lg:text-sm xl:px-10 2xl:text-base"
                     >
                       <Image
                         src={product.img}
