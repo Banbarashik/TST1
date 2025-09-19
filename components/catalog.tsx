@@ -128,13 +128,16 @@ export default function Catalog() {
             <h2 className="font-bold uppercase sm:text-base md:text-xl lg:text-[22px] xl:text-2xl">
               {category.name}
             </h2>
-            <ul className="mt-6 mb-6 flex sm:gap-2 md:gap-4 lg:gap-10 xl:gap-12">
-              {category.items.map(function (product) {
+            <ul className="mt-6 mb-6 flex flex-wrap gap-2 sm:flex-nowrap sm:gap-2 md:gap-4 lg:gap-10 xl:gap-12">
+              {category.items.map(function (product, _, arr) {
                 return (
-                  <li key={product.name} className="w-full">
+                  <li
+                    key={product.name}
+                    className={`${arr.length === 2 ? "w-full" : "w-[48%]"} sm:w-full`}
+                  >
                     <Link
                       href={product.url}
-                      className="hover:text-primary bg-card text-card-foreground flex flex-col items-center gap-4 rounded-xl border pt-5 pb-5 shadow-sm sm:h-full sm:px-2 sm:text-center sm:text-[13px] md:px-4 md:text-center md:text-[13px] lg:h-auto lg:px-4 lg:text-sm xl:px-10 2xl:text-base"
+                      className="hover:text-primary bg-card text-card-foreground flex h-full flex-col items-center gap-4 rounded-xl border px-2 pt-5 pb-5 text-center shadow-sm sm:text-[13px] md:px-4 md:text-center md:text-[13px] lg:h-auto lg:px-4 lg:text-sm xl:px-10 2xl:text-base"
                     >
                       <Image
                         src={product.img}
