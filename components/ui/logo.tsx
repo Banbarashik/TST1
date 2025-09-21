@@ -15,7 +15,7 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
             width={68}
             height={68}
           />
-          <div className="text-primary-darker mt-3 space-y-0.5 font-semibold">
+          <div className="text-primary-darker 3xl:block mt-3 hidden space-y-0.5 font-semibold md:block lg:hidden">
             <p>Предприятие ООО Т.С.Т.</p>
             <p>Отопительное оборудование</p>
           </div>
@@ -24,14 +24,9 @@ export default function Logo({ place }: { place: "header" | "footer" }) {
       {place === "footer" && (
         <Link
           href="/"
-          className="flex shrink-0 items-center justify-start gap-3 opacity-90 sm:size-12 2xl:size-15"
+          className="relative flex size-16 shrink-0 items-center justify-start gap-3 opacity-90"
         >
-          <Image
-            src="/img/logo_footer.png"
-            alt="Логотип ООО 'ТСТ'"
-            width={58}
-            height={58}
-          />
+          <Image src="/img/logo_footer.png" alt="Логотип ООО 'ТСТ'" fill />
         </Link>
       )}
     </>

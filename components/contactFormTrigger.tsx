@@ -27,7 +27,10 @@ export default function ContactFormTrigger() {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <div className="relative">
-          <Button className="h-12 cursor-pointer text-xl font-bold" size="lg">
+          <Button
+            className="h-12 cursor-pointer text-base font-bold xl:text-xl"
+            size="lg"
+          >
             Подать заявку
           </Button>
           {isMounted && selectedProductsAmount > 0 && (

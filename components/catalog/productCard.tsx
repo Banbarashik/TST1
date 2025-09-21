@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { cn } from "@/lib/utils";
+
 import type { Product, ProductVariant, SupplyCalorifier } from "@/types";
 
 import { Button } from "@/components/ui/button";
@@ -11,15 +13,22 @@ import ProductRequestControls from "@/components/catalog/productRequestControls"
 export default function ProductCard({
   product,
   isLink = true,
+  className = "",
 }: {
   product: Product | ProductVariant | SupplyCalorifier;
   isLink?: boolean;
+  className: string;
 }) {
   const hasVariants =
     Array.isArray(product.variants) && product.variants.length > 0;
 
   return (
-    <div className="flex shrink-0 flex-col rounded-lg border p-4 transition hover:shadow-md">
+    <div
+      className={cn(
+        "flex shrink-0 flex-col rounded-lg border p-4 transition hover:shadow-md",
+        className,
+      )}
+    >
       {isLink ? (
         <Link href={`/${product.id}`}>
           <Image

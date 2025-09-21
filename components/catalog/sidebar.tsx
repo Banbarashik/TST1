@@ -3,8 +3,12 @@
 import { categoryTree } from "@/data/categories";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+import { Category } from "@/types";
 
 import * as Accordion from "@radix-ui/react-accordion";
 
@@ -32,6 +36,80 @@ function findOpenAccordions(
   }
   return [];
 }
+
+const waterKalorifery: Category[] = [];
+const steamKalorifery: Category[] = [];
+const agregaty: Category[] = [];
+function findCategory(nodes: Category[]) {
+  for (const node of nodes) {
+    if (
+      node.slug === "kpvs" ||
+      node.slug === "kpvu" ||
+      node.slug === "ksk" ||
+      node.slug === "tvv" ||
+      node.slug === "kfb-a-m"
+    )
+      waterKalorifery.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+    if (
+      node.slug === "kpps" ||
+      node.slug === "kppu" ||
+      node.slug === "kpsk" ||
+      node.slug === "kp" ||
+      node.slug === "kfb-a-p"
+    )
+      steamKalorifery.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+    if (node.slug === "vodiany-agregaty" || node.slug === "parovy-agregaty")
+      agregaty.push({
+        slug: node.slug,
+        title: node.title,
+        menuTitle: node.menuTitle,
+        metadata: node.metadata,
+      });
+
+    if (node.children) findCategory(node.children);
+  }
+}
+
+const waterKaloriferyCategory = categoryTree.find(
+  (cat) => cat.slug === "vodiany-kalorifery",
+);
+const steamKaloriferyCategory = categoryTree.find(
+  (cat) => cat.slug === "parovy-kalorifery",
+);
+const agregatyCategory = categoryTree.find((cat) => cat.slug === "agregaty");
+const electroCategory = categoryTree.find(
+  (cat) => cat.slug === "energonagrevatelynoe-oborudovanie",
+);
+
+findCategory(categoryTree);
+
+const mobileCategoryTree = [
+  {
+    ...waterKaloriferyCategory,
+    children: waterKalorifery,
+  },
+  {
+    ...steamKaloriferyCategory,
+    children: steamKalorifery,
+  },
+  {
+    ...agregatyCategory,
+    children: agregaty,
+  },
+  electroCategory,
+];
+
+console.log(mobileCategoryTree);
 
 function RecursiveAccordion({
   nodes,
@@ -75,6 +153,7 @@ function RecursiveAccordion({
                 <Accordion.Header>
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
+                      scroll={false}
                       href={`/catalog/${node.slug}`}
                       className="relative block w-full rounded-sm bg-[#ffd77a] p-3 text-lg font-bold"
                     >
@@ -118,6 +197,7 @@ function RecursiveAccordion({
                 <Accordion.Header>
                   <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                     <Link
+                      scroll={false}
                       href={`/catalog/${node.slug}`}
                       className="relative block w-full p-3 text-lg font-bold"
                     >
@@ -134,6 +214,7 @@ function RecursiveAccordion({
                     return (
                       <div key={child.slug}>
                         <Link
+                          scroll={false}
                           href={`/catalog/${child.slug}`}
                           className={`block w-full rounded-sm p-3 ${
                             childIsActive
@@ -163,6 +244,7 @@ function RecursiveAccordion({
             <Accordion.Header>
               <Accordion.Trigger className="group relative w-full cursor-pointer text-left">
                 <Link
+                  scroll={false}
                   href={`/catalog/${node.slug}`}
                   className={`relative block w-full p-3 text-lg ${
                     isActive
@@ -190,6 +272,7 @@ function RecursiveAccordion({
         ) : (
           <div key={node.slug}>
             <Link
+              scroll={false}
               href={`/catalog/${node.slug}`}
               className={`block w-full rounded-sm p-3 ${
                 isActive ? "bg-[#ffd77a] font-bold" : "hover:text-primary"
@@ -213,6 +296,9 @@ export default function Sidebar() {
       ? pathParts[pathParts.length - 1]
       : "";
 
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const treeToRender = isMobile ? mobileCategoryTree : categoryTree;
+
   // Compute open items for the current slug
   const openItems = useMemo(
     () => findOpenAccordions(categoryTree, currentSlug),
@@ -228,12 +314,12 @@ export default function Sidebar() {
   }, [openItems]);
 
   return (
-    <aside className="w-78 shrink-0">
+    <aside className="w-full shrink-0 sm:w-78">
       {currentSlug === "" || currentSlug === "all" ? (
-        <div className="w-80 rounded-xl border-2 p-2 [@media(min-height:920px)]:fixed">
+        <div className="w-full rounded-xl border-2 p-2 sm:w-80 lg:fixed [@media(min-height:920px)]:fixed">
           <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
             <RecursiveAccordion
-              nodes={categoryTree}
+              nodes={treeToRender}
               currentSlug={currentSlug}
               openItems={openItems}
             />
@@ -244,10 +330,10 @@ export default function Sidebar() {
           type="multiple"
           value={open}
           onValueChange={setOpen}
-          className="w-80 [@media(min-height:920px)]:fixed"
+          className="w-full sm:w-80 lg:fixed [@media(min-height:920px)]:fixed"
         >
           <RecursiveAccordion
-            nodes={categoryTree}
+            nodes={treeToRender}
             currentSlug={currentSlug}
             openItems={openItems}
           />

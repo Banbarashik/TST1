@@ -24,7 +24,7 @@ export default function TableAndCatalogLinks({
   buttonClassName?: string;
 }) {
   return (
-    <div className="flex h-12 w-full gap-6">
+    <div className="mx-auto flex w-full flex-col gap-6 sm:max-w-fit xl:max-w-none xl:flex-row">
       <Button
         asChild
         className={cn(
@@ -32,7 +32,12 @@ export default function TableAndCatalogLinks({
           buttonClassName,
         )}
       >
-        <Link href={tableURL} target={tableLinkOpenNewTab ? "_blank" : "_self"}>
+        <Link
+          href={tableURL}
+          target={tableLinkOpenNewTab ? "_blank" : "_self"}
+          className="text-center"
+          style={{ textWrap: "wrap" }}
+        >
           {tableLinkText}
         </Link>
       </Button>
@@ -47,6 +52,8 @@ export default function TableAndCatalogLinks({
           <Link
             href={catalogURL}
             target={catalogOpenNewTab ? "_blank" : "_self"}
+            className="text-center"
+            style={{ textWrap: "wrap" }}
           >
             {catalogLinkText}
           </Link>

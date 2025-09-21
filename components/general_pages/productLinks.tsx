@@ -11,7 +11,12 @@ export default function ProductLinks({
   className?: string;
 }) {
   return (
-    <ul className={cn("grid grid-cols-5 gap-x-5 gap-y-6", className)}>
+    <ul
+      className={cn(
+        "grid grid-cols-3 gap-x-5 gap-y-6 sm:grid-cols-4 md:grid-cols-5 lg:gap-x-3 xl:gap-x-5",
+        className,
+      )}
+    >
       {products.map((p) => (
         //TODO temporary fix, think of how to use 'id' in case one of product variants has been passed
         <li key={p.name}>
@@ -34,7 +39,7 @@ function ProductLink({ product }) {
     >
       <Link href={id}>
         <div className="flex flex-col items-center gap-0.5">
-          <span>{name}</span>
+          <span className="text-xs sm:text-sm">{name}</span>
           <span className="text-sm">
             {airPower} м<sup>3</sup>/ч{heatPower ? `; ${heatPower} кВт` : ""}
           </span>

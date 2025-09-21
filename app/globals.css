@@ -4,9 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-2xl: 87.5rem;
-  --breakpoint-3xl: 96rem;
-  --container-8xl: 90rem; /* 90rem = 1440px */
+  --breakpoint-2xl: 87.5rem; /* 1400px */
+  --breakpoint-3xl: 96rem; /* 1536px */
+  --breakpoint-4xl: 105rem; /* 1680px */
+  --container-8xl: 90rem; /* 1440px */
   --font-arial: Arial;
   --font-inter: Inter;
 }
@@ -235,21 +236,10 @@ th {
 
 /* NAV MENU BUTTONS */
 
-#btn0::after {
-  /* height: max-content; */
-  padding: 12px;
-}
-#btn0::before {
-  /* height: max-content; */
-  padding: 12px;
-  width: 126px;
-}
-
 .btn-flip {
   opacity: 1;
   outline: 0;
   color: #fff;
-  /* line-height: 40px; */
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -284,8 +274,7 @@ th {
   opacity: 1;
   color: var(--primary-darker);
   display: block;
-  padding: 0 30px;
-  /* line-height: 40px; */
+  padding: 0 10px;
   transition: 0.5s;
   position: relative;
   background: #e3e3e3;
@@ -295,6 +284,33 @@ th {
     2px 4px 6px #dbdbdb;
   content: attr(data-front);
   transform: translateY(0) rotateX(0);
+}
+
+.btn-flip-p::after {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.btn-flip-p::before {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@media (min-width: 1740px) {
+  .btn-flip:before {
+    padding: 0 20px;
+  }
+  .btn-flip-p::after {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .btn-flip-p::before {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 /* NAV MENU BUTTONS */

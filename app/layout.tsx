@@ -5,7 +5,7 @@ import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 import "@/app/globals.css";
 import "keen-slider/keen-slider.min.css";
 
-import { Phone, Smartphone } from "lucide-react";
+import { Phone, Smartphone, Mail } from "lucide-react";
 
 import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
@@ -29,28 +29,49 @@ export default function RootLayout({
           </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="3xl:px-20 flex h-22 items-center bg-[#E0E0E0] xl:px-8">
+          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-6">
             <Logo place="header" />
-            <ul className="text-primary-darker mr-5 space-y-2 lg:text-sm xl:ml-5 2xl:ml-12 2xl:text-base">
-              <li className="flex items-center gap-2.5">
-                <Phone size={20} />
-                +7 (3846) 68-23-24
-              </li>
-              <li>
-                <a
-                  href="tel:89617378314"
-                  className="flex items-center gap-2.5 hover:font-semibold hover:text-[#604890]"
-                >
-                  <Smartphone size={20} />
-                  8-961-737-83-14
-                </a>
-              </li>
-            </ul>
-            <div className="ml-auto flex h-full items-center gap-8">
+            <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-lg sm:flex-row md:text-base lg:flex-col xl:flex-row">
+              <a
+                href="mailto:zao_tst@mail.ru"
+                className="text-primary-darker hidden items-center gap-2 lg:hidden"
+              >
+                <Mail className="size-4" />
+                zao_tst@mail.ru
+              </a>
+              <ul className="text-primary-darker mr-5 space-y-2">
+                <li className="hidden items-center gap-2.5 sm:flex lg:hidden xl:flex">
+                  <Phone className="size-4 lg:size-5" />
+                  +7 (3846) 68-23-24
+                </li>
+                <li>
+                  <a
+                    href="tel:89617378314"
+                    className="flex items-center gap-2.5 hover:font-semibold hover:text-[#604890]"
+                  >
+                    <Smartphone className="size-4 lg:size-5" />
+                    8-961-737-83-14
+                  </a>
+                </li>
+              </ul>
+              <a
+                href="mailto:zao_tst@mail.ru"
+                className="text-primary-darker flex items-center gap-2 lg:order-first lg:flex xl:order-none"
+              >
+                <Mail className="size-4 xl:size-5" />
+                zao_tst@mail.ru
+              </a>
+            </div>
+            <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6">
               <NavigationMenu />
               <ContactFormTrigger />
             </div>
           </nav>
+          {/* Sticky trigger outside flex context */}
+          <div className="sticky top-0 z-50 bg-white lg:hidden">
+            <NavigationMenu variant="mobile" />
+          </div>
+          {/* Main content */}
           {children}
           <Footer />
           <BackToTop threshold={0.3} />

@@ -153,23 +153,20 @@ export default function ElectroEquipmentPage({ product }) {
     .filter((p) => p.id !== product.id && p.size === product.size)
     .sort((a, b) => sortProducts(a.shortName, b.shortName));
 
+  const productName = isSFOTC
+    ? `Электрокалориферная ${product.name.toLowerCase()}`
+    : isSHUK
+      ? `Шкаф управления калорифером ${product.model}`
+      : product.name;
+
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
+      <h1 className="mb-8 text-2xl font-bold uppercase">{productName}</h1>
       <div className="mb-6 flex items-start gap-4">
-        <ProductCard
-          product={
-            isSFOTC
-              ? { ...product, name: `Установка ${product.shortName}` }
-              : isSHUK
-                ? { ...product, name: `Шкаф управления ${product.shortName}` }
-                : product
-          }
-          isLink={false}
-        />
+        <ProductCard product={product} isLink={false} />
         <div>
           <div className="mb-3 text-xl">
-            <h2>{product.name}.</h2>
+            <h2>{productName}.</h2>
             {!isSHUK && <p>ТУ 3442-004-55613706-02</p>}
           </div>
           {isSHUK ? (
@@ -284,7 +281,7 @@ export default function ElectroEquipmentPage({ product }) {
           <div className="mb-10 flex">
             <Image
               src={product.drawing}
-              alt={`${product.name} габаритные размеры`}
+              alt={`${productName} габаритные размеры`}
               title={`${product.shortName} габаритные размеры`}
               width={484}
               height={1}
@@ -311,7 +308,7 @@ export default function ElectroEquipmentPage({ product }) {
           </ProductParagraph>
           <Image
             src={product.drawing}
-            alt={`${product.name} габаритные размеры`}
+            alt={`${productName} габаритные размеры`}
             title={`${product.shortName} габаритные размеры`}
             width={776}
             height={1}
@@ -343,7 +340,7 @@ export default function ElectroEquipmentPage({ product }) {
           <div className="mb-10 flex">
             <Image
               src={product.drawing}
-              alt={`${product.name} габаритные размеры`}
+              alt={`${productName} габаритные размеры`}
               title={`Шкаф ${product.shortName} габаритные размеры`}
               width={322}
               height={1}

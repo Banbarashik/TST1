@@ -12,7 +12,7 @@ export default function QuestionButton() {
         <Dialog.Trigger asChild>
           <Button
             size="xl"
-            className="cursor-pointer bg-[#574184] hover:bg-[#7e5ebd]"
+            className="hidden cursor-pointer bg-[#574184] hover:bg-[#7e5ebd] lg:block"
           >
             Задать вопрос
           </Button>

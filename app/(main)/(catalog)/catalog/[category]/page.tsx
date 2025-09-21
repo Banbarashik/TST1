@@ -110,16 +110,18 @@ export default async function Catalog({
   };
 
   return (
-    <div>
-      <div className="flex justify-between">
-        <h1 className="mb-6 text-2xl font-bold uppercase">{title}</h1>
+    <div className="lg:w-full xl:w-auto">
+      <div className="flex flex-col justify-between md:flex-row lg:gap-4">
+        <h1 className="mb-6 text-xl font-bold uppercase lg:text-2xl">
+          {title}
+        </h1>
         <SortControls />
       </div>
 
       {/* Контрол сортировки */}
 
       {/* Сетка товаров */}
-      <div className="mb-20 grid grid-cols-3 gap-5">
+      <div className="mb-20 grid gap-5 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
         {paginatedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -127,7 +129,7 @@ export default async function Catalog({
 
       {/* Пагинация — сохраняем sort в href */}
       {totalPages > 1 && (
-        <div className="mb-10 flex justify-center gap-2">
+        <div className="flex flex-wrap gap-4 xl:justify-center xl:gap-2.5">
           {Array.from({ length: totalPages }, (_, i) => (
             <Button
               asChild

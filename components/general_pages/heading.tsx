@@ -8,13 +8,17 @@ export default function Heading({
 } & React.ComponentProps<"h1" | "h2" | "h3">) {
   if (lvl === 1)
     return (
-      <h1 className={props.className + " text-2xl font-bold uppercase"}>
+      <h1
+        className={props.className + " text-xl font-bold uppercase sm:text-2xl"}
+      >
         {text}
       </h1>
     );
   if (lvl === 2)
     return (
-      <h2 className={props.className + " mb-2 text-xl uppercase"}>{text}</h2>
+      <h2 className={props.className + " mb-2 text-lg uppercase sm:text-xl"}>
+        {text}
+      </h2>
     );
   if (lvl === 3)
     return (

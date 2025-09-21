@@ -54,7 +54,7 @@ export default function KaloriferyParPage() {
           от 2000 до 25000 м<sup>3</sup>/час. Общая линейка калориферов КППС и
           КППУ насчитывает 48 номеров.
         </ProductParagraph>
-        <div className="flex">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-0 sm:overflow-x-auto 2xl:overflow-x-visible">
           <Image
             src="/img/general_pages/kalorifer_pritochnyi_parovoi.png"
             alt="Расчет парового приточного калорифера"
