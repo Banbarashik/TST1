@@ -54,6 +54,7 @@ export default function SupplyCalorifierPage({
               key={variant.id}
               isLink={false}
               product={{ ...variant, airPower, img }}
+              className="max-w-64 sm:max-w-none sm:px-4"
             />
           );
         })}
