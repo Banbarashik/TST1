@@ -8,7 +8,7 @@ export default function ProductHeader({
   product: Product | SupplyCalorifier;
 }) {
   return (
-    <div className="mb-4 flex items-center justify-between">
+    <div className="mb-4 flex items-center justify-between gap-4">
       <h1 className="text-xl font-bold uppercase">{product.name}</h1>
       <Link
         href="#"
