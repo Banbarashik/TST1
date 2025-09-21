@@ -68,7 +68,7 @@ export default function RootLayout({
             </div>
           </nav>
           {/* Sticky trigger outside flex context */}
-          <div className="sticky top-0 z-50 bg-white md:hidden">
+          <div className="sticky top-0 z-50 bg-white lg:hidden">
             <NavigationMenu variant="mobile" />
           </div>
           {/* Main content */}
