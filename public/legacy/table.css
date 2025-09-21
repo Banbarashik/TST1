@@ -177,6 +177,13 @@ th {
 /* Стилизация таблиц, которым требуется скролл (начало) */
 .table-with-scroll {
   min-width: 948px;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .table-with-scroll {
+    min-width: auto;
+  }
 }
 
 #primary.table-with-scroll,
