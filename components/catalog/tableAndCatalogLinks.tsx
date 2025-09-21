@@ -24,7 +24,7 @@ export default function TableAndCatalogLinks({
   buttonClassName?: string;
 }) {
   return (
-    <div className="mx-auto flex w-full flex-col gap-6 sm:max-w-fit">
+    <div className="mx-auto flex w-full flex-col gap-6 sm:max-w-fit xl:max-w-none xl:flex-row">
       <Button
         asChild
         className={cn(
