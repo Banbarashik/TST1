@@ -129,7 +129,7 @@ export default async function Catalog({
 
       {/* Пагинация — сохраняем sort в href */}
       {totalPages > 1 && (
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
+        <div className="mb-22 flex flex-wrap gap-4">
           {Array.from({ length: totalPages }, (_, i) => (
             <Button
               asChild
