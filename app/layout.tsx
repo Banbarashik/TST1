@@ -67,6 +67,11 @@ export default function RootLayout({
               <ContactFormTrigger />
             </div>
           </nav>
+          {/* Sticky trigger outside flex context */}
+          <div className="sticky top-0 z-50 bg-white md:hidden">
+            <NavigationMenu variant="mobile" />
+          </div>
+          {/* Main content */}
           {children}
           <Footer />
           <BackToTop threshold={0.3} />
