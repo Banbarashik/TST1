@@ -33,7 +33,11 @@ export default function ProductRequestControls({
   };
 
   return (
-    <div className={props.className + " flex items-center gap-4"}>
+    <div
+      className={
+        props.className + " flex items-center gap-4 sm:flex-col md:flex-row"
+      }
+    >
       <Button
         onClick={handleAddOrRemove}
         variant={isMounted && isSelected ? "secondary" : "default"}
