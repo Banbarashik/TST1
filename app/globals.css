@@ -297,6 +297,22 @@ th {
   padding-bottom: 12px;
 }
 
+@media (min-width: 1740px) {
+  .btn-flip:before {
+    padding: 0 20px;
+  }
+  .btn-flip-p::after {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .btn-flip-p::before {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
 /* NAV MENU BUTTONS */
 
 .btn-3 {
