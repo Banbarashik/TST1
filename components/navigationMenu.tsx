@@ -43,9 +43,11 @@ export default function NavigationMenu({
             <Accordion type="single" collapsible>
               <div className="flex border-b">
                 <AccordionItem value="water" className="flex-1/2 border-0">
-                  <AccordionTrigger className="justify-evenly gap-0">
-                    Водяные калориферы
-                  </AccordionTrigger>
+                  <Link href="/catalog/vodiany-kalorifery">
+                    <AccordionTrigger className="justify-evenly gap-0">
+                      Водяные калориферы
+                    </AccordionTrigger>
+                  </Link>
                   <AccordionContent>
                     <Link href="/kalorifery-voda" className="block px-4 py-3">
                       Калькулятор подбора
@@ -80,9 +82,11 @@ export default function NavigationMenu({
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="steam" className="flex-1/2 border-0">
-                  <AccordionTrigger className="justify-evenly gap-0">
-                    Паровые калориферы
-                  </AccordionTrigger>
+                  <Link href="/catalog/parovy-kalorifery">
+                    <AccordionTrigger className="justify-evenly gap-0">
+                      Паровые калориферы
+                    </AccordionTrigger>
+                  </Link>
                   <AccordionContent>
                     <Link
                       href="/kalorifery-par"
@@ -126,9 +130,11 @@ export default function NavigationMenu({
 
               <div className="flex border-b">
                 <AccordionItem value="agregaty" className="flex-1/2 border-0">
-                  <AccordionTrigger className="justify-evenly gap-0">
-                    Отопительные агрегаты
-                  </AccordionTrigger>
+                  <Link href="/catalog/agregaty">
+                    <AccordionTrigger className="justify-evenly gap-0">
+                      Отопительные агрегаты
+                    </AccordionTrigger>
+                  </Link>
                   <AccordionContent>
                     <Link
                       href="/kalorifery-voda/info"
@@ -145,9 +151,11 @@ export default function NavigationMenu({
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="electro" className="flex-1/2 border-0">
-                  <AccordionTrigger className="justify-evenly gap-0">
-                    Электронагреватели
-                  </AccordionTrigger>
+                  <Link href="/catalog/energonagrevatelynoe-oborudovanie">
+                    <AccordionTrigger className="justify-evenly gap-0">
+                      Электронагреватели
+                    </AccordionTrigger>
+                  </Link>
                   <AccordionContent>
                     <Link
                       href="/kalorifery-voda/info"
