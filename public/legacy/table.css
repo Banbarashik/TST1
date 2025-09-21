@@ -175,6 +175,10 @@ th {
 }
 
 /* Стилизация таблиц, которым требуется скролл (начало) */
+.table-with-scroll {
+  min-width: 948px;
+}
+
 #primary.table-with-scroll,
 #primary2.table-with-scroll,
 #primary3.table-with-scroll,
