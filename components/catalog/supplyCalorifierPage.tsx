@@ -38,7 +38,7 @@ export default function SupplyCalorifierPage({
   const isSteam = heatCarrier === "steam";
 
   return (
-    <div>
+    <div className="lg:overflow-x-auto">
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
         Приточный {heatCarrierAdj?.nom} калорифер {shortNameWithHyphen}{" "}
@@ -115,7 +115,7 @@ export default function SupplyCalorifierPage({
       </ProductParagraph>
       <ProductSubheader text={`Технические характеристики ${shortName}`} />
       <div className="w-full overflow-x-auto">
-        <table className="single-table water-and-steam water-and-steam-inner mb-1 w-full min-w-231">
+        <table className="single-table water-and-steam water-and-steam-inner mb-1 w-full min-w-231 xl:min-w-auto">
           <thead>
             <tr>
               <th rowSpan={2}>
