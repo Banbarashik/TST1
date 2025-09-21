@@ -109,8 +109,6 @@ const mobileCategoryTree = [
   electroCategory,
 ];
 
-console.log(mobileCategoryTree);
-
 function RecursiveAccordion({
   nodes,
   currentSlug,
