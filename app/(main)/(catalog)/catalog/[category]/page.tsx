@@ -111,7 +111,7 @@ export default async function Catalog({
 
   return (
     <div>
-      <div className="flex flex-col justify-between lg:flex-row">
+      <div className="flex flex-col justify-between md:flex-row">
         <h1 className="mb-6 text-xl font-bold uppercase lg:text-2xl">
           {title}
         </h1>
