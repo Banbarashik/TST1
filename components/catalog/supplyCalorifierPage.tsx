@@ -47,7 +47,7 @@ export default function SupplyCalorifierPage({
         тепловая мощность варьируется в зависимости от рядности калорифера{" "}
         {shortNameWithHyphen} и параметров эксплуатации.
       </ProductParagraph>
-      <div className="mb-8 flex gap-5 overflow-x-scroll sm:grid sm:grid-cols-3">
+      <div className="mb-8 flex gap-5 overflow-x-auto sm:grid sm:grid-cols-3">
         {variants.map(function (variant) {
           return (
             <ProductCard
