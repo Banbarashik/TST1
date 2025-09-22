@@ -74,9 +74,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   return (
     <div>
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
-      <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row">
-        <ProductCard product={product} isLink={false} />
-        <div>
+      <div className="cardTextBtnsGrid">
+        <ProductCard product={product} isLink={false} className="card" />
+        <div className="text">
           <h2 className="mb-3 text-xl">
             <div className="sm:inline">
               {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
@@ -105,6 +105,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </li>
             <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
+        </div>
+        <div className="btns">
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               {isCalorifier ? "Все калориферы" : "Агрегаты"} данного типоразмера
