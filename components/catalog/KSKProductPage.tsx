@@ -72,7 +72,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     URLs = ["ao2-kpsk-ksk", "Agregat_AO2_katalog_2025.pdf"];
 
   return (
-    <div>
+    <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6">
         <ProductCard
