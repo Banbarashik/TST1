@@ -154,9 +154,9 @@ export default function ElectroEquipmentPage({ product }) {
     .sort((a, b) => sortProducts(a.shortName, b.shortName));
 
   const productName = isSFOTC
-    ? `Электрокалориферная ${product.name.toLowerCase()}`
+    ? `Электрокалориферная установка ${product.shortName}`
     : isSHUK
-      ? `Шкаф управления калорифером ${product.model}`
+      ? `Шкаф управления калорифером ${product.shortName}`
       : product.name;
 
   return (
