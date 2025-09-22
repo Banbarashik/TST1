@@ -78,11 +78,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <ProductCard product={product} isLink={false} />
         <div>
           <h2 className="mb-3 text-xl">
-            {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
-            {product.model}
-            {product.climate && ` ${product.climate}`}.{" "}
+            <div className="sm:inline">
+              {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
+              {product.model}
+              {product.climate && ` ${product.climate}`}.{" "}
+            </div>
             {isAgregat ? (
-              <p>ТУ 4864-003-55613706-02</p>
+              <div>ТУ 4864-003-55613706-02</div>
             ) : (
               "ТУ 4863-002-55613706-02"
             )}
