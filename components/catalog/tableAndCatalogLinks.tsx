@@ -28,15 +28,14 @@ export default function TableAndCatalogLinks({
       <Button
         asChild
         className={cn(
-          "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
+          "text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap",
           buttonClassName,
         )}
       >
         <Link
           href={tableURL}
           target={tableLinkOpenNewTab ? "_blank" : "_self"}
-          className="text-center"
-          style={{ textWrap: "wrap" }}
+          className=""
         >
           {tableLinkText}
         </Link>
@@ -45,15 +44,13 @@ export default function TableAndCatalogLinks({
         <Button
           asChild
           className={cn(
-            "text-md h-full flex-1/2 bg-gray-300 font-semibold text-black",
+            "text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap",
             buttonClassName,
           )}
         >
           <Link
             href={catalogURL}
             target={catalogOpenNewTab ? "_blank" : "_self"}
-            className="text-center"
-            style={{ textWrap: "wrap" }}
           >
             {catalogLinkText}
           </Link>
