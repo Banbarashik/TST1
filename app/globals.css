@@ -285,6 +285,12 @@ th {
   content: attr(data-front);
   transform: translateY(0) rotateX(0);
 }
+@media (width >= 64rem /* 1024px */) and (width < 80rem /* 1280px */) {
+  .btn-flip::before {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
 
 .btn-flip-p::after {
   padding-top: 12px;
