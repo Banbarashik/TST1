@@ -15,7 +15,7 @@ export default function SimilarProductLink({
     <Button
       variant="outline"
       asChild
-      className={isActive ? "outline-primary" : ""}
+      className={`${isActive ? "outline-primary" : ""} w-full`}
     >
       <Link href={`/${id}`}>{children}</Link>
     </Button>
