@@ -88,7 +88,10 @@ export default function Footer() {
             <GithubIcon />
             Banbarashik
           </Link>
-          <a href="" className="text-accent flex items-center gap-2">
+          <a
+            href="mailto:odinokiyskitalec@gmail.com"
+            className="text-accent flex items-center gap-2"
+          >
             <Mail size={20} />
             odinokiyskitalec@gmail.com
           </a>
@@ -104,7 +107,10 @@ export default function Footer() {
           <GithubIcon />
           Banbarashik
         </Link>
-        <a href="" className="text-accent flex items-center gap-2">
+        <a
+          href="mailto:odinokiyskitalec@gmail.com"
+          className="text-accent flex items-center gap-2"
+        >
           <Mail size={20} />
           odinokiyskitalec@gmail.com
         </a>
