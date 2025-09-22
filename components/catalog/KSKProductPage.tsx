@@ -107,7 +107,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             <ProductParagraph className="font-bold">
               {isCalorifier ? "Все калориферы" : "Агрегаты"} данного типоразмера
             </ProductParagraph>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
               {productsBySize.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
@@ -122,7 +122,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               {isCalorifier ? "Стандартные" : "Все"} {rowsNumberAdj.plu}{" "}
               типоразмеры
             </ProductParagraph>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
               {productsByRows.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
