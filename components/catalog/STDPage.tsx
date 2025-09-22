@@ -32,7 +32,7 @@ export default function STDPage({ product }) {
   const isSTD300 = product.categories.includes("std300");
 
   return (
-    <div>
+    <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants.map(function (variant, i) {
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
@@ -104,7 +104,7 @@ export default function STDPage({ product }) {
                 Теплоотдающие элементы {heatCarrierAdj.gen} калорифера{" "}
                 {variant.calorifier}:
               </ProductParagraph>
-              <ul className="mb-4 text-[17px]">
+              <ul className="text-[17px]">
                 <li>
                   - электросварные прямошовные трубки {variant.tubeSize} мм по
                   ГОСТ 10704-91
@@ -166,30 +166,32 @@ export default function STDPage({ product }) {
       <ProductSubheader
         text={`Технические характеристики агрегата ${product.model}`}
       />
-      <STDSpecsTable
-        className="mb-6"
-        rows={product.variants}
-        getRowValues={(variant) => variant.specsTablesValues}
-        headers={
-          <thead>
-            <tr>
-              <th rowSpan={2}>Наименование агрегата</th>
-              <th colSpan={2}>Производительность</th>
-              <th colSpan={3}>Габаритные размеры, мм</th>
-              <th rowSpan={2} className="w-18">
-                Масса, кг
-              </th>
-            </tr>
-            <tr>
-              <th>по воздуху, м³/ч</th>
-              <th>по теплу, кВт</th>
-              <th>L</th>
-              <th>B</th>
-              <th>H</th>
-            </tr>
-          </thead>
-        }
-      />
+      <div className="mb-6 w-full overflow-x-auto">
+        <STDSpecsTable
+          className="w-full min-w-231 xl:min-w-auto"
+          rows={product.variants}
+          getRowValues={(variant) => variant.specsTablesValues}
+          headers={
+            <thead>
+              <tr>
+                <th rowSpan={2}>Наименование агрегата</th>
+                <th colSpan={2}>Производительность</th>
+                <th colSpan={3}>Габаритные размеры, мм</th>
+                <th rowSpan={2} className="w-18">
+                  Масса, кг
+                </th>
+              </tr>
+              <tr>
+                <th>по воздуху, м³/ч</th>
+                <th>по теплу, кВт</th>
+                <th>L</th>
+                <th>B</th>
+                <th>H</th>
+              </tr>
+            </thead>
+          }
+        />
+      </div>
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
@@ -198,22 +200,24 @@ export default function STDPage({ product }) {
         height={1}
         className="mb-5"
       />
-      <STDSpecsTable
-        rows={product.variants}
-        getRowValues={(variant) => variant.componentsTableValues}
-        headers={
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Комплектуемый осевой вентилятор</th>
-              <th>Комплектуемый калорифер</th>
-              <th>Площадь поверхности нагрева, м²</th>
-              <th>Ду, мм</th>
-            </tr>
-          </thead>
-        }
-        className="mb-10"
-      />
+      <div className="mb-10 w-full overflow-x-auto">
+        <STDSpecsTable
+          className="w-full min-w-231 xl:min-w-auto"
+          rows={product.variants}
+          getRowValues={(variant) => variant.componentsTableValues}
+          headers={
+            <thead>
+              <tr>
+                <th>Наименование агрегата</th>
+                <th>Комплектуемый осевой вентилятор</th>
+                <th>Комплектуемый калорифер</th>
+                <th>Площадь поверхности нагрева, м²</th>
+                <th>Ду, мм</th>
+              </tr>
+            </thead>
+          }
+        />
+      </div>
       <TableAndCatalogLinks
         tableURL={
           product.heatCarrier === "water"
