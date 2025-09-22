@@ -34,7 +34,7 @@ export default function AVOPage({ product }) {
   return (
     <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
-      <div className="mb-8 flex gap-5 overflow-x-auto md:grid md:grid-cols-3">
+      <div className="mb-8 flex gap-5 overflow-x-auto md:grid md:grid-cols-3 lg:gap-0 xl:gap-5">
         {product.variants.map(function (variant) {
           return (
             <ProductCard
@@ -50,7 +50,7 @@ export default function AVOPage({ product }) {
           );
         })}
       </div>
-      <div className="mb-5 flex flex-col justify-between md:flex-row">
+      <div className="mb-5 flex flex-col justify-between md:flex-row lg:flex-col xl:flex-row">
         <div>
           <h2 className="text-xl">
             Воздушно-отопительный агрегат {product.shortName}{" "}
@@ -73,7 +73,7 @@ export default function AVOPage({ product }) {
             <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
         </div>
-        <div className="shrink-0 space-y-2">
+        <div className="ml-px shrink-0 space-y-2">
           <p className="font-bold">
             {capitalizeFirst(oppositeHeatCarrierAdj.plu)} агрегаты АВО ХЛ
           </p>
