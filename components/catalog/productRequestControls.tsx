@@ -35,8 +35,7 @@ export default function ProductRequestControls({
   return (
     <div
       className={
-        props.className +
-        " flex items-center gap-4 sm:flex-col lg:flex-row xl:flex-col 2xl:flex-row"
+        props.className + " flex flex-col items-center gap-4 xl:flex-row"
       }
     >
       <Button
