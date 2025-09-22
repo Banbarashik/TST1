@@ -74,9 +74,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   return (
     <div>
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
-      <div className="cardTextBtnsGrid">
-        <ProductCard product={product} isLink={false} className="card" />
-        <div className="text">
+      <div className="grid grid-cols-[max-content_minmax(0,1fr)] grid-rows-[minmax(0,max-content)_1fr]">
+        <ProductCard
+          product={product}
+          isLink={false}
+          className="row-start-1 row-end-3 self-start sm:row-span-1"
+        />
+        {/* text */}
+        <div className="sm:col-span-full sm:row-start-2">
           <h2 className="mb-3 text-xl">
             <div className="sm:inline">
               {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
@@ -106,7 +111,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
           </ul>
         </div>
-        <div className="btns">
+        {/* chips */}
+        <div>
           <div className="mb-4 flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               {isCalorifier ? "Все калориферы" : "Агрегаты"} данного типоразмера
