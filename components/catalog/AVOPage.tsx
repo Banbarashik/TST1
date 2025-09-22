@@ -34,7 +34,7 @@ export default function AVOPage({ product }) {
   return (
     <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
-      <div className="mb-12 grid grid-cols-3 gap-5">
+      <div className="mb-12 flex gap-5 overflow-x-auto sm:grid sm:grid-cols-3">
         {product.variants.map(function (variant) {
           return (
             <ProductCard
@@ -45,6 +45,7 @@ export default function AVOPage({ product }) {
                 airPower: variant.airPower,
                 img: product.img,
               }}
+              className="max-w-64 sm:max-w-none sm:px-4"
             />
           );
         })}
