@@ -74,7 +74,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   return (
     <div>
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
-      <div className="mb-6 flex items-start gap-4">
+      <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row">
         <ProductCard product={product} isLink={false} />
         <div>
           <h2 className="mb-3 text-xl">
