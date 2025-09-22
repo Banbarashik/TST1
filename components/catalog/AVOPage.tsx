@@ -50,7 +50,7 @@ export default function AVOPage({ product }) {
           );
         })}
       </div>
-      <div className="mb-5 flex justify-between">
+      <div className="mb-5 flex flex-col justify-between sm:flex-row">
         <div>
           <h2 className="text-xl">
             Воздушно-отопительный агрегат {product.shortName}{" "}
@@ -77,7 +77,7 @@ export default function AVOPage({ product }) {
           <p className="font-bold">
             {capitalizeFirst(oppositeHeatCarrierAdj.plu)} агрегаты АВО ХЛ
           </p>
-          <SimilarProductLink id={relatedProduct.id}>
+          <SimilarProductLink id={relatedProduct.id} fullWidth={false}>
             АВО ХЛ {oppositeHeatCarrierAdj.plu}
           </SimilarProductLink>
         </div>
