@@ -74,11 +74,11 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   return (
     <div>
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
-      <div className="grid grid-cols-[max-content_minmax(0,1fr)] grid-rows-[minmax(0,max-content)_1fr]">
+      <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)]">
         <ProductCard
           product={product}
           isLink={false}
-          className="row-start-1 row-end-3 self-start sm:row-span-1"
+          className="row-start-1 row-end-3 self-start justify-self-start sm:row-span-1"
         />
         {/* text */}
         <div className="sm:col-span-full sm:row-start-2">
@@ -99,7 +99,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               ? "Теплоотдающие элементы:"
               : `Теплоотдающие элементы ${heatCarrierAdj.gen} калорифера ${product.calorifier}:`}{" "}
           </ProductParagraph>
-          <ul className="mb-4">
+          <ul>
             <li>
               - электросварные прямошовные трубки {product.tubeSize} мм по ГОСТ
               10704-91
@@ -112,8 +112,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </ul>
         </div>
         {/* chips */}
-        <div>
-          <div className="mb-4 flex flex-col gap-1">
+        <div className="space-y-4">
+          <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               {isCalorifier ? "Все калориферы" : "Агрегаты"} данного типоразмера
             </ProductParagraph>
