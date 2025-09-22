@@ -170,47 +170,49 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       <ProductSubheader
         text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
       />
-      <table className="mb-4 w-full">
-        {isCalorifier && (
-          <thead>
+      <div className="mb-4 w-full overflow-x-auto">
+        <table className="w-full min-w-231 xl:min-w-auto">
+          {isCalorifier && (
+            <thead>
+              <tr>
+                <th
+                  colSpan={4}
+                  className="pl-1 text-left"
+                  style={{ fontSize: "11pt" }}
+                >
+                  Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
+                  {product.shortName}
+                </th>
+              </tr>
+            </thead>
+          )}
+          <tbody>
             <tr>
-              <th
-                colSpan={4}
-                className="pl-1 text-left"
-                style={{ fontSize: "11pt" }}
-              >
-                Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
-                {product.shortName}
-              </th>
-            </tr>
-          </thead>
-        )}
-        <tbody>
-          <tr>
-            <td>
-              Производительность по воздуху, м<sup>3</sup>/ч
-            </td>
-            <td>Производительность по теплу, кВт</td>
-            <td>
-              {isCalorifier ? (
-                <>
-                  Площадь поверхности теплообмена, м<sup>2</sup>
-                </>
-              ) : (
-                "Габариты, мм (длина L - ширина B - высота H)"
-              )}
-            </td>
-            <td>Масса, кг</td>
-          </tr>
-          <tr>
-            {product.specsTableValues.map((value, i) => (
-              <td key={i} style={{ fontSize: "11pt" }}>
-                {value}
+              <td>
+                Производительность по воздуху, м<sup>3</sup>/ч
               </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+              <td>Производительность по теплу, кВт</td>
+              <td>
+                {isCalorifier ? (
+                  <>
+                    Площадь поверхности теплообмена, м<sup>2</sup>
+                  </>
+                ) : (
+                  "Габариты, мм (длина L - ширина B - высота H)"
+                )}
+              </td>
+              <td>Масса, кг</td>
+            </tr>
+            <tr>
+              {product.specsTableValues.map((value, i) => (
+                <td key={i} style={{ fontSize: "11pt" }}>
+                  {value}
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
@@ -219,72 +221,74 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         height={1}
         className="mb-4"
       />
-      <table className="mb-10 w-full">
-        <thead>
-          <tr>
-            {isCalorifier ? (
-              <th
-                colSpan={9}
-                className="pl-1 text-left"
-                style={{ fontSize: "11pt" }}
-              >
-                Габаритные и присоединительные размеры калорифера{" "}
-                {product.shortName} {heatCarrierAdj?.gen}, мм
-              </th>
-            ) : (
-              <>
-                <th>Комплектуемый вентилятор</th>
-                <th colSpan={2}>Двигатель, кВт/об. мин.</th>
-                <th>Комплектуемый калорифер</th>
-                <th>
-                  Площадь поверхности теплообмена, м<sup>2</sup>
-                </th>
-                <th>Ду, мм</th>
-              </>
-            )}
-          </tr>
-        </thead>
-        <tbody>
-          {isCalorifier && (
+      <div className="mb-10 w-full overflow-x-auto">
+        <table className="w-full min-w-231 xl:min-w-auto">
+          <thead>
             <tr>
-              {product.heatCarrier === "water" ? (
-                <>
-                  <td>L</td>
-                  <td>L 1</td>
-                  <td>L 2</td>
-                  <td>L 3</td>
-                  <td>H</td>
-                  <td>H 1</td>
-                  <td>H 2</td>
-                </>
+              {isCalorifier ? (
+                <th
+                  colSpan={9}
+                  className="pl-1 text-left"
+                  style={{ fontSize: "11pt" }}
+                >
+                  Габаритные и присоединительные размеры калорифера{" "}
+                  {product.shortName} {heatCarrierAdj?.gen}, мм
+                </th>
               ) : (
                 <>
-                  <td>H</td>
-                  <td>H 1</td>
-                  <td>H 2</td>
-                  <td>H 3</td>
-                  <td>B</td>
-                  <td>B 1</td>
-                  <td>B 2</td>
+                  <th>Комплектуемый вентилятор</th>
+                  <th colSpan={2}>Двигатель, кВт/об. мин.</th>
+                  <th>Комплектуемый калорифер</th>
+                  <th>
+                    Площадь поверхности теплообмена, м<sup>2</sup>
+                  </th>
+                  <th>Ду, мм</th>
                 </>
               )}
-              <td>C</td>
-              <td>dy</td>
             </tr>
-          )}
-          <tr>
-            {[
-              ...(isCalorifier
-                ? product.sizeTableValues
-                : product.componentsTableValues),
-            ].map((value, i) => (
-              <td key={i} style={{ fontSize: "11pt" }}>
-                {value}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {isCalorifier && (
+              <tr>
+                {product.heatCarrier === "water" ? (
+                  <>
+                    <td>L</td>
+                    <td>L 1</td>
+                    <td>L 2</td>
+                    <td>L 3</td>
+                    <td>H</td>
+                    <td>H 1</td>
+                    <td>H 2</td>
+                  </>
+                ) : (
+                  <>
+                    <td>H</td>
+                    <td>H 1</td>
+                    <td>H 2</td>
+                    <td>H 3</td>
+                    <td>B</td>
+                    <td>B 1</td>
+                    <td>B 2</td>
+                  </>
+                )}
+                <td>C</td>
+                <td>dy</td>
+              </tr>
+            )}
+            <tr>
+              {[
+                ...(isCalorifier
+                  ? product.sizeTableValues
+                  : product.componentsTableValues),
+              ].map((value, i) => (
+                <td key={i} style={{ fontSize: "11pt" }}>
+                  {value}
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <TableAndCatalogLinks
         tableURL={"/" + URLs[0]}
         tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
