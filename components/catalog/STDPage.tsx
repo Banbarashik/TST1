@@ -83,7 +83,10 @@ export default function STDPage({ product }) {
             ];
 
         return (
-          <div key={variant.id} className="mb-6 flex gap-4">
+          <div
+            key={variant.id}
+            className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6"
+          >
             <ProductCard
               isLink={false}
               product={{
@@ -91,8 +94,10 @@ export default function STDPage({ product }) {
                 airPower: product.airPower,
                 name: `Агрегат ${variant.model}`,
               }}
+              className="row-start-1 row-end-3 self-start justify-self-start sm:row-span-1 lg:col-start-1 lg:row-start-1 lg:row-end-3"
             />
-            <div>
+            {/* text */}
+            <div className="sm:col-span-full sm:row-start-2 lg:col-auto lg:row-start-1">
               <h2 className="text-xl">{variant.name}.</h2>
               <p className="mb-3 text-xl">ТУ 4864-003-55613706-02</p>
               <ProductParagraph>
@@ -110,9 +115,12 @@ export default function STDPage({ product }) {
                 </li>
                 <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
               </ul>
+            </div>
+            {/* chips */}
+            <div className="space-y-4">
               {relatedProducts.map(function (p) {
                 return (
-                  <div key={p.caption} className="mb-4 flex flex-col gap-1">
+                  <div key={p.caption} className="flex flex-col gap-1">
                     <ProductParagraph className="font-bold">
                       {p.caption}
                     </ProductParagraph>
