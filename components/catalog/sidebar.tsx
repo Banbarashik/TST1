@@ -312,7 +312,7 @@ export default function Sidebar() {
   }, [openItems]);
 
   return (
-    <aside className="w-full shrink-0 sm:w-78">
+    <aside className="hidden w-full shrink-0 sm:w-78 lg:block">
       {currentSlug === "" || currentSlug === "all" ? (
         <div className="w-full rounded-xl border-2 p-2 sm:w-80 lg:fixed [@media(min-height:920px)]:fixed">
           <Accordion.Root type="multiple" value={open} onValueChange={setOpen}>
