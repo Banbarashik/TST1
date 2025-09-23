@@ -57,21 +57,23 @@ export default function KaloriferyKFBPage() {
           воздухонагреватели КФБ-А поставляются для компоновки калориферных
           секций.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kfb_komplektatciia.png"
-            alt="Калорифер для охлаждения масла"
-            title="Калорифер КФБ паровой"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kfb.png"
-            alt="Калорифер для сушильных установок"
-            title="Конструкция парового калорифера КФБ"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kfb_komplektatciia.png"
+              alt="Калорифер для охлаждения масла"
+              title="Калорифер КФБ паровой"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kfb.png"
+              alt="Калорифер для сушильных установок"
+              title="Конструкция парового калорифера КФБ"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -137,7 +139,11 @@ export default function KaloriferyKFBPage() {
           Увеличение количества рядов предполагает собой нагрев входящего
           воздуха на большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kfb3} className="mb-4" />
+        <ProductLinks
+          products={kfb3}
+          className="mb-4"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+        />
         <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из тринадцати
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -147,7 +153,11 @@ export default function KaloriferyKFBPage() {
           от модели и номера парового калорифера серии КФБ-А варьируется от 2000
           до 18000 м<sup>3</sup>/час, от 55 до 500 кВт.
         </ProductParagraph>
-        <ProductLinks products={kfb4} className="mb-4" />
+        <ProductLinks
+          products={kfb4}
+          className="mb-4"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
