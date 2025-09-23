@@ -11564,8 +11564,16 @@
       "alt": "Электрокалорифер СФО-16",
       "title": "Электрокалорифер ЭКО-16"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_16_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_16_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_16_chertezh.png",
+      "width": 1200,
+      "height": 560
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_16_elektroskhema.png",
+      "width": 1200,
+      "height": 560
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11610,8 +11618,16 @@
       "alt": "Электрокалорифер СФО-25",
       "title": "Электрокалорифер ЭКО-25"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_25_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_25_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_25_chertezh.png",
+      "width": 1200,
+      "height": 620
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_25_elektroskhema.png",
+      "width": 1200,
+      "height": 620
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11656,8 +11672,16 @@
       "alt": "Электрокалорифер СФО-40",
       "title": "Электрокалорифер ЭКО-40"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_40_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_40_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_40_chertezh.png",
+      "width": 1200,
+      "height": 800
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_40_elektroskhema.png",
+      "width": 1200,
+      "height": 800
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11702,8 +11726,16 @@
       "alt": "Электрокалорифер СФО-60",
       "title": "Электрокалорифер ЭКО-60"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_60_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_60_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_60_chertezh.png",
+      "width": 1200,
+      "height": 850
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_60_elektroskhema.png",
+      "width": 1200,
+      "height": 850
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11748,8 +11780,16 @@
       "alt": "Электрокалорифер СФО-100",
       "title": "Электрокалорифер ЭКО-100"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_100_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_100_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_100_chertezh.png",
+      "width": 1200,
+      "height": 950
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_100_elektroskhema.png",
+      "width": 1200,
+      "height": 950
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11794,8 +11834,16 @@
       "alt": "Электрокалорифер СФО-160",
       "title": "Электрокалорифер ЭКО-160"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_160_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_160_elektroskhema.png",
+    "drawing": {
+      "'url": "/img/elektro/elektrokalorifer_sfo_160_chertezh.png",
+      "width": 1200,
+      "height": 1250
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_160_elektroskhema.png",
+      "width": 1200,
+      "height": 1250
+    },
     "specsTableValues": [
       2.5,
       380,
@@ -11840,8 +11888,16 @@
       "alt": "Электрокалорифер СФО-250",
       "title": "Электрокалорифер ЭКО-250"
     },
-    "drawing": "/img/elektro/elektrokalorifer_sfo_250_chertezh.png",
-    "scheme": "/img/elektro/elektrokalorifer_sfo_250_elektroskhema.png",
+    "drawing": {
+      "url": "/img/elektro/elektrokalorifer_sfo_250_chertezh.png",
+      "width": 1200,
+      "height": 1680
+    },
+    "scheme": {
+      "url": "/img/elektro/elektrokalorifer_sfo_250_elektroskhema.png",
+      "width": 1200,
+      "height": 1680
+    },
     "specsTableValues": [
       2.5,
       380,
