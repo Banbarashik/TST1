@@ -49,21 +49,23 @@ export default function AgregatyAO2V() {
           испытаний и проверкой каждого комплектуемого водяного
           воздухонагревателя на герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/agregat_otopitelnyi_vodianoy_ao2_komplektatciia.png"
-            alt="Водяной отопительный агрегат"
-            title="Воздушно-отопительный агрегат АО 2 водяной"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/agregat_vozdushno-otopitelnyi_vodianoy_ao2.png"
-            alt="Производство водяных отопительных агрегатов АО 2"
-            title="Конструкция водяного отопительного агрегата АО 2"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_otopitelnyi_vodianoy_ao2_komplektatciia.png"
+              alt="Водяной отопительный агрегат"
+              title="Воздушно-отопительный агрегат АО 2 водяной"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_vozdushno-otopitelnyi_vodianoy_ao2.png"
+              alt="Производство водяных отопительных агрегатов АО 2"
+              title="Конструкция водяного отопительного агрегата АО 2"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -183,8 +185,15 @@ export default function AgregatyAO2V() {
           восемь типоразмеров, каждый из которых изготавливается в двух
           вариантах – с трехрядным и четырехрядным многоходовым теплообменником.
         </ProductParagraph>
-        <ProductLinks products={ao2v3} className="mb-8" />
-        <ProductLinks products={ao2v4} />
+        <ProductLinks
+          products={ao2v3}
+          className="mb-8"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
+        <ProductLinks
+          products={ao2v4}
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
@@ -202,167 +211,169 @@ export default function AgregatyAO2V() {
           className="mb-3"
         />
 
-        <table className="mb-2 w-full">
-          <thead>
-            <tr>
-              <th rowSpan={2} className="w-32">
-                Наименование агрегата
-              </th>
-              <th colSpan={2}>Производительность</th>
-              <th colSpan={3}>Габариты, мм</th>
-              <th rowSpan={2}>Масса, кг</th>
-              <th rowSpan={2} className="w-68">
-                Площадь поверхности теплообмена, м²
-              </th>
-              <th rowSpan={2}>Ду, мм</th>
-            </tr>
-            <tr>
-              <th>по воздуху, м³/ч</th>
-              <th>по теплу, кВт</th>
-              <th>L</th>
-              <th>B</th>
-              <th>H</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="px-1 text-left">АО 2-3 (КСк3)</td>
-              <td rowSpan={2}>3000</td>
-              <td>35</td>
-              <td rowSpan={2}>800</td>
-              <td rowSpan={2}>710</td>
-              <td rowSpan={2}>620</td>
-              <td>77</td>
-              <td>12.9</td>
-              <td rowSpan={2}>32</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-3 (КСк4)</td>
-              <td>40</td>
-              <td>83</td>
-              <td>17.0</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-4 (КСк3)</td>
-              <td rowSpan={2}>4000</td>
-              <td>42</td>
-              <td rowSpan={2}>800</td>
-              <td rowSpan={2}>750</td>
-              <td rowSpan={2}>665</td>
-              <td>83</td>
-              <td>15.2</td>
-              <td rowSpan={2}>32</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-4 (КСк4)</td>
-              <td>49</td>
-              <td>90</td>
-              <td>20.0</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-5 (КСк3)</td>
-              <td rowSpan={2}>5000</td>
-              <td>63</td>
-              <td rowSpan={2}>825</td>
-              <td rowSpan={2}>835</td>
-              <td rowSpan={2}>750</td>
-              <td>98</td>
-              <td>20.3</td>
-              <td rowSpan={2}>32</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-5 (КСк4)</td>
-              <td>74</td>
-              <td>108</td>
-              <td>26.7</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-6.3 (КСк3)</td>
-              <td rowSpan={2}>6300</td>
-              <td>82</td>
-              <td rowSpan={2}>985</td>
-              <td rowSpan={2}>920</td>
-              <td rowSpan={2}>865</td>
-              <td>128</td>
-              <td>26.1</td>
-              <td rowSpan={2}>32</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-6.3 (КСк4)</td>
-              <td>97</td>
-              <td>142</td>
-              <td>34.4</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-10 (КСк3)</td>
-              <td rowSpan={2}>10000</td>
-              <td>115</td>
-              <td rowSpan={2}>985</td>
-              <td rowSpan={2}>960</td>
-              <td rowSpan={2}>905</td>
-              <td>139</td>
-              <td>29.3</td>
-              <td rowSpan={2}>32</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-10 (КСк4)</td>
-              <td>138</td>
-              <td>154</td>
-              <td>38.7</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-15 (КСк3)</td>
-              <td rowSpan={2}>15000</td>
-              <td>156</td>
-              <td rowSpan={2}>985</td>
-              <td rowSpan={2}>1085</td>
-              <td rowSpan={2}>1040</td>
-              <td>166</td>
-              <td>39.9</td>
-              <td rowSpan={2}>50</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-15 (КСк4)</td>
-              <td>186</td>
-              <td>186</td>
-              <td>52.8</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-20 (КСк3)</td>
-              <td rowSpan={2}>20000</td>
-              <td>225</td>
-              <td rowSpan={2}>1075</td>
-              <td rowSpan={2}>1210</td>
-              <td rowSpan={2}>1170</td>
-              <td>240</td>
-              <td>52.2</td>
-              <td rowSpan={2}>50</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-20 (КСк4)</td>
-              <td>271</td>
-              <td>268</td>
-              <td>69.2</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-25 (КСк3)</td>
-              <td rowSpan={2}>25000</td>
-              <td>281</td>
-              <td rowSpan={2}>1075</td>
-              <td rowSpan={2}>1335</td>
-              <td rowSpan={2}>1295</td>
-              <td>269</td>
-              <td>66.2</td>
-              <td rowSpan={2}>50</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АО 2-25 (КСк4)</td>
-              <td>336</td>
-              <td>303</td>
-              <td>87.7</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mb-2 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th rowSpan={2} className="w-32">
+                  Наименование агрегата
+                </th>
+                <th colSpan={2}>Производительность</th>
+                <th colSpan={3}>Габариты, мм</th>
+                <th rowSpan={2}>Масса, кг</th>
+                <th rowSpan={2} className="w-68">
+                  Площадь поверхности теплообмена, м²
+                </th>
+                <th rowSpan={2}>Ду, мм</th>
+              </tr>
+              <tr>
+                <th>по воздуху, м³/ч</th>
+                <th>по теплу, кВт</th>
+                <th>L</th>
+                <th>B</th>
+                <th>H</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-1 text-left">АО 2-3 (КСк3)</td>
+                <td rowSpan={2}>3000</td>
+                <td>35</td>
+                <td rowSpan={2}>800</td>
+                <td rowSpan={2}>710</td>
+                <td rowSpan={2}>620</td>
+                <td>77</td>
+                <td>12.9</td>
+                <td rowSpan={2}>32</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-3 (КСк4)</td>
+                <td>40</td>
+                <td>83</td>
+                <td>17.0</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-4 (КСк3)</td>
+                <td rowSpan={2}>4000</td>
+                <td>42</td>
+                <td rowSpan={2}>800</td>
+                <td rowSpan={2}>750</td>
+                <td rowSpan={2}>665</td>
+                <td>83</td>
+                <td>15.2</td>
+                <td rowSpan={2}>32</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-4 (КСк4)</td>
+                <td>49</td>
+                <td>90</td>
+                <td>20.0</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-5 (КСк3)</td>
+                <td rowSpan={2}>5000</td>
+                <td>63</td>
+                <td rowSpan={2}>825</td>
+                <td rowSpan={2}>835</td>
+                <td rowSpan={2}>750</td>
+                <td>98</td>
+                <td>20.3</td>
+                <td rowSpan={2}>32</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-5 (КСк4)</td>
+                <td>74</td>
+                <td>108</td>
+                <td>26.7</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-6.3 (КСк3)</td>
+                <td rowSpan={2}>6300</td>
+                <td>82</td>
+                <td rowSpan={2}>985</td>
+                <td rowSpan={2}>920</td>
+                <td rowSpan={2}>865</td>
+                <td>128</td>
+                <td>26.1</td>
+                <td rowSpan={2}>32</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-6.3 (КСк4)</td>
+                <td>97</td>
+                <td>142</td>
+                <td>34.4</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-10 (КСк3)</td>
+                <td rowSpan={2}>10000</td>
+                <td>115</td>
+                <td rowSpan={2}>985</td>
+                <td rowSpan={2}>960</td>
+                <td rowSpan={2}>905</td>
+                <td>139</td>
+                <td>29.3</td>
+                <td rowSpan={2}>32</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-10 (КСк4)</td>
+                <td>138</td>
+                <td>154</td>
+                <td>38.7</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-15 (КСк3)</td>
+                <td rowSpan={2}>15000</td>
+                <td>156</td>
+                <td rowSpan={2}>985</td>
+                <td rowSpan={2}>1085</td>
+                <td rowSpan={2}>1040</td>
+                <td>166</td>
+                <td>39.9</td>
+                <td rowSpan={2}>50</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-15 (КСк4)</td>
+                <td>186</td>
+                <td>186</td>
+                <td>52.8</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-20 (КСк3)</td>
+                <td rowSpan={2}>20000</td>
+                <td>225</td>
+                <td rowSpan={2}>1075</td>
+                <td rowSpan={2}>1210</td>
+                <td rowSpan={2}>1170</td>
+                <td>240</td>
+                <td>52.2</td>
+                <td rowSpan={2}>50</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-20 (КСк4)</td>
+                <td>271</td>
+                <td>268</td>
+                <td>69.2</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-25 (КСк3)</td>
+                <td rowSpan={2}>25000</td>
+                <td>281</td>
+                <td rowSpan={2}>1075</td>
+                <td rowSpan={2}>1335</td>
+                <td rowSpan={2}>1295</td>
+                <td>269</td>
+                <td>66.2</td>
+                <td rowSpan={2}>50</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АО 2-25 (КСк4)</td>
+                <td>336</td>
+                <td>303</td>
+                <td>87.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <ProductParagraph>
           Структура условного обозначения водяных агрегатов серии АО2
