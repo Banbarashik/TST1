@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -49,9 +50,20 @@ const slides = [
 ];
 
 export default function Hero() {
+  const [emblaApi, setEmblaApi] = React.useState<any>(null);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setCurrentSlide(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi]);
+
   return (
     <header className="relative">
-      <Carousel className="w-full">
+      <Carousel opts={{ loop: true }} className="w-full" setApi={setEmblaApi}>
         <CarouselContent>
           {slides.map((slide, idx) => (
             <CarouselItem
@@ -105,17 +117,19 @@ export default function Hero() {
         </CarouselContent>
       </Carousel>
       {/* Circles for slider navigation */}
-      {/* <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`size-5 cursor-pointer rounded-full border-2 border-white transition ${currentSlide === idx ? "bg-white" : "bg-white/40"} focus:outline-none`}
-            onClick={() => instanceRef.current?.moveToIdx(idx)}
+            className={`size-5 cursor-pointer rounded-full border-2 border-white transition ${
+              currentSlide === idx ? "bg-white" : "bg-white/40"
+            } focus:outline-none`}
+            onClick={() => emblaApi?.scrollTo(idx)}
             type="button"
           />
         ))}
-      </div> */}
+      </div>
     </header>
   );
 }
