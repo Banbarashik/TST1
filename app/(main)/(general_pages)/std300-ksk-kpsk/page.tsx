@@ -58,21 +58,23 @@ export default function AgregatySTD300V() {
           обязательных приемо-сдаточных испытаний и проверкой каждого
           комплектуемого воздухонагревателя на герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_komplektatciia.png"
-            alt="Водяной отопительный агрегат СТД-300 ХЛ"
-            title="Воздушно-отопительный агрегат СТД-300 водяной"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/agregat_vozdushno-otopitelnyi_vodianoy_std-300.png"
-            alt="Производство водяных отопительных агрегатов СТД"
-            title="Конструкция водяного отопительного агрегата СТД-300"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_komplektatciia.png"
+              alt="Водяной отопительный агрегат СТД-300 ХЛ"
+              title="Воздушно-отопительный агрегат СТД-300 водяной"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_vozdushno-otopitelnyi_vodianoy_std-300.png"
+              alt="Производство водяных отопительных агрегатов СТД"
+              title="Конструкция водяного отопительного агрегата СТД-300"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -190,72 +192,76 @@ export default function AgregatySTD300V() {
           lvl={2}
           text="Технические характеристики водяных агрегатов СТД-300"
         />
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Воздушно-отопительные водяные агрегаты серии СТД-300 и СТД-300 ХЛ
           изготавливаются в двух вариантах – с трехрядным и четырехрядным
           калорифером КСк или ТВВ.
         </ProductParagraph>
-        <div className="mb-2 flex justify-between">
-          <Image
-            src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
-            alt="Технические характеристики водяных агрегатов СТД-300"
-            title="Габаритные размеры водяных агрегатов СТД-300"
-            width={726}
-            height={1}
-          />
+        <div className="mb-2 flex flex-col space-y-3 gap-x-6 md:flex-row md:justify-between">
           <ProductLinks
             products={products}
-            className="flex flex-col justify-center"
+            gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+            className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
+          <div className="relative aspect-11/6 w-full">
+            <Image
+              src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
+              alt="Технические характеристики водяных агрегатов СТД-300"
+              title="Габаритные размеры водяных агрегатов СТД-300"
+              fill
+            />
+          </div>
         </div>
 
-        <table className="mb-2 w-full">
-          <thead>
-            <tr>
-              <th rowSpan={2}>Наименование агрегата</th>
-              <th colSpan={2}>Производительность</th>
-              <th colSpan={3}>Габаритные размеры, мм</th>
-              <th rowSpan={2} className="w-18">
-                Масса, кг
-              </th>
-            </tr>
-            <tr>
-              <th>по воздуху, м³/ч</th>
-              <th>по теплу, кВт</th>
-              <th>L</th>
-              <th>B</th>
-              <th>H</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="px-1 text-left">СТД-300 (КСк3)</td>
-              <td rowSpan={4}>25000</td>
-              <td>326</td>
-              <td rowSpan={2}>1100</td>
-              <td rowSpan={4}>1520</td>
-              <td rowSpan={4}>1475</td>
-              <td>315</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">СТД-300 (КСк4)</td>
-              <td>385</td>
-              <td>360</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">СТД-300 (ТВВ3)</td>
-              <td>345</td>
-              <td>1090</td>
-              <td>375</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">СТД-300 (ТВВ4)</td>
-              <td>425</td>
-              <td>1130</td>
-              <td>445</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mb-2 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th rowSpan={2}>Наименование агрегата</th>
+                <th colSpan={2}>Производительность</th>
+                <th colSpan={3}>Габаритные размеры, мм</th>
+                <th rowSpan={2} className="w-18">
+                  Масса, кг
+                </th>
+              </tr>
+              <tr>
+                <th>по воздуху, м³/ч</th>
+                <th>по теплу, кВт</th>
+                <th>L</th>
+                <th>B</th>
+                <th>H</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-1 text-left">СТД-300 (КСк3)</td>
+                <td rowSpan={4}>25000</td>
+                <td>326</td>
+                <td rowSpan={2}>1100</td>
+                <td rowSpan={4}>1520</td>
+                <td rowSpan={4}>1475</td>
+                <td>315</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">СТД-300 (КСк4)</td>
+                <td>385</td>
+                <td>360</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">СТД-300 (ТВВ3)</td>
+                <td>345</td>
+                <td>1090</td>
+                <td>375</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">СТД-300 (ТВВ4)</td>
+                <td>425</td>
+                <td>1130</td>
+                <td>445</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <ProductParagraph>
           Структура условного обозначения водяных агрегатов серии СТД-300 ХЛ
