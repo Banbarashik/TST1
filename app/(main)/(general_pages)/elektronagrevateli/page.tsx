@@ -38,21 +38,23 @@ export default function KaloriferySFO() {
           калориферов серии СФО-Р/1Т-И2 осуществляется согласно ТУ
           3442-004-55613706-02.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/elektrokalorifer_sfo_komplektatciia.png"
-            alt="Электрический калорифер СФО"
-            title="Электрокалорифер СФО"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/elektrokalorifery_sfo_proizvodstvo.png"
-            alt="Производство электрокалориферов СФО"
-            title="Конструкция электрокалориферов СФО"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/elektrokalorifer_sfo_komplektatciia.png"
+              alt="Электрический калорифер СФО"
+              title="Электрокалорифер СФО"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/elektrokalorifery_sfo_proizvodstvo.png"
+              alt="Производство электрокалориферов СФО"
+              title="Конструкция электрокалориферов СФО"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -150,185 +152,188 @@ export default function KaloriferySFO() {
             ...p,
             name: `Калорифер ${p.shortName}`,
           }))}
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
         />
       </section>
 
       <section className="mb-4">
         <Heading lvl={2} text="Габаритные размеры электрокалориферов СФО" />
 
-        <table className="mb-3 w-full">
-          <thead>
-            <tr>
-              <th
-                colSpan={2}
-                style={{ fontSize: "11pt" }}
-                className="first-two-cols w-80 uppercase"
-              >
-                Модель электрокалорифера
-              </th>
-              <th style={{ fontSize: "11pt" }}>СФО-16</th>
-              <th style={{ fontSize: "11pt" }}>СФО-25</th>
-              <th style={{ fontSize: "11pt" }}>СФО-40</th>
-              <th style={{ fontSize: "11pt" }}>СФО-60</th>
-              <th style={{ fontSize: "11pt" }}>СФО-100</th>
-              <th style={{ fontSize: "11pt" }}>СФО-160</th>
-              <th style={{ fontSize: "11pt" }}>СФО-250</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colSpan={2} className="first-two-cols w-80">
-                Установленная мощность, кВт
-              </td>
-              <td>15</td>
-              <td>22.5</td>
-              <td>45</td>
-              <td>67.5</td>
-              <td>90</td>
-              <td>157.5</td>
-              <td>247.5</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Число электрических секций
-              </td>
-              <td>2</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Мощность одной секции, кВт
-              </td>
-              <td>7.5</td>
-              <td>7.5</td>
-              <td>15</td>
-              <td>22.5</td>
-              <td>30</td>
-              <td>57.5</td>
-              <td>82.5</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Количество ТЭНов
-              </td>
-              <td>6</td>
-              <td>9</td>
-              <td>18</td>
-              <td>27</td>
-              <td>36</td>
-              <td>63</td>
-              <td>99</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Производительность по воздуху, м³/ч, не менее
-              </td>
-              <td>1000</td>
-              <td>1500</td>
-              <td>2500</td>
-              <td>3000</td>
-              <td>4000</td>
-              <td>7000</td>
-              <td>10000</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Напряжение питающей сети, В
-              </td>
-              <td colSpan={7}>380</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Частота питающей сети, Гц
-              </td>
-              <td colSpan={7}>50</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Напряжение на нагревателе, В
-              </td>
-              <td colSpan={7}>220</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Схема соединений нагревателей в секции
-              </td>
-              <td colSpan={7}>Y</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Номинальная мощность одного нагревателя, кВт
-              </td>
-              <td colSpan={7}>2.5</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Тип ТЭНов
-              </td>
-              <td colSpan={7}>оребренные</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="first-two-cols">
-                Масса нагревательного блока, кг
-              </td>
-              <td>8</td>
-              <td>11</td>
-              <td>18</td>
-              <td>25</td>
-              <td>32</td>
-              <td>54</td>
-              <td>82</td>
-            </tr>
-            <tr>
-              <td rowSpan={4} className="w-71">
-                Габаритные и присоединительные размеры, мм
-              </td>
-              <td className="first-two-cols w-8.5">H</td>
-              <td>145</td>
-              <td>175</td>
-              <td>310</td>
-              <td>445</td>
-              <td>580</td>
-              <td>985</td>
-              <td>1530</td>
-            </tr>
-            <tr>
-              <td className="first-two-cols">A</td>
-              <td>205</td>
-              <td>235</td>
-              <td>370</td>
-              <td>505</td>
-              <td>640</td>
-              <td>1045</td>
-              <td>1590</td>
-            </tr>
-            <tr>
-              <td className="first-two-cols">H1</td>
-              <td>230</td>
-              <td>260</td>
-              <td>395</td>
-              <td>530</td>
-              <td>665</td>
-              <td>1070</td>
-              <td>1615</td>
-            </tr>
-            <tr>
-              <td className="first-two-cols">n</td>
-              <td>-</td>
-              <td>4</td>
-              <td>6</td>
-              <td>8</td>
-              <td>8</td>
-              <td>12</td>
-              <td>20</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mb-3 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th
+                  colSpan={2}
+                  style={{ fontSize: "11pt" }}
+                  className="first-two-cols w-80 uppercase"
+                >
+                  Модель электрокалорифера
+                </th>
+                <th style={{ fontSize: "11pt" }}>СФО-16</th>
+                <th style={{ fontSize: "11pt" }}>СФО-25</th>
+                <th style={{ fontSize: "11pt" }}>СФО-40</th>
+                <th style={{ fontSize: "11pt" }}>СФО-60</th>
+                <th style={{ fontSize: "11pt" }}>СФО-100</th>
+                <th style={{ fontSize: "11pt" }}>СФО-160</th>
+                <th style={{ fontSize: "11pt" }}>СФО-250</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colSpan={2} className="first-two-cols w-80">
+                  Установленная мощность, кВт
+                </td>
+                <td>15</td>
+                <td>22.5</td>
+                <td>45</td>
+                <td>67.5</td>
+                <td>90</td>
+                <td>157.5</td>
+                <td>247.5</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Число электрических секций
+                </td>
+                <td>2</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Мощность одной секции, кВт
+                </td>
+                <td>7.5</td>
+                <td>7.5</td>
+                <td>15</td>
+                <td>22.5</td>
+                <td>30</td>
+                <td>57.5</td>
+                <td>82.5</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Количество ТЭНов
+                </td>
+                <td>6</td>
+                <td>9</td>
+                <td>18</td>
+                <td>27</td>
+                <td>36</td>
+                <td>63</td>
+                <td>99</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Производительность по воздуху, м³/ч, не менее
+                </td>
+                <td>1000</td>
+                <td>1500</td>
+                <td>2500</td>
+                <td>3000</td>
+                <td>4000</td>
+                <td>7000</td>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Напряжение питающей сети, В
+                </td>
+                <td colSpan={7}>380</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Частота питающей сети, Гц
+                </td>
+                <td colSpan={7}>50</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Напряжение на нагревателе, В
+                </td>
+                <td colSpan={7}>220</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Схема соединений нагревателей в секции
+                </td>
+                <td colSpan={7}>Y</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Номинальная мощность одного нагревателя, кВт
+                </td>
+                <td colSpan={7}>2.5</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Тип ТЭНов
+                </td>
+                <td colSpan={7}>оребренные</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="first-two-cols">
+                  Масса нагревательного блока, кг
+                </td>
+                <td>8</td>
+                <td>11</td>
+                <td>18</td>
+                <td>25</td>
+                <td>32</td>
+                <td>54</td>
+                <td>82</td>
+              </tr>
+              <tr>
+                <td rowSpan={4} className="w-71">
+                  Габаритные и присоединительные размеры, мм
+                </td>
+                <td className="first-two-cols w-8.5">H</td>
+                <td>145</td>
+                <td>175</td>
+                <td>310</td>
+                <td>445</td>
+                <td>580</td>
+                <td>985</td>
+                <td>1530</td>
+              </tr>
+              <tr>
+                <td className="first-two-cols">A</td>
+                <td>205</td>
+                <td>235</td>
+                <td>370</td>
+                <td>505</td>
+                <td>640</td>
+                <td>1045</td>
+                <td>1590</td>
+              </tr>
+              <tr>
+                <td className="first-two-cols">H1</td>
+                <td>230</td>
+                <td>260</td>
+                <td>395</td>
+                <td>530</td>
+                <td>665</td>
+                <td>1070</td>
+                <td>1615</td>
+              </tr>
+              <tr>
+                <td className="first-two-cols">n</td>
+                <td>-</td>
+                <td>4</td>
+                <td>6</td>
+                <td>8</td>
+                <td>8</td>
+                <td>12</td>
+                <td>20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <Image
           src="/img/general_pages/elektrokalorifery_sfo_chertezh.png"
