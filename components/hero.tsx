@@ -8,8 +8,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import { Button } from "@/components/ui/button";
@@ -50,7 +48,7 @@ const slides = [
 ];
 
 export default function Hero() {
-  const [emblaApi, setEmblaApi] = React.useState<any>(null);
+  const [emblaApi, setEmblaApi] = React.useState(null);
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   React.useEffect(() => {
