@@ -56,21 +56,25 @@ export default function KaloriferyKPPage() {
           испытаний и проверкой каждого парового воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kp_komplektatciia.png"
-            alt="Производство паровых калориферов"
-            title="Калорифер паровой"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kp.png"
-            alt="Паровой калорифер для сушильных камер"
-            title="Конструкция парового калорифера"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kp_komplektatciia.png"
+              alt="Производство паровых калориферов"
+              title="Калорифер паровой"
+              width={484}
+              height={1}
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kp.png"
+              alt="Паровой калорифер для сушильных камер"
+              title="Конструкция парового калорифера"
+              width={484}
+              height={1}
+            />
+          </div>
         </div>
       </section>
 
@@ -124,7 +128,11 @@ export default function KaloriferyKPPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kp3} className="mb-4" />
+        <ProductLinks
+          products={kp3}
+          className="mb-4"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
         <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -134,7 +142,11 @@ export default function KaloriferyKPPage() {
           модели и номера парового калорифера серии КП, варьируется от 2500 до
           25000 м<sup>3</sup>/час, от 70 до 720 кВт.
         </ProductParagraph>
-        <ProductLinks products={kp4} className="mb-3" />
+        <ProductLinks
+          products={kp4}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
