@@ -290,7 +290,7 @@ export default function ElectroEquipmentPage({ product }) {
             Ниже представлены чертеж с габаритными размерами и электрическая
             схема подключения электрокалорифера {product.shortName}.
           </ProductParagraph>
-          <div className="mb-10 flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="flex w-full flex-col gap-3 sm:mb-10 sm:flex-row sm:gap-0">
             <div
               className="relative w-full"
               style={{
