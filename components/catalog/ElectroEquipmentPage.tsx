@@ -214,7 +214,7 @@ export default function ElectroEquipmentPage({ product }) {
             <ProductParagraph className="font-bold">
               Все типоразмеры {equipmentType[preciseCategory].pluGen}
             </ProductParagraph>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
               {productsByPreciseCategory.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
@@ -228,7 +228,7 @@ export default function ElectroEquipmentPage({ product }) {
             <ProductParagraph className="font-bold">
               Сопутствующее оборудование
             </ProductParagraph>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
               {productsBySize.map((p) => (
                 <li key={p.id}>
                   <SimilarProductLink id={p.id} isActive={p.id === product.id}>
