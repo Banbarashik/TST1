@@ -78,10 +78,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <ProductCard
           product={product}
           isLink={false}
-          className="row-start-1 row-end-3 self-start justify-self-start sm:row-span-1 lg:col-start-1 lg:row-start-1 lg:row-end-3"
+          className="row-start-1 row-end-3 self-start justify-self-start sm:row-span-1 xl:col-start-1 xl:row-start-1 xl:row-end-3"
         />
         {/* text */}
-        <div className="sm:col-span-full sm:row-start-2 lg:col-auto lg:row-start-1">
+        <div className="sm:col-span-full sm:row-start-2 xl:col-auto xl:row-start-1">
           <h2 className="mb-3 text-xl">
             <div className="sm:inline">
               {isCalorifier ? "Калорифер" : "Воздушно-отопительный агрегат"}{" "}
