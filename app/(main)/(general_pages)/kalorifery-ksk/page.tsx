@@ -47,21 +47,23 @@ export default function KaloriferyKSKPage() {
           испытаний и проверкой каждого водяного воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_ksk_komplektatciia.png"
-            alt="Производство калориферов КСк"
-            title="Калорифер КСк водяной"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_ksk.png"
-            alt="Конструкция водяного калорифера КСк"
-            title="Калорифер КСк"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_ksk_komplektatciia.png"
+              alt="Производство калориферов КСк"
+              title="Калорифер КСк водяной"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_ksk.png"
+              alt="Конструкция водяного калорифера КСк"
+              title="Калорифер КСк"
+              fill
+            />
+          </div>
         </div>
       </section>
 
