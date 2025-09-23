@@ -3,6 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 import { Button } from "@/components/ui/button";
 
 const slides = [
@@ -43,59 +51,61 @@ const slides = [
 export default function Hero() {
   return (
     <header className="relative">
-      <div>
-        {slides.map((slide, idx) => (
-          <div
-            key={idx}
-            className="relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
-          >
-            <Image
-              src={slide.img.url}
-              alt={slide.img.alt}
-              fill
-              className={`${slide.imgClass}`}
-              priority
-              aria-hidden="true"
-            />
-            {/* Overlay for darkening */}
-            <div className="absolute inset-0 bg-black/10" />
-            {/* Text */}
-            <div
-              className={`${
-                idx === 2 ? "max-w-6xl" : "max-w-5xl"
-              } relative z-10 mx-auto space-y-10 px-4 text-center text-white`}
+      <Carousel className="w-full">
+        <CarouselContent>
+          {slides.map((slide, idx) => (
+            <CarouselItem
+              key={idx}
+              className="relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
             >
-              <div className="relative">
-                {idx === 0 && (
-                  <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-30 blur-[60px]"></span>
-                )}
-                {idx === 2 && (
-                  <span className="absolute -top-10 -right-20 -bottom-10 -left-20 -z-10 bg-black opacity-30 blur-[40px]"></span>
-                )}
-                {slide.title.map((t) => (
-                  <p
-                    key={t}
-                    className={`font-bold text-shadow-lg/50 ${slide.titleClass}`}
-                  >
-                    {t}
+              <Image
+                src={slide.img.url}
+                alt={slide.img.alt}
+                fill
+                className={`${slide.imgClass}`}
+                priority
+                aria-hidden="true"
+              />
+              {/* Overlay for darkening */}
+              <div className="absolute inset-0 bg-black/10" />
+              {/* Text */}
+              <div
+                className={`${
+                  idx === 2 ? "max-w-6xl" : "max-w-5xl"
+                } relative z-10 mx-auto space-y-10 px-4 text-center text-white`}
+              >
+                <div className="relative">
+                  {idx === 0 && (
+                    <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-30 blur-[60px]"></span>
+                  )}
+                  {idx === 2 && (
+                    <span className="absolute -top-10 -right-20 -bottom-10 -left-20 -z-10 bg-black opacity-30 blur-[40px]"></span>
+                  )}
+                  {slide.title.map((t) => (
+                    <p
+                      key={t}
+                      className={`font-bold text-shadow-lg/50 ${slide.titleClass}`}
+                    >
+                      {t}
+                    </p>
+                  ))}
+                </div>
+                {slide.text && (
+                  <p className="text-lg font-bold drop-shadow text-shadow-md/30 md:text-[1.6rem]">
+                    <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-50 blur-[60px]"></span>
+                    {slide.text}
                   </p>
-                ))}
+                )}
+                <Button size="xl" className="font-bold" asChild>
+                  <Link href="/catalog">Каталог</Link>
+                </Button>
               </div>
-              {slide.text && (
-                <p className="text-lg font-bold drop-shadow text-shadow-md/30 md:text-[1.6rem]">
-                  <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-50 blur-[60px]"></span>
-                  {slide.text}
-                </p>
-              )}
-              <Button size="xl" className="font-bold" asChild>
-                <Link href="/catalog">Каталог</Link>
-              </Button>
-            </div>
-          </div>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
       {/* Circles for slider navigation */}
-      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+      {/* <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -105,7 +115,7 @@ export default function Hero() {
             type="button"
           />
         ))}
-      </div>
+      </div> */}
     </header>
   );
 }
