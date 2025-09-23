@@ -107,6 +107,7 @@ export default function KaloriferyParPage() {
         <ProductLinks
           products={kpps.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-6"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(100px,max-content))]"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения паровых приточных калориферов КППС
@@ -135,6 +136,7 @@ export default function KaloriferyParPage() {
         <ProductLinks
           products={kppu.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-6"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(100px,max-content))]"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения паровых приточных калориферов КППУ

@@ -130,7 +130,11 @@ export default function KaloriferyKSKPage() {
           элементов. Применяются для нагрева воздуха на небольшую разницу
           температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk2} className="mb-3" />
+        <ProductLinks
+          products={ksk2}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section>
@@ -140,7 +144,11 @@ export default function KaloriferyKSKPage() {
           элементов. Наиболее экономичный вариант с хорошими теплотехническими
           характеристиками. Повышенное гидравлическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk3} className="mb-3" />
+        <ProductLinks
+          products={ksk3}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section>
@@ -151,7 +159,11 @@ export default function KaloriferyKSKPage() {
           высокой разницей температуры воздуха на входе и выходе из калорифера.
           Увеличенное аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={ksk4} className="mb-3" />
+        <ProductLinks
+          products={ksk4}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
