@@ -6,14 +6,17 @@ import { cn } from "@/lib/utils";
 
 export default function ProductLinks({
   products,
+  gridTemplateCols,
   className,
 }: {
+  gridTemplateCols: string;
   className?: string;
 }) {
   return (
     <ul
       className={cn(
-        "grid grid-cols-[repeat(auto-fill,minmax(104px,max-content))] gap-x-5 gap-y-6 lg:gap-x-3 xl:gap-x-5",
+        "grid gap-x-5 gap-y-6 lg:gap-x-3 xl:gap-x-5",
+        gridTemplateCols,
         className,
       )}
     >
