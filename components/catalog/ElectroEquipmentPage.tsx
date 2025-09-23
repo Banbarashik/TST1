@@ -160,7 +160,7 @@ export default function ElectroEquipmentPage({ product }) {
       : product.name;
 
   return (
-    <div>
+    <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{productName}</h1>
       <div className="mb-6 flex items-start gap-4">
         <ProductCard product={product} isLink={false} />
@@ -242,30 +242,34 @@ export default function ElectroEquipmentPage({ product }) {
         {isSHUK && "шкафа управления калорифером"} {product.shortName} в работу.
       </ProductParagraph>
 
-      <table className="mx-auto mb-6 w-176">
-        <tbody>
-          {tableLabels[preciseCategory].map((label, i) => (
-            <React.Fragment key={label}>
-              <tr>
-                <td className="py-1 pl-1 text-left">
-                  {isSHUK && label === "kmi_to_change"
-                    ? `Пускатель КМИ (КМН) ${product.kmi}А 220-230В`
-                    : label}
-                </td>
-                <td>{product.specsTableValues[i]}</td>
-              </tr>
-              {isSHUK && label === "kmi_to_change" && product.size === 250 && (
+      <div className="mb-6 w-full overflow-x-auto">
+        <table className="mx-auto w-176">
+          <tbody>
+            {tableLabels[preciseCategory].map((label, i) => (
+              <React.Fragment key={label}>
                 <tr>
                   <td className="py-1 pl-1 text-left">
-                    Пускатель ПМ 12160150 160А 220-230В
+                    {isSHUK && label === "kmi_to_change"
+                      ? `Пускатель КМИ (КМН) ${product.kmi}А 220-230В`
+                      : label}
                   </td>
-                  <td>3</td>
+                  <td>{product.specsTableValues[i]}</td>
                 </tr>
-              )}
-            </React.Fragment>
-          ))}
-        </tbody>
-      </table>
+                {isSHUK &&
+                  label === "kmi_to_change" &&
+                  product.size === 250 && (
+                    <tr>
+                      <td className="py-1 pl-1 text-left">
+                        Пускатель ПМ 12160150 160А 220-230В
+                      </td>
+                      <td>3</td>
+                    </tr>
+                  )}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {(isSHUK || isSFO) && (
         <ProductSubheader
