@@ -47,21 +47,23 @@ export default function AgregatyAVO() {
           приемо-сдаточных испытаний и проверкой каждого комплектуемого
           воздухоподогревателя на герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/agregat_vozdushno-otopitelnyi_avo_komplektatciia.png"
-            alt="Воздушно-отопительный агрегат"
-            title="Воздушно-отопительный агрегат АВО ХЛ"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/agregat_vozdushno-otopitelnyi_avo.png"
-            alt="Производство отопительных агрегатов АВО"
-            title="Конструкция отопительного агрегата АВО ХЛ"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_vozdushno-otopitelnyi_avo_komplektatciia.png"
+              alt="Воздушно-отопительный агрегат"
+              title="Воздушно-отопительный агрегат АВО ХЛ"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/general_pages/agregat_vozdushno-otopitelnyi_avo.png"
+              alt="Производство отопительных агрегатов АВО"
+              title="Конструкция отопительного агрегата АВО ХЛ"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -168,68 +170,72 @@ export default function AgregatyAVO() {
           50 до 166 кВт.
         </ProductParagraph>
 
-        <table className="mb-3 w-full">
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Комплектуемый вентилятор</th>
-              <th className="w-32 px-2">
-                Производительность по воздуху, м<sup>3</sup>/ч
-              </th>
-              <th className="w-32 px-2">Производительность по теплу, кВт</th>
-              <th>
-                Габариты, мм{" "}
-                <span className="block">(длина - ширина - высота)</span>
-              </th>
-              <th>Масса, кг</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="px-1 text-left">АВО 3-55-01 (ТВВ4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-4 (0.25 кВт / 1500 об. мин.)
-              </td>
-              <td>2800</td>
-              <td>49</td>
-              <td>840 х 710 х 620</td>
-              <td>91</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АВО 4-95-01 (ТВВ4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-5 (0.37 кВт / 1500 об. мин.)
-              </td>
-              <td>5000</td>
-              <td>92</td>
-              <td>865 х 920 х 830</td>
-              <td>144</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АВО 7-165-01 (ТВВ4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)
-              </td>
-              <td>10500</td>
-              <td>170</td>
-              <td>1025 х 1050 х 1000</td>
-              <td>194</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mb-3 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th>Наименование агрегата</th>
+                <th>Комплектуемый вентилятор</th>
+                <th className="w-32 px-2">
+                  Производительность по воздуху, м<sup>3</sup>/ч
+                </th>
+                <th className="w-32 px-2">Производительность по теплу, кВт</th>
+                <th>
+                  Габариты, мм{" "}
+                  <span className="block">(длина - ширина - высота)</span>
+                </th>
+                <th>Масса, кг</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-1 text-left">АВО 3-55-01 (ТВВ4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-4 (0.25 кВт / 1500 об. мин.)
+                </td>
+                <td>2800</td>
+                <td>49</td>
+                <td>840 х 710 х 620</td>
+                <td>91</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АВО 4-95-01 (ТВВ4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-5 (0.37 кВт / 1500 об. мин.)
+                </td>
+                <td>5000</td>
+                <td>92</td>
+                <td>865 х 920 х 830</td>
+                <td>144</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АВО 7-165-01 (ТВВ4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)
+                </td>
+                <td>10500</td>
+                <td>170</td>
+                <td>1025 х 1050 х 1000</td>
+                <td>194</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <div className="flex justify-between">
-          <Image
-            src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_vodianye_gabaritnye_razmery.png"
-            alt="Технические характеристики водяных агрегатов АВО ХЛ"
-            title="Габаритные размеры водяных воздушных агрегатов АВО ХЛ"
-            width={644}
-            height={1}
-          />
+        <div className="mb-2 flex flex-col space-y-3 gap-x-6 md:flex-row md:justify-between">
           <ProductLinks
             products={avoTvvVariants}
-            className="flex flex-col justify-center"
+            gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(220px,max-content))]"
+            className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
+          <div className="relative aspect-11/6 w-full">
+            <Image
+              src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_vodianye_gabaritnye_razmery.png"
+              alt="Технические характеристики водяных агрегатов АВО ХЛ"
+              title="Габаритные размеры водяных воздушных агрегатов АВО ХЛ"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -241,68 +247,72 @@ export default function AgregatyAVO() {
           49 до 170 кВт.
         </ProductParagraph>
 
-        <table className="mb-3 w-full">
-          <thead>
-            <tr>
-              <th>Наименование агрегата</th>
-              <th>Комплектуемый вентилятор</th>
-              <th className="w-32 px-2">
-                Производительность по воздуху, м<sup>3</sup>/ч
-              </th>
-              <th className="w-32 px-2">Производительность по теплу, кВт</th>
-              <th>
-                Габариты, мм{" "}
-                <span className="block">(длина - ширина - высота)</span>
-              </th>
-              <th>Масса, кг</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="px-1 text-left">АВО 3-55-01 (КП4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-4 (0.25 кВт / 1500 об. мин.)
-              </td>
-              <td>2800</td>
-              <td>50</td>
-              <td>840 х 575 х 790</td>
-              <td>91</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АВО 4-95-01 (КП4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-5 (0.37 кВт / 1500 об. мин.)
-              </td>
-              <td>5000</td>
-              <td>91</td>
-              <td>865 х 785 х 1000</td>
-              <td>144</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">АВО 7-165-01 (КП4)</td>
-              <td className="px-1 text-left">
-                ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)
-              </td>
-              <td>10500</td>
-              <td>166</td>
-              <td>1025 х 920 х 1135</td>
-              <td>194</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="mb-3 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th>Наименование агрегата</th>
+                <th>Комплектуемый вентилятор</th>
+                <th className="w-32 px-2">
+                  Производительность по воздуху, м<sup>3</sup>/ч
+                </th>
+                <th className="w-32 px-2">Производительность по теплу, кВт</th>
+                <th>
+                  Габариты, мм{" "}
+                  <span className="block">(длина - ширина - высота)</span>
+                </th>
+                <th>Масса, кг</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-1 text-left">АВО 3-55-01 (КП4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-4 (0.25 кВт / 1500 об. мин.)
+                </td>
+                <td>2800</td>
+                <td>50</td>
+                <td>840 х 575 х 790</td>
+                <td>91</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АВО 4-95-01 (КП4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-5 (0.37 кВт / 1500 об. мин.)
+                </td>
+                <td>5000</td>
+                <td>91</td>
+                <td>865 х 785 х 1000</td>
+                <td>144</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">АВО 7-165-01 (КП4)</td>
+                <td className="px-1 text-left">
+                  ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)
+                </td>
+                <td>10500</td>
+                <td>166</td>
+                <td>1025 х 920 х 1135</td>
+                <td>194</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <div className="flex justify-between">
-          <Image
-            src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_parovye_gabaritnye_razmery.png"
-            alt="Технические характеристики паровых агрегатов АВО ХЛ"
-            title="Габаритные размеры паровых воздушных агрегатов АВО ХЛ"
-            width={644}
-            height={1}
-          />
+        <div className="mb-2 flex flex-col space-y-3 gap-x-6 md:flex-row md:justify-between">
           <ProductLinks
             products={avoKpVariants}
-            className="flex flex-col justify-center"
+            gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(220px,max-content))]"
+            className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
+          <div className="relative aspect-11/6 w-full">
+            <Image
+              src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_parovye_gabaritnye_razmery.png"
+              alt="Технические характеристики паровых агрегатов АВО ХЛ"
+              title="Габаритные размеры паровых воздушных агрегатов АВО ХЛ"
+              fill
+            />
+          </div>
         </div>
         <ProductParagraph>
           Структура условного обозначения агрегатов АВО ХЛ производства ООО
@@ -317,7 +327,7 @@ export default function AgregatyAVO() {
       <TableAndCatalogLinks
         tableLinkOpenNewTab
         tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-        tableLinkText="Скачать каталог воздушно-отопительных агрегатов АВО ХЛ"
+        tableLinkText="Скачать каталог воздушных агрегатов АВО ХЛ"
         catalogURL="/documents/Price_list_zao_tst_2025.pdf"
         catalogLinkText="Скачать прайс-лист воздушных агрегатов АВО ХЛ"
       />
