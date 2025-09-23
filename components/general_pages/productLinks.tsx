@@ -13,7 +13,7 @@ export default function ProductLinks({
   return (
     <ul
       className={cn(
-        "grid grid-cols-3 gap-x-5 gap-y-6 sm:grid-cols-4 md:grid-cols-5 lg:gap-x-3 xl:gap-x-5",
+        "grid grid-cols-[repeat(auto-fill,minmax(104px,max-content))] gap-x-5 gap-y-6 lg:gap-x-3 xl:gap-x-5",
         className,
       )}
     >
