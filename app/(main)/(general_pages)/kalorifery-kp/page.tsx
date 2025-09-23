@@ -62,8 +62,7 @@ export default function KaloriferyKPPage() {
               src="/img/general_pages/kalorifer_parovoi_kp_komplektatciia.png"
               alt="Производство паровых калориферов"
               title="Калорифер паровой"
-              width={484}
-              height={1}
+              fill
             />
           </div>
           <div className="relative aspect-24/17 w-full">
@@ -71,8 +70,7 @@ export default function KaloriferyKPPage() {
               src="/img/general_pages/kalorifer_parovoi_kp.png"
               alt="Паровой калорифер для сушильных камер"
               title="Конструкция парового калорифера"
-              width={484}
-              height={1}
+              fill
             />
           </div>
         </div>

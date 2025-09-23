@@ -46,21 +46,23 @@ export default function KaloriferyTVVPage() {
           испытаний и проверкой каждого водяного воздухонагревателя на
           герметичность и прочность.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_tvv_komplektatciia.png"
-            alt="Производство водяных калориферов ТВВ"
-            title="Калорифер ТВВ водяной"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_tvv.png"
-            alt="Водяной воздухонагреватель ВНВ 113"
-            title="Калорифер ТВВ"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_tvv_komplektatciia.png"
+              alt="Производство водяных калориферов ТВВ"
+              title="Калорифер ТВВ водяной"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_tvv.png"
+              alt="Водяной воздухонагреватель ВНВ 113"
+              title="Калорифер ТВВ"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -114,7 +116,11 @@ export default function KaloriferyTVVPage() {
           количества рядов предполагает собой нагрев входящего воздуха на
           большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={tvv3} className="mb-4" />
+        <ProductLinks
+          products={tvv3}
+          className="mb-4"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
         <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из семи
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -124,7 +130,11 @@ export default function KaloriferyTVVPage() {
           модели и номера водяного калорифера серии ТВВ, варьируется от 2500 до
           25000 м<sup>3</sup>/час, от 55 до 725 кВт.
         </ProductParagraph>
-        <ProductLinks products={tvv4} className="mb-3" />
+        <ProductLinks
+          products={tvv4}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
