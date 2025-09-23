@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
 import "@/app/globals.css";
-import "keen-slider/keen-slider.min.css";
 
 import { Phone, Smartphone, Mail } from "lucide-react";
 
