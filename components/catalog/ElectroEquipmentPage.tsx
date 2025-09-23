@@ -162,9 +162,14 @@ export default function ElectroEquipmentPage({ product }) {
   return (
     <div className="lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{productName}</h1>
-      <div className="mb-6 flex items-start gap-4">
-        <ProductCard product={product} isLink={false} />
-        <div>
+      <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6">
+        <ProductCard
+          product={product}
+          isLink={false}
+          className="row-start-1 row-end-3 self-start justify-self-start sm:row-span-1 xl:col-start-1 xl:row-start-1 xl:row-end-3"
+        />
+        {/* text */}
+        <div className="sm:col-span-full sm:row-start-2 xl:col-auto xl:row-start-1">
           <div className="mb-3 text-xl">
             <h2>{productName}.</h2>
             {!isSHUK && <p>ТУ 3442-004-55613706-02</p>}
@@ -172,7 +177,7 @@ export default function ElectroEquipmentPage({ product }) {
           {isSHUK ? (
             <>
               Шкаф управления калорифером ШУК обеспечивает:
-              <ul className="mb-4">
+              <ul>
                 <li>
                   - невозможность включения секций электрических нагревателей
                   при не включенном вентиляторе;
@@ -196,13 +201,16 @@ export default function ElectroEquipmentPage({ product }) {
               <ProductParagraph>
                 Теплоотдающие элементы {isSFOTC && "калорифера СФО"}:
               </ProductParagraph>
-              <ul className="mb-4 text-[17px]">
+              <ul className="text-[17px]">
                 <li>- трубчатые электронагреватели Р-54А-13/2.5о220</li>
                 <li>с алюминиевым (АД1 ТУ 1-8-267-99) накатным оребрением</li>
               </ul>
             </>
           )}
-          <div className="mb-4 flex flex-col gap-1">
+        </div>
+        {/* chips */}
+        <div className="space-y-4">
+          <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               Все типоразмеры {equipmentType[preciseCategory].pluGen}
             </ProductParagraph>
