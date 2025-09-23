@@ -42,21 +42,23 @@ export default function KaloriferyKFBAPage() {
           многочисленных предприятиях горнодобывающей отрасли, в крайне тяжелых
           условиях эксплуатации.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_kfb_komplektatciia.png"
-            alt="Производство водяных калориферов КФБ"
-            title="Конструкция водяного калорифера КФБ"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_vodianoi_kfb.png"
-            alt="Калорифер для шахт и рудников"
-            title="Калорифер КФБ водяной"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_kfb_komplektatciia.png"
+              alt="Производство водяных калориферов КФБ"
+              title="Конструкция водяного калорифера КФБ"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_vodianoi_kfb.png"
+              alt="Калорифер для шахт и рудников"
+              title="Калорифер КФБ водяной"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -114,21 +116,25 @@ export default function KaloriferyKFBAPage() {
           являются важным элементом в системе подогрева воздуха для
           проветривания горных выработок шахт и рудников.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifery_vodianye_kfb_blok.png"
-            alt="Калорифер для проветривания горных выработок"
-            title="Калориферная секция"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
-            alt="Шахтовые калориферы"
-            title="Калориферная установка"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifery_vodianye_kfb_blok.png"
+              alt="Калорифер для проветривания горных выработок"
+              title="Калориферная секция"
+              width={484}
+              height={1}
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifery_vodianye_kfb_ustanovka.png"
+              alt="Шахтовые калориферы"
+              title="Калориферная установка"
+              width={484}
+              height={1}
+            />
+          </div>
         </div>
       </section>
 
@@ -171,7 +177,11 @@ export default function KaloriferyKFBAPage() {
           Увеличение количества рядов предполагает собой нагрев входящего
           воздуха на большую разницу температур.
         </ProductParagraph>
-        <ProductLinks products={kfb3} className="mb-4" />
+        <ProductLinks
+          products={kfb3}
+          className="mb-4"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+        />
         <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из тринадцати
           типоразмеров, каждому из которых присваивается свой порядковый номер.
@@ -181,7 +191,11 @@ export default function KaloriferyKFBAPage() {
           от модели и номера водяного калорифера серии КФБ-А варьируется от 2000
           до 18000 м<sup>3</sup>/час, от 42 до 502 кВт.
         </ProductParagraph>
-        <ProductLinks products={kfb4} className="mb-3" />
+        <ProductLinks
+          products={kfb4}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
