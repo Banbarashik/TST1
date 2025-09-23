@@ -353,21 +353,33 @@ export default function ElectroEquipmentPage({ product }) {
             Структура условного обозначения в принципиальной схеме{" "}
             {product.shortName}: {product.specsTableLegend}
           </p>
-          <div className="mb-10 flex">
-            <Image
-              src={product.drawing}
-              alt={`${productName} габаритные размеры`}
-              title={`Шкаф ${product.shortName} габаритные размеры`}
-              width={322}
-              height={1}
-            />
-            <Image
-              src={product.scheme}
-              alt={`Шкаф ${product.size} электрическая схема подключения`}
-              title={`Шкаф ${product.size} электрическая схема подключения`}
-              width={645}
-              height={1}
-            />
+          <div className="mb-10 flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+            <div
+              className="relative w-full"
+              style={{ aspectRatio: "700 / 950" }}
+            >
+              <Image
+                src={product.drawing}
+                alt={`${productName} габаритные размеры`}
+                title={`Шкаф ${product.shortName} габаритные размеры`}
+                fill
+                /* width={322}
+                height={1} */
+              />
+            </div>
+            <div
+              className="relative w-full"
+              style={{ aspectRatio: "1400 / 950" }}
+            >
+              <Image
+                src={product.scheme}
+                alt={`Шкаф ${product.size} электрическая схема подключения`}
+                title={`Шкаф ${product.size} электрическая схема подключения`}
+                fill
+                /* width={645}
+                height={1} */
+              />
+            </div>
           </div>
         </>
       )}
