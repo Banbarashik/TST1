@@ -282,21 +282,33 @@ export default function ElectroEquipmentPage({ product }) {
             Ниже представлены чертеж с габаритными размерами и электрическая
             схема подключения электрокалорифера {product.shortName}.
           </ProductParagraph>
-          <div className="mb-10 flex">
-            <Image
-              src={product.drawing}
-              alt={`${productName} габаритные размеры`}
-              title={`${product.shortName} габаритные размеры`}
-              width={484}
-              height={1}
-            />
-            <Image
-              src={product.scheme}
-              alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
-              title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
-              width={484}
-              height={1}
-            />
+          <div className="mb-10 flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+            <div
+              className="relative w-full"
+              style={{
+                aspectRatio: `${product.drawing.width} / ${product.drawing.height}`,
+              }}
+            >
+              <Image
+                src={product.drawing.url}
+                alt={`${productName} габаритные размеры`}
+                title={`${product.shortName} габаритные размеры`}
+                fill
+              />
+            </div>
+            <div
+              className="relative w-full"
+              style={{
+                aspectRatio: `${product.scheme.width} / ${product.scheme.height}`,
+              }}
+            >
+              <Image
+                src={product.scheme.url}
+                alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
+                title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+                fill
+              />
+            </div>
           </div>
         </>
       )}
