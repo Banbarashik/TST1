@@ -56,21 +56,23 @@ export default function KaloriferyKPSKPage() {
           коэффициент теплопередачи, меньшую материалоемкость в плане затрат на
           общую площадь теплообменной поверхности.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kpsk_komplektatciia.png"
-            alt="Производство калориферов КПСк"
-            title="Калорифер КПСк паровой"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/kalorifer_parovoi_kpsk.png"
-            alt="Конструкция парового калорифера КПСк"
-            title="Калорифер КПСк"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kpsk_komplektatciia.png"
+              alt="Производство калориферов КПСк"
+              title="Калорифер КПСк паровой"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/general_pages/kalorifer_parovoi_kpsk.png"
+              alt="Конструкция парового калорифера КПСк"
+              title="Калорифер КПСк"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -138,7 +140,11 @@ export default function KaloriferyKPSKPage() {
           теплопередающих элементов. Применяются для нагрева воздуха на
           небольшую разницу температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={kpsk2} className="mb-3" />
+        <ProductLinks
+          products={kpsk2}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section>
@@ -148,7 +154,11 @@ export default function KaloriferyKPSKPage() {
           элементов. Наиболее экономичный вариант с хорошими теплотехническими
           характеристиками.
         </ProductParagraph>
-        <ProductLinks products={kpsk3} className="mb-3" />
+        <ProductLinks
+          products={kpsk3}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section>
@@ -159,7 +169,11 @@ export default function KaloriferyKPSKPage() {
           высокой разницей температур на входе и выходе из калорифера.
           Увеличенное аэродинамическое сопротивление.
         </ProductParagraph>
-        <ProductLinks products={kpsk4} className="mb-3" />
+        <ProductLinks
+          products={kpsk4}
+          className="mb-3"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+        />
       </section>
 
       <section className="mb-4">
