@@ -35,21 +35,23 @@ export default function ShkafyUpravleniyaSHUK() {
           воздухонагревательных установок типа СФОЦ, комплектуемых в их составе
           электрокалориферов СФО и радиальных вентиляторов низкого давления.
         </ProductParagraph>
-        <div className="flex">
-          <Image
-            src="/img/general_pages/shkaf_upravleniya_kaloriferom_chertezh.png"
-            alt="Технические характеристики шкафов управления ШУК"
-            title="Габаритные размеры шкафов управления калорифером ШУК"
-            width={484}
-            height={1}
-          />
-          <Image
-            src="/img/general_pages/shkafy_upravleniya_kaloriferom.png"
-            alt="Производство шкафов управления калорифером ШУК"
-            title="Шкафы управления калорифером ШУК"
-            width={484}
-            height={1}
-          />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-5/4 w-full">
+            <Image
+              src="/img/general_pages/shkaf_upravleniya_kaloriferom_chertezh.png"
+              alt="Технические характеристики шкафов управления ШУК"
+              title="Габаритные размеры шкафов управления калорифером ШУК"
+              fill
+            />
+          </div>
+          <div className="relative aspect-5/4 w-full">
+            <Image
+              src="/img/general_pages/shkafy_upravleniya_kaloriferom.png"
+              alt="Производство шкафов управления калорифером ШУК"
+              title="Шкафы управления калорифером ШУК"
+              fill
+            />
+          </div>
         </div>
       </section>
 
@@ -122,296 +124,299 @@ export default function ShkafyUpravleniyaSHUK() {
             ...p,
             name: `Шкаф управления ${p.shortName}`,
           }))}
-          className="mb-8"
+          className="mx-px mb-8"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(180px,max-content))]"
         />
 
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th
-                colSpan={2}
-                style={{ fontSize: "11pt" }}
-                className="px-1 text-left uppercase"
-              >
-                Модель шкафа управления
-              </th>
-              <th style={{ fontSize: "11pt" }}>ШУК-16</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-25</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-40</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-60</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-100</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-160</th>
-              <th style={{ fontSize: "11pt" }}>ШУК-250</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colSpan={9} className="px-1 text-left">
-                Технические характеристики
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Напряжение питающей сети, В
-              </td>
-              <td colSpan={7}>380</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Частота питающей сети, Гц
-              </td>
-              <td colSpan={7}>50</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Напряжение цепи управления, В
-              </td>
-              <td colSpan={7}>220</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Мощность электродвигателя, кВт
-              </td>
-              <td>до 1.5</td>
-              <td>до 1.5</td>
-              <td>до 1.5</td>
-              <td>до 2.5</td>
-              <td>до 2.5</td>
-              <td>до 2.5</td>
-              <td>до 7.5</td>
-            </tr>
-            <tr>
-              <td rowSpan={3} className="w-70">
-                Габаритные размеры, мм
-              </td>
-              <td className="px-1 text-left">L</td>
-              <td>220</td>
-              <td>220</td>
-              <td>220</td>
-              <td>220</td>
-              <td>220</td>
-              <td>220</td>
-              <td>220</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">B</td>
-              <td>310</td>
-              <td>310</td>
-              <td>310</td>
-              <td>400</td>
-              <td>400</td>
-              <td>400</td>
-              <td>500</td>
-            </tr>
-            <tr>
-              <td className="px-1 text-left">H</td>
-              <td>395</td>
-              <td>395</td>
-              <td>395</td>
-              <td>500</td>
-              <td>500</td>
-              <td>500</td>
-              <td>650</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Масса, кг
-              </td>
-              <td>9</td>
-              <td>10</td>
-              <td>10</td>
-              <td>16</td>
-              <td>18</td>
-              <td>18</td>
-              <td>30</td>
-            </tr>
-            <tr>
-              <td colSpan={9} className="px-1 text-left">
-                Комплектуемое оборудование
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Корпус металлический
-              </td>
-              <td>ЩМП-1</td>
-              <td>ЩМП-1</td>
-              <td>ЩМП-1</td>
-              <td>ЩМП-2</td>
-              <td>ЩМП-2</td>
-              <td>ЩМП-2</td>
-              <td>ЩМП-3</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 9А 220-230 В
-              </td>
-              <td>2</td>
-              <td>2</td>
-              <td>2</td>
-              <td>2</td>
-              <td>2</td>
-              <td>2</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 25А 220-230 В
-              </td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 40А 220-230 В
-              </td>
-              <td>1</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 50А 220-230 В
-              </td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>3</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 65А 220-230 В
-              </td>
-              <td>-</td>
-              <td>1</td>
-              <td>-</td>
-              <td>-</td>
-              <td>3</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель КМИ (КМН) 95А 220-230 В
-              </td>
-              <td>-</td>
-              <td>-</td>
-              <td>1</td>
-              <td>-</td>
-              <td>-</td>
-              <td>3</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Пускатель ПМ 12160150 160А 220-230 В
-              </td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Реле тепловое РТИ (РТН) 5.5 - 8А
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Реле тепловое РТИ (РТН) 9 - 13А
-              </td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Реле температурное ТРМ 11-01 (11-11)
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Реле ветровое с микрокнопкой КМ-1
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Арматура светосигнальная (красная)
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Арматура светосигнальная (зеленая)
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className="px-1 text-left">
-                Автоматический выключатель ВА 47-29 1Р 10А
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-              <td>1</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th
+                  colSpan={2}
+                  style={{ fontSize: "11pt" }}
+                  className="px-1 text-left uppercase"
+                >
+                  Модель шкафа управления
+                </th>
+                <th style={{ fontSize: "11pt" }}>ШУК-16</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-25</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-40</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-60</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-100</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-160</th>
+                <th style={{ fontSize: "11pt" }}>ШУК-250</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colSpan={9} className="px-1 text-left">
+                  Технические характеристики
+                </td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Напряжение питающей сети, В
+                </td>
+                <td colSpan={7}>380</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Частота питающей сети, Гц
+                </td>
+                <td colSpan={7}>50</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Напряжение цепи управления, В
+                </td>
+                <td colSpan={7}>220</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Мощность электродвигателя, кВт
+                </td>
+                <td>до 1.5</td>
+                <td>до 1.5</td>
+                <td>до 1.5</td>
+                <td>до 2.5</td>
+                <td>до 2.5</td>
+                <td>до 2.5</td>
+                <td>до 7.5</td>
+              </tr>
+              <tr>
+                <td rowSpan={3} className="w-70">
+                  Габаритные размеры, мм
+                </td>
+                <td className="px-1 text-left">L</td>
+                <td>220</td>
+                <td>220</td>
+                <td>220</td>
+                <td>220</td>
+                <td>220</td>
+                <td>220</td>
+                <td>220</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">B</td>
+                <td>310</td>
+                <td>310</td>
+                <td>310</td>
+                <td>400</td>
+                <td>400</td>
+                <td>400</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td className="px-1 text-left">H</td>
+                <td>395</td>
+                <td>395</td>
+                <td>395</td>
+                <td>500</td>
+                <td>500</td>
+                <td>500</td>
+                <td>650</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Масса, кг
+                </td>
+                <td>9</td>
+                <td>10</td>
+                <td>10</td>
+                <td>16</td>
+                <td>18</td>
+                <td>18</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td colSpan={9} className="px-1 text-left">
+                  Комплектуемое оборудование
+                </td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Корпус металлический
+                </td>
+                <td>ЩМП-1</td>
+                <td>ЩМП-1</td>
+                <td>ЩМП-1</td>
+                <td>ЩМП-2</td>
+                <td>ЩМП-2</td>
+                <td>ЩМП-2</td>
+                <td>ЩМП-3</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 9А 220-230 В
+                </td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 25А 220-230 В
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 40А 220-230 В
+                </td>
+                <td>1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 50А 220-230 В
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 65А 220-230 В
+                </td>
+                <td>-</td>
+                <td>1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>3</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель КМИ (КМН) 95А 220-230 В
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>3</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Пускатель ПМ 12160150 160А 220-230 В
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Реле тепловое РТИ (РТН) 5.5 - 8А
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Реле тепловое РТИ (РТН) 9 - 13А
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Реле температурное ТРМ 11-01 (11-11)
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Реле ветровое с микрокнопкой КМ-1
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Арматура светосигнальная (красная)
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Арматура светосигнальная (зеленая)
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td colSpan={2} className="px-1 text-left">
+                  Автоматический выключатель ВА 47-29 1Р 10А
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="mb-4">
