@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { useKeenSlider } from "keen-slider/react";
 
 import { Button } from "@/components/ui/button";
 
@@ -43,24 +41,13 @@ const slides = [
 ];
 
 export default function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      loop: true,
-      slideChanged(slider) {
-        setCurrentSlide(slider.track.details.rel);
-      },
-    },
-    [],
-  );
-
   return (
     <header className="relative">
-      <div ref={sliderRef} className="keen-slider">
+      <div>
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className="keen-slider__slide relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
+            className="relative flex h-126 cursor-grab items-center justify-center overflow-hidden"
           >
             <Image
               src={slide.img.url}
