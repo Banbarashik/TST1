@@ -209,7 +209,7 @@ export default function ElectroEquipmentPage({ product }) {
           )}
         </div>
         {/* chips */}
-        <div className="space-y-4">
+        <div className="mr-px space-y-4">
           <div className="flex flex-col gap-1">
             <ProductParagraph className="font-bold">
               Все типоразмеры {equipmentType[preciseCategory].pluGen}
