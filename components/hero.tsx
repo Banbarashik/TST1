@@ -94,14 +94,14 @@ export default function Hero() {
                   {slide.title.map((t) => (
                     <p
                       key={t}
-                      className={`font-bold text-shadow-lg/50 ${slide.titleClass}`}
+                      className={`font-bold select-none text-shadow-lg/50 ${slide.titleClass}`}
                     >
                       {t}
                     </p>
                   ))}
                 </div>
                 {slide.text && (
-                  <p className="text-lg font-bold drop-shadow text-shadow-md/30 md:text-[1.6rem]">
+                  <p className="text-lg font-bold drop-shadow select-none text-shadow-md/30 md:text-[1.6rem]">
                     <span className="absolute -top-10 right-20 -bottom-10 left-20 -z-10 bg-gray-700 opacity-50 blur-[60px]"></span>
                     {slide.text}
                   </p>
