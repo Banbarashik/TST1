@@ -106,7 +106,7 @@ export default function KaloriferyVodaPage() {
         <ProductLinks
           products={kpvs.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-6"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(100px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(120px,max-content))]"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВС
@@ -135,7 +135,7 @@ export default function KaloriferyVodaPage() {
         <ProductLinks
           products={kpvu.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-6"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(100px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(120px,max-content))]"
         />
         <ProductParagraph className="mb-3">
           Структура условного обозначения водяных приточных калориферов КПВУ
