@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+import { cn } from "@/lib/utils";
 
 /**
  * Отдельныsй компонент мегаменю: триггер + выпадающее содержимое.
@@ -20,21 +21,34 @@ interface MegaMenuDropdownProps {
   className?: string; // классы для контейнера пункта меню (обёртка)
 }
 
+const FADE_MS = 250 as const; // длительность анимации (под один источник правды)
+type MenuState = "closed" | "open" | "closing";
 const gapPx = 30;
 
 export default function MegaMenuDropdown({
   items,
   className,
 }: MegaMenuDropdownProps) {
-  const [open, setOpen] = React.useState(false);
+  const [menuState, setMenuState] = React.useState<MenuState>("closed");
+  const open = menuState === "open";
   const rootRef = React.useRef<HTMLDivElement>(null);
   const triggerRef = React.useRef<HTMLAnchorElement>(null);
+
+  // 2) Хэндлеры открытия/закрытия:
+  function openMenu() {
+    setMenuState("open");
+  }
+  function closeMenu() {
+    // сначала переводим в "closing", потом скрываем окончательно
+    setMenuState("closing");
+    window.setTimeout(() => setMenuState("closed"), FADE_MS);
+  }
 
   // Закрыть по Escape
   React.useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") {
-        setOpen(false);
+        closeMenu();
         triggerRef.current?.focus();
       }
     }
@@ -46,9 +60,9 @@ export default function MegaMenuDropdown({
     <div
       ref={rootRef}
       className={cn("relative", className)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseLeave={closeMenu}
       onBlur={(e) => {
-        if (!rootRef.current?.contains(e.relatedTarget as Node)) setOpen(false);
+        if (!rootRef.current?.contains(e.relatedTarget as Node)) closeMenu();
       }}
     >
       {/* Триггер */}
@@ -57,8 +71,8 @@ export default function MegaMenuDropdown({
         ref={triggerRef}
         aria-haspopup="true"
         aria-expanded={open}
-        onMouseEnter={() => setOpen(true)}
-        onFocus={() => setOpen(true)}
+        onMouseEnter={openMenu}
+        onFocus={openMenu}
         onClick={(e) => e.preventDefault()}
         className="btn-flip btn-flip-p w-min text-sm xl:text-base"
         data-back="Сертификаты"
@@ -80,12 +94,19 @@ export default function MegaMenuDropdown({
       {/* Контент мегаменю */}
       <div
         className={cn(
-          "pointer-events-auto absolute left-1/2 z-50 grid w-5xl -translate-x-1/2 grid-cols-3 border-t border-black/5 bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-opacity duration-400 ease-out",
-          "data-[state=closed]:invisible data-[state=closed]:opacity-0",
+          "pointer-events-auto absolute left-1/2 z-50 grid w-5xl -translate-x-1/2 grid-cols-3 border-t border-black/5 bg-white p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
+          // плавность
+          "transition-opacity duration-[250ms] ease-out",
+          // состояния:
+          // closed: полностью спрятан и недоступен
+          "data-[state=closed]:pointer-events-none data-[state=closed]:invisible data-[state=closed]:opacity-0",
+          // open: видим и кликабелен
           "data-[state=open]:visible data-[state=open]:opacity-100",
+          // closing: видим, но затухаем и игнорируем клики
+          "data-[state=closing]:pointer-events-none data-[state=closing]:visible data-[state=closing]:opacity-0",
         )}
         style={{ top: `calc(100% + ${gapPx}px)` }}
-        data-state={open ? "open" : "closed"}
+        data-state={menuState}
       >
         {items.map((p) => (
           <Link key={p.title} href={p.href} className="flex max-w-fit gap-4">
