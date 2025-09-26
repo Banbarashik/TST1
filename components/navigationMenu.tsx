@@ -13,19 +13,19 @@ import MegaMenuDropdown from "./megaMenuDropdown";
 
 const items = [
   {
-    title: "Тягодутьевые машины",
-    href: "/catalog/tyagodut",
-    img: "/img/tm.png",
+    title: "Калориферы",
+    href: "/",
+    img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
-    title: "Теплообменное оборудование",
-    href: "/catalog/heat-exchangers",
-    img: "/img/to.png",
+    title: "Отопительные агрегаты",
+    href: "/",
+    img: "/img/agregaty/ao2-v/agregat_ao2-3_ao2-5_v.png",
   },
   {
-    title: "Отопительное оборудование",
-    href: "/catalog/heating",
-    img: "/img/oo.png",
+    title: "Воздушнонагревательные установки",
+    href: "/",
+    img: "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-16_sfotc-60.png",
   },
 ];
 
@@ -191,12 +191,6 @@ export default function NavigationMenu({
   return (
     <div className="flex">
       <MegaMenuDropdown items={items} />
-      {/* <Link
-        href="/kalorifery-voda"
-        className="btn-flip btn-flip-p w-min text-sm xl:text-base"
-        data-back="Сертификаты"
-        data-front="Продукция"
-      /> */}
       <Link
         href="/kontakty-prajs"
         className="btn-flip btn-flip-p w-min text-sm xl:text-base"
