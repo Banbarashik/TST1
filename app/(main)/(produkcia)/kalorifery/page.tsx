@@ -73,7 +73,7 @@ const kaloriferyCategories = [
 
 export default function KaloriferyPage() {
   return (
-    <article className="flex flex-col gap-6 lg:overflow-x-auto">
+    <article className="flex flex-col space-y-6 lg:overflow-x-auto">
       <Heading lvl={1} text="Калориферы" />
 
       <section>
@@ -99,7 +99,7 @@ export default function KaloriferyPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section className="space-y-4">
         <Heading lvl={2} text="Конструкция калориферов" />
         <ProductParagraph>
           Конструктивно калориферы представляют собой модуль квадратного или
@@ -126,7 +126,7 @@ export default function KaloriferyPage() {
       </section>
 
       {/* Секция "Типы калориферов" с подсекциями */}
-      <section>
+      <section className="space-y-6">
         <Heading lvl={2} text="Типы калориферов" />
         <ProductParagraph>
           Калориферы каждой серийной группы классифицируют по номерам с
@@ -136,7 +136,11 @@ export default function KaloriferyPage() {
           количества рядов растет тепловая мощность воздухонагревателя и
           повышается аэродинамическое сопротивление.
         </ProductParagraph>
-        <CategoryCards categories={kaloriferyCategories[1]} />
+        <CategoryCards
+          categories={kaloriferyCategories[1]}
+          containerGap="xl:gap-2"
+          textSize="2xl:text-sm"
+        />
         <section>
           <Heading lvl={3} text="Приточные калориферы" />
           <ProductParagraph>
@@ -150,7 +154,7 @@ export default function KaloriferyPage() {
             задачи.
           </ProductParagraph>
         </section>
-        <section>
+        <section className="space-y-4">
           <Heading lvl={3} text="Стандартные калориферы" />
           <ProductParagraph>
             Водяные и паровые биметаллические калориферы серии КСк и КПСк
@@ -158,7 +162,11 @@ export default function KaloriferyPage() {
             состоит из 72 типоразмеров с производительностью по воздуху от двух
             до двадцати пяти кубических метров в час.
           </ProductParagraph>
-          <CategoryCards categories={kaloriferyCategories[2]} />
+          <CategoryCards
+            categories={kaloriferyCategories[2]}
+            containerGap="xl:gap-2"
+            textSize="2xl:text-sm"
+          />
         </section>
         <section>
           <Heading lvl={3} text="Калориферы для шахт и рудников" />
