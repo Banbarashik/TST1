@@ -23,7 +23,7 @@ interface MegaMenuDropdownProps {
 
 const FADE_MS = 250 as const; // длительность анимации (под один источник правды)
 type MenuState = "closed" | "open" | "closing";
-const gapPx = 30;
+const gapPx = 20;
 
 export default function MegaMenuDropdown({
   items,
@@ -109,7 +109,11 @@ export default function MegaMenuDropdown({
         data-state={menuState}
       >
         {items.map((p) => (
-          <Link key={p.title} href={p.href} className="flex max-w-fit gap-4">
+          <Link
+            key={p.title}
+            href={p.href}
+            className="hover:text-primary-dark flex max-w-fit gap-4"
+          >
             <Image src={p.img} alt={p.title} width={80} height={80} />
             <div className="mt-2 font-semibold">{p.title}</div>
           </Link>
