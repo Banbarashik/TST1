@@ -1,27 +1,26 @@
+import { cn } from "@/lib/utils";
+
 export default function Heading({
-  text,
   lvl,
-  ...props
+  text,
+  className = "",
 }: {
-  text: string;
   lvl: 1 | 2 | 3;
-} & React.ComponentProps<"h1" | "h2" | "h3">) {
+  text: string;
+  className?: string;
+}) {
   if (lvl === 1)
     return (
-      <h1
-        className={props.className + " text-xl font-bold uppercase sm:text-2xl"}
-      >
+      <h1 className={cn("text-xl font-bold uppercase sm:text-2xl", className)}>
         {text}
       </h1>
     );
   if (lvl === 2)
     return (
-      <h2 className={props.className + " mb-2 text-lg uppercase sm:text-xl"}>
+      <h2 className={cn("mb-2 text-lg uppercase sm:text-xl", className)}>
         {text}
       </h2>
     );
   if (lvl === 3)
-    return (
-      <h3 className={props.className + " mb-2 text-lg uppercase"}>{text}</h3>
-    );
+    return <h3 className={cn("mb-2 text-lg uppercase", className)}>{text}</h3>;
 }
