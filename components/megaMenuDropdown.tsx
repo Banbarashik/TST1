@@ -23,7 +23,7 @@ interface MegaMenuDropdownProps {
 
 const FADE_MS = 250 as const; // длительность анимации (под один источник правды)
 type MenuState = "closed" | "open" | "closing";
-const gapPx = 20;
+const gapPx = 19;
 
 export default function MegaMenuDropdown({
   items,

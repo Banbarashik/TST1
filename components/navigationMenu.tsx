@@ -14,7 +14,7 @@ import MegaMenuDropdown from "./megaMenuDropdown";
 const items = [
   {
     title: "Калориферы",
-    href: "/",
+    href: "/kalorifery",
     img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
   },
   {
@@ -23,7 +23,7 @@ const items = [
     img: "/img/agregaty/ao2-v/agregat_ao2-3_ao2-5_v.png",
   },
   {
-    title: "Воздушнонагревательные установки",
+    title: "Воздухонагревательные установки",
     href: "/",
     img: "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-16_sfotc-60.png",
   },
