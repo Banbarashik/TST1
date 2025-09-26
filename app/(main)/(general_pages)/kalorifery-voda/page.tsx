@@ -52,7 +52,10 @@ export default function KaloriferyVodaPage() {
           от 2000 до 25000 м<sup>3</sup>/час. Общая линейка калориферов КПВС и
           КПВУ насчитывает 48 номеров.
         </ProductParagraph>
-        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+        <div
+          id="anchor1"
+          className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0"
+        >
           <div className="relative aspect-16/10 w-full">
             <Image
               src="/img/general_pages/kalorifer_pritochnyi_vodianoi.png"
@@ -72,7 +75,7 @@ export default function KaloriferyVodaPage() {
         </div>
       </section>
 
-      <section>
+      <section id="anchor2">
         <Heading lvl={2} text="Расчет и подбор приточных водяных калориферов" />
         <ProductParagraph>
           Выбрав номер калорифера с приближенным для выполнения вашей задачи

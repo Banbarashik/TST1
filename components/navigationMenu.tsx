@@ -69,7 +69,10 @@ export default function NavigationMenu({
                     </AccordionTrigger>
                   </Link>
                   <AccordionContent>
-                    <Link href="/kalorifery-voda" className="block px-4 py-3">
+                    <Link
+                      href="/kalorifery-voda#anchor2"
+                      className="block px-4 py-3"
+                    >
                       Калькулятор подбора
                     </Link>
                     <Link href="/catalog/kpvs" className="block px-4 py-3">
@@ -198,7 +201,7 @@ export default function NavigationMenu({
         data-front="Контакты"
       />
       <Link
-        href="/kalorifery-voda"
+        href="/kalorifery-voda#anchor1"
         className="btn-flip w-min text-sm xl:text-base"
         data-back="Водяные калориферы"
         data-front="Калькулятор подбора"
