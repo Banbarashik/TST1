@@ -237,6 +237,7 @@ th {
 /* NAV MENU BUTTONS */
 
 .btn-flip {
+  display: block;
   opacity: 1;
   outline: 0;
   color: #fff;
@@ -318,7 +319,6 @@ th {
     padding-bottom: 12px;
   }
 }
-
 /* NAV MENU BUTTONS */
 
 .btn-3 {
