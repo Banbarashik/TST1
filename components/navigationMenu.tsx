@@ -9,6 +9,26 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
+import MegaMenuDropdown from "./megaMenuDropdown";
+
+const items = [
+  {
+    title: "Тягодутьевые машины",
+    href: "/catalog/tyagodut",
+    img: "/img/tm.png",
+  },
+  {
+    title: "Теплообменное оборудование",
+    href: "/catalog/heat-exchangers",
+    img: "/img/to.png",
+  },
+  {
+    title: "Отопительное оборудование",
+    href: "/catalog/heating",
+    img: "/img/oo.png",
+  },
+];
+
 export default function NavigationMenu({
   variant = "desktop",
 }: {
@@ -170,6 +190,7 @@ export default function NavigationMenu({
   // Desktop menu
   return (
     <div className="flex">
+      <MegaMenuDropdown items={items} />
       {/* <Link
         href="/kalorifery-voda"
         className="btn-flip btn-flip-p w-min text-sm xl:text-base"
