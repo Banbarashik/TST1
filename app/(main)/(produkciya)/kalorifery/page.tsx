@@ -73,7 +73,7 @@ const kaloriferyCategories = [
 
 export default function KaloriferyPage() {
   return (
-    <article className="flex flex-col space-y-6 lg:overflow-x-auto">
+    <article className="flex flex-col space-y-6">
       <Heading lvl={1} text="Калориферы" />
 
       <section>
