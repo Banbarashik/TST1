@@ -82,40 +82,88 @@ export default function ProdukciyaPage() {
         >
           <CarouselContent className="h-126">
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/1.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/1. kalorifery.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/2.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/2. kalorifery_blok.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/3.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/3. kalorifery_flantcy.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/4.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/4. agregaty_gruz.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/5.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/5. kalorifery_nestandart.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/6.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/6. kalorifery_blok.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/7.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/7. electrokalorifery_sbor.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/8.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/8. kalorifery_flantcy.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/9.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/9. ustanovki_gruz.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/10.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/10. kalorifery_sbor.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/11.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/11. kalorifery_nestandart.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
-              <Image src="/img/produkciya/gallery/12.png" alt="" fill />
+              <Image
+                src="/img/produkciya/gallery/12. kalorifery_blok.png"
+                alt=""
+                fill
+              />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
