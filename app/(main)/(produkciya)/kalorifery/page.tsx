@@ -17,12 +17,12 @@ const kaloriferyCategories = [
     {
       name: "Калорифер",
       url: "",
-      img: "/img/produkcia/kalorifery/kalorifer_kpvs_kpvu.png",
+      img: "/img/produkciya/kalorifery/kalorifer.png",
     },
     {
       name: "Калорифер водяной и паровой",
       url: "",
-      img: "/img/produkcia/kalorifery/kalorifer_kpvs_kpvu.png",
+      img: "/img/produkciya/kalorifery/kalorifery_vodianye_parovye.png",
     },
   ],
   [
@@ -139,7 +139,7 @@ export default function KaloriferyPage() {
         <CategoryCards
           categories={kaloriferyCategories[1]}
           containerGap="xl:gap-2"
-          cardClassName="2xl:text-sm xl:px-6"
+          cardClassName="2xl:text-sm xl:px-8"
         />
         <section>
           <Heading lvl={3} text="Приточные калориферы" />
@@ -165,7 +165,7 @@ export default function KaloriferyPage() {
           <CategoryCards
             categories={kaloriferyCategories[2]}
             containerGap="xl:gap-2"
-            cardClassName="2xl:text-sm xl:px-6"
+            cardClassName="2xl:text-sm xl:px-8"
           />
         </section>
         <section>

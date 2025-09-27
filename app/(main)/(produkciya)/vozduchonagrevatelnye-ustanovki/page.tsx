@@ -16,22 +16,22 @@ const ustanovkiCategories = [
   {
     name: "Калориферы СФО",
     url: "",
-    img: "/img/produkciya/kalorifery.png",
+    img: "/img/produkciya/ustanovki/kalorifer_sfo.png",
   },
   {
     name: "Установки СФОЦ",
     url: "",
-    img: "/img/produkciya/kalorifery.png",
+    img: "/img/produkciya/ustanovki/ustanovka_sfots.png",
   },
   {
     name: "Шкафы управления",
     url: "",
-    img: "/img/produkciya/kalorifery.png",
+    img: "/img/produkciya/ustanovki/shkaf_shuk.png",
   },
   {
     name: "Тэны оребренные",
     url: "",
-    img: "/img/produkciya/kalorifery.png",
+    img: "/img/produkciya/ustanovki/ten_tenr.png",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function KaloriferyPage() {
         <CategoryCards
           categories={ustanovkiCategories}
           containerGap="xl:gap-2"
-          textSize="2xl:text-sm"
+          cardClassName="2xl:text-sm xl:px-8"
         />
       </section>
 

@@ -120,7 +120,7 @@ export default function OtopitelnyeAgregatyPage() {
         <CategoryCards
           categories={agregatyCategories[1]}
           containerGap="xl:gap-2"
-          cardClassName="2xl:text-sm xl:px-6"
+          cardClassName="2xl:text-sm xl:px-8"
         />
         <section>
           <Heading lvl={3} text="Отопительные агрегаты АО2" />
