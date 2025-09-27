@@ -9,26 +9,6 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-import MegaMenuDropdown from "./megaMenuDropdown";
-
-const items = [
-  {
-    title: "Калориферы",
-    href: "/kalorifery",
-    img: "/img/kalorifery/ksk/kalorifer_ksk_2-1_2-5.png",
-  },
-  {
-    title: "Отопительные агрегаты",
-    href: "/",
-    img: "/img/agregaty/ao2-v/agregat_ao2-3_ao2-5_v.png",
-  },
-  {
-    title: "Воздухонагревательные установки",
-    href: "/",
-    img: "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-16_sfotc-60.png",
-  },
-];
-
 export default function NavigationMenu({
   variant = "desktop",
 }: {
@@ -193,7 +173,12 @@ export default function NavigationMenu({
   // Desktop menu
   return (
     <div className="flex">
-      <MegaMenuDropdown items={items} />
+      <Link
+        href="/produkciya"
+        className="btn-flip btn-flip-p w-min text-sm xl:text-base"
+        data-back="Сертификаты"
+        data-front="Продукция"
+      />
       <Link
         href="/kontakty-prajs"
         className="btn-flip btn-flip-p w-min text-sm xl:text-base"
