@@ -18,44 +18,44 @@ const kaloriferyCategories = [
     {
       name: "Калориферы КПВС КПВУ",
       url: "/kalorifery-voda",
-      img: "/img/produkcia/kalorifery/kalorifer_kpvs_kpvu.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kpvs_kpvu.png",
     },
     {
       name: "Калориферы КППС КППУ",
       url: "/kalorifery-par",
-      img: "/img/produkcia/kalorifery/kalorifer_kpps_kppu.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kpps_kppu.png",
     },
     {
       name: "Калориферы КСк",
       url: "/kalorifery-ksk",
-      img: "/img/produkcia/kalorifery/kalorifer_ksk.png",
+      img: "/img/produkciya/kalorifery/kalorifer_ksk.png",
     },
     {
       name: "Калориферы КПСк",
       url: "/kalorifery-kpsk",
-      img: "/img/produkcia/kalorifery/kalorifer_kpsk.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kpsk.png",
     },
   ],
   [
     {
       name: "Калориферы ТВВ",
       url: "/kalorifery-tvv",
-      img: "/img/produkcia/kalorifery/kalorifer_tvv.png",
+      img: "/img/produkciya/kalorifery/kalorifer_tvv.png",
     },
     {
       name: "Калориферы КП",
       url: "/kalorifery-kp",
-      img: "/img/produkcia/kalorifery/kalorifer_kp.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kp.png",
     },
     {
       name: "Калориферы КФБ М",
       url: "/kalorifery-kfb-a",
-      img: "/img/produkcia/kalorifery/kalorifer_kfb-m.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kfb-m.png",
     },
     {
       name: "Калориферы КФБ П",
       url: "/kalorifery-kfb",
-      img: "/img/produkcia/kalorifery/kalorifer_kfb-p.png",
+      img: "/img/produkciya/kalorifery/kalorifer_kfb-p.png",
     },
   ],
 ];
