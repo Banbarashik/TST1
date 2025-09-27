@@ -7,10 +7,12 @@ import { useProductSelection } from "@/context/ProductSelectionContext";
 import * as Dialog from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
+import { X } from "lucide-react";
+
 import ContactForm from "@/components/contactForm";
 import { Button } from "@/components/ui/button";
 
-export default function ContactFormTrigger() {
+export default function ContactFormTrigger({ hasCloseBtn = true }) {
   const [isMounted, setIsMounted] = useState(false);
   const { selected } = useProductSelection();
 
@@ -47,6 +49,16 @@ export default function ContactFormTrigger() {
             <Dialog.Title>Заявка</Dialog.Title>
           </VisuallyHidden>
           <ContactForm />
+          {hasCloseBtn && (
+            <Dialog.Close className="absolute top-1.5 right-4 bg-white">
+              <X
+                width={36}
+                height={36}
+                color="var(--color-primary)"
+                strokeWidth={3}
+              />
+            </Dialog.Close>
+          )}
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
