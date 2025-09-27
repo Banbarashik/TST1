@@ -63,7 +63,11 @@ export default function ProdukciyaPage() {
           четырехсот моделей, что предоставляет возможность решить задачи,
           связанные с быстрым и качественным обогревом объектов любой площади.
         </ProductParagraph>
-        <CategoryCards categories={produkciyaCategories} />
+        <CategoryCards
+          categories={produkciyaCategories}
+          containerGap="xl:gap-2"
+          textSize="2xl:text-sm"
+        />
         <ProductParagraph>
           На производственных площадях предприятия изготавливаются водяные и
           паровые воздушно-отопительные агрегаты с широким спектром
@@ -72,36 +76,36 @@ export default function ProdukciyaPage() {
           спроектирована и запущена в работу серия теплообменников и агрегатов
           для эксплуатации в условиях пониженных температур.
         </ProductParagraph>
-        <Carousel opts={{ loop: true }} className="relative w-full">
+        <Carousel opts={{ loop: true }} className="relative">
           <CarouselContent className="h-126">
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/1.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/2.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/3.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/4.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/5.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/6.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/7.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/8.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/9.png" alt="" fill />
             </CarouselItem>
-            <CarouselItem className="relative">
+            <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/10.png" alt="" fill />
             </CarouselItem>
           </CarouselContent>
