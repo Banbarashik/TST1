@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import ContactFormTrigger from "./contactFormTrigger";
 
 export default function NavigationMenu({
   variant = "desktop",
@@ -156,12 +157,12 @@ export default function NavigationMenu({
                 >
                   Прайс-лист Контакты
                 </Link>
-                <Link
-                  href="#"
-                  className="text-primary flex-1/2 py-4 text-center text-sm"
-                >
-                  Подать заявку
-                </Link>
+                <div className="flex flex-1/2 items-center justify-center">
+                  <ContactFormTrigger
+                    triggerBtnClassName="text-primary"
+                    amountClassName="absolute border border-primary text-primary top-0 right-0 translate-y-1/2 -translate-x-0.5 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
+                  />
+                </div>
               </div>
             </Accordion>
           </div>

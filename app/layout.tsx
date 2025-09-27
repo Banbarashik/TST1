@@ -63,7 +63,11 @@ export default function RootLayout({
             </div>
             <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6">
               <NavigationMenu />
-              <ContactFormTrigger />
+              <ContactFormTrigger
+                triggerBtnVariant="default"
+                triggerBtnClassName="h-12 cursor-pointer text-base font-bold xl:text-xl"
+                amountClassName="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold"
+              />
             </div>
           </nav>
           {/* Sticky trigger outside flex context */}
