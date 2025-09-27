@@ -76,7 +76,10 @@ export default function ProdukciyaPage() {
           спроектирована и запущена в работу серия теплообменников и агрегатов
           для эксплуатации в условиях пониженных температур.
         </ProductParagraph>
-        <Carousel opts={{ loop: true }} className="relative">
+        <Carousel
+          opts={{ loop: true }}
+          className="relative mx-6 border-2 border-[#ccc] shadow-[0px,1px,0,3px,#bdbdbd_2px,4px,6px,3px,#dbdbdb]"
+        >
           <CarouselContent className="h-126">
             <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/1.png" alt="" fill />
@@ -107,6 +110,12 @@ export default function ProdukciyaPage() {
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image src="/img/produkciya/gallery/10.png" alt="" fill />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image src="/img/produkciya/gallery/11.png" alt="" fill />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image src="/img/produkciya/gallery/12.png" alt="" fill />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
