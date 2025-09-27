@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import CategoryCards from "@/components/categoryCards";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Калориферы. Производство",
@@ -13,18 +14,6 @@ export const metadata: Metadata = {
 };
 
 const kaloriferyCategories = [
-  [
-    {
-      name: "Калорифер",
-      url: "",
-      img: "/img/produkciya/kalorifery/kalorifer.png",
-    },
-    {
-      name: "Калорифер водяной и паровой",
-      url: "",
-      img: "/img/produkciya/kalorifery/kalorifery_vodianye_parovye.png",
-    },
-  ],
   [
     {
       name: "Калориферы КПВС КПВУ",
@@ -110,7 +99,24 @@ export default function KaloriferyPage() {
           интенсивности теплоотдачи и повышения коррозионной стойкости поверх
           стальных трубок накатывается алюминиевое оребрение.
         </ProductParagraph>
-        <CategoryCards categories={kaloriferyCategories[0]} />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-10">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/kalorifery/kalorifer.png"
+              alt="Калорифер водяной - конструкция"
+              title="Калорифер водяной"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/kalorifery/kalorifery_vodianye_parovye.png"
+              alt="Калорифер паровой - конструкция"
+              title="Калорифер паровой"
+              fill
+            />
+          </div>
+        </div>
       </section>
 
       <section>
@@ -137,7 +143,7 @@ export default function KaloriferyPage() {
           повышается аэродинамическое сопротивление.
         </ProductParagraph>
         <CategoryCards
-          categories={kaloriferyCategories[1]}
+          categories={kaloriferyCategories[0]}
           containerGap="xl:gap-2"
           cardClassName="2xl:text-sm xl:px-8"
         />
@@ -163,7 +169,7 @@ export default function KaloriferyPage() {
             до двадцати пяти кубических метров в час.
           </ProductParagraph>
           <CategoryCards
-            categories={kaloriferyCategories[2]}
+            categories={kaloriferyCategories[1]}
             containerGap="xl:gap-2"
             cardClassName="2xl:text-sm xl:px-8"
           />
