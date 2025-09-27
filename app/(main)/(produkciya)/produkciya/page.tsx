@@ -127,7 +127,11 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/" className="">
+            <Link
+              href="/documents/Sertificat_kalorifery.pdf"
+              target="_blank"
+              className=""
+            >
               Калориферы
             </Link>
           </Button>
@@ -135,7 +139,11 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/" className="">
+            <Link
+              href="/documents/Sertificat_agregaty.pdf"
+              target="_blank"
+              className=""
+            >
               Отопительные агрегаты
             </Link>
           </Button>
@@ -143,7 +151,11 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/" className="">
+            <Link
+              href="/documents/Sertificat_ustanovki.pdf"
+              target="_blank"
+              className=""
+            >
               Воздухонагревательные установки
             </Link>
           </Button>
