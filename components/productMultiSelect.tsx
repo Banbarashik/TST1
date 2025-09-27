@@ -174,7 +174,7 @@ export function ProductMultiSelect({
 
           return (
             <div key={selProdData.id} className="flex items-center gap-4">
-              <div className="bg-accent flex w-3/4 items-center gap-5 rounded px-3 py-1.5 text-sm">
+              <div className="bg-accent flex w-full items-center gap-5 rounded px-3 py-1.5 text-sm lg:w-3/4">
                 {selProdData.name}
                 <NumberInput
                   className={{

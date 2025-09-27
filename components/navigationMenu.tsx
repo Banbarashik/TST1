@@ -159,6 +159,7 @@ export default function NavigationMenu({
                 </Link>
                 <div className="flex flex-1/2 items-center justify-center">
                   <ContactFormTrigger
+                    hasCloseBtn
                     triggerBtnClassName="text-primary"
                     amountClassName="absolute border border-primary text-primary top-0 right-0 translate-y-1/2 -translate-x-0.5 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
                   />
