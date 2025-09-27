@@ -75,7 +75,8 @@ export default function KaloriferyVodaPage() {
         </div>
       </section>
 
-      <section id="anchor2">
+      <section>
+        <span id="anchor2" className="invisible relative -top-13" />
         <Heading lvl={2} text="Расчет и подбор приточных водяных калориферов" />
         <ProductParagraph>
           Выбрав номер калорифера с приближенным для выполнения вашей задачи

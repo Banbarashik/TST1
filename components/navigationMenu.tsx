@@ -80,7 +80,7 @@ export default function NavigationMenu({
                   </Link>
                   <AccordionContent>
                     <Link
-                      href="/kalorifery-par"
+                      href="/kalorifery-par#anchor2"
                       className="block px-4 py-3 hover:bg-gray-100"
                     >
                       Калькулятор подбора
@@ -192,7 +192,7 @@ export default function NavigationMenu({
         data-front="Калькулятор подбора"
       />
       <Link
-        href="/kalorifery-par"
+        href="/kalorifery-par#anchor1"
         className="btn-flip w-min text-sm xl:text-base"
         data-back="Паровые калориферы"
         data-front="Калькулятор подбора"
