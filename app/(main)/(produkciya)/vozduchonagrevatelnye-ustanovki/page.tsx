@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import CategoryCards from "@/components/categoryCards";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Воздухонагревательные электрические установки",
@@ -52,7 +53,7 @@ export default function KaloriferyPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section className="space-y-4">
         <Heading lvl={2} text="Конструкция воздухонагревательных установок" />
         <ProductParagraph>
           Конструктивно воздухонагревательные электрические установки
@@ -64,6 +65,24 @@ export default function KaloriferyPage() {
           узлов в единую установку. Шкаф управления калорифером с пускозащитной
           аппаратурой комплектуется дополнительно.
         </ProductParagraph>
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-10">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/ustanovki/vozduchonagrevatelnaya_ustanovka.png"
+              alt="Воздухонагревательные установки"
+              title="Воздухонагревательная установка"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/ustanovki/electro_ustanovka.png"
+              alt="Электрические воздухонагревательные установки"
+              title="Электрическая воздухонагревательная установка"
+              fill
+            />
+          </div>
+        </div>
       </section>
 
       <section>
