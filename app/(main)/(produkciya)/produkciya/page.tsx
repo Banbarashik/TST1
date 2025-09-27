@@ -26,18 +26,18 @@ export const metadata: Metadata = {
 const produkciyaCategories = [
   {
     name: "Калориферы",
-    url: "",
+    url: "/kalorifery",
     img: "/img/produkciya/kalorifery.png",
   },
   {
     name: "Отопительные агрегаты",
-    url: "",
-    img: "/img/produkciya/kalorifery.png",
+    url: "/otopitel'nye-agregaty",
+    img: "/img/produkciya/otopitelnye_agregaty.png",
   },
   {
     name: "Воздухонагревательные установки",
-    url: "",
-    img: "/img/produkciya/kalorifery.png",
+    url: "/vozduchonagrevatelnye-ustanovki",
+    img: "/img/produkciya/vozduchonagrevatelnye_ustanovki.png",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function ProdukciyaPage() {
         <CategoryCards
           categories={produkciyaCategories}
           containerGap="xl:gap-2"
-          textSize="2xl:text-sm"
+          cardClassName="2xl:text-sm xl:px-6"
         />
         <ProductParagraph>
           На производственных площадях предприятия изготавливаются водяные и
@@ -127,7 +127,7 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/kalorifery" className="">
+            <Link href="/" className="">
               Калориферы
             </Link>
           </Button>
@@ -135,7 +135,7 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/kalorifery" className="">
+            <Link href="/" className="">
               Отопительные агрегаты
             </Link>
           </Button>
@@ -143,7 +143,7 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link href="/kalorifery" className="">
+            <Link href="/" className="">
               Воздухонагревательные установки
             </Link>
           </Button>
