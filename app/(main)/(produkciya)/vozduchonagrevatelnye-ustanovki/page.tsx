@@ -15,22 +15,22 @@ export const metadata: Metadata = {
 const ustanovkiCategories = [
   {
     name: "Калориферы СФО",
-    url: "",
+    url: "/elektronagrevateli",
     img: "/img/produkciya/ustanovki/kalorifer_sfo.png",
   },
   {
     name: "Установки СФОЦ",
-    url: "",
+    url: "/teploventilyatory",
     img: "/img/produkciya/ustanovki/ustanovka_sfots.png",
   },
   {
     name: "Шкафы управления",
-    url: "",
+    url: "/shkafy-upravleniya",
     img: "/img/produkciya/ustanovki/shkaf_shuk.png",
   },
   {
     name: "Тэны оребренные",
-    url: "",
+    url: "/teny/teny-orebrenny'e",
     img: "/img/produkciya/ustanovki/ten_tenr.png",
   },
 ];

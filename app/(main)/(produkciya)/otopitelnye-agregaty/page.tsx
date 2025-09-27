@@ -28,27 +28,27 @@ const agregatyCategories = [
   [
     {
       name: "Агрегаты АО 2 В",
-      url: "/",
+      url: "/ao2-ksk-kpsk",
       img: "/img/produkciya/agregaty/agregat_ao2_v.png",
     },
     {
       name: "Агрегаты АО 2 П",
-      url: "/",
+      url: "/ao2-kpsk-ksk",
       img: "/img/produkciya/agregaty/agregat_ao2_p.png",
     },
     {
       name: "Агрегаты АВО ХЛ",
-      url: "/",
+      url: "/avo-tvv-kp",
       img: "/img/produkciya/agregaty/agregat_avo_hl.png",
     },
     {
       name: "Агрегаты СТД-300 В",
-      url: "/",
+      url: "/std300-ksk-kpsk",
       img: "/img/produkciya/agregaty/agregat_std-300_v.png",
     },
     {
       name: "Агрегаты СТД-300 П",
-      url: "/",
+      url: "/std300-tvv-kp",
       img: "/img/produkciya/agregaty/agregat_std-300_p.png",
     },
   ],

@@ -28,44 +28,44 @@ const kaloriferyCategories = [
   [
     {
       name: "Калориферы КПВС КПВУ",
-      url: "",
+      url: "/kalorifery-voda",
       img: "/img/produkcia/kalorifery/kalorifer_kpvs_kpvu.png",
     },
     {
       name: "Калориферы КППС КППУ",
-      url: "",
+      url: "/kalorifery-par",
       img: "/img/produkcia/kalorifery/kalorifer_kpps_kppu.png",
     },
     {
       name: "Калориферы КСк",
-      url: "",
+      url: "/kalorifery-ksk",
       img: "/img/produkcia/kalorifery/kalorifer_ksk.png",
     },
     {
       name: "Калориферы КПСк",
-      url: "",
+      url: "/kalorifery-kpsk",
       img: "/img/produkcia/kalorifery/kalorifer_kpsk.png",
     },
   ],
   [
     {
       name: "Калориферы ТВВ",
-      url: "",
+      url: "/kalorifery-tvv",
       img: "/img/produkcia/kalorifery/kalorifer_tvv.png",
     },
     {
       name: "Калориферы КП",
-      url: "",
+      url: "/kalorifery-kp",
       img: "/img/produkcia/kalorifery/kalorifer_kp.png",
     },
     {
       name: "Калориферы КФБ М",
-      url: "",
+      url: "/kalorifery-kfb-a",
       img: "/img/produkcia/kalorifery/kalorifer_kfb-m.png",
     },
     {
       name: "Калориферы КФБ П",
-      url: "",
+      url: "/kalorifery-kfb",
       img: "/img/produkcia/kalorifery/kalorifer_kfb-p.png",
     },
   ],
