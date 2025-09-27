@@ -31,7 +31,7 @@ const produkciyaCategories = [
   },
   {
     name: "Отопительные агрегаты",
-    url: "/otopitel'nye-agregaty",
+    url: "/otopitelnye-agregaty",
     img: "/img/produkciya/otopitelnye_agregaty.png",
   },
   {
