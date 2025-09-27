@@ -341,7 +341,7 @@ export default function ContactForm({
 
   // 8. Render the form
   return (
-    <ScrollArea className="h-full max-w-xl rounded-md sm:h-187">
+    <ScrollArea className="h-dvh min-w-md rounded-md lg:h-187 lg:max-w-xl">
       <Card>
         <CardContent>
           <Form {...form}>
