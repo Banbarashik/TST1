@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import CategoryCards from "@/components/categoryCards";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Отопительные агрегаты. Производство",
@@ -13,45 +14,31 @@ export const metadata: Metadata = {
 };
 
 const agregatyCategories = [
-  [
-    {
-      name: "Воздушно-отопительный агрегат",
-      url: "/",
-      img: "/img/produkciya/agregaty/agregat_ao2_p.png",
-    },
-    {
-      name: "Отопительный агрегат водяной и паровой",
-      url: "/",
-      img: "/img/produkciya/agregaty/agregat_ao2_p.png",
-    },
-  ],
-  [
-    {
-      name: "Агрегаты АО 2 В",
-      url: "/ao2-ksk-kpsk",
-      img: "/img/produkciya/agregaty/agregat_ao2_v.png",
-    },
-    {
-      name: "Агрегаты АО 2 П",
-      url: "/ao2-kpsk-ksk",
-      img: "/img/produkciya/agregaty/agregat_ao2_p.png",
-    },
-    {
-      name: "Агрегаты АВО ХЛ",
-      url: "/avo-tvv-kp",
-      img: "/img/produkciya/agregaty/agregat_avo_hl.png",
-    },
-    {
-      name: "Агрегаты СТД-300 В",
-      url: "/std300-ksk-kpsk",
-      img: "/img/produkciya/agregaty/agregat_std-300_v.png",
-    },
-    {
-      name: "Агрегаты СТД-300 П",
-      url: "/std300-tvv-kp",
-      img: "/img/produkciya/agregaty/agregat_std-300_p.png",
-    },
-  ],
+  {
+    name: "Агрегаты АО 2 В",
+    url: "/ao2-ksk-kpsk",
+    img: "/img/produkciya/agregaty/agregat_ao2_v.png",
+  },
+  {
+    name: "Агрегаты АО 2 П",
+    url: "/ao2-kpsk-ksk",
+    img: "/img/produkciya/agregaty/agregat_ao2_p.png",
+  },
+  {
+    name: "Агрегаты АВО ХЛ",
+    url: "/avo-tvv-kp",
+    img: "/img/produkciya/agregaty/agregat_avo_hl.png",
+  },
+  {
+    name: "Агрегаты СТД-300 В",
+    url: "/std300-ksk-kpsk",
+    img: "/img/produkciya/agregaty/agregat_std-300_v.png",
+  },
+  {
+    name: "Агрегаты СТД-300 П",
+    url: "/std300-tvv-kp",
+    img: "/img/produkciya/agregaty/agregat_std-300_p.png",
+  },
 ];
 
 export default function OtopitelnyeAgregatyPage() {
@@ -91,7 +78,24 @@ export default function OtopitelnyeAgregatyPage() {
           воздушного потока крепятся жалюзи. Несущая рама служит основанием для
           сборки готовых узлов в единый агрегат.
         </ProductParagraph>
-        <CategoryCards categories={agregatyCategories[0]} />
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-10">
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/agregaty/agregat.png"
+              alt="Водяной отопительный агрегат - конструкция"
+              title="Водяной отопительный агрегат"
+              fill
+            />
+          </div>
+          <div className="relative aspect-24/17 w-full">
+            <Image
+              src="/img/produkciya/agregaty/agregaty_vodianye_parovye.png"
+              alt="Паровой отопительный агрегат - конструкция"
+              title="Паровой отопительный агрегат"
+              fill
+            />
+          </div>
+        </div>
       </section>
 
       <section>
@@ -118,7 +122,7 @@ export default function OtopitelnyeAgregatyPage() {
           на выходе у четырехрядных установок выше.
         </ProductParagraph>
         <CategoryCards
-          categories={agregatyCategories[1]}
+          categories={agregatyCategories}
           containerGap="xl:gap-2"
           cardClassName="2xl:text-sm xl:px-3"
         />
