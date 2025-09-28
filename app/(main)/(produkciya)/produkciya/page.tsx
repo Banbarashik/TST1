@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
-
-import CategoryCards from "@/components/categoryCards";
-import Heading from "@/components/general_pages/heading";
-import ProductParagraph from "@/components/catalog/productParagraph";
 
 import {
   Carousel,
@@ -13,7 +10,9 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import CategoryCards from "@/components/categoryCards";
+import Heading from "@/components/general_pages/heading";
+import ProductParagraph from "@/components/catalog/productParagraph";
 
 export const metadata: Metadata = {
   title: "Производство промышленного воздушно-отопительного оборудования",
@@ -65,7 +64,6 @@ export default function ProdukciyaPage() {
         </ProductParagraph>
         <CategoryCards
           categories={produkciyaCategories}
-          containerGap="xl:gap-2"
           cardClassName="2xl:text-sm xl:px-6"
         />
         <ProductParagraph>
@@ -78,9 +76,9 @@ export default function ProdukciyaPage() {
         </ProductParagraph>
         <Carousel
           opts={{ loop: true }}
-          className="relative mx-6 border-2 border-[#ccc] shadow-[0px,1px,0,3px,#bdbdbd_2px,4px,6px,3px,#dbdbdb]"
+          className="relative mx-10 border-2 border-[#ccc] shadow-[0px,1px,0,3px,#bdbdbd_2px,4px,6px,3px,#dbdbdb] 2xl:mx-6"
         >
-          <CarouselContent className="h-126">
+          <CarouselContent className="aspect-2/1">
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/1. kalorifery.png"
