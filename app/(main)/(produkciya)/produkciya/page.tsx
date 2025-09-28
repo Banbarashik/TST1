@@ -177,16 +177,13 @@ export default function ProdukciyaPage() {
 
       <section>
         <Heading lvl={2} text="Сертификаты" className="mb-4" />
-        <div className="mx-auto flex w-full flex-col gap-6 sm:max-w-fit xl:max-w-none xl:flex-row">
+        {/* TODO create an array the links will be build off  */}
+        <div className="mx-auto flex w-full flex-col items-center gap-6 sm:max-w-fit xl:max-w-none xl:flex-row">
           <Button
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link
-              href="/documents/Sertificat_kalorifery.pdf"
-              target="_blank"
-              className=""
-            >
+            <Link href="/documents/Sertificat_kalorifery.pdf" target="_blank">
               Калориферы
             </Link>
           </Button>
@@ -194,11 +191,7 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link
-              href="/documents/Sertificat_agregaty.pdf"
-              target="_blank"
-              className=""
-            >
+            <Link href="/documents/Sertificat_agregaty.pdf" target="_blank">
               Отопительные агрегаты
             </Link>
           </Button>
@@ -206,11 +199,7 @@ export default function ProdukciyaPage() {
             asChild
             className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
           >
-            <Link
-              href="/documents/Sertificat_ustanovki.pdf"
-              target="_blank"
-              className=""
-            >
+            <Link href="/documents/Sertificat_ustanovki.pdf" target="_blank">
               Воздухонагревательные установки
             </Link>
           </Button>
