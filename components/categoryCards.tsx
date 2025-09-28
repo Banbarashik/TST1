@@ -5,31 +5,23 @@ import { cn } from "@/lib/utils";
 
 export default function CategoryCards({
   categories,
-  containerGap = "",
+  containerGap = "gap-x-2 gap-y-4",
   cardClassName = "",
 }) {
   return (
     <ul
-      className={cn(
-        "flex flex-col gap-2 sm:flex-row sm:gap-2 md:gap-4 lg:gap-10 xl:gap-12",
-        containerGap,
-      )}
+      className={`grid sm:grid-cols-[repeat(auto-fit,minmax(0,max-content))] ${containerGap}`}
     >
       {categories.map((cat) => (
-        <CategoryCard
-          key={cat.name}
-          category={cat}
-          siblingsAmount={categories.length}
-          className={cardClassName}
-        />
+        <CategoryCard key={cat.name} category={cat} className={cardClassName} />
       ))}
     </ul>
   );
 }
 
-function CategoryCard({ category, siblingsAmount, className }) {
+function CategoryCard({ category, className }) {
   return (
-    <li className={`sm:w-full ${siblingsAmount === 2 ? "w-full" : "w-[48%]"}`}>
+    <li>
       <Link
         href={category.url}
         className={cn(
