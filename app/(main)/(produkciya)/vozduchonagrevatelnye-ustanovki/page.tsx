@@ -111,7 +111,6 @@ export default function KaloriferyPage() {
         </ProductParagraph>
         <CategoryCards
           categories={ustanovkiCategories}
-          containerGap="xl:gap-2"
           cardClassName="2xl:text-sm xl:px-3"
         />
       </section>

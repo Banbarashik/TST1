@@ -123,7 +123,6 @@ export default function OtopitelnyeAgregatyPage() {
         </ProductParagraph>
         <CategoryCards
           categories={agregatyCategories}
-          containerGap="xl:gap-2"
           cardClassName="2xl:text-sm xl:px-3"
         />
         <section>
