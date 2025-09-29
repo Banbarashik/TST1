@@ -111,7 +111,7 @@ export function ProductMultiSelect({
           <Button
             variant="unstyled"
             type="button"
-            className="hover:border-ring hover:ring-ring/50 justify-start border hover:ring-[3px] lg:max-w-131"
+            className="hover:border-ring hover:ring-ring/50 max-w-80 justify-start border hover:ring-[3px] lg:max-w-131"
           >
             <span className="truncate">
               {selectedProductData.length === 0
@@ -173,7 +173,10 @@ export function ProductMultiSelect({
           const total = price * amount;
 
           return (
-            <div key={selProdData.id} className="flex items-center gap-4">
+            <div
+              key={selProdData.id}
+              className="flex flex-col items-end gap-2 sm:flex-row sm:items-center sm:gap-4"
+            >
               <div className="bg-accent flex w-full items-center gap-5 rounded px-3 py-1.5 text-sm lg:w-3/4">
                 {selProdData.name}
                 <NumberInput
