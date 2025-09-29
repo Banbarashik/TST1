@@ -111,7 +111,7 @@ export function ProductMultiSelect({
           <Button
             variant="unstyled"
             type="button"
-            className="hover:border-ring hover:ring-ring/50 flex w-full max-w-131 justify-start border hover:ring-[3px]"
+            className="hover:border-ring hover:ring-ring/50 justify-start border hover:ring-[3px] lg:max-w-131"
           >
             <span className="truncate">
               {selectedProductData.length === 0
