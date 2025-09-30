@@ -166,18 +166,32 @@ export default function NavigationMenu({
                 </AccordionItem>
               </div>
 
-              <div className="flex">
-                <Link
-                  href="/kontakty-prajs"
-                  className="flex-1/2 py-4 text-center text-sm"
+              <div className="flex items-start">
+                <AccordionItem
+                  value="produkciya-price"
+                  className="flex-1/2 border-0"
                 >
-                  Прайс-лист Контакты
-                </Link>
-                <div className="flex flex-1/2 items-center justify-center">
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Продукция Прайс-лист
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Link href="/produkciya" className="block px-4 py-3">
+                      Продукция
+                    </Link>
+                    <Link href="/kontakty-prajs" className="block px-4 py-3">
+                      Контакты Прайс-лист
+                    </Link>
+                  </AccordionContent>
+                  {/* <Link
+                    href="/kontakty-prajs"
+                    className="flex-1/2 py-4 text-center text-sm"
+                  ></Link> */}
+                </AccordionItem>
+                <div className="flex flex-1/2 py-4">
                   <ContactFormTrigger
                     hasCloseBtn
-                    triggerBtnClassName="text-primary"
-                    amountClassName="absolute border border-primary text-primary top-0 right-0 translate-y-1/2 -translate-x-0.5 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
+                    triggerBtnClassName="text-primary w-full h-full"
+                    amountClassName="absolute border border-primary text-primary right-0 -translate-x-6 -translate-y-2 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
                   />
                 </div>
               </div>
