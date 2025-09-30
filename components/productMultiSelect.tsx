@@ -23,6 +23,7 @@ import {
   CommandItem,
   CommandEmpty,
   CommandGroup,
+  CommandDialog,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
@@ -125,7 +126,10 @@ export function ProductMultiSelect({
         <PopoverContent className="p-0" data-menu-ignore-close="true">
           <Command>
             <CommandInput placeholder="Поиск товара..." />
-            <CommandList onWheel={(e) => e.stopPropagation()}>
+            <CommandList
+              onWheel={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+            >
               <CommandEmpty>Товар не найден</CommandEmpty>
               {mainCategories.map((category) =>
                 productDataByMainCategory[category.slug].length > 0 ? (
