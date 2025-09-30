@@ -19,16 +19,32 @@ export default function NavigationMenu({
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu on outside click
+  // navigationMenu.tsx
+  // ...
   useEffect(() => {
     if (!open) return;
-    function handleClick(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+
+    const onDocPointerDown = (event: PointerEvent) => {
+      const path = (event.composedPath && event.composedPath()) || [];
+
+      const isInsideMenu = menuRef.current
+        ? path.includes(menuRef.current)
+        : false;
+
+      // Любой узел с data-menu-ignore-close="true" — безопасная зона
+      const isSafeZone = path.some(
+        (el) => (el as HTMLElement)?.dataset?.menuIgnoreClose === "true",
+      );
+
+      if (!isInsideMenu && !isSafeZone) {
         setOpen(false);
       }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    };
+
+    document.addEventListener("pointerdown", onDocPointerDown);
+    return () => document.removeEventListener("pointerdown", onDocPointerDown);
   }, [open]);
+  // ...
 
   if (variant === "mobile") {
     return (

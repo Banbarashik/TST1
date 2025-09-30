@@ -106,7 +106,7 @@ export function ProductMultiSelect({
 
   return (
     <div>
-      <Popover>
+      <Popover data-menu-ignore-close="true">
         <PopoverTrigger asChild>
           <Button
             variant="unstyled"
@@ -122,7 +122,7 @@ export function ProductMultiSelect({
             </span>
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0">
+        <PopoverContent className="p-0" data-menu-ignore-close="true">
           <Command>
             <CommandInput placeholder="Поиск товара..." />
             <CommandList onWheel={(e) => e.stopPropagation()}>
