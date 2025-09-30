@@ -539,7 +539,7 @@ export default function ContactForm({
             </form>
           </Form>
         </CardContent>
-        <CardFooter className="flex flex-col justify-between gap-4 sm:gap-0 lg:flex-row">
+        <CardFooter className="flex flex-col justify-between gap-4 sm:flex-row sm:gap-0">
           <Button
             type="submit"
             form={formId}
