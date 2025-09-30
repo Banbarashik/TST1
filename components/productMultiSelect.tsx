@@ -23,6 +23,7 @@ import {
   CommandItem,
   CommandEmpty,
   CommandGroup,
+  CommandDialog,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { NumberInput } from "@/components/ui/input";
@@ -106,12 +107,12 @@ export function ProductMultiSelect({
 
   return (
     <div>
-      <Popover>
+      <Popover data-menu-ignore-close="true">
         <PopoverTrigger asChild>
           <Button
             variant="unstyled"
             type="button"
-            className="hover:border-ring hover:ring-ring/50 flex w-full max-w-131 justify-start border hover:ring-[3px]"
+            className="hover:border-ring hover:ring-ring/50 w-full max-w-80 justify-start border hover:ring-[3px] lg:max-w-131"
           >
             <span className="truncate">
               {selectedProductData.length === 0
@@ -122,10 +123,13 @@ export function ProductMultiSelect({
             </span>
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0">
+        <PopoverContent className="p-0" data-menu-ignore-close="true">
           <Command>
             <CommandInput placeholder="Поиск товара..." />
-            <CommandList onWheel={(e) => e.stopPropagation()}>
+            <CommandList
+              onWheel={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+            >
               <CommandEmpty>Товар не найден</CommandEmpty>
               {mainCategories.map((category) =>
                 productDataByMainCategory[category.slug].length > 0 ? (
@@ -173,8 +177,11 @@ export function ProductMultiSelect({
           const total = price * amount;
 
           return (
-            <div key={selProdData.id} className="flex items-center gap-4">
-              <div className="bg-accent flex w-3/4 items-center gap-5 rounded px-3 py-1.5 text-sm">
+            <div
+              key={selProdData.id}
+              className="flex flex-col items-end gap-2 sm:flex-row sm:items-center sm:gap-4"
+            >
+              <div className="bg-accent flex w-full items-center gap-5 rounded px-3 py-1.5 text-sm lg:w-3/4">
                 {selProdData.name}
                 <NumberInput
                   className={{

@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import ContactFormTrigger from "./contactFormTrigger";
 
 export default function NavigationMenu({
   variant = "desktop",
@@ -18,16 +19,32 @@ export default function NavigationMenu({
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu on outside click
+  // navigationMenu.tsx
+  // ...
   useEffect(() => {
     if (!open) return;
-    function handleClick(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+
+    const onDocPointerDown = (event: PointerEvent) => {
+      const path = (event.composedPath && event.composedPath()) || [];
+
+      const isInsideMenu = menuRef.current
+        ? path.includes(menuRef.current)
+        : false;
+
+      // Любой узел с data-menu-ignore-close="true" — безопасная зона
+      const isSafeZone = path.some(
+        (el) => (el as HTMLElement)?.dataset?.menuIgnoreClose === "true",
+      );
+
+      if (!isInsideMenu && !isSafeZone) {
         setOpen(false);
       }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    };
+
+    document.addEventListener("pointerdown", onDocPointerDown);
+    return () => document.removeEventListener("pointerdown", onDocPointerDown);
   }, [open]);
+  // ...
 
   if (variant === "mobile") {
     return (
@@ -156,12 +173,13 @@ export default function NavigationMenu({
                 >
                   Прайс-лист Контакты
                 </Link>
-                <Link
-                  href="#"
-                  className="text-primary flex-1/2 py-4 text-center text-sm"
-                >
-                  Подать заявку
-                </Link>
+                <div className="flex flex-1/2 items-center justify-center">
+                  <ContactFormTrigger
+                    hasCloseBtn
+                    triggerBtnClassName="text-primary"
+                    amountClassName="absolute border border-primary text-primary top-0 right-0 translate-y-1/2 -translate-x-0.5 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
+                  />
+                </div>
               </div>
             </Accordion>
           </div>

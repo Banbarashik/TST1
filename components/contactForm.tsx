@@ -341,7 +341,7 @@ export default function ContactForm({
 
   // 8. Render the form
   return (
-    <ScrollArea className="h-full max-w-xl rounded-md sm:h-187">
+    <ScrollArea className="h-dvh max-h-187 max-w-screen rounded-md lg:max-w-xl">
       <Card>
         <CardContent>
           <Form {...form}>
@@ -539,7 +539,7 @@ export default function ContactForm({
             </form>
           </Form>
         </CardContent>
-        <CardFooter className="flex justify-between">
+        <CardFooter className="flex flex-col justify-between gap-4 sm:gap-0 lg:flex-row">
           <Button
             type="submit"
             form={formId}
