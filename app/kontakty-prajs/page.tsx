@@ -76,14 +76,14 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="max-w-8xl mx-auto w-full space-y-6 px-12 py-14">
+    <div className="mx-auto w-full max-w-[84rem] space-y-6 px-3 py-14 2xl:px-0">
       <div className="space-y-5">
         <Heading
           lvl={1}
           text="Цена/прайс-лист воздушно-отопительного оборудования"
         />
 
-        <ProductParagraph className="mb-2">
+        <ProductParagraph className="mb-8">
           ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
           выпуске воздушно-отопительного оборудования и работающее на рынке
           климатической продукции с 2001 года. Основное направление деятельности
@@ -96,10 +96,10 @@ export default function ContactsAndPricesPage() {
           промышленности, фабриками и хозяйствами агропромышленного комплекса.
         </ProductParagraph>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <Link
             href="/documents/Price_list_zao_tst_2025.pdf"
-            className="button self-end"
+            className="button"
             id="button-7"
             target="_blank"
           >
