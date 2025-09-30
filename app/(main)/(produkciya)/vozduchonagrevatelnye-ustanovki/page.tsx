@@ -31,7 +31,7 @@ const ustanovkiCategories = [
   },
   {
     name: "Тэны оребренные",
-    url: "/teny/teny-orebrenny'e",
+    url: "/teny-orebrenny'e",
     img: "/img/produkciya/ustanovki/ten_tenr.png",
   },
 ];
