@@ -76,7 +76,7 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="mx-auto w-full max-w-[84rem] space-y-6 px-3 py-14 2xl:px-0">
+    <div className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-3 py-14 lg:px-6 xl:px-10">
       <div className="space-y-5">
         <Heading
           lvl={1}
@@ -96,10 +96,10 @@ export default function ContactsAndPricesPage() {
           промышленности, фабриками и хозяйствами агропромышленного комплекса.
         </ProductParagraph>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8">
           <Link
             href="/documents/Price_list_zao_tst_2025.pdf"
-            className="button"
+            className="button sm:w-60 sm:self-end"
             id="button-7"
             target="_blank"
           >
