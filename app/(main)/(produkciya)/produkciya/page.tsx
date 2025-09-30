@@ -82,84 +82,112 @@ export default function ProdukciyaPage() {
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/1. kalorifery.png"
-                alt=""
+                alt="Калориферы водяные"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/2. kalorifery_blok.png"
-                alt=""
+                alt="Паровые калориферы"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/3. kalorifery_flantcy.png"
-                alt=""
+                alt="Калориферы с фланцами"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/4. agregaty_gruz.png"
-                alt=""
+                alt="Отопительные агрегаты"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/5. kalorifery_nestandart.png"
-                alt=""
+                alt="Установка парового калорифера"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/6. kalorifery_blok.png"
-                alt=""
+                alt="Секция паровых калориферов"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/7. electrokalorifery_sbor.png"
-                alt=""
+                alt="Электрокалориферы"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/8. kalorifery_flantcy.png"
-                alt=""
+                alt="Водяные калориферы с фланцами"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/9. ustanovki_gruz.png"
-                alt=""
+                alt="Электрокалориферные установки"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/10. kalorifery_sbor.png"
-                alt=""
+                alt="Водяные воздухонагреватели"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/11. kalorifery_nestandart.png"
-                alt=""
+                alt="Промышленный калорифер"
                 fill
               />
             </CarouselItem>
             <CarouselItem className="relative cursor-grab">
               <Image
                 src="/img/produkciya/gallery/12. kalorifery_blok.png"
-                alt=""
+                alt="Установка паровых калориферов"
+                fill
+              />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image
+                src="/img/produkciya/gallery/13. kalorifery_gruz.png"
+                alt="Калориферы биметаллические"
+                fill
+              />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image
+                src="/img/produkciya/gallery/14. kalorifery_blok.png"
+                alt="Секция водяных калориферов"
+                fill
+              />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image
+                src="/img/produkciya/gallery/15. kalorifery_nestandart.png"
+                alt="Паровой воздухонагреватель"
+                fill
+              />
+            </CarouselItem>
+            <CarouselItem className="relative cursor-grab">
+              <Image
+                src="/img/produkciya/gallery/16. kalorifery_sbor.png"
+                alt="Калориферы водяные промышленные"
                 fill
               />
             </CarouselItem>
