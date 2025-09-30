@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactFormTrigger({
   triggerBtnVariant = "unstyled",
+  triggerBtnSize = "unset",
   triggerBtnClassName = "",
   amountClassName = "",
   hasCloseBtn = false,
@@ -33,18 +34,16 @@ export default function ContactFormTrigger({
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <div className="relative">
-          <Button
-            className={triggerBtnClassName}
-            size="lg"
-            variant={triggerBtnVariant}
-          >
-            Подать заявку
-          </Button>
+        <Button
+          className={`${triggerBtnClassName} relative`}
+          size={triggerBtnSize}
+          variant={triggerBtnVariant}
+        >
+          Подать заявку
           {isMounted && selectedProductsAmount > 0 && (
             <span className={amountClassName}>{selectedProductsAmount}</span>
           )}
-        </div>
+        </Button>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50" />

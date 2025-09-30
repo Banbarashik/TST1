@@ -65,8 +65,9 @@ export default function RootLayout({
               <NavigationMenu />
               <ContactFormTrigger
                 triggerBtnVariant="default"
+                triggerBtnSize="lg"
                 triggerBtnClassName="h-12 cursor-pointer text-base font-bold xl:text-xl"
-                amountClassName="bg-accent absolute right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold"
+                amountClassName="bg-accent absolute text-black right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold"
               />
             </div>
           </nav>
