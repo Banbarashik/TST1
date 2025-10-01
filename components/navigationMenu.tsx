@@ -181,15 +181,15 @@ export default function NavigationMenu({
                 </AccordionItem>
               </div>
 
-              <div className="flex items-start">
+              <div className="grid grid-cols-2 border-b">
                 <AccordionItem
                   value="produkciya-price"
-                  className="flex-1/2 border-0"
+                  className="contents border-0"
                 >
                   <AccordionTrigger className="justify-evenly gap-0">
                     Продукция Прайс-лист
                   </AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
                     <Link href="/produkciya" className="block px-4 py-3">
                       Продукция
                     </Link>
@@ -197,12 +197,8 @@ export default function NavigationMenu({
                       Контакты Прайс-лист
                     </Link>
                   </AccordionContent>
-                  {/* <Link
-                    href="/kontakty-prajs"
-                    className="flex-1/2 py-4 text-center text-sm"
-                  ></Link> */}
                 </AccordionItem>
-                <div className="flex flex-1/2 py-4">
+                <div className="col-start-2 row-start-1 flex flex-1/2 py-4">
                   <ContactFormTrigger
                     hasCloseBtn
                     triggerBtnClassName="text-primary w-full h-full"
