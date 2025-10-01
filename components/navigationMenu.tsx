@@ -133,14 +133,14 @@ export default function NavigationMenu({
                 </AccordionItem>
               </div>
 
-              <div className="flex border-b">
-                <AccordionItem value="agregaty" className="flex-1/2 border-0">
-                  <Link href="/catalog/agregaty">
+              <div className="grid grid-cols-2 border-b">
+                <AccordionItem value="agregaty" className="contents border-0">
+                  <Link href="/catalog/agregaty" className="col-span-1">
                     <AccordionTrigger className="justify-evenly gap-0">
                       Отопительные агрегаты
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
                     <Link
                       href="/catalog/vodiany-agregaty"
                       className="block px-4 py-3"
@@ -155,24 +155,27 @@ export default function NavigationMenu({
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="electro" className="flex-1/2 border-0">
-                  <Link href="/catalog/energonagrevatelynoe-oborudovanie">
+                <AccordionItem value="electro" className="contents border-0">
+                  <Link
+                    href="/catalog/energonagrevatelynoe-oborudovanie"
+                    className="col-span-1 [&:has(>h3[data-state=closed])]:col-start-2 [&:has(>h3[data-state=closed])]:row-start-1"
+                  >
                     <AccordionTrigger className="justify-evenly gap-0">
                       Электронагреватели
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent>
-                    <Link href="/catalog/sfo" className="block px-4 py-3">
-                      СФО
-                    </Link>
-                    <Link href="/catalog/sfotc" className="block px-4 py-3">
-                      СФОЦ
-                    </Link>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
                     <Link href="/catalog/shuk" className="block px-4 py-3">
                       ШУК
                     </Link>
+                    <Link href="/catalog/sfo" className="block px-4 py-3">
+                      СФО
+                    </Link>
                     <Link href="/catalog/teny" className="block px-4 py-3">
                       ТЭНР
+                    </Link>
+                    <Link href="/catalog/sfotc" className="block px-4 py-3">
+                      СФОЦ
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
