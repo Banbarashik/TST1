@@ -65,6 +65,32 @@ export default function NavigationMenu({
           <div className="flex flex-col border-t bg-[#e9f6fa] shadow-lg">
             <Accordion type="single" collapsible>
               <div className="grid grid-cols-2 border-b">
+                <AccordionItem
+                  value="produkciya-price"
+                  className="contents border-0"
+                >
+                  <AccordionTrigger className="justify-evenly gap-0">
+                    Продукция Прайс-лист
+                  </AccordionTrigger>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
+                    <Link href="/produkciya" className="block px-4 py-3">
+                      Продукция
+                    </Link>
+                    <Link href="/kontakty-prajs" className="block px-4 py-3">
+                      Контакты Прайс-лист
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+                <div className="col-start-2 row-start-1 flex flex-1/2 py-4">
+                  <ContactFormTrigger
+                    hasCloseBtn
+                    triggerBtnClassName="text-primary w-full h-full"
+                    amountClassName="absolute border border-primary text-primary right-0 -translate-x-6 -translate-y-2 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 border-b">
                 <AccordionItem value="water" className="contents border-0">
                   <Link
                     href="/catalog/vodiany-kalorifery"
@@ -179,32 +205,6 @@ export default function NavigationMenu({
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
-              </div>
-
-              <div className="grid grid-cols-2 border-b">
-                <AccordionItem
-                  value="produkciya-price"
-                  className="contents border-0"
-                >
-                  <AccordionTrigger className="justify-evenly gap-0">
-                    Продукция Прайс-лист
-                  </AccordionTrigger>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
-                    <Link href="/produkciya" className="block px-4 py-3">
-                      Продукция
-                    </Link>
-                    <Link href="/kontakty-prajs" className="block px-4 py-3">
-                      Контакты Прайс-лист
-                    </Link>
-                  </AccordionContent>
-                </AccordionItem>
-                <div className="col-start-2 row-start-1 flex flex-1/2 py-4">
-                  <ContactFormTrigger
-                    hasCloseBtn
-                    triggerBtnClassName="text-primary w-full h-full"
-                    amountClassName="absolute border border-primary text-primary right-0 -translate-x-6 -translate-y-2 inline-flex size-4 items-center justify-center rounded-full text-[10px]"
-                  />
-                </div>
               </div>
             </Accordion>
           </div>
