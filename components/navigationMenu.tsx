@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+
+import { ChevronDown } from "lucide-react";
+
 import {
   Accordion,
   AccordionItem,
@@ -50,13 +53,16 @@ export default function NavigationMenu({
     return (
       <div className="w-full" ref={menuRef}>
         <button
-          className="w-full bg-[#f8f8f8] px-4 py-3 text-lg font-semibold"
+          className="flex w-full items-center justify-center gap-3 bg-[#cdd5d8] px-4 py-3 text-lg font-semibold shadow-lg"
           onClick={() => setOpen((o) => !o)}
         >
-          Меню
+          <span>Меню</span>
+          <ChevronDown
+            className={`${open ? "rotate-180" : "rotate-0"} transition duration-200`}
+          />
         </button>
         {open && (
-          <div className="bg-background flex flex-col border-t shadow-lg">
+          <div className="flex flex-col border-t bg-[#e9f6fa] shadow-lg">
             <Accordion type="single" collapsible>
               <div className="flex border-b">
                 <AccordionItem value="water" className="flex-1/2 border-0">
