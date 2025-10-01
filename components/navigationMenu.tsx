@@ -69,19 +69,25 @@ export default function NavigationMenu({
                   value="produkciya-price"
                   className="contents border-0"
                 >
-                  <AccordionTrigger className="justify-evenly gap-0">
+                  <AccordionTrigger className="justify-evenly gap-0 rounded-none border border-[#D4E0E3] bg-[#DBE6E9] data-[state=open]:bg-[#E2EEF2]">
                     Продукция Прайс-лист
                   </AccordionTrigger>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
-                    <Link href="/produkciya" className="block px-4 py-3">
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0 pb-0">
+                    <Link
+                      href="/produkciya"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       Продукция
                     </Link>
-                    <Link href="/kontakty-prajs" className="block px-4 py-3">
+                    <Link
+                      href="/kontakty-prajs"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       Контакты Прайс-лист
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
-                <div className="col-start-2 row-start-1 flex flex-1/2 py-4">
+                <div className="col-start-2 row-start-1 flex flex-1/2 border border-[#D4E0E3] bg-[#DBE6E9] py-4 data-[state=open]:bg-[#E2EEF2]">
                   <ContactFormTrigger
                     hasCloseBtn
                     triggerBtnClassName="text-primary w-full h-full"
@@ -96,30 +102,45 @@ export default function NavigationMenu({
                     href="/catalog/vodiany-kalorifery"
                     className="col-span-1"
                   >
-                    <AccordionTrigger className="justify-evenly gap-0">
+                    <AccordionTrigger className="justify-evenly gap-0 rounded-none border border-[#D4E0E3] bg-[#DBE6E9] data-[state=open]:bg-[#E2EEF2]">
                       Водяные калориферы
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0 pb-0">
                     <Link
                       href="/kalorifery-voda#anchor2"
-                      className="block px-4 py-3"
+                      className="block border border-[#E2F0F4] px-4 py-3"
                     >
                       Калькулятор подбора
                     </Link>
-                    <Link href="/catalog/ksk" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/ksk"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КСк
                     </Link>
-                    <Link href="/catalog/kpvs" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kpvs"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КПВС
                     </Link>
-                    <Link href="/catalog/tvv" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/tvv"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       ТВВ
                     </Link>
-                    <Link href="/catalog/kpvu" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kpvu"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КПВУ
                     </Link>
-                    <Link href="/catalog/kfb-a-m" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kfb-a-m"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КФБ-А М
                     </Link>
                   </AccordionContent>
@@ -129,30 +150,45 @@ export default function NavigationMenu({
                     href="/catalog/parovy-kalorifery"
                     className="col-span-1 [&:has(>h3[data-state=closed])]:col-start-2 [&:has(>h3[data-state=closed])]:row-start-1"
                   >
-                    <AccordionTrigger className="justify-evenly gap-0">
+                    <AccordionTrigger className="justify-evenly gap-0 rounded-none border border-[#D4E0E3] bg-[#DBE6E9] data-[state=open]:bg-[#E2EEF2]">
                       Паровые калориферы
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
-                    <Link href="/catalog/kpsk" className="block px-4 py-3">
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0 pb-0">
+                    <Link
+                      href="/catalog/kpsk"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КПСк
                     </Link>
                     <Link
                       href="/kalorifery-par#anchor2"
-                      className="block px-4 py-3 hover:bg-gray-100"
+                      className="block border border-[#E2F0F4] px-4 py-3 hover:bg-gray-100"
                     >
                       Калькулятор подбора
                     </Link>
-                    <Link href="/catalog/kp" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kp"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КП
                     </Link>
-                    <Link href="/catalog/kpps" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kpps"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КППС
                     </Link>
-                    <Link href="/catalog/kfb-a-p" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kfb-a-p"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КФБ-А П
                     </Link>
-                    <Link href="/catalog/kppu" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/kppu"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       КППУ
                     </Link>
                   </AccordionContent>
@@ -162,20 +198,20 @@ export default function NavigationMenu({
               <div className="grid grid-cols-2 border-b">
                 <AccordionItem value="agregaty" className="contents border-0">
                   <Link href="/catalog/agregaty" className="col-span-1">
-                    <AccordionTrigger className="justify-evenly gap-0">
+                    <AccordionTrigger className="justify-evenly gap-0 rounded-none border border-[#D4E0E3] bg-[#DBE6E9] data-[state=open]:bg-[#E2EEF2]">
                       Отопительные агрегаты
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0 pb-0">
                     <Link
                       href="/catalog/vodiany-agregaty"
-                      className="block px-4 py-3"
+                      className="block border border-[#E2F0F4] px-4 py-3"
                     >
                       Водяные АО АВО СТД
                     </Link>
                     <Link
                       href="/catalog/parovy-agregaty"
-                      className="block px-4 py-3"
+                      className="block border border-[#E2F0F4] px-4 py-3"
                     >
                       Паровые АО АВО СТД
                     </Link>
@@ -186,21 +222,33 @@ export default function NavigationMenu({
                     href="/catalog/energonagrevatelynoe-oborudovanie"
                     className="col-span-1 [&:has(>h3[data-state=closed])]:col-start-2 [&:has(>h3[data-state=closed])]:row-start-1"
                   >
-                    <AccordionTrigger className="justify-evenly gap-0">
+                    <AccordionTrigger className="justify-evenly gap-0 rounded-none border border-[#D4E0E3] bg-[#DBE6E9] data-[state=open]:bg-[#E2EEF2]">
                       Электронагреватели
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
-                    <Link href="/catalog/shuk" className="block px-4 py-3">
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0 pb-0">
+                    <Link
+                      href="/catalog/shuk"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       ШУК
                     </Link>
-                    <Link href="/catalog/sfo" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/sfo"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       СФО
                     </Link>
-                    <Link href="/catalog/teny" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/teny"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       ТЭНР
                     </Link>
-                    <Link href="/catalog/sfotc" className="block px-4 py-3">
+                    <Link
+                      href="/catalog/sfotc"
+                      className="block border border-[#E2F0F4] px-4 py-3"
+                    >
                       СФОЦ
                     </Link>
                   </AccordionContent>
