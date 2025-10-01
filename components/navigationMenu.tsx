@@ -64,64 +64,70 @@ export default function NavigationMenu({
         {open && (
           <div className="flex flex-col border-t bg-[#e9f6fa] shadow-lg">
             <Accordion type="single" collapsible>
-              <div className="flex border-b">
-                <AccordionItem value="water" className="flex-1/2 border-0">
-                  <Link href="/catalog/vodiany-kalorifery">
+              <div className="grid grid-cols-2 border-b">
+                <AccordionItem value="water" className="contents border-0">
+                  <Link
+                    href="/catalog/vodiany-kalorifery"
+                    className="col-span-1"
+                  >
                     <AccordionTrigger className="justify-evenly gap-0">
                       Водяные калориферы
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
                     <Link
                       href="/kalorifery-voda#anchor2"
                       className="block px-4 py-3"
                     >
                       Калькулятор подбора
                     </Link>
-                    <Link href="/catalog/kpvs" className="block px-4 py-3">
-                      КПВС
-                    </Link>
-                    <Link href="/catalog/kpvu" className="block px-4 py-3">
-                      КПВУ
-                    </Link>
                     <Link href="/catalog/ksk" className="block px-4 py-3">
                       КСк
                     </Link>
+                    <Link href="/catalog/kpvs" className="block px-4 py-3">
+                      КПВС
+                    </Link>
                     <Link href="/catalog/tvv" className="block px-4 py-3">
                       ТВВ
+                    </Link>
+                    <Link href="/catalog/kpvu" className="block px-4 py-3">
+                      КПВУ
                     </Link>
                     <Link href="/catalog/kfb-a-m" className="block px-4 py-3">
                       КФБ-А М
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="steam" className="flex-1/2 border-0">
-                  <Link href="/catalog/parovy-kalorifery">
+                <AccordionItem value="steam" className="contents border-0">
+                  <Link
+                    href="/catalog/parovy-kalorifery"
+                    className="col-span-1 [&:has(>h3[data-state=closed])]:col-start-2 [&:has(>h3[data-state=closed])]:row-start-1"
+                  >
                     <AccordionTrigger className="justify-evenly gap-0">
                       Паровые калориферы
                     </AccordionTrigger>
                   </Link>
-                  <AccordionContent>
+                  <AccordionContent className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down col-span-2 grid grid-cols-[repeat(2,1fr)] overflow-hidden px-0">
+                    <Link href="/catalog/kpsk" className="block px-4 py-3">
+                      КПСк
+                    </Link>
                     <Link
                       href="/kalorifery-par#anchor2"
                       className="block px-4 py-3 hover:bg-gray-100"
                     >
                       Калькулятор подбора
                     </Link>
-                    <Link href="/catalog/kpps" className="block px-4 py-3">
-                      КППС
-                    </Link>
-                    <Link href="/catalog/kppu" className="block px-4 py-3">
-                      КППУ
-                    </Link>
-                    <Link href="/catalog/kpsk" className="block px-4 py-3">
-                      КПСк
-                    </Link>
                     <Link href="/catalog/kp" className="block px-4 py-3">
                       КП
                     </Link>
+                    <Link href="/catalog/kpps" className="block px-4 py-3">
+                      КППС
+                    </Link>
                     <Link href="/catalog/kfb-a-p" className="block px-4 py-3">
                       КФБ-А П
+                    </Link>
+                    <Link href="/catalog/kppu" className="block px-4 py-3">
+                      КППУ
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
