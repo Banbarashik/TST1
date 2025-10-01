@@ -53,7 +53,7 @@ export default function NavigationMenu({
     return (
       <div className="w-full" ref={menuRef}>
         <button
-          className="flex w-full items-center justify-center gap-3 bg-[#cdd5d8] px-4 py-3 text-lg font-semibold shadow-lg"
+          className="flex w-full items-center justify-center gap-3 border border-[#b9c0c2] bg-[#cdd5d8] px-4 py-3 text-lg font-semibold"
           onClick={() => setOpen((o) => !o)}
         >
           <span>Меню</span>
