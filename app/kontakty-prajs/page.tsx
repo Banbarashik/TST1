@@ -493,26 +493,34 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th colSpan={2} className="px-1 py-1.5 text-left">
-                      КАЛОРИФЕРЫ
-                    </th>
-                    <th colSpan={2}>Цена с учетом НДС</th>
-                  </tr>
-                  <tr>
-                    <th colSpan={2} className="px-1 py-1.5 text-right">
-                      Количество рядов
-                    </th>
-                    <th>3</th>
-                    <th>4</th>
+                    <td className="px-1 py-1.5 text-left">АГРЕГАТЫ АВО ХЛ</td>
+                    <td>ЦЕНА С УЧЕТОМ НДС</td>
                   </tr>
                 </thead>
                 <tbody>
-                  {kfb3.map((p, idx) => (
+                  {avoTvvVariants.map((p) => (
                     <tr>
-                      <td className="px-1 text-left">{p.shortName}</td>
-                      <td className="px-1 text-left">{kfb4[idx].shortName}</td>
+                      <td className="px-1 py-1.5 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
-                      <td>{kfb4[idx].price}</td>
+                    </tr>
+                  ))}
+                  <tr className="h-[33px]">
+                    <td />
+                  </tr>
+                  {std300.map((p) => (
+                    <tr>
+                      <td className="px-1 py-1.5 text-left">
+                        СТД-300 В{p.rows} П{p.rows}
+                      </td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                  {std300hl.map((p) => (
+                    <tr>
+                      <td className="px-1 py-1.5 text-left">
+                        СТД-300 ХЛ В{p.rows} П{p.rows}
+                      </td>
+                      <td>{p.price}</td>
                     </tr>
                   ))}
                 </tbody>
