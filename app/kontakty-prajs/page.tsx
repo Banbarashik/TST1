@@ -239,13 +239,13 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {ksk2.map((p, idx) => (
                     <tr>
-                      <td>
+                      <td className="px-1 text-left">
                         {p.rows}-{p.size}
                       </td>
-                      <td>
+                      <td className="px-1 text-left">
                         {ksk3[idx].rows}-{ksk3[idx].size}
                       </td>
-                      <td>
+                      <td className="px-1 text-left">
                         {ksk4[idx].rows}-{ksk4[idx].size}
                       </td>
                       <td>{p.price}</td>
@@ -256,50 +256,61 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
                   КАЛОРИФЕРЫ КСК
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
                   КАТАЛОГ КСК
                 </Button>
               </div>
             </div>
+
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
-                КАЛОРИФЕРЫ ПАРОВЫЕ КПСК.
+                КАЛОРИФЕРЫ ПАРОВЫЕ КПСК
               </h3>
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th className="px-1 py-1.5 text-left">Калориферы</th>
+                    <th colSpan={3} className="px-1 py-1.5 text-left">
+                      Калориферы КПСк
+                    </th>
                     <th colSpan={3}>Цена с учетом НДС</th>
                   </tr>
                   <tr>
-                    <th className="px-1 py-1.5 text-right">Количество рядов</th>
-                    <th>_2</th>
-                    <th>_3</th>
-                    <th>_4</th>
+                    <th colSpan={3} className="px-1 py-1.5 text-right">
+                      Количество рядов
+                    </th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {kpvu2.map((p, idx) => (
+                  {ksk2.map((p, idx) => (
                     <tr>
-                      <td className="px-1 py-0.75 text-left">
-                        КПВУ КППУ {p.size}x{p.size}
+                      <td className="px-1 text-left">
+                        {p.rows}-{p.size}
+                      </td>
+                      <td className="px-1 text-left">
+                        {ksk3[idx].rows}-{ksk3[idx].size}
+                      </td>
+                      <td className="px-1 text-left">
+                        {ksk4[idx].rows}-{ksk4[idx].size}
                       </td>
                       <td>{p.price}</td>
-                      <td>{kpvu3[idx].price}</td>
-                      <td>{kpvu4[idx].price}</td>
+                      <td>{ksk3[idx].price}</td>
+                      <td>{ksk4[idx].price}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <div className="flex flex-col justify-start gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
+              <div className="flex gap-2">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАЛОРИФЕРЫ КПСК
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КПСК
                 </Button>
               </div>
             </div>
