@@ -616,6 +616,160 @@ export default function ContactsAndPricesPage() {
         Цена/Прайс-лист электронагревательного оборудования
       </h2>
 
+      <div className="mx-auto max-w-6xl space-y-10">
+        {/* electro tables */}
+        <div className="space-y-2">
+          <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
+            Электронагревательное оборудование
+          </h3>
+          <div className="flex flex-col gap-5 sm:flex-row">
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                Электрокалориферы СФО и установки СФОЦ
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th colSpan={2}>КАЛОРИФЕРЫ СФО</th>
+                    <th colSpan={2}>УСТАНОВКИ СФОЦ</th>
+                  </tr>
+                  <tr>
+                    <th colSpan={4}>Цена с учетом НДС</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sfo.map((p, idx) => (
+                    <tr>
+                      <td>{p.shortName}</td>
+                      <td>{p.price}</td>
+                      <td>{sfotc[idx].shortName}</td>
+                      <td>{sfotc[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="space-y-2 sm:hidden">
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    Агрегаты АО2 В
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    Агрегаты АО2 П
+                  </Button>
+                </div>
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    КАТАЛОГ АО2
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    АГРЕГАТЫ АВО ХЛ
+                  </Button>
+                </div>
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    КАТАЛОГ СТД-300
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
+                    КАТАЛОГ АВО ХЛ
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                Шкафы управления ШУК и оребренные ТЭНы
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="px-1 py-1 text-left">АГРЕГАТЫ АВО ХЛ</th>
+                    <th>ЦЕНА С УЧЕТОМ НДС</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {avoTvvVariants.map((p) => (
+                    <tr>
+                      <td className="px-1 py-1 text-left">{p.shortName}</td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                  <tr className="h-[29px]">
+                    <td colSpan={2} />
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1 text-left">АГРЕГАТЫ СТД-300</th>
+                    <th className="px-1">ЦЕНА С УЧЕТОМ НДС</th>
+                  </tr>
+                  {std300.map((p) => (
+                    <tr>
+                      <td className="px-1 py-1 text-left">
+                        СТД-300 В{p.rows} П{p.rows}
+                      </td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                  {std300hl.map((p) => (
+                    <tr>
+                      <td className="px-1 py-1 text-left">
+                        СТД-300 ХЛ В{p.rows} П{p.rows}
+                      </td>
+                      <td>{p.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex flex-col space-y-2 sm:hidden">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                  АГРЕГАТЫ СТД-300 В
+                </Button>
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                  АГРЕГАТЫ СТД-300 П
+                </Button>
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                  КАТАЛОГ СТД-300 ХЛ
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="hidden space-y-2 sm:block">
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АО2 В
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АО2 П
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АВО ХЛ
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ СТД-300 В
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ СТД-300 П
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ АО2
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СТД-300
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СТД-300 ХЛ
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ АВО ХЛ
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="space-y-6">
         <ProductParagraph>
           Технический отдел предприятия принимает заказы на изготовление
