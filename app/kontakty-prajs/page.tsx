@@ -693,6 +693,36 @@ export default function ContactsAndPricesPage() {
               </table>
             </div>
           </div>
+          <div className="hidden space-y-2 sm:block">
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАЛОРИФЕРЫ СФО
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                УСТАНОВКИ СФОЦ
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                ШКАФЫ ШУК
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                ТЭНЫ ОРЕБРЕННЫЕ
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СФО
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СФОЦ
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ ШУК
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ ТЭНР
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
