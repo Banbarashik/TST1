@@ -665,19 +665,27 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th colSpan={2}>ШКАФЫ ШУК</th>
-                    <th colSpan={2}>ТЭНР</th>
+                    <th colSpan={2} className="px-1 py-1.5 text-left">
+                      ШКАФЫ ШУК
+                    </th>
+                    <th colSpan={2} className="px-1 text-left">
+                      ТЭНР
+                    </th>
                   </tr>
                   <tr>
-                    <th colSpan={4}>Цена с учетом НДС</th>
+                    <th colSpan={4} className="px-1 py-1.5">
+                      Цена с учетом НДС
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {shuk.map((p, idx) => (
                     <tr>
-                      <td>{p.shortName}</td>
+                      <td className="px-1 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
-                      <td>{idx === 0 && "ТЭН ОР."}</td>
+                      <td className="px-1 text-left">
+                        {idx === 0 && "ТЭН ОР."}
+                      </td>
                       <td>{idx === 0 && teny.price}</td>
                     </tr>
                   ))}
