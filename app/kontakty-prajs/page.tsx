@@ -655,6 +655,16 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
+              <div className="flex flex-col space-y-2 sm:hidden">
+                <div>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                    КАЛОРИФЕРЫ СФО
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                    УСТАНОВКИ СФОЦ
+                  </Button>
+                </div>
+              </div>
             </div>
 
             {/* shuk-tenr table */}
