@@ -127,7 +127,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             ПРИТОЧНЫЕ ВОДЯНЫЕ И ПАРОВЫЕ КАЛОРИФЕРЫ
           </h3>
-          <div className="flex flex-col gap-10 sm:flex-row">
+          <div className="flex flex-col gap-5 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 ПРИТОЧНЫЕ КАЛОРИФЕРЫ – ВОДЯНЫЕ КПВС И ПАРОВЫЕ КППС
@@ -159,15 +159,15 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex flex-col justify-start gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   ПРИТОЧНЫЕ ВОДЯНЫЕ КАЛОРИФЕРЫ
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   КАТАЛОГ КАЛОРИФЕРОВ КПВС КПВУ
                 </Button>
               </div>
             </div>
-            <div className="basis-full space-y-2">
+            <div className="flex basis-full flex-col gap-2">
               <h3 className="text-xl uppercase sm:hidden">
                 ПРИТОЧНЫЕ КАЛОРИФЕРЫ – ВОДЯНЫЕ КПВУ И ПАРОВЫЕ КППУ
               </h3>
@@ -197,11 +197,11 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
-              <div className="flex flex-col justify-start gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+              <div className="mt-auto flex flex-col justify-start gap-2">
+                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
                 </Button>
               </div>
@@ -214,7 +214,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             КАЛОРИФЕРЫ ВОДЯНЫЕ КСК И ПАРОВЫЕ КПСК
           </h3>
-          <div className="flex flex-col gap-10 sm:flex-row">
+          <div className="flex flex-col gap-5 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 КАЛОРИФЕРЫ ВОДЯНЫЕ КСК
@@ -256,10 +256,10 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАЛОРИФЕРЫ КСК
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАТАЛОГ КСК
                 </Button>
               </div>
@@ -306,23 +306,33 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАЛОРИФЕРЫ КПСК
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАТАЛОГ КПСК
                 </Button>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <ProductParagraph>
+        Серийно изготавливаются воздухонагреватели с увеличенным диаметром
+        несущих трубок, а также воздушно-отопительные агрегаты на базе таких
+        теплообменников. Данное оборудование находит применение на рудных и
+        угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
+        эксплуатация происходит в условиях низких температурных режимов.
+      </ProductParagraph>
+
+      <div className="mx-auto max-w-6xl space-y-10">
         {/* tvv-kp-kfb tables */}
         <div className="space-y-2">
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             КАЛОРИФЕРЫ ДЛЯ НИЗКИХ ТЕМПЕРАТУР
           </h3>
-          <div className="flex flex-col gap-10 sm:flex-row">
+          <div className="flex flex-col gap-5 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 КАЛОРИФЕРЫ ВОДЯНЫЕ ТВВ И ПАРОВЫЕ КП
@@ -364,18 +374,18 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="flex gap-2">
                 <div className="flex basis-full flex-col gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                     КАЛОРИФЕРЫ ТВВ
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                    КАТАЛОГ ТВВ
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                    КАЛОРИФЕРЫ КП
                   </Button>
                 </div>
                 <div className="flex basis-full flex-col gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                    КАЛОРИФЕРЫ КП
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                    КАТАЛОГ ТВВ
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                     КАТАЛОГ КП
                   </Button>
                 </div>
@@ -416,27 +426,19 @@ export default function ContactsAndPricesPage() {
             </div>
           </div>
 
-          <div className="flex gap-2">
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-              КАЛОРИФЕРЫ КФБ-А ВОДЯНЫЕ
+          <div className="flex flex-col items-stretch gap-2 sm:flex-row md:items-stretch">
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+              КАЛОРИФЕРЫ КФБ-А М
             </Button>
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-              КАЛОРИФЕРЫ КФБ-А ПАРОВЫЕ
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+              КАЛОРИФЕРЫ КФБ-А П
             </Button>
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-              КАТАЛОГ КАЛОРИФЕРОВ КФБ-А
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+              КАТАЛОГ КФБ-А
             </Button>
           </div>
         </div>
       </div>
-
-      <ProductParagraph>
-        Серийно изготавливаются воздухонагреватели с увеличенным диаметром
-        несущих трубок, а также воздушно-отопительные агрегаты на базе таких
-        теплообменников. Данное оборудование находит применение на рудных и
-        угольных шахтах Заполярья, Дальнего Востока, Урала и Сибири, где их
-        эксплуатация происходит в условиях низких температурных режимов.
-      </ProductParagraph>
 
       <p className="mx-auto max-w-6xl">
         В таблицах представлена цена калориферов всех моделей с несущими
