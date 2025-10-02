@@ -451,7 +451,7 @@ export default function ContactsAndPricesPage() {
       </h2>
 
       <div className="mx-auto max-w-6xl space-y-10">
-        {/* tvv-kp-kfb tables */}
+        {/* ao2-avo-std tables */}
         <div className="space-y-2">
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             ОТОПИТЕЛЬНЫЕ АГРЕГАТЫ ВОДЯНЫЕ И ПАРОВЫЕ
@@ -483,7 +483,6 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
-              <div className="flex gap-2"></div>
             </div>
 
             <div className="basis-full space-y-2">
@@ -531,8 +530,41 @@ export default function ContactsAndPricesPage() {
               </table>
             </div>
           </div>
-
-          <div className="flex flex-col items-stretch gap-2 sm:flex-row md:items-stretch"></div>
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АО2 В
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АО2 П
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ АВО ХЛ
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ СТД-300 В
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                АГРЕГАТЫ СТД-300 П
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ АО2
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СТД-300
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ СТД-300 ХЛ
+              </Button>
+              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
+                КАТАЛОГ АВО ХЛ
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
