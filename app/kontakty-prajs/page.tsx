@@ -464,11 +464,11 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th className="px-1 py-1.5 text-left">АГРЕГАТЫ АО 2</th>
+                    <th className="px-1 py-1 text-left">АГРЕГАТЫ АО 2</th>
                     <th colSpan={2}>Цена с учетом НДС</th>
                   </tr>
                   <tr>
-                    <th className="px-1 py-1.5 text-right">КАЛОРИФЕР</th>
+                    <th className="px-1 py-1 text-right">КАЛОРИФЕР</th>
                     <th>3 РЯДА</th>
                     <th>4 РЯДА</th>
                   </tr>
@@ -476,7 +476,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {ao2v3.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">{p.shortName} В П</td>
+                      <td className="px-1 py-1 text-left">{p.shortName} В П</td>
                       <td>{p.price}</td>
                       <td>{ao2v4[idx].price}</td>
                     </tr>
@@ -493,23 +493,27 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <td className="px-1 py-1.5 text-left">АГРЕГАТЫ АВО ХЛ</td>
-                    <td>ЦЕНА С УЧЕТОМ НДС</td>
+                    <th className="px-1 py-1 text-left">АГРЕГАТЫ АВО ХЛ</th>
+                    <th>ЦЕНА С УЧЕТОМ НДС</th>
                   </tr>
                 </thead>
                 <tbody>
                   {avoTvvVariants.map((p) => (
                     <tr>
-                      <td className="px-1 py-1.5 text-left">{p.shortName}</td>
+                      <td className="px-1 py-1 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                     </tr>
                   ))}
-                  <tr className="h-[33px]">
-                    <td />
+                  <tr className="h-[29px]">
+                    <td colSpan={2} />
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1 text-left">АГРЕГАТЫ СТД-300</th>
+                    <th className="px-1">ЦЕНА С УЧЕТОМ НДС</th>
                   </tr>
                   {std300.map((p) => (
                     <tr>
-                      <td className="px-1 py-1.5 text-left">
+                      <td className="px-1 py-1 text-left">
                         СТД-300 В{p.rows} П{p.rows}
                       </td>
                       <td>{p.price}</td>
@@ -517,7 +521,7 @@ export default function ContactsAndPricesPage() {
                   ))}
                   {std300hl.map((p) => (
                     <tr>
-                      <td className="px-1 py-1.5 text-left">
+                      <td className="px-1 py-1 text-left">
                         СТД-300 ХЛ В{p.rows} П{p.rows}
                       </td>
                       <td>{p.price}</td>
