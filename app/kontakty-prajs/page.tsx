@@ -9,6 +9,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Прайс-лист воздушно-отопительного оборудования",
@@ -121,6 +122,92 @@ export default function ContactsAndPricesPage() {
       </div>
 
       <div className="mx-auto max-w-6xl space-y-10">
+        <div>
+          <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
+            ПРИТОЧНЫЕ ВОДЯНЫЕ И ПАРОВЫЕ КАЛОРИФЕРЫ
+          </h3>
+          <div className="flex flex-col gap-10 sm:flex-row">
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                ПРИТОЧНЫЕ КАЛОРИФЕРЫ – ВОДЯНЫЕ КПВС И ПАРОВЫЕ КППС
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="px-1 py-1.5 text-left">Калориферы</th>
+                    <th colSpan={3}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1.5 text-right">Количество рядов</th>
+                    <th>_2</th>
+                    <th>_3</th>
+                    <th>_4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kpps2.map((p, idx) => (
+                    <tr>
+                      <td className="px-1 py-0.75 text-left">
+                        КПВС КППС {p.size}x{p.size}
+                      </td>
+                      <td>{p.price}</td>
+                      <td>{kpps3[idx].price}</td>
+                      <td>{kpps4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex flex-col justify-start gap-2">
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  ПРИТОЧНЫЕ ВОДЯНЫЕ КАЛОРИФЕРЫ
+                </Button>
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КАЛОРИФЕРОВ КПВС КПВУ
+                </Button>
+              </div>
+            </div>
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                ПРИТОЧНЫЕ КАЛОРИФЕРЫ – ВОДЯНЫЕ КПВУ И ПАРОВЫЕ КППУ
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="px-1 py-1.5 text-left">Калориферы</th>
+                    <th colSpan={3}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1.5 text-right">Количество рядов</th>
+                    <th>_2</th>
+                    <th>_3</th>
+                    <th>_4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kpvu2.map((p, idx) => (
+                    <tr>
+                      <td className="px-1 py-0.75 text-left">
+                        КПВУ КППУ {p.size}x{p.size}
+                      </td>
+                      <td>{p.price}</td>
+                      <td>{kpvu3[idx].price}</td>
+                      <td>{kpvu4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex flex-col justify-start gap-2">
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
+                </Button>
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-6">
           <h3 className="mb-2 text-xl uppercase">
             Приточные калориферы - водяные КПВС и паровые КППС
@@ -174,6 +261,7 @@ export default function ContactsAndPricesPage() {
             />
           </div>
         </div>
+
         <div className="space-y-6">
           <h3 className="mb-2 text-xl uppercase">
             Приточные калориферы - водяные КПВУ и паровые КППУ
@@ -227,6 +315,7 @@ export default function ContactsAndPricesPage() {
             />
           </div>
         </div>
+
         <div className="space-y-6">
           <h3 className="mb-2 text-xl uppercase">
             Калориферы водяные КСк и паровые КПСк
