@@ -208,6 +208,103 @@ export default function ContactsAndPricesPage() {
             </div>
           </div>
         </div>
+
+        {/* ksk-kpsk tables */}
+        <div>
+          <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
+            КАЛОРИФЕРЫ ВОДЯНЫЕ КСК И ПАРОВЫЕ КПСК
+          </h3>
+          <div className="flex flex-col gap-10 sm:flex-row">
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                КАЛОРИФЕРЫ ВОДЯНЫЕ КСК
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th colSpan={3} className="px-1 py-1.5 text-left">
+                      Калориферы КСк
+                    </th>
+                    <th colSpan={3}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th colSpan={3} className="px-1 py-1.5 text-right">
+                      Количество рядов
+                    </th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ksk2.map((p, idx) => (
+                    <tr>
+                      <td>
+                        {p.rows}-{p.size}
+                      </td>
+                      <td>
+                        {ksk3[idx].rows}-{ksk3[idx].size}
+                      </td>
+                      <td>
+                        {ksk4[idx].rows}-{ksk4[idx].size}
+                      </td>
+                      <td>{p.price}</td>
+                      <td>{ksk3[idx].price}</td>
+                      <td>{ksk4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex gap-2">
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАЛОРИФЕРЫ КСК
+                </Button>
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КСК
+                </Button>
+              </div>
+            </div>
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                КАЛОРИФЕРЫ ПАРОВЫЕ КПСК.
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="px-1 py-1.5 text-left">Калориферы</th>
+                    <th colSpan={3}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1.5 text-right">Количество рядов</th>
+                    <th>_2</th>
+                    <th>_3</th>
+                    <th>_4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kpvu2.map((p, idx) => (
+                    <tr>
+                      <td className="px-1 py-0.75 text-left">
+                        КПВУ КППУ {p.size}x{p.size}
+                      </td>
+                      <td>{p.price}</td>
+                      <td>{kpvu3[idx].price}</td>
+                      <td>{kpvu4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex flex-col justify-start gap-2">
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
+                </Button>
+                <Button className="rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <ProductParagraph>
