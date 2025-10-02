@@ -450,6 +450,80 @@ export default function ContactsAndPricesPage() {
         Цена/прайс-лист отопительных агрегатов
       </h2>
 
+      <div className="mx-auto max-w-6xl space-y-10">
+        {/* tvv-kp-kfb tables */}
+        <div className="space-y-2">
+          <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
+            ОТОПИТЕЛЬНЫЕ АГРЕГАТЫ ВОДЯНЫЕ И ПАРОВЫЕ
+          </h3>
+          <div className="flex flex-col gap-5 sm:flex-row">
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                АГРЕГАТЫ АО 2 ВОДЯНЫЕ И ПАРОВЫЕ
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th className="px-1 py-1.5 text-left">АГРЕГАТЫ АО 2</th>
+                    <th colSpan={2}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th className="px-1 py-1.5 text-right">КАЛОРИФЕР</th>
+                    <th>3 РЯДА</th>
+                    <th>4 РЯДА</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ao2v3.map((p, idx) => (
+                    <tr>
+                      <td className="px-1 text-left">{p.shortName} В П</td>
+                      <td>{p.price}</td>
+                      <td>{ao2v4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="flex gap-2"></div>
+            </div>
+
+            <div className="basis-full space-y-2">
+              <h3 className="text-xl uppercase sm:hidden">
+                АГРЕГАТЫ АВО ХЛ СТД-300 ВОДЯНЫЕ И ПАРОВЫЕ
+              </h3>
+              <table className="w-full">
+                <thead className="uppercase">
+                  <tr>
+                    <th colSpan={2} className="px-1 py-1.5 text-left">
+                      КАЛОРИФЕРЫ
+                    </th>
+                    <th colSpan={2}>Цена с учетом НДС</th>
+                  </tr>
+                  <tr>
+                    <th colSpan={2} className="px-1 py-1.5 text-right">
+                      Количество рядов
+                    </th>
+                    <th>3</th>
+                    <th>4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kfb3.map((p, idx) => (
+                    <tr>
+                      <td className="px-1 text-left">{p.shortName}</td>
+                      <td className="px-1 text-left">{kfb4[idx].shortName}</td>
+                      <td>{p.price}</td>
+                      <td>{kfb4[idx].price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-stretch gap-2 sm:flex-row md:items-stretch"></div>
+        </div>
+      </div>
+
       <p className="mx-auto max-w-6xl">
         В таблицах представлена цена отопительных агрегатов всех моделей с
         комплектуемыми калориферами на базе несущих электросварных трубок
