@@ -364,10 +364,16 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="flex gap-2">
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КСК
+                  КАЛОРИФЕРЫ ТВВ
                 </Button>
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАТАЛОГ КСК
+                  КАТАЛОГ ТВВ
+                </Button>
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАЛОРИФЕРЫ КП
+                </Button>
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАЛОРИФЕРЫ КП
                 </Button>
               </div>
             </div>
@@ -379,45 +385,39 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th colSpan={3} className="px-1 py-1.5 text-left">
-                      Калориферы КПСк
+                    <th colSpan={2} className="px-1 py-1.5 text-left">
+                      КАЛОРИФЕРЫ
                     </th>
-                    <th colSpan={3}>Цена с учетом НДС</th>
+                    <th colSpan={2}>Цена с учетом НДС</th>
                   </tr>
                   <tr>
-                    <th colSpan={3} className="px-1 py-1.5 text-right">
+                    <th colSpan={2} className="px-1 py-1.5 text-right">
                       Количество рядов
                     </th>
-                    <th>2</th>
                     <th>3</th>
                     <th>4</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {ksk2.map((p, idx) => (
+                  {kfb3.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">
-                        {p.rows}-{p.size}
-                      </td>
-                      <td className="px-1 text-left">
-                        {ksk3[idx].rows}-{ksk3[idx].size}
-                      </td>
-                      <td className="px-1 text-left">
-                        {ksk4[idx].rows}-{ksk4[idx].size}
-                      </td>
+                      <td className="px-1 text-left">{p.shortName}</td>
+                      <td className="px-1 text-left">{kfb4[idx].shortName}</td>
                       <td>{p.price}</td>
-                      <td>{ksk3[idx].price}</td>
-                      <td>{ksk4[idx].price}</td>
+                      <td>{kfb4[idx].price}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
               <div className="flex gap-2">
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КПСК
+                  КАЛОРИФЕРЫ КФБ-А ВОДЯНЫЕ
                 </Button>
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАТАЛОГ КПСК
+                  КАЛОРИФЕРЫ КФБ-А ПАРОВЫЕ
+                </Button>
+                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                  КАТАЛОГ КАЛОРИФЕРОВ КФБ-А
                 </Button>
               </div>
             </div>
