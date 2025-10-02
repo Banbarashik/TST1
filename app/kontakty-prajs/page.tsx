@@ -631,19 +631,25 @@ export default function ContactsAndPricesPage() {
               <table className="w-full">
                 <thead className="uppercase">
                   <tr>
-                    <th colSpan={2}>КАЛОРИФЕРЫ СФО</th>
-                    <th colSpan={2}>УСТАНОВКИ СФОЦ</th>
+                    <th colSpan={2} className="px-1 py-1.5 text-left">
+                      КАЛОРИФЕРЫ СФО
+                    </th>
+                    <th colSpan={2} className="px-1 text-left">
+                      УСТАНОВКИ СФОЦ
+                    </th>
                   </tr>
                   <tr>
-                    <th colSpan={4}>Цена с учетом НДС</th>
+                    <th colSpan={4} className="px-1 py-1.5">
+                      Цена с учетом НДС
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {sfo.map((p, idx) => (
                     <tr>
-                      <td>{p.shortName}</td>
+                      <td className="px-1 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
-                      <td>{sfotc[idx].shortName}</td>
+                      <td className="px-1 text-left">{sfotc[idx].shortName}</td>
                       <td>{sfotc[idx].price}</td>
                     </tr>
                   ))}
