@@ -318,9 +318,9 @@ export default function ContactsAndPricesPage() {
         </div>
 
         {/* tvv-kp-kfb tables */}
-        <div>
+        <div className="space-y-2">
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
-            КАЛОРИФЕРЫ ДЛЯ НИЗКИХ ТЕМПЕРАТУР.
+            КАЛОРИФЕРЫ ДЛЯ НИЗКИХ ТЕМПЕРАТУР
           </h3>
           <div className="flex flex-col gap-10 sm:flex-row">
             <div className="basis-full space-y-2">
@@ -363,18 +363,22 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ ТВВ
-                </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАТАЛОГ ТВВ
-                </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КП
-                </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КП
-                </Button>
+                <div className="flex basis-full flex-col gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                    КАЛОРИФЕРЫ ТВВ
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                    КАТАЛОГ ТВВ
+                  </Button>
+                </div>
+                <div className="flex basis-full flex-col gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                    КАЛОРИФЕРЫ КП
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+                    КАТАЛОГ КП
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -409,18 +413,19 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
-              <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КФБ-А ВОДЯНЫЕ
-                </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАЛОРИФЕРЫ КФБ-А ПАРОВЫЕ
-                </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
-                  КАТАЛОГ КАЛОРИФЕРОВ КФБ-А
-                </Button>
-              </div>
             </div>
+          </div>
+
+          <div className="flex gap-2">
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+              КАЛОРИФЕРЫ КФБ-А ВОДЯНЫЕ
+            </Button>
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+              КАЛОРИФЕРЫ КФБ-А ПАРОВЫЕ
+            </Button>
+            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-300 text-black uppercase">
+              КАТАЛОГ КАЛОРИФЕРОВ КФБ-А
+            </Button>
           </div>
         </div>
       </div>
