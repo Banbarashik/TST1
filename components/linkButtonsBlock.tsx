@@ -10,6 +10,7 @@ export default function LinkButtonsBlock({ buttons }) {
   return (
     <div
       className={cn("flex flex-col gap-2", {
+        "@2xl:flex-row": buttonsAmount === 2,
         "@3xl:flex-row": buttonsAmount === 3,
       })}
     >
