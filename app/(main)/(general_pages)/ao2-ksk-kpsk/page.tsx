@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты водяные",
@@ -18,13 +18,26 @@ export const metadata: Metadata = {
     "агрегат отопительный,агрегат воздушный,агрегат воздушно-отопительный,агрегат ао 2 водяной,отопительный агрегат ао 2 водяной,агрегаты ао 2 характеристики,агрегаты ао 2 габаритные размеры,агрегат ао 2 цена,купить агрегаты ао 2,агрегаты ао 2 производитель",
 };
 
-export default function AgregatyAO2V() {
-  const products = productData
-    .filter((p) => p.categories.includes("ao2-v"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ao2v3 = products.filter((p) => p.rows === 3);
-  const ao2v4 = products.filter((p) => p.rows === 4);
+const products = productData
+  .filter((p) => p.categories.includes("ao2-v"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ao2v3 = products.filter((p) => p.rows === 3);
+const ao2v4 = products.filter((p) => p.rows === 4);
 
+const linkButtons = [
+  {
+    name: "Каталог отопительных агрегатов",
+    url: "/documents/Agregat_AO2_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист водяных агрегатов",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function AgregatyAO2V() {
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные водяные" />
@@ -384,13 +397,7 @@ export default function AgregatyAO2V() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
-        tableLinkText="Скачать каталог водяных отопительных агрегатов АО2"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист водяных воздушных агрегатов АО2"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

@@ -9,6 +9,7 @@ import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы приточные водяные",
@@ -18,14 +19,27 @@ export const metadata: Metadata = {
     "калорифер приточный водяной,калорифер водяной для приточной вентиляции,калорифер водяной для приточной установки,расчет водяного приточного калорифера,подбор приточного калорифера водяного,водяные приточные калориферы цена,приточный водяной калорифер купить,водяные приточные калориферы характеристики,приточные водяные калориферы размеры,водяная приточная установка",
 };
 
-export default function KaloriferyVodaPage() {
-  const kpvs = productData
-    .filter((p) => p.categories.includes("kpvs"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kpvu = productData
-    .filter((p) => p.categories.includes("kpvu"))
-    .sort((a, b) => sortProducts(a.name, b.name));
+const kpvs = productData
+  .filter((p) => p.categories.includes("kpvs"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kpvu = productData
+  .filter((p) => p.categories.includes("kpvu"))
+  .sort((a, b) => sortProducts(a.name, b.name));
 
+const linkButtons = [
+  {
+    name: "Каталог водяных калориферов",
+    url: "/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист водяных калориферов",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function KaloriferyVodaPage() {
   return (
     <>
       <Heading lvl={1} text="Калориферы приточные КПВС и КПВУ" />
@@ -163,13 +177,7 @@ export default function KaloriferyVodaPage() {
         />
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-        tableLinkText="Скачать каталог приточных водяных калориферов"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист приточных водяных калориферов"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

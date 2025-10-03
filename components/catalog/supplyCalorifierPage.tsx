@@ -5,11 +5,11 @@ import type { SupplyCalorifier } from "@/types";
 
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 import ProductCard from "@/components/catalog/productCard";
 import ProductHeader from "@/components/catalog/productHeader";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 
 export default function SupplyCalorifierPage({
   product,
@@ -37,8 +37,23 @@ export default function SupplyCalorifierPage({
   const isWater = heatCarrier === "water";
   const isSteam = heatCarrier === "steam";
 
+  const linkButtons = [
+    {
+      name: `${heatCarrierAdj.plu} приточные калориферы`,
+      url: isWater ? "/kalorifery-voda" : "/kalorifery-par",
+      openNewTab: false,
+    },
+    {
+      name: `Каталог калориферов ${product.series}`,
+      url: isWater
+        ? "/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+        : "/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf",
+      openNewTab: true,
+    },
+  ];
+
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
         Приточный {heatCarrierAdj?.nom} калорифер {shortNameWithHyphen}{" "}
@@ -201,16 +216,8 @@ export default function SupplyCalorifierPage({
           className="mb-10"
         />
       )}
-      <TableAndCatalogLinks
-        tableURL={isWater ? "/kalorifery-voda" : "/kalorifery-par"}
-        tableLinkText={`Приточные ${heatCarrierAdj.plu} калориферы – характеристики`}
-        catalogURL={
-          isWater
-            ? "/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
-            : "/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
-        }
-        catalogLinkText={`Скачать каталог приточных калориферов ${product.series}`}
-      />
+
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }

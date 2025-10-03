@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные КСк",
@@ -18,14 +18,27 @@ export const metadata: Metadata = {
     "калорифер кск,калорифер водяной кск,калориферы кск технические характеристики,калорифер кск мощность,калориферы кск габаритные размеры,купить калориферы кск,калориферы кск цена,калорифер кск 2,калорифер кск 3,калорифер кск 4",
 };
 
-export default function KaloriferyKSKPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("ksk"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ksk2 = products.filter((p) => p.rows === 2);
-  const ksk3 = products.filter((p) => p.rows === 3);
-  const ksk4 = products.filter((p) => p.rows === 4);
+const products = productData
+  .filter((p) => p.categories.includes("ksk"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ksk2 = products.filter((p) => p.rows === 2);
+const ksk3 = products.filter((p) => p.rows === 3);
+const ksk4 = products.filter((p) => p.rows === 4);
 
+const linkButtons = [
+  {
+    name: "Каталог водяных калориферов КСк",
+    url: "/documents/Kalorifer_KSK_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов КСк",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function KaloriferyKSKPage() {
   return (
     <>
       <Heading lvl={1} text="Калориферы КСк водяные" />
@@ -193,13 +206,7 @@ export default function KaloriferyKSKPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
-        tableLinkText="Скачать каталог водяных калориферов КСк"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист калориферов КСк"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

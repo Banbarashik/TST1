@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты паровые",
@@ -18,13 +18,26 @@ export const metadata: Metadata = {
     "агрегат отопительный паровой,агрегат воздушный паровой,агрегат паровой воздушно-отопительный,агрегат ао 2 паровой,отопительный агрегат ао 2 паровой,паровые агрегаты ао 2 характеристики,паровые агрегаты ао 2 габаритные размеры,паровой агрегат ао 2 цена,купить паровые агрегаты ао 2,паровые агрегаты ао 2 производитель",
 };
 
-export default function AgregatyAO2P() {
-  const products = productData
-    .filter((p) => p.categories.includes("ao2-p"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ao2p3 = products.filter((p) => p.rows === 3);
-  const ao2p4 = products.filter((p) => p.rows === 4);
+const products = productData
+  .filter((p) => p.categories.includes("ao2-p"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ao2p3 = products.filter((p) => p.rows === 3);
+const ao2p4 = products.filter((p) => p.rows === 4);
 
+const linkButtons = [
+  {
+    name: "Каталог паровых агрегатов",
+    url: "/documents/Agregat_AO2_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист паровых агрегатов",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function AgregatyAO2P() {
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные паровые" />
@@ -385,13 +398,7 @@ export default function AgregatyAO2P() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableURL="/documents/Agregat_AO2_katalog_2025.pdf"
-        tableLinkText="Скачать каталог паровых отопительных агрегатов АО2"
-        tableLinkOpenNewTab
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист паровых воздушных агрегатов АО2"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

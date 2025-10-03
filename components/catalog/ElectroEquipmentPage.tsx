@@ -9,6 +9,7 @@ import SimilarProductLink from "@/components/catalog/similarProductLink";
 import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 import { sortProducts } from "@/lib/utils";
 import React from "react";
+import LinkButtonsBlock from "../linkButtonsBlock";
 
 const equipmentType = {
   sfo: {
@@ -40,14 +41,14 @@ const catalogLinkUrl = {
   shuk: "Electroshkaf_SHUK_katalog_2025.pdf",
 };
 const tableLinkText = {
-  sfo: "Электрокалориферы СФО - технические характеристики",
-  sfotc: "Электрокалориферные установки СФОЦ - характеристики",
-  shuk: "Шкафы управления калорифером - характеристики",
+  sfo: "Электрокалориферы СФО",
+  sfotc: "Установки СФОЦ - характеристики",
+  shuk: "Шкафы управления калорифером",
 };
 const catalogLinkText = {
-  sfo: "Скачать каталог электрокалориферов СФО",
-  sfotc: "Скачать каталог электрических установок СФОЦ",
-  shuk: "Скачать каталог шкафов управления калорифером",
+  sfo: "Каталог калориферов СФО",
+  sfotc: "Каталог установок СФОЦ",
+  shuk: "Каталог шкафов управления ШУК",
 };
 
 const tableLabels = {
@@ -159,8 +160,21 @@ export default function ElectroEquipmentPage({ product }) {
       ? `Шкаф управления калорифером ${product.shortName}`
       : product.name;
 
+  const linkButtons = [
+    {
+      name: tableLinkText[preciseCategory],
+      url: "/" + tableLinkUrl[preciseCategory],
+      openNewTab: false,
+    },
+    {
+      name: catalogLinkText[preciseCategory],
+      url: "/documents/" + catalogLinkUrl[preciseCategory],
+      openNewTab: true,
+    },
+  ];
+
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{productName}</h1>
       <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6">
         <ProductCard
@@ -387,12 +401,8 @@ export default function ElectroEquipmentPage({ product }) {
           </div>
         </>
       )}
-      <TableAndCatalogLinks
-        tableURL={"/" + tableLinkUrl[preciseCategory]}
-        tableLinkText={tableLinkText[preciseCategory]}
-        catalogURL={"/documents/" + catalogLinkUrl[preciseCategory]}
-        catalogLinkText={catalogLinkText[preciseCategory]}
-      />
+
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }

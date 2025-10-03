@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import CategoryCards from "@/components/categoryCards";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Производство промышленного воздушно-отопительного оборудования",
@@ -39,10 +40,27 @@ const produkciyaCategories = [
     img: "/img/produkciya/vozduchonagrevatelnye_ustanovki.png",
   },
 ];
+const linkButtons = [
+  {
+    name: "Калориферы",
+    url: "/documents/Sertificat_kalorifery.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Отопительные агрегаты",
+    url: "/documents/Sertificat_agregaty.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Воздухонагревательные установки",
+    url: "/documents/Sertificat_ustanovki.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function ProdukciyaPage() {
   return (
-    <article className="space-y-6">
+    <article className="@container w-full space-y-6">
       <Heading lvl={1} text="Промышленное воздушно-отопительное оборудование" />
       <ProductParagraph>
         Машиностроительное предприятие по производству промышленного
@@ -240,33 +258,7 @@ export default function ProdukciyaPage() {
 
       <section>
         <Heading lvl={2} text="Сертификаты" className="mb-4" />
-        {/* TODO create an array the links will be build off  */}
-        <div className="mx-auto flex w-full flex-col items-center gap-6 sm:max-w-fit xl:max-w-none xl:flex-row">
-          <Button
-            asChild
-            className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
-          >
-            <Link href="/documents/Sertificat_kalorifery.pdf" target="_blank">
-              Калориферы
-            </Link>
-          </Button>
-          <Button
-            asChild
-            className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
-          >
-            <Link href="/documents/Sertificat_agregaty.pdf" target="_blank">
-              Отопительные агрегаты
-            </Link>
-          </Button>
-          <Button
-            asChild
-            className="text-md h-full flex-1/2 bg-gray-300 text-center font-semibold whitespace-normal text-black 2xl:whitespace-nowrap"
-          >
-            <Link href="/documents/Sertificat_ustanovki.pdf" target="_blank">
-              Воздухонагревательные установки
-            </Link>
-          </Button>
-        </div>
+        <LinkButtonsBlock buttons={linkButtons} />
       </section>
     </article>
   );

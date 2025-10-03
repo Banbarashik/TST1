@@ -5,9 +5,9 @@ import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
 import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -31,8 +31,21 @@ export default function AVOPage({ product }) {
       p.categories.includes("avo") && p.heatCarrier === oppositeHeatCarrier,
   );
 
+  const linkButtons = [
+    {
+      name: `${heatCarrierAdj.plu} агрегаты АВО ХЛ`,
+      url: "/avo-tvv-kp",
+      openNewTab: false,
+    },
+    {
+      name: `Каталог ${heatCarrierAdj.pluGen} агрегатов АВО ХЛ`,
+      url: "/documents/Agregat_AVO-HL_katalog_2025.pdf",
+      openNewTab: true,
+    },
+  ];
+
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       <div className="mb-8 flex gap-5 overflow-x-auto md:grid md:grid-cols-3 lg:gap-0 xl:gap-5">
         {product.variants.map(function (variant) {
@@ -156,12 +169,7 @@ export default function AVOPage({ product }) {
         />
       </div>
 
-      <TableAndCatalogLinks
-        tableURL="/avo-tvv-kp"
-        tableLinkText={`Агрегаты АВО ХЛ ${heatCarrierAdj.plu} – характеристики`}
-        catalogURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-        catalogLinkText={`Скачать каталог ${heatCarrierAdj.pluGen} агрегатов АВО ХЛ`}
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }

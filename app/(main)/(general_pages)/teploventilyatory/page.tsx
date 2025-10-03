@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Электрокалориферные установки СФОЦ. Производство",
@@ -18,11 +18,24 @@ export const metadata: Metadata = {
     "электрокалориферные установки сфоц,электрокалориферные установки экоц,электрические установки сфоц,цена установок сфоц,купить электрокалориферную установку экоц,технические характеристики установок сфоц,габаритные размеры установок сфоц,электросхемы установок сфоц,подсоединение электрокалориферных установок экоц,производитель электрокалориферных установок сфоц",
 };
 
-export default function UstanovkiSFOTC() {
-  const products = productData
-    .filter((p) => p.categories.includes("sfotc"))
-    .sort((a, b) => sortProducts(a.name, b.name));
+const products = productData
+  .filter((p) => p.categories.includes("sfotc"))
+  .sort((a, b) => sortProducts(a.name, b.name));
 
+const linkButtons = [
+  {
+    name: "Каталог электроустановок СФОЦ",
+    url: "/documents/Electroustanovka_SFOTC_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист установок СФОЦ",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function UstanovkiSFOTC() {
   return (
     <>
       <Heading lvl={1} text="Электрокалориферные установки СФОЦ" />
@@ -388,13 +401,7 @@ export default function UstanovkiSFOTC() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Electroustanovka_SFOTC_katalog_2025.pdf"
-        tableLinkText="Скачать каталог электрокалориферных установок СФОЦ"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист электрокалориферных установок СФОЦ"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

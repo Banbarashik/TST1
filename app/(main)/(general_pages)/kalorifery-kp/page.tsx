@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КП",
@@ -18,13 +18,26 @@ export const metadata: Metadata = {
     "калорифер кп,калориферы кп цена,калорифер для сушки древесины,калорифер для охлаждения масла,калорифер для зерносушилки,калорифер внп,калорифер внп паровой,воздухонагреватель внп 113,воздухонагреватели внп 113 купить,калорифер в сушильную камеру",
 };
 
-export default function KaloriferyKPPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("kp"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kp3 = products.filter((p) => p.rows === 3);
-  const kp4 = products.filter((p) => p.rows === 4);
+const products = productData
+  .filter((p) => p.categories.includes("kp"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kp3 = products.filter((p) => p.rows === 3);
+const kp4 = products.filter((p) => p.rows === 4);
 
+const linkButtons = [
+  {
+    name: "Каталог паровых калориферов КП",
+    url: "/documents/Kalorifer_KP_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов КП",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
+
+export default function KaloriferyKPPage() {
   return (
     <>
       <Heading lvl={1} text="Калориферы КП паровые" />
@@ -175,13 +188,7 @@ export default function KaloriferyKPPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KP_katalog_2025.pdf"
-        tableLinkText="Скачать каталог паровых калориферов"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист паровых калориферов"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }

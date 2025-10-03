@@ -10,7 +10,7 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
@@ -71,8 +71,21 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   if (category === "ao2" && product.heatCarrier === "steam")
     URLs = ["ao2-kpsk-ksk", "Agregat_AO2_katalog_2025.pdf"];
 
+  const linkButtons = [
+    {
+      name: `${isKFB || isAgregat ? heatCarrierAdj.plu : ""} ${isCalorifier ? "калориферы" : "агрегаты"} ${product.series} ${isKFB || isAgregat ? "" : "- характеристики"}`,
+      url: "/" + URLs[0],
+      openNewTab: false,
+    },
+    {
+      name: `Каталог ${isAgregat ? heatCarrierAdj.pluGen : ""} ${isCalorifier ? "калориферов" : "агрегатов"} ${product.series} ${isKFB && product.heatCarrier === "water" ? "М" : isKFB && product.heatCarrier === "steam" ? "П" : ""}`,
+      url: "/documents/" + URLs[1],
+      openNewTab: true,
+    },
+  ];
+
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <h1 className="mb-8 text-xl font-bold uppercase">{product.name}</h1>
       <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6">
         <ProductCard
@@ -299,12 +312,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </tbody>
         </table>
       </div>
-      <TableAndCatalogLinks
-        tableURL={"/" + URLs[0]}
-        tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
-        catalogURL={"/documents/" + URLs[1]}
-        catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }
