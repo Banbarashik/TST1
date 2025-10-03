@@ -760,7 +760,11 @@ export default function ContactsAndPricesPage() {
               </td>
             </tr>
             <tr className="text-sm">
-              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              <th
+                colSpan={4}
+                className="px-1 py-0.75"
+                style={{ fontSize: "14px" }}
+              >
                 СОКРАЩЕННОЕ НАИМЕНОВАНИЕ
               </th>
               <td colSpan={4}>ООО «Т.С.Т.»</td>
@@ -769,7 +773,7 @@ export default function ContactsAndPricesPage() {
               <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
                 ЮРИДИЧЕСКИЙ АДРЕС
               </th>
-              <td colSpan={4}>
+              <td colSpan={4} className="px-1">
                 630108, Новосибирск г., Широкая ул., здание 1А, офис 207/1
               </td>
             </tr>
@@ -777,7 +781,7 @@ export default function ContactsAndPricesPage() {
               <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
                 ПОЧТОВЫЙ АДРЕС
               </th>
-              <td colSpan={4}>
+              <td colSpan={4} className="px-1">
                 652710, Кемеровская обл., Киселевск г., Юргинская ул., дом № 1
               </td>
             </tr>
@@ -809,13 +813,19 @@ export default function ContactsAndPricesPage() {
               <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
                 БАНК
               </th>
-              <td colSpan={2}>Филиал «Центральный» Банка ВТБ ПАО г. Москва</td>
-              <td colSpan={2}>
+              <td colSpan={2} className="px-1">
+                Филиал «Центральный» Банка ВТБ ПАО г. Москва
+              </td>
+              <td colSpan={2} className="px-1">
                 Кемеровское отделение № 8615 ПАО Сбербанк г. Кемерово
               </td>
             </tr>
             <tr className="text-sm">
-              <th colSpan={4} className="py-0.75" style={{ fontSize: "14px" }}>
+              <th
+                colSpan={4}
+                className="px-1 py-0.75"
+                style={{ fontSize: "14px" }}
+              >
                 КОРРЕСПОНДЕНТСКИЙ СЧЕТ
               </th>
               <td colSpan={2}>301 018 101 4525 00 004 11</td>
@@ -859,7 +869,9 @@ export default function ContactsAndPricesPage() {
                 ОТДЕЛ ПРОДАЖ
               </th>
               <td colSpan={2}>8-904-968-14-88</td>
-              <td colSpan={2}>Семенова Татьяна Владимировна</td>
+              <td colSpan={2} className="px-1">
+                Семенова Татьяна Владимировна
+              </td>
             </tr>
           </tbody>
         </table>
