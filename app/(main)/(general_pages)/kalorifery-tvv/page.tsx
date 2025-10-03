@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы водяные ТВВ",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "калорифер твв,калориферы твв цена,калориферы твв технические характеристики,воздухонагреватели для холодного климата водяные,калориферы водяные для низких температурных режимов,калорифер внв,калорифер внв водяной,воздухонагреватель внв 113,воздухонагреватель внв 113 22 хл,воздухонагреватели внв 113 купить",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог водяных калориферов ТВВ",
+    url: "/documents/Kalorifer_TVV_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов ТВВ",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function KaloriferyTVVPage() {
   const products = productData
@@ -160,13 +173,7 @@ export default function KaloriferyTVVPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_TVV_katalog_2025.pdf"
-        tableLinkText="Скачать каталог водяных калориферов ТВВ"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист калориферов ТВВ"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
