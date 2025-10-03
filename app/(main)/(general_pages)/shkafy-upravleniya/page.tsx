@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Шкафы управления калорифером ШУК. Производство",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "шкаф управления калорифером шук,шкаф управления электрокалорифером сфо,шкаф управления установкой сфоц,шкаф управления электрокалорифером эко,шкаф управления установкой экоц,электросхема подсоединения шкафов управления калорифером,монтаж и подключение шкафа управления калорифером,шкафы шук технические характеристики,купить шкаф управления калорифером,цена шкафа управления электрическим калорифером",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог шкафов ШУК",
+    url: "/documents/Electroshkaf_SHUK_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист шкафов управления",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function ShkafyUpravleniyaSHUK() {
   const products = productData
@@ -470,13 +483,7 @@ export default function ShkafyUpravleniyaSHUK() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
-        tableLinkText="Скачать каталог шкафов управления калорифером ШУК"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист шкафов управления калорифером ШУК"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
