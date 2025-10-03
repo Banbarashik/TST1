@@ -8,7 +8,20 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
+
+const linkButtons = [
+  {
+    name: "Каталог водяных калориферов КСк",
+    url: "/documents/Kalorifer_KSK_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов КСк",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export const metadata: Metadata = {
   title: "Калориферы водяные КСк",
@@ -193,13 +206,7 @@ export default function KaloriferyKSKPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KSK_katalog_2025.pdf"
-        tableLinkText="Скачать каталог водяных калориферов КСк"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист калориферов КСк"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
