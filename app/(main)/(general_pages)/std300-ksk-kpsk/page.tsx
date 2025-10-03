@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты водяные СТД-300",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "стд 300,агрегат стд 300,агрегат воздушный стд 300,агрегат воздушно-отопительный стд 300,отопительный агрегат стд 300 водяной,агрегаты стд 300 производитель,отопительные агрегаты мощностью 300 кВт,отопительный агрегат для охлаждения жидкостей,отопительный агрегат для технологического нагрева,отопительные агрегаты с производительностью 25000",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог водяных агрегатов",
+    url: "/documents/Agregat_STD-300_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист агрегатов СТД-300 в",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function AgregatySTD300V() {
   const products = productData
@@ -272,13 +285,7 @@ export default function AgregatySTD300V() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Agregat_STD-300_katalog_2025.pdf"
-        tableLinkText="Скачать каталог агрегатов СТД-300"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист агрегатов СТД-300"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
