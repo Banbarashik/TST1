@@ -10,7 +10,7 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import STDSpecsTable from "@/components/catalog/STDSpecsTable";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -30,6 +30,22 @@ export default function STDPage({ product }) {
     product.heatCarrier === "water" ? "steam" : "water";
   const oppositeHeatCarrierAdj = getHeatCarrierAdj(oppositeHeatCarrier);
   const isSTD300 = product.categories.includes("std300");
+
+  const linkButtons = [
+    {
+      name: `${heatCarrierAdj.plu} агрегаты ${product.shortName}`,
+      url:
+        product.heatCarrier === "water" ? "/std300-ksk-kpsk" : "/std300-tvv-kp",
+      openNewTab: false,
+    },
+    {
+      name: `Каталог ${isSTD300 ? heatCarrierAdj.pluGen : ""} агрегатов ${isSTD300 ? product.shortName : product.model}`,
+      url: isSTD300
+        ? "/documents/Agregat_STD-300_katalog_2025.pdf"
+        : "/documents/Agregat_STD-300-HL_katalog_2025.pdf",
+      openNewTab: true,
+    },
+  ];
 
   return (
     <div className="lg:overflow-x-auto">
@@ -218,20 +234,8 @@ export default function STDPage({ product }) {
           }
         />
       </div>
-      <TableAndCatalogLinks
-        tableURL={
-          product.heatCarrier === "water"
-            ? "/std300-ksk-kpsk"
-            : "/std300-tvv-kp"
-        }
-        tableLinkText={`Агрегаты ${product.shortName} ${heatCarrierAdj.plu} – характеристики`}
-        catalogURL={
-          isSTD300
-            ? "/documents/Agregat_STD-300_katalog_2025.pdf"
-            : "/documents/Agregat_STD-300-HL_katalog_2025.pdf"
-        }
-        catalogLinkText={`Скачать каталог ${heatCarrierAdj.pluGen} агрегатов ${product.shortName}`}
-      />
+
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }
