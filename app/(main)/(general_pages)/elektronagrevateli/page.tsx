@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Электрокалориферы СФО. Производство",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "электрокалориферы сфо,электрокалориферы эко,электрические калориферы сфо,цена электрокалориферов сфо,купить электрокалорифер эко,технические характеристики электрокалориферов сфо,габаритные размеры электронагревателей сфо,электросхемы калориферов сфо,подсоединение электрокалориферов эко,производитель электрокалориферов сфо",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог электрокалориферов СФО",
+    url: "/documents/Electrokalorifer_SFO_katalog_2025.pdf",
+    openNewTable: true,
+  },
+  {
+    name: "Прайс-лист калориферов СФО",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTable: true,
+  },
+];
 
 export default function KaloriferySFO() {
   const products = productData
@@ -353,13 +366,7 @@ export default function KaloriferySFO() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
-        tableLinkText="Скачать каталог электрокалориферов СФО"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист электрокалориферов СФО"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
