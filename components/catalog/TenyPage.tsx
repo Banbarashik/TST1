@@ -3,7 +3,20 @@ import Image from "next/image";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductCard from "@/components/catalog/productCard";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
+import LinkButtonsBlock from "../linkButtonsBlock";
+
+const linkButtons = [
+  {
+    name: "Каталог оребренных ТЭНов",
+    url: "/documents/Electroten_TENY_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист оребренных ТЭНов",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function TenyPage({ product }) {
   return (
@@ -117,13 +130,7 @@ export default function TenyPage({ product }) {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableURL="/documents/Electroten_TENY_katalog_2025.pdf"
-        tableLinkText="Скачать каталог оребренных воздушных ТЭНОВ"
-        tableLinkOpenNewTab
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист оребренных тэнов ТЭНР"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </article>
   );
 }
