@@ -174,7 +174,7 @@ export default function ElectroEquipmentPage({ product }) {
   ];
 
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{productName}</h1>
       <div className="mb-6 grid grid-rows-[minmax(0,max-content)_1fr] gap-y-5 sm:grid-cols-[max-content_minmax(0,1fr)] sm:gap-x-6">
         <ProductCard

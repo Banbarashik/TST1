@@ -53,7 +53,7 @@ export default function SupplyCalorifierPage({
   ];
 
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <ProductHeader product={product} />
       <ProductParagraph className="mb-6">
         Приточный {heatCarrierAdj?.nom} калорифер {shortNameWithHyphen}{" "}

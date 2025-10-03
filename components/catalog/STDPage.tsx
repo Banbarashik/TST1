@@ -48,7 +48,7 @@ export default function STDPage({ product }) {
   ];
 
   return (
-    <div className="lg:overflow-x-auto">
+    <div className="@container w-full lg:overflow-x-auto">
       <h1 className="mb-8 text-2xl font-bold uppercase">{product.name}</h1>
       {product.variants.map(function (variant, i) {
         const rowsNumberAdj = getRowsNumberAdj(variant.rows);
