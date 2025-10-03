@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты АВО ХЛ",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "агрегат аво,агрегат аво хл,водяной агрегат аво,паровой агрегат аво,агрегаты аво производитель,отопительный агрегат для сушки материалов,отопительный агрегат для зерносушилки,агрегат воздушно-отопительный для сельскохозяйственных помещений,агрегат отопительный для животноводческих ферм,отопительный агрегат для птицеводческих комплексов",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог воздушных агрегатов",
+    url: "/documents/Agregat_AVO-HL_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист воздушных агрегатов",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function AgregatyAVO() {
   const products = productData
@@ -324,13 +337,7 @@ export default function AgregatyAVO() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-        tableLinkText="Скачать каталог воздушных агрегатов АВО ХЛ"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист воздушных агрегатов АВО ХЛ"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
