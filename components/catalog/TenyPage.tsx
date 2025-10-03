@@ -20,7 +20,7 @@ const linkButtons = [
 
 export default function TenyPage({ product }) {
   return (
-    <article className="flex flex-col gap-6">
+    <article className="@container flex w-full flex-col gap-6">
       <Heading lvl={1} text="ТЭНы оребренные воздушные" />
 
       <section className="flex flex-col items-start gap-4 sm:flex-row">

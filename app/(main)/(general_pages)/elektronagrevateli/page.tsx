@@ -26,12 +26,12 @@ const linkButtons = [
   {
     name: "Каталог электрокалориферов СФО",
     url: "/documents/Electrokalorifer_SFO_katalog_2025.pdf",
-    openNewTable: true,
+    openNewTab: true,
   },
   {
     name: "Прайс-лист калориферов СФО",
     url: "/documents/Price_list_zao_tst_2025.pdf",
-    openNewTable: true,
+    openNewTab: true,
   },
 ];
 
