@@ -10,7 +10,7 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
@@ -70,6 +70,28 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
     URLs = ["ao2-ksk-kpsk", "Agregat_AO2_katalog_2025.pdf"];
   if (category === "ao2" && product.heatCarrier === "steam")
     URLs = ["ao2-kpsk-ksk", "Agregat_AO2_katalog_2025.pdf"];
+
+  {
+    /* <TableAndCatalogLinks
+    tableURL={"/" + URLs[0]}
+    tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
+    catalogURL={"/documents/" + URLs[1]}
+    catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
+  />; */
+  }
+
+  const linkButtons = [
+    {
+      name: `${isKFB || isAgregat ? heatCarrierAdj.plu : ""} ${isCalorifier ? "калориферы" : "агрегаты"} ${product.series} ${isKFB || isAgregat ? "" : "- характеристики"}`,
+      url: ``,
+      openNewTab: false,
+    },
+    {
+      name: ``,
+      url: ``,
+      openNewTab: true,
+    },
+  ];
 
   return (
     <div className="lg:overflow-x-auto">
@@ -299,12 +321,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </tbody>
         </table>
       </div>
-      <TableAndCatalogLinks
-        tableURL={"/" + URLs[0]}
-        tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
-        catalogURL={"/documents/" + URLs[1]}
-        catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }
