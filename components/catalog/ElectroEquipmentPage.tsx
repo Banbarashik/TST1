@@ -6,7 +6,6 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 import { sortProducts } from "@/lib/utils";
 import React from "react";
 import LinkButtonsBlock from "../linkButtonsBlock";

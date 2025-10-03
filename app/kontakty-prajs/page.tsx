@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 
 import { sortProducts } from "@/lib/utils";
 
-import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import { Button } from "@/components/ui/button";
 
@@ -145,7 +144,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {kpps2.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">
                         КПВС КППС {p.size}x{p.size}
                       </td>
@@ -197,7 +196,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {kpvu2.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">
                         КПВУ КППУ {p.size}x{p.size}
                       </td>
@@ -262,7 +261,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {ksk2.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">
                         {p.rows}-{p.size}
                       </td>
@@ -323,7 +322,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {ksk2.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">
                         {p.rows}-{p.size}
                       </td>
@@ -401,7 +400,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {tvv3.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">
                         {p.rows}
                         {p.size < 10 ? "0" + p.size : p.size}
@@ -482,7 +481,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {kfb3.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td className="px-1 text-left">{kfb4[idx].shortName}</td>
                       <td>{p.price}</td>
@@ -557,7 +556,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {ao2v3.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-1 text-left">{p.shortName} В П</td>
                       <td>{p.price}</td>
                       <td>{ao2v4[idx].price}</td>
@@ -639,7 +638,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {avoTvvVariants.map((p) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-1 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                     </tr>
@@ -652,7 +651,7 @@ export default function ContactsAndPricesPage() {
                     <th className="px-1">ЦЕНА С УЧЕТОМ НДС</th>
                   </tr>
                   {std300.map((p) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-1 text-left">
                         СТД-300 В{p.rows} П{p.rows}
                       </td>
@@ -660,7 +659,7 @@ export default function ContactsAndPricesPage() {
                     </tr>
                   ))}
                   {std300hl.map((p) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-1 text-left">
                         СТД-300 ХЛ В{p.rows} П{p.rows}
                       </td>
@@ -822,7 +821,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {sfo.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                       <td className="px-1 text-left">{sfotc[idx].shortName}</td>
@@ -896,7 +895,7 @@ export default function ContactsAndPricesPage() {
                 </thead>
                 <tbody>
                   {shuk.map((p, idx) => (
-                    <tr>
+                    <tr key={p.id}>
                       <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                       <td className="px-1 text-left">

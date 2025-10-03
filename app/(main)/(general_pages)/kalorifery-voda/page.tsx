@@ -8,7 +8,6 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
