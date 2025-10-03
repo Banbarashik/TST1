@@ -16,6 +16,7 @@ export default function LinkButtonsBlock({ buttons }) {
     >
       {buttons.map((btn) => (
         <Button
+          key={btn.name}
           asChild
           className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
         >
