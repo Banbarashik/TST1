@@ -239,7 +239,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {ksk2.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">
+                      <td className="px-1 py-0.75 text-left">
                         {p.rows}-{p.size}
                       </td>
                       <td className="px-1 text-left">
@@ -289,7 +289,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {ksk2.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">
+                      <td className="px-1 py-0.75 text-left">
                         {p.rows}-{p.size}
                       </td>
                       <td className="px-1 text-left">
@@ -356,7 +356,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {tvv3.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">
+                      <td className="px-1 py-0.75 text-left">
                         {p.rows}
                         {p.size < 10 ? "0" + p.size : p.size}
                       </td>
@@ -415,7 +415,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {kfb3.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">{p.shortName}</td>
+                      <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td className="px-1 text-left">{kfb4[idx].shortName}</td>
                       <td>{p.price}</td>
                       <td>{kfb4[idx].price}</td>
@@ -468,7 +468,7 @@ export default function ContactsAndPricesPage() {
                     <th colSpan={2}>Цена с учетом НДС</th>
                   </tr>
                   <tr>
-                    <th className="px-1 py-1 text-right">КАЛОРИФЕР</th>
+                    <td className="px-1 py-1 text-right">КАЛОРИФЕР</td>
                     <th>3 РЯДА</th>
                     <th>4 РЯДА</th>
                   </tr>
@@ -533,7 +533,7 @@ export default function ContactsAndPricesPage() {
                     <td colSpan={2} />
                   </tr>
                   <tr>
-                    <th className="px-1 py-1 text-left">АГРЕГАТЫ СТД-300</th>
+                    <td className="px-1 py-1 text-left">АГРЕГАТЫ СТД-300</td>
                     <th className="px-1">ЦЕНА С УЧЕТОМ НДС</th>
                   </tr>
                   {std300.map((p) => (
@@ -647,7 +647,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {sfo.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">{p.shortName}</td>
+                      <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                       <td className="px-1 text-left">{sfotc[idx].shortName}</td>
                       <td>{sfotc[idx].price}</td>
@@ -691,7 +691,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {shuk.map((p, idx) => (
                     <tr>
-                      <td className="px-1 text-left">{p.shortName}</td>
+                      <td className="px-1 py-0.75 text-left">{p.shortName}</td>
                       <td>{p.price}</td>
                       <td className="px-1 text-left">
                         {idx === 0 && "ТЭН ОР."}
