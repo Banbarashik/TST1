@@ -71,24 +71,15 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
   if (category === "ao2" && product.heatCarrier === "steam")
     URLs = ["ao2-kpsk-ksk", "Agregat_AO2_katalog_2025.pdf"];
 
-  {
-    /* <TableAndCatalogLinks
-    tableURL={"/" + URLs[0]}
-    tableLinkText={`${isCalorifier ? "Калориферы" : "Агрегаты"} ${product.series} ${isKFB || isAgregat ? heatCarrierAdj.plu : ""} – ${isKFB ? "" : "технические"} характеристики`}
-    catalogURL={"/documents/" + URLs[1]}
-    catalogLinkText={`Скачать каталог ${isCalorifier ? "калориферов" : `${heatCarrierAdj.pluGen} агрегатов`} ${product.series}${isKFB ? `${product.heatCarrier === "water" ? " М" : " П"}` : ""}`}
-  />; */
-  }
-
   const linkButtons = [
     {
       name: `${isKFB || isAgregat ? heatCarrierAdj.plu : ""} ${isCalorifier ? "калориферы" : "агрегаты"} ${product.series} ${isKFB || isAgregat ? "" : "- характеристики"}`,
-      url: ``,
+      url: "/" + URLs[0],
       openNewTab: false,
     },
     {
-      name: ``,
-      url: ``,
+      name: `Каталог ${isAgregat ? heatCarrierAdj.pluGen : ""} ${isCalorifier ? "калориферов" : "агрегатов"} ${product.series} ${isKFB && product.heatCarrier === "water" ? "М" : isKFB && product.heatCarrier === "steam" ? "П" : ""}`,
+      url: "/documents/" + URLs[1],
       openNewTab: true,
     },
   ];
