@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Воздушно-отопительные агрегаты паровые СТД-300",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "стд 300 пар,отопительный агрегат стд 300 паровой,агрегат паровой стд 300 характеристики,агрегат стд 300 габаритные размеры,паровой агрегат 25000,паровой агрегат отопительный,отопительный агрегат для термомасла,отопительный агрегат для сушки зерна,отопительный агрегат для сушки древесины и пиломатериалов,отопительный паровой агрегат для сушильной камеры",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог агрегатов паровых СТД-300",
+    url: "/documents/Agregat_STD-300-HL_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист агрегатов СТД-300 хл",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function AgregatySTD300P() {
   const products = productData
@@ -273,13 +286,7 @@ export default function AgregatySTD300P() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
-        tableLinkText="Скачать каталог агрегатов СТД-300 ХЛ"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист агрегатов СТД-300 ХЛ"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
