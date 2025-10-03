@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КПСк",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "калорифер кпск,калорифер паровой кпск,калориферы кпск технические характеристики,калорифер кпск мощность,калориферы кпск габаритные размеры,купить калориферы кпск,калориферы кпск цена,калориферы кпск 2,калориферы кпск 3,калориферы кпск 4",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог калориферов КПСк",
+    url: "/documents/Kalorifer_KPSK_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов КПСк",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function KaloriferyKPSKPage() {
   const products = productData
@@ -205,13 +218,7 @@ export default function KaloriferyKPSKPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KPSK_katalog_2025.pdf"
-        tableLinkText="Скачать каталог паровых калориферов КПСк"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист калориферов КПСк"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
