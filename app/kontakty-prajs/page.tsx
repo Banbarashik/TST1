@@ -160,8 +160,16 @@ export default function ContactsAndPricesPage() {
                 <Button className="rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   ПРИТОЧНЫЕ ВОДЯНЫЕ КАЛОРИФЕРЫ
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  КАТАЛОГ КАЛОРИФЕРОВ КПВС КПВУ
+                <Button
+                  asChild
+                  className="rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link
+                    target="_blank"
+                    href="/documents/Kalorifer_KPVS_KPVU_katalog_2025.pdf"
+                  >
+                    КАТАЛОГ КАЛОРИФЕРОВ КПВС КПВУ
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -199,8 +207,16 @@ export default function ContactsAndPricesPage() {
                 <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
                 </Button>
-                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                  КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
+                <Button
+                  asChild
+                  className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                >
+                  <Link
+                    target="_blank"
+                    href="/documents/Kalorifer_KPPS_KPPU_katalog_2025.pdf"
+                  >
+                    КАТАЛОГ КАЛОРИФЕРОВ КППС КППУ
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -257,8 +273,16 @@ export default function ContactsAndPricesPage() {
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАЛОРИФЕРЫ КСК
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  КАТАЛОГ КСК
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link
+                    target="_blank"
+                    href="/documents/Kalorifer_KSK_katalog_2025.pdf"
+                  >
+                    КАТАЛОГ КСК
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -307,8 +331,16 @@ export default function ContactsAndPricesPage() {
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                   КАЛОРИФЕРЫ КПСК
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  КАТАЛОГ КПСК
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link
+                    target="_blank"
+                    href="/documents/Kalorifer_KPSK_katalog_2025.pdf"
+                  >
+                    КАТАЛОГ КПСК
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -380,11 +412,27 @@ export default function ContactsAndPricesPage() {
                   </Button>
                 </div>
                 <div className="flex basis-full flex-col gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                    КАТАЛОГ ТВВ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Kalorifer_TVV_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ ТВВ
+                    </Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                    КАТАЛОГ КП
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Kalorifer_KP_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ КП
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -431,8 +479,16 @@ export default function ContactsAndPricesPage() {
             <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
               КАЛОРИФЕРЫ КФБ-А П
             </Button>
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-              КАТАЛОГ КФБ-А
+            <Button
+              asChild
+              className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+            >
+              <Link
+                target="_blank"
+                href="/documents/Kalorifer_KFB_katalog_2025.pdf"
+              >
+                КАТАЛОГ КФБ-А
+              </Link>
             </Button>
           </div>
         </div>
@@ -491,19 +547,43 @@ export default function ContactsAndPricesPage() {
                   </Button>
                 </div>
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    КАТАЛОГ АО2
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Agregat_AO2_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ АО2
+                    </Link>
                   </Button>
                   <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
                     АГРЕГАТЫ АВО ХЛ
                   </Button>
                 </div>
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    КАТАЛОГ СТД-300
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Agregat_STD-300_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ СТД-300
+                    </Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    КАТАЛОГ АВО ХЛ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Agregat_AVO-HL_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ АВО ХЛ
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -559,8 +639,16 @@ export default function ContactsAndPricesPage() {
                 <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
                   АГРЕГАТЫ СТД-300 П
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                  КАТАЛОГ СТД-300 ХЛ
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                >
+                  <Link
+                    target="_blank"
+                    href="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+                  >
+                    КАТАЛОГ СТД-300 ХЛ
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -584,19 +672,51 @@ export default function ContactsAndPricesPage() {
               <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
                 АГРЕГАТЫ СТД-300 П
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ АО2
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link
+                  target="_blank"
+                  href="/documents/Agregat_AO2_katalog_2025.pdf"
+                >
+                  КАТАЛОГ АО2
+                </Link>
               </Button>
             </div>
             <div className="flex gap-2">
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ СТД-300
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link
+                  target="_blank"
+                  href="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+                >
+                  КАТАЛОГ СТД-300
+                </Link>
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ СТД-300 ХЛ
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link
+                  target="_blank"
+                  href="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+                >
+                  КАТАЛОГ СТД-300 ХЛ
+                </Link>
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ АВО ХЛ
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link
+                  target="_blank"
+                  href="/documents/Agregat_AVO-HL_katalog_2025.pdf"
+                >
+                  КАТАЛОГ АВО ХЛ
+                </Link>
               </Button>
             </div>
           </div>
