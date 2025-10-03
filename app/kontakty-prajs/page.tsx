@@ -157,8 +157,13 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex flex-col justify-start gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  ПРИТОЧНЫЕ ВОДЯНЫЕ КАЛОРИФЕРЫ
+                <Button
+                  asChild
+                  className="rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link href="/catalog/pritochny-vodiany-kalorifery">
+                    ПРИТОЧНЫЕ ВОДЯНЫЕ КАЛОРИФЕРЫ
+                  </Link>
                 </Button>
                 <Button
                   asChild
@@ -204,8 +209,13 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="mt-auto flex flex-col justify-start gap-2">
-                <Button className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                  ПРИТОЧНЫЕ паровые КАЛОРИФЕРЫ
+                <Button
+                  asChild
+                  className="rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                >
+                  <Link href="/catalog/pritochny-parovy-kalorifery">
+                    ПРИТОЧНЫЕ ПАРОВЫЕ КАЛОРИФЕРЫ
+                  </Link>
                 </Button>
                 <Button
                   asChild
@@ -270,8 +280,11 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  КАЛОРИФЕРЫ КСК
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link href="/catalog/ksk">КАЛОРИФЕРЫ КСК</Link>
                 </Button>
                 <Button
                   asChild
@@ -328,8 +341,11 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex gap-2">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                  КАЛОРИФЕРЫ КПСК
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+                >
+                  <Link href="/catalog/kpsk">КАЛОРИФЕРЫ КПСК</Link>
                 </Button>
                 <Button
                   asChild
@@ -404,11 +420,17 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="flex gap-2">
                 <div className="flex basis-full flex-col gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                    КАЛОРИФЕРЫ ТВВ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                  >
+                    <Link href="/catalog/tvv">КАЛОРИФЕРЫ ТВВ</Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                    КАЛОРИФЕРЫ КП
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                  >
+                    <Link href="/catalog/kp">КАЛОРИФЕРЫ КП</Link>
                   </Button>
                 </div>
                 <div className="flex basis-full flex-col gap-2">
@@ -473,11 +495,17 @@ export default function ContactsAndPricesPage() {
           </div>
 
           <div className="flex flex-col items-stretch gap-2 sm:flex-row md:items-stretch">
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-              КАЛОРИФЕРЫ КФБ-А М
+            <Button
+              asChild
+              className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+            >
+              <Link href="/catalog/kfb-a-m">КАЛОРИФЕРЫ КФБ-А М</Link>
             </Button>
-            <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-              КАЛОРИФЕРЫ КФБ-А П
+            <Button
+              asChild
+              className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+            >
+              <Link href="/catalog/kfb-a-p">КАЛОРИФЕРЫ КФБ-А П</Link>
             </Button>
             <Button
               asChild
@@ -539,11 +567,17 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="space-y-2 sm:hidden">
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    Агрегаты АО2 В
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link href="/catalog/ao2-v">Агрегаты АО2 В</Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    Агрегаты АО2 П
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link href="/catalog/ao2-p">Агрегаты АО2 П</Link>
                   </Button>
                 </div>
                 <div className="flex gap-2">
@@ -558,8 +592,11 @@ export default function ContactsAndPricesPage() {
                       КАТАЛОГ АО2
                     </Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase">
-                    АГРЕГАТЫ АВО ХЛ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2 text-black uppercase"
+                  >
+                    <Link href="/catalog/avo-tvv">АГРЕГАТЫ АВО ХЛ</Link>
                   </Button>
                 </div>
                 <div className="flex gap-2">
@@ -633,11 +670,17 @@ export default function ContactsAndPricesPage() {
                 </tbody>
               </table>
               <div className="flex flex-col space-y-2 sm:hidden">
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                  АГРЕГАТЫ СТД-300 В
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                >
+                  <Link href="/catalog/std300-v">АГРЕГАТЫ СТД-300 В</Link>
                 </Button>
-                <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
-                  АГРЕГАТЫ СТД-300 П
+                <Button
+                  asChild
+                  className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase"
+                >
+                  <Link href="/catalog/std300-p">АГРЕГАТЫ СТД-300 П</Link>
                 </Button>
                 <Button
                   asChild
@@ -655,22 +698,37 @@ export default function ContactsAndPricesPage() {
           </div>
           <div className="hidden space-y-2 sm:block">
             <div className="flex gap-2">
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                АГРЕГАТЫ АО2 В
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link href="/catalog/ao2-v">АГРЕГАТЫ АО2 В</Link>
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                АГРЕГАТЫ АО2 П
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link href="/catalog/ao2-p">АГРЕГАТЫ АО2 П</Link>
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                АГРЕГАТЫ АВО ХЛ
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link href="/catalog/avo-tvv">АГРЕГАТЫ АВО ХЛ</Link>
               </Button>
             </div>
             <div className="flex gap-2">
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                АГРЕГАТЫ СТД-300 В
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link href="/catalog/std300-v">АГРЕГАТЫ СТД-300 В</Link>
               </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                АГРЕГАТЫ СТД-300 П
+              <Button
+                asChild
+                className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase"
+              >
+                <Link href="/catalog/std300-p">АГРЕГАТЫ СТД-300 П</Link>
               </Button>
               <Button
                 asChild
@@ -691,7 +749,7 @@ export default function ContactsAndPricesPage() {
               >
                 <Link
                   target="_blank"
-                  href="/documents/Agregat_STD-300-HL_katalog_2025.pdf"
+                  href="/documents/Agregat_STD-300_katalog_2025.pdf"
                 >
                   КАТАЛОГ СТД-300
                 </Link>
@@ -775,19 +833,41 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    КАЛОРИФЕРЫ СФО
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link href="/catalog/sfo">КАЛОРИФЕРЫ СФО</Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    УСТАНОВКИ СФОЦ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link href="/catalog/sfotc">УСТАНОВКИ СФОЦ</Link>
                   </Button>
                 </div>
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    КАТАЛОГ СФО
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Electrokalorifer_SFO_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ СФО
+                    </Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    КАТАЛОГ СФОЦ
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Electroustanovka_SFOTC_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ СФОЦ
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -829,19 +909,41 @@ export default function ContactsAndPricesPage() {
               </table>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    ШКАФЫ ШУК
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link href="/catalog/shuk">ШКАФЫ ШУК</Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    ТЭНЫ ТЭНР
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link href="/catalog/teny">ТЭНЫ ТЭНР</Link>
                   </Button>
                 </div>
                 <div className="flex gap-2">
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    КАТАЛОГ ШУК
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Electroshkaf_SHUK_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ ШУК
+                    </Link>
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
-                    КАТАЛОГ ТЭНР
+                  <Button
+                    asChild
+                    className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase"
+                  >
+                    <Link
+                      target="_blank"
+                      href="/documents/Electroten_TENY_katalog_2025.pdf"
+                    >
+                      КАТАЛОГ ТЭНР
+                    </Link>
                   </Button>
                 </div>
               </div>
