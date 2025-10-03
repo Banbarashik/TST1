@@ -5,9 +5,9 @@ import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
 import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
-import TableAndCatalogLinks from "./tableAndCatalogLinks";
 import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -30,6 +30,19 @@ export default function AVOPage({ product }) {
     (p) =>
       p.categories.includes("avo") && p.heatCarrier === oppositeHeatCarrier,
   );
+
+  const linkButtons = [
+    {
+      name: `${heatCarrierAdj.plu} агрегаты АВО ХЛ`,
+      url: "/avo-tvv-kp",
+      openNewTab: false,
+    },
+    {
+      name: `Каталог ${heatCarrierAdj.pluGen} агрегатов АВО ХЛ`,
+      url: "/documents/Agregat_AVO-HL_katalog_2025.pdf",
+      openNewTab: true,
+    },
+  ];
 
   return (
     <div className="lg:overflow-x-auto">
@@ -156,12 +169,7 @@ export default function AVOPage({ product }) {
         />
       </div>
 
-      <TableAndCatalogLinks
-        tableURL="/avo-tvv-kp"
-        tableLinkText={`Агрегаты АВО ХЛ ${heatCarrierAdj.plu} – характеристики`}
-        catalogURL="/documents/Agregat_AVO-HL_katalog_2025.pdf"
-        catalogLinkText={`Скачать каталог ${heatCarrierAdj.pluGen} агрегатов АВО ХЛ`}
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
 }
