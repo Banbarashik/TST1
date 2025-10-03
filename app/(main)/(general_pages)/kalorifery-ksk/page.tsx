@@ -10,6 +10,21 @@ import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
+export const metadata: Metadata = {
+  title: "Калориферы водяные КСк",
+  description:
+    "Калориферы КСк водяные – производитель ООО Т.С.Т. Производство, технические характеристики, габаритные размеры, производительность, цена водяных калориферов КСк",
+  keywords:
+    "калорифер кск,калорифер водяной кск,калориферы кск технические характеристики,калорифер кск мощность,калориферы кск габаритные размеры,купить калориферы кск,калориферы кск цена,калорифер кск 2,калорифер кск 3,калорифер кск 4",
+};
+
+const products = productData
+  .filter((p) => p.categories.includes("ksk"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ksk2 = products.filter((p) => p.rows === 2);
+const ksk3 = products.filter((p) => p.rows === 3);
+const ksk4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог водяных калориферов КСк",
@@ -23,22 +38,7 @@ const linkButtons = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Калориферы водяные КСк",
-  description:
-    "Калориферы КСк водяные – производитель ООО Т.С.Т. Производство, технические характеристики, габаритные размеры, производительность, цена водяных калориферов КСк",
-  keywords:
-    "калорифер кск,калорифер водяной кск,калориферы кск технические характеристики,калорифер кск мощность,калориферы кск габаритные размеры,купить калориферы кск,калориферы кск цена,калорифер кск 2,калорифер кск 3,калорифер кск 4",
-};
-
 export default function KaloriferyKSKPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("ksk"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ksk2 = products.filter((p) => p.rows === 2);
-  const ksk3 = products.filter((p) => p.rows === 3);
-  const ksk4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы КСк водяные" />

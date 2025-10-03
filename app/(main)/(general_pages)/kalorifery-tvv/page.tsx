@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "калорифер твв,калориферы твв цена,калориферы твв технические характеристики,воздухонагреватели для холодного климата водяные,калориферы водяные для низких температурных режимов,калорифер внв,калорифер внв водяной,воздухонагреватель внв 113,воздухонагреватель внв 113 22 хл,воздухонагреватели внв 113 купить",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("tvv"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const tvv3 = products.filter((p) => p.rows === 3);
+const tvv4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог водяных калориферов ТВВ",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyTVVPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("tvv"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const tvv3 = products.filter((p) => p.rows === 3);
-  const tvv4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы ТВВ водяные" />

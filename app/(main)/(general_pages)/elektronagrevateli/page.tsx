@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     "электрокалориферы сфо,электрокалориферы эко,электрические калориферы сфо,цена электрокалориферов сфо,купить электрокалорифер эко,технические характеристики электрокалориферов сфо,габаритные размеры электронагревателей сфо,электросхемы калориферов сфо,подсоединение электрокалориферов эко,производитель электрокалориферов сфо",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("sfo"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог электрокалориферов СФО",
@@ -32,10 +36,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferySFO() {
-  const products = productData
-    .filter((p) => p.categories.includes("sfo"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Электрические калориферы СФО" />

@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "калорифер кп,калориферы кп цена,калорифер для сушки древесины,калорифер для охлаждения масла,калорифер для зерносушилки,калорифер внп,калорифер внп паровой,воздухонагреватель внп 113,воздухонагреватели внп 113 купить,калорифер в сушильную камеру",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("kp"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kp3 = products.filter((p) => p.rows === 3);
+const kp4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог паровых калориферов КП",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyKPPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("kp"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kp3 = products.filter((p) => p.rows === 3);
-  const kp4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы КП паровые" />

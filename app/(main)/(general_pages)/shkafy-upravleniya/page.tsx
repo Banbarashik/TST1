@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     "шкаф управления калорифером шук,шкаф управления электрокалорифером сфо,шкаф управления установкой сфоц,шкаф управления электрокалорифером эко,шкаф управления установкой экоц,электросхема подсоединения шкафов управления калорифером,монтаж и подключение шкафа управления калорифером,шкафы шук технические характеристики,купить шкаф управления калорифером,цена шкафа управления электрическим калорифером",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("shuk"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог шкафов ШУК",
@@ -32,10 +36,6 @@ const linkButtons = [
 ];
 
 export default function ShkafyUpravleniyaSHUK() {
-  const products = productData
-    .filter((p) => p.categories.includes("shuk"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Шкафы управления калорифером ШУК" />

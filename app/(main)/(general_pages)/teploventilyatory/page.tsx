@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     "электрокалориферные установки сфоц,электрокалориферные установки экоц,электрические установки сфоц,цена установок сфоц,купить электрокалориферную установку экоц,технические характеристики установок сфоц,габаритные размеры установок сфоц,электросхемы установок сфоц,подсоединение электрокалориферных установок экоц,производитель электрокалориферных установок сфоц",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("sfotc"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог электроустановок СФОЦ",
@@ -32,10 +36,6 @@ const linkButtons = [
 ];
 
 export default function UstanovkiSFOTC() {
-  const products = productData
-    .filter((p) => p.categories.includes("sfotc"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Электрокалориферные установки СФОЦ" />

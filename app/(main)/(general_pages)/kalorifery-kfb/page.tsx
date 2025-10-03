@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "калориферы кфб паровой,калориферы кфб-а паровой,калорифер кфб одноходовой,калориферы кфб паровые технические характеристики,калориферы кфб паровые габаритные размеры,калорифер кфб купить,калорифер для шахт,калорифер для сушильных установок,калорифер для охлаждения жидкостей,калорифер для сушки зерна",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("kfb-a-p"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kfb3 = products.filter((p) => p.rows === 3);
+const kfb4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог паровых калориферов КФБ",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyKFBPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("kfb-a-p"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kfb3 = products.filter((p) => p.rows === 3);
-  const kfb4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы КФБ-А П паровые" />

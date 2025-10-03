@@ -18,6 +18,19 @@ export const metadata: Metadata = {
     "стд 300 пар,отопительный агрегат стд 300 паровой,агрегат паровой стд 300 характеристики,агрегат стд 300 габаритные размеры,паровой агрегат 25000,паровой агрегат отопительный,отопительный агрегат для термомасла,отопительный агрегат для сушки зерна,отопительный агрегат для сушки древесины и пиломатериалов,отопительный паровой агрегат для сушильной камеры",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("std300-p"))
+  .map((p) =>
+    p.variants.map((v) => ({
+      ...v,
+      id: p.id,
+      name: `СТД-300 (${v.calorifier})`,
+      airPower: p.airPower,
+    })),
+  )
+  .flat()
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог агрегатов паровых СТД-300",
@@ -32,19 +45,6 @@ const linkButtons = [
 ];
 
 export default function AgregatySTD300P() {
-  const products = productData
-    .filter((p) => p.categories.includes("std300-p"))
-    .map((p) =>
-      p.variants.map((v) => ({
-        ...v,
-        id: p.id,
-        name: `СТД-300 (${v.calorifier})`,
-        airPower: p.airPower,
-      })),
-    )
-    .flat()
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные паровые СТД-300" />

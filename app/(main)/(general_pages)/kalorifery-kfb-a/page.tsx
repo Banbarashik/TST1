@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "калорифер кфб,калорифер кфб-а водяной,калорифер кфб многоходовой,калориферы кфб водяные технические характеристики,калориферы кфб водяные габаритные размеры,калорифер кфб цена,калорифер для шахт,калорифер для проветривания горных выработок,калориферная секция,калориферная установка",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("kfb-a-m"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kfb3 = products.filter((p) => p.rows === 3);
+const kfb4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог водяных калориферов КФБ",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyKFBAPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("kfb-a-m"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kfb3 = products.filter((p) => p.rows === 3);
-  const kfb4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы КФБ-А М водяные" />

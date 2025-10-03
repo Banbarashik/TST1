@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "агрегат отопительный,агрегат воздушный,агрегат воздушно-отопительный,агрегат ао 2 водяной,отопительный агрегат ао 2 водяной,агрегаты ао 2 характеристики,агрегаты ао 2 габаритные размеры,агрегат ао 2 цена,купить агрегаты ао 2,агрегаты ао 2 производитель",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("ao2-v"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ao2v3 = products.filter((p) => p.rows === 3);
+const ao2v4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог отопительных агрегатов",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function AgregatyAO2V() {
-  const products = productData
-    .filter((p) => p.categories.includes("ao2-v"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ao2v3 = products.filter((p) => p.rows === 3);
-  const ao2v4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные водяные" />

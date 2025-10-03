@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "агрегат отопительный паровой,агрегат воздушный паровой,агрегат паровой воздушно-отопительный,агрегат ао 2 паровой,отопительный агрегат ао 2 паровой,паровые агрегаты ао 2 характеристики,паровые агрегаты ао 2 габаритные размеры,паровой агрегат ао 2 цена,купить паровые агрегаты ао 2,паровые агрегаты ао 2 производитель",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("ao2-p"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const ao2p3 = products.filter((p) => p.rows === 3);
+const ao2p4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог паровых агрегатов",
@@ -32,12 +38,6 @@ const linkButtons = [
 ];
 
 export default function AgregatyAO2P() {
-  const products = productData
-    .filter((p) => p.categories.includes("ao2-p"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const ao2p3 = products.filter((p) => p.rows === 3);
-  const ao2p4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные паровые" />

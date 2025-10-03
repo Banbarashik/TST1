@@ -18,6 +18,19 @@ export const metadata: Metadata = {
     "стд 300,агрегат стд 300,агрегат воздушный стд 300,агрегат воздушно-отопительный стд 300,отопительный агрегат стд 300 водяной,агрегаты стд 300 производитель,отопительные агрегаты мощностью 300 кВт,отопительный агрегат для охлаждения жидкостей,отопительный агрегат для технологического нагрева,отопительные агрегаты с производительностью 25000",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("std300-v"))
+  .map((p) =>
+    p.variants.map((v) => ({
+      ...v,
+      id: p.id,
+      name: `СТД-300 (${v.calorifier})`,
+      airPower: p.airPower,
+    })),
+  )
+  .flat()
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог водяных агрегатов",
@@ -32,19 +45,6 @@ const linkButtons = [
 ];
 
 export default function AgregatySTD300V() {
-  const products = productData
-    .filter((p) => p.categories.includes("std300-v"))
-    .map((p) =>
-      p.variants.map((v) => ({
-        ...v,
-        id: p.id,
-        name: `СТД-300 (${v.calorifier})`,
-        airPower: p.airPower,
-      })),
-    )
-    .flat()
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Агрегаты отопительные водяные СТД-300" />

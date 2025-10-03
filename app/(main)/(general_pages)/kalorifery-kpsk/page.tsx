@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     "калорифер кпск,калорифер паровой кпск,калориферы кпск технические характеристики,калорифер кпск мощность,калориферы кпск габаритные размеры,купить калориферы кпск,калориферы кпск цена,калориферы кпск 2,калориферы кпск 3,калориферы кпск 4",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("kpsk"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kpsk2 = products.filter((p) => p.rows === 2);
+const kpsk3 = products.filter((p) => p.rows === 3);
+const kpsk4 = products.filter((p) => p.rows === 4);
+
 const linkButtons = [
   {
     name: "Каталог калориферов КПСк",
@@ -32,13 +39,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyKPSKPage() {
-  const products = productData
-    .filter((p) => p.categories.includes("kpsk"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kpsk2 = products.filter((p) => p.rows === 2);
-  const kpsk3 = products.filter((p) => p.rows === 3);
-  const kpsk4 = products.filter((p) => p.rows === 4);
-
   return (
     <>
       <Heading lvl={1} text="Калориферы КПСк паровые" />

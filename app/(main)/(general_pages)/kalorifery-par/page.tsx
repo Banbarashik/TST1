@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     "калорифер приточный паровой,калорифер паровой для приточной вентиляции,калорифер паровой для приточной установки,расчет парового приточного калорифера,подбор приточного калорифера парового,паровые приточные калориферы цена,приточный паровой калорифер купить,паровые приточные калориферы характеристики,приточные паровые калориферы размеры,паровая приточная установка",
 };
 
+const kpps = productData
+  .filter((p) => p.categories.includes("kpps"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const kppu = productData
+  .filter((p) => p.categories.includes("kppu"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+
 const linkButtons = [
   {
     name: "Каталог паровых калориферов",
@@ -32,13 +39,6 @@ const linkButtons = [
 ];
 
 export default function KaloriferyParPage() {
-  const kpps = productData
-    .filter((p) => p.categories.includes("kpps"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const kppu = productData
-    .filter((p) => p.categories.includes("kppu"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-
   return (
     <>
       <Heading lvl={1} text="Калориферы приточные КППС и КППУ" />

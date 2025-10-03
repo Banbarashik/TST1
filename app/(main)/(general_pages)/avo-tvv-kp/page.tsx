@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     "агрегат аво,агрегат аво хл,водяной агрегат аво,паровой агрегат аво,агрегаты аво производитель,отопительный агрегат для сушки материалов,отопительный агрегат для зерносушилки,агрегат воздушно-отопительный для сельскохозяйственных помещений,агрегат отопительный для животноводческих ферм,отопительный агрегат для птицеводческих комплексов",
 };
 
+const products = productData
+  .filter((p) => p.categories.includes("avo"))
+  .sort((a, b) => sortProducts(a.name, b.name));
+const avoTvv = products.find((p) => p.heatCarrier === "water");
+const avoKp = products.find((p) => p.heatCarrier === "steam");
+const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
+const avoKpVariants = avoKp.variants.map((p) => ({ ...p, id: avoKp.id }));
+
 const linkButtons = [
   {
     name: "Каталог воздушных агрегатов",
@@ -32,14 +40,6 @@ const linkButtons = [
 ];
 
 export default function AgregatyAVO() {
-  const products = productData
-    .filter((p) => p.categories.includes("avo"))
-    .sort((a, b) => sortProducts(a.name, b.name));
-  const avoTvv = products.find((p) => p.heatCarrier === "water");
-  const avoKp = products.find((p) => p.heatCarrier === "steam");
-  const avoTvvVariants = avoTvv.variants.map((p) => ({ ...p, id: avoTvv.id }));
-  const avoKpVariants = avoKp.variants.map((p) => ({ ...p, id: avoKp.id }));
-
   return (
     <>
       <Heading lvl={1} text="Отопительные агрегаты АВО ХЛ" />
