@@ -8,7 +8,7 @@ import { sortProducts } from "@/lib/utils";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import ProductLinks from "@/components/general_pages/productLinks";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 export const metadata: Metadata = {
   title: "Калориферы паровые КФБ-А П",
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   keywords:
     "калориферы кфб паровой,калориферы кфб-а паровой,калорифер кфб одноходовой,калориферы кфб паровые технические характеристики,калориферы кфб паровые габаритные размеры,калорифер кфб купить,калорифер для шахт,калорифер для сушильных установок,калорифер для охлаждения жидкостей,калорифер для сушки зерна",
 };
+
+const linkButtons = [
+  {
+    name: "Каталог паровых калориферов КФБ",
+    url: "/documents/Kalorifer_KFB_katalog_2025.pdf",
+    openNewTab: true,
+  },
+  {
+    name: "Прайс-лист калориферов КФБ-А П",
+    url: "/documents/Price_list_zao_tst_2025.pdf",
+    openNewTab: true,
+  },
+];
 
 export default function KaloriferyKFBPage() {
   const products = productData
@@ -190,13 +203,7 @@ export default function KaloriferyKFBPage() {
         </ProductParagraph>
       </section>
 
-      <TableAndCatalogLinks
-        tableLinkOpenNewTab
-        tableURL="/documents/Kalorifer_KFB_katalog_2025.pdf"
-        tableLinkText="Скачать каталог паровых калориферов КФБ"
-        catalogURL="/documents/Price_list_zao_tst_2025.pdf"
-        catalogLinkText="Скачать прайс-лист калориферов КФБ паровых"
-      />
+      <LinkButtonsBlock buttons={linkButtons} />
     </>
   );
 }
