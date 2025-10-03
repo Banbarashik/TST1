@@ -8,7 +8,6 @@ import { sortProducts } from "@/lib/utils";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
-import TableAndCatalogLinks from "@/components/catalog/tableAndCatalogLinks";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -79,10 +78,9 @@ export default function ContactsAndPricesPage() {
   return (
     <div className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-3 py-14 lg:px-6 xl:px-10">
       <div className="space-y-5">
-        <Heading
-          lvl={1}
-          text="Цена/прайс-лист воздушно-отопительного оборудования"
-        />
+        <h1 className="text-lg font-bold uppercase sm:text-2xl">
+          Цена/прайс-лист воздушно-отопительного оборудования
+        </h1>
 
         <ProductParagraph className="mb-8">
           ЗАО «Т.С.Т.» — предприятие-производитель, специализирующееся на
@@ -107,7 +105,7 @@ export default function ContactsAndPricesPage() {
             <div id="dub-arrow">Скачать</div>
             <span>Прайс-лист</span>
           </Link>
-          <h2 className="self-center text-2xl font-bold uppercase">
+          <h2 className="self-center font-bold uppercase sm:text-2xl">
             Цена/прайс-лист калориферов
           </h2>
         </div>
@@ -446,7 +444,7 @@ export default function ContactsAndPricesPage() {
         на базе бесшовных цельнотянутых трубок уточняйте по запросу.
       </p>
 
-      <h2 className="text-center text-2xl font-bold uppercase">
+      <h2 className="text-center font-bold uppercase sm:text-2xl">
         Цена/прайс-лист отопительных агрегатов
       </h2>
 
@@ -612,7 +610,7 @@ export default function ContactsAndPricesPage() {
         изготовленными с бесшовными трубками, уточняйте по запросу.
       </p>
 
-      <h2 className="text-center text-2xl font-bold uppercase">
+      <h2 className="text-center font-bold uppercase sm:text-2xl">
         Цена/Прайс-лист электронагревательного оборудования
       </h2>
 
@@ -655,13 +653,21 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
-              <div className="flex flex-col space-y-2 sm:hidden">
-                <div>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
                     КАЛОРИФЕРЫ СФО
                   </Button>
-                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 text-black uppercase">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
                     УСТАНОВКИ СФОЦ
+                  </Button>
+                </div>
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    КАТАЛОГ СФО
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    КАТАЛОГ СФОЦ
                   </Button>
                 </div>
               </div>
@@ -701,36 +707,24 @@ export default function ContactsAndPricesPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
-          </div>
-          <div className="hidden space-y-2 sm:block">
-            <div className="flex gap-2">
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАЛОРИФЕРЫ СФО
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                УСТАНОВКИ СФОЦ
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                ШКАФЫ ШУК
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                ТЭНЫ ОРЕБРЕННЫЕ
-              </Button>
-            </div>
-            <div className="flex gap-2">
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ СФО
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ СФОЦ
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ ШУК
-              </Button>
-              <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-2.5 text-black uppercase">
-                КАТАЛОГ ТЭНР
-              </Button>
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    ШКАФЫ ШУК
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    ТЭНЫ ТЭНР
+                  </Button>
+                </div>
+                <div className="flex gap-2">
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    КАТАЛОГ ШУК
+                  </Button>
+                  <Button className="shrink-1 basis-full rounded-none border border-[#723910] bg-gray-200 px-1 text-black uppercase">
+                    КАТАЛОГ ТЭНР
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -745,7 +739,7 @@ export default function ContactsAndPricesPage() {
           вентиляционного, насосно-смесительного оборудования и
           пароконденсатного оборудования.
         </ProductParagraph>
-        <h2 className="text-center text-2xl font-bold uppercase">
+        <h2 className="text-center font-bold uppercase sm:text-2xl">
           Контактные данные/реквизиты
         </h2>
 
