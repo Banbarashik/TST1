@@ -53,6 +53,11 @@ body {
 :disabled {
   color: rgb(50, 50, 50);
 }
+#calorifer {
+  margin-left: 4px;
+  padding-left: 0;
+  padding-right: 0;
+}
 .advanced-calculator input,
 .advanced-calculator select {
   box-sizing: border-box;

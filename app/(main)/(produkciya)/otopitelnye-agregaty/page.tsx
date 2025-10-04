@@ -121,10 +121,6 @@ export default function OtopitelnyeAgregatyPage() {
           производительности по воздуху тепловая мощность и температура воздуха
           на выходе у четырехрядных установок выше.
         </ProductParagraph>
-        <CategoryCards
-          categories={agregatyCategories}
-          cardClassName="2xl:text-sm xl:px-3"
-        />
         <section>
           <Heading lvl={3} text="Отопительные агрегаты АО2" />
           <ProductParagraph>
@@ -146,6 +142,10 @@ export default function OtopitelnyeAgregatyPage() {
             воздухом, загрязненным или вязким теплоносителем.
           </ProductParagraph>
         </section>
+        <CategoryCards
+          categories={agregatyCategories}
+          cardClassName="2xl:text-sm xl:px-3"
+        />
         <section>
           <Heading lvl={3} text="Отопительные агрегаты СТД-300" />
           <ProductParagraph>

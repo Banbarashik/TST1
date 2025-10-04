@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-secondary text-secondary-foreground 4xl:justify-center relative py-4 pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-62 lg:items-center lg:gap-16 xl:h-auto xl:p-10"
+      className="bg-secondary text-secondary-foreground 4xl:justify-center relative py-4 pr-2 sm:pr-4 sm:pb-10 sm:pl-26 lg:flex lg:h-62 lg:items-center lg:gap-16 xl:h-auto xl:p-10"
     >
       <div className="4xl:justify-start 4xl:gap-20 4xl:w-auto lg:ml-auto lg:flex lg:items-center lg:gap-16 xl:ml-0 xl:w-full xl:justify-between">
         <div className="mb-6 flex items-center justify-center gap-4 sm:justify-start lg:order-last lg:m-0">

@@ -8,9 +8,17 @@ export default function CategoryCards({
   containerGap = "gap-x-2 gap-y-4",
   cardClassName = "",
 }) {
+  const categoriesAmount = categories.length;
+
   return (
     <ul
-      className={`grid sm:grid-cols-[repeat(auto-fit,minmax(0,max-content))] ${containerGap}`}
+      className={cn(
+        `grid sm:grid-cols-[repeat(auto-fit,minmax(0,max-content))] ${containerGap}`,
+        {
+          "grid-cols-1": categories.length > 4,
+          "grid-cols-2": categories.length <= 4 && categories.length !== 3,
+        },
+      )}
     >
       {categories.map((cat) => (
         <CategoryCard key={cat.name} category={cat} className={cardClassName} />

@@ -75,7 +75,7 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-3 py-14 lg:px-6 xl:px-10">
+    <div className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-2 py-14 lg:px-6 xl:px-10">
       <div className="space-y-5">
         <h1 className="text-lg font-bold uppercase sm:text-2xl">
           Цена/прайс-лист воздушно-отопительного оборудования
@@ -124,7 +124,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             ПРИТОЧНЫЕ ВОДЯНЫЕ И ПАРОВЫЕ КАЛОРИФЕРЫ
           </h3>
-          <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 ПРИТОЧНЫЕ КАЛОРИФЕРЫ – ВОДЯНЫЕ КПВС И ПАРОВЫЕ КППС
@@ -145,7 +145,7 @@ export default function ContactsAndPricesPage() {
                 <tbody>
                   {kpps2.map((p, idx) => (
                     <tr key={p.id}>
-                      <td className="px-1 py-0.75 text-left">
+                      <td className="py-0.75 pr-0 pl-0.5 text-left">
                         КПВС КППС {p.size}x{p.size}
                       </td>
                       <td>{p.price}</td>
@@ -237,7 +237,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             КАЛОРИФЕРЫ ВОДЯНЫЕ КСК И ПАРОВЫЕ КПСК
           </h3>
-          <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 КАЛОРИФЕРЫ ВОДЯНЫЕ КСК
@@ -377,7 +377,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             КАЛОРИФЕРЫ ДЛЯ НИЗКИХ ТЕМПЕРАТУР
           </h3>
-          <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 КАЛОРИФЕРЫ ВОДЯНЫЕ ТВВ И ПАРОВЫЕ КП
@@ -537,7 +537,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             ОТОПИТЕЛЬНЫЕ АГРЕГАТЫ ВОДЯНЫЕ И ПАРОВЫЕ
           </h3>
-          <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">
                 АГРЕГАТЫ АО 2 ВОДЯНЫЕ И ПАРОВЫЕ
@@ -797,7 +797,7 @@ export default function ContactsAndPricesPage() {
           <h3 className="mb-2 hidden text-center text-xl uppercase sm:block">
             Электронагревательное оборудование
           </h3>
-          <div className="flex flex-col gap-5 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row">
             {/* sfo-sfotc table */}
             <div className="basis-full space-y-2">
               <h3 className="text-xl uppercase sm:hidden">

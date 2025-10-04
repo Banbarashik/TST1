@@ -28,7 +28,7 @@ export default function RootLayout({
           </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] px-6">
+          <nav className="4xl:px-20 flex h-22 items-center bg-[#E0E0E0] pr-3 pl-6 sm:pr-6">
             <Logo place="header" />
             <div className="4xl:ml-12 3xl:ml-8 ml-6 flex flex-col items-start gap-y-1.5 text-lg sm:flex-row md:text-base lg:flex-col xl:flex-row">
               <a

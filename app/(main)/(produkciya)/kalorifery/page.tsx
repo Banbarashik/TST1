@@ -1,9 +1,49 @@
 import type { Metadata } from "next";
 
-import CategoryCards from "@/components/categoryCards";
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import CategoryCards from "@/components/categoryCards";
+
+/* function CategoryCards({
+  categories,
+  containerGap = "gap-x-2 gap-y-4",
+  cardClassName = "",
+}) {
+  return (
+    <ul
+      className={`grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(0,max-content))] ${containerGap}`}
+    >
+      {categories.map((cat) => (
+        <CategoryCard key={cat.name} category={cat} className={cardClassName} />
+      ))}
+    </ul>
+  );
+}
+
+function CategoryCard({ category, className }) {
+  return (
+    <li>
+      <Link
+        href={category.url}
+        className={cn(
+          "hover:text-primary bg-card text-card-foreground flex h-full flex-col items-center justify-between gap-4 rounded-xl border px-2 pt-5 pb-5 text-center shadow-sm sm:text-[13px] md:px-4 md:text-center md:text-[13px] lg:px-4 lg:text-sm xl:px-10 2xl:text-base",
+          className,
+        )}
+      >
+        <Image
+          src={category.img}
+          alt={category.name}
+          width={750}
+          height={750}
+        />
+        <p className="font-bold tracking-wide uppercase">{category.name}</p>
+      </Link>
+    </li>
+  );
+} */
 
 export const metadata: Metadata = {
   title: "Калориферы. Производство",
@@ -142,10 +182,6 @@ export default function KaloriferyPage() {
           количества рядов растет тепловая мощность воздухонагревателя и
           повышается аэродинамическое сопротивление.
         </ProductParagraph>
-        <CategoryCards
-          categories={kaloriferyCategories[0]}
-          cardClassName="2xl:text-sm xl:px-3"
-        />
         <section>
           <Heading lvl={3} text="Приточные калориферы" />
           <ProductParagraph>
@@ -159,6 +195,10 @@ export default function KaloriferyPage() {
             воздухонагревателя для поставленной задачи.
           </ProductParagraph>
         </section>
+        <CategoryCards
+          categories={kaloriferyCategories[0]}
+          cardClassName="2xl:text-sm xl:px-3"
+        />
         <section className="space-y-4">
           <Heading lvl={3} text="Стандартные калориферы" />
           <ProductParagraph>
@@ -167,28 +207,29 @@ export default function KaloriferyPage() {
             состоит из 72 типоразмеров с производительностью по воздуху от двух
             до двадцати пяти кубических метров в час.
           </ProductParagraph>
+          <section>
+            <Heading lvl={3} text="Калориферы для низких температур" />
+            <ProductParagraph>
+              При эксплуатации теплообменников в неблагоприятных условиях, с
+              высокой степенью загрязненности теплоносителя и воздуха, низких
+              температурных режимах рекомендуется остановить свой выбор на
+              промышленных калориферах ТВВ И КП с несущими трубками увеличенного
+              диаметра. К преимуществам их работы можно отнести снижение
+              возможности зарастания внутренней полости воздухоподогревателя
+              нерастворимыми отложениями и накипью, полного перекрытия сечения
+              для прохода теплоносителя и последующего замораживания калорифера.
+              Увеличенный шаг и толщина алюминиевого ребра способствует меньшему
+              забиванию межреберного пространства теплоотдающих элементов грязью
+              и пылью, уменьшению вероятности механической деформации
+              нагревательных трубок в процессе транспортировки и эксплуатации.
+            </ProductParagraph>
+          </section>
           <CategoryCards
             categories={kaloriferyCategories[1]}
             cardClassName="2xl:text-sm xl:px-3"
           />
         </section>
-        <section>
-          <Heading lvl={3} text="Калориферы для низких температур" />
-          <ProductParagraph>
-            При эксплуатации теплообменников в неблагоприятных условиях, с
-            высокой степенью загрязненности теплоносителя и воздуха, низких
-            температурных режимах рекомендуется остановить свой выбор на
-            промышленных калориферах ТВВ И КП с несущими трубками увеличенного
-            диаметра. К преимуществам их работы можно отнести снижение
-            возможности зарастания внутренней полости воздухоподогревателя
-            нерастворимыми отложениями и накипью, полного перекрытия сечения для
-            прохода теплоносителя и последующего замораживания калорифера.
-            Увеличенный шаг и толщина алюминиевого ребра способствует меньшему
-            забиванию межреберного пространства теплоотдающих элементов грязью и
-            пылью, уменьшению вероятности механической деформации нагревательных
-            трубок в процессе транспортировки и эксплуатации.
-          </ProductParagraph>
-        </section>
+
         <section>
           <Heading lvl={3} text="Калориферы для шахт и рудников" />
           <ProductParagraph>
