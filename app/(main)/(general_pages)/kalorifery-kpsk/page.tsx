@@ -154,9 +154,9 @@ export default function KaloriferyKPSKPage() {
           небольшую разницу температур. Низкое аэродинамическое сопротивление.
         </ProductParagraph>
         <ProductLinks
-          products={kpsk2}
+          products={kpsk2.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-3"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 
@@ -168,9 +168,9 @@ export default function KaloriferyKPSKPage() {
           характеристиками.
         </ProductParagraph>
         <ProductLinks
-          products={kpsk3}
+          products={kpsk3.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-3"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 
@@ -183,9 +183,9 @@ export default function KaloriferyKPSKPage() {
           Увеличенное аэродинамическое сопротивление.
         </ProductParagraph>
         <ProductLinks
-          products={kpsk4}
+          products={kpsk4.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-3"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

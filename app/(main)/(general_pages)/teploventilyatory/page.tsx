@@ -135,10 +135,10 @@ export default function UstanovkiSFOTC() {
         <ProductLinks
           products={products.map((p) => ({
             ...p,
-            name: `Установка ${p.shortName}`,
+            name: p.shortName,
           }))}
           className="mx-px"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

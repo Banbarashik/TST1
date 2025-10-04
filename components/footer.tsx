@@ -16,7 +16,11 @@ export default function Footer() {
           <Logo place="footer" />
           <div className="text-lg">
             <p className="text-accent">+7 (3846) 68-23-24</p>
-            <a href="mailto:zao_tst@mail.ru" className="text-accent">
+            <a
+              href="mailto:zao_tst@mail.ru"
+              className="text-accent flex items-center gap-2 hover:text-white"
+            >
+              <Mail size={20} />
               zao_tst@mail.ru
             </a>
           </div>
@@ -83,14 +87,14 @@ export default function Footer() {
           <Link
             href="https://github.com/Banbarashik"
             target="_blank"
-            className="text-accent flex items-center gap-2"
+            className="text-accent flex items-center gap-2 opacity-70 hover:opacity-100"
           >
             <GithubIcon />
             Banbarashik
           </Link>
           <a
             href="mailto:odinokiyskitalec@gmail.com"
-            className="text-accent flex items-center gap-2"
+            className="text-accent flex items-center gap-2 opacity-70 hover:opacity-100"
           >
             <Mail size={20} />
             odinokiyskitalec@gmail.com

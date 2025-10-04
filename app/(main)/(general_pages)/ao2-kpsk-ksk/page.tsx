@@ -200,13 +200,13 @@ export default function AgregatyAO2P() {
           вариантах – с трехрядным и четырехрядным одноходовым теплообменником.
         </ProductParagraph>
         <ProductLinks
-          products={ao2p3}
+          products={ao2p3.map((p) => ({ ...p, name: p.model }))}
           className="mb-8"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
         <ProductLinks
-          products={ao2p4}
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          products={ao2p4.map((p) => ({ ...p, name: p.model }))}
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

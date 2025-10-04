@@ -143,7 +143,7 @@ export default function STDPage({ product }) {
                     <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
                       {p.products.map((product) => (
                         <li key={product.id}>
-                          <SimilarProductLink id={product.id}>
+                          <SimilarProductLink fullWidth={false} id={product.id}>
                             {product.model}
                           </SimilarProductLink>
                         </li>

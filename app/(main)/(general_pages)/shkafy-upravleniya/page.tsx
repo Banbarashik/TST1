@@ -135,10 +135,10 @@ export default function ShkafyUpravleniyaSHUK() {
         <ProductLinks
           products={products.map((p) => ({
             ...p,
-            name: `Шкаф управления ${p.shortName}`,
+            name: p.shortName,
           }))}
           className="mx-px mb-8"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(180px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
 
         <div className="w-full overflow-x-auto">

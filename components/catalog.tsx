@@ -125,7 +125,7 @@ export default function Catalog() {
       {productCategories.map(function (category) {
         return (
           <li key={category.name} className="flex w-full flex-col">
-            <h2 className="font-bold uppercase sm:text-base md:text-xl lg:text-[22px] xl:text-2xl">
+            <h2 className="text-base font-bold uppercase sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl">
               {category.name}
             </h2>
             <ul className="mt-6 mb-6 flex flex-wrap gap-2 sm:flex-nowrap sm:gap-2 md:gap-4 lg:gap-10 xl:gap-12">

@@ -15,7 +15,7 @@ export default function ProductLinks({
   return (
     <ul
       className={cn(
-        "grid gap-x-5 gap-y-6 lg:gap-x-3 xl:gap-x-5",
+        "mx-1 grid gap-x-5 gap-y-6 lg:gap-x-1 xl:gap-x-5",
         gridTemplateCols,
         className,
       )}
@@ -35,7 +35,7 @@ function ProductLink({ product }) {
 
   return (
     <Button
-      className="flex flex-col items-center bg-[#e5eaeb]"
+      className="flex flex-col items-center rounded-sm bg-[#e5eaeb]"
       variant="outline"
       size="content"
       asChild

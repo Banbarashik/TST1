@@ -163,9 +163,9 @@ export default function KaloriferySFO() {
         <ProductLinks
           products={products.map((p) => ({
             ...p,
-            name: `Калорифер ${p.shortName}`,
+            name: p.shortName,
           }))}
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

@@ -153,9 +153,9 @@ export default function KaloriferyKFBPage() {
           воздуха на большую разницу температур.
         </ProductParagraph>
         <ProductLinks
-          products={kfb3}
+          products={kfb3.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-4"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
         <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из тринадцати
@@ -167,9 +167,9 @@ export default function KaloriferyKFBPage() {
           до 18000 м<sup>3</sup>/час, от 55 до 500 кВт.
         </ProductParagraph>
         <ProductLinks
-          products={kfb4}
+          products={kfb4.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-4"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(170px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

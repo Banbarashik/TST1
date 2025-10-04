@@ -140,9 +140,9 @@ export default function KaloriferyKPPage() {
           большую разницу температур.
         </ProductParagraph>
         <ProductLinks
-          products={kp3}
+          products={kp3.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-4"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
         <ProductParagraph className="mb-4">
           Паровые воздухонагреватели любой рядности состоят из семи
@@ -154,9 +154,9 @@ export default function KaloriferyKPPage() {
           25000 м<sup>3</sup>/час, от 70 до 720 кВт.
         </ProductParagraph>
         <ProductLinks
-          products={kp4}
+          products={kp4.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-3"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

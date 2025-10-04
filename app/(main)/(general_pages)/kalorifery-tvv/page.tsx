@@ -130,9 +130,9 @@ export default function KaloriferyTVVPage() {
           большую разницу температур.
         </ProductParagraph>
         <ProductLinks
-          products={tvv3}
+          products={tvv3.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-4"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
         <ProductParagraph className="mb-4">
           Водяные воздухонагреватели любой рядности состоят из семи
@@ -144,9 +144,9 @@ export default function KaloriferyTVVPage() {
           25000 м<sup>3</sup>/час, от 55 до 725 кВт.
         </ProductParagraph>
         <ProductLinks
-          products={tvv4}
+          products={tvv4.map((p) => ({ ...p, name: p.shortName }))}
           className="mb-3"
-          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(130px,max-content))]"
         />
       </section>
 

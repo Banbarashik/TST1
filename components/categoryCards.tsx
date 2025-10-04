@@ -15,8 +15,8 @@ export default function CategoryCards({
       className={cn(
         `grid sm:grid-cols-[repeat(auto-fit,minmax(0,max-content))] ${containerGap}`,
         {
-          "grid-cols-1": categories.length > 4,
-          "grid-cols-2": categories.length <= 4 && categories.length !== 3,
+          "grid-cols-1": categoriesAmount > 4,
+          "grid-cols-2": categoriesAmount <= 4 && categoriesAmount !== 3,
         },
       )}
     >

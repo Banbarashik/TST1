@@ -96,7 +96,7 @@ export default function SupplyCalorifierPage({
             к следующему номеру {heatCarrierAdj?.gen} калорифера:{" "}
             <Link
               href={nextProduct.slug}
-              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+              className="text-primary-darker outline-primary-darker rounded-sm p-1.5 font-bold hover:outline"
             >
               {nextProduct.name}
             </Link>
@@ -108,7 +108,7 @@ export default function SupplyCalorifierPage({
             При избыточном запасе следует рассмотреть меньший теплообменник:{" "}
             <Link
               href={prevProduct.slug}
-              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+              className="text-primary-darker outline-primary-darker rounded-sm p-1.5 font-bold hover:outline"
             >
               {prevProduct.name}
             </Link>
@@ -121,7 +121,7 @@ export default function SupplyCalorifierPage({
             следует рассмотреть меньший теплообменник:{" "}
             <Link
               href={prevProduct.slug}
-              className="text-primary-darker outline-primary-darker rounded-sm bg-gray-200 p-1.5 font-bold hover:outline"
+              className="text-primary-darker outline-primary-darker rounded-sm p-1.5 font-bold hover:outline"
             >
               {prevProduct.name}
             </Link>
