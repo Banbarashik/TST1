@@ -121,7 +121,7 @@ export default function KaloriferyTVVPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading lvl={2} text="Технические характеристики калориферов ТВВ" />
         <ProductParagraph className="mb-4">
           Калориферы водяные серии ТВВ изготавливаются в двух вариантах: ТВВ 3 –

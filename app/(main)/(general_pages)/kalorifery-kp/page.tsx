@@ -131,7 +131,7 @@ export default function KaloriferyKPPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading lvl={2} text="Технические характеристики калориферов КП" />
         <ProductParagraph className="mb-4">
           Калориферы паровые серии КП изготавливаются в двух вариантах: КП 3 –

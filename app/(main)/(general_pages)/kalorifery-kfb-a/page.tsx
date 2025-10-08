@@ -179,7 +179,7 @@ export default function KaloriferyKFBAPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading
           lvl={2}
           text="Технические характеристики калориферов КФБ-А М"

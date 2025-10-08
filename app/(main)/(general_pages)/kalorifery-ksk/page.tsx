@@ -115,7 +115,7 @@ export default function KaloriferyKSKPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading lvl={2} text="Технические характеристики калориферов КСк" />
         <ProductParagraph>
           Калориферы водяные серии КСк изготавливаются в трех вариантах: КСк2 –

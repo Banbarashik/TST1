@@ -125,7 +125,7 @@ export default function KaloriferyKPSKPage() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading lvl={2} text="Технические характеристики калориферов КПСк" />
         <ProductParagraph>
           Калориферы паровые серии КПСк изготавливаются в трех вариантах: КПСк2
