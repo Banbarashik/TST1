@@ -1,37 +1,43 @@
 "use client";
 
 import React, { useMemo, useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+
+import { comparatorFor } from "@/lib/sort";
+import { sortProducts } from "@/lib/utils";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
-import { comparatorFor } from "@/lib/sort";
-import { sortProducts } from "@/lib/utils";
 
 type Product = any;
 
 type Props = {
   initialProducts: Product[]; // products already filtered by category (server-side)
-  initialSort?: string;
+  sort?: string;
   initialQ?: string;
-  initialPage?: number;
+  page?: number;
   productsPerPage?: number;
 };
 
 export default function SearchableCatalog({
   initialProducts,
-  initialSort = "default",
   initialQ = "",
-  initialPage = 1,
+  sort = "default",
+  page = 1,
   productsPerPage = 21,
 }: Props) {
+  const router = useRouter();
+  const sp = useSearchParams();
+  const params = new URLSearchParams(sp.toString());
+
   const [q, setQ] = useState(initialQ);
-  const [page, setPage] = useState(initialPage);
-  const [sortParam, setSortParam] = useState(initialSort);
 
   useEffect(() => {
-    // reset page to 1 on query change
-    setPage(1);
-  }, [q, sortParam]);
+    params.delete("page");
+    router.push(`?${params.toString()}`);
+  }, [q]);
 
   const filtered = useMemo(() => {
     const ql = (q ?? "").trim().toLowerCase();
@@ -44,7 +50,7 @@ export default function SearchableCatalog({
   }, [initialProducts, q]);
 
   const ordered = useMemo(() => {
-    if (sortParam === "default") {
+    if (sort === "default") {
       // group by last category, then sort each group by name
       const groups: Record<string, Product[]> = {};
       for (const product of filtered) {
@@ -57,15 +63,23 @@ export default function SearchableCatalog({
       );
       return sortedGroups.flat();
     } else {
-      const cmp = comparatorFor(sortParam);
+      const cmp = comparatorFor(sort);
       if (cmp) return [...filtered].sort(cmp);
       return [...filtered];
     }
-  }, [filtered, sortParam]);
+  }, [filtered]);
 
   const totalPages = Math.max(1, Math.ceil(ordered.length / productsPerPage));
   const startIdx = (page - 1) * productsPerPage;
   const paginated = ordered.slice(startIdx, startIdx + productsPerPage);
+
+  // helper чтобы сохранять sort в ссылках пагинации
+  const makePageHref = (i: number) => {
+    const params = new URLSearchParams();
+    params.set("page", String(i));
+    if (sort !== "default") params.set("sort", sort);
+    return `?${params.toString()}`;
+  };
 
   return (
     <div>
@@ -89,20 +103,6 @@ export default function SearchableCatalog({
             Очистить
           </Button>
         </div>
-
-        {/* A simple client-side sort selector to allow immediate sorting without page reload.
-            If you prefer server-driven SortControls, keep server SortControls in page.tsx. */}
-        <select
-          className="rounded border px-2 py-1"
-          value={sortParam}
-          onChange={(e) => setSortParam(e.target.value)}
-        >
-          <option value="default">По умолчанию</option>
-          <option value="price_asc">Цена: по возрастанию</option>
-          <option value="price_desc">Цена: по убыванию</option>
-          <option value="name_asc">Название: A→Z</option>
-          <option value="name_desc">Название: Z→A</option>
-        </select>
       </div>
 
       {ordered.length === 0 ? (
@@ -121,15 +121,17 @@ export default function SearchableCatalog({
             <div className="flex flex-wrap gap-4 xl:justify-center xl:gap-2.5">
               {Array.from({ length: totalPages }, (_, i) => (
                 <Button
+                  asChild
                   key={i + 1}
-                  variant={page === i + 1 ? "default" : "outline"}
+                  variant="outline"
                   size="icon"
-                  onClick={() => setPage(i + 1)}
                   className={
-                    page === i + 1 ? "bg-primary text-white" : "bg-white"
+                    page === i + 1
+                      ? "bg-primary text-white hover:text-white"
+                      : "bg-white"
                   }
                 >
-                  {i + 1}
+                  <Link href={makePageHref(i + 1)}>{i + 1}</Link>
                 </Button>
               ))}
             </div>

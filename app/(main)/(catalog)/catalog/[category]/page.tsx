@@ -1,17 +1,12 @@
 import productData from "@/data/products.json";
 import { categoryTree } from "@/data/categories";
 
-import Link from "next/link";
 import type { Metadata } from "next";
 
-import { sortProducts } from "@/lib/utils";
+import { parseSortParam } from "@/lib/sort";
 import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
-import { Button } from "@/components/ui/button";
-import ProductCard from "@/components/catalog/productCard";
 import SortControls from "@/components/catalog/SortControls";
-import { comparatorFor, parseSortParam } from "@/lib/sort";
-import { Input } from "@/components/ui/input";
 import SearchableCatalog from "@/components/catalog/SearchableCatalog";
 
 const PRODUCTS_PER_PAGE = 21;
@@ -62,7 +57,6 @@ export default async function Catalog({
       ? productData
       : productData.filter((p) => p.categories?.includes(slug));
 
-  // Render server-side header / layout, delegate interactive search + listing to client
   return (
     <div className="lg:w-full xl:w-auto">
       <div className="flex flex-col justify-between md:flex-row lg:gap-4">
@@ -71,7 +65,6 @@ export default async function Catalog({
         </h1>
 
         <div className="flex items-center gap-3">
-          {/* SortControls stays server-side — SearchableCatalog will still accept initialSort */}
           <SortControls />
         </div>
       </div>
@@ -79,9 +72,9 @@ export default async function Catalog({
       {/* Client-side searchable catalog: updates as you type */}
       <SearchableCatalog
         initialProducts={filteredProducts}
-        initialSort={sortParam}
+        sort={sortParam}
         initialQ={qParam}
-        initialPage={Number(query?.page) || 1}
+        page={Number(query?.page) || 1}
         productsPerPage={PRODUCTS_PER_PAGE}
       />
     </div>
