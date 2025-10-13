@@ -42,6 +42,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/tehnicheskaya-stranica",
+        destination: "/kalorifery-voda#anchor1",
+        permanent: true,
+      },
+      {
         source: "/otopitel'nye-agregaty",
         destination: "/otopitelnye-agregaty",
         permanent: true,
