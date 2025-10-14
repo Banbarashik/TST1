@@ -44,8 +44,7 @@ export default function SearchableCatalog({
     if (!ql) return initialProducts;
     return initialProducts.filter((p) => {
       const name = String(p.name ?? "").toLowerCase();
-      const description = String(p.description ?? "").toLowerCase();
-      return name.includes(ql) || description.includes(ql);
+      return name.includes(ql);
     });
   }, [initialProducts, q]);
 
@@ -93,15 +92,6 @@ export default function SearchableCatalog({
             className="w-full"
             aria-label="Поиск по товарам"
           />
-          <Button
-            type="button"
-            size="sm"
-            onClick={() => {
-              setQ("");
-            }}
-          >
-            Очистить
-          </Button>
         </div>
       </div>
 
