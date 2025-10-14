@@ -58,7 +58,7 @@ export default async function Catalog({
       : productData.filter((p) => p.categories?.includes(slug));
 
   return (
-    <div className="relative lg:w-full">
+    <div className="lg:relative lg:w-full">
       <h1 className="mb-6 text-xl font-bold uppercase lg:text-2xl">{title}</h1>
 
       {/* Client-side searchable catalog: updates as you type */}
