@@ -55,13 +55,17 @@ export default function SupplyCalorifierPage({
   return (
     <div className="@container w-full lg:overflow-x-auto">
       <ProductHeader product={product} />
-      <ProductParagraph className="mb-6">
+      <ProductParagraph className="mb-4">
         Приточный {heatCarrierAdj?.nom} калорифер {shortNameWithHyphen}{" "}
         выпускается в двух, трех и четырех рядном исполнении. Номинальная
         производительность по воздуху – {airPower} метров кубических в час,
         тепловая мощность варьируется в зависимости от рядности калорифера{" "}
         {shortNameWithHyphen} и параметров эксплуатации.
       </ProductParagraph>
+      <h2 className="mb-3 text-xl">
+        {product.name} ХЛ3.{" "}
+        <span className="block sm:inline">ТУ 4863-006-55613706-25</span>
+      </h2>
       <div className="mb-8 flex gap-5 overflow-x-auto sm:grid sm:grid-cols-3">
         {variants.map(function (variant) {
           return (
