@@ -110,6 +110,7 @@ export default function SearchableCatalog({
             onChange={(e) => setQ(e.target.value)}
             placeholder="Найти товар..."
             aria-label="Поиск по товарам"
+            className={q ? "" : "border-primary-darker/50 border"}
           />
           <Search
             width={20}

@@ -38,7 +38,7 @@ export default function SortControls({
   return (
     <div className={cn("flex items-center gap-3", className)}>
       <Select value={current} onValueChange={setSort}>
-        <SelectTrigger className="w-[220px] cursor-pointer">
+        <SelectTrigger className="data-[state=closed]:border-primary-darker/50 w-[220px] cursor-pointer data-[state=closed]:border">
           <SelectValue placeholder="Сортировка" />
         </SelectTrigger>
         <SelectContent>
