@@ -122,7 +122,7 @@ export default function SearchableCatalog({
       </div>
 
       {ordered.length === 0 ? (
-        <div className="flex w-full items-center justify-center text-3xl">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl">
           Нет товаров в данной категории
         </div>
       ) : (
