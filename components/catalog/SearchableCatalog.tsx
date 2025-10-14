@@ -14,10 +14,8 @@ import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
 import SortControls from "./SortControls";
 
-type Product = any;
-
 type Props = {
-  initialProducts: Product[]; // products already filtered by category (server-side)
+  initialProducts: []; // products already filtered by category (server-side)
   sort?: string;
   initialQ?: string;
   page?: number;
@@ -39,7 +37,6 @@ export default function SearchableCatalog({
 }: Props) {
   const router = useRouter();
   const sp = useSearchParams();
-  const params = new URLSearchParams(sp.toString());
 
   const [q, setQ] = useState(initialQ);
   const didMountRef = useRef(false);

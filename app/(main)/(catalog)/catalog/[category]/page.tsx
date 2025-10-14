@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { parseSortParam } from "@/lib/sort";
 import { findCategoryBySlug } from "@/lib/categoryBySlug";
 
-import SortControls from "@/components/catalog/SortControls";
 import SearchableCatalog from "@/components/catalog/SearchableCatalog";
 
 const PRODUCTS_PER_PAGE = 21;
