@@ -10,6 +10,7 @@ import { sortProducts } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/catalog/productCard";
+import SortControls from "./SortControls";
 
 type Product = any;
 
@@ -100,16 +101,15 @@ export default function SearchableCatalog({
   return (
     <div>
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex w-full max-w-md items-center gap-2">
-          <Input
-            name="q"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Поиск по товарам"
-            className="w-full"
-            aria-label="Поиск по товарам"
-          />
-        </div>
+        <Input
+          name="q"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Поиск по товарам"
+          className="w-full"
+          aria-label="Поиск по товарам"
+        />
+        <SortControls />
       </div>
 
       {ordered.length === 0 ? (
