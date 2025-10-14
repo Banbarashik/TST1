@@ -4,6 +4,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import { ArrowUp, ArrowDown } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 import {
   Select,
   SelectContent,
@@ -12,7 +14,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export default function SortControls() {
+export default function SortControls({
+  className = "",
+}: {
+  className?: string;
+}) {
   const router = useRouter();
   const sp = useSearchParams();
   const current = sp.get("sort") ?? "default";
@@ -30,7 +36,7 @@ export default function SortControls() {
   }
 
   return (
-    <div className="flex items-center gap-3">
+    <div className={cn("flex items-center gap-3", className)}>
       <Select value={current} onValueChange={setSort}>
         <SelectTrigger className="w-[220px] cursor-pointer">
           <SelectValue placeholder="Сортировка" />

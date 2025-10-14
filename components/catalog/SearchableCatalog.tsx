@@ -106,10 +106,10 @@ export default function SearchableCatalog({
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Поиск по товарам"
-          className="w-full"
           aria-label="Поиск по товарам"
+          className="w-full max-w-80"
         />
-        <SortControls />
+        <SortControls className="hidden sm:flex" />
       </div>
 
       {ordered.length === 0 ? (
