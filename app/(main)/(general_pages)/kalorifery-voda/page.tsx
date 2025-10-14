@@ -103,7 +103,7 @@ export default function KaloriferyVodaPage() {
           <iframe
             src="/legacy/calculator-kalorifery-voda-1.html"
             title="Калькулятор расчета мощности водяного калорифера"
-            className="h-48 w-full"
+            className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
         </section>
         <section>
@@ -121,7 +121,7 @@ export default function KaloriferyVodaPage() {
           <iframe
             src="/legacy/calculator-kalorifery-voda-2.html"
             title="Калькулятор расчета температуры воздуха на выходе из водяного калорифера"
-            className="h-48 w-full"
+            className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
         </section>
         <section className="mb-4">
@@ -141,7 +141,7 @@ export default function KaloriferyVodaPage() {
           <iframe
             src="/legacy/calculator-kalorifery-voda-3.html"
             title="Калькулятор расчета расхода теплоносителя калорифером"
-            className="h-48 w-full"
+            className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
         </section>
 
