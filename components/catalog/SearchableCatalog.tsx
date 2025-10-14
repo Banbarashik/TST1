@@ -21,6 +21,12 @@ type Props = {
   productsPerPage?: number;
 };
 
+// normalize for matching: lower-case and strip everything except letters and digits
+const normalizeForSearch = (s: unknown) =>
+  String(s ?? "")
+    .toLowerCase()
+    .replace(/[^0-9a-zа-яё]/g, "");
+
 export default function SearchableCatalog({
   initialProducts,
   initialQ = "",
@@ -40,11 +46,22 @@ export default function SearchableCatalog({
   }, [q]);
 
   const filtered = useMemo(() => {
-    const ql = (q ?? "").trim().toLowerCase();
+    const ql = (q ?? "").trim();
     if (!ql) return initialProducts;
+
+    const qNormalized = normalizeForSearch(ql);
+
     return initialProducts.filter((p) => {
-      const name = String(p.name ?? "").toLowerCase();
-      return name.includes(ql);
+      const name = String(p.name ?? "");
+      const nameLower = name.toLowerCase();
+
+      // two checks:
+      // 1) plain substring match on lowercased original (works for regular spaced queries)
+      // 2) normalized match with all non-alphanumerics removed (handles "Калориферкск", "2-3" vs "23", etc.)
+      if (nameLower.includes(ql.toLowerCase())) return true;
+
+      const nameNormalized = normalizeForSearch(name);
+      return nameNormalized.includes(qNormalized);
     });
   }, [initialProducts, q]);
 
