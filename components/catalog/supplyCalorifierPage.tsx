@@ -63,7 +63,7 @@ export default function SupplyCalorifierPage({
         {shortNameWithHyphen} и параметров эксплуатации.
       </ProductParagraph>
       <h2 className="mb-3 text-xl">
-        {product.name} ХЛ3.{" "}
+        {product.name} {isWater ? "ХЛ3" : "У3"}.{" "}
         <span className="block sm:inline">ТУ 4863-006-55613706-25</span>
       </h2>
       <div className="mb-8 flex gap-5 overflow-x-auto sm:grid sm:grid-cols-3">
