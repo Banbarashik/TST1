@@ -52,6 +52,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/raschet-online-vodianyh-kaloriferov",
+        destination: "/kalorifery-voda#anchor1",
+        permanent: true,
+      },
+      {
+        source: "/raschet-podbor-kaloriferov",
+        destination: "/kalorifery-voda#anchor1",
+        permanent: true,
+      },
+      {
+        source: "/koefficient-teploperedachi-kaloriferov",
+        destination: "/kalorifery-voda#anchor1",
+        permanent: true,
+      },
+      {
+        source: "/gidravlicheskoe-soprotivlenie-kaloriferov",
+        destination: "/kalorifery-voda#anchor1",
+        permanent: true,
+      },
+      {
         source: "/otopitel'nye-agregaty",
         destination: "/otopitelnye-agregaty",
         permanent: true,
