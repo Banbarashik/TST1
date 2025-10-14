@@ -4,11 +4,11 @@
     <link href="calculator.css" rel="stylesheet" />
     <script>
       function calculator(form) {
-        const k = Number(form.k.value);
-        const l = Number(form.l.value);
-        const m = Number(form.m.value);
-        const r = m / (((k * (353 / (273.15 + l))) / 3600000) * 1009) + l;
-        form.total.value = r.toFixed(0);
+        const e = Number(form.e.value);
+        const f = Number(form.f.value);
+        const j = Number(form.j.value);
+        const h = ((e * 1000) / (4200 * (f - j))) * 3600;
+        form.total.value = h.toFixed(0);
       }
     </script>
   </head>
@@ -17,30 +17,30 @@
     <!-- Калькулятор (начало) -->
     <form class="calculator">
       <label>
-        Объем нагреваемого воздуха, м³/ч
+        <span style="margin-left: 13px">Мощность водяного калорифера, кВт</span>
         <input
           type="text"
-          name="k"
-          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
-          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
+          name="e"
+          onchange="this.value=this.value.replace(/([^0-9.])/g,'');"
+          onkeyup="var n=this.value.replace(/([^0-9.])/g,''); if(n!=this.value) this.value=n;"
         />
       </label>
 
       <label>
-        Температура входящего воздуха, °С
+        Температура теплоносителя на входе, °С
         <input
           type="text"
-          name="l"
+          name="f"
           onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
         />
       </label>
 
       <label>
-        Мощность водяного калорифера, кВт
+        Температура теплоносителя на выходе, °С
         <input
           type="text"
-          name="m"
-          onkeyup="this.value=this.value.replace(/([^0-9.])/g,'');"
+          name="j"
+          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
         />
       </label>
 
@@ -54,7 +54,7 @@
       </div>
 
       <label>
-        Температура выходящего воздуха, °С
+        Расход теплоносителя, кг/час
         <input type="text" name="total" disabled class="bg-transparent" />
       </label>
     </form>
