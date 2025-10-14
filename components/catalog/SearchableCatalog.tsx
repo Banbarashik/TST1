@@ -4,6 +4,8 @@ import React, { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
+import { Search } from "lucide-react";
+
 import { comparatorFor } from "@/lib/sort";
 import { sortProducts } from "@/lib/utils";
 
@@ -101,14 +103,21 @@ export default function SearchableCatalog({
   return (
     <div>
       <div className="mb-6 flex items-center gap-3">
-        <Input
-          name="q"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Поиск по товарам"
-          aria-label="Поиск по товарам"
-          className="w-full max-w-80"
-        />
+        <div className="relative w-full max-w-80">
+          <Input
+            name="q"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Поиск по товарам"
+            aria-label="Поиск по товарам"
+          />
+          <Search
+            width={20}
+            height={20}
+            color="#9ca3af"
+            className="absolute top-1/2 right-2 -translate-y-1/2"
+          />
+        </div>
         <SortControls className="hidden sm:flex" />
       </div>
 
