@@ -89,6 +89,23 @@ export default function KaloriferyVodaPage() {
       </section>
 
       <section>
+        <Heading lvl={2} text="Онлайн-расчет мощности водяного калорифера" />
+        <ProductParagraph className="mb-3">
+          Расход тепла водяным калорифером на подогрев приточного воздуха. В
+          поля калькулятора расчета вносятся следующие показатели: 1. объем
+          проходящего через калорифер воздуха, 2. температура входящего воздуха,
+          3. необходимая температура воздуха на выходе из теплообменника. По
+          результатам онлайн-расчета показывается требуемая тепловая мощность
+          водяного калорифера для соблюдения заданных условий.
+        </ProductParagraph>
+        <iframe
+          src="/legacy/calculator-kalorifery-voda-1.html"
+          title="Калькулятор расчета мощности водяного калорифера"
+          className="h-48 w-full"
+        />
+      </section>
+
+      <section>
         <span id="anchor2" className="invisible relative -top-13" />
         <Heading lvl={2} text="Расчет и подбор приточных водяных калориферов" />
         <ProductParagraph>

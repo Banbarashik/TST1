@@ -14,26 +14,26 @@ body {
   line-height: 18px;
 }
 
-.calculator label,
+label,
 .calculator-buttons {
   display: block;
 
   margin-bottom: 5px;
 }
-.calculator input {
+input {
   font: inherit;
 }
-.calculator select {
+select {
   margin-bottom: 15px;
 }
-.calculator input[type="text"] {
+input[type="text"] {
   box-sizing: border-box;
 
   padding: 5px;
   border: 1px solid rgb(114, 57, 16);
   border-radius: 4px;
 
-  background-color: rgb(217, 217, 217);
+  background-color: rgb(176, 196, 222);
 }
 .calculator-buttons input[type="button"],
 .calculator-buttons input[type="reset"] {
@@ -43,7 +43,7 @@ body {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 2px;
 
-  background-color: rgb(153, 153, 153);
+  background-color: rgb(217, 217, 217);
 
   cursor: pointer;
 }
@@ -83,7 +83,7 @@ body {
 .advanced-calculator input[type="radio"] {
   display: initial;
 }
-.calculator input[type="range"]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   width: 10px;
   -webkit-appearance: none;
   height: 15px;
@@ -119,3 +119,7 @@ input::-webkit-inner-spin-button {
   margin-top: 6px;
 }
 /* Сложные калькуляторы (конец) */
+
+input.bg-transparent {
+  background: transparent;
+}
