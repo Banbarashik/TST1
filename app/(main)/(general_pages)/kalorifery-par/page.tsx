@@ -106,7 +106,7 @@ export default function KaloriferyParPage() {
           <iframe
             src="/legacy/calculator-kalorifery-voda-1.html"
             title="Калькулятор расчета мощности парового калорифера"
-            className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
+            className="w-full min-[320px]:h-66 min-[519px]:h-62 min-[531px]:h-57 min-[542px]:h-53 min-[551px]:h-48"
           />
         </section>
         <section>
@@ -124,7 +124,7 @@ export default function KaloriferyParPage() {
           <iframe
             src="/legacy/calculator-kalorifery-par-2.html"
             title="Калькулятор расчета температуры воздуха на выходе из парового калорифера"
-            className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
+            className="w-full min-[320px]:h-66 min-[519px]:h-62 min-[531px]:h-57 min-[542px]:h-53 min-[551px]:h-48"
           />
         </section>
         <section className="mb-4">
@@ -140,7 +140,7 @@ export default function KaloriferyParPage() {
           <iframe
             src="/legacy/calculator-kalorifery-par-3.html"
             title="Калькулятор расчета расхода пара калорифером"
-            className="w-full min-[320px]:h-58 min-[405px]:h-54 min-[413px]:h-49 min-[444px]:h-45"
+            className="w-full min-[320px]:h-59 min-[405px]:h-55 min-[413px]:h-50 min-[444px]:h-46"
           />
         </section>
         <section className="mb-4">
@@ -159,7 +159,7 @@ export default function KaloriferyParPage() {
           <iframe
             src="/legacy/calculator-kalorifery-par-4.html"
             title="Калькулятор расчета мощности калорифера от расхода пара"
-            className="w-full min-[320px]:h-58 min-[405px]:h-54 min-[413px]:h-49 min-[444px]:h-45"
+            className="w-full min-[320px]:h-59 min-[405px]:h-55 min-[413px]:h-50 min-[444px]:h-46"
           />
         </section>
 

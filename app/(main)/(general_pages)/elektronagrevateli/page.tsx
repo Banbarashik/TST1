@@ -162,7 +162,7 @@ export default function KaloriferySFO() {
         <iframe
           src="/legacy/calculator-elektronagrevateli-1.html"
           title="Калькулятор расчета мощности электрического калорифера"
-          className="w-full min-[320px]:h-70 min-[357px]:h-65 min-[519px]:h-61 min-[523px]:h-56 min-[534px]:h-52 min-[609px]:h-47"
+          className="w-full min-[320px]:h-71 min-[357px]:h-66 min-[519px]:h-62 min-[523px]:h-57 min-[534px]:h-53 min-[609px]:h-48"
         />
       </section>
 
@@ -181,7 +181,7 @@ export default function KaloriferySFO() {
         <iframe
           src="/legacy/calculator-elektronagrevateli-2.html"
           title="Калькулятор расчета температуры воздуха на выходе из электрокалорифера"
-          className="w-full min-[320px]:h-70 min-[334px]:h-65 min-[500px]:h-61 min-[534px]:h-56 min-[542px]:h-52 min-[587px]:h-47"
+          className="w-full min-[320px]:h-71 min-[334px]:h-66 min-[500px]:h-62 min-[534px]:h-57 min-[542px]:h-53 min-[587px]:h-48"
         />
       </section>
 
