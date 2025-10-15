@@ -47,6 +47,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/raschet-online-parovyh-kaloriferov",
+        destination: "/kalorifery-par#anchor1",
+        permanent: true,
+      },
+      {
+        source: "/podbor-raschet-kaloriferov",
+        destination: "/kalorifery-par#anchor1",
+        permanent: true,
+      },
+      {
+        source: "/koefficient-teploperedachi-parovyh-kaloriferov",
+        destination: "/kalorifery-par#anchor1",
+        permanent: true,
+      },
+      {
         source: "/raschet-online-elektricheskih-kaloriferov",
         destination: "/elektronagrevateli#anchor1",
         permanent: true,
