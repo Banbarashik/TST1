@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/raschet-online-elektricheskih-kaloriferov",
+        destination: "/elektronagrevateli#anchor1",
+        permanent: true,
+      },
+      {
         source: "/tehnicheskaya-stranica",
         destination: "/kalorifery-voda#anchor1",
         permanent: true,
