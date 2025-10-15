@@ -9,10 +9,11 @@
       }
 
       function calculator(form) {
-        const k = clampNum(Number(form.k.value), 10, 1000) || 0;
-        const l = Number(form.l.value);
-        const m = ((k * 1000) / l) * 3600;
-        form.total.value = m.toFixed(0);
+        const a = clampNum(Number(form.a.value), 500, 100000) || 0;
+        const b = clampNum(Number(form.b.value), -40, 40) || 0;
+        const c = clampNum(Number(form.c.value), -40, 135) || 0;
+        const d = ((a * (353 / (273.15 + b))) / 3600000) * 1009 * (c - b);
+        form.total.value = d.toFixed(1);
       }
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -85,28 +86,22 @@
   <body>
     <!-- Калькулятор (начало) -->
     <form class="calculator">
-      <label style="margin-bottom: 10px">
-        Тепловая мощность, кВт
-        <input type="text" name="k" data-min="10" data-max="1000" />
+      <label>
+        Объем нагреваемого воздуха, м³/ч
+        <input type="text" name="a" data-min="500" data-max="100000" />
       </label>
 
-      Давление сухого насыщенного пара, МПа
-      <select name="l" size="1" class="steam-pressure">
-        <option selected="selected" value="2257510">0.1</option>
-        <option value="2201560">0.2</option>
-        <option value="2163440">0.3</option>
-        <option value="2133330">0.4</option>
-        <option value="2107920">0.5</option>
-        <option value="2085640">0.6</option>
-        <option value="2065610">0.7</option>
-        <option value="2047290">0.8</option>
-        <option value="2030310">0.9</option>
-        <option value="2014440">1.0</option>
-        <option value="1999470">1.1</option>
-        <option value="1985270">1.2</option>
-      </select>
+      <label>
+        Температура входящего воздуха, °С
+        <input type="text" name="b" data-min="-40" data-max="40" />
+      </label>
 
-      <div class="calculator-buttons" style="margin-bottom: 15px">
+      <label>
+        Температура выходящего воздуха, °С
+        <input type="text" name="c" data-min="-40" data-max="135" />
+      </label>
+
+      <div class="calculator-buttons">
         <input
           type="button"
           value="Рассчитать"
@@ -116,7 +111,7 @@
       </div>
 
       <label>
-        Расход пара, кг/час
+        Требуемая мощность калорифера, кВт
         <input type="text" name="total" disabled class="bg-transparent" />
       </label>
     </form>

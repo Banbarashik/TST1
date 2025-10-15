@@ -3,15 +3,32 @@
   <head>
     <link href="calculator.css" rel="stylesheet" />
     <script>
-      function calculator(form) {
-        const e = Number(form.e.value);
-        const f = Number(form.f.value);
-        const j = Number(form.j.value);
-        const h = ((e * 1000) / (4200 * (f - j))) * 3600;
-        form.total.value = h.toFixed(0);
+      function clampNum(v, min, max) {
+        if (!Number.isFinite(v)) return NaN;
+        return Math.min(Math.max(v, min), max);
       }
 
-      // add/remove .has-value on inputs so they turn yellow when non-empty
+      function calculator(form) {
+        const e = clampNum(Number(form.e.value), 10, 1000) || 0;
+        const f = clampNum(Number(form.f.value), 50, 150) || 0;
+        const j = clampNum(Number(form.j.value), 30, 90) || 0;
+        const h = ((e * 1000) / (4200 * (f - j))) * 3600;
+
+        const outEl = form.total;
+        // write value
+        outEl.value = h.toFixed(0);
+        // check optional data-min / data-max on the output and toggle warning class
+        const min = Number(outEl.dataset.min ?? NaN);
+        const max = Number(outEl.dataset.max ?? NaN);
+        if (Number.isFinite(min) && Number.isFinite(max)) {
+          if (r < min || r > max) outEl.classList.add("out-of-range");
+          else outEl.classList.remove("out-of-range");
+        } else {
+          // no range specified: ensure class removed
+          outEl.classList.remove("out-of-range");
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form.calculator");
         if (!form) return;
@@ -25,8 +42,47 @@
         inputs.forEach((input) => {
           // initial state
           toggleHasValue(input);
-          // update on user input
-          input.addEventListener("input", () => toggleHasValue(input));
+          // keep only digits and one decimal point while typing
+          input.addEventListener("input", () => {
+            const before = input.value;
+            // allow only 0-9 and dot
+            let v = before.replace(/[^-0-9.]/g, "");
+            // keep only first dot
+            const firstDot = v.indexOf(".");
+            if (firstDot !== -1) {
+              v =
+                v.slice(0, firstDot + 1) +
+                v.slice(firstDot + 1).replace(/\./g, "");
+            }
+            if (v !== before) input.value = v;
+            toggleHasValue(input);
+          });
+
+          // clamp to data-min/data-max on blur (and ensure one decimal)
+          input.addEventListener("blur", () => {
+            // keep empty fields empty (don't coerce "" -> 0)
+            if (!input.value || input.value.trim() === "") {
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+
+            const min = Number(input.dataset.min ?? NaN);
+            const max = Number(input.dataset.max ?? NaN);
+            const n = Number(input.value);
+            if (!Number.isFinite(n)) {
+              // clear invalid entry
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+            if (Number.isFinite(min) && Number.isFinite(max)) {
+              const clamped = clampNum(n, min, max);
+              // format with at most one decimal place (matches calculator output)
+              input.value = (Math.round(clamped * 10) / 10).toString();
+            }
+            toggleHasValue(input);
+          });
         });
 
         // clear highlights on form reset
@@ -34,6 +90,9 @@
         if (resetBtn) {
           resetBtn.addEventListener("click", () => {
             inputs.forEach((i) => i.classList.remove("has-value"));
+            // also clear out-of-range highlight on the output
+            const out = form.querySelector('input[name="total"]');
+            if (out) out.classList.remove("out-of-range");
           });
         }
       });
@@ -45,30 +104,17 @@
     <form class="calculator">
       <label>
         <span style="margin-left: 13px">Мощность водяного калорифера, кВт</span>
-        <input
-          type="text"
-          name="e"
-          onchange="this.value=this.value.replace(/([^0-9.])/g,'');"
-          onkeyup="var n=this.value.replace(/([^0-9.])/g,''); if(n!=this.value) this.value=n;"
-        />
+        <input type="text" name="e" data-min="10" data-max="1000" />
       </label>
 
       <label>
         Температура теплоносителя на входе, °С
-        <input
-          type="text"
-          name="f"
-          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
-        />
+        <input type="text" name="f" data-min="50" data-max="150" />
       </label>
 
       <label>
         Температура теплоносителя на выходе, °С
-        <input
-          type="text"
-          name="j"
-          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
-        />
+        <input type="text" name="j" data-min="30" data-max="90" />
       </label>
 
       <div class="calculator-buttons">
@@ -82,7 +128,14 @@
 
       <label>
         Расход теплоносителя, кг/час
-        <input type="text" name="total" disabled class="bg-transparent" />
+        <input
+          type="text"
+          name="total"
+          data-min="-50"
+          data-max="60"
+          disabled
+          class="bg-transparent"
+        />
       </label>
     </form>
     <!-- Калькулятор (конец) -->

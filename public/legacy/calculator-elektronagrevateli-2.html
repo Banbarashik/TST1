@@ -13,7 +13,19 @@
         const l = clampNum(Number(form.l.value), -50, 40) || 0;
         const m = clampNum(Number(form.m.value), 2.5, 247.5) || 0;
         const r = m / (((k * (353 / (273.15 + l))) / 3600000) * 1009) + l;
-        form.total.value = r.toFixed(0);
+        const outEl = form.total;
+        // write value
+        outEl.value = r.toFixed(0);
+        // check optional data-min / data-max on the output and toggle warning class
+        const min = Number(outEl.dataset.min ?? NaN);
+        const max = Number(outEl.dataset.max ?? NaN);
+        if (Number.isFinite(min) && Number.isFinite(max)) {
+          if (r < min || r > max) outEl.classList.add("out-of-range");
+          else outEl.classList.remove("out-of-range");
+        } else {
+          // no range specified: ensure class removed
+          outEl.classList.remove("out-of-range");
+        }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -77,6 +89,9 @@
         if (resetBtn) {
           resetBtn.addEventListener("click", () => {
             inputs.forEach((i) => i.classList.remove("has-value"));
+            // also clear out-of-range highlight on the output
+            const out = form.querySelector('input[name="total"]');
+            if (out) out.classList.remove("out-of-range");
           });
         }
       });
@@ -112,7 +127,14 @@
 
       <label>
         Температура выходящего воздуха, °С
-        <input type="text" name="total" disabled class="bg-transparent" />
+        <input
+          type="text"
+          name="total"
+          data-min="-50"
+          data-max="100"
+          disabled
+          class="bg-transparent"
+        />
       </label>
     </form>
     <!-- Калькулятор (конец) -->

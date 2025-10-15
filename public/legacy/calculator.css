@@ -140,6 +140,12 @@ input.bg-transparent {
   outline: none;
 }
 
-.calculator input.has-value {
+input.has-value {
   background-color: #ffeb9a;
+}
+
+input.out-of-range {
+  border-color: #c00;
+  background: rgba(255, 0, 0, 0.04);
+  color: #700;
 }

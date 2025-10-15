@@ -93,6 +93,7 @@ export default function KaloriferyParPage() {
 
       <section id="anchor1" className="space-y-6">
         <section>
+          <span id="anchor2" className="invisible relative -top-13" />
           <Heading lvl={2} text="Онлайн-расчет мощности парового калорифера" />
           <ProductParagraph className="mb-3">
             Расход тепла паровым калорифером на подогрев приточного воздуха. В
@@ -104,26 +105,8 @@ export default function KaloriferyParPage() {
             условий.
           </ProductParagraph>
           <iframe
-            src="/legacy/calculator-kalorifery-voda-1.html"
+            src="/legacy/calculator-kalorifery-par-1.html"
             title="Калькулятор расчета мощности парового калорифера"
-            className="w-full min-[320px]:h-66 min-[519px]:h-62 min-[531px]:h-57 min-[542px]:h-53 min-[551px]:h-48"
-          />
-        </section>
-        <section>
-          <Heading
-            lvl={2}
-            text="Онлайн-расчет температуры воздуха на выходе из парового калорифера"
-          />
-          <ProductParagraph className="mb-3">
-            В поля калькулятора вносятся следующие показатели: 1. объем
-            нагреваемого воздуха, 2. температура воздуха на входе в калорифер,
-            3. мощность подобранного парового воздухонагревателя вентиляции. По
-            результатам онлайн-расчета представлена температура выходящего
-            нагретого воздуха.
-          </ProductParagraph>
-          <iframe
-            src="/legacy/calculator-kalorifery-par-2.html"
-            title="Калькулятор расчета температуры воздуха на выходе из парового калорифера"
             className="w-full min-[320px]:h-66 min-[519px]:h-62 min-[531px]:h-57 min-[542px]:h-53 min-[551px]:h-48"
           />
         </section>
@@ -165,15 +148,14 @@ export default function KaloriferyParPage() {
 
         <ProductParagraph>
           Калькуляторы онлайн-расчета предоставляют общую информацию по
-          определенной мощности калорифера, температуре воздуха на выходе и
-          расходу теплоносителя. Подробный расчет и подбор паровых калориферов
-          для приточной вентиляции представлен серией инженерных калькуляторов с
-          теплотехническими и аэродинамическими показателями.
+          определенной мощности калорифера и расходу теплоносителя. Подробный
+          расчет и подбор паровых калориферов для приточной вентиляции
+          представлен серией инженерных калькуляторов с теплотехническими и
+          аэродинамическими показателями.
         </ProductParagraph>
       </section>
 
       <section>
-        <span id="anchor2" className="invisible relative -top-13" />
         <Heading lvl={2} text="Расчет и подбор приточных паровых калориферов" />
         <ProductParagraph>
           Выбрав номер калорифера с приближенным для выполнения вашей задачи

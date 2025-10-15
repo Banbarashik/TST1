@@ -3,12 +3,82 @@
   <head>
     <link href="calculator.css" rel="stylesheet" />
     <script>
+      function clampNum(v, min, max) {
+        if (!Number.isFinite(v)) return NaN;
+        return Math.min(Math.max(v, min), max);
+      }
+
       function calculator(form) {
-        const e = Number(form.e.value);
+        const e = clampNum(Number(form.e.value), 10, 2000) || 0;
         const f = Number(form.f.value);
         const j = ((e / 3600) * f) / 1000;
         form.total.value = j.toFixed(0);
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form.calculator");
+        if (!form) return;
+        const inputs = form.querySelectorAll('input[type="text"]');
+
+        function toggleHasValue(el) {
+          if (el.value && el.value.trim() !== "") el.classList.add("has-value");
+          else el.classList.remove("has-value");
+        }
+
+        inputs.forEach((input) => {
+          // initial state
+          toggleHasValue(input);
+          // keep only digits and one decimal point while typing
+          input.addEventListener("input", () => {
+            const before = input.value;
+            // allow only 0-9 and dot
+            let v = before.replace(/[^-0-9.]/g, "");
+            // keep only first dot
+            const firstDot = v.indexOf(".");
+            if (firstDot !== -1) {
+              v =
+                v.slice(0, firstDot + 1) +
+                v.slice(firstDot + 1).replace(/\./g, "");
+            }
+            if (v !== before) input.value = v;
+            toggleHasValue(input);
+          });
+
+          // clamp to data-min/data-max on blur (and ensure one decimal)
+          input.addEventListener("blur", () => {
+            // keep empty fields empty (don't coerce "" -> 0)
+            if (!input.value || input.value.trim() === "") {
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+
+            const min = Number(input.dataset.min ?? NaN);
+            const max = Number(input.dataset.max ?? NaN);
+            const n = Number(input.value);
+            if (!Number.isFinite(n)) {
+              // clear invalid entry
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+            if (Number.isFinite(min) && Number.isFinite(max)) {
+              const clamped = clampNum(n, min, max);
+              // format with at most one decimal place (matches calculator output)
+              input.value = (Math.round(clamped * 10) / 10).toString();
+            }
+            toggleHasValue(input);
+          });
+        });
+
+        // clear highlights on form reset
+        const resetBtn = form.querySelector('input[type="reset"]');
+        if (resetBtn) {
+          resetBtn.addEventListener("click", () => {
+            inputs.forEach((i) => i.classList.remove("has-value"));
+          });
+        }
+      });
     </script>
   </head>
 
@@ -17,12 +87,7 @@
     <form class="calculator">
       <label style="margin-bottom: 10px">
         Расход пара, кг/час
-        <input
-          type="text"
-          name="e"
-          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
-          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
-        />
+        <input type="text" name="e" data-min="10" data-max="2000" />
       </label>
 
       Давление сухого насыщенного пара, МПа
