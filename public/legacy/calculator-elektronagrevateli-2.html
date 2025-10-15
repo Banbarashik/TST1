@@ -3,15 +3,19 @@
   <head>
     <link href="calculator.css" rel="stylesheet" />
     <script>
+      function clampNum(v, min, max) {
+        if (!Number.isFinite(v)) return NaN;
+        return Math.min(Math.max(v, min), max);
+      }
+
       function calculator(form) {
-        const k = Number(form.k.value);
-        const l = Number(form.l.value);
-        const m = Number(form.m.value);
+        const k = clampNum(Number(form.k.value), 500, 100000) || 0;
+        const l = clampNum(Number(form.l.value), -50, 40) || 0;
+        const m = clampNum(Number(form.m.value), 2.5, 247.5) || 0;
         const r = m / (((k * (353 / (273.15 + l))) / 3600000) * 1009) + l;
         form.total.value = r.toFixed(0);
       }
 
-      // add/remove .has-value on inputs so they turn yellow when non-empty
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.querySelector("form.calculator");
         if (!form) return;
@@ -25,8 +29,47 @@
         inputs.forEach((input) => {
           // initial state
           toggleHasValue(input);
-          // update on user input
-          input.addEventListener("input", () => toggleHasValue(input));
+          // keep only digits and one decimal point while typing
+          input.addEventListener("input", () => {
+            const before = input.value;
+            // allow only 0-9 and dot
+            let v = before.replace(/[^-0-9.]/g, "");
+            // keep only first dot
+            const firstDot = v.indexOf(".");
+            if (firstDot !== -1) {
+              v =
+                v.slice(0, firstDot + 1) +
+                v.slice(firstDot + 1).replace(/\./g, "");
+            }
+            if (v !== before) input.value = v;
+            toggleHasValue(input);
+          });
+
+          // clamp to data-min/data-max on blur (and ensure one decimal)
+          input.addEventListener("blur", () => {
+            // keep empty fields empty (don't coerce "" -> 0)
+            if (!input.value || input.value.trim() === "") {
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+
+            const min = Number(input.dataset.min ?? NaN);
+            const max = Number(input.dataset.max ?? NaN);
+            const n = Number(input.value);
+            if (!Number.isFinite(n)) {
+              // clear invalid entry
+              input.value = "";
+              toggleHasValue(input);
+              return;
+            }
+            if (Number.isFinite(min) && Number.isFinite(max)) {
+              const clamped = clampNum(n, min, max);
+              // format with at most one decimal place (matches calculator output)
+              input.value = (Math.round(clamped * 10) / 10).toString();
+            }
+            toggleHasValue(input);
+          });
         });
 
         // clear highlights on form reset
@@ -45,30 +88,17 @@
     <form class="calculator">
       <label>
         Объем приточного воздуха, м³/ч
-        <input
-          type="text"
-          name="k"
-          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
-          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
-        />
+        <input type="text" name="k" data-min="500" data-max="100000" />
       </label>
 
       <label>
         Температура приточного воздуха, °С
-        <input
-          type="text"
-          name="l"
-          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
-        />
+        <input type="text" name="l" data-min="-50" data-max="40" />
       </label>
 
       <label>
         Мощность электрического калорифера, кВт
-        <input
-          type="text"
-          name="m"
-          onkeyup="this.value=this.value.replace(/([^0-9.])/g,'');"
-        />
+        <input type="text" name="m" data-min="2.5" data-max="247.5" />
       </label>
 
       <div class="calculator-buttons">
