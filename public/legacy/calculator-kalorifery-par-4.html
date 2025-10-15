@@ -15,18 +15,18 @@
   <body>
     <!-- Калькулятор (начало) -->
     <form class="calculator">
-      <label>
+      <label style="margin-bottom: 10px">
         Расход пара, кг/час
         <input
           type="text"
           name="e"
           onchange="this.value=this.value.replace(/([^0-9])/g,'');"
           onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
-        /><br /><br />
+        />
       </label>
 
-      Давление пара, МПа
-      <select name="f" size="1">
+      Давление сухого насыщенного пара, МПа
+      <select name="f" size="1" class="steam-pressure">
         <option selected="selected" value="2257510">0.1</option>
         <option value="2201560">0.2</option>
         <option value="2163440">0.3</option>

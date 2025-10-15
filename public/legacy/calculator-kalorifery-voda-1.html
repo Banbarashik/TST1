@@ -10,6 +10,33 @@
         const d = ((a * (353 / (273.15 + b))) / 3600000) * 1009 * (c - b);
         form.total.value = d.toFixed(1);
       }
+
+      // add/remove .has-value on inputs so they turn yellow when non-empty
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form.calculator");
+        if (!form) return;
+        const inputs = form.querySelectorAll('input[type="text"]');
+
+        function toggleHasValue(el) {
+          if (el.value && el.value.trim() !== "") el.classList.add("has-value");
+          else el.classList.remove("has-value");
+        }
+
+        inputs.forEach((input) => {
+          // initial state
+          toggleHasValue(input);
+          // update on user input
+          input.addEventListener("input", () => toggleHasValue(input));
+        });
+
+        // clear highlights on form reset
+        const resetBtn = form.querySelector('input[type="reset"]');
+        if (resetBtn) {
+          resetBtn.addEventListener("click", () => {
+            inputs.forEach((i) => i.classList.remove("has-value"));
+          });
+        }
+      });
     </script>
   </head>
 

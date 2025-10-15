@@ -124,3 +124,22 @@ input::-webkit-inner-spin-button {
 input.bg-transparent {
   background: transparent;
 }
+
+.steam-pressure {
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 2px;
+  padding-left: 4px;
+  /* background-color: rgb(176, 196, 222); */
+  background-color: #e4e1d6;
+}
+
+.steam-pressure:focus {
+  outline: none;
+}
+
+.calculator input.has-value {
+  background-color: #ffeb9a;
+}
