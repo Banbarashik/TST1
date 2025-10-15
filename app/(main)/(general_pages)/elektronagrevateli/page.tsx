@@ -145,7 +145,7 @@ export default function KaloriferySFO() {
         </ProductParagraph>
       </section>
 
-      <section>
+      <section id="anchor1">
         <Heading
           lvl={2}
           text="Онлайн-расчет мощности электрического калорифера"
