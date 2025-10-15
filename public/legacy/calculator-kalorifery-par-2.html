@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="calculator.css" rel="stylesheet" />
+    <script>
+      function calculator(form) {
+        const k = Number(form.k.value);
+        const l = Number(form.l.value);
+        const m = Number(form.m.value);
+        const r = m / (((k * (353 / (273.15 + l))) / 3600000) * 1009) + l;
+        form.total.value = r.toFixed(0);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Калькулятор (начало) -->
+    <form class="calculator">
+      <label>
+        Объем нагреваемого воздуха, м³/ч
+        <input
+          type="text"
+          name="k"
+          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
+          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
+        />
+      </label>
+
+      <label>
+        Температура входящего воздуха, °С
+        <input
+          type="text"
+          name="l"
+          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
+        />
+      </label>
+
+      <label>
+        Мощность парового калорифера, кВт
+        <input
+          type="text"
+          name="m"
+          onkeyup="this.value=this.value.replace(/([^0-9.])/g,'');"
+        />
+      </label>
+
+      <div class="calculator-buttons">
+        <input
+          type="button"
+          value="Рассчитать"
+          onclick="calculator(this.form)"
+        />
+        <input type="reset" value="Сброс" />
+      </div>
+
+      <label>
+        Температура выходящего воздуха, °С
+        <input type="text" name="total" disabled class="bg-transparent" />
+      </label>
+    </form>
+    <!-- Калькулятор (конец) -->
+  </body>
+</html>

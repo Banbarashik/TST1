@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="calculator.css" rel="stylesheet" />
+    <script>
+      function calculator(form) {
+        const k = Number(form.k.value);
+        const l = Number(form.l.value);
+        const m = ((k * 1000) / l) * 3600;
+        form.total.value = m.toFixed(0);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Калькулятор (начало) -->
+    <form class="calculator">
+      <label>
+        Тепловая мощность, кВт
+        <input
+          type="text"
+          name="k"
+          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
+          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
+        /><br /><br />
+      </label>
+
+      Давление сухого насыщенного пара, МПа
+      <select name="l" size="1">
+        <option selected="selected" value="2257510">0.1</option>
+        <option value="2201560">0.2</option>
+        <option value="2163440">0.3</option>
+        <option value="2133330">0.4</option>
+        <option value="2107920">0.5</option>
+        <option value="2085640">0.6</option>
+        <option value="2065610">0.7</option>
+        <option value="2047290">0.8</option>
+        <option value="2030310">0.9</option>
+        <option value="2014440">1.0</option>
+        <option value="1999470">1.1</option>
+        <option value="1985270">1.2</option>
+      </select>
+
+      <div class="calculator-buttons" style="margin-bottom: 15px">
+        <input
+          type="button"
+          value="Рассчитать"
+          onclick="calculator(this.form)"
+        />
+        <input type="reset" value="Сброс" />
+      </div>
+
+      <label>
+        Расход пара, кг/час
+        <input type="text" name="total" disabled class="bg-transparent" />
+      </label>
+    </form>
+    <!-- Калькулятор (конец) -->
+  </body>
+</html>

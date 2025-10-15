@@ -121,7 +121,7 @@ export default function KaloriferyParPage() {
             нагретого воздуха.
           </ProductParagraph>
           <iframe
-            src="/legacy/calculator-kalorifery-voda-2.html"
+            src="/legacy/calculator-kalorifery-par-2.html"
             title="Калькулятор расчета температуры воздуха на выходе из парового калорифера"
             className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
@@ -137,7 +137,7 @@ export default function KaloriferyParPage() {
             теплоносителя для выработки указанной производительности по теплу.
           </ProductParagraph>
           <iframe
-            src="/legacy/calculator-kalorifery-voda-3.html"
+            src="/legacy/calculator-kalorifery-par-3.html"
             title="Калькулятор расчета расхода пара калорифером"
             className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
@@ -156,7 +156,7 @@ export default function KaloriferyParPage() {
             мощность.
           </ProductParagraph>
           <iframe
-            src="/legacy/calculator-kalorifery-voda-3.html"
+            src="/legacy/calculator-kalorifery-par-4.html"
             title="Калькулятор расчета мощности калорифера от расхода пара"
             className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
           />
