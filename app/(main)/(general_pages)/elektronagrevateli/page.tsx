@@ -160,7 +160,7 @@ export default function KaloriferySFO() {
           условий.
         </ProductParagraph>
         <iframe
-          src="/legacy/calculator-kalorifery-voda-2.html"
+          src="/legacy/calculator-elektronagrevateli-1.html"
           title="Калькулятор расчета мощности электрического калорифера"
           className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
         />
@@ -179,7 +179,7 @@ export default function KaloriferySFO() {
           нагретого воздуха.
         </ProductParagraph>
         <iframe
-          src="/legacy/calculator-kalorifery-voda-2.html"
+          src="/legacy/calculator-elektronagrevateli-2.html"
           title="Калькулятор расчета температуры воздуха на выходе из электрокалорифера"
           className="w-full min-[320px]:h-65 min-[519px]:h-61 min-[531px]:h-56 min-[542px]:h-52 min-[551px]:h-47"
         />

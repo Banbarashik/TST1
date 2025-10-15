@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="calculator.css" rel="stylesheet" />
+    <script>
+      function calculator(form) {
+        const a = Number(form.a.value);
+        const b = Number(form.b.value);
+        const c = Number(form.c.value);
+        const d = ((a * (353 / (273.15 + b))) / 3600000) * 1009 * (c - b);
+        form.total.value = d.toFixed(1);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Калькулятор (начало) -->
+    <form class="calculator">
+      <label>
+        Объем нагреваемого воздуха, м³/ч
+        <input
+          type="text"
+          name="a"
+          onchange="this.value=this.value.replace(/([^0-9])/g,'');"
+          onkeyup="var n=this.value.replace(/([^0-9])/g,''); if(n!=this.value) this.value=n;"
+        />
+      </label>
+
+      <label>
+        Температура приточного воздуха, °С
+        <input
+          type="text"
+          name="b"
+          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
+        />
+      </label>
+
+      <label>
+        Температура нагретого воздуха, °С
+        <input
+          type="text"
+          name="c"
+          onkeyup="this.value=this.value.replace(/([^-0-9])/g,'');"
+        />
+      </label>
+
+      <div class="calculator-buttons">
+        <input
+          type="button"
+          value="Рассчитать"
+          onclick="calculator(this.form)"
+        />
+        <input type="reset" value="Сброс" />
+      </div>
+
+      <label>
+        Требуемая мощность электрокалорифера, кВт
+        <input type="text" name="total" disabled class="bg-transparent" />
+      </label>
+    </form>
+    <!-- Калькулятор (конец) -->
+  </body>
+</html>
