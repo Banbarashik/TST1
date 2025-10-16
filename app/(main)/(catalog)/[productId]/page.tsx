@@ -174,6 +174,12 @@ export async function generateMetadata({
   }
 }
 
+export async function generateStaticParams() {
+  return productData.map((p) => ({
+    productId: p.id,
+  }));
+}
+
 export default async function ProductPage({
   params,
 }: {
