@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
@@ -80,6 +81,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop threshold={0.3} />
         </body>
+        <GoogleAnalytics gaId="G-9EKGFKNDG0" />
       </html>
     </ProductSelectionProvider>
   );
