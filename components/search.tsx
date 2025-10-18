@@ -5,10 +5,19 @@ import MiniSearch from "minisearch";
 
 import searchIndex from "@/public/search-index.json";
 
+// helpers (рядом с highlight)
+const hasLetter = /[A-Za-zА-Яа-яЁё]/;
+
+function filterTerms(terms: string[] = []) {
+  return terms.filter((t) => hasLetter.test(t)); // убираем чисто числовые термы
+}
+
 function highlight(text: string, terms: string[]) {
-  if (!text || !terms?.length) return text || "";
+  if (!text) return "";
+  const t = filterTerms(terms);
+  if (!t.length) return text;
   const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp("(" + terms.map(esc).join("|") + ")", "gi");
+  const re = new RegExp("(" + t.map(esc).join("|") + ")", "gi");
   return text.replace(re, "<strong>$1</strong>");
 }
 
@@ -19,6 +28,7 @@ export function makeSnippet(
   opts: { minCtx?: number; maxLen?: number } = {},
 ): string {
   if (!text) return "";
+  const t = filterTerms(terms);
   const minCtx = opts.minCtx ?? 60; // минимум контекста слева/справа
   const maxLen = opts.maxLen ?? 220; // максимум длина сниппета
 
@@ -26,14 +36,12 @@ export function makeSnippet(
   // найдём первое по позиции совпадение
   let pos = -1,
     hitLen = 0;
-  // hitTerm = "";
-  for (const t of terms ?? []) {
-    const q = String(t).toLowerCase();
+  for (const term of t) {
+    const q = String(term).toLowerCase();
     const i = lower.indexOf(q);
     if (i !== -1 && (pos === -1 || i < pos)) {
       pos = i;
       hitLen = q.length;
-      // hitTerm = q;
     }
   }
 
@@ -64,9 +72,10 @@ export function makeSnippet(
 
   // подсветка всех термов
   const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp("(" + (terms ?? []).map(esc).join("|") + ")", "gi");
-  snippet = snippet.replace(re, "<strong>$1</strong>");
-
+  if (t.length) {
+    const re = new RegExp("(" + t.map(esc).join("|") + ")", "gi");
+    snippet = snippet.replace(re, "<strong>$1</strong>");
+  }
   return (start > 0 ? "…" : "") + snippet + (end < text.length ? "…" : "");
 }
 
@@ -114,21 +123,26 @@ export default function Search() {
         onChange={(e) => setQ(e.target.value)}
         placeholder="Поиск…"
       />
-      <ul>
+      <ul className="space-y-5">
         {results.slice(0, 20).map((r) => {
+          const terms = filterTerms(r.terms || []);
           const content = contentByUrl.get(r.id) || "";
-          const snippetHtml = makeSnippet(content, r.terms || [], {
+          const snippetHtml = makeSnippet(content, terms, {
             minCtx: 80,
             maxLen: 240,
           });
           const titleHtml = highlight(
             searchIndex.find((d) => d.url === r.id)?.title ?? "",
-            r.terms || [],
+            terms,
           );
 
           return (
             <li key={r.id}>
-              <a href={r.id} dangerouslySetInnerHTML={{ __html: titleHtml }} />
+              <a
+                href={r.id}
+                dangerouslySetInnerHTML={{ __html: titleHtml }}
+                className="text-blue-500"
+              />
               {snippetHtml && (
                 <p dangerouslySetInnerHTML={{ __html: snippetHtml }} />
               )}
