@@ -5,101 +5,33 @@ import MiniSearch from "minisearch";
 
 import searchIndex from "@/public/search-index.json";
 
-// helpers (рядом с highlight)
-const hasLetter = /[A-Za-zА-Яа-яЁё]/;
+import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
+import { makeSnippet } from "@/lib/snippet";
 
-function filterTerms(terms: string[] = []) {
-  return terms.filter((t) => hasLetter.test(t)); // убираем чисто числовые термы
-}
-
-function highlight(text: string, terms: string[]) {
-  if (!text) return "";
-  const t = filterTerms(terms);
-  if (!t.length) return text;
-  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp("(" + t.map(esc).join("|") + ")", "gi");
-  return text.replace(re, "<strong>$1</strong>");
-}
-
-// utils/snippet.ts
-export function makeSnippet(
-  text: string,
-  terms: string[],
-  opts: { minCtx?: number; maxLen?: number } = {},
-): string {
-  if (!text) return "";
-  const t = filterTerms(terms);
-  const minCtx = opts.minCtx ?? 60; // минимум контекста слева/справа
-  const maxLen = opts.maxLen ?? 220; // максимум длина сниппета
-
-  const lower = text.toLowerCase();
-  // найдём первое по позиции совпадение
-  let pos = -1,
-    hitLen = 0;
-  for (const term of t) {
-    const q = String(term).toLowerCase();
-    const i = lower.indexOf(q);
-    if (i !== -1 && (pos === -1 || i < pos)) {
-      pos = i;
-      hitLen = q.length;
-    }
-  }
-
-  // если ничего не нашли — показываем начало текста
-  if (pos === -1) {
-    const s = text.slice(0, maxLen);
-    return s + (s.length < text.length ? "…" : "");
-  }
-
-  // расширяем границы до пробелов (чтобы не резать слова)
-  let start = Math.max(0, pos - minCtx);
-  let end = Math.min(text.length, pos + hitLen + minCtx);
-
-  // подравняем по ближайшим пробелам
-  const leftSpace = text.lastIndexOf(" ", start);
-  const rightSpace = text.indexOf(" ", end);
-  if (leftSpace !== -1) start = leftSpace + 1;
-  if (rightSpace !== -1) end = rightSpace;
-
-  // если всё ещё коротко — дотянем до maxLen
-  if (end - start < maxLen) {
-    const extra = Math.floor((maxLen - (end - start)) / 2);
-    start = Math.max(0, start - extra);
-    end = Math.min(text.length, end + extra);
-  }
-
-  let snippet = text.slice(start, end);
-
-  // подсветка всех термов
-  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  if (t.length) {
-    const re = new RegExp("(" + t.map(esc).join("|") + ")", "gi");
-    snippet = snippet.replace(re, "<strong>$1</strong>");
-  }
-  return (start > 0 ? "…" : "") + snippet + (end < text.length ? "…" : "");
-}
+type Doc = { title: string; url: string; content: string };
 
 export default function Search() {
+  const [docs, setDocs] = useState<Doc[]>([]);
   const [q, setQ] = useState("");
   const [results, setResults] = useState<[]>([]);
 
-  // quick lookup for content by URL (or id)
-  const contentByUrl = useMemo(() => {
-    const m = new Map<string, string>();
-    for (const d of searchIndex) m.set(d.url, d.content || "");
+  // 🔹 docsMap: быстрый доступ к полному документу по URL
+  const docsMap = useMemo(() => {
+    const m = new Map<string, Doc>();
+    for (const d of docs) m.set(d.url, d);
     return m;
-  }, [searchIndex]);
+  }, [docs]);
 
   const miniSearch = useMemo(
     () =>
-      new MiniSearch({
+      new MiniSearch<Doc>({
         idField: "url",
         fields: ["title", "content"],
         storeFields: ["title", "url"],
         searchOptions: {
           boost: { title: 6, content: 1 },
           prefix: true,
-          fuzzy: 0.2,
+          fuzzy: 0.1,
           combineWith: "AND", // ← ключевое
         },
         tokenize: (s) => s.toLowerCase().match(/[a-zа-яё0-9]+/gi) || [],
@@ -108,12 +40,19 @@ export default function Search() {
   );
 
   useEffect(() => {
+    let cancelled = false;
+    if (cancelled) return;
+    setDocs(searchIndex);
     miniSearch.addAll(searchIndex);
+    return () => {
+      cancelled = true;
+    };
   }, [miniSearch]);
 
+  // Поиск
   useEffect(() => {
-    if (!q) return setResults([]);
-    setResults(miniSearch.search(q)); // each result has result.terms
+    if (!q) return void setResults([]);
+    setResults(miniSearch.search(q));
   }, [q, miniSearch]);
 
   return (
@@ -125,16 +64,15 @@ export default function Search() {
       />
       <ul className="space-y-5">
         {results.slice(0, 20).map((r) => {
-          const terms = filterTerms(r.terms || []);
-          const content = contentByUrl.get(r.id) || "";
-          const snippetHtml = makeSnippet(content, terms, {
+          const termsTitle = r.terms || []; // ← для title — без фильтра
+          const termsBody = filterTermsForSnippet(termsTitle); // ← для сниппета
+
+          const doc = docsMap.get(r.id)!; // где ты быстро получаешь {title, content}
+          const snippetHtml = makeSnippet(doc.content, termsBody, {
             minCtx: 80,
             maxLen: 240,
           });
-          const titleHtml = highlight(
-            searchIndex.find((d) => d.url === r.id)?.title ?? "",
-            terms,
-          );
+          const titleHtml = highlight(doc.title, termsTitle); // числа подсвечиваются как раньше
 
           return (
             <li key={r.id}>
