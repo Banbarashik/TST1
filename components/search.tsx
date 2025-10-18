@@ -5,8 +5,6 @@ import MiniSearch from "minisearch";
 
 import searchIndex from "@/public/search-index.json";
 
-type Doc = { title: string; url: string; content: string };
-
 function highlight(text: string, terms: string[]) {
   if (!text || !terms?.length) return text || "";
   const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -27,15 +25,15 @@ export function makeSnippet(
   const lower = text.toLowerCase();
   // найдём первое по позиции совпадение
   let pos = -1,
-    hitLen = 0,
-    hitTerm = "";
+    hitLen = 0;
+  // hitTerm = "";
   for (const t of terms ?? []) {
     const q = String(t).toLowerCase();
     const i = lower.indexOf(q);
     if (i !== -1 && (pos === -1 || i < pos)) {
       pos = i;
       hitLen = q.length;
-      hitTerm = q;
+      // hitTerm = q;
     }
   }
 
@@ -74,7 +72,7 @@ export function makeSnippet(
 
 export default function Search() {
   const [q, setQ] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<[]>([]);
 
   // quick lookup for content by URL (or id)
   const contentByUrl = useMemo(() => {

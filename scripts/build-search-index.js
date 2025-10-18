@@ -10,11 +10,12 @@ const BASE = process.env.SEARCH_BASE_URL || `http://localhost:${PORT}`;
 const OUT = path.join(process.cwd(), "public", "search-index.json");
 const PRERENDER = path.join(process.cwd(), ".next", "prerender-manifest.json");
 
-// Excluded routes
+// Что НЕ индексируем как маршруты
 const EXCLUDE_EXACT = new Set(["/", "/_not-found", "/test"]);
 const EXCLUDE_PATTERNS = [/^\/catalog\/\[category\]$/];
 
-// Wait until Next.js server responds
+// --- helpers ---
+
 async function waitForReady(url, tries = 60, delayMs = 500) {
   for (let i = 0; i < tries; i++) {
     try {
@@ -31,15 +32,42 @@ function shouldExclude(route) {
   return EXCLUDE_PATTERNS.some((re) => re.test(route));
 }
 
-function extract(html) {
+function extractVisibleText(html) {
   const dom = new JSDOM(html);
   const d = dom.window.document;
+
+  // Заголовок берём ДО удаления <head>
   const title =
     d.querySelector("title")?.textContent?.trim() ||
     d.querySelector("h1")?.textContent?.trim() ||
     "";
-  const content = d.body.textContent?.replace(/\s+/g, " ").trim() || "";
-  return { title, content };
+
+  // Удаляем "шумные" узлы, чтобы в контент не попали скрипты и навигация
+  const STRIP_SELECTORS = [
+    "head",
+    "script",
+    "style",
+    "nav",
+    "aside",
+    "footer",
+    "noscript",
+    "template",
+    "[hidden]",
+    "[aria-hidden='true']",
+  ];
+  for (const sel of STRIP_SELECTORS) {
+    d.querySelectorAll(sel).forEach((el) => el.remove());
+  }
+
+  // Берём только ТЕКСТ
+  let text = d.body?.textContent || "";
+  // Нормализуем пробелы и NBSP
+  text = text
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return { title, content: text };
 }
 
 function getConcreteRoutesFromManifest() {
@@ -59,7 +87,7 @@ async function crawl(routes) {
       continue;
     }
     const html = await res.text();
-    const { title, content } = extract(html);
+    const { title, content } = extractVisibleText(html);
     entries.push({ title: title || u, url: u, content });
   }
 
