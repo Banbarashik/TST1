@@ -62,7 +62,7 @@ export default function RootLayout({
                 zao_tst@mail.ru
               </a>
             </div>
-            <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6">
+            <div className="ml-auto hidden h-full items-center gap-3 lg:flex xl:gap-6">
               <NavigationMenu />
               <ContactFormTrigger
                 triggerBtnVariant="default"

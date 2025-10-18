@@ -268,14 +268,14 @@ export default function NavigationMenu({
     <div className="flex">
       <Link
         href="/produkciya"
-        className="border border-[#ccc] bg-[#e3e3e3] px-5 text-center text-sm text-(--primary-darker) uppercase shadow-[0px_1px_0_#bdbdbd,2px_4px_6px_#dbdbdb] transition-all duration-300 hover:border-[rgba(0,0,0,0.2)] hover:bg-[#d1d1d1] hover:text-[#8f6063] hover:shadow-[1px_1px_2px_rgba(255,255,255,0.95)] hover:text-shadow-[-1px_-1px_0_#b3b3b3] xl:text-[15px]"
+        className="flex flex-col justify-center border border-[#ccc] bg-[#e3e3e3] px-4 text-center text-sm text-(--primary-darker) uppercase shadow-[0px_1px_0_#bdbdbd,2px_4px_6px_#dbdbdb] transition-all duration-300 hover:border-[rgba(0,0,0,0.2)] hover:bg-[#d1d1d1] hover:text-[#8f6063] hover:shadow-[1px_1px_2px_rgba(255,255,255,0.95)] hover:text-shadow-[-1px_-1px_0_#b3b3b3] xl:text-[15px]"
       >
         <div>Продукция</div>
         <div>Сертификаты</div>
       </Link>
       <Link
         href="/kontakty-prajs"
-        className="border border-[#ccc] bg-[#e3e3e3] px-5 text-center text-sm text-(--primary-darker) uppercase shadow-[0px_1px_0_#bdbdbd,2px_4px_6px_#dbdbdb] transition-all duration-300 hover:border-[rgba(0,0,0,0.2)] hover:bg-[#d1d1d1] hover:text-[#8f6063] hover:shadow-[1px_1px_2px_rgba(255,255,255,0.95)] hover:text-shadow-[-1px_-1px_0_#b3b3b3] xl:text-[15px]"
+        className="flex flex-col justify-center border border-[#ccc] bg-[#e3e3e3] px-4 text-center text-sm text-(--primary-darker) uppercase shadow-[0px_1px_0_#bdbdbd,2px_4px_6px_#dbdbdb] transition-all duration-300 hover:border-[rgba(0,0,0,0.2)] hover:bg-[#d1d1d1] hover:text-[#8f6063] hover:shadow-[1px_1px_2px_rgba(255,255,255,0.95)] hover:text-shadow-[-1px_-1px_0_#b3b3b3] xl:text-[15px]"
       >
         <div>Контакты</div>
         <div>Прайс-лист</div>

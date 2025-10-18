@@ -246,6 +246,11 @@ th {
   text-align: center;
   text-transform: uppercase;
 }
+@media (width < 80rem) {
+  .btn-flip {
+    font-size: 14px;
+  }
+}
 .btn-flip:hover:after {
   opacity: 1;
   transform: translateY(0) rotateX(0);
