@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:search-index": "node scripts/build-search-index.js",
+    "build:with-index": "npm run build && npm run build:search-index"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
@@ -25,7 +27,9 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "embla-carousel-react": "^8.6.0",
+    "jsdom": "^27.0.0",
     "lucide-react": "^0.514.0",
+    "minisearch": "^7.2.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
