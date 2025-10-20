@@ -5,7 +5,7 @@ import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
 import "@/app/globals.css";
 
-import { PhoneCall, Mail, Search } from "lucide-react";
+import { PhoneCall, Mail } from "lucide-react";
 
 import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
