@@ -4,6 +4,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import MiniSearch from "minisearch";
+import searchIndex from "@/public/search-index.json";
 
 import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
 import { makeSnippet } from "@/lib/snippet";
@@ -24,15 +25,11 @@ export default function SearchResults({
   useEffect(() => {
     if (fetchedOnce.current) return; // защита от StrictMode (dev)
     fetchedOnce.current = true;
-    fetch("/search-index.json")
-      .then((r) => r.json())
-      .then((data: Doc[]) => {
-        // на всякий случай дедуп по url
-        const unique = Array.from(
-          new Map(data.map((d) => [d.url, d])).values(),
-        );
-        setDocs(unique);
-      });
+
+    const unique = Array.from(
+      new Map(searchIndex.map((d) => [d.url, d])).values(),
+    );
+    setDocs(unique);
   }, []);
 
   useEffect(() => {
