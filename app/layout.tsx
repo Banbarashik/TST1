@@ -13,6 +13,7 @@ import Footer from "@/components/footer";
 import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
 import BackToTop from "@/components/backToTopButton";
+import NavSearch from "@/components/navSearch";
 
 export default function RootLayout({
   children,
@@ -61,6 +62,7 @@ export default function RootLayout({
                 zao_tst@mail.ru
               </a>
             </div>
+            <NavSearch />
             <div className="ml-auto hidden h-full items-center lg:flex lg:gap-6">
               <NavigationMenu />
               <ContactFormTrigger
