@@ -5,7 +5,7 @@ import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
 import "@/app/globals.css";
 
-import { PhoneCall, Mail } from "lucide-react";
+import { PhoneCall, Mail, Search } from "lucide-react";
 
 import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
@@ -29,13 +29,13 @@ export default function RootLayout({
           </Suspense>
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
-          <nav className="4xl:px-20 flex h-25 items-center border-t-[1.5px] border-b-[1.5px] border-[#A5A5A5] bg-[#e0e0e0] pr-3 pl-6 sm:pr-6">
+          <nav className="4xl:px-16 flex h-25 items-center border-[#A5A5A5] bg-[#e0e0e0] pr-4 pl-2 sm:border-y-[1.5px] sm:pr-8 lg:px-2">
             <Logo place="header" />
-            <ul className="4xl:ml-12 3xl:ml-8 text-primary-darker ml-6 flex flex-col items-start gap-y-2 text-lg">
+            <ul className="4xl:ml-12 3xl:ml-8 text-primary-darker ml-3 flex flex-col items-start gap-y-2 xl:text-lg">
               <li className="hover:font-semibold">
                 <a href="tel:89617378314" className="flex items-center gap-2.5">
                   <span className="border-primary-darker rounded-full border p-1.25">
-                    <PhoneCall className="size-5" />
+                    <PhoneCall className="size-4 xl:size-5" />
                   </span>
                   <span>+7 (961) 737-83-14</span>
                 </a>
@@ -46,7 +46,7 @@ export default function RootLayout({
                   className="flex items-center gap-2.5"
                 >
                   <span className="border-primary-darker rounded-full border p-1.25">
-                    <Mail className="size-5" />
+                    <Mail className="size-4 xl:size-5" />
                   </span>
                   <span>zao_tst@mail.ru</span>
                 </a>
@@ -57,10 +57,14 @@ export default function RootLayout({
               <ContactFormTrigger
                 triggerBtnVariant="default"
                 triggerBtnSize="lg"
-                triggerBtnClassName="h-12 cursor-pointer hover:bg-primary-dark text-base font-bold xl:text-xl border border-[#A5A5A5]"
+                triggerBtnClassName="h-12 px-3 cursor-pointer hover:bg-primary-dark text-base font-bold xl:text-xl border border-[#A5A5A5]"
                 amountClassName="bg-accent absolute text-black right-0 bottom-0 inline-flex size-6 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full text-sm font-semibold"
               />
             </div>
+            {/* <Search
+              color="var(--primary-darker)"
+              className="ml-auto size-8 lg:ml-2 xl:ml-4"
+            /> */}
           </nav>
           {/* Sticky trigger outside flex context */}
           <div className="sticky top-0 z-50 bg-white lg:hidden">
