@@ -1,11 +1,10 @@
 // components/SearchResults.tsx
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import MiniSearch from "minisearch";
 
-import searchIndex from "@/public/search-index.json";
 import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
 import { makeSnippet } from "@/lib/snippet";
 
@@ -16,10 +15,25 @@ export default function SearchResults({
 }: {
   initialQuery?: string;
 }) {
-  const [docs, setDocs] = useState<Doc[]>([]);
+  const [docs, setDocs] = useState<Doc[] | null>(null);
   const [q, setQ] = useState(initialQuery);
   const [results, setResults] = useState<any[]>([]);
   const router = useRouter();
+
+  const fetchedOnce = useRef(false);
+  useEffect(() => {
+    if (fetchedOnce.current) return; // защита от StrictMode (dev)
+    fetchedOnce.current = true;
+    fetch("/search-index.json")
+      .then((r) => r.json())
+      .then((data: Doc[]) => {
+        // на всякий случай дедуп по url
+        const unique = Array.from(
+          new Map(data.map((d) => [d.url, d])).values(),
+        );
+        setDocs(unique);
+      });
+  }, []);
 
   useEffect(() => {
     setQ(initialQuery);
@@ -27,34 +41,30 @@ export default function SearchResults({
 
   const docsMap = useMemo(() => {
     const m = new Map<string, Doc>();
-    for (const d of docs) m.set(d.url, d);
+    (docs ?? []).forEach((d) => m.set(d.url, d));
     return m;
   }, [docs]);
 
-  const miniSearch = useMemo(
-    () =>
-      new MiniSearch<Doc>({
-        idField: "url",
-        fields: ["title", "content"],
-        storeFields: ["title", "url"],
-        searchOptions: {
-          boost: { title: 6, content: 1 },
-          prefix: true,
-          fuzzy: 0.2,
-          combineWith: "AND",
-        },
-        tokenize: (s) => s.toLowerCase().match(/[a-zа-яё0-9]+/gi) || [],
-      }),
-    [],
-  );
+  const miniSearch = useMemo(() => {
+    if (!docs) return null;
+    const ms = new MiniSearch<Doc>({
+      idField: "url",
+      fields: ["title", "content"],
+      storeFields: ["title", "url"],
+      searchOptions: {
+        boost: { title: 6, content: 1 },
+        prefix: true,
+        fuzzy: 0.2,
+        combineWith: "AND",
+      },
+      tokenize: (s) => s.toLowerCase().match(/[a-zа-яё0-9]+/gi) || [],
+    });
+    ms.addAll(docs); // ← добавляем РОВНО один раз
+    return ms;
+  }, [docs]);
 
   useEffect(() => {
-    setDocs(searchIndex as Doc[]);
-    miniSearch.addAll(searchIndex as Doc[]);
-  }, [miniSearch]);
-
-  useEffect(() => {
-    if (!q) return setResults([]);
+    if (!miniSearch || !q) return setResults([]);
     setResults(miniSearch.search(q));
   }, [q, miniSearch]);
 
