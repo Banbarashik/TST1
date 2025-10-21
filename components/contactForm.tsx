@@ -39,6 +39,7 @@ const ALLOWED_TYPES = [
   "application/pdf",
   "image/jpeg",
   "image/png",
+  "application/msword", // .doc
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xlsx
   "application/vnd.ms-excel.sheet.macroEnabled.12", // .xlsm
@@ -51,6 +52,7 @@ const ALLOWED_EXTENSIONS = [
   ".jpg",
   ".jpeg",
   ".png",
+  ".doc",
   ".docx",
   ".xlsx",
   ".xlsm",
