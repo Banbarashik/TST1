@@ -27,6 +27,7 @@ export default function RootLayout({
           <Suspense>
             <YandexMetrikaContainer enabled />
           </Suspense>
+          <GoogleAnalytics gaId="G-9EKGFKNDG0" />
         </head>
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <nav className="4xl:px-16 flex h-25 items-center border-[#A5A5A5] bg-[#e0e0e0] pr-4 pl-2 sm:border-y-[1.5px] sm:pr-8 lg:px-2">
@@ -75,7 +76,6 @@ export default function RootLayout({
           <Footer />
           <BackToTop threshold={0.3} />
         </body>
-        <GoogleAnalytics gaId="G-9EKGFKNDG0" />
       </html>
     </ProductSelectionProvider>
   );
