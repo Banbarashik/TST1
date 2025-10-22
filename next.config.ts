@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/kalorifer-sushil’naia-kamera",
+        destination: "/kalorifer-sushilnaia-kamera",
+        permanent: true,
+      },
+      {
         source: "/raschet-online-parovyh-kaloriferov",
         destination: "/kalorifery-par#anchor1",
         permanent: true,

@@ -66,7 +66,7 @@ export default function KaloriferSushilnaiaKameraPage() {
         </ProductParagraph>
       </section>
 
-      <section className="space-y-1">
+      <section className="space-y-4">
         <Heading lvl={2} text="Подбор калориферов для сушильных камер" />
         <ProductParagraph>
           Подбор биметаллического калорифера для сушильной камеры или установки
@@ -77,6 +77,24 @@ export default function KaloriferSushilnaiaKameraPage() {
           и его равномерного распределения по всему объему сырья или материала,
           с учетом конструкционных особенностей сушильного корпуса.
         </ProductParagraph>
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/sushilny/kalorifer_sushilny_kamera_par.png"
+              alt="Паровой калорифер для сушки зерна"
+              title="Калорифер паровой для сушильных установок"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/sushilny/kalorifer_sushilny_ventiliator.png"
+              alt="Водяной калорифер для сушильных камер"
+              title="Паровой калорифер с осевым вентилятором для сушки"
+              fill
+            />
+          </div>
+        </div>
         <ProductParagraph>
           Подобрав вентилятор и типоразмер оребренного калорифера с
           соответствующими расходом и пропускной способностью воздуха, переходим
@@ -90,16 +108,9 @@ export default function KaloriferSushilnaiaKameraPage() {
           полимерных материалов и композитов подбирается на основе их вида,
           начальной влажности, размера и формы.
         </ProductParagraph>
-        <Image
-          src="/img/sushilny/agregat_sushilny.png"
-          alt=""
-          width={484}
-          height={1}
-          className="mx-auto"
-        />
       </section>
 
-      <section className="space-y-1">
+      <section className="space-y-4">
         <Heading lvl={2} text="Водяные калориферы для сушильных камер" />
         <ProductParagraph>
           Температура используемого воздухонагревателем теплоносителя должна
@@ -112,6 +123,24 @@ export default function KaloriferSushilnaiaKameraPage() {
           до 80°С. Более высоких показателей нагрева можно достичь при работе
           биметаллического теплообменника на перегретой воде.
         </ProductParagraph>
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/sushilny/kalorifer_sushilny_kamera_voda.png"
+              alt="Калорифер водяной для сушильной камеры"
+              title="Калорифер для сушильной камеры"
+              fill
+            />
+          </div>
+          <div className="relative aspect-16/10 w-full">
+            <Image
+              src="/img/sushilny/agregat_sushilny.png"
+              alt="Агрегат для сушки сырья и материалов"
+              title="Воздухонагревательная установка для сушки"
+              fill
+            />
+          </div>
+        </div>
       </section>
 
       <section>
@@ -288,6 +317,12 @@ export default function KaloriferSushilnaiaKameraPage() {
           gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(140px,max-content))]"
         />
       </section>
+
+      <ProductParagraph>
+        Водяные и паровые калориферы могут агрегатироваться в состав
+        воздухонагревательных сушильных установок на базе осевых и центробежных
+        вентиляторов.
+      </ProductParagraph>
     </article>
   );
 }
