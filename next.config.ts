@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/kalorifer-sushil’naia-kamera",
+        source: "/kalorifer-sushil%E2%80%99naia-kamera",
         destination: "/kalorifer-sushilnaia-kamera",
         permanent: true,
       },
