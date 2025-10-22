@@ -1,7 +1,11 @@
+import productData from "@/data/products.json";
+
 import type { Metadata } from "next";
 
 import Heading from "@/components/general_pages/heading";
 import ProductParagraph from "@/components/catalog/productParagraph";
+import ProductLinks from "@/components/general_pages/productLinks";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Водяные и паровые калориферы для сушильных камер",
@@ -12,6 +16,31 @@ export const metadata: Metadata = {
 };
 
 export default function KaloriferSushilnaiaKameraPage() {
+  const pritochnyeKalorifery = productData.filter(
+    (p) =>
+      p.categories.includes("pritochny-vodiany-kalorifery") ||
+      p.categories.includes("pritochny-parovy-kalorifery"),
+  );
+
+  const productLinks = {
+    water: [
+      pritochnyeKalorifery.find(({ id }) => id === "kpvs-614x614"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpvu-754x754"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpvs-780x780"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpvs-905x905"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpvu-1072x1072"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpvs-1239x1239"),
+    ],
+    steam: [
+      pritochnyeKalorifery.find(({ id }) => id === "kppu-663x663"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpps-697x697"),
+      pritochnyeKalorifery.find(({ id }) => id === "kpps-822x822"),
+      pritochnyeKalorifery.find(({ id }) => id === "kppu-1072x1072"),
+      pritochnyeKalorifery.find(({ id }) => id === "kppu-1299x1299"),
+      pritochnyeKalorifery.find(({ id }) => id === "kppu-1481x1481"),
+    ],
+  };
+
   return (
     <article className="flex flex-col space-y-6">
       <Heading lvl={1} text="Калориферы для сушильных камер" />
@@ -61,6 +90,13 @@ export default function KaloriferSushilnaiaKameraPage() {
           полимерных материалов и композитов подбирается на основе их вида,
           начальной влажности, размера и формы.
         </ProductParagraph>
+        <Image
+          src="/img/sushilny/agregat_sushilny.png"
+          alt=""
+          width={484}
+          height={1}
+          className="mx-auto"
+        />
       </section>
 
       <section className="space-y-1">
@@ -170,12 +206,19 @@ export default function KaloriferSushilnaiaKameraPage() {
           со значительными тепловыми потерями, вносятся поправочные
           коэффициенты.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Ниже представлен ряд моделей водяных калориферов для камерной сушки
           древесины другой производительности. Ориентируясь на схожие данные
           подобранного вентилятора, можно перейти на страницу с онлайн-расчетом
           и подбором конкретного воздухонагревателя.
         </ProductParagraph>
+        <ProductLinks
+          products={productLinks.water.map((p) => ({
+            ...p,
+            name: p.shortName,
+          }))}
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(140px,max-content))]"
+        />
       </section>
 
       <section>
@@ -231,12 +274,19 @@ export default function KaloriferSushilnaiaKameraPage() {
           влагосодержания и термоустойчивости, режима сушки и долговременности
           теплового воздействия, конструктивных особенностей комплекса.
         </ProductParagraph>
-        <ProductParagraph>
+        <ProductParagraph className="mb-4">
           Ниже представлены некоторые модели паровых калориферов для сушки зерна
           и различных материалов другой производительности. Ориентируясь на
           схожие данные подобранного вентилятора, можно перейти на страницу с
           онлайн-расчетом и подбором конкретного воздухонагревателя.
         </ProductParagraph>
+        <ProductLinks
+          products={productLinks.steam.map((p) => ({
+            ...p,
+            name: p.shortName,
+          }))}
+          gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(140px,max-content))]"
+        />
       </section>
     </article>
   );
