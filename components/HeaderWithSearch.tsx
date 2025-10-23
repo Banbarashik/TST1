@@ -195,7 +195,7 @@ export default function HeaderWithSearch(): JSX.Element {
         <button
           aria-label="Open search"
           onClick={handleToggleSearch}
-          className="ml-auto size-8 rounded p-1.5 hover:bg-gray-200 lg:ml-2 xl:ml-4"
+          className="ml-auto size-8 cursor-pointer rounded p-1.5 hover:bg-gray-200 lg:ml-2 xl:ml-4"
         >
           <Search color="var(--primary-darker)" />
         </button>
@@ -207,7 +207,7 @@ export default function HeaderWithSearch(): JSX.Element {
         className={[
           "sticky top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] overflow-hidden transition-all duration-300 ease-in-out",
           // only show white background when open, and only add border/shadow when open + nav is hidden
-          isSearchOpen ? "bg-white" : "bg-transparent",
+          isSearchOpen ? "bg-[#e0e0e0]" : "bg-transparent",
           isSearchOpen && !navVisible
             ? "border-b border-gray-200 shadow-md"
             : "",
@@ -239,9 +239,9 @@ export default function HeaderWithSearch(): JSX.Element {
           <button
             aria-label="Close search"
             onClick={handleCloseSearch}
-            className="ml-2 rounded p-2 hover:bg-gray-100"
+            className="ml-2 cursor-pointer rounded p-2 hover:bg-gray-100"
           >
-            <X />
+            <X size={20} color="var(--primary-darker)" />
           </button>
         </div>
       </div>
