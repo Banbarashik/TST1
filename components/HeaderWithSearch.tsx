@@ -10,8 +10,19 @@ export default function HeaderWithSearch(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [wasManuallyOpened, setWasManuallyOpened] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
+
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
+
+  const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
+
+  // tuning
+  const SCROLL_THRESHOLD = 30; // px cumulative before toggle
+  const SCROLL_LOCK_MS = 350; // lock duration after a toggle
+  const accumulated = useRef(0);
+  const lastDir = useRef(0);
+  const lockTimeout = useRef<number | null>(null);
+  const locked = useRef(false);
 
   // Nav visibility observer
   useEffect(() => {
@@ -31,38 +42,99 @@ export default function HeaderWithSearch(): JSX.Element {
     if (!wasManuallyOpened) return;
 
     lastScrollY.current = window.scrollY;
-    let ticking = false;
+    accumulated.current = 0;
+    lastDir.current = 0;
+    locked.current = false;
+
+    const clearLock = () => {
+      locked.current = false;
+      accumulated.current = 0;
+      lastDir.current = 0;
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
+    };
 
     const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
+      const currentY = window.scrollY;
+      let dy = currentY - lastScrollY.current;
 
-      window.requestAnimationFrame(() => {
-        const currentY = window.scrollY;
-        const dy = currentY - lastScrollY.current;
+      // tiny noise ignore
+      if (Math.abs(dy) < 2) {
+        lastScrollY.current = currentY;
+        return;
+      }
 
-        if (!navVisible) {
-          if (dy > 5) setIsSearchOpen(false);
-          else if (dy < -5) setIsSearchOpen(true);
+      const dir = Math.sign(dy); // 1 down, -1 up
+
+      // if direction changed, reset accumulated
+      if (dir !== lastDir.current) {
+        accumulated.current = Math.abs(dy);
+      } else {
+        accumulated.current += Math.abs(dy);
+      }
+      lastDir.current = dir;
+
+      // only act when nav is out of view
+      if (
+        !navVisible &&
+        !locked.current &&
+        accumulated.current >= SCROLL_THRESHOLD
+      ) {
+        if (dir > 0) {
+          setIsSearchOpen(false); // scrolling down
+        } else {
+          setIsSearchOpen(true); // scrolling up
         }
 
-        lastScrollY.current = currentY;
-        ticking = false;
-      });
+        // lock further toggles briefly
+        locked.current = true;
+        if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = window.setTimeout(() => {
+          clearLock();
+        }, SCROLL_LOCK_MS);
+      }
+
+      // if nav becomes visible again, reset accumulators to avoid stale state
+      if (navVisible) {
+        accumulated.current = 0;
+        lastDir.current = 0;
+      }
+
+      lastScrollY.current = currentY;
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
+    };
   }, [navVisible, wasManuallyOpened]);
 
   const handleOpenSearch = () => {
     setIsSearchOpen(true);
     setWasManuallyOpened(true);
+    // reset accumulators so scrolling starts fresh
+    accumulated.current = 0;
+    lastDir.current = 0;
+    locked.current = false;
   };
 
   const handleCloseSearch = () => {
     setIsSearchOpen(false);
-    setWasManuallyOpened(false); // Reset the manual open state
+    setWasManuallyOpened(false);
+    // clear locks and accumulators
+    accumulated.current = 0;
+    lastDir.current = 0;
+    locked.current = false;
+    if (lockTimeout.current) {
+      window.clearTimeout(lockTimeout.current);
+      lockTimeout.current = null;
+    }
   };
 
   return (
@@ -113,17 +185,17 @@ export default function HeaderWithSearch(): JSX.Element {
         </button>
       </nav>
 
+      {/* Search block: keep it in-flow and sticky so no jump when nav appears/disappears */}
       <div
         aria-hidden={!isSearchOpen}
         className={[
-          !navVisible ? "fixed top-0 right-0 left-0 z-50" : "relative",
+          "sticky top-0 right-0 left-0 z-50 overflow-hidden transition-all duration-300 ease-in-out",
           !navVisible
             ? "border-b border-gray-200 bg-white shadow-md"
             : "bg-white",
-          "-mt-px overflow-hidden transition-all duration-300 ease-in-out",
         ].join(" ")}
         style={{
-          maxHeight: isSearchOpen ? "76px" : "0px",
+          maxHeight: isSearchOpen ? `${SEARCH_HEIGHT}px` : "0px",
         }}
       >
         <div
