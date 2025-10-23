@@ -115,13 +115,29 @@ export default function HeaderWithSearch(): JSX.Element {
     };
   }, [navVisible, wasManuallyOpened]);
 
-  const handleOpenSearch = () => {
-    setIsSearchOpen(true);
-    setWasManuallyOpened(true);
-    // reset accumulators so scrolling starts fresh
-    accumulated.current = 0;
-    lastDir.current = 0;
-    locked.current = false;
+  // replace handleOpenSearch + keep handleCloseSearch (or update)
+  const handleToggleSearch = () => {
+    if (isSearchOpen) {
+      // close
+      setIsSearchOpen(false);
+      setWasManuallyOpened(false);
+      // clear locks and accumulators
+      accumulated.current = 0;
+      lastDir.current = 0;
+      locked.current = false;
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
+    } else {
+      // open
+      setIsSearchOpen(true);
+      setWasManuallyOpened(true);
+      // reset accumulators so scrolling starts fresh
+      accumulated.current = 0;
+      lastDir.current = 0;
+      locked.current = false;
+    }
   };
 
   const handleCloseSearch = () => {
@@ -178,7 +194,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
         <button
           aria-label="Open search"
-          onClick={handleOpenSearch}
+          onClick={handleToggleSearch}
           className="ml-auto size-8 rounded p-1.5 hover:bg-gray-200 lg:ml-2 xl:ml-4"
         >
           <Search color="var(--primary-darker)" />
