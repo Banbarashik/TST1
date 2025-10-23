@@ -24,38 +24,157 @@ export default function HeaderWithSearch(): JSX.Element {
   const lastScrollY = useRef<number>(0);
   const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
 
-  // new constant for expanded results area
+  // Results panel sizing (if needed)
   const RESULTS_PANEL_HEIGHT = 320; // px - adjust as needed
 
-  // Update search results based on input
+  // Scroll/jitter tuning
+  const SCROLL_THRESHOLD = 30; // px cumulative before toggle
+  const SCROLL_LOCK_MS = 300; // lock duration after a toggle
+  const accumulated = useRef(0);
+  const lastDir = useRef(0);
+  const lockTimeout = useRef<number | null>(null);
+  const locked = useRef(false);
+
+  // Load/compute search results
   useEffect(() => {
     if (!searchInput) {
       setSearchResults([]);
       return;
     }
-    const results = searchData.filter((item) =>
+    const results = (searchData as SearchItem[]).filter((item) =>
       item.title.toLowerCase().includes(searchInput.toLowerCase()),
     );
     setSearchResults(results);
   }, [searchInput]);
 
+  // Nav visibility observer
+  useEffect(() => {
+    const navEl = navRef.current;
+    if (!navEl) return;
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => setNavVisible(entry.isIntersecting)),
+      { root: null, threshold: 0.01 },
+    );
+    observer.observe(navEl);
+    return () => observer.disconnect();
+  }, []);
+
+  // Scroll handler - only active when search was manually opened
+  useEffect(() => {
+    if (!wasManuallyOpened) return;
+
+    lastScrollY.current = window.scrollY;
+    accumulated.current = 0;
+    lastDir.current = 0;
+    locked.current = false;
+
+    const clearLock = () => {
+      locked.current = false;
+      accumulated.current = 0;
+      lastDir.current = 0;
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
+    };
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      let dy = currentY - lastScrollY.current;
+
+      // ignore tiny noise
+      if (Math.abs(dy) < 2) {
+        lastScrollY.current = currentY;
+        return;
+      }
+
+      const dir = Math.sign(dy); // 1 down, -1 up
+
+      // reset accumulated when direction changes
+      if (dir !== lastDir.current) {
+        accumulated.current = Math.abs(dy);
+      } else {
+        accumulated.current += Math.abs(dy);
+      }
+      lastDir.current = dir;
+
+      // Only act when nav is out of view
+      if (
+        !navVisible &&
+        !locked.current &&
+        accumulated.current >= SCROLL_THRESHOLD
+      ) {
+        if (dir > 0) {
+          setIsSearchOpen(false); // scrolling down -> hide
+        } else {
+          setIsSearchOpen(true); // scrolling up -> show
+        }
+
+        // lock toggles briefly to avoid flip-flop
+        locked.current = true;
+        if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = window.setTimeout(() => {
+          clearLock();
+        }, SCROLL_LOCK_MS);
+      }
+
+      // Reset if nav becomes visible
+      if (navVisible) {
+        accumulated.current = 0;
+        lastDir.current = 0;
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
+    };
+  }, [navVisible, wasManuallyOpened]);
+
   const handleToggleSearch = () => {
     if (isSearchOpen) {
+      // close
       setIsSearchOpen(false);
       setWasManuallyOpened(false);
-      setSearchInput(""); // Clear input when closing
-      setSearchResults([]); // Clear results when closing
+      setSearchInput("");
+      setSearchResults([]);
+      // clear accumulators/locks
+      accumulated.current = 0;
+      lastDir.current = 0;
+      locked.current = false;
+      if (lockTimeout.current) {
+        window.clearTimeout(lockTimeout.current);
+        lockTimeout.current = null;
+      }
     } else {
+      // open
       setIsSearchOpen(true);
       setWasManuallyOpened(true);
+      accumulated.current = 0;
+      lastDir.current = 0;
+      locked.current = false;
     }
   };
 
   const handleCloseSearch = () => {
     setIsSearchOpen(false);
     setWasManuallyOpened(false);
-    setSearchInput(""); // Clear input when closing
-    setSearchResults([]); // Clear results when closing
+    setSearchInput("");
+    setSearchResults([]);
+    accumulated.current = 0;
+    lastDir.current = 0;
+    locked.current = false;
+    if (lockTimeout.current) {
+      window.clearTimeout(lockTimeout.current);
+      lockTimeout.current = null;
+    }
   };
 
   return (
@@ -109,15 +228,12 @@ export default function HeaderWithSearch(): JSX.Element {
         </button>
       </nav>
 
-      {/* Search block: keep it in-flow and sticky so no jump when nav appears/disappears */}
+      {/* Search block: input row stays in-flow; results overlay absolute so no layout shift */}
       <div
         aria-hidden={!isSearchOpen}
-        // when results exist allow overflow so the absolutely positioned panel can lay over content
         className={[
           "relative top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] transition-all duration-300 ease-in-out lg:sticky",
-          // toggle overflow to allow overlaying results
           searchResults.length > 0 ? "overflow-visible" : "overflow-hidden",
-          // only show background when open, and add border/shadow when open + nav hidden
           isSearchOpen
             ? "bg-[#e0e0e0] outline outline-[#A5A5A5]"
             : "bg-transparent",
@@ -126,7 +242,6 @@ export default function HeaderWithSearch(): JSX.Element {
             : "",
         ].join(" ")}
         style={{
-          // control collapse of the input row only; results panel is absolutely positioned
           maxHeight: isSearchOpen ? `${SEARCH_HEIGHT}px` : "0px",
           pointerEvents: isSearchOpen ? "auto" : "none",
         }}
