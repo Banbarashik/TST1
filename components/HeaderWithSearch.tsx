@@ -1,156 +1,61 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { PhoneCall, Mail, Search, X } from "lucide-react";
-
 import Logo from "@/components/ui/logo";
 import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
+import searchData from "@/data/general-pages-search-index.json";
+
+// Define the type for search index items
+interface SearchItem {
+  title: string;
+  url: string;
+  img: string;
+}
 
 export default function HeaderWithSearch(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [wasManuallyOpened, setWasManuallyOpened] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
+  const [searchResults, setSearchResults] = useState<SearchItem[]>([]);
+  const [searchInput, setSearchInput] = useState("");
 
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
-
   const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
 
-  // tuning
-  const SCROLL_THRESHOLD = 30; // px cumulative before toggle
-  const SCROLL_LOCK_MS = 350; // lock duration after a toggle
-  const accumulated = useRef(0);
-  const lastDir = useRef(0);
-  const lockTimeout = useRef<number | null>(null);
-  const locked = useRef(false);
+  // new constant for expanded results area
+  const RESULTS_PANEL_HEIGHT = 320; // px - adjust as needed
 
-  // Nav visibility observer
+  // Update search results based on input
   useEffect(() => {
-    const navEl = navRef.current;
-    if (!navEl) return;
-    const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) => setNavVisible(entry.isIntersecting)),
-      { root: null, threshold: 0.01 },
+    if (!searchInput) {
+      setSearchResults([]);
+      return;
+    }
+    const results = searchData.filter((item) =>
+      item.title.toLowerCase().includes(searchInput.toLowerCase()),
     );
-    observer.observe(navEl);
-    return () => observer.disconnect();
-  }, []);
+    setSearchResults(results);
+  }, [searchInput]);
 
-  // Scroll handler - only active when search was manually opened
-  useEffect(() => {
-    if (!wasManuallyOpened) return;
-
-    lastScrollY.current = window.scrollY;
-    accumulated.current = 0;
-    lastDir.current = 0;
-    locked.current = false;
-
-    const clearLock = () => {
-      locked.current = false;
-      accumulated.current = 0;
-      lastDir.current = 0;
-      if (lockTimeout.current) {
-        window.clearTimeout(lockTimeout.current);
-        lockTimeout.current = null;
-      }
-    };
-
-    const onScroll = () => {
-      const currentY = window.scrollY;
-      let dy = currentY - lastScrollY.current;
-
-      // tiny noise ignore
-      if (Math.abs(dy) < 2) {
-        lastScrollY.current = currentY;
-        return;
-      }
-
-      const dir = Math.sign(dy); // 1 down, -1 up
-
-      // if direction changed, reset accumulated
-      if (dir !== lastDir.current) {
-        accumulated.current = Math.abs(dy);
-      } else {
-        accumulated.current += Math.abs(dy);
-      }
-      lastDir.current = dir;
-
-      // only act when nav is out of view
-      if (
-        !navVisible &&
-        !locked.current &&
-        accumulated.current >= SCROLL_THRESHOLD
-      ) {
-        if (dir > 0) {
-          setIsSearchOpen(false); // scrolling down
-        } else {
-          setIsSearchOpen(true); // scrolling up
-        }
-
-        // lock further toggles briefly
-        locked.current = true;
-        if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
-        lockTimeout.current = window.setTimeout(() => {
-          clearLock();
-        }, SCROLL_LOCK_MS);
-      }
-
-      // if nav becomes visible again, reset accumulators to avoid stale state
-      if (navVisible) {
-        accumulated.current = 0;
-        lastDir.current = 0;
-      }
-
-      lastScrollY.current = currentY;
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (lockTimeout.current) {
-        window.clearTimeout(lockTimeout.current);
-        lockTimeout.current = null;
-      }
-    };
-  }, [navVisible, wasManuallyOpened]);
-
-  // replace handleOpenSearch + keep handleCloseSearch (or update)
   const handleToggleSearch = () => {
     if (isSearchOpen) {
-      // close
       setIsSearchOpen(false);
       setWasManuallyOpened(false);
-      // clear locks and accumulators
-      accumulated.current = 0;
-      lastDir.current = 0;
-      locked.current = false;
-      if (lockTimeout.current) {
-        window.clearTimeout(lockTimeout.current);
-        lockTimeout.current = null;
-      }
+      setSearchInput(""); // Clear input when closing
+      setSearchResults([]); // Clear results when closing
     } else {
-      // open
       setIsSearchOpen(true);
       setWasManuallyOpened(true);
-      // reset accumulators so scrolling starts fresh
-      accumulated.current = 0;
-      lastDir.current = 0;
-      locked.current = false;
     }
   };
 
   const handleCloseSearch = () => {
     setIsSearchOpen(false);
     setWasManuallyOpened(false);
-    // clear locks and accumulators
-    accumulated.current = 0;
-    lastDir.current = 0;
-    locked.current = false;
-    if (lockTimeout.current) {
-      window.clearTimeout(lockTimeout.current);
-      lockTimeout.current = null;
-    }
+    setSearchInput(""); // Clear input when closing
+    setSearchResults([]); // Clear results when closing
   };
 
   return (
@@ -207,9 +112,12 @@ export default function HeaderWithSearch(): JSX.Element {
       {/* Search block: keep it in-flow and sticky so no jump when nav appears/disappears */}
       <div
         aria-hidden={!isSearchOpen}
+        // when results exist allow overflow so the absolutely positioned panel can lay over content
         className={[
-          "top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] overflow-hidden transition-all duration-300 ease-in-out lg:sticky",
-          // only show white background when open, and only add border/shadow when open + nav is hidden
+          "relative top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] transition-all duration-300 ease-in-out lg:sticky",
+          // toggle overflow to allow overlaying results
+          searchResults.length > 0 ? "overflow-visible" : "overflow-hidden",
+          // only show background when open, and add border/shadow when open + nav hidden
           isSearchOpen
             ? "bg-[#e0e0e0] outline outline-[#A5A5A5]"
             : "bg-transparent",
@@ -218,8 +126,8 @@ export default function HeaderWithSearch(): JSX.Element {
             : "",
         ].join(" ")}
         style={{
+          // control collapse of the input row only; results panel is absolutely positioned
           maxHeight: isSearchOpen ? `${SEARCH_HEIGHT}px` : "0px",
-          // avoid catching pointer events when closed
           pointerEvents: isSearchOpen ? "auto" : "none",
         }}
       >
@@ -238,6 +146,8 @@ export default function HeaderWithSearch(): JSX.Element {
               type="search"
               placeholder="Поиск..."
               className="w-full bg-transparent text-base outline-none"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
             />
           </div>
 
@@ -249,6 +159,34 @@ export default function HeaderWithSearch(): JSX.Element {
             <X size={20} color="var(--primary-darker)" />
           </button>
         </div>
+
+        {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
+        {searchResults.length > 0 && (
+          <div
+            className="absolute right-0 left-0 z-40 mt-0 border-t bg-white shadow-sm"
+            style={{
+              top: "100%", // place immediately under the input row
+              maxHeight: "240px",
+              overflowY: "auto",
+              padding: "8px 6px",
+            }}
+          >
+            {searchResults.map((item) => (
+              <a
+                key={item.url}
+                href={item.url}
+                className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="h-10 w-10 flex-shrink-0 rounded-sm object-cover"
+                />
+                <span className="text-sm text-gray-900">{item.title}</span>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
