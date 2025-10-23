@@ -190,12 +190,16 @@ export default function HeaderWithSearch(): JSX.Element {
         aria-hidden={!isSearchOpen}
         className={[
           "sticky top-0 right-0 left-0 z-50 overflow-hidden transition-all duration-300 ease-in-out",
-          !navVisible
-            ? "border-b border-gray-200 bg-white shadow-md"
-            : "bg-white",
+          // only show white background when open, and only add border/shadow when open + nav is hidden
+          isSearchOpen ? "bg-white" : "bg-transparent",
+          isSearchOpen && !navVisible
+            ? "border-b border-gray-200 shadow-md"
+            : "",
         ].join(" ")}
         style={{
           maxHeight: isSearchOpen ? `${SEARCH_HEIGHT}px` : "0px",
+          // avoid catching pointer events when closed
+          pointerEvents: isSearchOpen ? "auto" : "none",
         }}
       >
         <div
