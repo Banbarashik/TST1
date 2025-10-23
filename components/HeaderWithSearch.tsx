@@ -100,23 +100,31 @@ export default function HeaderWithSearch(): JSX.Element {
       lastDir.current = dir;
 
       // Only act when nav is out of view
-      if (
-        !navVisible &&
-        !locked.current &&
-        accumulated.current >= SCROLL_THRESHOLD
-      ) {
+      if (!navVisible && !locked.current && accumulated.current >= SCROLL_THRESHOLD) {
         if (dir > 0) {
-          setIsSearchOpen(false); // scrolling down -> hide
+          // scrolling down -> hide only if there are NO results
+          if (searchResults.length === 0) {
+            setIsSearchOpen(false);
+            // lock toggles briefly to avoid flip-flop
+            locked.current = true;
+            if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
+            lockTimeout.current = window.setTimeout(() => {
+              clearLock();
+            }, SCROLL_LOCK_MS);
+          } else {
+            // keep open when results exist; reset accumulators so repeated motion doesn't trigger hide
+            accumulated.current = 0;
+            lastDir.current = 0;
+          }
         } else {
-          setIsSearchOpen(true); // scrolling up -> show
+          // scrolling up -> always show
+          setIsSearchOpen(true);
+          locked.current = true;
+          if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
+          lockTimeout.current = window.setTimeout(() => {
+            clearLock();
+          }, SCROLL_LOCK_MS);
         }
-
-        // lock toggles briefly to avoid flip-flop
-        locked.current = true;
-        if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
-        lockTimeout.current = window.setTimeout(() => {
-          clearLock();
-        }, SCROLL_LOCK_MS);
       }
 
       // Reset if nav becomes visible
@@ -136,7 +144,7 @@ export default function HeaderWithSearch(): JSX.Element {
         lockTimeout.current = null;
       }
     };
-  }, [navVisible, wasManuallyOpened]);
+  }, [navVisible, wasManuallyOpened, searchResults.length]);
 
   const handleToggleSearch = () => {
     if (isSearchOpen) {
