@@ -100,7 +100,11 @@ export default function HeaderWithSearch(): JSX.Element {
       lastDir.current = dir;
 
       // Only act when nav is out of view
-      if (!navVisible && !locked.current && accumulated.current >= SCROLL_THRESHOLD) {
+      if (
+        !navVisible &&
+        !locked.current &&
+        accumulated.current >= SCROLL_THRESHOLD
+      ) {
         if (dir > 0) {
           // scrolling down -> hide only if there are NO results
           if (searchResults.length === 0) {
@@ -286,7 +290,7 @@ export default function HeaderWithSearch(): JSX.Element {
         {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
         {searchResults.length > 0 && (
           <div
-            className="absolute right-0 left-0 z-40 mt-0 border-t bg-white shadow-sm"
+            className="absolute right-0 left-0 z-50 mt-0 border-t bg-white shadow-sm"
             style={{
               top: "100%", // place immediately under the input row
               maxHeight: "240px",

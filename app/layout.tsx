@@ -36,7 +36,7 @@ export default function RootLayout({
         <body className="font-arial flex min-h-screen flex-col antialiased">
           <HeaderWithSearch />
           {/* Sticky trigger outside flex context */}
-          <div className="sticky top-0 z-50 bg-white lg:hidden">
+          <div className="sticky top-0 z-40 bg-white lg:hidden">
             <NavigationMenu variant="mobile" />
           </div>
           {/* Main content */}
