@@ -195,9 +195,12 @@ export default function HeaderWithSearch(): JSX.Element {
         <button
           aria-label="Open search"
           onClick={handleToggleSearch}
-          className="ml-auto size-8 cursor-pointer rounded p-1.5 hover:bg-gray-200 lg:ml-2 xl:ml-4"
+          className="group ml-auto size-8 cursor-pointer rounded p-1.5 transition duration-200 hover:scale-120 lg:ml-2 xl:ml-4"
         >
-          <Search color="var(--primary-darker)" />
+          <Search
+            color="var(--primary-darker)"
+            className="group-hover:stroke-3"
+          />
         </button>
       </nav>
 
