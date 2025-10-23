@@ -205,7 +205,7 @@ export default function HeaderWithSearch(): JSX.Element {
       <div
         aria-hidden={!isSearchOpen}
         className={[
-          "sticky top-0 right-0 left-0 z-50 overflow-hidden transition-all duration-300 ease-in-out",
+          "sticky top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] overflow-hidden transition-all duration-300 ease-in-out",
           // only show white background when open, and only add border/shadow when open + nav is hidden
           isSearchOpen ? "bg-white" : "bg-transparent",
           isSearchOpen && !navVisible
