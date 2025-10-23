@@ -208,7 +208,7 @@ export default function HeaderWithSearch(): JSX.Element {
       <div
         aria-hidden={!isSearchOpen}
         className={[
-          "sticky top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] overflow-hidden transition-all duration-300 ease-in-out",
+          "top-0 right-0 left-0 z-50 mx-auto w-full max-w-[968px] overflow-hidden outline outline-[#A5A5A5] transition-all duration-300 ease-in-out lg:sticky",
           // only show white background when open, and only add border/shadow when open + nav is hidden
           isSearchOpen ? "bg-[#e0e0e0]" : "bg-transparent",
           isSearchOpen && !navVisible
@@ -229,7 +229,7 @@ export default function HeaderWithSearch(): JSX.Element {
             transition: "transform 220ms ease, opacity 220ms ease",
           }}
         >
-          <div className="flex w-full items-center gap-3 rounded bg-gray-100 px-3 py-2">
+          <div className="flex w-full items-center gap-3 rounded bg-gray-100 px-3 py-2 outline outline-[#A5A5A5]">
             <Search className="text-primary-darker size-5" />
             <input
               autoFocus={isSearchOpen}
