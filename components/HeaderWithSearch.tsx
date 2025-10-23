@@ -8,10 +8,12 @@ import ContactFormTrigger from "@/components/contactFormTrigger";
 
 export default function HeaderWithSearch(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [wasManuallyOpened, setWasManuallyOpened] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
 
+  // Nav visibility observer
   useEffect(() => {
     const navEl = navRef.current;
     if (!navEl) return;
@@ -24,20 +26,24 @@ export default function HeaderWithSearch(): JSX.Element {
     return () => observer.disconnect();
   }, []);
 
+  // Scroll handler - only active when search was manually opened
   useEffect(() => {
+    if (!wasManuallyOpened) return;
+
     lastScrollY.current = window.scrollY;
     let ticking = false;
+
     const onScroll = () => {
       if (ticking) return;
       ticking = true;
+
       window.requestAnimationFrame(() => {
         const currentY = window.scrollY;
         const dy = currentY - lastScrollY.current;
 
         if (!navVisible) {
-          if (dy > 5)
-            setIsSearchOpen(false); // scrolling down -> hide
-          else if (dy < -5) setIsSearchOpen(true); // scrolling up -> show
+          if (dy > 5) setIsSearchOpen(false);
+          else if (dy < -5) setIsSearchOpen(true);
         }
 
         lastScrollY.current = currentY;
@@ -47,7 +53,17 @@ export default function HeaderWithSearch(): JSX.Element {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [navVisible]);
+  }, [navVisible, wasManuallyOpened]);
+
+  const handleOpenSearch = () => {
+    setIsSearchOpen(true);
+    setWasManuallyOpened(true);
+  };
+
+  const handleCloseSearch = () => {
+    setIsSearchOpen(false);
+    setWasManuallyOpened(false); // Reset the manual open state
+  };
 
   return (
     <>
@@ -90,7 +106,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
         <button
           aria-label="Open search"
-          onClick={() => setIsSearchOpen((v) => !v)}
+          onClick={handleOpenSearch}
           className="ml-auto size-8 rounded p-1.5 hover:bg-gray-200 lg:ml-2 xl:ml-4"
         >
           <Search color="var(--primary-darker)" />
@@ -104,7 +120,7 @@ export default function HeaderWithSearch(): JSX.Element {
           !navVisible
             ? "border-b border-gray-200 bg-white shadow-md"
             : "bg-white",
-          "overflow-hidden transition-all duration-300 ease-in-out",
+          "-mt-px overflow-hidden transition-all duration-300 ease-in-out",
         ].join(" ")}
         style={{
           maxHeight: isSearchOpen ? "76px" : "0px",
@@ -130,7 +146,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
           <button
             aria-label="Close search"
-            onClick={() => setIsSearchOpen(false)}
+            onClick={handleCloseSearch}
             className="ml-2 rounded p-2 hover:bg-gray-100"
           >
             <X />
