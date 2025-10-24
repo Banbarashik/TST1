@@ -285,15 +285,18 @@ export default function HeaderWithSearch(): JSX.Element {
             />
           </div>
 
-          <Button
-            size="icon"
-            variant="outline"
-            aria-label="Close search"
-            onClick={handleCloseSearch}
-            className="text-primary-darker cursor-pointer"
-          >
-            <X size={20} />
-          </Button>
+          <div className="flex gap-6">
+            <Button>Найти</Button>
+            <Button
+              size="icon"
+              variant="outline"
+              aria-label="Close search"
+              onClick={handleCloseSearch}
+              className="text-primary-darker cursor-pointer"
+            >
+              <X size={20} />
+            </Button>
+          </div>
         </div>
 
         {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
