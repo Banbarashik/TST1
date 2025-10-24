@@ -11,6 +11,7 @@ import { PhoneCall, Mail, Search, X } from "lucide-react";
 import Logo from "@/components/ui/logo";
 import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
+import { Button } from "./ui/button";
 
 // Define the type for search index items
 interface SearchItem {
@@ -284,13 +285,15 @@ export default function HeaderWithSearch(): JSX.Element {
             />
           </div>
 
-          <button
+          <Button
+            size="icon"
+            variant="outline"
             aria-label="Close search"
             onClick={handleCloseSearch}
-            className="ml-2 cursor-pointer rounded p-2 hover:bg-gray-100"
+            className="text-primary-darker cursor-pointer"
           >
-            <X size={20} color="var(--primary-darker)" />
-          </button>
+            <X size={20} />
+          </Button>
         </div>
 
         {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
