@@ -22,6 +22,27 @@ const defaultCategory = {
   },
 };
 
+function collectAllCategorySlugs(data): string[] {
+  const slugs: string[] = [];
+
+  for (const category of data) {
+    slugs.push(category.slug);
+    if (category.children && category.children.length > 0) {
+      slugs.push(...collectAllCategorySlugs(category.children));
+    }
+  }
+
+  return slugs;
+}
+
+export async function generateStaticParams() {
+  const allSlugs = collectAllCategorySlugs(categoryTree);
+
+  return ["all", ...allSlugs].map((slug) => ({
+    category: slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: {

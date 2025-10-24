@@ -1,18 +1,14 @@
+import "@/app/globals.css";
+
 import { Suspense } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { ProductSelectionProvider } from "@/context/ProductSelectionContext";
 
-import "@/app/globals.css";
-
-import { PhoneCall, Mail, Search } from "lucide-react";
-
 import YandexMetrikaContainer from "@/components/YandexMetrikaContainer";
 
-import Logo from "@/components/ui/logo";
 import Footer from "@/components/footer";
 import NavigationMenu from "@/components/navigationMenu";
-import ContactFormTrigger from "@/components/contactFormTrigger";
 import BackToTop from "@/components/backToTopButton";
 import HeaderWithSearch from "@/components/HeaderWithSearch";
 
