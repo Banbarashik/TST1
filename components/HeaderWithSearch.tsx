@@ -299,12 +299,12 @@ export default function HeaderWithSearch(): JSX.Element {
             className="absolute right-0 left-0 z-50 mt-0 border-t bg-white shadow-sm"
             style={{
               top: "100%", // place immediately under the input row
-              maxHeight: "240px",
-              overflowY: "auto",
+              // maxHeight: "240px",
+              // overflowY: "auto",
               padding: "8px 6px",
             }}
           >
-            {searchResults.map((item) => (
+            {searchResults.slice(0, 8).map((item) => (
               <Link
                 key={item.url}
                 href={item.url}
@@ -312,7 +312,7 @@ export default function HeaderWithSearch(): JSX.Element {
               >
                 <Image
                   src={item.img}
-                  alt={item.title}
+                  // alt={item.title}
                   width={40}
                   height={40}
                   className="flex-shrink-0 rounded-sm object-cover"
