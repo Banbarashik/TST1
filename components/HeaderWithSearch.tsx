@@ -1,10 +1,16 @@
 "use client";
+
+import searchIndex from "@/data/general-pages-search-index.json";
+
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
 import { PhoneCall, Mail, Search, X } from "lucide-react";
+
 import Logo from "@/components/ui/logo";
 import NavigationMenu from "@/components/navigationMenu";
 import ContactFormTrigger from "@/components/contactFormTrigger";
-import searchData from "@/data/general-pages-search-index.json";
 
 // Define the type for search index items
 interface SearchItem {
@@ -41,7 +47,7 @@ export default function HeaderWithSearch(): JSX.Element {
       setSearchResults([]);
       return;
     }
-    const results = (searchData as SearchItem[]).filter((item) =>
+    const results = (searchIndex as SearchItem[]).filter((item) =>
       item.title.toLowerCase().includes(searchInput.toLowerCase()),
     );
     setSearchResults(results);
@@ -299,18 +305,20 @@ export default function HeaderWithSearch(): JSX.Element {
             }}
           >
             {searchResults.map((item) => (
-              <a
+              <Link
                 key={item.url}
                 href={item.url}
                 className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
               >
-                <img
+                <Image
                   src={item.img}
                   alt={item.title}
-                  className="h-10 w-10 flex-shrink-0 rounded-sm object-cover"
+                  width={40}
+                  height={40}
+                  className="flex-shrink-0 rounded-sm object-cover"
                 />
                 <span className="text-sm text-gray-900">{item.title}</span>
-              </a>
+              </Link>
             ))}
           </div>
         )}
