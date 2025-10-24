@@ -295,7 +295,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
         {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
         {searchResults.length > 0 && (
-          <div
+          <ul
             className="absolute right-0 left-0 z-50 mt-0 border-t bg-white shadow-sm"
             style={{
               top: "100%", // place immediately under the input row
@@ -305,22 +305,23 @@ export default function HeaderWithSearch(): JSX.Element {
             }}
           >
             {searchResults.slice(0, 8).map((item) => (
-              <Link
-                key={item.url}
-                href={item.url}
-                className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
-              >
-                <Image
-                  src={item.img}
-                  // alt={item.title}
-                  width={40}
-                  height={40}
-                  className="flex-shrink-0 rounded-sm object-cover"
-                />
-                <span className="text-sm text-gray-900">{item.title}</span>
-              </Link>
+              <li key={item.url}>
+                <Link
+                  href={item.url}
+                  className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+                >
+                  <Image
+                    src={item.img}
+                    // alt={item.title}
+                    width={40}
+                    height={40}
+                    className="flex-shrink-0 rounded-sm object-cover"
+                  />
+                  <span className="text-sm text-gray-900">{item.title}</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </>
