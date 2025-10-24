@@ -327,6 +327,14 @@ export default function HeaderWithSearch(): JSX.Element {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="#"
+                className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+              >
+                Все результаты
+              </Link>
+            </li>
           </ul>
         )}
       </div>
