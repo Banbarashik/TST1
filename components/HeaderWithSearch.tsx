@@ -286,7 +286,9 @@ export default function HeaderWithSearch(): JSX.Element {
           </div>
 
           <div className="flex gap-6">
-            <Button>Найти</Button>
+            <Button asChild>
+              <Link href={`/search?q=${searchInput}`}>Найти</Link>
+            </Button>
             <Button
               size="icon"
               variant="outline"
@@ -329,7 +331,7 @@ export default function HeaderWithSearch(): JSX.Element {
             ))}
             <li>
               <Link
-                href="#"
+                href={`/search?q=${searchInput}`}
                 className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
               >
                 Все результаты
