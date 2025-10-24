@@ -29,6 +29,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
   const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
 
   // Results panel sizing (if needed)
@@ -157,6 +158,23 @@ export default function HeaderWithSearch(): JSX.Element {
     };
   }, [navVisible, wasManuallyOpened, searchResults.length]);
 
+  // Hide results when clicking/tapping outside the search area
+  useEffect(() => {
+    if (!isSearchOpen) return;
+
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      if (!wrapperRef.current) return;
+      // if click is outside the whole search wrapper, clear results
+      if (target && !wrapperRef.current.contains(target)) {
+        setSearchResults([]);
+      }
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [isSearchOpen]);
+
   const handleToggleSearch = () => {
     if (isSearchOpen) {
       // close
@@ -196,6 +214,7 @@ export default function HeaderWithSearch(): JSX.Element {
     }
   };
 
+  // Render
   return (
     <>
       <nav
@@ -264,6 +283,7 @@ export default function HeaderWithSearch(): JSX.Element {
           maxHeight: isSearchOpen ? `${SEARCH_HEIGHT}px` : "0px",
           pointerEvents: isSearchOpen ? "auto" : "none",
         }}
+        ref={wrapperRef}
       >
         <div
           className="mx-auto flex w-full items-center gap-3 px-4 py-3"
@@ -286,7 +306,7 @@ export default function HeaderWithSearch(): JSX.Element {
           </div>
 
           <div className="flex gap-6">
-            <Button asChild>
+            <Button onClick={handleCloseSearch} asChild>
               <Link href={`/search?q=${searchInput}`}>Найти</Link>
             </Button>
             <Button
@@ -317,10 +337,10 @@ export default function HeaderWithSearch(): JSX.Element {
                 <Link
                   href={item.url}
                   className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+                  onClick={handleCloseSearch}
                 >
                   <Image
                     src={item.img}
-                    // alt={item.title}
                     width={40}
                     height={40}
                     className="flex-shrink-0 rounded-sm object-cover"
@@ -333,6 +353,7 @@ export default function HeaderWithSearch(): JSX.Element {
               <Link
                 href={`/search?q=${searchInput}`}
                 className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+                onClick={handleCloseSearch}
               >
                 Все результаты
               </Link>
