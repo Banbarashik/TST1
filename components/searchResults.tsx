@@ -66,7 +66,55 @@ export default function SearchResults({
 
   useEffect(() => {
     if (!miniSearch || !q) return setResults([]);
-    setResults(miniSearch.search(q));
+
+    const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    // feature-detect Unicode property escapes; fall back if not available
+    const supportsUnicodeProps = (() => {
+      try {
+        // @ts-ignore -- runtime feature test
+        new RegExp("\\p{L}", "u");
+        return true;
+      } catch {
+        return false;
+      }
+    })();
+
+    const raw = miniSearch.search(q);
+    const qNorm = q.toLowerCase().replace(/\s+/g, " ").trim();
+    const boosted = raw
+      .map((r) => {
+        const doc = docsMap.get(r.id);
+        const title = (doc?.title || "").toLowerCase();
+        const content = (doc?.content || "").toLowerCase();
+
+        // Use terms returned by MiniSearch if available, otherwise split query
+        const terms = r.terms && r.terms.length ? r.terms : q.split(/\s+/);
+
+        let score = r.score ?? 0;
+        // very large boost if entire normalized query appears verbatim
+        if (qNorm && (title.includes(qNorm) || content.includes(qNorm))) {
+          score += 2000;
+        }
+        for (const term of terms) {
+          if (!term) continue;
+          const t = String(term).toLowerCase();
+          const e = esc(t);
+
+          // Unicode-aware whole-word check (letters & numbers). Fallback to ascii-friendly check.
+          const re = supportsUnicodeProps
+            ? new RegExp(`(?<![\\p{L}\\p{N}])${e}(?![\\p{L}\\p{N}])`, "iu")
+            : new RegExp(`(^|[^A-Za-z0-9])${e}([^A-Za-z0-9]|$)`, "i");
+
+          if (re.test(title)) score += 100;
+          if (re.test(content)) score += 40;
+        }
+
+        return { ...r, score, _doc: doc };
+      })
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+
+    setResults(boosted);
   }, [q, miniSearch]);
 
   const onSubmit = (e: React.FormEvent) => {
