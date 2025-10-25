@@ -350,7 +350,7 @@ export default function HeaderWithSearch(): JSX.Element {
         {/* Render search results as an absolutely positioned overlay so it doesn't shift layout */}
         {searchResults.length > 0 && (
           <ul
-            className="absolute right-0 left-0 z-50 mt-0 border-t bg-white shadow-sm"
+            className="absolute right-0 left-0 z-50 mt-0 border-t bg-white shadow-sm outline outline-[#A5A5A5]"
             style={{
               top: "100%", // place immediately under the input row
               // maxHeight: "240px",
