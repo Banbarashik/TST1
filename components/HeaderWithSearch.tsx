@@ -343,7 +343,7 @@ export default function HeaderWithSearch(): JSX.Element {
                     src={item.img}
                     width={40}
                     height={40}
-                    className="flex-shrink-0 rounded-sm object-cover"
+                    className="shrink-0"
                   />
                   <span className="text-sm text-gray-900">{item.title}</span>
                 </Link>
