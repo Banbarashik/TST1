@@ -1,15 +1,17 @@
 // components/SearchResults.tsx
 "use client";
 
+import searchIndex from "@/public/search-index.json";
+
 import { useEffect, useMemo, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import MiniSearch from "minisearch";
-import searchIndex from "@/public/search-index.json";
 
 import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
 import { makeSnippet } from "@/lib/snippet";
-import Link from "next/link";
-import { Input } from "./ui/input";
+
+import { Input } from "@/components/ui/input";
 
 type Doc = { title: string; url: string; content: string };
 
