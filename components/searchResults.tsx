@@ -8,6 +8,8 @@ import searchIndex from "@/public/search-index.json";
 
 import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
 import { makeSnippet } from "@/lib/snippet";
+import Link from "next/link";
+import { Input } from "./ui/input";
 
 type Doc = { title: string; url: string; content: string };
 
@@ -74,13 +76,12 @@ export default function SearchResults({
   };
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6 p-4">
+    <div className="mx-auto w-full max-w-3xl space-y-6 p-4">
       <form onSubmit={onSubmit}>
-        <input
+        <Input
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Поиск…"
-          className="w-full rounded-md border px-3 py-2"
         />
       </form>
 
@@ -100,7 +101,7 @@ export default function SearchResults({
 
           return (
             <li key={r.id}>
-              <a
+              <Link
                 href={doc.url}
                 className="text-blue-600 hover:underline"
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
