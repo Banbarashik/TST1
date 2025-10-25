@@ -358,7 +358,7 @@ export default function HeaderWithSearch(): JSX.Element {
               padding: "8px 6px",
             }}
           >
-            {searchResults.slice(0, 8).map((item) => (
+            {searchResults.slice(0, 10).map((item) => (
               <li key={item.url}>
                 <Link
                   href={item.url}
