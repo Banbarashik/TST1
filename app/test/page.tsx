@@ -1,9 +1,9 @@
-import { ArrowBigUpDash } from "lucide-react";
+import Search from "@/components/searchResults";
 
 export default function Home() {
   return (
     <div>
-      <ArrowBigUpDash size={64} />
+      <Search />
     </div>
   );
 }
