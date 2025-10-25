@@ -8,6 +8,7 @@ import searchIndex from "@/public/search-index.json";
 
 import { highlight, filterTermsForSnippet } from "@/helpers/highlight";
 import { makeSnippet } from "@/lib/snippet";
+import Link from "next/link";
 
 type Doc = { title: string; url: string; content: string };
 
@@ -100,7 +101,7 @@ export default function SearchResults({
 
           return (
             <li key={r.id}>
-              <a
+              <Link
                 href={doc.url}
                 className="text-blue-600 hover:underline"
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
