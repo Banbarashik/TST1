@@ -29,7 +29,7 @@ export default function RootLayout({
             <YandexMetrikaContainer enabled />
           </Suspense>
         </head>
-        <body className="font-arial flex min-h-screen flex-col antialiased [scrollbar-gutter:stable]">
+        <body className="font-arial flex min-h-screen flex-col antialiased">
           <HeaderWithSearch />
           {/* Sticky trigger outside flex context */}
           <div className="sticky top-0 z-40 bg-white lg:hidden">
