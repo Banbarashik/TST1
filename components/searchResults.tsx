@@ -135,7 +135,7 @@ export default function SearchResults({
       </form>
 
       <ul className="space-y-6">
-        {results.slice(0, 20).map((r) => {
+        {results.slice(0, 10).map((r) => {
           const termsTitle = r.terms || []; // в title подсвечиваем всё
           const termsBody = filterTermsForSnippet(termsTitle); // в сниппете — без чисел/«16x1.5»
 

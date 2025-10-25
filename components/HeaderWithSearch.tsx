@@ -341,7 +341,6 @@ export default function HeaderWithSearch(): JSX.Element {
             <Search className="text-primary-darker size-5" />
             <input
               ref={inputRef}
-              type="search"
               placeholder="Поиск..."
               className="w-full bg-transparent text-base outline-none"
               value={searchInput}
