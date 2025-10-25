@@ -332,7 +332,11 @@ export default function HeaderWithSearch(): JSX.Element {
           </div>
 
           <div className="flex gap-6">
-            <Button onClick={handleCloseSearch} asChild>
+            <Button
+              className="hover:bg-primary-dark border border-[#A5A5A5]"
+              onClick={handleCloseSearch}
+              asChild
+            >
               <Link href={`/search?q=${searchInput}`}>Найти</Link>
             </Button>
             <Button
