@@ -3,6 +3,7 @@
 import searchIndex from "@/data/general-pages-search-index.json";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,6 +22,7 @@ interface SearchItem {
 }
 
 export default function HeaderWithSearch(): JSX.Element {
+  const router = useRouter();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [wasManuallyOpened, setWasManuallyOpened] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
@@ -215,6 +217,17 @@ export default function HeaderWithSearch(): JSX.Element {
     }
   };
 
+  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const q = searchInput.trim();
+      if (q.length > 0) {
+        router.push(`/search?q=${encodeURIComponent(q)}`);
+        handleCloseSearch();
+      }
+    }
+  };
+
   // Focus the input when the search block opens; blur when it closes
   useEffect(() => {
     if (isSearchOpen) {
@@ -314,6 +327,7 @@ export default function HeaderWithSearch(): JSX.Element {
               className="w-full bg-transparent text-base outline-none"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
+              onKeyDown={handleInputKeyDown}
             />
           </div>
 
