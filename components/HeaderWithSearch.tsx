@@ -36,7 +36,7 @@ export default function HeaderWithSearch(): JSX.Element {
   const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
 
   // Results panel sizing (if needed)
-  const RESULTS_PANEL_HEIGHT = 320; // px - adjust as needed
+  // const RESULTS_PANEL_HEIGHT = 320; // px - adjust as needed
 
   // Scroll/jitter tuning
   const SCROLL_THRESHOLD = 30; // px cumulative before toggle
@@ -92,7 +92,7 @@ export default function HeaderWithSearch(): JSX.Element {
 
     const onScroll = () => {
       const currentY = window.scrollY;
-      let dy = currentY - lastScrollY.current;
+      const dy = currentY - lastScrollY.current;
 
       // ignore tiny noise
       if (Math.abs(dy) < 2) {
@@ -371,6 +371,7 @@ export default function HeaderWithSearch(): JSX.Element {
                 >
                   <Image
                     src={item.img}
+                    alt={item.title}
                     width={40}
                     height={40}
                     className="shrink-0"

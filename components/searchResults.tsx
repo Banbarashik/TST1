@@ -22,7 +22,7 @@ export default function SearchResults({
 }) {
   const [docs, setDocs] = useState<Doc[] | null>(null);
   const [q, setQ] = useState(initialQuery);
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<[]>([]);
   const router = useRouter();
 
   const fetchedOnce = useRef(false);
@@ -72,7 +72,6 @@ export default function SearchResults({
     // feature-detect Unicode property escapes; fall back if not available
     const supportsUnicodeProps = (() => {
       try {
-        // @ts-ignore -- runtime feature test
         new RegExp("\\p{L}", "u");
         return true;
       } catch {
