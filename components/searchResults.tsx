@@ -135,7 +135,7 @@ export default function SearchResults({
         />
       </form>
 
-      <ul className="space-y-5">
+      <ul className="space-y-6">
         {results.slice(0, 20).map((r) => {
           const termsTitle = r.terms || []; // в title подсвечиваем всё
           const termsBody = filterTermsForSnippet(termsTitle); // в сниппете — без чисел/«16x1.5»
@@ -150,18 +150,19 @@ export default function SearchResults({
           });
 
           return (
-            <li key={r.id} className="flex flex-col gap-1.5">
+            <li key={r.id} className="flex flex-col">
               <Link
                 href={doc.url}
-                className="text-primary-darker hover:text-primary-dark text-[15px]"
+                className="text-primary-darker hover:text-primary-dark mb-1.5 text-[15px]"
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
               {snippetHtml && (
                 <p
-                  className="text-sm text-gray-600"
+                  className="pb-6 text-sm text-gray-600"
                   dangerouslySetInnerHTML={{ __html: snippetHtml }}
                 />
               )}
+              <span className="h-px w-full bg-gray-300"></span>
             </li>
           );
         })}
