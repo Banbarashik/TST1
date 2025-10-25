@@ -28,6 +28,7 @@ export default function HeaderWithSearch(): JSX.Element {
   const [navVisible, setNavVisible] = useState(true);
   const [searchResults, setSearchResults] = useState<SearchItem[]>([]);
   const [searchInput, setSearchInput] = useState("");
+  const [shouldFocus, setShouldFocus] = useState(false); // Add this near other state declarations
 
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
@@ -75,10 +76,23 @@ export default function HeaderWithSearch(): JSX.Element {
   useEffect(() => {
     if (!wasManuallyOpened) return;
 
+    // Add check for larger screens (>=1024px)
+    const isLargeScreen = window.innerWidth >= 1024;
+    if (!isLargeScreen) return;
+
     lastScrollY.current = window.scrollY;
     accumulated.current = 0;
     lastDir.current = 0;
     locked.current = false;
+
+    // Add resize listener to update screen size check
+    const onResize = () => {
+      if (window.innerWidth < 1024) {
+        // Close search if screen becomes small
+        setIsSearchOpen(false);
+        setWasManuallyOpened(false);
+      }
+    };
 
     const clearLock = () => {
       locked.current = false;
@@ -152,8 +166,11 @@ export default function HeaderWithSearch(): JSX.Element {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
       if (lockTimeout.current) {
         window.clearTimeout(lockTimeout.current);
         lockTimeout.current = null;
@@ -183,6 +200,7 @@ export default function HeaderWithSearch(): JSX.Element {
       // close
       setIsSearchOpen(false);
       setWasManuallyOpened(false);
+      setShouldFocus(false); // Reset focus state
       setSearchInput("");
       setSearchResults([]);
       // clear accumulators/locks
@@ -197,6 +215,7 @@ export default function HeaderWithSearch(): JSX.Element {
       // open
       setIsSearchOpen(true);
       setWasManuallyOpened(true);
+      setShouldFocus(true); // Only set focus when button is clicked
       accumulated.current = 0;
       lastDir.current = 0;
       locked.current = false;
@@ -228,16 +247,16 @@ export default function HeaderWithSearch(): JSX.Element {
     }
   };
 
-  // Focus the input when the search block opens; blur when it closes
+  // Focus the input only when manually opening search
   useEffect(() => {
-    if (isSearchOpen) {
-      // slight delay so element is mounted / transition started
-      const t = window.setTimeout(() => inputRef.current?.focus(), 200);
+    if (shouldFocus && inputRef.current) {
+      const t = window.setTimeout(() => {
+        inputRef.current?.focus();
+        setShouldFocus(false); // Reset after focusing
+      }, 200);
       return () => window.clearTimeout(t);
-    } else {
-      inputRef.current?.blur();
     }
-  }, [isSearchOpen]);
+  }, [shouldFocus]);
 
   // Render
   return (
@@ -328,6 +347,8 @@ export default function HeaderWithSearch(): JSX.Element {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={handleInputKeyDown}
+              autoFocus={false} // Add this
+              tabIndex={shouldFocus ? 0 : -1} // Add this
             />
           </div>
 
