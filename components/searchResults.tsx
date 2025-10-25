@@ -76,13 +76,12 @@ export default function SearchResults({
   };
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6 p-4">
+    <div className="mx-auto w-full max-w-3xl space-y-6 p-4">
       <form onSubmit={onSubmit}>
         <Input
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Поиск…"
-          className="w-full"
         />
       </form>
 
