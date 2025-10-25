@@ -78,7 +78,7 @@ export default function SearchResults({
   };
 
   return (
-    <div className="mx-auto w-full max-w-3xl space-y-6 p-4">
+    <div className="mx-auto w-full max-w-5xl space-y-6 p-4">
       <form onSubmit={onSubmit}>
         <Input
           value={q}
@@ -98,19 +98,19 @@ export default function SearchResults({
           const titleHtml = highlight(doc.title, termsTitle);
           const snippetHtml = makeSnippet(doc.content, termsBody, {
             minCtx: 80,
-            maxLen: 240,
+            maxLen: 720,
           });
 
           return (
-            <li key={r.id}>
+            <li key={r.id} className="flex flex-col gap-1.5">
               <Link
                 href={doc.url}
-                className="text-blue-600 hover:underline"
+                className="text-primary-darker hover:text-primary-dark text-[15px]"
                 dangerouslySetInnerHTML={{ __html: titleHtml }}
               />
               {snippetHtml && (
                 <p
-                  className="text-sm"
+                  className="text-sm text-gray-600"
                   dangerouslySetInnerHTML={{ __html: snippetHtml }}
                 />
               )}
