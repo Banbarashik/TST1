@@ -232,7 +232,7 @@ export default function HeaderWithSearch(): JSX.Element {
   useEffect(() => {
     if (isSearchOpen) {
       // slight delay so element is mounted / transition started
-      const t = window.setTimeout(() => inputRef.current?.focus(), 50);
+      const t = window.setTimeout(() => inputRef.current?.focus(), 200);
       return () => window.clearTimeout(t);
     } else {
       inputRef.current?.blur();
