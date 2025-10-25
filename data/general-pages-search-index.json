@@ -2,104 +2,104 @@
   {
     "title": "Калориферы",
     "url": "/kalorifery",
-    "img": "/img/search/kalorifery_promyshlennye.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы для сушильных камер",
-    "url": "/kalorifer-sushilnaia-kamera",
-    "img": "/img/search/kalorifery_sushilny.png"
+    "url": "/kalorifery-voda",
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+   {
     "title": "Калориферы водяные приточные",
     "url": "/kalorifery-voda",
-    "img": "/img/search/kalorifery_vodianye_kpvs_kpvu.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+   {
     "title": "Калориферы водяные КСк",
     "url": "/kalorifery-ksk",
-    "img": "/img/search/kalorifery_vodianye_ksk.png"
-  },
-  {
+    "img": "/img/search/kalorifer_model.png"
+  }, 
+    {
     "title": "Калориферы водяные ТВВ",
     "url": "/kalorifery-tvv",
-    "img": "/img/search/kalorifery_vodianye_tvv.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы водяные КФБ-А",
     "url": "/kalorifery-kfb-a",
-    "img": "/img/search/kalorifery_vodianye_kfb-m.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы паровые приточные",
     "url": "/kalorifery-par",
-    "img": "/img/search/kalorifery_parovye_kpps_kppu.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы паровые КПСк",
     "url": "/kalorifery-kpsk",
-    "img": "/img/search/kalorifery_parovye_kpsk.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы паровые КП",
     "url": "/kalorifery-kp",
-    "img": "/img/search/kalorifery_parovye_kp.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+    {
     "title": "Калориферы паровые КФБ-А",
     "url": "/kalorifery-kfb",
-    "img": "/img/search/kalorifery_parovye_kfb-p.png"
+    "img": "/img/search/kalorifer_model.png"
   },
-  {
+   {
     "title": "Калориферы электрические СФО",
     "url": "/elektronagrevateli",
     "img": "/img/search/electrokalorifery_sfo.png"
-  },
-  {
+  }, 
+    {
     "title": "Агрегаты воздушно-отопительные",
     "url": "/otopitelnye-agregaty",
     "img": "/img/search/agregaty_vozdushno_otopitelnye.png"
   },
-  {
+      {
     "title": "Агрегаты отопительные водяные АО2",
     "url": "/ao2-ksk-kpsk",
     "img": "/img/search/agregaty_otopitelnye_vodianye_ao2.png"
   },
-  {
+        {
     "title": "Агрегаты отопительные водяные СТД-300",
     "url": "/std300-ksk-kpsk",
     "img": "/img/search/agregaty_otopitelnye_vodianye_std-300.png"
   },
-  {
+         {
     "title": "Агрегаты отопительные паровые АО2",
     "url": "/ao2-kpsk-ksk",
     "img": "/img/search/agregaty_otopitelnye_parovye_ao2.png"
-  },
-  {
+  }, 
+           {
     "title": "Агрегаты отопительные паровые СТД-300",
     "url": "/std300-tvv-kp",
     "img": "/img/search/agregaty_otopitelnye_parovye_std-300.png"
-  },
-  {
+  }, 
+             {
     "title": "Агрегаты отопительные АВО ХЛ",
     "url": "/avo-tvv-kp",
     "img": "/img/search/agregaty_otopitelnye_avo.png"
-  },
-  {
+  }, 
+               {
     "title": "Электронагревательное оборудование",
     "url": "/vozduchonagrevatelnye-ustanovki",
     "img": "/img/search/electronagrevatelnoe_oborudovanie.png"
-  },
-  {
+  }, 
+                 {
     "title": "Электрические установки СФОЦ",
     "url": "/teploventilyatory",
     "img": "/img/search/electroustanovki_sfotc.png"
-  },
-  {
+  }, 
+                   {
     "title": "Шкафы управления калорифером ШУК",
     "url": "/shkafy-upravleniya",
     "img": "/img/search/shkafy_shuk.png"
-  },
-  {
+  }, 
+                     {
     "title": "Оребренные тэны ТЭНР",
     "url": "/teny-orebrenny'e",
     "img": "/img/search/teny_orebrennye.png"

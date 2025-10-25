@@ -30,6 +30,7 @@ export default function HeaderWithSearch(): JSX.Element {
   const navRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef<number>(0);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const SEARCH_HEIGHT = 76; // px, adjust to match your maxHeight
 
   // Results panel sizing (if needed)
@@ -214,6 +215,17 @@ export default function HeaderWithSearch(): JSX.Element {
     }
   };
 
+  // Focus the input when the search block opens; blur when it closes
+  useEffect(() => {
+    if (isSearchOpen) {
+      // slight delay so element is mounted / transition started
+      const t = window.setTimeout(() => inputRef.current?.focus(), 50);
+      return () => window.clearTimeout(t);
+    } else {
+      inputRef.current?.blur();
+    }
+  }, [isSearchOpen]);
+
   // Render
   return (
     <>
@@ -296,7 +308,7 @@ export default function HeaderWithSearch(): JSX.Element {
           <div className="flex w-full items-center gap-3 rounded bg-gray-100 px-3 py-2 outline outline-[#A5A5A5]">
             <Search className="text-primary-darker size-5" />
             <input
-              autoFocus={isSearchOpen}
+              ref={inputRef}
               type="search"
               placeholder="Поиск..."
               className="w-full bg-transparent text-base outline-none"
