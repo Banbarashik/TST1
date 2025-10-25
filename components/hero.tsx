@@ -106,7 +106,11 @@ export default function Hero() {
                     {slide.text}
                   </p>
                 )}
-                <Button size="xl" className="font-bold" asChild>
+                <Button
+                  size="xl"
+                  className="hover:bg-primary-dark relative z-10 border border-[#C6C3B5] font-bold"
+                  asChild
+                >
                   <Link href="/catalog">Каталог</Link>
                 </Button>
               </div>
