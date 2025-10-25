@@ -53,7 +53,7 @@ export default function SearchResults({
       searchOptions: {
         boost: { title: 6, content: 1 },
         prefix: true,
-        fuzzy: 0.2,
+        fuzzy: 0.4,
         combineWith: "AND",
       },
       tokenize: (s) => s.toLowerCase().match(/[a-zа-яё0-9]+/gi) || [],
