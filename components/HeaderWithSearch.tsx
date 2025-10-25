@@ -362,7 +362,7 @@ export default function HeaderWithSearch(): JSX.Element {
               <li key={item.url}>
                 <Link
                   href={item.url}
-                  className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+                  className="flex items-center gap-2 rounded p-2 hover:bg-gray-200"
                   onClick={handleCloseSearch}
                 >
                   <Image
@@ -378,7 +378,7 @@ export default function HeaderWithSearch(): JSX.Element {
             <li>
               <Link
                 href={`/search?q=${searchInput}`}
-                className="flex items-center gap-2 rounded p-2 hover:bg-gray-100"
+                className="flex items-center gap-2 rounded p-2 hover:bg-gray-200"
                 onClick={handleCloseSearch}
               >
                 Все результаты
