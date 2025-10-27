@@ -154,7 +154,7 @@ export default function SearchableCatalog({
       if (cmp) return [...filtered].sort(cmp);
       return [...filtered];
     }
-  }, [filtered]);
+  }, [filtered, sort]);
 
   const totalPages = Math.max(1, Math.ceil(ordered.length / productsPerPage));
   const startIdx = (page - 1) * productsPerPage;

@@ -114,7 +114,7 @@ export default function SearchResults({
       .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
 
     setResults(boosted);
-  }, [q, miniSearch]);
+  }, [q, miniSearch, docsMap]);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
