@@ -191,7 +191,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <table className="basis-full">
           <tbody>
             {tableHeaders.slice(0, 10).map((header, idx) => (
-              <tr>
+              <tr key={header}>
                 <th className="py-1 pl-1.5 text-left">{header}</th>
                 <td>{product.specsTableValues[idx]}</td>
               </tr>
@@ -201,7 +201,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <table className="basis-full">
           <tbody>
             {tableHeaders.slice(10).map((header, idx) => (
-              <tr>
+              <tr key={header}>
                 <th className="py-1 pl-1.5 text-left">{header}</th>
                 <td>{product.specsTableValues[idx + 10]}</td>
               </tr>
@@ -210,6 +210,36 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </table>
       </div>
       {/* </div> */}
+      {product.frontView && product.parts && (
+        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+            }}
+          >
+            <Image
+              src={product.frontView.url}
+              alt={`Воздухонагреватель ${product.shortName}`}
+              title={product.name}
+              fill
+            />
+          </div>
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.parts.width}/${product.parts.height}`,
+            }}
+          >
+            <Image
+              src={product.parts.url}
+              alt={`${product.name} чертеж`}
+              title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
+              fill
+            />
+          </div>
+        </div>
+      )}
 
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}

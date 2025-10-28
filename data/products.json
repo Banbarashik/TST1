@@ -4252,6 +4252,16 @@
       "alt": "Воздухонагреватель КСк 4-12",
       "title": "Калорифер КСк 4 12 водяной"
     },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-12_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-12_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-12_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-12.html",
     "specsTableValues": [
