@@ -17,6 +17,29 @@ const tableEquipment: Record<string, string> = {
   steam: "пароконденсатного",
 };
 
+const tableHeaders = [
+  "Производительность по воздуху, м3/час",
+  "Тепловая мощность калорифера, кВт",
+  "Площадь поверхности теплообмена, м2",
+  "Площадь фронтального сечения, м2",
+  "Объем воздухонагревателя, л",
+  "Количество рядов теплообменника",
+  "Количество теплообменных трубок",
+  "Число ходов по теплоносителю",
+  "Диаметр патрубков, Ду мм",
+  "Масса, кг",
+  "Аэродинамическое сопротивление min, Па",
+  "Аэродинамическое сопротивление max, Па",
+  "Гидравлическое сопротивление min, кПа",
+  "Гидравлическое сопротивление max, кПа",
+  "Скорость теплоносителя min, м/сек",
+  "Скорость теплоносителя max, м/сек",
+  "Расход теплоносителя min, м3/час",
+  "Расход теплоносителя max, м3/час",
+  "Коэффициент теплопередачи min, Вт/(м2•°С)",
+  "Коэффициент теплопередачи max, Вт/(м2•°С)",
+];
+
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
 
@@ -157,6 +180,37 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           </div>
         </div>
       </div>
+
+      <ProductSubheader
+        text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
+      />
+      {/* <div className="mb-4 w-full overflow-x-auto"> */}
+      {/* <div> */}
+      {/* <table className="w-full min-w-231 xl:min-w-auto"> */}
+      <div className="flex gap-6">
+        <table className="basis-full">
+          <tbody>
+            {tableHeaders.slice(0, 10).map((header, idx) => (
+              <tr>
+                <th className="py-1 pl-1.5 text-left">{header}</th>
+                <td>{product.specsTableValues[idx]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <table className="basis-full">
+          <tbody>
+            {tableHeaders.slice(10).map((header, idx) => (
+              <tr>
+                <th className="py-1 pl-1.5 text-left">{header}</th>
+                <td>{product.specsTableValues[idx + 10]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {/* </div> */}
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
       />
@@ -190,52 +244,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         {isCalorifier && " вентиляционного и"}{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
-      <ProductSubheader
-        text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
-      />
-      <div className="mb-4 w-full overflow-x-auto">
-        <table className="w-full min-w-231 xl:min-w-auto">
-          {isCalorifier && (
-            <thead>
-              <tr>
-                <th
-                  colSpan={4}
-                  className="pl-1 text-left"
-                  style={{ fontSize: "11pt" }}
-                >
-                  Технические характеристики {heatCarrierAdj.gen} калорифера{" "}
-                  {product.shortName}
-                </th>
-              </tr>
-            </thead>
-          )}
-          <tbody>
-            <tr>
-              <td>
-                Производительность по воздуху, м<sup>3</sup>/ч
-              </td>
-              <td>Производительность по теплу, кВт</td>
-              <td>
-                {isCalorifier ? (
-                  <>
-                    Площадь поверхности теплообмена, м<sup>2</sup>
-                  </>
-                ) : (
-                  "Габариты, мм (длина L - ширина B - высота H)"
-                )}
-              </td>
-              <td>Масса, кг</td>
-            </tr>
-            <tr>
-              {product.specsTableValues.map((value, i) => (
-                <td key={i} style={{ fontSize: "11pt" }}>
-                  {value}
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
