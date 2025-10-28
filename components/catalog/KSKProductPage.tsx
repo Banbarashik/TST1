@@ -199,15 +199,16 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <ProductSubheader
           text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
         />
-        {/* <div className="mb-4 w-full overflow-x-auto"> */}
-        {/* <div> */}
-        {/* <table className="w-full min-w-231 xl:min-w-auto"> */}
-        <div className="mb-6 flex gap-10">
+        {/* TABLES */}
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
           <table className="basis-full" style={{ border: 0 }}>
             <tbody>
               {tableHeaders.slice(0, 10).map((header, idx) => (
                 <tr key={idx}>
-                  <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                  <th
+                    className="py-2 text-left sm:py-1.5"
+                    style={{ border: 0 }}
+                  >
                     {header}
                   </th>
                   <td style={{ border: 0 }} className="text-right">
@@ -221,7 +222,10 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             <tbody>
               {tableHeaders.slice(10).map((header, idx) => (
                 <tr key={idx}>
-                  <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                  <th
+                    className="py-2 pr-2.5 text-left sm:py-1.5"
+                    style={{ border: 0 }}
+                  >
                     {header}
                   </th>
                   <td style={{ border: 0 }} className="text-right">
@@ -232,9 +236,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             </tbody>
           </table>
         </div>
-        {/* </div> */}
+        {/* ROW OF IMAGES */}
         {product.frontView && product.parts && (
-          <div className="flex w-full gap-8">
+          <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
             <div
               className={`relative w-full`}
               style={{
