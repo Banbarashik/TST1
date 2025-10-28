@@ -275,6 +275,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
 
+      <ProductSubheader
+        text={`Габаритные размеры ${isCalorifier ? "калорифера" : "агрегата"} ${product.shortName}`}
+      />
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
