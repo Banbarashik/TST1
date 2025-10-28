@@ -4289,6 +4289,16 @@
       "alt": "Воздухонагреватель КСк 4-11",
       "title": "Калорифер КСк 4 11 водяной"
     },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-11_front_view.png",
+      "width": 1000,
+      "height": 650
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-11_parts.png",
+      "width": 1000,
+      "height": 650
+    },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-11_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-11.html",
     "specsTableValues": [
@@ -4316,6 +4326,16 @@
       "url": "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
       "alt": "Воздухонагреватель КСк 4-10",
       "title": "Калорифер КСк 4 10 водяной"
+    },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-10_front_view.png",
+      "width": 1000,
+      "height": 500
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-10_parts.png",
+      "width": 1000,
+      "height": 500
     },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-10_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-10.html",
@@ -4363,6 +4383,16 @@
       "alt": "Воздухонагреватель КСк 4-9",
       "title": "Калорифер КСк 4 9 водяной"
     },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-9_front_view.png",
+      "width": 1000,
+      "height": 500
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-9_parts.png",
+      "width": 1000,
+      "height": 500
+    },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-9_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-9.html",
     "specsTableValues": [
@@ -4390,6 +4420,16 @@
       "url": "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
       "alt": "Воздухонагреватель КСк 4-8",
       "title": "Калорифер КСк 4 8 водяной"
+    },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-8_front_view.png",
+      "width": 1000,
+      "height": 500
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-8_parts.png",
+      "width": 1000,
+      "height": 500
     },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-8_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-8.html",
@@ -4419,6 +4459,16 @@
       "alt": "Воздухонагреватель КСк 4-7",
       "title": "Калорифер КСк 4 7 водяной"
     },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-7_front_view.png",
+      "width": 1000,
+      "height": 500
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-7_parts.png",
+      "width": 1000,
+      "height": 500
+    },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-7_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-7.html",
     "specsTableValues": [
@@ -4446,6 +4496,16 @@
       "url": "/img/kalorifery/ksk/kalorifer_ksk_4-6_4-10.png",
       "alt": "Воздухонагреватель КСк 4-6",
       "title": "Калорифер КСк 4 6 водяной"
+    },
+    "frontView": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-6_front_view.png",
+      "width": 1000,
+      "height": 500
+    },
+    "parts": {
+      "url": "/img/kalorifery/ksk/kalorifer_ksk_4-6_parts.png",
+      "width": 1000,
+      "height": 500
     },
     "drawing": "/img/kalorifery/ksk/kalorifer_ksk_4-6_chertez.png",
     "tableWithTabs": "/legacy/table-ksk-4-6.html",
