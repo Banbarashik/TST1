@@ -18,10 +18,16 @@ const tableEquipment: Record<string, string> = {
 };
 
 const tableHeaders = [
-  "Производительность по воздуху, м3/час",
+  <>
+    Производительность по воздуху, м<sup>3</sup>/час
+  </>,
   "Тепловая мощность калорифера, кВт",
-  "Площадь поверхности теплообмена, м2",
-  "Площадь фронтального сечения, м2",
+  <>
+    Площадь поверхности теплообмена, м<sup>2</sup>
+  </>,
+  <>
+    Площадь фронтального сечения, м<sup>2</sup>
+  </>,
   "Объем воздухонагревателя, л",
   "Количество рядов теплообменника",
   "Количество теплообменных трубок",
@@ -34,10 +40,18 @@ const tableHeaders = [
   "Гидравлическое сопротивление max, кПа",
   "Скорость теплоносителя min, м/сек",
   "Скорость теплоносителя max, м/сек",
-  "Расход теплоносителя min, м3/час",
-  "Расход теплоносителя max, м3/час",
-  "Коэффициент теплопередачи min, Вт/(м2•°С)",
-  "Коэффициент теплопередачи max, Вт/(м2•°С)",
+  <>
+    Расход теплоносителя min, м<sup>3</sup>/час
+  </>,
+  <>
+    Расход теплоносителя max, м<sup>3</sup>/час
+  </>,
+  <>
+    Коэффициент теплопередачи min, Вт/(м<sup>2</sup>•°С)
+  </>,
+  <>
+    Коэффициент теплопередачи max, Вт/(м<sup>2</sup>•°С)
+  </>,
 ];
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
@@ -181,73 +195,75 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
 
-      <ProductSubheader
-        text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
-      />
-      {/* <div className="mb-4 w-full overflow-x-auto"> */}
-      {/* <div> */}
-      {/* <table className="w-full min-w-231 xl:min-w-auto"> */}
-      <div className="flex gap-6">
-        <table className="basis-full" style={{ border: 0 }}>
-          <tbody>
-            {tableHeaders.slice(0, 10).map((header, idx) => (
-              <tr key={header}>
-                <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
-                  {header}
-                </th>
-                <td style={{ border: 0 }} className="text-right">
-                  {product.specsTableValues[idx]}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <table className="basis-full" style={{ border: 0 }}>
-          <tbody>
-            {tableHeaders.slice(10).map((header, idx) => (
-              <tr key={header}>
-                <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
-                  {header}
-                </th>
-                <td style={{ border: 0 }} className="text-right">
-                  {product.specsTableValues[idx + 10]}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      {/* </div> */}
-      {product.frontView && product.parts && (
-        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-0">
-          <div
-            className={`relative w-full`}
-            style={{
-              aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
-            }}
-          >
-            <Image
-              src={product.frontView.url}
-              alt={`Воздухонагреватель ${product.shortName}`}
-              title={product.name}
-              fill
-            />
-          </div>
-          <div
-            className={`relative w-full`}
-            style={{
-              aspectRatio: `${product.parts.width}/${product.parts.height}`,
-            }}
-          >
-            <Image
-              src={product.parts.url}
-              alt={`${product.name} чертеж`}
-              title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
-              fill
-            />
-          </div>
+      <section className="mb-4">
+        <ProductSubheader
+          text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
+        />
+        {/* <div className="mb-4 w-full overflow-x-auto"> */}
+        {/* <div> */}
+        {/* <table className="w-full min-w-231 xl:min-w-auto"> */}
+        <div className="mb-6 flex gap-10">
+          <table className="basis-full" style={{ border: 0 }}>
+            <tbody>
+              {tableHeaders.slice(0, 10).map((header, idx) => (
+                <tr key={idx}>
+                  <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                    {header}
+                  </th>
+                  <td style={{ border: 0 }} className="text-right">
+                    {product.specsTableValues[idx]}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <table className="basis-full" style={{ border: 0 }}>
+            <tbody>
+              {tableHeaders.slice(10).map((header, idx) => (
+                <tr key={idx}>
+                  <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                    {header}
+                  </th>
+                  <td style={{ border: 0 }} className="text-right">
+                    {product.specsTableValues[idx + 10]}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      )}
+        {/* </div> */}
+        {product.frontView && product.parts && (
+          <div className="flex w-full gap-8">
+            <div
+              className={`relative w-full`}
+              style={{
+                aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+              }}
+            >
+              <Image
+                src={product.frontView.url}
+                alt={`Воздухонагреватель ${product.shortName}`}
+                title={product.name}
+                fill
+              />
+            </div>
+            <div
+              className={`relative w-full`}
+              style={{
+                aspectRatio: `${product.parts.width}/${product.parts.height}`,
+              }}
+            >
+              <Image
+                src={product.parts.url}
+                alt={`${product.name} чертеж`}
+                title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
+                fill
+              />
+            </div>
+          </div>
+        )}
+      </section>
 
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
