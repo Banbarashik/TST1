@@ -188,22 +188,30 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       {/* <div> */}
       {/* <table className="w-full min-w-231 xl:min-w-auto"> */}
       <div className="flex gap-6">
-        <table className="basis-full">
+        <table className="basis-full" style={{ border: 0 }}>
           <tbody>
             {tableHeaders.slice(0, 10).map((header, idx) => (
               <tr key={header}>
-                <th className="py-1 pl-1.5 text-left">{header}</th>
-                <td>{product.specsTableValues[idx]}</td>
+                <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                  {header}
+                </th>
+                <td style={{ border: 0 }} className="text-right">
+                  {product.specsTableValues[idx]}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <table className="basis-full">
+        <table className="basis-full" style={{ border: 0 }}>
           <tbody>
             {tableHeaders.slice(10).map((header, idx) => (
               <tr key={header}>
-                <th className="py-1 pl-1.5 text-left">{header}</th>
-                <td>{product.specsTableValues[idx + 10]}</td>
+                <th className="py-1 pl-1.5 text-left" style={{ border: 0 }}>
+                  {header}
+                </th>
+                <td style={{ border: 0 }} className="text-right">
+                  {product.specsTableValues[idx + 10]}
+                </td>
               </tr>
             ))}
           </tbody>
