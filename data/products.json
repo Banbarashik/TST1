@@ -4776,7 +4776,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_312_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-312.html",
-    "specsTableValues": [25000, 599, 95.9, 277],
+    "specsTableValues": [
+      25000, 599, 95.9, 2.488, 57.7, 3, 98, 6, 65, 277, 14, 307, 0.323, 46.639,
+      0.1, 1.2, 4.7, 29.8, 29.15, 87.28
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1388, 65],
     "model": "ТВВ 312 02",
     "heatCarrier": "water",
@@ -4798,7 +4801,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_311_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-311.html",
-    "specsTableValues": [16000, 387, 63.6, 187],
+    "specsTableValues": [
+      16000, 387, 63.6, 1.66, 38.3, 3, 65, 6, 65, 187, 14, 307, 0.205, 29.467,
+      0.1, 1.2, 3.2, 12.8, 29.15, 87.28
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "ТВВ 311",
     "model": "ТВВ 311 02",
@@ -4823,7 +4829,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_310_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-310.html",
-    "specsTableValues": [6300, 139, 21.9, 74],
+    "specsTableValues": [
+      6300, 139, 21.9, 0.581, 14.4, 3, 32, 6, 32, 74, 14, 307, 0.146, 20.93,
+      0.1, 1.2, 1.1, 6.8, 29.15, 87.28
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 310",
     "model": "ТВВ 310 02",
@@ -4848,7 +4857,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_309_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-309.html",
-    "specsTableValues": [5000, 108, 17.2, 61],
+    "specsTableValues": [
+      5000, 108, 17.2, 0.455, 12.1, 3, 32, 6, 32, 61, 14, 307, 0.135, 19.302,
+      0.1, 1.2, 0.9, 5.2, 29.15, 87.28
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 309",
     "model": "ТВВ 309 02",
@@ -4873,7 +4885,28 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_308_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-308.html",
-    "specsTableValues": [4000, 88, 14.8, 56],
+    "specsTableValues": [
+      4000,
+      88,
+      14.8,
+      0.392,
+      "11.0",
+      3,
+      32,
+      6,
+      32,
+      56,
+      14,
+      307,
+      0.129,
+      18.481,
+      0.1,
+      1.2,
+      0.7,
+      4.4,
+      29.15,
+      87.28
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 308",
     "model": "ТВВ 308 02",
@@ -4898,7 +4931,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_307_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-307.html",
-    "specsTableValues": [3150, 69, 12.4, 48],
+    "specsTableValues": [
+      3150, 69, 12.4, 0.329, 9.9, 3, 32, 6, 32, 48, 14, 307, 0.124, 17.66, 0.1,
+      1.2, 0.6, 3.6, 29.15, 87.28
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 307",
     "model": "ТВВ 307 02",
@@ -4923,7 +4959,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_306_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-306.html",
-    "specsTableValues": [2500, 55, 10.1, 42],
+    "specsTableValues": [
+      2500, 55, 10.1, 0.267, 8.7, 3, 32, 6, 32, 42, 14, 307, 0.118, 16.853, 0.1,
+      1.2, 0.5, 2.8, 29.15, 87.28
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 306",
     "model": "ТВВ 306 02",
@@ -4949,7 +4988,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_412_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-412.html",
-    "specsTableValues": [25000, 725, 127.2, 360],
+    "specsTableValues": [
+      25000, 725, 127.2, 2.488, 77.2, 4, 130, 6, 65, 360, 18, 404, 0.297,
+      42.637, 0.1, 1.2, 6.7, 41.1, 29.62, 83.54
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1388, 65],
     "model": "ТВВ 412 02",
     "rows": 4,
@@ -4973,7 +5015,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_411_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-411.html",
-    "specsTableValues": [16000, 467, 84.2, 242],
+    "specsTableValues": [
+      16000, 467, 84.2, 1.66, 51.1, 4, 86, 6, 65, 242, 18, 404, 0.191, 27.666,
+      0.1, 1.2, 4.3, 24.1, 29.62, 83.54
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "ТВВ 411",
     "model": "ТВВ 411 02",
@@ -4998,7 +5043,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_410_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-410.html",
-    "specsTableValues": [6300, 169, 28.7, 92],
+    "specsTableValues": [
+      6300, 169, 28.7, 0.581, 19.1, 4, 42, 6, 32, 92, 18, 404, 0.163, 23.71,
+      0.1, 1.2, 1.4, 7.9, 29.62, 83.54
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 410",
     "model": "ТВВ 410 02",
@@ -5023,7 +5071,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_409_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-409.html",
-    "specsTableValues": [5000, 132, 22.5, 76],
+    "specsTableValues": [
+      5000, 132, 22.5, 0.455, 16.2, 4, 42, 6, 32, 76, 18, 404, 0.152, 22.069,
+      0.1, 1.2, 1.1, 6.7, 29.62, 83.54
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 409",
     "model": "ТВВ 409 02",
@@ -5048,7 +5099,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_408_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-408.html",
-    "specsTableValues": [4000, 108, 19.5, 68],
+    "specsTableValues": [
+      4000, 108, 19.5, 0.392, 14.7, 4, 42, 6, 32, 68, 18, 404, 0.146, 21.249,
+      0.1, 1.2, 0.9, 5.7, 29.62, 83.54
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 408",
     "model": "ТВВ 408 02",
@@ -5073,7 +5127,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_407_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-407.html",
-    "specsTableValues": [3150, 86, 16.3, 60],
+    "specsTableValues": [
+      3150, 86, 16.3, 0.329, 13.2, 4, 42, 6, 32, 60, 18, 404, 0.141, 20.443,
+      0.1, 1.2, 0.8, 4.8, 29.62, 83.54
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 407",
     "model": "ТВВ 407 02",
@@ -5098,7 +5155,10 @@
     },
     "drawing": "/img/kalorifery/tvv/kalorifer_tvv_406_chertez.png",
     "tableWithTabs": "/legacy/table-tvv-406.html",
-    "specsTableValues": [2500, 68, 13.3, 52],
+    "specsTableValues": [
+      2500, 68, 13.3, 0.267, 11.7, 4, 42, 6, 32, 52, 18, 404, 0.135, 19.622,
+      0.1, 1.2, 0.7, 4.1, 29.62, 83.54
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 435, 32],
     "shortName": "ТВВ 406",
     "model": "ТВВ 406 02",
