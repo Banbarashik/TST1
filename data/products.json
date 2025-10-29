@@ -9847,7 +9847,24 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_312_chertez.png",
     "tableWithTabs": "/legacy/table-kp-312.html",
-    "specsTableValues": [25000, 657, 95.9, 277],
+    "specsTableValues": [
+      25000,
+      657,
+      95.9,
+      0.329,
+      0.058,
+      3,
+      98,
+      1,
+      80,
+      277,
+      14,
+      307,
+      907,
+      1914,
+      "50.0",
+      102.8
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1376, 80],
     "model": "КП 312 02",
     "heatCarrier": "steam",
@@ -9868,7 +9885,24 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_311_chertez.png",
     "tableWithTabs": "/legacy/table-kp-311.html",
-    "specsTableValues": [16000, 424, 63.6, 187],
+    "specsTableValues": [
+      16000,
+      424,
+      63.6,
+      0.267,
+      0.038,
+      3,
+      65,
+      1,
+      65,
+      187,
+      14,
+      307,
+      586,
+      1269,
+      "50.0",
+      102.8
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "КП 311",
     "series": "КП",
@@ -9893,7 +9927,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_310_chertez.png",
     "tableWithTabs": "/legacy/table-kp-310.html",
-    "specsTableValues": [6300, 161, 21.9, 74],
+    "specsTableValues": [
+      6300, 161, 21.9, 0.43, 0.014, 3, 32, 1, 50, 74, 14, 307, 223, 460, 51.3,
+      105.5
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 402, 50],
     "shortName": "КП 310",
     "series": "КП",
@@ -9918,7 +9955,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_309_chertez.png",
     "tableWithTabs": "/legacy/table-kp-309.html",
-    "specsTableValues": [5000, 129, 17.2, 61],
+    "specsTableValues": [
+      5000, 129, 17.2, 0.337, 0.012, 3, 32, 1, 50, 61, 14, 307, 178, 377, 52.2,
+      107.4
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 402, 50],
     "shortName": "КП 309",
     "series": "КП",
@@ -9943,7 +9983,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_308_chertez.png",
     "tableWithTabs": "/legacy/table-kp-308.html",
-    "specsTableValues": [4000, 107, 14.8, 56],
+    "specsTableValues": [
+      4000, 107, 14.8, 0.29, 0.011, 3, 32, 1, 50, 56, 14, 307, 146, 332, 52.7,
+      108.5
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 402, 50],
     "shortName": "КП 308",
     "series": "КП",
@@ -9968,7 +10011,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_307_chertez.png",
     "tableWithTabs": "/legacy/table-kp-307.html",
-    "specsTableValues": [3150, 86, 12.4, 48],
+    "specsTableValues": [
+      3150, 86, 12.4, 0.244, 0.01, 3, 32, 1, 50, 48, 14, 307, 120, 263, 53.4,
+      109.9
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 402, 50],
     "shortName": "КП 307",
     "series": "КП",
@@ -9993,7 +10039,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_306_chertez.png",
     "tableWithTabs": "/legacy/table-kp-306.html",
-    "specsTableValues": [2500, 70, 10.1, 42],
+    "specsTableValues": [
+      2500, 70, 10.1, 0.197, 0.009, 3, 32, 1, 50, 42, 14, 307, 96, 218, 54.2,
+      111.6
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 402, 50],
     "shortName": "КП 306",
     "series": "КП",
@@ -10020,7 +10069,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_412_chertez.png",
     "tableWithTabs": "/legacy/table-kp-412.html",
-    "specsTableValues": [25000, 720, 127.2, 360],
+    "specsTableValues": [
+      25000, 720, 127.2, 0.244, 0.077, 4, 130, 1, 80, 360, 18, 404, 994, 2278,
+      43.3, 92.2
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1376, 80],
     "model": "КП 412 02",
     "rows": 4,
@@ -10043,7 +10095,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_411_chertez.png",
     "tableWithTabs": "/legacy/table-kp-411.html",
-    "specsTableValues": [16000, 464, 84.2, 242],
+    "specsTableValues": [
+      16000, 464, 84.2, 0.197, 0.051, 4, 86, 1, 65, 242, 18, 404, 640, 1471,
+      43.3, 92.2
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "КП 411",
     "series": "КП",
@@ -10068,7 +10123,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_410_chertez.png",
     "tableWithTabs": "/legacy/table-kp-410.html",
-    "specsTableValues": [6300, 176, 28.7, 92],
+    "specsTableValues": [
+      6300, 176, 28.7, 2.488, 0.019, 4, 42, 1, 50, 92, 18, 404, 242, 539, 44.3,
+      94.4
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 402, 50],
     "shortName": "КП 410",
     "series": "КП",
@@ -10093,7 +10151,24 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_409_chertez.png",
     "tableWithTabs": "/legacy/table-kp-409.html",
-    "specsTableValues": [5000, 140, 22.5, 76],
+    "specsTableValues": [
+      5000,
+      140,
+      22.5,
+      1.66,
+      0.016,
+      4,
+      42,
+      1,
+      50,
+      76,
+      18,
+      404,
+      194,
+      443,
+      "45.0",
+      95.8
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 402, 50],
     "shortName": "КП 409",
     "series": "КП",
@@ -10118,7 +10193,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_408_chertez.png",
     "tableWithTabs": "/legacy/table-kp-408.html",
-    "specsTableValues": [4000, 116, 19.5, 68],
+    "specsTableValues": [
+      4000, 116, 19.5, 0.581, 0.015, 4, 42, 1, 50, 68, 18, 404, 159, 369, 45.4,
+      96.7
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 402, 50],
     "shortName": "КП 408",
     "series": "КП",
@@ -10143,7 +10221,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_407_chertez.png",
     "tableWithTabs": "/legacy/table-kp-407.html",
-    "specsTableValues": [3150, 93, 16.3, 60],
+    "specsTableValues": [
+      3150, 93, 16.3, 0.455, 0.013, 4, 42, 1, 50, 60, 18, 404, 128, 297, 45.9,
+      97.8
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 402, 50],
     "shortName": "КП 407",
     "series": "КП",
@@ -10168,7 +10249,10 @@
     },
     "drawing": "/img/kalorifery/kp/kalorifer_kp_406_chertez.png",
     "tableWithTabs": "/legacy/table-kp-406.html",
-    "specsTableValues": [2500, 76, 13.3, 52],
+    "specsTableValues": [
+      2500, 76, 13.3, 0.392, 0.012, 4, 42, 1, 50, 52, 18, 404, 104, 241, 46.5,
+      99.1
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 402, 50],
     "shortName": "КП 406",
     "series": "КП",
