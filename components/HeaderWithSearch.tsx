@@ -76,22 +76,17 @@ export default function HeaderWithSearch(): JSX.Element {
   useEffect(() => {
     if (!wasManuallyOpened) return;
 
-    // Add check for larger screens (>=1024px)
-    const isLargeScreen = window.innerWidth >= 1024;
-    if (!isLargeScreen) return;
-
     lastScrollY.current = window.scrollY;
     accumulated.current = 0;
     lastDir.current = 0;
     locked.current = false;
 
-    // Add resize listener to update screen size check
+    // Resize listener kept for clearing locks / future adjustments
     const onResize = () => {
-      if (window.innerWidth < 1024) {
-        // Close search if screen becomes small
-        setIsSearchOpen(false);
-        setWasManuallyOpened(false);
-      }
+      // no forced close on resize — keep behavior consistent across widths
+      // optionally you can clear locks or reset accumulators here:
+      accumulated.current = 0;
+      lastDir.current = 0;
     };
 
     const clearLock = () => {
@@ -134,6 +129,8 @@ export default function HeaderWithSearch(): JSX.Element {
           // scrolling down -> hide only if there are NO results
           if (searchResults.length === 0) {
             setIsSearchOpen(false);
+            // ensure we don't leave focus flag set
+            setShouldFocus(false);
             // lock toggles briefly to avoid flip-flop
             locked.current = true;
             if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
@@ -148,6 +145,13 @@ export default function HeaderWithSearch(): JSX.Element {
         } else {
           // scrolling up -> always show
           setIsSearchOpen(true);
+          // Only trigger focusing when the viewport is big (>=1024px)
+          if (window.innerWidth >= 1024) {
+            setShouldFocus(true);
+          } else {
+            // do not focus on larger screens
+            setShouldFocus(false);
+          }
           locked.current = true;
           if (lockTimeout.current) window.clearTimeout(lockTimeout.current);
           lockTimeout.current = window.setTimeout(() => {
