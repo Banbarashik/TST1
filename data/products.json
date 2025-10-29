@@ -8741,7 +8741,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-12.html",
-    "specsTableValues": [25000, 436, 86.2, 174],
+    "specsTableValues": [
+      25000, 436, 86.2, 2.488, 0.02, 2, 71, 1, 65, 174, 9, 191, 546, 1327,
+      38.23, 69.49
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1388, 65]
   },
   {
@@ -8760,7 +8763,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-11.html",
-    "specsTableValues": [16000, 283, 57.1, 120],
+    "specsTableValues": [
+      16000, 283, 57.1, 1.66, 0.013, 2, 47, 1, 65, 120, 9, 191, 353, 862, 38.23,
+      69.49
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "КПСк 2-11",
     "model": "КПСк 2-11 02",
@@ -8783,7 +8789,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-10_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-10.html",
-    "specsTableValues": [6300, 108, 19.5, 46],
+    "specsTableValues": [
+      6300, 108, 19.5, 0.581, 0.005, 2, 23, 1, 50, 46, 9, 191, 132, 312, 39.24,
+      71.32
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 402, 50],
     "shortName": "КПСк 2-10",
     "model": "КПСк 2-10 02",
@@ -8808,7 +8817,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-9_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-9.html",
-    "specsTableValues": [5000, 82, 15.3, 39],
+    "specsTableValues": [
+      5000, 82, 15.3, 0.455, 0.004, 2, 23, 1, 50, 39, 9, 191, 105, 255, 39.93,
+      72.58
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 402, 50],
     "shortName": "КПСк 2-9",
     "model": "КПСк 2-9 02",
@@ -8833,7 +8845,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-8_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-8.html",
-    "specsTableValues": [4000, 68, 13.2, 35],
+    "specsTableValues": [
+      4000, 68, 13.2, 0.392, 0.004, 2, 23, 1, 50, 35, 9, 191, 88, 215, 40.36,
+      73.37
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 402, 50],
     "shortName": "КПСк 2-8",
     "model": "КПСк 2-8 02",
@@ -8858,7 +8873,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-7_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-7.html",
-    "specsTableValues": [3150, 55, 11.1, 30],
+    "specsTableValues": [
+      3150, 55, 11.1, 0.329, 0.004, 2, 23, 1, 50, 30, 9, 191, 73, 177, 40.87,
+      74.29
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 402, 50],
     "shortName": "КПСк 2-7",
     "model": "КПСк 2-7 02",
@@ -8883,7 +8901,24 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-6_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-6.html",
-    "specsTableValues": [2500, 43, "9.0", 27],
+    "specsTableValues": [
+      2500,
+      43,
+      "9.0",
+      0.267,
+      0.003,
+      2,
+      23,
+      1,
+      50,
+      27,
+      9,
+      191,
+      59,
+      143,
+      41.5,
+      75.43
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 402, 50],
     "shortName": "КПСк 2-6",
     "model": "КПСк 2-6 02",
@@ -8908,7 +8943,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-5_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-5.html",
-    "specsTableValues": [5000, 77, 14.4, 36],
+    "specsTableValues": [
+      5000, 77, 14.4, 0.43, 0.004, 2, 17, 1, 50, 36, 9, 191, 101, 262, 39.24,
+      71.32
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 378, 426, 450, 280, 50],
     "shortName": "КПСк 2-5",
     "model": "КПСк 2-5 02",
@@ -8933,7 +8971,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-4_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-4.html",
-    "specsTableValues": [4000, 58, 11.3, 31],
+    "specsTableValues": [
+      4000, 58, 11.3, 0.337, 0.003, 2, 17, 1, 50, 31, 9, 191, 81, 211, 39.93,
+      72.58
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 378, 426, 450, 280, 50],
     "shortName": "КПСк 2-4",
     "model": "КПСк 2-4 02",
@@ -8958,7 +8999,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-3_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-3.html",
-    "specsTableValues": [3150, 47, 9.8, 28],
+    "specsTableValues": [
+      3150, 47, 9.8, 0.29, 0.003, 2, 17, 1, 50, 28, 9, 191, 66, 172, 40.36,
+      73.37
+    ],
     "sizeTableValues": [780, 828, 852, 917, 378, 426, 450, 280, 50],
     "shortName": "КПСк 2-3",
     "model": "КПСк 2-3 02",
@@ -8983,7 +9027,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-2_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-2.html",
-    "specsTableValues": [2500, 37, 8.2, 25],
+    "specsTableValues": [
+      2500, 37, 8.2, 0.244, 0.003, 2, 17, 1, 50, 25, 9, 191, 55, 145, 40.87,
+      74.29
+    ],
     "sizeTableValues": [655, 703, 727, 792, 378, 426, 450, 280, 50],
     "shortName": "КПСк 2-2",
     "model": "КПСк 2-2 02",
@@ -9008,7 +9055,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-1_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-1.html",
-    "specsTableValues": [2000, 28, 6.7, 22],
+    "specsTableValues": [
+      2000, 28, 6.7, 0.197, 0.002, 2, 17, 1, 50, 22, 9, 191, 45, 119, 41.5,
+      75.43
+    ],
     "sizeTableValues": [530, 578, 602, 667, 378, 426, 450, 280, 50],
     "shortName": "КПСк 2-1",
     "model": "КПСк 2-1 02",
@@ -9036,7 +9086,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-12.html",
-    "specsTableValues": [25000, 562, 129.9, 242],
+    "specsTableValues": [
+      25000, 562, 129.9, 2.488, 0.029, 3, 107, 1, 65, 242, 13, 273, 693, 1768,
+      34.54, 68.03
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1388, 65],
     "model": "КПСк 3-12 02",
     "heatCarrier": "steam",
@@ -9058,7 +9111,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-11.html",
-    "specsTableValues": [16000, 371, 86.2, 163],
+    "specsTableValues": [
+      16000, 371, 86.2, 1.66, 0.019, 3, 71, 1, 65, 163, 13, 273, 448, 1147,
+      34.54, 68.03
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "КПСк 3-11",
     "model": "КПСк 3-11 02",
@@ -9083,7 +9139,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-10_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-10.html",
-    "specsTableValues": [6300, 139, 29.7, 65],
+    "specsTableValues": [
+      6300, 139, 29.7, 0.581, 0.007, 3, 35, 1, 50, 65, 13, 273, 171, 421, 35.37,
+      69.67
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 402, 50],
     "shortName": "КПСк 3-10",
     "model": "КПСк 3-10 02",
@@ -9108,7 +9167,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-9_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-9.html",
-    "specsTableValues": [5000, 111, 23.3, 54],
+    "specsTableValues": [
+      5000, 111, 23.3, 0.455, 0.006, 3, 35, 1, 50, 54, 13, 273, 135, 346, 35.94,
+      70.8
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 402, 50],
     "shortName": "КПСк 3-9",
     "model": "КПСк 3-9 02",
@@ -9133,7 +9195,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-8_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-8.html",
-    "specsTableValues": [4000, 92, 20.1, 49],
+    "specsTableValues": [
+      4000, 92, 20.1, 0.392, 0.005, 3, 35, 1, 50, 49, 13, 273, 112, 288, 36.3,
+      71.5
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 402, 50],
     "shortName": "КПСк 3-8",
     "model": "КПСк 3-8 02",
@@ -9158,7 +9223,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-7_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-7.html",
-    "specsTableValues": [3150, 75, 16.9, 43],
+    "specsTableValues": [
+      3150, 75, 16.9, 0.329, 0.005, 3, 35, 1, 50, 43, 13, 273, 91, 235, 36.72,
+      72.33
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 402, 50],
     "shortName": "КПСк 3-7",
     "model": "КПСк 3-7 02",
@@ -9183,7 +9251,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-6_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-6.html",
-    "specsTableValues": [2500, 60, 13.7, 37],
+    "specsTableValues": [
+      2500, 60, 13.7, 0.267, 0.004, 3, 35, 1, 50, 37, 13, 273, 73, 190, 37.24,
+      73.35
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 402, 50],
     "shortName": "КПСк 3-6",
     "model": "КПСк 3-6 02",
@@ -9208,7 +9279,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-5_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-5.html",
-    "specsTableValues": [5000, 104, 22.1, 48],
+    "specsTableValues": [
+      5000, 104, 22.1, 0.43, 0.005, 3, 26, 1, 50, 48, 13, 273, 113, 346, 35.37,
+      69.67
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 378, 426, 450, 280, 50],
     "shortName": "КПСк 3-5",
     "model": "КПСк 3-5 02",
@@ -9233,7 +9307,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-4_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-4.html",
-    "specsTableValues": [4000, 84, 17.3, 41],
+    "specsTableValues": [
+      4000, 84, 17.3, 0.337, 0.004, 3, 26, 1, 50, 41, 13, 273, 90, 278, 35.94,
+      70.8
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 378, 426, 450, 280, 50],
     "shortName": "КПСк 3-4",
     "model": "КПСк 3-4 02",
@@ -9258,7 +9335,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-3_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-3.html",
-    "specsTableValues": [3150, 69, 14.9, 36],
+    "specsTableValues": [
+      3150, 69, 14.9, 0.29, 0.004, 3, 26, 1, 50, 36, 13, 273, 72, 223, 36.3,
+      71.5
+    ],
     "sizeTableValues": [780, 828, 852, 917, 378, 426, 450, 280, 50],
     "shortName": "КПСк 3-3",
     "model": "КПСк 3-3 02",
@@ -9283,7 +9363,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-2_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-2.html",
-    "specsTableValues": [2500, 57, 12.5, 32],
+    "specsTableValues": [
+      2500, 57, 12.5, 0.244, 0.004, 3, 26, 1, 50, 32, 13, 273, 60, 187, 36.72,
+      72.33
+    ],
     "sizeTableValues": [655, 703, 727, 792, 378, 426, 450, 280, 50],
     "shortName": "КПСк 3-2",
     "model": "КПСк 3-2 02",
@@ -9308,7 +9391,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-1_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-1.html",
-    "specsTableValues": [2000, 46, 10.2, 28],
+    "specsTableValues": [
+      2000, 46, 10.2, 0.197, 0.003, 3, 26, 1, 50, 28, 13, 273, 49, 154, 37.24,
+      73.35
+    ],
     "sizeTableValues": [530, 578, 602, 667, 378, 426, 450, 280, 50],
     "shortName": "КПСк 3-1",
     "model": "КПСк 3-1 02",
@@ -9334,7 +9420,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-12_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-12.html",
-    "specsTableValues": [25000, 668, 172.4, 307],
+    "specsTableValues": [
+      25000, 668, 172.4, 2.488, 0.038, 4, 142, 1, 50, 307, 18, 390, 794, 2141,
+      31.09, 68.96
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1500, 1548, 1572, 1388, 65],
     "model": "КПСк 4-12 02",
     "rows": 4,
@@ -9358,7 +9447,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-11.html",
-    "specsTableValues": [16000, 431, 114.2, 206],
+    "specsTableValues": [
+      16000, 431, 114.2, 1.66, 0.025, 4, 94, 1, 50, 206, 18, 390, 516, 1382,
+      31.09, 68.96
+    ],
     "sizeTableValues": [1655, 1703, 1727, 1792, 1000, 1048, 1072, 888, 65],
     "shortName": "КПСк 4-11",
     "model": "КПСк 4-11 02",
@@ -9383,7 +9475,24 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-10_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-10.html",
-    "specsTableValues": [6300, 162, "39.0", 79],
+    "specsTableValues": [
+      6300,
+      162,
+      "39.0",
+      0.581,
+      0.009,
+      4,
+      46,
+      1,
+      50,
+      79,
+      18,
+      390,
+      193,
+      503,
+      31.49,
+      69.86
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 500, 548, 572, 402, 50],
     "shortName": "КПСк 4-10",
     "model": "КПСк 4-10 02",
@@ -9408,7 +9517,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-9_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-9.html",
-    "specsTableValues": [5000, 129, 30.6, 65],
+    "specsTableValues": [
+      5000, 129, 30.6, 0.455, 0.008, 4, 46, 1, 50, 65, 18, 390, 154, 413, 31.77,
+      70.48
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 500, 548, 572, 402, 50],
     "shortName": "КПСк 4-9",
     "model": "КПСк 4-9 02",
@@ -9433,7 +9545,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-8_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-8.html",
-    "specsTableValues": [4000, 107, 26.4, 59],
+    "specsTableValues": [
+      4000, 107, 26.4, 0.392, 0.007, 4, 46, 1, 50, 59, 18, 390, 127, 339, 31.94,
+      70.86
+    ],
     "sizeTableValues": [780, 828, 852, 917, 500, 548, 572, 402, 50],
     "shortName": "КПСк 4-8",
     "model": "КПСк 4-8 02",
@@ -9458,7 +9573,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-7_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-7.html",
-    "specsTableValues": [3150, 86, 22.2, 51],
+    "specsTableValues": [
+      3150, 86, 22.2, 0.329, 0.006, 4, 46, 1, 50, 51, 18, 390, 102, 275, 32.14,
+      71.3
+    ],
     "sizeTableValues": [655, 703, 727, 792, 500, 548, 572, 402, 50],
     "shortName": "КПСк 4-7",
     "model": "КПСк 4-7 02",
@@ -9483,7 +9601,24 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-6_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-6.html",
-    "specsTableValues": [2500, 69, "18.0", 43],
+    "specsTableValues": [
+      2500,
+      69,
+      "18.0",
+      0.267,
+      0.006,
+      4,
+      46,
+      1,
+      50,
+      43,
+      18,
+      390,
+      82,
+      221,
+      32.39,
+      71.85
+    ],
     "sizeTableValues": [530, 578, 602, 667, 500, 548, 572, 402, 50],
     "shortName": "КПСк 4-6",
     "model": "КПСк 4-6 02",
@@ -9508,7 +9643,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-5_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-5.html",
-    "specsTableValues": [5000, 123, 28.8, 59],
+    "specsTableValues": [
+      5000, 123, 28.8, 0.43, 0.007, 4, 34, 1, 50, 59, 18, 390, 122, 385, 31.49,
+      69.86
+    ],
     "sizeTableValues": [1155, 1203, 1227, 1292, 378, 426, 450, 280, 50],
     "shortName": "КПСк 4-5",
     "model": "КПСк 4-5 02",
@@ -9533,7 +9671,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-4_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-4.html",
-    "specsTableValues": [4000, 98, 22.6, 48],
+    "specsTableValues": [
+      4000, 98, 22.6, 0.337, 0.006, 4, 34, 1, 50, 48, 18, 390, 98, 308, 31.77,
+      70.48
+    ],
     "sizeTableValues": [905, 953, 977, 1042, 378, 426, 450, 280, 50],
     "shortName": "КПСк 4-4",
     "model": "КПСк 4-4 02",
@@ -9558,7 +9699,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-3_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-3.html",
-    "specsTableValues": [3150, 80, 19.5, 44],
+    "specsTableValues": [
+      3150, 80, 19.5, 0.29, 0.005, 4, 34, 1, 50, 44, 18, 390, 76, 244, 31.94,
+      70.86
+    ],
     "sizeTableValues": [780, 828, 852, 917, 378, 426, 450, 280, 50],
     "shortName": "КПСк 4-3",
     "model": "КПСк 4-3 02",
@@ -9583,7 +9727,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-2_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-2.html",
-    "specsTableValues": [2500, 68, 16.4, 38],
+    "specsTableValues": [
+      2500, 68, 16.4, 0.244, 0.005, 4, 34, 1, 50, 38, 18, 390, 64, 204, 32.14,
+      71.3
+    ],
     "sizeTableValues": [655, 703, 727, 792, 378, 426, 450, 280, 50],
     "shortName": "КПСк 4-2",
     "model": "КПСк 4-2 02",
@@ -9608,7 +9755,10 @@
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-1_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-1.html",
-    "specsTableValues": [2000, 53, 13.3, 34],
+    "specsTableValues": [
+      2000, 53, 13.3, 0.197, 0.004, 4, 34, 1, 50, 34, 18, 390, 52, 244, 32.39,
+      71.85
+    ],
     "sizeTableValues": [530, 578, 602, 667, 378, 426, 450, 280, 50],
     "shortName": "КПСк 4-1",
     "model": "КПСк 4-1 02",
