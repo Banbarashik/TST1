@@ -202,34 +202,46 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           />
           {/* TABLES */}
           <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
-            <table className="basis-full" style={{ border: 0 }}>
+            <table
+              className="basis-full"
+              style={{ border: "1px solid rgb(229, 231, 235)" }}
+            >
               <tbody>
                 {tableHeaders.slice(0, 10).map((header, idx) => (
                   <tr key={idx}>
                     <th
-                      className="py-2 text-left sm:py-1.5"
-                      style={{ border: 0 }}
+                      className="py-2 pl-1 text-left sm:py-1.5"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
                     >
                       {header}
                     </th>
-                    <td style={{ border: 0 }} className="text-right">
+                    <td
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="pr-1 text-right"
+                    >
                       {product.specsTableValues[idx]}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <table className="basis-full" style={{ border: 0 }}>
+            <table
+              className="basis-full"
+              style={{ border: "1px solid rgb(229, 231, 235)" }}
+            >
               <tbody>
                 {tableHeaders.slice(10).map((header, idx) => (
                   <tr key={idx}>
                     <th
-                      className="py-2 pr-2.5 text-left sm:py-1.5"
-                      style={{ border: 0 }}
+                      className="py-2 pl-1 text-left sm:py-1.5"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
                     >
                       {header}
                     </th>
-                    <td style={{ border: 0 }} className="text-right">
+                    <td
+                      className="pr-1 text-right"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                    >
                       {product.specsTableValues[idx + 10]}
                     </td>
                   </tr>
