@@ -10508,7 +10508,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_14-a3_p.html",
-    "specsTableValues": [18000, 456, 61.5, 221],
+    "specsTableValues": [
+      18000, 456, 61.5, 1.577, 0.038, 3, 71, 6, 65, 221, 14, 307, 631, 1464,
+      50.4, 103.7
+    ],
     "sizeTableValues": [1460, 1506, 1530, 1595, 1080, 1126, 1150, 968, 65],
     "model": "КФБ-14 А3 П",
     "heatCarrier": "steam",
@@ -10539,7 +10542,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_13-a3_p.html",
-    "specsTableValues": [16000, 407, 55.2, 194],
+    "specsTableValues": [
+      16000, 407, 55.2, 1.415, 0.035, 3, 71, 6, 65, 194, 14, 307, 568, 1140,
+      50.8, 104.5
+    ],
     "sizeTableValues": [1310, 1356, 1380, 1445, 1080, 1126, 1150, 968, 65],
     "model": "КФБ-13 А3 П",
     "heatCarrier": "steam",
@@ -10570,7 +10576,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_12-a3_p.html",
-    "specsTableValues": [13500, 348, 48.2, 167],
+    "specsTableValues": [
+      13500, 348, 48.2, 1.258, 0.031, 3, 62, 6, 65, 167, 14, 307, 481, 1091,
+      50.8, 104.5
+    ],
     "sizeTableValues": [1310, 1356, 1380, 1445, 960, 1006, 1030, 848, 65],
     "model": "КФБ-12 А3 П",
     "heatCarrier": "steam",
@@ -10601,7 +10610,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_11-a3_p.html",
-    "specsTableValues": [12000, 311, 42.7, 149],
+    "specsTableValues": [
+      12000, 311, 42.7, 1.114, 0.028, 3, 62, 6, 65, 149, 14, 307, 431, 998,
+      51.3, 105.5
+    ],
     "sizeTableValues": [1160, 1206, 1230, 1295, 960, 1006, 1030, 848, 65],
     "model": "КФБ-11 А3 П",
     "heatCarrier": "steam",
@@ -10632,7 +10644,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_10-a3_p.html",
-    "specsTableValues": [10500, 268, 36.5, 132],
+    "specsTableValues": [
+      10500, 268, 36.5, 0.974, 0.024, 3, 53, 6, 65, 132, 14, 307, 371, 831,
+      51.3, 105.5
+    ],
     "sizeTableValues": [1160, 1206, 1230, 1295, 840, 886, 910, 728, 65],
     "model": "КФБ-10 А3 П",
     "heatCarrier": "steam",
@@ -10663,7 +10678,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_9-a3_p.html",
-    "specsTableValues": [9200, 237, 31.8, 115],
+    "specsTableValues": [
+      9200, 237, 31.8, 0.848, 0.022, 3, 53, 6, 65, 115, 14, 307, 325, 746, 51.8,
+      106.5
+    ],
     "sizeTableValues": [1010, 1056, 1080, 1145, 840, 886, 910, 728, 65],
     "model": "КФБ-9 А3 П",
     "heatCarrier": "steam",
@@ -10694,7 +10712,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_8-a3_p.html",
-    "specsTableValues": [8000, 208, 28.2, 100],
+    "specsTableValues": [
+      8000, 208, 28.2, 0.727, 0.019, 3, 47, 6, 50, 100, 14, 307, 287, 668, 51.8,
+      106.5
+    ],
     "sizeTableValues": [1010, 1056, 1080, 1145, 720, 766, 790, 622, 50],
     "model": "КФБ-8 А3 П",
     "heatCarrier": "steam",
@@ -10725,7 +10746,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_7-a3_p.html",
-    "specsTableValues": [6700, 176, 24.1, 87],
+    "specsTableValues": [
+      6700, 176, 24.1, 0.619, 0.017, 3, 47, 6, 50, 87, 14, 307, 245, 560, 52.4,
+      107.8
+    ],
     "sizeTableValues": [860, 906, 930, 995, 720, 766, 790, 622, 50],
     "model": "КФБ-7 А3 П",
     "heatCarrier": "steam",
@@ -10756,7 +10780,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_6-a3_p.html",
-    "specsTableValues": [5500, 143, 19.4, 72],
+    "specsTableValues": [
+      5500, 143, 19.4, 0.516, 0.014, 3, 38, 6, 50, 72, 14, 307, 197, 459, 52.4,
+      107.8
+    ],
     "sizeTableValues": [860, 906, 930, 995, 600, 646, 670, 502, 50],
     "model": "КФБ-6 А3 П",
     "heatCarrier": "steam",
@@ -10787,7 +10814,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_5-a3_p.html",
-    "specsTableValues": [4400, 117, 16.1, 61],
+    "specsTableValues": [
+      4400, 117, 16.1, 0.426, 0.012, 3, 38, 6, 50, 61, 14, 307, 162, 382, 53.1,
+      109.3
+    ],
     "sizeTableValues": [710, 756, 780, 845, 600, 646, 670, 502, 50],
     "model": "КФБ-5 А3 П",
     "heatCarrier": "steam",
@@ -10818,7 +10848,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_4-a3_p.html",
-    "specsTableValues": [3200, 85, 12.3, 49],
+    "specsTableValues": [
+      3200, 85, 12.3, 0.341, 0.01, 3, 29, 4, 32, 49, 14, 307, 118, 292, 53.1,
+      109.3
+    ],
     "sizeTableValues": [710, 756, 780, 845, 480, 526, 550, 415, 32],
     "model": "КФБ-4 А3 П",
     "heatCarrier": "steam",
@@ -10849,7 +10882,24 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_3-a3_p.html",
-    "specsTableValues": [2500, 68, 9.7, 44],
+    "specsTableValues": [
+      2500,
+      68,
+      9.7,
+      0.269,
+      0.008,
+      3,
+      29,
+      4,
+      32,
+      44,
+      14,
+      307,
+      93,
+      218,
+      "54.0",
+      111.1
+    ],
     "sizeTableValues": [560, 606, 630, 695, 480, 526, 550, 415, 32],
     "model": "КФБ-3 А3 П",
     "heatCarrier": "steam",
@@ -10880,7 +10930,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a3_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_2-a3_p.html",
-    "specsTableValues": [2000, 55, 7.7, 35],
+    "specsTableValues": [
+      2000, 55, 7.7, 0.202, 0.007, 3, 23, 4, 32, 35, 14, 307, 75, 177, 54.0,
+      111.1
+    ],
     "sizeTableValues": [560, 606, 630, 695, 360, 406, 430, 295, 32],
     "model": "КФБ-2 А3 П",
     "heatCarrier": "steam",
@@ -10911,7 +10964,24 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_14-a4_p.html",
-    "specsTableValues": [18000, 500, 81.4, 289],
+    "specsTableValues": [
+      18000,
+      500,
+      81.4,
+      1.577,
+      0.051,
+      4,
+      94,
+      6,
+      65,
+      289,
+      18,
+      405,
+      692,
+      1633,
+      43.6,
+      "93.0"
+    ],
     "sizeTableValues": [1460, 1506, 1530, 1595, 1080, 1126, 1150, 968, 65],
     "model": "КФБ-14 А4 П",
     "heatCarrier": "steam",
@@ -10942,7 +11012,24 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_13-a4_p.html",
-    "specsTableValues": [16000, 446, "73.0", 256],
+    "specsTableValues": [
+      16000,
+      446,
+      "73.0",
+      1.415,
+      0.047,
+      4,
+      94,
+      6,
+      65,
+      256,
+      18,
+      405,
+      623,
+      1468,
+      43.9,
+      93.6
+    ],
     "sizeTableValues": [1310, 1356, 1380, 1445, 1080, 1126, 1150, 968, 65],
     "model": "КФБ-13 А4 П",
     "heatCarrier": "steam",
@@ -10973,7 +11060,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_12-a4_p.html",
-    "specsTableValues": [13500, 380, 63.7, 220],
+    "specsTableValues": [
+      13500, 380, 63.7, 1.258, 0.041, 4, 82, 6, 65, 220, 18, 405, 526, 1216,
+      43.9, 93.6
+    ],
     "sizeTableValues": [1310, 1356, 1380, 1445, 960, 1006, 1030, 848, 65],
     "model": "КФБ-12 А4 П",
     "heatCarrier": "steam",
@@ -11004,7 +11094,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_11-a4_p.html",
-    "specsTableValues": [12000, 340, 56.5, 198],
+    "specsTableValues": [
+      12000, 340, 56.5, 1.114, 0.037, 4, 82, 6, 65, 198, 18, 405, 471, 1114,
+      44.3, 94.3
+    ],
     "sizeTableValues": [1160, 1206, 1230, 1295, 960, 1006, 1030, 848, 65],
     "model": "КФБ-11 А4 П",
     "heatCarrier": "steam",
@@ -11035,7 +11128,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_10-a4_p.html",
-    "specsTableValues": [10500, 298, 49.5, 173],
+    "specsTableValues": [
+      10500, 298, 49.5, 0.974, 0.032, 4, 70, 6, 65, 173, 18, 405, 412, 944,
+      44.3, 94.3
+    ],
     "sizeTableValues": [1160, 1206, 1230, 1295, 840, 886, 910, 728, 65],
     "model": "КФБ-10 А4 П",
     "heatCarrier": "steam",
@@ -11066,7 +11162,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_9-a4_p.html",
-    "specsTableValues": [9200, 261, 43.2, 154],
+    "specsTableValues": [
+      9200, 261, 43.2, 0.848, 0.03, 4, 70, 6, 65, 154, 18, 405, 361, 844, 44.7,
+      95.2
+    ],
     "sizeTableValues": [1010, 1056, 1080, 1145, 840, 886, 910, 728, 65],
     "model": "КФБ-9 А4 П",
     "heatCarrier": "steam",
@@ -11097,7 +11196,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_8-a4_p.html",
-    "specsTableValues": [8000, 226, 37.2, 133],
+    "specsTableValues": [
+      8000, 226, 37.2, 0.727, 0.025, 4, 62, 6, 50, 133, 18, 405, 316, 743, 44.7,
+      95.2
+    ],
     "sizeTableValues": [1010, 1056, 1080, 1145, 720, 766, 790, 622, 50],
     "model": "КФБ-8 А4 П",
     "heatCarrier": "steam",
@@ -11128,7 +11230,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_7-a4_p.html",
-    "specsTableValues": [6700, 193, 31.7, 116],
+    "specsTableValues": [
+      6700, 193, 31.7, 0.619, 0.023, 4, 62, 6, 50, 116, 18, 405, 267, 619, 45.1,
+      96.1
+    ],
     "sizeTableValues": [860, 906, 930, 995, 720, 766, 790, 622, 50],
     "model": "КФБ-7 А4 П",
     "heatCarrier": "steam",
@@ -11159,7 +11264,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_6-a4_p.html",
-    "specsTableValues": [5500, 155, 25.6, 96],
+    "specsTableValues": [
+      5500, 155, 25.6, 0.516, 0.019, 4, 50, 6, 50, 96, 18, 405, 216, 512, 45.1,
+      96.1
+    ],
     "sizeTableValues": [860, 906, 930, 995, 600, 646, 670, 502, 50],
     "model": "КФБ-6 А4 П",
     "heatCarrier": "steam",
@@ -11190,7 +11298,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_5-a4_p.html",
-    "specsTableValues": [4400, 127, 21.2, 81],
+    "specsTableValues": [
+      4400, 127, 21.2, 0.426, 0.017, 4, 50, 6, 50, 81, 18, 405, 175, 422, 45.7,
+      97.3
+    ],
     "sizeTableValues": [710, 756, 780, 845, 600, 646, 670, 502, 50],
     "model": "КФБ-5 А4 П",
     "heatCarrier": "steam",
@@ -11221,7 +11332,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_4-a4_p.html",
-    "specsTableValues": [3200, 95, 16.9, 65],
+    "specsTableValues": [
+      3200, 95, 16.9, 0.341, 0.013, 4, 40, 4, 32, 65, 18, 405, 131, 332, 45.7,
+      97.3
+    ],
     "sizeTableValues": [710, 756, 780, 845, 480, 526, 550, 415, 32],
     "model": "КФБ-4 А4 П",
     "heatCarrier": "steam",
@@ -11252,7 +11366,10 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_3-a4_p.html",
-    "specsTableValues": [2500, 75, 13.4, 53],
+    "specsTableValues": [
+      2500, 75, 13.4, 0.269, 0.012, 4, 30, 4, 32, 53, 18, 405, 104, 248, 46.3,
+      98.8
+    ],
     "sizeTableValues": [560, 606, 630, 695, 480, 526, 550, 415, 32],
     "model": "КФБ-3 А4 П",
     "heatCarrier": "steam",
@@ -11283,7 +11400,24 @@
     },
     "drawing": "/img/kalorifery/kfb-p/kalorifer_kfb_a4_p_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_2-a4_p.html",
-    "specsTableValues": [2000, 59, "10.0", 41],
+    "specsTableValues": [
+      2000,
+      59,
+      "10.0",
+      0.202,
+      0.009,
+      4,
+      30,
+      4,
+      32,
+      41,
+      18,
+      405,
+      82,
+      193,
+      46.3,
+      98.8
+    ],
     "sizeTableValues": [560, 606, 630, 695, 360, 406, 430, 295, 32],
     "model": "КФБ-2 А4 П",
     "heatCarrier": "steam",
