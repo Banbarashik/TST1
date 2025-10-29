@@ -195,79 +195,81 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
 
-      <section className="mb-4">
-        <ProductSubheader
-          text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
-        />
-        {/* TABLES */}
-        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
-          <table className="basis-full" style={{ border: 0 }}>
-            <tbody>
-              {tableHeaders.slice(0, 10).map((header, idx) => (
-                <tr key={idx}>
-                  <th
-                    className="py-2 text-left sm:py-1.5"
-                    style={{ border: 0 }}
-                  >
-                    {header}
-                  </th>
-                  <td style={{ border: 0 }} className="text-right">
-                    {product.specsTableValues[idx]}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <table className="basis-full" style={{ border: 0 }}>
-            <tbody>
-              {tableHeaders.slice(10).map((header, idx) => (
-                <tr key={idx}>
-                  <th
-                    className="py-2 pr-2.5 text-left sm:py-1.5"
-                    style={{ border: 0 }}
-                  >
-                    {header}
-                  </th>
-                  <td style={{ border: 0 }} className="text-right">
-                    {product.specsTableValues[idx + 10]}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {/* ROW OF IMAGES */}
-        {product.frontView && product.parts && (
-          <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
-            <div
-              className={`relative w-full`}
-              style={{
-                aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
-              }}
-            >
-              <Image
-                src={product.frontView.url}
-                alt={`Воздухонагреватель ${product.shortName}`}
-                title={product.name}
-                fill
-              />
-            </div>
-            <div
-              className={`relative w-full`}
-              style={{
-                aspectRatio: `${product.parts.width}/${product.parts.height}`,
-              }}
-            >
-              <Image
-                src={product.parts.url}
-                alt={`${product.name} чертеж`}
-                title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
-                fill
-              />
-            </div>
+      {isCalorifier && (
+        <section className="mb-4">
+          <ProductSubheader
+            text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
+          />
+          {/* TABLES */}
+          <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+            <table className="basis-full" style={{ border: 0 }}>
+              <tbody>
+                {tableHeaders.slice(0, 10).map((header, idx) => (
+                  <tr key={idx}>
+                    <th
+                      className="py-2 text-left sm:py-1.5"
+                      style={{ border: 0 }}
+                    >
+                      {header}
+                    </th>
+                    <td style={{ border: 0 }} className="text-right">
+                      {product.specsTableValues[idx]}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <table className="basis-full" style={{ border: 0 }}>
+              <tbody>
+                {tableHeaders.slice(10).map((header, idx) => (
+                  <tr key={idx}>
+                    <th
+                      className="py-2 pr-2.5 text-left sm:py-1.5"
+                      style={{ border: 0 }}
+                    >
+                      {header}
+                    </th>
+                    <td style={{ border: 0 }} className="text-right">
+                      {product.specsTableValues[idx + 10]}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        )}
-      </section>
+          {/* ROW OF IMAGES */}
+          {product.frontView && product.parts && (
+            <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
+              <div
+                className={`relative w-full`}
+                style={{
+                  aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+                }}
+              >
+                <Image
+                  src={product.frontView.url}
+                  alt={`Воздухонагреватель ${product.shortName}`}
+                  title={product.name}
+                  fill
+                />
+              </div>
+              <div
+                className={`relative w-full`}
+                style={{
+                  aspectRatio: `${product.parts.width}/${product.parts.height}`,
+                }}
+              >
+                <Image
+                  src={product.parts.url}
+                  alt={`${product.name} чертеж`}
+                  title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
+                  fill
+                />
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
@@ -304,8 +306,43 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </ProductParagraph>
 
       <ProductSubheader
-        text={`Габаритные размеры ${isCalorifier ? "калорифера" : "агрегата"} ${product.shortName}`}
+        text={
+          isCalorifier
+            ? `Габаритные размеры ${isCalorifier ? "калорифера" : "агрегата"} ${product.shortName}`
+            : `Технические характеристики агрегата ${product.shortName}`
+        }
       />
+      {isAgregat && (
+        <div className="mb-4 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <tbody>
+              <tr>
+                <td>
+                  Производительность по воздуху, м<sup>3</sup>/ч
+                </td>
+                <td>Производительность по теплу, кВт</td>
+                <td>
+                  {isCalorifier ? (
+                    <>
+                      Площадь поверхности теплообмена, м<sup>2</sup>
+                    </>
+                  ) : (
+                    "Габариты, мм (длина L - ширина B - высота H)"
+                  )}
+                </td>
+                <td>Масса, кг</td>
+              </tr>
+              <tr>
+                {product.specsTableValues.map((value, i) => (
+                  <td key={i} style={{ fontSize: "11pt" }}>
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
