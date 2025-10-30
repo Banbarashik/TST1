@@ -9252,12 +9252,12 @@
       "title": "Калорифер КПСк 2 12 паровой"
     },
     "frontView": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_front_view.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_front_view.png",
       "width": 1000,
       "height": 900
     },
     "parts": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_parts.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_parts.png",
       "width": 1000,
       "height": 900
     },
@@ -9607,12 +9607,12 @@
       "title": "Калорифер КПСк 3 12 паровой"
     },
     "frontView": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_front_view.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_front_view.png",
       "width": 1000,
       "height": 900
     },
     "parts": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_parts.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_parts.png",
       "width": 1000,
       "height": 900
     },
@@ -12350,14 +12350,22 @@
         "airPower": 2800,
         "heatPower": 49,
         "price": 60542,
-        "specsTableValues": ["АВО 3-55-01", 2800, 49, "840 х 710 х 620", 91],
-        "componentsTableValues": [
-          "АВО 3-55-01",
-          "ВО-06-300-4 (0.25 кВт / 1500 об. мин.)",
-          "ТВВ 4 (АВО 3-55)",
+        "specsTableValues": [
+          2800,
+          49,
+          "ТВВ АВО 3-55",
+          "ВО 6-300-4",
+          "0.25/1500",
+          91,
+          11.2,
           12.5,
-          32
-        ]
+          32,
+          0.7,
+          2.8,
+          0.2,
+          2.0
+        ],
+        "sizeTableValues": [840, 710, 620]
       },
       {
         "id": "avo-tvv-4-95-01",
@@ -12366,14 +12374,22 @@
         "airPower": 5000,
         "heatPower": 92,
         "price": 82528,
-        "specsTableValues": ["АВО 4-95-01", 5000, 92, "865 х 920 х 830", 144],
-        "componentsTableValues": [
-          "АВО 4-95-01",
-          "ВО-06-300-5 (0.37 кВт / 1500 об. мин.)",
-          "ТВВ 4 (АВО 4-95)",
-          "25.3",
-          32
-        ]
+        "specsTableValues": [
+          5000,
+          92,
+          "ТВВ АВО 4-95",
+          "ВО 6-300-5",
+          "0.37/1500",
+          144,
+          19.6,
+          25.3,
+          32,
+          1.4,
+          5.3,
+          0.5,
+          6.4
+        ],
+        "sizeTableValues": [865, 920, 830]
       },
       {
         "id": "avo-tvv-7-165-01",
@@ -12383,19 +12399,21 @@
         "heatPower": 170,
         "price": 108623,
         "specsTableValues": [
-          "АВО 7-165-01",
           10500,
           170,
-          "1025 х 1050 х 1000",
-          194
-        ],
-        "componentsTableValues": [
-          "АВО 7-165-01",
-          "ВО-06-300-6.3 (1.1 кВт / 1500 об. мин.)",
-          "ТВВ 4 (АВО 7-165)",
+          "ТВВ АВО 7-165",
+          "ВО 6-300-6.3",
+          "1.1/1500",
+          194,
+          25.6,
           34.9,
-          32
-        ]
+          32,
+          2.5,
+          9.7,
+          1.5,
+          20.4
+        ],
+        "sizeTableValues": [1025, 1050, 1000]
       }
     ]
   },
