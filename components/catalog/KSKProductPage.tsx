@@ -227,101 +227,99 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       </div>
 
-      {isCalorifier && (
-        <section className="mb-4">
-          <ProductSubheader
-            text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
-          />
-          {/* TABLES */}
-          <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
-            <table
-              className="basis-full"
-              style={{ border: "1px solid rgb(229, 231, 235)" }}
+      <section className="mb-4">
+        <ProductSubheader
+          text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
+        />
+        {/* TABLES */}
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier]
+                .slice(0, product.heatCarrier === "water" ? 10 : 8)
+                .map((header, idx) => (
+                  <tr key={idx}>
+                    <th
+                      className="py-2 pl-1 text-left sm:py-1.5"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                    >
+                      {header}
+                    </th>
+                    <td
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="pr-1 text-right"
+                    >
+                      {product.specsTableValues[idx]}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier]
+                .slice(product.heatCarrier === "water" ? 10 : 8)
+                .map((header, idx) => (
+                  <tr key={idx}>
+                    <th
+                      className="py-2 pl-1 text-left sm:py-1.5"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                    >
+                      {header}
+                    </th>
+                    <td
+                      className="pr-1 text-right"
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                    >
+                      {
+                        product.specsTableValues[
+                          product.heatCarrier === "water" ? idx + 10 : idx + 8
+                        ]
+                      }
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        {/* ROW OF IMAGES */}
+        {product.frontView && product.parts && (
+          <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
+            <div
+              className={`relative w-full`}
+              style={{
+                aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+              }}
             >
-              <tbody>
-                {tableHeaders[product.heatCarrier]
-                  .slice(0, product.heatCarrier === "water" ? 10 : 8)
-                  .map((header, idx) => (
-                    <tr key={idx}>
-                      <th
-                        className="py-2 pl-1 text-left sm:py-1.5"
-                        style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      >
-                        {header}
-                      </th>
-                      <td
-                        style={{ border: "1px solid rgb(229, 231, 235)" }}
-                        className="pr-1 text-right"
-                      >
-                        {product.specsTableValues[idx]}
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-            <table
-              className="basis-full"
-              style={{ border: "1px solid rgb(229, 231, 235)" }}
-            >
-              <tbody>
-                {tableHeaders[product.heatCarrier]
-                  .slice(product.heatCarrier === "water" ? 10 : 8)
-                  .map((header, idx) => (
-                    <tr key={idx}>
-                      <th
-                        className="py-2 pl-1 text-left sm:py-1.5"
-                        style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      >
-                        {header}
-                      </th>
-                      <td
-                        className="pr-1 text-right"
-                        style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      >
-                        {
-                          product.specsTableValues[
-                            product.heatCarrier === "water" ? idx + 10 : idx + 8
-                          ]
-                        }
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          </div>
-          {/* ROW OF IMAGES */}
-          {product.frontView && product.parts && (
-            <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
-              <div
-                className={`relative w-full`}
-                style={{
-                  aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
-                }}
-              >
-                <Image
-                  src={product.frontView.url}
-                  alt={`Воздухонагреватель ${product.shortName}`}
-                  title={product.name}
-                  fill
-                />
-              </div>
-              <div
-                className={`relative w-full`}
-                style={{
-                  aspectRatio: `${product.parts.width}/${product.parts.height}`,
-                }}
-              >
-                <Image
-                  src={product.parts.url}
-                  alt={`${product.name} чертеж`}
-                  title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
-                  fill
-                />
-              </div>
+              <Image
+                src={product.frontView.url}
+                alt={`Воздухонагреватель ${product.shortName}`}
+                title={product.name}
+                fill
+              />
             </div>
-          )}
-        </section>
-      )}
+            <div
+              className={`relative w-full`}
+              style={{
+                aspectRatio: `${product.parts.width}/${product.parts.height}`,
+              }}
+            >
+              <Image
+                src={product.parts.url}
+                alt={`${product.name} чертеж`}
+                title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
+                fill
+              />
+            </div>
+          </div>
+        )}
+      </section>
 
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} ${isCalorifier ? "калорифера" : "агрегата"} ${isCalorifier ? product.shortName : product.model}`}
@@ -358,43 +356,8 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       </ProductParagraph>
 
       <ProductSubheader
-        text={
-          isCalorifier
-            ? `Габаритные размеры ${isCalorifier ? "калорифера" : "агрегата"} ${product.shortName}`
-            : `Технические характеристики агрегата ${product.shortName}`
-        }
+        text={`Габаритные размеры ${isCalorifier ? "калорифера" : "агрегата"} ${product.shortName}`}
       />
-      {isAgregat && (
-        <div className="mb-4 w-full overflow-x-auto">
-          <table className="w-full min-w-231 xl:min-w-auto">
-            <tbody>
-              <tr>
-                <td>
-                  Производительность по воздуху, м<sup>3</sup>/ч
-                </td>
-                <td>Производительность по теплу, кВт</td>
-                <td>
-                  {isCalorifier ? (
-                    <>
-                      Площадь поверхности теплообмена, м<sup>2</sup>
-                    </>
-                  ) : (
-                    "Габариты, мм (длина L - ширина B - высота H)"
-                  )}
-                </td>
-                <td>Масса, кг</td>
-              </tr>
-              <tr>
-                {product.specsTableValues.map((value, i) => (
-                  <td key={i} style={{ fontSize: "11pt" }}>
-                    {value}
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      )}
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
@@ -407,62 +370,44 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         <table className="w-full min-w-231 xl:min-w-auto">
           <thead>
             <tr>
-              {isCalorifier ? (
-                <th
-                  colSpan={9}
-                  className="pl-1 text-left"
-                  style={{ fontSize: "11pt" }}
-                >
-                  Габаритные и присоединительные размеры калорифера{" "}
-                  {product.shortName} {heatCarrierAdj?.gen}, мм
-                </th>
-              ) : (
-                <>
-                  <th>Комплектуемый вентилятор</th>
-                  <th colSpan={2}>Двигатель, кВт/об. мин.</th>
-                  <th>Комплектуемый калорифер</th>
-                  <th>
-                    Площадь поверхности теплообмена, м<sup>2</sup>
-                  </th>
-                  <th>Ду, мм</th>
-                </>
-              )}
+              <th
+                colSpan={9}
+                className="pl-1 text-left"
+                style={{ fontSize: "11pt" }}
+              >
+                Габаритные и присоединительные размеры калорифера{" "}
+                {product.shortName} {heatCarrierAdj?.gen}, мм
+              </th>
             </tr>
           </thead>
           <tbody>
-            {isCalorifier && (
-              <tr>
-                {product.heatCarrier === "water" ? (
-                  <>
-                    <td>L</td>
-                    <td>L 1</td>
-                    <td>L 2</td>
-                    <td>L 3</td>
-                    <td>H</td>
-                    <td>H 1</td>
-                    <td>H 2</td>
-                  </>
-                ) : (
-                  <>
-                    <td>H</td>
-                    <td>H 1</td>
-                    <td>H 2</td>
-                    <td>H 3</td>
-                    <td>B</td>
-                    <td>B 1</td>
-                    <td>B 2</td>
-                  </>
-                )}
-                <td>C</td>
-                <td>dy</td>
-              </tr>
-            )}
             <tr>
-              {[
-                ...(isCalorifier
-                  ? product.sizeTableValues
-                  : product.componentsTableValues),
-              ].map((value, i) => (
+              {product.heatCarrier === "water" ? (
+                <>
+                  <td>L</td>
+                  <td>L 1</td>
+                  <td>L 2</td>
+                  <td>L 3</td>
+                  <td>H</td>
+                  <td>H 1</td>
+                  <td>H 2</td>
+                </>
+              ) : (
+                <>
+                  <td>H</td>
+                  <td>H 1</td>
+                  <td>H 2</td>
+                  <td>H 3</td>
+                  <td>B</td>
+                  <td>B 1</td>
+                  <td>B 2</td>
+                </>
+              )}
+              <td>C</td>
+              <td>dy</td>
+            </tr>
+            <tr>
+              {product.sizeTableValues.map((value, i) => (
                 <td key={i} style={{ fontSize: "11pt" }}>
                   {value}
                 </td>
