@@ -17,42 +17,74 @@ const tableEquipment: Record<string, string> = {
   steam: "пароконденсатного",
 };
 
-const tableHeaders = [
-  <>
-    Производительность по воздуху, м<sup>3</sup>/час
-  </>,
-  "Тепловая мощность калорифера, кВт",
-  <>
-    Площадь поверхности теплообмена, м<sup>2</sup>
-  </>,
-  <>
-    Площадь фронтального сечения, м<sup>2</sup>
-  </>,
-  "Объем воздухонагревателя, л",
-  "Количество рядов теплообменника",
-  "Количество теплообменных трубок",
-  "Число ходов по теплоносителю",
-  "Диаметр патрубков, Ду мм",
-  "Масса, кг",
-  "Аэродинамическое сопротивление min, Па",
-  "Аэродинамическое сопротивление max, Па",
-  "Гидравлическое сопротивление min, кПа",
-  "Гидравлическое сопротивление max, кПа",
-  "Скорость теплоносителя min, м/сек",
-  "Скорость теплоносителя max, м/сек",
-  <>
-    Расход теплоносителя min, м<sup>3</sup>/час
-  </>,
-  <>
-    Расход теплоносителя max, м<sup>3</sup>/час
-  </>,
-  <>
-    Коэффициент теплопередачи min, Вт/(м<sup>2</sup>•°С)
-  </>,
-  <>
-    Коэффициент теплопередачи max, Вт/(м<sup>2</sup>•°С)
-  </>,
-];
+const tableHeaders = {
+  water: [
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность калорифера, кВт",
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    <>
+      Площадь фронтального сечения, м<sup>2</sup>
+    </>,
+    "Объем воздухонагревателя, л",
+    "Количество рядов теплообменника",
+    "Количество теплообменных трубок",
+    "Число ходов по теплоносителю",
+    "Диаметр патрубков, Ду мм",
+    "Масса, кг",
+    "Аэродинамическое сопротивление min, Па",
+    "Аэродинамическое сопротивление max, Па",
+    "Гидравлическое сопротивление min, кПа",
+    "Гидравлическое сопротивление max, кПа",
+    "Скорость теплоносителя min, м/сек",
+    "Скорость теплоносителя max, м/сек",
+    <>
+      Расход теплоносителя min, м<sup>3</sup>/час
+    </>,
+    <>
+      Расход теплоносителя max, м<sup>3</sup>/час
+    </>,
+    <>
+      Коэффициент теплопередачи min, Вт/(м<sup>2</sup>•°С)
+    </>,
+    <>
+      Коэффициент теплопередачи max, Вт/(м<sup>2</sup>•°С)
+    </>,
+  ],
+  steam: [
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность калорифера, кВт",
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    <>
+      Площадь фронтального сечения, м<sup>2</sup>
+    </>,
+    <>
+      Емкость воздухонагревателя, м<sup>3</sup>
+    </>,
+    "Количество рядов теплообменника",
+    "Количество теплообменных трубок",
+    "Число ходов по теплоносителю",
+    "Диаметр патрубков, Ду мм",
+    "Масса, кг",
+    "Аэродинамическое сопротивление min, Па",
+    "Аэродинамическое сопротивление max, Па",
+    "Расход теплоносителя min, кг/час",
+    "Расход теплоносителя max, кг/час",
+    <>
+      Коэффициент теплопередачи min, Вт/(м<sup>2</sup>•°С)
+    </>,
+    <>
+      Коэффициент теплопередачи max, Вт/(м<sup>2</sup>•°С)
+    </>,
+  ],
+};
 
 export default function KSKProductPage({ product }: { product: KSKProduct }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -207,22 +239,24 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               style={{ border: "1px solid rgb(229, 231, 235)" }}
             >
               <tbody>
-                {tableHeaders.slice(0, 10).map((header, idx) => (
-                  <tr key={idx}>
-                    <th
-                      className="py-2 pl-1 text-left sm:py-1.5"
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                    >
-                      {header}
-                    </th>
-                    <td
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="pr-1 text-right"
-                    >
-                      {product.specsTableValues[idx]}
-                    </td>
-                  </tr>
-                ))}
+                {tableHeaders[product.heatCarrier]
+                  .slice(0, product.heatCarrier === "water" ? 10 : 8)
+                  .map((header, idx) => (
+                    <tr key={idx}>
+                      <th
+                        className="py-2 pl-1 text-left sm:py-1.5"
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      >
+                        {header}
+                      </th>
+                      <td
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="pr-1 text-right"
+                      >
+                        {product.specsTableValues[idx]}
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
             <table
@@ -230,22 +264,28 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               style={{ border: "1px solid rgb(229, 231, 235)" }}
             >
               <tbody>
-                {tableHeaders.slice(10).map((header, idx) => (
-                  <tr key={idx}>
-                    <th
-                      className="py-2 pl-1 text-left sm:py-1.5"
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                    >
-                      {header}
-                    </th>
-                    <td
-                      className="pr-1 text-right"
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                    >
-                      {product.specsTableValues[idx + 10]}
-                    </td>
-                  </tr>
-                ))}
+                {tableHeaders[product.heatCarrier]
+                  .slice(product.heatCarrier === "water" ? 10 : 8)
+                  .map((header, idx) => (
+                    <tr key={idx}>
+                      <th
+                        className="py-2 pl-1 text-left sm:py-1.5"
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      >
+                        {header}
+                      </th>
+                      <td
+                        className="pr-1 text-right"
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      >
+                        {
+                          product.specsTableValues[
+                            product.heatCarrier === "water" ? idx + 10 : idx + 8
+                          ]
+                        }
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
