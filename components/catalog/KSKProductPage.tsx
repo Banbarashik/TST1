@@ -88,7 +88,9 @@ const kaloriferyTableHeaders = {
 
 const ao2TableHeaders = {
   water: [
-    "Производительность по воздуху",
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
     "Тепловая мощность агрегата, кВт",
     "Установленный водяной калорифер",
     "Установленный вентилятор",
@@ -278,7 +280,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
           text={`Технические характеристики ${isCalorifier ? `калорифера ${product.shortName} ${heatCarrierAdj?.gen}` : `агрегата ${product.model}`}`}
         />
         {/* TABLES */}
-        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-8">
           <table
             className="basis-full"
             style={{ border: "1px solid rgb(229, 231, 235)" }}
@@ -308,7 +310,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                     </th>
                     <td
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className={`${isCalorifier ? "w-14" : "w-22"} px-1 text-right`}
+                      className={`${isCalorifier ? "w-14" : "w-26"} px-1 text-right`}
                     >
                       {product.specsTableValues[idx]}
                     </td>
@@ -344,7 +346,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                     </th>
                     <td
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className={`${isCalorifier ? "w-14" : "w-22"} px-1 text-right`}
+                      className={`${isCalorifier ? "w-14" : "w-26"} px-1 text-right`}
                     >
                       {
                         product.specsTableValues[
