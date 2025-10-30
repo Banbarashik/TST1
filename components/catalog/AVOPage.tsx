@@ -120,26 +120,6 @@ export default function AVOPage({ product }) {
       <ProductSubheader
         text={`Технические характеристики агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
       />
-      <div className="w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.specsTableValues}
-          headers={
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>
-                  Производительность по воздуху, м<sup>3</sup>/ч
-                </th>
-                <th>Производительность по теплу, кВт</th>
-                <th>Габариты, мм (длина - ширина - высота)</th>
-                <th>Масса, кг</th>
-              </tr>
-            </thead>
-          }
-        />
-      </div>
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
@@ -148,26 +128,6 @@ export default function AVOPage({ product }) {
         height={1}
         className="mb-4"
       />
-      <div className="mb-10 w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.componentsTableValues}
-          headers={
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>Комплектуемый осевой вентилятор</th>
-                <th>Комплектуемый калорифер</th>
-                <th>
-                  Площадь поверхности нагрева, м<sup>2</sup>
-                </th>
-                <th>dy, мм</th>
-              </tr>
-            </thead>
-          }
-        />
-      </div>
 
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
