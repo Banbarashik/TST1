@@ -435,56 +435,81 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         height={1}
         className="mb-4"
       />
-      <div className="mb-10 w-full overflow-x-auto">
-        <table className="w-full min-w-231 xl:min-w-auto">
-          <thead>
-            <tr>
-              <th
-                colSpan={9}
-                className="pl-1 text-left"
-                style={{ fontSize: "11pt" }}
-              >
-                Габаритные и присоединительные размеры калорифера{" "}
-                {product.shortName} {heatCarrierAdj?.gen}, мм
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              {product.heatCarrier === "water" ? (
-                <>
-                  <td>L</td>
-                  <td>L 1</td>
-                  <td>L 2</td>
-                  <td>L 3</td>
-                  <td>H</td>
-                  <td>H 1</td>
-                  <td>H 2</td>
-                </>
-              ) : (
-                <>
-                  <td>H</td>
-                  <td>H 1</td>
-                  <td>H 2</td>
-                  <td>H 3</td>
-                  <td>B</td>
-                  <td>B 1</td>
-                  <td>B 2</td>
-                </>
-              )}
-              <td>C</td>
-              <td>dy</td>
-            </tr>
-            <tr>
-              {product.sizeTableValues.map((value, i) => (
-                <td key={i} style={{ fontSize: "11pt" }}>
-                  {value}
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      {isCalorifier && (
+        <div className="mb-10 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th
+                  colSpan={9}
+                  className="pl-1 text-left"
+                  style={{ fontSize: "11pt" }}
+                >
+                  Габаритные и присоединительные размеры калорифера{" "}
+                  {product.shortName} {heatCarrierAdj?.gen}, мм
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {product.heatCarrier === "water" ? (
+                  <>
+                    <td>L</td>
+                    <td>L 1</td>
+                    <td>L 2</td>
+                    <td>L 3</td>
+                    <td>H</td>
+                    <td>H 1</td>
+                    <td>H 2</td>
+                  </>
+                ) : (
+                  <>
+                    <td>H</td>
+                    <td>H 1</td>
+                    <td>H 2</td>
+                    <td>H 3</td>
+                    <td>B</td>
+                    <td>B 1</td>
+                    <td>B 2</td>
+                  </>
+                )}
+                <td>C</td>
+                <td>dy</td>
+              </tr>
+              <tr>
+                {product.sizeTableValues.map((value, i) => (
+                  <td key={i} style={{ fontSize: "11pt" }}>
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
+      {isAgregat && (
+        <div className="mb-10 w-full overflow-x-auto">
+          <table className="w-full min-w-231 xl:min-w-auto">
+            <thead>
+              <tr>
+                <th colSpan={3}>Габаритные размеры, мм</th>
+              </tr>
+              <tr>
+                <th>L</th>
+                <th>B</th>
+                <th>H</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {product.sizeTableValues.map((v, idx) => (
+                  <td key={idx}>{v}</td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
   );
