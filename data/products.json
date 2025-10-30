@@ -9252,12 +9252,12 @@
       "title": "Калорифер КПСк 2 12 паровой"
     },
     "frontView": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_front_view.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_front_view.png",
       "width": 1000,
       "height": 900
     },
     "parts": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_parts.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-12_parts.png",
       "width": 1000,
       "height": 900
     },
@@ -9607,12 +9607,12 @@
       "title": "Калорифер КПСк 3 12 паровой"
     },
     "frontView": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_front_view.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_front_view.png",
       "width": 1000,
       "height": 900
     },
     "parts": {
-      "img": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_parts.png",
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-12_parts.png",
       "width": 1000,
       "height": 900
     },
