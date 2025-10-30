@@ -502,9 +502,9 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
               <th colSpan={3}>Габаритные размеры, мм</th>
             </tr>
             <tr>
-              <th>L</th>
-              <th>B</th>
-              <th>H</th>
+              <th className="w-1/3">L</th>
+              <th className="w-1/3">B</th>
+              <th className="w-1/3">H</th>
             </tr>
           </thead>
           <tbody>
