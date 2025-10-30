@@ -97,7 +97,7 @@ const ao2TableHeaders = {
     "Масса отопительного агрегата, кг",
     "Объем комплектуемого калорифера, л",
     <>
-      "Площадь поверхности теплообмена, м<sup>2</sup>"
+      Площадь поверхности теплообмена, м<sup>2</sup>
     </>,
     "Количество теплообменных трубок",
     <>
@@ -494,27 +494,25 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         </div>
       )}
       {isAgregat && (
-        <div className="mb-10 w-full overflow-x-auto">
-          <table className="w-full min-w-231 xl:min-w-auto">
-            <thead>
-              <tr>
-                <th colSpan={3}>Габаритные размеры, мм</th>
-              </tr>
-              <tr>
-                <th>L</th>
-                <th>B</th>
-                <th>H</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {product.sizeTableValues.map((v, idx) => (
-                  <td key={idx}>{v}</td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table className="mb-10 w-full">
+          <thead>
+            <tr>
+              <th colSpan={3}>Габаритные размеры, мм</th>
+            </tr>
+            <tr>
+              <th>L</th>
+              <th>B</th>
+              <th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {product.sizeTableValues.map((v, idx) => (
+                <td key={idx}>{v}</td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
       )}
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
