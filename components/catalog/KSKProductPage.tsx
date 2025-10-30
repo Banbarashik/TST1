@@ -301,14 +301,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                 .map((header, idx) => (
                   <tr key={idx}>
                     <th
-                      className="py-2 pl-1 text-left sm:py-1.5"
+                      className="px-1 py-2 text-left sm:py-1.5"
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
                     >
                       {header}
                     </th>
                     <td
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="pr-1 text-right"
+                      className={`${isCalorifier ? "w-14" : "w-22"} px-1 text-right`}
                     >
                       {product.specsTableValues[idx]}
                     </td>
@@ -337,14 +337,14 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                 .map((header, idx) => (
                   <tr key={idx}>
                     <th
-                      className="py-2 pl-1 text-left sm:py-1.5"
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="px-1 py-2 text-left sm:py-1.5"
                     >
                       {header}
                     </th>
                     <td
-                      className="pr-1 text-right"
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className={`${isCalorifier ? "w-14" : "w-22"} px-1 text-right`}
                     >
                       {
                         product.specsTableValues[
