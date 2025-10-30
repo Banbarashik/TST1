@@ -118,7 +118,7 @@ export default function AVOPage({ product }) {
       </ProductParagraph>
 
       <ProductSubheader
-        text={`Технические характеристики агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
+        text={`Габаритные размеры агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
       />
       <Image
         src={product.drawing}
@@ -128,6 +128,22 @@ export default function AVOPage({ product }) {
         height={1}
         className="mb-4"
       />
+      <table className="w-full">
+        <thead>
+          <tr>
+            <th colSpan={4}>Габаритные размеры, мм</th>
+          </tr>
+          <tr>
+            <th>Агрегат</th>
+            <th>L</th>
+            <th>B</th>
+            <th>H</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>{["АВО 3-55", "АВО 4-95", "АВО 7-165"]}</tr>
+        </tbody>
+      </table>
 
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
