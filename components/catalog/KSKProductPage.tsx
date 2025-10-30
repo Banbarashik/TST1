@@ -107,7 +107,7 @@ const ao2TableHeaders = {
     "Гидравлическое сопротивление min, кПа",
     "Гидравлическое сопротивление max, кПа",
   ],
-  stream: [
+  steam: [
     <>
       Производительность по воздуху, м<sup>3</sup>/час
     </>,
@@ -278,8 +278,20 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             style={{ border: "1px solid rgb(229, 231, 235)" }}
           >
             <tbody>
-              {tableHeaders[product.heatCarrier]
-                .slice(0, product.heatCarrier === "water" ? 10 : 8)
+              {(isCalorifier
+                ? kaloriferyTableHeaders[product.heatCarrier]
+                : ao2TableHeaders[product.heatCarrier]
+              )
+                .slice(
+                  0,
+                  isCalorifier
+                    ? product.heatCarrier === "water"
+                      ? 10
+                      : 8
+                    : product.heatCarrier === "water"
+                      ? 7
+                      : 6,
+                )
                 .map((header, idx) => (
                   <tr key={idx}>
                     <th
@@ -303,8 +315,19 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             style={{ border: "1px solid rgb(229, 231, 235)" }}
           >
             <tbody>
-              {tableHeaders[product.heatCarrier]
-                .slice(product.heatCarrier === "water" ? 10 : 8)
+              {(isCalorifier
+                ? kaloriferyTableHeaders[product.heatCarrier]
+                : ao2TableHeaders[product.heatCarrier]
+              )
+                .slice(
+                  isCalorifier
+                    ? product.heatCarrier === "water"
+                      ? 10
+                      : 8
+                    : product.heatCarrier === "water"
+                      ? 7
+                      : 6,
+                )
                 .map((header, idx) => (
                   <tr key={idx}>
                     <th
@@ -319,7 +342,13 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                     >
                       {
                         product.specsTableValues[
-                          product.heatCarrier === "water" ? idx + 10 : idx + 8
+                          isCalorifier
+                            ? product.heatCarrier === "water"
+                              ? idx + 10
+                              : idx + 8
+                            : product.heatCarrier === "water"
+                              ? idx + 7
+                              : idx + 6
                         ]
                       }
                     </td>
