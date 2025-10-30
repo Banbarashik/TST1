@@ -11576,16 +11576,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [3000, 35, "800 x 710 x 620", 77],
-    "componentsTableValues": [
-      "ВО-06-300-4",
-      0.25,
-      1500,
-      "КСк3 (АО 2-3)",
+    "specsTableValues": [
+      3000,
+      34,
+      "КСк3 АО2-3",
+      "ВО 6-300-4",
+      "0.25/1500",
+      32,
+      77,
+      "4.0",
       12.9,
-      32
+      35,
+      0.4,
+      2.2,
+      0.3,
+      8.4
     ],
-    "tableWithTabs": "/legacy/table-ao_2-3_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-3_v3.html",
+    "sizeTableValues": [800, 710, 620]
   },
   {
     "id": "agregat-ao2-4-ksk3-vozdushniy-vodyanoy",
@@ -11608,16 +11616,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [4000, 42, "800 x 750 x 665", 83],
-    "componentsTableValues": [
-      "ВО-06-300-4",
-      0.25,
-      1500,
-      "КСк3 (АО 2-4)",
+    "specsTableValues": [
+      4000,
+      41,
+      "КСк3 АО2-4",
+      "ВО 6-300-4",
+      "0.25/1500",
+      32,
+      83,
+      4.5,
       15.2,
-      32
+      38,
+      0.5,
+      2.6,
+      0.5,
+      11.5
     ],
-    "tableWithTabs": "/legacy/table-ao_2-4_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-4_v3.html",
+    "sizeTableValues": [800, 750, 665]
   },
   {
     "id": "agregat-ao2-5-ksk3-vozdushniy-vodyanoy",
@@ -11640,16 +11656,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [5000, 63, "825 x 835 x 750", 98],
-    "componentsTableValues": [
-      "ВО-06-300-5",
-      0.37,
-      1500,
-      "КСк3 (АО 2-5)",
+    "specsTableValues": [
+      5000,
+      62,
+      "КСк3 АО2-5",
+      "ВО 6-300-5",
+      "0.37/1500",
+      32,
+      98,
+      5.7,
       20.3,
-      32
+      44,
+      0.7,
+      3.4,
+      0.9,
+      16.9
     ],
-    "tableWithTabs": "/legacy/table-ao_2-5_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-5_v3.html",
+    "sizeTableValues": [825, 835, 750]
   },
   {
     "id": "agregat-ao2-6.3-ksk3-vozdushniy-vodyanoy",
@@ -11672,16 +11696,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [6300, 82, "985 x 920 x 865", 128],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      0.37,
-      1000,
-      "КСк3 (АО 2-6.3)",
+    "specsTableValues": [
+      6300,
+      81,
+      "КСк3 АО2-6.3",
+      "ВО 6-300-6.3",
+      "0.37/1000",
+      32,
+      128,
+      7.1,
       26.1,
-      32
+      50,
+      0.9,
+      3.8,
+      1.3,
+      19.5
     ],
-    "tableWithTabs": "/legacy/table-ao_2-6.3_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-6.3_v3.html",
+    "sizeTableValues": [985, 920, 865]
   },
   {
     "id": "agregat-ao2-10-ksk3-vozdushniy-vodyanoy",
@@ -11704,16 +11736,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [10000, 115, "985 x 960 x 905", 139],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      1.1,
-      1500,
-      "КСк3 (АО 2-10)",
+    "specsTableValues": [
+      10000,
+      113,
+      "КСк3 АО2-10",
+      "ВО 6-300-6.3",
+      "1.1/1500",
+      32,
+      139,
+      7.8,
       29.3,
-      32
+      53,
+      1.3,
+      4.5,
+      2.4,
+      26.8
     ],
-    "tableWithTabs": "/legacy/table-ao_2-10_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-10_v3.html",
+    "sizeTableValues": [985, 960, 905]
   },
   {
     "id": "agregat-ao2-15-ksk3-vozdushniy-vodyanoy",
@@ -11736,16 +11776,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [15000, 156, "985 x 1085 x 1040", 166],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      1.1,
-      1500,
-      "КСк3 (АО 2-15)",
+    "specsTableValues": [
+      15000,
+      153,
+      "КСк3 АО2-15",
+      "ВО 6-300-6.3",
+      "1.1/1500",
+      40,
+      166,
+      10.1,
       39.9,
-      40
+      62,
+      1.7,
+      4.9,
+      3.5,
+      25.5
     ],
-    "tableWithTabs": "/legacy/table-ao_2-15_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-15_v3.html",
+    "sizeTableValues": [985, 1085, 1040]
   },
   {
     "id": "agregat-ao2-20-ksk3-vozdushniy-vodyanoy",
@@ -11768,16 +11816,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [20000, 225, "1075 x 1210 x 1170", 240],
-    "componentsTableValues": [
-      "ВО-06-300-8",
-      3,
-      1500,
-      "КСк3 (АО 2-20)",
+    "specsTableValues": [
+      20000,
+      221,
+      "КСк3 АО2-20",
+      "ВО 6-300-8",
+      "3/1500",
+      50,
+      240,
+      12.8,
       52.2,
-      50
+      71,
+      2.5,
+      5.6,
+      6.7,
+      31.1
     ],
-    "tableWithTabs": "/legacy/table-ao_2-20_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-20_v3.html",
+    "sizeTableValues": [1075, 1210, 1170]
   },
   {
     "id": "agregat-ao2-25-ksk3-vozdushniy-vodyanoy",
@@ -11800,16 +11856,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [25000, 281, "1075 x 1335 x 1295", 269],
-    "componentsTableValues": [
-      "ВО-06-300-8",
-      3,
-      1500,
-      "КСк3 (АО 2-25)",
+    "specsTableValues": [
+      25000,
+      275,
+      "КСк3 АО2-25",
+      "ВО 6-300-8",
+      "3/1500",
+      50,
+      269,
+      15.7,
       66.2,
-      50
+      80,
+      3.1,
+      6.8,
+      9.8,
+      39.2
     ],
-    "tableWithTabs": "/legacy/table-ao_2-25_v3.html"
+    "tableWithTabs": "/legacy/table-ao_2-25_v3.html",
+    "sizeTableValues": [1075, 1335, 1295]
   },
   {
     "id": "agregat-ao2-3-ksk4-vozdushniy-vodyanoy",
@@ -11832,16 +11896,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [3000, 40, "800 x 710 x 620", 83],
-    "componentsTableValues": [
-      "ВО-06-300-4",
-      0.25,
-      1500,
-      "КСк4 (АО 2-3)",
+    "specsTableValues": [
+      3000,
+      40,
+      "КСк4 АО2-3",
+      "ВО 6-300-4",
+      "0.25/1500",
+      32,
+      83,
+      5.3,
       "17.0",
-      32
+      46,
+      0.5,
+      "3.0",
+      0.3,
+      9.9
     ],
-    "tableWithTabs": "/legacy/table-ao_2-3_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-3_v4.html",
+    "sizeTableValues": [800, 710, 620]
   },
   {
     "id": "agregat-ao2-4-ksk4-vozdushniy-vodyanoy",
@@ -11864,16 +11936,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [4000, 49, "800 x 750 x 665", 90],
-    "componentsTableValues": [
-      "ВО-06-300-4",
-      0.25,
-      1500,
-      "КСк4 (АО 2-4)",
+    "specsTableValues": [
+      4000,
+      48,
+      "КСк4 АО2-4",
+      "ВО 6-300-4",
+      "0.25/1500",
+      32,
+      90,
+      6.1,
       "20.0",
-      32
+      50,
+      0.6,
+      3.7,
+      0.4,
+      13.6
     ],
-    "tableWithTabs": "/legacy/table-ao_2-4_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-4_v4.html",
+    "sizeTableValues": [800, 750, 665]
   },
   {
     "id": "agregat-ao2-5-ksk4-vozdushniy-vodyanoy",
@@ -11896,16 +11976,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [5000, 74, "825 x 835 x 750", 108],
-    "componentsTableValues": [
-      "ВО-06-300-5",
-      0.37,
-      1500,
-      "КСк4 (АО 2-5)",
+    "specsTableValues": [
+      5000,
+      72,
+      "КСк4 АО2-5",
+      "ВО 6-300-5",
+      "0.37/1500",
+      32,
+      108,
+      7.7,
       26.7,
-      32
+      58,
+      0.8,
+      4.5,
+      0.7,
+      17.2
     ],
-    "tableWithTabs": "/legacy/table-ao_2-5_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-5_v4.html",
+    "sizeTableValues": [825, 835, 750]
   },
   {
     "id": "agregat-ao2-6.3-ksk4-vozdushniy-vodyanoy",
@@ -11928,16 +12016,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [6300, 97, "985 x 920 x 865", 142],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      0.37,
-      1000,
-      "КСк4 (АО 2-6.3)",
+    "specsTableValues": [
+      6300,
+      95,
+      "КСк4 АО2-6.3",
+      "ВО 6-300-6.3",
+      "0.37/1000",
+      32,
+      142,
+      9.4,
       34.4,
-      32
+      66,
+      1.1,
+      4.8,
+      "1.0",
+      17.9
     ],
-    "tableWithTabs": "/legacy/table-ao_2-6.3_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-6.3_v4.html",
+    "sizeTableValues": [985, 920, 865]
   },
   {
     "id": "agregat-ao2-10-ksk4-vozdushniy-vodyanoy",
@@ -11960,16 +12056,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [10000, 138, "985 x 960 x 905", 154],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      1.1,
-      1500,
-      "КСк4 (АО 2-10)",
+    "specsTableValues": [
+      10000,
+      136,
+      "КСк4 АО2-10",
+      "ВО 6-300-6.3",
+      "1.1/1500",
+      32,
+      154,
+      10.4,
       38.7,
-      32
+      70,
+      1.5,
+      5.9,
+      "2.0",
+      "26.0"
     ],
-    "tableWithTabs": "/legacy/table-ao_2-10_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-10_v4.html",
+    "sizeTableValues": [985, 960, 905]
   },
   {
     "id": "agregat-ao2-15-ksk4-vozdushniy-vodyanoy",
@@ -11992,16 +12096,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [15000, 186, "985 x 1085 x 1040", 186],
-    "componentsTableValues": [
-      "ВО-06-300-6.3",
-      1.1,
-      1500,
-      "КСк4 (АО 2-15)",
+    "specsTableValues": [
+      15000,
+      183,
+      "КСк4 АО2-15",
+      "ВО 6-300-6.3",
+      "1.1/1500",
+      40,
+      186,
+      13.5,
       52.8,
-      40
+      82,
+      "2.0",
+      6.6,
+      2.8,
+      26.6
     ],
-    "tableWithTabs": "/legacy/table-ao_2-15_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-15_v4.html",
+    "sizeTableValues": [985, 1085, 1040]
   },
   {
     "id": "agregat-ao2-20-ksk4-vozdushniy-vodyanoy",
@@ -12024,16 +12136,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [20000, 271, "1075 x 1210 x 1170", 268],
-    "componentsTableValues": [
-      "ВО-06-300-8",
-      3,
-      1500,
-      "КСк4 (АО 2-20)",
+    "specsTableValues": [
+      20000,
+      267,
+      "КСк4 АО2-20",
+      "ВО 6-300-8",
+      "3/1500",
+      50,
+      268,
+      "17.0",
       69.2,
-      50
+      94,
+      "3.0",
+      7.3,
+      5.4,
+      30.9
     ],
-    "tableWithTabs": "/legacy/table-ao_2-20_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-20_v4.html",
+    "sizeTableValues": [1075, 1210, 1170]
   },
   {
     "id": "agregat-ao2-25-ksk4-vozdushniy-vodyanoy",
@@ -12056,16 +12176,24 @@
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
-    "specsTableValues": [25000, 336, "1075 x 1335 x 1295", 303],
-    "componentsTableValues": [
-      "ВО-06-300-8",
-      3,
-      1500,
-      "КСк4 (АО 2-25)",
+    "specsTableValues": [
+      25000,
+      330,
+      "КСк4 АО2-25",
+      "ВО 6-300-8",
+      "3/1500",
+      50,
+      303,
+      20.8,
       87.7,
-      50
+      105,
+      3.7,
+      "9.0",
+      7.7,
+      "44.0"
     ],
-    "tableWithTabs": "/legacy/table-ao_2-25_v4.html"
+    "tableWithTabs": "/legacy/table-ao_2-25_v4.html",
+    "sizeTableValues": [1075, 1335, 1295]
   },
   {
     "id": "avo-tvv",
