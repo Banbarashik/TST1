@@ -10045,6 +10045,16 @@
       "alt": "Воздухонагреватель КПСк 4-10",
       "title": "Калорифер КПСк 4 10 паровой"
     },
+    "frontView": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_4-10_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_4-10_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-10_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-10.html",
     "specsTableValues": [
