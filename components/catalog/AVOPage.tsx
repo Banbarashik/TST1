@@ -138,19 +138,65 @@ export default function AVOPage({ product }) {
         </div>
       </div>
 
-      <div>
-        <table>
+      <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+        <table
+          className="basis-full"
+          style={{ border: "1px solid rgb(229, 231, 235)" }}
+        >
           <tbody>
-            {tableHeaders[product.heatCarrier].map((header, idx) => (
-              <>
-                <tr>
-                  <th colSpan={3}>{header}</th>
-                </tr>
-                {product.variants.map((v) => (
-                  <td>{v.specsTableValues[idx]}</td>
-                ))}
-              </>
-            ))}
+            {tableHeaders[product.heatCarrier]
+              .slice(0, 6)
+              .map((header, idx) => (
+                <>
+                  <tr>
+                    <th
+                      colSpan={3}
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="h-8"
+                    >
+                      {header}
+                    </th>
+                  </tr>
+                  {product.variants.map((v) => (
+                    <td
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="h-8"
+                    >
+                      {v.specsTableValues[idx]}
+                    </td>
+                  ))}
+                </>
+              ))}
+          </tbody>
+        </table>
+        <table
+          className="basis-full"
+          style={{ border: "1px solid rgb(229, 231, 235)" }}
+        >
+          <tbody>
+            {tableHeaders[product.heatCarrier]
+              .slice(6, -1)
+              .map((header, idx) => (
+                <>
+                  <tr>
+                    <th
+                      colSpan={3}
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="h-8"
+                    >
+                      {header}
+                    </th>
+                  </tr>
+                  {product.variants.map((v) => (
+                    <td
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="h-8"
+                    >
+                      {v.specsTableValues[idx + 6]}
+                    </td>
+                  ))}
+                </>
+              ))}
           </tbody>
         </table>
       </div>
