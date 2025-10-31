@@ -9283,6 +9283,16 @@
       "alt": "Воздухонагреватель КПСк 2-11",
       "title": "Калорифер КПСк 2 11 паровой"
     },
+    "frontView": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-11_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_2-11_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_2-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-2-11.html",
     "specsTableValues": [
@@ -9641,6 +9651,16 @@
       "alt": "Воздухонагреватель КПСк 3-11",
       "title": "Калорифер КПСк 3 11 паровой"
     },
+    "frontView": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-11_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_3-11_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_3-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-3-11.html",
     "specsTableValues": [
@@ -9986,6 +10006,16 @@
       "url": "/img/kalorifery/kpsk/kalorifer_kpsk_4-11.png",
       "alt": "Воздухонагреватель КПСк 4-11",
       "title": "Калорифер КПСк 4 11 паровой"
+    },
+    "frontView": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_4-11_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/kalorifery/kpsk/kalorifer_kpsk_4-11_parts.png",
+      "width": 1000,
+      "height": 900
     },
     "drawing": "/img/kalorifery/kpsk/kalorifer_kpsk_4-11_chertez.png",
     "tableWithTabs": "/legacy/table-kpsk-4-11.html",
