@@ -184,7 +184,7 @@ export default function STDPage({ product }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
 
-      <section>
+      <section className="mb-10">
         <ProductSubheader
           text={`Технические характеристики агрегата ${product.model}`}
         />
@@ -196,6 +196,34 @@ export default function STDPage({ product }) {
           height={1}
           className="mb-5"
         />
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th colSpan={4} className="py-1">
+                Габаритные размеры, мм
+              </th>
+            </tr>
+            <tr>
+              <th className="w-1/4 py-1">Агрегат</th>
+              <th className="w-1/4 py-1">L</th>
+              <th className="w-1/4 py-1">B</th>
+              <th className="w-1/4 py-1">H</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              `СТД-300 (${product.variants[0].calorifier})`,
+              `СТД-300 (${product.variants[1].calorifier})`,
+            ].map((agregat, idx) => (
+              <tr key={agregat}>
+                <td>{agregat}</td>
+                {product.variants[idx].sizeTableValues.map((value, idx) => (
+                  <td key={idx}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </section>
 
       <LinkButtonsBlock buttons={linkButtons} />
