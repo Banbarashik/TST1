@@ -3,11 +3,53 @@ import ProductCard from "./productCard";
 import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
-import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
 import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
+
+const tableHeaders = {
+  water: [
+    "Наименование агрегата АВО ХЛ",
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность агрегата, кВт",
+    "Установленный вентилятор",
+    "Двигатель, кВт/об. мин.",
+    "Масса отопительного агрегата, кг",
+    "Установленный водяной калорифер",
+    "Объем комплектуемого калорифера, л",
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    "Диаметр патрубков, Ду мм",
+    <>
+      Расход теплоносителя min-max, м<sup>3</sup>/час
+    </>,
+    "Гидравлическое сопротивление min- max, кПа",
+  ],
+  steam: [
+    "Наименование агрегата АВО ХЛ",
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность агрегата, кВт",
+    "Установленный вентилятор",
+    "Двигатель, кВт/об. мин.",
+    "Масса отопительного агрегата, кг",
+    "Установленный паровой калорифер",
+    <>
+      Емкость комплектуемого калорифера, м<sup>3</sup>
+    </>,
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    "Диаметр патрубков, Ду мм",
+    "Расход теплоносителя min, кг/час",
+    "Расход теплоносителя max, кг/час",
+  ],
+};
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
