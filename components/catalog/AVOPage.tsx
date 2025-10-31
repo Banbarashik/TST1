@@ -128,20 +128,29 @@ export default function AVOPage({ product }) {
         height={1}
         className="mb-4"
       />
-      <table className="w-full">
+      <table className="mb-10 w-full">
         <thead>
           <tr>
-            <th colSpan={4}>Габаритные размеры, мм</th>
+            <th colSpan={4} className="py-1">
+              Габаритные размеры, мм
+            </th>
           </tr>
           <tr>
-            <th>Агрегат</th>
-            <th>L</th>
-            <th>B</th>
-            <th>H</th>
+            <th className="w-1/4 py-1">Агрегат</th>
+            <th className="w-1/4 py-1">L</th>
+            <th className="w-1/4 py-1">B</th>
+            <th className="w-1/4 py-1">H</th>
           </tr>
         </thead>
         <tbody>
-          <tr>{["АВО 3-55", "АВО 4-95", "АВО 7-165"]}</tr>
+          {["АВО 3-55", "АВО 4-95", "АВО 7-165"].map((agregat, idx) => (
+            <tr>
+              <td>{agregat}</td>
+              {product.variants[idx].sizeTableValues.map((value) => (
+                <td>{value}</td>
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
 
