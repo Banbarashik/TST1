@@ -138,6 +138,23 @@ export default function AVOPage({ product }) {
         </div>
       </div>
 
+      <div>
+        <table>
+          <tbody>
+            {tableHeaders[product.heatCarrier].map((header, idx) => (
+              <>
+                <tr>
+                  <th colSpan={3}>{header}</th>
+                </tr>
+                {product.variants.map((v) => (
+                  <td>{v.specsTableValues[idx]}</td>
+                ))}
+              </>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.pluGen} агрегатов ${product.shortName}`}
       />
