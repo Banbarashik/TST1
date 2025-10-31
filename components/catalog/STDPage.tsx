@@ -156,6 +156,12 @@ export default function STDPage({ product }) {
         );
       })}
 
+      <section>
+        <ProductSubheader
+          text={`Технические характеристики агрегата ${product.model}`}
+        />
+      </section>
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
       />
@@ -178,17 +184,19 @@ export default function STDPage({ product }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
 
-      <ProductSubheader
-        text={`Технические характеристики агрегата ${product.model}`}
-      />
-      <Image
-        src={product.drawing}
-        alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
-        title={`Отопительный агрегат ${product.model} технические характеристики`}
-        width={968}
-        height={1}
-        className="mb-5"
-      />
+      <section>
+        <ProductSubheader
+          text={`Технические характеристики агрегата ${product.model}`}
+        />
+        <Image
+          src={product.drawing}
+          alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
+          title={`Отопительный агрегат ${product.model} технические характеристики`}
+          width={968}
+          height={1}
+          className="mb-5"
+        />
+      </section>
 
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
