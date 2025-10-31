@@ -7,6 +7,7 @@ import Image from "next/image";
 import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
+import React from "react";
 
 const tableHeaders = {
   water: [
@@ -147,25 +148,28 @@ export default function AVOPage({ product }) {
             {tableHeaders[product.heatCarrier]
               .slice(0, 6)
               .map((header, idx) => (
-                <>
+                <React.Fragment key={idx}>
                   <tr>
                     <th
                       colSpan={3}
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="h-8"
+                      className="py-1.5"
                     >
                       {header}
                     </th>
                   </tr>
-                  {product.variants.map((v) => (
-                    <td
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="h-8"
-                    >
-                      {v.specsTableValues[idx]}
-                    </td>
-                  ))}
-                </>
+                  <tr>
+                    {product.variants.map((v) => (
+                      <td
+                        key={v.id}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {v.specsTableValues[idx]}
+                      </td>
+                    ))}
+                  </tr>
+                </React.Fragment>
               ))}
           </tbody>
         </table>
@@ -174,29 +178,30 @@ export default function AVOPage({ product }) {
           style={{ border: "1px solid rgb(229, 231, 235)" }}
         >
           <tbody>
-            {tableHeaders[product.heatCarrier]
-              .slice(6, -1)
-              .map((header, idx) => (
-                <>
-                  <tr>
-                    <th
-                      colSpan={3}
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="h-8"
-                    >
-                      {header}
-                    </th>
-                  </tr>
+            {tableHeaders[product.heatCarrier].slice(6).map((header, idx) => (
+              <React.Fragment key={idx}>
+                <tr>
+                  <th
+                    colSpan={3}
+                    style={{ border: "1px solid rgb(229, 231, 235)" }}
+                    className="py-1.5"
+                  >
+                    {header}
+                  </th>
+                </tr>
+                <tr>
                   {product.variants.map((v) => (
                     <td
+                      key={v.id}
                       style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="h-8"
+                      className="py-1.5"
                     >
                       {v.specsTableValues[idx + 6]}
                     </td>
                   ))}
-                </>
-              ))}
+                </tr>
+              </React.Fragment>
+            ))}
           </tbody>
         </table>
       </div>
@@ -249,10 +254,10 @@ export default function AVOPage({ product }) {
         </thead>
         <tbody>
           {["АВО 3-55", "АВО 4-95", "АВО 7-165"].map((agregat, idx) => (
-            <tr>
+            <tr key={agregat}>
               <td>{agregat}</td>
-              {product.variants[idx].sizeTableValues.map((value) => (
-                <td>{value}</td>
+              {product.variants[idx].sizeTableValues.map((value, idx) => (
+                <td key={idx}>{value}</td>
               ))}
             </tr>
           ))}
