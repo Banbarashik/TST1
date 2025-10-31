@@ -10,6 +10,7 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
+import React from "react";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -205,6 +206,74 @@ export default function STDPage({ product }) {
         <ProductSubheader
           text={`Технические характеристики агрегата ${product.model}`}
         />
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders(product.model)
+                [product.heatCarrier].slice(0, 6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={2}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTablesValues[idx]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders(product.model)
+                [product.heatCarrier].slice(6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={3}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTablesValues[idx + 6]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <ProductSubheader
