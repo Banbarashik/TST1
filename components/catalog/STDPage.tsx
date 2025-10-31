@@ -9,8 +9,8 @@ import ProductCard from "@/components/catalog/productCard";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import STDSpecsTable from "@/components/catalog/STDSpecsTable";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
+import React from "react";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -23,6 +23,51 @@ const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
   steam: "пароконденсатного",
 };
+
+function tableHeaders(model: string) {
+  return {
+    water: [
+      `Наименование агрегата ${model}`,
+      <>
+        Производительность по воздуху, м<sup>3</sup>/час
+      </>,
+      "Тепловая мощность агрегата, кВт",
+      "Установленный вентилятор",
+      "Двигатель, кВт/об. мин.",
+      "Масса отопительного агрегата, кг",
+      "Установленный водяной калорифер",
+      "Объем комплектуемого калорифера, л",
+      <>
+        Площадь поверхности теплообмена, м<sup>2</sup>
+      </>,
+      "Диаметр патрубков, Ду мм",
+      <>
+        Расход теплоносителя min-max, м<sup>3</sup>/час
+      </>,
+      "Гидравлическое сопротивление min- max, кПа",
+    ],
+    steam: [
+      `Наименование агрегата ${model}`,
+      <>
+        Производительность по воздуху, м<sup>3</sup>/час
+      </>,
+      "Тепловая мощность агрегата, кВт",
+      "Установленный вентилятор",
+      "Двигатель, кВт/об. мин.",
+      "Масса отопительного агрегата, кг",
+      "Установленный паровой калорифер",
+      <>
+        Емкость комплектуемого калорифера, м<sup>3</sup>
+      </>,
+      <>
+        Площадь поверхности теплообмена, м<sup>2</sup>
+      </>,
+      "Диаметр патрубков, Ду мм",
+      "Расход теплоносителя min, кг/час",
+      "Расход теплоносителя max, кг/час",
+    ],
+  };
+}
 
 export default function STDPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -157,6 +202,80 @@ export default function STDPage({ product }) {
         );
       })}
 
+      <section>
+        <ProductSubheader
+          text={`Технические характеристики агрегата ${product.model}`}
+        />
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders(product.model)
+                [product.heatCarrier].slice(0, 6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={2}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTablesValues[idx]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders(product.model)
+                [product.heatCarrier].slice(6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={3}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTablesValues[idx + 6]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
       />
@@ -179,61 +298,47 @@ export default function STDPage({ product }) {
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>
 
-      <ProductSubheader
-        text={`Технические характеристики агрегата ${product.model}`}
-      />
-      <div className="mb-6 w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.specsTablesValues}
-          headers={
-            <thead>
-              <tr>
-                <th rowSpan={2}>Наименование агрегата</th>
-                <th colSpan={2}>Производительность</th>
-                <th colSpan={3}>Габаритные размеры, мм</th>
-                <th rowSpan={2} className="w-18">
-                  Масса, кг
-                </th>
-              </tr>
-              <tr>
-                <th>по воздуху, м³/ч</th>
-                <th>по теплу, кВт</th>
-                <th>L</th>
-                <th>B</th>
-                <th>H</th>
-              </tr>
-            </thead>
-          }
+      <section className="mb-10">
+        <ProductSubheader
+          text={`Технические характеристики агрегата ${product.model}`}
         />
-      </div>
-      <Image
-        src={product.drawing}
-        alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
-        title={`Отопительный агрегат ${product.model} технические характеристики`}
-        width={968}
-        height={1}
-        className="mb-5"
-      />
-      <div className="mb-10 w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.componentsTableValues}
-          headers={
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>Комплектуемый осевой вентилятор</th>
-                <th>Комплектуемый калорифер</th>
-                <th>Площадь поверхности нагрева, м²</th>
-                <th>Ду, мм</th>
-              </tr>
-            </thead>
-          }
+        <Image
+          src={product.drawing}
+          alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
+          title={`Отопительный агрегат ${product.model} технические характеристики`}
+          width={968}
+          height={1}
+          className="mb-5"
         />
-      </div>
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th colSpan={4} className="py-1">
+                Габаритные размеры, мм
+              </th>
+            </tr>
+            <tr>
+              <th className="w-1/4 py-1">Агрегат</th>
+              <th className="w-1/4 py-1">L</th>
+              <th className="w-1/4 py-1">B</th>
+              <th className="w-1/4 py-1">H</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              `СТД-300 (${product.variants[0].calorifier})`,
+              `СТД-300 (${product.variants[1].calorifier})`,
+            ].map((agregat, idx) => (
+              <tr key={agregat}>
+                <td>{agregat}</td>
+                {product.variants[idx].sizeTableValues.map((value, idx) => (
+                  <td key={idx}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
       <LinkButtonsBlock buttons={linkButtons} />
     </div>

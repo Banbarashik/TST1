@@ -3,11 +3,54 @@ import ProductCard from "./productCard";
 import ProductSubheader from "./productSubheader";
 import ProductParagraph from "./productParagraph";
 import SimilarProductLink from "./similarProductLink";
-import STDSpecsTable from "./STDSpecsTable";
 import Image from "next/image";
 import productData from "@/data/products.json";
 import { capitalizeFirst } from "@/lib/utils";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
+import React from "react";
+
+const tableHeaders = {
+  water: [
+    "Наименование агрегата АВО ХЛ",
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность агрегата, кВт",
+    "Установленный вентилятор",
+    "Двигатель, кВт/об. мин.",
+    "Масса отопительного агрегата, кг",
+    "Установленный водяной калорифер",
+    "Объем комплектуемого калорифера, л",
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    "Диаметр патрубков, Ду мм",
+    <>
+      Расход теплоносителя min-max, м<sup>3</sup>/час
+    </>,
+    "Гидравлическое сопротивление min- max, кПа",
+  ],
+  steam: [
+    "Наименование агрегата АВО ХЛ",
+    <>
+      Производительность по воздуху, м<sup>3</sup>/час
+    </>,
+    "Тепловая мощность агрегата, кВт",
+    "Установленный вентилятор",
+    "Двигатель, кВт/об. мин.",
+    "Масса отопительного агрегата, кг",
+    "Установленный паровой калорифер",
+    <>
+      Емкость комплектуемого калорифера, м<sup>3</sup>
+    </>,
+    <>
+      Площадь поверхности теплообмена, м<sup>2</sup>
+    </>,
+    "Диаметр патрубков, Ду мм",
+    "Расход теплоносителя min, кг/час",
+    "Расход теплоносителя max, кг/час",
+  ],
+};
 
 export default function AVOPage({ product }) {
   const heatCarrierAdj = getHeatCarrierAdj(product.heatCarrier);
@@ -96,6 +139,78 @@ export default function AVOPage({ product }) {
         </div>
       </div>
 
+      <section>
+        <ProductSubheader
+          text={`Технические характеристики агрегатов АВО ХЛ ${heatCarrierAdj.pluGen}`}
+        />
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier]
+                .slice(0, 6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={3}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTableValues[idx]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier].slice(6).map((header, idx) => (
+                <React.Fragment key={idx}>
+                  <tr>
+                    <th
+                      colSpan={3}
+                      style={{ border: "1px solid rgb(229, 231, 235)" }}
+                      className="py-1.5"
+                    >
+                      {header}
+                    </th>
+                  </tr>
+                  <tr>
+                    {product.variants.map((v) => (
+                      <td
+                        key={v.id}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {v.specsTableValues[idx + 6]}
+                      </td>
+                    ))}
+                  </tr>
+                </React.Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.pluGen} агрегатов ${product.shortName}`}
       />
@@ -118,28 +233,8 @@ export default function AVOPage({ product }) {
       </ProductParagraph>
 
       <ProductSubheader
-        text={`Технические характеристики агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
+        text={`Габаритные размеры агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
       />
-      <div className="w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.specsTableValues}
-          headers={
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>
-                  Производительность по воздуху, м<sup>3</sup>/ч
-                </th>
-                <th>Производительность по теплу, кВт</th>
-                <th>Габариты, мм (длина - ширина - высота)</th>
-                <th>Масса, кг</th>
-              </tr>
-            </thead>
-          }
-        />
-      </div>
       <Image
         src={product.drawing}
         alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
@@ -148,26 +243,31 @@ export default function AVOPage({ product }) {
         height={1}
         className="mb-4"
       />
-      <div className="mb-10 w-full overflow-x-auto">
-        <STDSpecsTable
-          className="w-full min-w-231 xl:min-w-auto"
-          rows={product.variants}
-          getRowValues={(variant) => variant.componentsTableValues}
-          headers={
-            <thead>
-              <tr>
-                <th>Наименование агрегата</th>
-                <th>Комплектуемый осевой вентилятор</th>
-                <th>Комплектуемый калорифер</th>
-                <th>
-                  Площадь поверхности нагрева, м<sup>2</sup>
-                </th>
-                <th>dy, мм</th>
-              </tr>
-            </thead>
-          }
-        />
-      </div>
+      <table className="mb-10 w-full">
+        <thead>
+          <tr>
+            <th colSpan={4} className="py-1">
+              Габаритные размеры, мм
+            </th>
+          </tr>
+          <tr>
+            <th className="w-1/4 py-1">Агрегат</th>
+            <th className="w-1/4 py-1">L</th>
+            <th className="w-1/4 py-1">B</th>
+            <th className="w-1/4 py-1">H</th>
+          </tr>
+        </thead>
+        <tbody>
+          {["АВО 3-55", "АВО 4-95", "АВО 7-165"].map((agregat, idx) => (
+            <tr key={agregat}>
+              <td>{agregat}</td>
+              {product.variants[idx].sizeTableValues.map((value, idx) => (
+                <td key={idx}>{value}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
       <LinkButtonsBlock buttons={linkButtons} />
     </div>
