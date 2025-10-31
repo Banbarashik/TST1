@@ -139,15 +139,50 @@ export default function AVOPage({ product }) {
         </div>
       </div>
 
-      <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
-        <table
-          className="basis-full"
-          style={{ border: "1px solid rgb(229, 231, 235)" }}
-        >
-          <tbody>
-            {tableHeaders[product.heatCarrier]
-              .slice(0, 6)
-              .map((header, idx) => (
+      <section>
+        <ProductSubheader
+          text={`Технические характеристики агрегатов АВО ХЛ ${heatCarrierAdj.pluGen}`}
+        />
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier]
+                .slice(0, 6)
+                .map((header, idx) => (
+                  <React.Fragment key={idx}>
+                    <tr>
+                      <th
+                        colSpan={3}
+                        style={{ border: "1px solid rgb(229, 231, 235)" }}
+                        className="py-1.5"
+                      >
+                        {header}
+                      </th>
+                    </tr>
+                    <tr>
+                      {product.variants.map((v) => (
+                        <td
+                          key={v.id}
+                          style={{ border: "1px solid rgb(229, 231, 235)" }}
+                          className="py-1.5"
+                        >
+                          {v.specsTableValues[idx]}
+                        </td>
+                      ))}
+                    </tr>
+                  </React.Fragment>
+                ))}
+            </tbody>
+          </table>
+          <table
+            className="basis-full"
+            style={{ border: "1px solid rgb(229, 231, 235)" }}
+          >
+            <tbody>
+              {tableHeaders[product.heatCarrier].slice(6).map((header, idx) => (
                 <React.Fragment key={idx}>
                   <tr>
                     <th
@@ -165,46 +200,16 @@ export default function AVOPage({ product }) {
                         style={{ border: "1px solid rgb(229, 231, 235)" }}
                         className="py-1.5"
                       >
-                        {v.specsTableValues[idx]}
+                        {v.specsTableValues[idx + 6]}
                       </td>
                     ))}
                   </tr>
                 </React.Fragment>
               ))}
-          </tbody>
-        </table>
-        <table
-          className="basis-full"
-          style={{ border: "1px solid rgb(229, 231, 235)" }}
-        >
-          <tbody>
-            {tableHeaders[product.heatCarrier].slice(6).map((header, idx) => (
-              <React.Fragment key={idx}>
-                <tr>
-                  <th
-                    colSpan={3}
-                    style={{ border: "1px solid rgb(229, 231, 235)" }}
-                    className="py-1.5"
-                  >
-                    {header}
-                  </th>
-                </tr>
-                <tr>
-                  {product.variants.map((v) => (
-                    <td
-                      key={v.id}
-                      style={{ border: "1px solid rgb(229, 231, 235)" }}
-                      className="py-1.5"
-                    >
-                      {v.specsTableValues[idx + 6]}
-                    </td>
-                  ))}
-                </tr>
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <ProductSubheader
         text={`Таблица расчета и подбора ${heatCarrierAdj?.pluGen} агрегатов ${product.shortName}`}
