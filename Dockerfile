@@ -26,7 +26,7 @@ ENV NODE_ENV=production \
     NEXT_DISABLE_SOURCEMAPS=1
 
 # Нужен только на сборке, если есть нативные модули
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat vips-dev
 RUN corepack enable
 
 # node_modules с dev-зависимостями — только для сборки
@@ -56,6 +56,7 @@ ENV NODE_ENV=production \
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder /app/.next/server ./.next/server
 
 USER nextjs
 EXPOSE 3000
