@@ -38,8 +38,9 @@ export default function Home() {
         <Image
           src="/img/home/contact_form.png"
           alt="Промышленное воздушное отопление"
-          fill
           className="scale-102 object-cover object-[30%_50%]"
+          fill
+          priority
         />
         {<div className="absolute inset-0 bg-white/40" />} {/* FOG */}
         <div className="z-10 flex w-full flex-col items-center lg:flex-row lg:justify-evenly lg:gap-4 lg:px-6 xl:justify-center xl:gap-20 xl:px-12">
