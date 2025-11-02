@@ -1,13 +1,16 @@
-import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
-import ProductCard from "./productCard";
-import ProductSubheader from "./productSubheader";
-import ProductParagraph from "./productParagraph";
-import SimilarProductLink from "./similarProductLink";
-import Image from "next/image";
 import productData from "@/data/products.json";
-import { capitalizeFirst } from "@/lib/utils";
-import LinkButtonsBlock from "@/components/linkButtonsBlock";
+
 import React from "react";
+import Image from "next/image";
+
+import { capitalizeFirst } from "@/lib/utils";
+import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
+
+import ProductCard from "@/components/catalog/productCard";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
+import ProductSubheader from "@/components/catalog/productSubheader";
+import ProductParagraph from "@/components/catalog/productParagraph";
+import SimilarProductLink from "@/components/catalog/similarProductLink";
 
 const tableHeaders = {
   water: [

@@ -241,14 +241,14 @@ export default function AgregatyAVO() {
             gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(220px,max-content))]"
             className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
-          <div className="relative aspect-11/6 w-full">
-            <Image
-              src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_vodianye_gabaritnye_razmery.png"
-              alt="Технические характеристики водяных агрегатов АВО ХЛ"
-              title="Габаритные размеры водяных воздушных агрегатов АВО ХЛ"
-              fill
-            />
-          </div>
+          <Image
+            src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_vodianye_gabaritnye_razmery.png"
+            alt="Технические характеристики водяных агрегатов АВО ХЛ"
+            title="Габаритные размеры водяных воздушных агрегатов АВО ХЛ"
+            width={968}
+            height={1}
+            className="w-full"
+          />
         </div>
       </section>
 
@@ -318,14 +318,14 @@ export default function AgregatyAVO() {
             gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(220px,max-content))]"
             className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
-          <div className="relative aspect-11/6 w-full">
-            <Image
-              src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_parovye_gabaritnye_razmery.png"
-              alt="Технические характеристики паровых агрегатов АВО ХЛ"
-              title="Габаритные размеры паровых воздушных агрегатов АВО ХЛ"
-              fill
-            />
-          </div>
+          <Image
+            src="/img/general_pages/agregaty_vozdushno_otopitelnye_avo_parovye_gabaritnye_razmery.png"
+            alt="Технические характеристики паровых агрегатов АВО ХЛ"
+            title="Габаритные размеры паровых воздушных агрегатов АВО ХЛ"
+            width={968}
+            height={1}
+            className="w-full"
+          />
         </div>
         <ProductParagraph>
           Структура условного обозначения агрегатов АВО ХЛ производства ООО
