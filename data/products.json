@@ -12617,6 +12617,16 @@
       "alt": "Водяной воздушно-отопительный агрегат СТД-300",
       "title": "Отопительный агрегат СТД-300 кск водяной"
     },
+    "frontView": {
+      "url": "/img/agregaty/std300/agregat_std_v_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/agregaty/std300/agregat_std_v_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/agregaty/std300/agregat_otopitelnyi_std-300_vodianoi_razmery.png",
     "tableWithTabs": "/legacy/table-std-300-ksk.html",
     "categories": ["agregaty", "vodiany-agregaty", "std300", "std300-v"],
