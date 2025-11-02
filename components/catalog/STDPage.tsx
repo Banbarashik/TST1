@@ -206,7 +206,7 @@ export default function STDPage({ product }) {
         <ProductSubheader
           text={`Технические характеристики агрегата ${product.model}`}
         />
-        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-24">
           <table
             className="basis-full"
             style={{ border: "1px solid rgb(229, 231, 235)" }}
@@ -310,7 +310,7 @@ export default function STDPage({ product }) {
           height={1}
           className="mb-5"
         />
-        <table className="w-full">
+        <table className="mx-auto w-full max-w-200">
           <thead>
             <tr>
               <th colSpan={4} className="py-1">
@@ -330,7 +330,7 @@ export default function STDPage({ product }) {
               `СТД-300 (${product.variants[1].calorifier})`,
             ].map((agregat, idx) => (
               <tr key={agregat}>
-                <td>{agregat}</td>
+                <td className="px-1.5 text-left">{agregat}</td>
                 {product.variants[idx].sizeTableValues.map((value, idx) => (
                   <td key={idx}>{value}</td>
                 ))}

@@ -142,7 +142,7 @@ export default function AVOPage({ product }) {
         </div>
       </div>
 
-      <section>
+      <section className="mb-4">
         <ProductSubheader
           text={`Технические характеристики агрегатов АВО ХЛ ${heatCarrierAdj.pluGen}`}
         />
@@ -211,6 +211,34 @@ export default function AVOPage({ product }) {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+            }}
+          >
+            <Image
+              src={product.frontView.url}
+              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName}`}
+              title={`Агрегат ${product.shortName} ${heatCarrierAdj.nom}`}
+              fill
+            />
+          </div>
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.parts.width}/${product.parts.height}`,
+            }}
+          >
+            <Image
+              src={product.parts.url}
+              alt={`Агрегат воздушного отопления ${product.shortName} ${heatCarrierAdj.nom}`}
+              title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.shortName}`}
+              fill
+            />
+          </div>
         </div>
       </section>
 

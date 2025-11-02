@@ -12520,6 +12520,16 @@
       "alt": "Водяные воздушно-отопительные агрегаты АВО ХЛ",
       "title": "Отопительные агрегаты АВО ХЛ водяные"
     },
+    "frontView": {
+      "url": "/img/agregaty/avo/agregat_avo_v_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/avo/agregat_avo_v_parts.png",
+      "width": 1000,
+      "height": 750
+    },
     "drawing": "/img/agregaty/avo/agregat_otopitelnyi_avo_vodianoi_razmery.png",
     "tableWithTabs": "/legacy/table-avo-hl-tvv4.html",
     "variants": [
@@ -13374,6 +13384,16 @@
       "url": "/img/agregaty/avo/agregat_avo_hl_p.png",
       "alt": "Водяные воздушно-отопительные агрегаты АВО ХЛ",
       "title": "Отопительные агрегаты АВО ХЛ водяные"
+    },
+    "frontView": {
+      "url": "/img/agregaty/avo/agregat_avo_p_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/avo/agregat_avo_p_parts.png",
+      "width": 1000,
+      "height": 750
     },
     "drawing": "/img/agregaty/avo/agregat_otopitelnyi_avo_parovoi_razmery.png",
     "tableWithTabs": "/legacy/table-avo-hl-kp4.html",
