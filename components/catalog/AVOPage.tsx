@@ -146,7 +146,7 @@ export default function AVOPage({ product }) {
         <ProductSubheader
           text={`Технические характеристики агрегатов АВО ХЛ ${heatCarrierAdj.pluGen}`}
         />
-        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-14">
+        <div className="mb-6 flex flex-col sm:flex-row sm:gap-6 md:gap-10 lg:gap-6 xl:gap-24">
           <table
             className="basis-full"
             style={{ border: "1px solid rgb(229, 231, 235)" }}
