@@ -2,15 +2,15 @@ import productData from "@/data/products.json";
 
 import Image from "next/image";
 
-import { sortProducts } from "@/lib/utils";
+import { capitalizeFirst, sortProducts } from "@/lib/utils";
 import { getHeatCarrierAdj } from "@/lib/heatCarrierAdj";
 import { getRowsNumberAdj } from "@/lib/rowsNumberAdj";
 
 import ProductCard from "@/components/catalog/productCard";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import LinkButtonsBlock from "@/components/linkButtonsBlock";
 
 const tableEquipment: Record<string, string> = {
   water: "насосно-смесительного",
@@ -437,15 +437,15 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
       />
       <Image
         src={product.drawing}
-        alt={`${heatCarrierAdj.nom} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
-        title={`${isCalorifier ? `Калорифер ${product.shortName} ${heatCarrierAdj?.nom}` : `Отопительный агрегат ${product.model}`} технические характеристики`}
+        title={`${capitalizeFirst(heatCarrierAdj.nom)} ${isCalorifier ? `калорифер ${product.shortName}` : `агрегат ${product.model}`} габаритные размеры`}
+        alt={`${isCalorifier ? `Калорифер ${product.shortName} ${heatCarrierAdj?.nom}` : `Отопительный агрегат ${product.model}`} технические характеристики`}
         width={968}
         height={1}
         className="mb-4"
       />
       {isCalorifier && (
         <div className="mb-10 w-full overflow-x-auto">
-          <table className="w-full min-w-231 xl:min-w-auto">
+          <table className={`w-full min-w-231 xl:min-w-auto`}>
             <thead>
               <tr>
                 <th
