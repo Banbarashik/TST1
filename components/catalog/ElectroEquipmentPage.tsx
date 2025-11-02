@@ -1,14 +1,15 @@
 import productData from "@/data/products.json";
 
+import React from "react";
 import Image from "next/image";
 
+import { sortProducts } from "@/lib/utils";
+
 import ProductCard from "@/components/catalog/productCard";
+import LinkButtonsBlock from "@/components/linkButtonsBlock";
 import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
-import { sortProducts } from "@/lib/utils";
-import React from "react";
-import LinkButtonsBlock from "../linkButtonsBlock";
 
 const equipmentType = {
   sfo: {
@@ -312,8 +313,8 @@ export default function ElectroEquipmentPage({ product }) {
             >
               <Image
                 src={product.drawing.url}
-                alt={`${productName} габаритные размеры`}
-                title={`${product.shortName} габаритные размеры`}
+                title={`${productName} габаритные размеры`}
+                alt={`${product.altName} габаритные размеры`}
                 fill
               />
             </div>
@@ -325,8 +326,8 @@ export default function ElectroEquipmentPage({ product }) {
             >
               <Image
                 src={product.scheme.url}
-                alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
-                title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+                alt={`${product.altName} электрическая схема подключения`}
+                title={`${product.name} электрическая схема подключения`}
                 fill
               />
             </div>
@@ -345,8 +346,8 @@ export default function ElectroEquipmentPage({ product }) {
           </ProductParagraph>
           <Image
             src={product.drawing}
-            alt={`${productName} габаритные размеры`}
-            title={`${product.shortName} габаритные размеры`}
+            alt={`Электрокалориферная установка ${product.altShortName} габаритные размеры`}
+            title={`Электрокалориферная установка ${product.shortName} габаритные размеры`}
             width={776}
             height={1}
             className="mx-auto"
@@ -360,8 +361,8 @@ export default function ElectroEquipmentPage({ product }) {
           </ProductParagraph>
           <Image
             src={product.scheme}
-            alt={`${equipmentType[preciseCategory].nom} ${product.series} ${product.size} электрическая схема подключения`}
-            title={`${equipmentType[preciseCategory].nom} ${product.altSeries} ${product.size} электрическая схема подключения`}
+            alt={`Электрокалориферная установка ${product.altShortName} электрическая схема подключения`}
+            title={`Электрокалориферная установка ${product.shortName} электрическая схема подключения`}
             width={678}
             height={1}
             className="mx-auto"
@@ -381,8 +382,8 @@ export default function ElectroEquipmentPage({ product }) {
             >
               <Image
                 src={product.drawing}
-                alt={`${productName} габаритные размеры`}
-                title={`Шкаф ${product.shortName} габаритные размеры`}
+                alt={`Щит управления калорифером ${product.shortName}`}
+                title={`Шкаф управления калорифером ${product.shortName} габаритные размеры`}
                 fill
               />
             </div>
@@ -392,8 +393,8 @@ export default function ElectroEquipmentPage({ product }) {
             >
               <Image
                 src={product.scheme}
-                alt={`Шкаф ${product.size} электрическая схема подключения`}
-                title={`Шкаф ${product.size} электрическая схема подключения`}
+                alt={`Блок управления калорифером ${product.shortName} электросхема`}
+                title={`Шкаф управления калорифером ${product.shortName} электрическая схема подключения`}
                 fill
               />
             </div>
