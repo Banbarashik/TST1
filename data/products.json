@@ -13489,6 +13489,16 @@
       "alt": "Паровой воздушно-отопительный агрегат СТД-300",
       "title": "Отопительный агрегат СТД-300 кпск паровой"
     },
+    "frontView": {
+      "url": "/img/agregaty/std300/agregat_std_p_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/agregaty/std300/agregat_std_p_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/agregaty/std300/agregat_otopitelnyi_std-300_parovoi_razmery.png",
     "tableWithTabs": "/legacy/table-std-300-kpsk.html",
     "categories": ["agregaty", "parovy-agregaty", "std300", "std300-p"],

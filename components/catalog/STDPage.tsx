@@ -1,5 +1,6 @@
 import productData from "@/data/products.json";
 
+import React from "react";
 import Image from "next/image";
 
 import { capitalizeFirst } from "@/lib/utils";
@@ -11,7 +12,6 @@ import ProductSubheader from "@/components/catalog/productSubheader";
 import ProductParagraph from "@/components/catalog/productParagraph";
 import SimilarProductLink from "@/components/catalog/similarProductLink";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
-import React from "react";
 
 const tableIndicators: Record<string, string> = {
   water:
@@ -331,7 +331,7 @@ export default function STDPage({ product }) {
 
       <section className="mb-10">
         <ProductSubheader
-          text={`Габаритные размеры агрегатов ${product.shortName} ${heatCarrierAdj.gen}`}
+          text={`Габаритные размеры агрегатов ${product.shortName} ${heatCarrierAdj.pluGen}`}
         />
         <Image
           src={product.drawing}
