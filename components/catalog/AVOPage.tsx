@@ -246,7 +246,7 @@ export default function AVOPage({ product }) {
         height={1}
         className="mb-4"
       />
-      <table className="mb-10 w-full">
+      <table className="mx-auto mb-10 w-full max-w-200">
         <thead>
           <tr>
             <th colSpan={4} className="py-1">
@@ -263,7 +263,7 @@ export default function AVOPage({ product }) {
         <tbody>
           {["АВО 3-55", "АВО 4-95", "АВО 7-165"].map((agregat, idx) => (
             <tr key={agregat}>
-              <td>{agregat}</td>
+              <td className="px-1.5 text-left">{agregat}</td>
               {product.variants[idx].sizeTableValues.map((value, idx) => (
                 <td key={idx}>{value}</td>
               ))}
