@@ -216,14 +216,14 @@ export default function AgregatySTD300V() {
             gridTemplateCols="grid-cols-[repeat(auto-fill,minmax(150px,max-content))]"
             className="mb-2 justify-center md:order-last md:mr-px md:mb-0 md:flex md:flex-col"
           />
-          <Image
-            src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
-            alt="Технические характеристики водяных агрегатов СТД-300"
-            title="Габаритные размеры водяных агрегатов СТД-300"
-            width={968}
-            height={1}
-            className="w-full"
-          />
+          <div className="relative aspect-11/6 w-full">
+            <Image
+              src="/img/general_pages/agregat_otopitelnyi_vodianoy_std-300_gabaritnye_razmery.png"
+              alt="Технические характеристики водяных агрегатов СТД-300"
+              title="Габаритные размеры водяных агрегатов СТД-300"
+              fill
+            />
+          </div>
         </div>
 
         <div className="mb-2 w-full overflow-x-auto">
