@@ -186,7 +186,7 @@ export default function STDPage({ product }) {
                     <ProductParagraph className="font-bold">
                       {p.caption}
                     </ProductParagraph>
-                    <ul className="grid grid-cols-[repeat(auto-fill,minmax(90px,max-content))] gap-x-3 gap-y-4">
+                    <ul className="grid grid-cols-[repeat(auto-fill,minmax(100px,max-content))] gap-x-3 gap-y-4">
                       {p.products.map((product) => (
                         <li key={product.id}>
                           <SimilarProductLink fullWidth={false} id={product.id}>

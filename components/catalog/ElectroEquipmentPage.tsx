@@ -3,7 +3,7 @@ import productData from "@/data/products.json";
 import React from "react";
 import Image from "next/image";
 
-import { sortProducts } from "@/lib/utils";
+import { capitalizeFirst, sortProducts } from "@/lib/utils";
 
 import ProductCard from "@/components/catalog/productCard";
 import LinkButtonsBlock from "@/components/linkButtonsBlock";
@@ -14,11 +14,13 @@ import SimilarProductLink from "@/components/catalog/similarProductLink";
 const equipmentType = {
   sfo: {
     nom: "электрокалорифер",
+    nomAlt: "электрический калорифер",
     gen: "электрокалорифера",
     pluGen: "электрокалориферов",
   },
   sfotc: {
     nom: "электрокалориферная установка",
+    nomAlt: "установка с электрокалорифером",
     gen: "установки",
     pluGen: "электрокалориферных установок",
   },
@@ -274,8 +276,8 @@ export default function ElectroEquipmentPage({ product }) {
           >
             <Image
               src={product.frontView.url}
-              title={product.name}
-              alt={product.altName}
+              title={`${capitalizeFirst(equipmentType[preciseCategory].nom)} ${product.shortName}`}
+              alt={`${capitalizeFirst(equipmentType[preciseCategory].nom)} ${product.altShortName}`}
               fill
             />
           </div>
@@ -287,8 +289,8 @@ export default function ElectroEquipmentPage({ product }) {
           >
             <Image
               src={product.parts.url}
-              title={`Электрический калорифер ${product.shortName}`}
-              alt={`Электрический калорифер ${product.altShortName}`}
+              title={`${capitalizeFirst(equipmentType[preciseCategory].nomAlt)} ${product.shortName}`}
+              alt={`${capitalizeFirst(equipmentType[preciseCategory].nomAlt)} ${product.altShortName}`}
               fill
             />
           </div>

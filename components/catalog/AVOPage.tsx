@@ -222,7 +222,7 @@ export default function AVOPage({ product }) {
           >
             <Image
               src={product.frontView.url}
-              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${rows === 3 ? "трехрядный" : "четырехрядный"}`}
+              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${product.rows === 3 ? "трехрядный" : "четырехрядный"}`}
               title={`Агрегат ${product.model} ${heatCarrierAdj.nom}`}
               fill
             />
@@ -292,7 +292,7 @@ export default function AVOPage({ product }) {
         <tbody>
           {["АВО 3-55", "АВО 4-95", "АВО 7-165"].map((agregat, idx) => (
             <tr key={agregat}>
-              <td className="px-1.5 text-left">{agregat}</td>
+              <td className="pl-1.5 text-left">{agregat}</td>
               {product.variants[idx].sizeTableValues.map((value, idx) => (
                 <td key={idx}>{value}</td>
               ))}
