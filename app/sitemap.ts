@@ -65,9 +65,16 @@ function traverseProducts(nodes: Product[]): MetadataRoute.Sitemap {
 
     const images = [];
 
+    // TODO bring "scheme" and "drawing" properties to a unified structure
     if (node.img.url) images.push(`${SITE_URL}${node.img.url}`);
-    if (node.drawing) images.push(`${SITE_URL}${node.drawing}`);
-    if (node.scheme) images.push(`${SITE_URL}${node.scheme}`);
+    if (node.frontView?.url) images.push(`${SITE_URL}${node.frontView.url}`);
+    if (node.parts?.url) images.push(`${SITE_URL}${node.parts.url}`);
+
+    if (node.drawing?.url) images.push(`${SITE_URL}${node.drawing.url}`);
+    else if (node.drawing) images.push(`${SITE_URL}${node.drawing}`);
+
+    if (node.scheme?.url) images.push(`${SITE_URL}${node.scheme.url}`);
+    else if (node.scheme) images.push(`${SITE_URL}${node.scheme}`);
 
     return {
       url: `${SITE_URL}/${node.id}`,
