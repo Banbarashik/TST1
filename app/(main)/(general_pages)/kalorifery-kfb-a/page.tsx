@@ -59,16 +59,16 @@ export default function KaloriferyKFBAPage() {
           <div className="relative aspect-24/17 w-full">
             <Image
               src="/img/general_pages/kalorifer_vodianoi_kfb_komplektatciia.png"
-              alt="Производство водяных калориферов КФБ"
-              title="Конструкция водяного калорифера КФБ"
+              alt="Калорифер для шахт и рудников"
+              title="Калорифер КФБ водяной"
               fill
             />
           </div>
           <div className="relative aspect-24/17 w-full">
             <Image
               src="/img/general_pages/kalorifer_vodianoi_kfb.png"
-              alt="Калорифер для шахт и рудников"
-              title="Калорифер КФБ водяной"
+              alt="Производство водяных калориферов КФБ"
+              title="Конструкция водяного калорифера КФБ"
               fill
             />
           </div>
