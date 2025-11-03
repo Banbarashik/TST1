@@ -12044,6 +12044,16 @@
       "alt": "Водяной воздушно-отопительный агрегат АО 2-10 в3",
       "title": "Отопительный агрегат АО 2-10 кск3 водяной"
     },
+    "frontView": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_v3_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_v3_parts.png",
+      "width": 1000,
+      "height": 750
+    },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],
     "specsTableValues": [
@@ -12363,6 +12373,16 @@
       "url": "/img/agregaty/ao2-v/agregat_ao2-6_ao2-15_v.png",
       "alt": "Водяной воздушно-отопительный агрегат АО 2-10 в4",
       "title": "Отопительный агрегат АО 2-10 КСк4 водяной"
+    },
+    "frontView": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_v4yyyyyyyy_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_v4_parts.png",
+      "width": 1000,
+      "height": 750
     },
     "drawing": "/img/agregaty/ao2-v/agregat_otopitelnyi_ao2_vodianoi_razmery.png",
     "categories": ["agregaty", "vodiany-agregaty", "ao2", "ao2-v"],

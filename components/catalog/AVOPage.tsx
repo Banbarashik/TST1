@@ -221,8 +221,8 @@ export default function AVOPage({ product }) {
           >
             <Image
               src={product.frontView.url}
-              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName}`}
-              title={`Агрегат ${product.shortName} ${heatCarrierAdj.nom}`}
+              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${rows === 3 ? "трехрядный" : "четырехрядный"}`}
+              title={`Агрегат ${product.model} ${heatCarrierAdj.nom}`}
               fill
             />
           </div>
@@ -234,8 +234,8 @@ export default function AVOPage({ product }) {
           >
             <Image
               src={product.parts.url}
-              alt={`Агрегат воздушного отопления ${product.shortName} ${heatCarrierAdj.nom}`}
-              title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.shortName}`}
+              title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.model}`}
+              alt={`Агрегат ${product.model} ${heatCarrierAdj.nom}`}
               fill
             />
           </div>
@@ -268,8 +268,8 @@ export default function AVOPage({ product }) {
       />
       <Image
         src={product.drawing}
-        alt={`${heatCarrierAdj.nom} агрегат ${product.shortName} габаритные размеры`}
-        title={`Отопительный агрегат ${product.model} технические характеристики`}
+        title={`${capitalizeFirst(heatCarrierAdj.nom)} агрегат ${product.shortName} габаритные размеры`}
+        alt={`Отопительный агрегат ${product.model} технические характеристики`}
         width={968}
         height={1}
         className="mb-4"
