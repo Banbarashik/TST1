@@ -376,8 +376,16 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             >
               <Image
                 src={product.frontView.url}
-                alt={`Воздухонагреватель ${product.shortName}`}
-                title={product.name}
+                alt={
+                  isCalorifier
+                    ? `Воздухонагреватель ${product.shortName}`
+                    : `${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${product.rows === 3 ? "трехрядный" : "четырехрядный"}`
+                }
+                title={
+                  isCalorifier
+                    ? product.name
+                    : `Агрегат ${product.model} ${heatCarrierAdj.nom}`
+                }
                 fill
               />
             </div>
@@ -389,8 +397,16 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
             >
               <Image
                 src={product.parts.url}
-                alt={`${product.name} чертеж`}
-                title={`Калорифер ${heatCarrierAdj.nom} ${product.shortName}`}
+                alt={
+                  isCalorifier
+                    ? `${product.name} чертеж`
+                    : `Воздушно-отопительный агрегат ${product.shortName} ${product.calorifier} ${heatCarrierAdj.nom}`
+                }
+                title={
+                  isCalorifier
+                    ? `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`
+                    : `${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.model}`
+                }
                 fill
               />
             </div>

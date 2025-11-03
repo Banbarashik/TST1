@@ -12963,6 +12963,16 @@
       "alt": "Паровой воздушно-отопительный агрегат АО 2-10 п3",
       "title": "Отопительный агрегат АО 2-10 кпск3 паровой"
     },
+    "frontView": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_p3_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_p3_parts.png",
+      "width": 1000,
+      "height": 750
+    },
     "drawing": "/img/agregaty/ao2-p/agregat_otopitelnyi_ao2_parovoi_razmery.png",
     "categories": ["agregaty", "parovy-agregaty", "ao2", "ao2-p"],
     "specsTableValues": [
@@ -13266,6 +13276,16 @@
       "url": "/img/agregaty/ao2-p/agregat_ao2-6_ao2-15_p.png",
       "alt": "Паровой воздушно-отопительный агрегат АО 2-10 п4",
       "title": "Отопительный агрегат АО 2-10 кпск4 паровой"
+    },
+    "frontView": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_p4_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/agregaty/ao2-v/agregat_ao2-10_p4_parts.png",
+      "width": 1000,
+      "height": 750
     },
     "drawing": "/img/agregaty/ao2-p/agregat_otopitelnyi_ao2_parovoi_razmery.png",
     "categories": ["agregaty", "parovy-agregaty", "ao2", "ao2-p"],
