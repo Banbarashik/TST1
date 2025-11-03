@@ -13920,6 +13920,16 @@
       "alt": "Электрокалорифер СФО-100",
       "title": "Электрокалорифер ЭКО-100"
     },
+    "frontView": {
+      "url": "/img/elektro/electrokalorifer_sfo_100_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/elektro/electrokalorifer_sfo_100_parts.png",
+      "width": 1000,
+      "height": 750
+    },
     "drawing": {
       "url": "/img/elektro/elektrokalorifer_sfo_100_chertezh.png",
       "width": 1200,
@@ -14296,6 +14306,16 @@
       "alt": "Электрокалориферная установка СФОЦ-100",
       "title": "Электрокалориферная установка ЭКОЦ-100"
     },
+    "frontView": {
+      "url": "/img/elektro/ustanovka_sfotc_100_front_view.png",
+      "width": 1000,
+      "height": 750
+    },
+    "parts": {
+      "url": "/img/elektro/ustanovka_sfotc_100_parts.png",
+      "width": 1000,
+      "height": 750
+    },
     "drawing": "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-100_chertezh_gabaritnyi.png",
     "scheme": "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-100_elektroskhema.png",
     "specsTableValues": [
@@ -14401,6 +14421,16 @@
       "url": "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-100_sfotc-250.png",
       "alt": "Электрокалориферная установка СФОЦ-250",
       "title": "Электрокалориферная установка ЭКОЦ-250"
+    },
+    "frontView": {
+      "url": "/img/elektro/ustanovka_sfotc_250_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/elektro/ustanovka_sfotc_250_parts.png",
+      "width": 1000,
+      "height": 900
     },
     "drawing": "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-250_chertezh_gabaritnyi.png",
     "scheme": "/img/elektro/elektrokalorifernaia_ustanovka_sfotc-250_elektroskhema.png",

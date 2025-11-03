@@ -263,7 +263,38 @@ export default function ElectroEquipmentPage({ product }) {
         {isSFOTC && "электрокалориферной установки"}
         {isSHUK && "шкафа управления калорифером"} {product.shortName} в работу.
       </ProductParagraph>
-
+      {/* 2 IMAGES ROW */}
+      {product.frontView && product.parts && (
+        <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.frontView.width}/${product.frontView.height}`,
+            }}
+          >
+            <Image
+              src={product.frontView.url}
+              title={product.name}
+              alt={product.altName}
+              fill
+            />
+          </div>
+          <div
+            className={`relative w-full`}
+            style={{
+              aspectRatio: `${product.parts.width}/${product.parts.height}`,
+            }}
+          >
+            <Image
+              src={product.parts.url}
+              title={`Электрический калорифер ${product.shortName}`}
+              alt={`Электрический калорифер ${product.altShortName}`}
+              fill
+            />
+          </div>
+        </div>
+      )}
+      {/* TABLE */}
       <div className="mb-6 w-full overflow-x-auto">
         <table className="mx-auto w-176">
           <tbody>
