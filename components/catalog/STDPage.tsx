@@ -285,8 +285,8 @@ export default function STDPage({ product }) {
             >
               <Image
                 src={product.frontView.url}
-                alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName}`}
-                title={`Агрегат ${product.shortName} ${heatCarrierAdj.nom}`}
+                alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName}${isSTD300 ? "" : " ХЛ"}`}
+                title={`Агрегат ${product.shortName}${isSTD300 ? "" : " ХЛ"} ${heatCarrierAdj.nom}`}
                 fill
               />
             </div>
@@ -298,8 +298,8 @@ export default function STDPage({ product }) {
             >
               <Image
                 src={product.parts.url}
-                title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат СТД-300`}
-                alt={`Воздушно-отопительный агрегат ${product.shortName} ${heatCarrierAdj.nom}`}
+                title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат СТД-300${isSTD300 ? "" : " ХЛ"}`}
+                alt={`Воздушно-отопительный агрегат ${product.shortName}${isSTD300 ? "" : " ХЛ"} ${heatCarrierAdj.nom}`}
                 fill
               />
             </div>
