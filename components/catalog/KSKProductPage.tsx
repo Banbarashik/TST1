@@ -442,7 +442,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
         title={`Таблица рабочих параметров ${isCalorifier ? "калорифера" : "агрегата"}`}
         className={`${isCalorifier ? "h-65" : "h-59"} mb-1 w-full`}
       />
-      <ProductParagraph className="mb-4">
+      <ProductParagraph className={isCalorifier ? "mb-4" : "mb-8"}>
         Табличные данные можно использовать при подборе сопутствующего
         {isCalorifier && " вентиляционного и"}{" "}
         {tableEquipment[product.heatCarrier]} оборудования.

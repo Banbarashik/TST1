@@ -260,7 +260,7 @@ export default function AVOPage({ product }) {
         title={`Таблица расчета и подбора ${heatCarrierAdj?.gen} агрегата ${product.shortName}`}
         className="mb-1 h-65 w-full"
       />
-      <ProductParagraph className="mb-4">
+      <ProductParagraph className="mb-8">
         Табличные данные можно использовать при подборе сопутствующего{" "}
         {tableEquipment[product.heatCarrier]} оборудования.
       </ProductParagraph>

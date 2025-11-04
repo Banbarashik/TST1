@@ -267,7 +267,7 @@ export default function ElectroEquipmentPage({ product }) {
       </ProductParagraph>
       {/* 2 IMAGES ROW */}
       {product.frontView && product.parts && (
-        <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
+        <div className="mb-4 flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
           <div
             className={`relative w-full`}
             style={{
