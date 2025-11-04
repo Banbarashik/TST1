@@ -378,7 +378,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                 src={product.frontView.url}
                 alt={
                   isCalorifier
-                    ? `Воздухонагреватель ${product.shortName}`
+                    ? `Воздухонагреватель ${isKFB ? product.model : product.shortName} ${heatCarrierAdj.nom}`
                     : `${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${product.rows === 3 ? "трехрядный" : "четырехрядный"}`
                 }
                 title={
@@ -404,7 +404,7 @@ export default function KSKProductPage({ product }: { product: KSKProduct }) {
                 }
                 title={
                   isCalorifier
-                    ? `Калорифер ${heatCarrierAdj.nom} ${product.shortName}`
+                    ? `Калорифер ${heatCarrierAdj.nom} ${isKFB ? product.model : product.shortName}`
                     : `${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.model}`
                 }
                 fill
