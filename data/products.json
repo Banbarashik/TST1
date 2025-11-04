@@ -6074,6 +6074,16 @@
       "alt": "Воздухонагреватель КФБ-10 А4 М",
       "title": "Калорифер КФБ-10 А4 водяной"
     },
+    "frontView": {
+      "url": "/img/kalorifery/kfb-m/kalorifer_kfb-10_a4_m_front_view.png",
+      "width": 1000,
+      "height": 650
+    },
+    "parts": {
+      "url": "/img/kalorifery/kfb-m/kalorifer_kfb-10_a4_m_parts.png",
+      "width": 1000,
+      "height": 650
+    },
     "drawing": "/img/kalorifery/kfb-m/kalorifer_kfb_a4_m_chertez.png",
     "tableWithTabs": "/legacy/table-kfb_10-a4_m.html",
     "specsTableValues": [
