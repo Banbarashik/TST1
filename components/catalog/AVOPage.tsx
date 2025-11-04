@@ -213,6 +213,7 @@ export default function AVOPage({ product }) {
             </tbody>
           </table>
         </div>
+        {/* 2 IMAGES ROW */}
         <div className="flex flex-col gap-4 sm:flex-row md:gap-6 lg:gap-4 xl:gap-10">
           <div
             className={`relative w-full`}
@@ -222,8 +223,8 @@ export default function AVOPage({ product }) {
           >
             <Image
               src={product.frontView.url}
-              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName} ${product.rows === 3 ? "трехрядный" : "четырехрядный"}`}
-              title={`Агрегат ${product.model} ${heatCarrierAdj.nom}`}
+              alt={`${capitalizeFirst(heatCarrierAdj.nom)} воздушный агрегат ${product.shortName}`}
+              title={`Агрегат ${product.shortName} ${heatCarrierAdj.nom}`}
               fill
             />
           </div>
@@ -235,8 +236,8 @@ export default function AVOPage({ product }) {
           >
             <Image
               src={product.parts.url}
-              title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.model}`}
-              alt={`Агрегат ${product.model} ${heatCarrierAdj.nom}`}
+              title={`${capitalizeFirst(heatCarrierAdj.nom)} отопительный агрегат ${product.shortName}`}
+              alt={`Агрегат воздушного отопления ${product.shortName} ${heatCarrierAdj.nom}`}
               fill
             />
           </div>
