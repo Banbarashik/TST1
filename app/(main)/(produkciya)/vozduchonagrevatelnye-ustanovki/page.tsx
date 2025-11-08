@@ -66,7 +66,7 @@ export default function KaloriferyPage() {
           аппаратурой комплектуется дополнительно.
         </ProductParagraph>
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-10">
-          <div className="relative aspect-24/17 w-full">
+          <div className="relative aspect-square w-full">
             <Image
               src="/img/produkciya/ustanovki/vozduchonagrevatelnaya_ustanovka.png"
               alt="Воздухонагревательные установки"
@@ -74,7 +74,7 @@ export default function KaloriferyPage() {
               fill
             />
           </div>
-          <div className="relative aspect-24/17 w-full">
+          <div className="relative aspect-square w-full">
             <Image
               src="/img/produkciya/ustanovki/electro_ustanovka.png"
               alt="Электрические воздухонагревательные установки"

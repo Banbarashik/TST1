@@ -79,7 +79,7 @@ export default function OtopitelnyeAgregatyPage() {
           сборки готовых узлов в единый агрегат.
         </ProductParagraph>
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-10">
-          <div className="relative aspect-24/17 w-full">
+          <div className="relative aspect-square w-full">
             <Image
               src="/img/produkciya/agregaty/agregat.png"
               alt="Водяной отопительный агрегат - конструкция"
