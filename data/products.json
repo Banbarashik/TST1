@@ -12786,6 +12786,16 @@
       "alt": "Водяной воздушно-отопительный агрегат СТД-300 ХЛ",
       "title": "Отопительный агрегат СТД-300 твв водяной"
     },
+    "frontView": {
+      "url": "/img/agregaty/std300-hl/agregat_std_hl_v_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/agregaty/std300-hl/agregat_std_hl_v_parts.png",
+      "width": 1000,
+      "height": 900
+    },
     "drawing": "/img/agregaty/std300/agregat_otopitelnyi_std-300_vodianoi_razmery.png",
     "tableWithTabs": "/legacy/table-std-300-hl-tvv.html",
     "categories": ["agregaty", "vodiany-agregaty", "std300-hl", "std300-v"],
@@ -13677,6 +13687,16 @@
       "url": "/img/agregaty/std300-hl/agregat_std-300_hl_p.png",
       "alt": "Паровой воздушно-отопительный агрегат СТД-300 ХЛ",
       "title": "Отопительный агрегат СТД-300 кп паровой"
+    },
+    "frontView": {
+      "url": "/img/agregaty/std300-hl/agregat_std_hl_p_front_view.png",
+      "width": 1000,
+      "height": 900
+    },
+    "parts": {
+      "url": "/img/agregaty/std300-hl/agregat_std_hl_p_parts.png",
+      "width": 1000,
+      "height": 900
     },
     "drawing": "/img/agregaty/std300/agregat_otopitelnyi_std-300_parovoi_razmery.png",
     "tableWithTabs": "/legacy/table-std-300-hl-kp.html",
