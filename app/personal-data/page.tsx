@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PersonalDataPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-3 px-3 pt-6 pb-14 sm:px-12 sm:pt-14">
+    <main className="mx-auto w-full max-w-6xl space-y-3 px-3 pt-6 pb-14 sm:px-12 sm:pt-14">
       <Heading
         lvl={1}
         text="Соглашение на обработку персональных данных"
@@ -89,6 +89,6 @@ export default function PersonalDataPage() {
         Политика конфиденциальности размещена на странице веб-сайта
         https://zao-tst.ru/personal-data.
       </ProductParagraph>
-    </div>
+    </main>
   );
 }

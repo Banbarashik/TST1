@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="max-w-8xl mx-auto px-3 py-8 sm:px-6 sm:pt-11 sm:pb-11 md:pb-14 lg:px-12 lg:pt-16 lg:pb-24">
+      <main className="max-w-8xl mx-auto px-3 py-8 sm:px-6 sm:pt-11 sm:pb-11 md:pb-14 lg:px-12 lg:pt-16 lg:pb-24">
         <h1 className="mb-4 text-lg font-bold uppercase sm:text-xl md:text-2xl lg:text-[26px] xl:text-[28px]">
           Производство воздушно-отопительного оборудования
         </h1>
@@ -34,7 +34,7 @@ export default function Home() {
           отопительного оборудования.
         </p>
         <Catalog />
-      </div>
+      </main>
 
       {/* CONTACT FORM SECTION START */}
       <div className="relative flex w-full items-center justify-center gap-20 overflow-hidden px-2 pt-8 pb-20 sm:pt-14 sm:pb-20 md:py-14 lg:py-25">

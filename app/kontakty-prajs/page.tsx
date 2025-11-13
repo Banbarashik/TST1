@@ -75,7 +75,7 @@ export default function ContactsAndPricesPage() {
   const teny = elektro.find((p) => p.categories.includes("teny"));
 
   return (
-    <div className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-2 pt-6 pb-14 sm:pt-14 lg:px-6 xl:px-10">
+    <main className="3xl:px-0 mx-auto w-full max-w-[84rem] space-y-6 px-2 pt-6 pb-14 sm:pt-14 lg:px-6 xl:px-10">
       <div className="space-y-5">
         <h1 className="text-lg font-bold uppercase sm:text-xl lg:text-[22px] xl:text-2xl">
           Цена/прайс-лист воздушно-отопительного оборудования
@@ -1149,6 +1149,6 @@ export default function ContactsAndPricesPage() {
           правопреемником по всем правам и обязанностям ЗАО «Т.С.Т.».
         </p>
       </div>
-    </div>
+    </main>
   );
 }
