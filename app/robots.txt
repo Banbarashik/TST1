@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
+Clean-param: ref /
 
 Sitemap: https://zao-tst.ru/sitemap.xml
