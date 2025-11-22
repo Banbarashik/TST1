@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="mb-6 flex items-center justify-center gap-4 sm:justify-start lg:order-last lg:m-0">
           <Logo place="footer" />
           <div className="text-lg">
-            <p className="text-accent">+7 (3846) 68-23-24</p>
+            <p className="text-accent">Электронная почта</p>
             <a
               href="mailto:zao_tst@mail.ru"
               className="text-accent flex items-center gap-2 hover:text-white"
