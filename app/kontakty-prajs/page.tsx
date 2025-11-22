@@ -1091,7 +1091,7 @@ export default function ContactsAndPricesPage() {
                 >
                   ТЕЛЕФОН/ФАКС
                 </th>
-                <td colSpan={4}>8 (38 46) 68-23-24</td>
+                <td colSpan={4}>+7 (961) 737-83-14</td>
               </tr>
               <tr className="text-sm">
                 <th
