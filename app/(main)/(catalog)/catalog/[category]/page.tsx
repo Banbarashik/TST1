@@ -45,16 +45,30 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string }>;
+  searchParams: Promise<{
+    [key: string]: string | string[] | number | undefined;
+  }>;
 }): Promise<Metadata> {
   const { category: slug } = await params;
-  if (slug === "all") return defaultCategory.metadata;
+  const { page } = await searchParams;
+  if (slug === "all")
+    return {
+      ...defaultCategory.metadata,
+      title: `${defaultCategory.metadata.title}${page ? ` - страница ${page}` : ""}`,
+      description: `${defaultCategory.metadata.description}${page ? ` - страница ${page}` : ""}`,
+    };
 
   const category = findCategoryBySlug(slug, categoryTree);
   if (!category) return { title: "Товары отсутствуют" };
 
-  return category.metadata;
+  return {
+    ...category.metadata,
+    title: `${category.metadata.title}${page ? ` - страница ${page}` : ""}`,
+    description: `${defaultCategory.metadata.description}${page ? ` - страница ${page}` : ""}`,
+  };
 }
 
 export default async function Catalog({
